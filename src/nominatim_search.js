@@ -6,14 +6,14 @@ function initNominatimSearch(map) {
         provider: 'nominatim',
         targetType: 'glass-button',
         lang: 'en',
-        placeholder: 'Search for a location...',
+        placeholder: 'Search...',
         limit: 5,
-        keepOpen: true,
+        keepOpen: false,
         preventDefault: true,
         autoComplete: true,
         autoCompleteMinLength: 2,
         debug: false,
-        position: 'bottom-left',
+        position: 'top-left',
         // Add custom styling
         className: 'nominatim-search',
         // Add custom messages

@@ -172,25 +172,45 @@ a:hover {
 /* Nominatim Search Styles */
 .nominatim-search {
     position: absolute;
-    bottom: 70px;
-    left: 8px;
+    top: .5em;
+    left: .5em;
     z-index: 1000;
 }
 
-.nominatim-search input {
+.nominatim-search .gcd-gl-btn {
+    width: 1.375em;
+    height: 1.375em;
+    background-color: rgba(255,255,255,0.4);
+    border: none;
+    border-radius: 2px;
+}
+
+.nominatim-search .gcd-gl-btn:hover {
+    background-color: rgba(255,255,255,0.6);
+}
+
+.nominatim-search .gcd-gl-control {
+    width: 1.375em;
+    height: 1.375em;
+}
+
+.nominatim-search .gcd-gl-expanded {
     width: 200px;
-    padding: 8px 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    height: 1.375em;
+    background-color: rgba(255,255,255,0.4);
+    border-radius: 2px;
+}
+
+.nominatim-search input {
+    border: none;
+    background: transparent;
+    margin-left: 20px;
     font-size: 14px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    background-color: rgba(255, 255, 255, 0.8);
+    width: 160px;
 }
 
 .nominatim-search input:focus {
     outline: none;
-    border-color: #4d90fe;
-    box-shadow: 0 0 0 2px rgba(77,144,254,0.2);
 }
 
 .nominatim-marker {
