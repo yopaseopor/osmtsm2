@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.2"
+   width="319.21185"
+   height="154.78897"
+   id="svg2"
+   sodipodi:docname="ES_CAT_LOC540.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview906"
+     showgrid="false"
+     inkscape:zoom="2.280617"
+     inkscape:cx="199.94589"
+     inkscape:cy="109.40022"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer3"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:document-rotation="0"
+     inkscape:showpageshadow="false"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#d1d1d1" />
+  <metadata
+     id="metadata3197">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs3195" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer8"
+     inkscape:label="Layer 4"
+     transform="translate(167.22381,43.18159)">
+    <path
+       d="m 151.98804,80.06918 c 0,17.41595 1.12052,32.01374 -20.75845,31.97668 l -258.8404,-0.43848 c -21.87897,-0.0371 -39.67261,4.29372 -39.613,-13.122131 l 0.43848,-128.107821 c 0.0596,-17.423813 17.29552,-13.559018 39.17452,-13.559018 h 239.98585 c 21.879,0 39.613,-3.864101 39.613,13.559018 V 80.06918"
+       id="path3113"
+       style="display:inline;fill:#00be00;fill-opacity:1;stroke-width:1"
+       sodipodi:nodetypes="csssssssc" />
+    <path
+       d="m 142.9856,85.191297 c 0,18.396003 -15.017,14.458453 -33.54,14.458453 h -234.77541 c -18.525,0 -33.542,2.62111 -33.542,-15.773887 V -20.133181 c 0,-18.4 15.017,-15.337409 33.542,-15.337409 H 109.4456 c 18.523,0 33.54,-3.501069 33.54,14.898931 z"
+       id="path3115"
+       style="display:inline;fill:#00be00;fill-opacity:1;stroke:#ffffff;stroke-width:7.0629;stroke-miterlimit:3.864"
+       sodipodi:nodetypes="sssssssss"
+       sodipodi:insensitive="true" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Layer 1"
+     style="display:inline">
+    <path
+       style="font-size:33.9585px;line-height:19.8976px;font-family:TrafficTypeW01-SpainD;-inkscape-font-specification:TrafficTypeW01-SpainD;text-align:center;letter-spacing:2px;word-spacing:0px;text-anchor:middle;fill:#ffffff;stroke-width:0.999998px"
+       d="m 74.67902,56.544158 q 1.086672,0 1.833759,-0.848962 0.781046,-0.848963 0.781046,-2.105427 0,-1.256465 -0.781046,-2.105427 -0.747087,-0.848963 -1.833759,-0.848963 h -4.244812 v 5.908779 z m -0.06792,-10.425259 q 1.765842,0 3.226058,0.577295 1.494174,0.543336 2.546887,1.528132 1.086672,0.984796 1.663967,2.377095 0.611253,1.35834 0.611253,2.988348 0,1.528132 -0.577295,2.920431 -0.543336,1.35834 -1.528132,2.377095 -1.086672,1.12063 -2.478971,1.663966 -1.392298,0.509378 -3.226057,0.509378 h -4.414605 v 7.708579 H 65.102723 V 46.118899 Z m 18.877403,9.406504 h 4.652314 q 0.91688,0 1.59605,-0.67917 0.67917,-0.713128 0.67917,-1.697925 0,-0.984796 -0.67917,-1.663966 -0.67917,-0.713129 -1.59605,-0.713129 h -4.652314 z m 5.331484,-9.406504 q 3.1921,0 5.22961,2.207302 0.88292,0.984797 1.3923,2.27522 0.50938,1.256464 0.50938,2.546887 0,2.139386 -1.15459,3.837311 -1.15459,1.663966 -3.26002,2.648763 l 5.53524,9.134836 h -5.67107 l -5.263571,-8.5915 h -2.648763 v 8.5915 H 88.394731 V 46.118899 Z m 24.51454,4.856065 q -1.18855,0 -2.24126,0.509378 -1.05271,0.509377 -1.83376,1.460215 -1.32438,1.663967 -1.32438,4.618356 0,1.528133 0.30563,2.648763 0.33958,1.086672 1.01875,1.969593 0.78105,0.950838 1.83376,1.460216 1.05271,0.509377 2.27522,0.509377 1.18855,0 2.24126,-0.509377 1.05271,-0.509378 1.83376,-1.460216 1.32438,-1.731883 1.32438,-4.51648 0,-1.630008 -0.33958,-2.71668 -0.30563,-1.120631 -0.9848,-2.003552 -0.78105,-0.950838 -1.86772,-1.460215 -1.05271,-0.509378 -2.24126,-0.509378 z m 0,-5.19565 q 2.47897,0 4.5844,0.882921 2.10543,0.882921 3.63356,2.580846 2.88647,3.124182 2.88647,8.489625 0,2.546887 -0.815,4.686273 -0.81501,2.139385 -2.27522,3.701476 -1.46022,1.528133 -3.53169,2.377095 -2.03751,0.848963 -4.48252,0.848963 -2.47897,0 -4.51648,-0.848963 -2.03751,-0.848962 -3.49773,-2.411053 -1.46021,-1.562091 -2.27521,-3.735435 -0.78105,-2.173344 -0.78105,-4.788149 0,-2.614804 0.815,-4.788148 0.81501,-2.173344 2.27522,-3.701477 1.46022,-1.56209 3.49773,-2.411053 2.03751,-0.882921 4.48252,-0.882921 z m 28.96305,0.339585 h 5.2296 l -6.11253,22.650319 h -6.35023 l -6.11253,-22.650319 h 5.19565 l 4.07502,14.568196 z m 16.50029,22.650319 h -5.19565 V 46.118899 h 5.19565 z m 23.86928,-8.116081 V 46.118899 h 5.09378 v 22.650319 h -5.67107 L 182.4796,54.404773 v 14.364445 h -5.09377 V 46.118899 h 5.67107 z m 33.64932,1.562091 q -1.3923,3.429808 -4.07502,5.297526 -2.68272,1.833759 -6.28232,1.833759 -2.47897,0 -4.51648,-0.848963 -2.03751,-0.882921 -3.53169,-2.445012 -1.46021,-1.562091 -2.27522,-3.735435 -0.815,-2.173344 -0.815,-4.822107 0,-2.546887 0.74708,-4.652314 0.74709,-2.139386 2.24127,-3.701477 1.52813,-1.630007 3.63356,-2.47897 2.10542,-0.882921 4.44856,-0.882921 3.66752,0 6.3842,1.867718 2.71668,1.867717 4.0071,5.263567 l -5.43336,1.935634 q -0.54334,-1.833759 -1.86772,-2.852514 -1.29042,-1.018755 -3.12418,-1.018755 -1.22251,0 -2.2073,0.475419 -0.9848,0.441461 -1.69793,1.324382 -0.71313,0.848962 -1.08667,2.071468 -0.37354,1.188548 -0.37354,2.682722 0,3.124182 1.46021,4.822107 0.71313,0.848962 1.76584,1.324381 1.08668,0.475419 2.24127,0.475419 1.83375,0 3.15814,-1.086672 1.35834,-1.12063 1.73188,-2.886472 z m 11.61023,6.55399 h -5.19565 V 46.118899 h 5.19565 z m 16.5682,-16.266121 -2.47897,7.91233 h 5.12773 z m 10.96859,16.266121 h -5.50127 l -1.15459,-3.497725 h -8.31984 l -1.05271,3.497725 h -5.36544 l 7.09732,-22.650319 h 6.55399 z"
+       id="text1502"
+       aria-label="PROVINCIA" />
+    <path
+       style="font-size:37.6628px;line-height:22.068px;font-family:Ccrige;-inkscape-font-specification:Ccrige;letter-spacing:8px;word-spacing:0px;fill:#ffffff;stroke-width:0.999999px"
+       d="m 117.50802,107.66984 h 17.45671 v -5.82832 H 123.16685 V 80.929251 h -5.66825 l 0.009,26.740589 z m 28.58269,0 h 17.45671 v -5.82832 H 151.74955 V 80.929251 h -5.66825 l 0.009,26.740589 z m 28.61092,0.009 h 19.4905 v -5.80948 H 180.78417 V 96.8512 h 10.82806 v -5.809487 h -10.82806 v -4.623109 h 12.10859 v -5.470522 h -18.19113 v 26.731168 z m 30.43764,0.009 h 6.18612 V 80.948082 h -6.18612 v 26.740588 z m 17.50983,0.0282 10.8563,-0.0282 q 7.05236,-0.1224 10.555,-6.24261 3.01302,-6.958201 -0.0282,-13.906988 -3.42731,-6.242609 -10.52675,-6.59099 h -10.88455 l 0.0283,26.768838 z m 6.1202,-5.67767 V 86.588087 h 4.7361 q 2.13736,0.169482 3.61563,1.732489 4.21823,6.101373 0.0659,12.249824 -1.4971,1.60067 -3.68154,1.46885 h -4.7361 z m 25.90867,5.63059 h 6.33677 l 1.28995,-4.00167 9.70758,0.009 1.25229,3.99226 h 6.5345 l -8.96375,-26.731173 -7.2595,-0.0094 -8.89784,26.740589 z m 9.73583,-9.971227 3.00361,-9.265049 3.01303,9.265049 h -6.01664 z"
+       id="text1502-7"
+       transform="scale(0.99817166,1.0018317)"
+       aria-label="LLEIDA" />
+    <path
+       d="m 169.79466,39.751783 -2.5803,4.011402 h -3.40428 l 1.32268,-4.011402 z"
+       id="text2174"
+       style="font-size:44.4073px;line-height:26.0198px;font-family:Haettenschweiler;-inkscape-font-specification:Haettenschweiler;letter-spacing:0px;word-spacing:0px;fill:#ffffff;stroke-width:0.999998px"
+       aria-label="´" />
+    <text
+       xml:space="preserve"
+       style="font-size:42.6667px;line-height:25px;font-family:Haettenschweiler;-inkscape-font-specification:Haettenschweiler;letter-spacing:0px;word-spacing:0px;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="49.109516"
+       y="113.12728"
+       id="text2178"><tspan
+         sodipodi:role="line"
+         id="tspan2176"
+         x="49.109516"
+         y="113.12728" /></text>
+    <path
+       style="font-size:33.9585px;line-height:19.8976px;font-family:TrafficTypeW01-SpainD;-inkscape-font-specification:TrafficTypeW01-SpainD;text-align:center;letter-spacing:0.707469px;word-spacing:0px;text-anchor:middle;fill:#ffffff;stroke-width:0.999998px"
+       d="m 55.578561,104.23192 h 3.735434 q 1.120631,0 2.071469,-0.47542 0.950838,-0.47542 1.596049,-1.32438 0.67917,-0.88292 1.052714,-2.07147 0.373543,-1.222508 0.373543,-2.682724 0,-1.460215 -0.373543,-2.682721 -0.373544,-1.222506 -1.052714,-2.071469 -0.645211,-0.882921 -1.596049,-1.35834 -0.950838,-0.475419 -2.071469,-0.475419 h -3.735434 z m 3.735434,-17.896133 q 2.343137,0 4.278771,0.848963 1.935635,0.815004 3.327933,2.309178 1.392299,1.494174 2.139386,3.565642 0.781045,2.071469 0.781045,4.584398 0,2.512932 -0.781045,4.618352 -0.747087,2.07147 -2.139386,3.56565 -1.392298,1.49417 -3.327933,2.34313 -1.935634,0.81501 -4.278771,0.81501 H 50.38291 V 86.335787 Z m 31.847391,4.516481 H 80.736127 v 4.108978 h 9.304629 v 4.75419 h -9.304629 v 4.278774 h 11.444014 v 4.9919 H 75.540476 V 86.335787 h 15.62091 z"
+       id="text1502-4"
+       aria-label="DE" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer5"
+     inkscape:label="Layer 3"
+     style="display:inline">
+    <text
+       xml:space="preserve"
+       style="font-size:42.6667px;line-height:25px;font-family:'Andale Mono IPA';-inkscape-font-specification:'Andale Mono IPA';letter-spacing:0px;word-spacing:0px;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="133.73573"
+       y="169.69092"
+       id="text1522"><tspan
+         sodipodi:role="line"
+         id="tspan1520"
+         x="133.73573"
+         y="169.69092" /></text>
+  </g>
+</svg>
