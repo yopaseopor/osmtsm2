@@ -172,8 +172,8 @@ a:hover {
 /* Nominatim Search Styles */
 .nominatim-search {
     position: absolute;
-    top: 6em;
-    left: .5em;
+    bottom: 70px;
+    left: 8px;
     z-index: 1000;
 }
 
