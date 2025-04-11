@@ -171,46 +171,35 @@ a:hover {
 
 /* Nominatim Search Styles */
 .nominatim-search {
-    position: absolute;
     top: .5em;
     left: .5em;
-    z-index: 1000;
 }
 
-.nominatim-search .gcd-gl-btn {
-    width: 1.375em;
-    height: 1.375em;
+.nominatim-search button {
     background-color: rgba(255,255,255,0.4);
     border: none;
     border-radius: 2px;
+    padding: 2px;
+    cursor: pointer;
 }
 
-.nominatim-search .gcd-gl-btn:hover {
+.nominatim-search button:hover {
     background-color: rgba(255,255,255,0.6);
 }
 
-.nominatim-search .gcd-gl-control {
-    width: 1.375em;
-    height: 1.375em;
-}
-
-.nominatim-search .gcd-gl-expanded {
-    width: 200px;
-    height: 1.375em;
-    background-color: rgba(255,255,255,0.4);
-    border-radius: 2px;
-}
-
 .nominatim-search input {
+    position: absolute;
+    left: 30px;
+    top: 0;
+    width: 200px;
+    padding: 5px;
     border: none;
-    background: transparent;
-    margin-left: 20px;
-    font-size: 14px;
-    width: 160px;
+    border-radius: 2px;
+    background-color: rgba(255,255,255,0.8);
 }
 
-.nominatim-search input:focus {
-    outline: none;
+.nominatim-search.loading button i {
+    animation: spin 1s linear infinite;
 }
 
 .nominatim-marker {
@@ -218,6 +207,10 @@ a:hover {
     font-size: 24px;
     text-shadow: 0 0 3px white;
     animation: pulse 1s ease-in-out;
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
 }
 
 @keyframes pulse {
