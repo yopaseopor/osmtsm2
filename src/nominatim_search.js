@@ -13,7 +13,7 @@ function initNominatimSearch(map) {
         autoComplete: true,
         autoCompleteMinLength: 2,
         debug: false,
-        position: 'top-right',
+        position: 'top-left',
         // Add custom styling
         className: 'nominatim-search',
         // Add custom messages
