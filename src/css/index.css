@@ -171,8 +171,8 @@ a:hover {
 
 /* Nominatim Search Styles */
 .nominatim-search {
-    top: .20em;
-    left: .20em;
+	top: 30px;
+	left: 44px;
 }
 
 .nominatim-search button {
