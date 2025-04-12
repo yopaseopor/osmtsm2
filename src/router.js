@@ -227,6 +227,11 @@ function initRouter(map) {
                             routeLayer.getSource().clear();
                             routeLayer.getSource().addFeatures(features);
                             
+                            // Ensure all markers are visible
+                            if (startMarker) startMarker.getElement().style.display = 'block';
+                            if (viaMarker) viaMarker.getElement().style.display = 'block';
+                            if (endMarker) endMarker.getElement().style.display = 'block';
+                            
                             // Show route info
                             const distance = (route.distance / 1000).toFixed(1);
                             const duration = Math.round(route.duration / 60);
