@@ -6,6 +6,7 @@ function initPanoraMaxViewer(map) {
     var viewerContainer = $('<div>').addClass('panoramax-viewer')
         .append($('<button>').addClass('close-button').html('<i class="fa fa-times"></i>'))
         .append($('<div>').addClass('resize-handle'))
+        .append($('<div>').addClass('controls')
         .append($('<div>').addClass('credits')
             .append($('<div>').addClass('credit').html('© <a href="https://panoramax.xyz" target="_blank">Panoramax</a>'))
             .append($('<div>').addClass('credit').html('© <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors'))
@@ -49,6 +50,21 @@ function initPanoraMaxViewer(map) {
     $('.panoramax-viewer .close-button').on('click', function() {
         hidePanoraMaxViewer();
         $('.osmcat-panoramax button').removeClass('active');
+    });
+
+    // Handle navigation buttons
+    $('.panoramax-viewer .prev-button').on('click', function() {
+        var iframe = document.getElementById('panoramax-iframe');
+        if (iframe && iframe.contentWindow) {
+            iframe.contentWindow.postMessage({ action: 'prev' }, 'https://panoramax.xyz');
+        }
+    });
+
+    $('.panoramax-viewer .next-button').on('click', function() {
+        var iframe = document.getElementById('panoramax-iframe');
+        if (iframe && iframe.contentWindow) {
+            iframe.contentWindow.postMessage({ action: 'next' }, 'https://panoramax.xyz');
+        }
     });
 
     // Listen for messages from the iframe
