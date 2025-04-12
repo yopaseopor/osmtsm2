@@ -427,10 +427,12 @@ function initRouter(map) {
             // Calculate route
             dialog.find('.calculate-route').on('click', calculateRoute);
 
+            // Make dialog non-modal and position it
             dialog.dialog({
                 title: 'Route Calculator',
                 width: 400,
-                modal: true,
+                modal: false, // Changed to false to allow map interaction
+                position: { my: 'left top', at: 'left+10 top+10' },
                 close: function() {
                     if (clickHandler) {
                         map.un('singleclick', clickHandler);
@@ -446,6 +448,12 @@ function initRouter(map) {
     // Add CSS for router dialog
     $('<style>')
         .text(`
+            .router-dialog {
+                z-index: 1000;
+            }
+            .router-dialog .ui-dialog-titlebar {
+                cursor: move;
+            }
             .router-dialog .router-form {
                 padding: 10px;
             }
