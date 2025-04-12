@@ -6,6 +6,9 @@ function initPanoraMaxViewer(map) {
     var viewerContainer = $('<div>').addClass('panoramax-viewer')
         .append($('<button>').addClass('close-button').html('<i class="fa fa-times"></i>'))
         .append($('<div>').addClass('resize-handle'))
+        .append($('<div>').addClass('controls')
+            .append($('<button>').addClass('prev-button').html('<i class="fa fa-chevron-left"></i>'))
+            .append($('<button>').addClass('next-button').html('<i class="fa fa-chevron-right"></i>')))
         .append($('<div>').addClass('credits')
             .append($('<div>').addClass('credit').html('© <a href="https://panoramax.xyz" target="_blank">Panoramax</a>'))
             .append($('<div>').addClass('credit').html('© <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors'))
@@ -51,6 +54,21 @@ function initPanoraMaxViewer(map) {
         $('.osmcat-panoramax button').removeClass('active');
     });
 
+    // Handle navigation buttons
+    $('.panoramax-viewer .prev-button').on('click', function() {
+        var iframe = $('.panoramax-viewer iframe')[0];
+        if (iframe && iframe.contentWindow) {
+            iframe.contentWindow.postMessage('prev', '*');
+        }
+    });
+
+    $('.panoramax-viewer .next-button').on('click', function() {
+        var iframe = $('.panoramax-viewer iframe')[0];
+        if (iframe && iframe.contentWindow) {
+            iframe.contentWindow.postMessage('next', '*');
+        }
+    });
+
     // Make viewer resizable
     $('.panoramax-viewer').resizable({
         handles: 'e, s, se',
@@ -67,7 +85,10 @@ function initPanoraMaxViewer(map) {
     // Function to show the viewer
     function showPanoraMaxViewer(lat, lon, zoom) {
         var url = `https://api.panoramax.xyz/#focus=map&map=${zoom}/${lat}/${lon}`;
-        $('.panoramax-viewer iframe').attr('src', url);
+        var iframe = $('.panoramax-viewer iframe');
+        if (iframe.attr('src') !== url) {
+            iframe.attr('src', url);
+        }
         $('.panoramax-viewer').addClass('active');
         $('#map').addClass('viewer-active');
     }
