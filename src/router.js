@@ -14,16 +14,24 @@ function initRouter(map) {
 
     let startPlace = null;
     let endPlace = null;
+    let viaPlace = null;
     let startMarker = null;
     let endMarker = null;
+    let viaMarker = null;
 
-    // Create markers for start and end points
-    const createMarker = function(coordinate, isStart) {
+    // Create markers for points
+    const createMarker = function(coordinate, type) {
+        const icon = {
+            start: 'play-circle',
+            via: 'dot-circle',
+            end: 'stop-circle'
+        }[type];
+        
         const marker = new ol.Overlay({
             position: coordinate,
             element: $('<div>')
                 .addClass('route-marker')
-                .html(`<i class="fa fa-${isStart ? 'play' : 'stop'}-circle"></i>`)[0],
+                .html(`<i class="fa fa-${icon}"></i>`)[0],
             positioning: 'center-center'
         });
         map.addOverlay(marker);
@@ -44,6 +52,14 @@ function initRouter(map) {
                             <button class="search-button"><i class="fa fa-search"></i></button>
                         </div>
                         <div class="search-results start-results"></div>
+                    </div>
+                    <div class="router-input">
+                        <label>Via:</label>
+                        <div class="location-input">
+                            <input type="text" class="via-place" placeholder="Search via location...">
+                            <button class="search-button"><i class="fa fa-search"></i></button>
+                        </div>
+                        <div class="search-results via-results"></div>
                     </div>
                     <div class="router-input">
                         <label>End:</label>
@@ -76,23 +92,27 @@ function initRouter(map) {
                 fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}`)
                     .then(response => response.json())
                     .then(data => {
-                        resultsDiv.empty();
+                        resultsDiv.empty().show();
                         data.forEach(place => {
                             const result = $('<div>')
                                 .addClass('search-result')
                                 .html(`${place.display_name}<br><small>${place.lat}, ${place.lon}</small>`)
                                 .on('click', function() {
                                     input.val(place.display_name);
-                                    resultsDiv.empty();
+                                    resultsDiv.hide();
                                     const coordinate = ol.proj.fromLonLat([parseFloat(place.lon), parseFloat(place.lat)]);
                                     if (input.hasClass('start-place')) {
                                         startPlace = place;
                                         if (startMarker) map.removeOverlay(startMarker);
-                                        startMarker = createMarker(coordinate, true);
+                                        startMarker = createMarker(coordinate, 'start');
+                                    } else if (input.hasClass('via-place')) {
+                                        viaPlace = place;
+                                        if (viaMarker) map.removeOverlay(viaMarker);
+                                        viaMarker = createMarker(coordinate, 'via');
                                     } else {
                                         endPlace = place;
                                         if (endMarker) map.removeOverlay(endMarker);
-                                        endMarker = createMarker(coordinate, false);
+                                        endMarker = createMarker(coordinate, 'end');
                                     }
                                 });
                             resultsDiv.append(result);
@@ -115,12 +135,17 @@ function initRouter(map) {
                 if (!startPlace) {
                     startPlace = { lon: lonlat[0], lat: lonlat[1] };
                     if (startMarker) map.removeOverlay(startMarker);
-                    startMarker = createMarker(coordinate, true);
+                    startMarker = createMarker(coordinate, 'start');
                     dialog.find('.start-place').val('Selected on map');
+                } else if (!viaPlace) {
+                    viaPlace = { lon: lonlat[0], lat: lonlat[1] };
+                    if (viaMarker) map.removeOverlay(viaMarker);
+                    viaMarker = createMarker(coordinate, 'via');
+                    dialog.find('.via-place').val('Selected on map');
                 } else if (!endPlace) {
                     endPlace = { lon: lonlat[0], lat: lonlat[1] };
                     if (endMarker) map.removeOverlay(endMarker);
-                    endMarker = createMarker(coordinate, false);
+                    endMarker = createMarker(coordinate, 'end');
                     dialog.find('.end-place').val('Selected on map');
                 }
             };
@@ -136,7 +161,15 @@ function initRouter(map) {
 
                 const profile = dialog.find('.profile-select').val();
                 loading.show();
-                const url = `https://router.project-osrm.org/route/v1/${profile}/${startPlace.lon},${startPlace.lat};${endPlace.lon},${endPlace.lat}?overview=full&geometries=geojson`;
+                
+                // Build waypoints string
+                let waypoints = `${startPlace.lon},${startPlace.lat}`;
+                if (viaPlace) {
+                    waypoints += `;${viaPlace.lon},${viaPlace.lat}`;
+                }
+                waypoints += `;${endPlace.lon},${endPlace.lat}`;
+                
+                const url = `https://router.project-osrm.org/route/v1/${profile}/${waypoints}?overview=full&geometries=geojson`;
                 
                 fetch(url)
                     .then(response => response.json())
