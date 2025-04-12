@@ -284,11 +284,11 @@ a:hover {
 /* PanoraMax Viewer Styles */
 .panoramax-viewer {
     position: fixed;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 800px;
-    height: 600px;
+    height: 500px;
     background: white;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     display: none;
@@ -304,6 +304,7 @@ a:hover {
     height: calc(100% - 30px);
     border: none;
     object-fit: contain;
+    margin-top: -20px;
 }
 
 .panoramax-viewer .close-button {
