@@ -77,10 +77,10 @@ function initPanoraMaxViewer(map) {
     function showPanoraMaxViewer(lat, lon, zoom) {
         // Build URL with official parameters
         var url = `https://panoramax.xyz/#` +
-            `focus=map&` + // Show map as main element
+            `focus=map&` + // Force map view
             `map=${zoom}/${lat}/${lon}&` + // Map position
             `nav=any&` + // Allow navigation between pictures
-            `theme=default&` + // Use default theme
+            `theme=default&` + // Use default theme for markers
             `background=streets`; // Use streets background
         
         var iframe = $('#panoramax-iframe');
