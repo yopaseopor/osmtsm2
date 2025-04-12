@@ -196,17 +196,97 @@ $(function () {
 	});
 	map.addLayer(routeLayer);
 
-	// Add router button
+	// Add router button and dialog
 	const routerButton = $('<button>')
 		.addClass('osmcat-button')
 		.html('<i class="fa fa-route"></i> Route')
 		.on('click', function() {
-			const start = prompt('Enter start location (lat,lon):');
-			const end = prompt('Enter end location (lat,lon):');
-			
-			if (start && end) {
+			const dialog = $('<div>').addClass('router-dialog').html(`
+				<div class="router-form">
+					<div class="router-input">
+						<label>Start:</label>
+						<input type="text" class="start-place" placeholder="Search start location...">
+						<div class="search-results start-results"></div>
+					</div>
+					<div class="router-input">
+						<label>End:</label>
+						<input type="text" class="end-place" placeholder="Search end location...">
+						<div class="search-results end-results"></div>
+					</div>
+					<div class="router-input">
+						<label>Profile:</label>
+						<select class="profile-select">
+							<option value="driving">Car</option>
+							<option value="cycling">Bicycle</option>
+							<option value="foot">Walking</option>
+						</select>
+					</div>
+					<button class="calculate-route">Calculate Route</button>
+				</div>
+			`);
+
+			let startPlace = null;
+			let endPlace = null;
+
+			// Handle place search
+			const searchPlace = function(input, resultsDiv) {
+				const query = input.val();
+				if (query.length < 3) return;
+
+				fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}`)
+					.then(response => response.json())
+					.then(data => {
+						resultsDiv.empty();
+						data.forEach(place => {
+							const result = $('<div>')
+								.addClass('search-result')
+								.html(`${place.display_name}<br><small>${place.lat}, ${place.lon}</small>`)
+								.on('click', function() {
+									input.val(place.display_name);
+									resultsDiv.empty();
+									if (input.hasClass('start-place')) {
+										startPlace = place;
+									} else {
+										endPlace = place;
+									}
+								});
+							resultsDiv.append(result);
+						});
+					});
+			};
+
+			// Debounce search
+			const debounce = (func, wait) => {
+				let timeout;
+				return function executedFunction(...args) {
+					const later = () => {
+						clearTimeout(timeout);
+						func(...args);
+					};
+					clearTimeout(timeout);
+					timeout = setTimeout(later, wait);
+				};
+			};
+
+			// Setup search handlers
+			dialog.find('.start-place').on('input', debounce(function() {
+				searchPlace($(this), dialog.find('.start-results'));
+			}, 300));
+
+			dialog.find('.end-place').on('input', debounce(function() {
+				searchPlace($(this), dialog.find('.end-results'));
+			}, 300));
+
+			// Calculate route
+			dialog.find('.calculate-route').on('click', function() {
+				if (!startPlace || !endPlace) {
+					alert('Please select both start and end locations');
+					return;
+				}
+
+				const profile = dialog.find('.profile-select').val();
 				loading.show();
-				const url = `https://router.project-osrm.org/route/v1/driving/${start};${end}?overview=full&geometries=geojson`;
+				const url = `https://router.project-osrm.org/route/v1/${profile}/${startPlace.lon},${startPlace.lat};${endPlace.lon},${endPlace.lat}?overview=full&geometries=geojson`;
 				
 				fetch(url)
 					.then(response => response.json())
@@ -218,6 +298,11 @@ $(function () {
 							routeLayer.getSource().clear();
 							routeLayer.getSource().addFeatures(features);
 							
+							// Show route info
+							const distance = (route.distance / 1000).toFixed(1);
+							const duration = Math.round(route.duration / 60);
+							alert(`Route calculated!\nDistance: ${distance} km\nDuration: ${duration} minutes`);
+							
 							// Zoom to route
 							const extent = routeLayer.getSource().getExtent();
 							map.getView().fit(extent, {
@@ -226,15 +311,72 @@ $(function () {
 							});
 						}
 						loading.hide();
+						dialog.dialog('close');
 					})
 					.catch(error => {
 						console.error('Error fetching route:', error);
 						loading.hide();
+						alert('Error calculating route. Please try again.');
 					});
-			}
+			});
+
+			dialog.dialog({
+				title: 'Route Calculator',
+				width: 400,
+				modal: true,
+				close: function() {
+					$(this).dialog('destroy');
+				}
+			});
 		});
 
 	$('#menu').append(routerButton);
+
+	// Add CSS for router dialog
+	$('<style>')
+		.text(`
+			.router-dialog .router-form {
+				padding: 10px;
+			}
+			.router-dialog .router-input {
+				margin-bottom: 15px;
+			}
+			.router-dialog label {
+				display: block;
+				margin-bottom: 5px;
+			}
+			.router-dialog input, .router-dialog select {
+				width: 100%;
+				padding: 5px;
+			}
+			.router-dialog .search-results {
+				max-height: 150px;
+				overflow-y: auto;
+				border: 1px solid #ccc;
+				margin-top: 5px;
+				display: none;
+			}
+			.router-dialog .search-result {
+				padding: 5px;
+				cursor: pointer;
+				border-bottom: 1px solid #eee;
+			}
+			.router-dialog .search-result:hover {
+				background-color: #f0f0f0;
+			}
+			.router-dialog .calculate-route {
+				width: 100%;
+				padding: 10px;
+				background-color: #4CAF50;
+				color: white;
+				border: none;
+				cursor: pointer;
+			}
+			.router-dialog .calculate-route:hover {
+				background-color: #45a049;
+			}
+		`)
+		.appendTo('head');
 
 	// Initialize Nominatim search
 	initNominatimSearch(map);
