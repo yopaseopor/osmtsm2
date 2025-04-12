@@ -220,7 +220,10 @@ function initRouter(map) {
                         if (data.routes && data.routes[0]) {
                             const route = data.routes[0];
                             const format = new ol.format.GeoJSON();
-                            const features = format.readFeatures(route.geometry);
+                            const features = format.readFeatures(route.geometry, {
+                                featureProjection: map.getView().getProjection(),
+                                dataProjection: 'EPSG:4326'
+                            });
                             routeLayer.getSource().clear();
                             routeLayer.getSource().addFeatures(features);
                             
