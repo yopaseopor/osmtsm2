@@ -72,22 +72,31 @@ function initRouter(map) {
             const coordinate = map.getEventCoordinate(pixel);
             const lonlat = ol.proj.toLonLat(coordinate);
             
-            if (type === 'via') {
+            if (type === 'start') {
+                startPlace = { lon: lonlat[0], lat: lonlat[1] };
+                marker.setPosition(coordinate);
+                calculateRoute();
+            } else if (type === 'via') {
                 viaPlace = { lon: lonlat[0], lat: lonlat[1] };
+                marker.setPosition(coordinate);
+                calculateRoute();
+            } else if (type === 'end') {
+                endPlace = { lon: lonlat[0], lat: lonlat[1] };
                 marker.setPosition(coordinate);
                 calculateRoute();
             }
         });
         
-        // Add click handler for via point
-        if (type === 'via') {
-            element.addEventListener('click', function() {
-                if (viaPlace) {
-                    // Show alternative routes
-                    showAlternativeRoutes();
-                }
-            });
-        }
+        // Add click handler for all points
+        element.addEventListener('click', function() {
+            if (type === 'via' && viaPlace) {
+                showAlternativeRoutes();
+            } else {
+                // For start and end points, allow setting new position
+                const evt = { coordinate: coordinate };
+                clickHandler(evt);
+            }
+        });
         
         map.addOverlay(marker);
         return marker;
@@ -369,6 +378,47 @@ function initRouter(map) {
                     endPlace = { lon: lonlat[0], lat: lonlat[1] };
                     endMarker = createMarker(coordinate, 'end');
                     dialog.find('.end-place').val('Selected on map');
+                } else {
+                    // If all points are set, allow clicking to move any point
+                    const pixel = map.getEventPixel(evt);
+                    const feature = map.forEachFeatureAtPixel(pixel, function(feature) {
+                        return feature;
+                    });
+                    
+                    if (feature) {
+                        const extent = feature.getGeometry().getExtent();
+                        const center = ol.extent.getCenter(extent);
+                        const lonlat = ol.proj.toLonLat(center);
+                        
+                        // Find closest point to click
+                        const distances = [
+                            { type: 'start', point: startPlace, marker: startMarker },
+                            { type: 'via', point: viaPlace, marker: viaMarker },
+                            { type: 'end', point: endPlace, marker: endMarker }
+                        ].map(item => ({
+                            ...item,
+                            distance: Math.sqrt(
+                                Math.pow(lonlat[0] - item.point.lon, 2) +
+                                Math.pow(lonlat[1] - item.point.lat, 2)
+                            )
+                        })).sort((a, b) => a.distance - b.distance);
+                        
+                        const closest = distances[0];
+                        if (closest.distance < 0.01) { // Threshold for point selection
+                            if (closest.marker) map.removeOverlay(closest.marker);
+                            if (closest.type === 'start') {
+                                startPlace = { lon: lonlat[0], lat: lonlat[1] };
+                                startMarker = createMarker(coordinate, 'start');
+                            } else if (closest.type === 'via') {
+                                viaPlace = { lon: lonlat[0], lat: lonlat[1] };
+                                viaMarker = createMarker(coordinate, 'via');
+                            } else {
+                                endPlace = { lon: lonlat[0], lat: lonlat[1] };
+                                endMarker = createMarker(coordinate, 'end');
+                            }
+                            calculateRoute();
+                        }
+                    }
                 }
             };
 
@@ -463,6 +513,15 @@ function initRouter(map) {
                 font-size: 24px;
                 color: #4CAF50;
                 text-shadow: 0 0 3px white;
+                cursor: pointer;
+            }
+            .route-marker:hover {
+                color: #45a049;
+            }
+            .route-marker i {
+                background-color: white;
+                border-radius: 50%;
+                padding: 5px;
             }
         `)
         .appendTo('head');
