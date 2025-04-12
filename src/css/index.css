@@ -301,7 +301,7 @@ a:hover {
 
 .panoramax-viewer iframe {
     width: 100%;
-    height: 100%;
+    height: calc(100% - 30px);
     border: none;
 }
 
@@ -316,9 +316,39 @@ a:hover {
     z-index: 1001;
 }
 
-.panoramax-viewer .resize-handle {
+.panoramax-viewer .credits {
     position: absolute;
     bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 5px;
+    font-size: 12px;
+    z-index: 1001;
+}
+
+.panoramax-viewer .credit {
+    color: #666;
+}
+
+.panoramax-viewer .credit a {
+    color: #00447B;
+    text-decoration: none;
+}
+
+.panoramax-viewer .credit a:hover {
+    color: #40F;
+    text-decoration: underline;
+}
+
+.panoramax-viewer .resize-handle {
+    position: absolute;
+    bottom: 30px;
     right: 0;
     width: 20px;
     height: 20px;
@@ -337,14 +367,14 @@ a:hover {
     width: 7px;
     right: -5px;
     top: 0;
-    height: 100%;
+    height: calc(100% - 30px);
 }
 
 .ui-resizable-s {
     cursor: s-resize;
     height: 7px;
     width: 100%;
-    bottom: -5px;
+    bottom: 23px;
     left: 0;
 }
 
@@ -353,7 +383,7 @@ a:hover {
     width: 12px;
     height: 12px;
     right: 1px;
-    bottom: 1px;
+    bottom: 23px;
 }
 
 /* Adjust map height when viewer is active */

@@ -6,6 +6,10 @@ function initPanoraMaxViewer(map) {
     var viewerContainer = $('<div>').addClass('panoramax-viewer')
         .append($('<button>').addClass('close-button').html('<i class="fa fa-times"></i>'))
         .append($('<div>').addClass('resize-handle'))
+        .append($('<div>').addClass('credits')
+            .append($('<div>').addClass('credit').html('© <a href="https://panoramax.xyz" target="_blank">Panoramax</a>'))
+            .append($('<div>').addClass('credit').html('© <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors'))
+            .append($('<div>').addClass('credit').html('© <a href="#" class="photographer-credit" target="_blank">Photographer</a>')))
         .append($('<iframe>'));
     
     $('body').append(viewerContainer);
@@ -77,7 +81,7 @@ function initPanoraMaxViewer(map) {
         resize: function(event, ui) {
             $('.panoramax-viewer iframe').css({
                 width: ui.size.width,
-                height: ui.size.height
+                height: ui.size.height - 30 // Account for credits height
             });
         }
     });
