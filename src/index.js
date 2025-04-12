@@ -3,9 +3,6 @@ $(function () {
 	$('#map').empty(); // Remove Javascript required message
 	var baseLayerIndex = 0;
 	
-	
-	
-
 	//Object to manage the spinner layer
 	var loading = {
 		init: function () {
@@ -139,6 +136,8 @@ $(function () {
 		window.location.hash.replace(/[#?&]+([^=&]+)=([^&]*)/gi, function(m, key, value) {
 			vars[key] = value;
 		});
+		
+		
 
 		// map = zoom, center (lon, lat), [rotation]
 		var mapParam = getUrlParam('map', ''), parts;
@@ -184,12 +183,9 @@ $(function () {
 		target: 'map',
 		view: view
 	});
-
-	// Initialize Nominatim search
+	
+		// Initialize Nominatim search
 	initNominatimSearch(map);
-
-	// Initialize OSRM router
-	initOSRMRouter(map);
 
 	// Initialize PanoraMax viewer
 	initPanoraMaxViewer(map);
@@ -309,6 +305,9 @@ $(function () {
 	}));
 	map.addControl(new ol.control.ScaleLine({units: config.initialConfig.units}));
 	map.addControl(new ol.control.ZoomSlider());
+	
+
+
 
 	// Geolocation Control
 	// In some browsers, this feature is available only in secure contexts (HTTPS)
@@ -339,21 +338,11 @@ $(function () {
 	map.addControl(new ol.control.Control({
 		element: geolocationControlBuild()
 	}));
-
-	// Info Control
-	var infoControlBuild = function () {
-		var container = $('<div>').addClass('ol-control ol-unselectable osmcat-infobutton').html($('<button type="button"><i class="fa fa-info-circle"></i></button>').on('click', function () {
-			window.location.href = 'https://github.com/yopaseopor/osmffmap';
-		}));
-		return container[0];
-	};
-	map.addControl(new ol.control.Control({
-		element: infoControlBuild()
-	}));
 	
-		// Info Control2
-	//var infoControlBuild2 = function () {
-	//	var container = $('<div>').addClass('ol-control ol-unselectable osmcat-infobutton2').html($('<button type="button"><i class="fa fa-search-plus"></i></button>').on('click', function () {
+	
+	// Como crear un control
+	//@@ poner un número extra a la var | var infoControlBuild2 = function () {
+	//@@ revisar osmcat-infobutton2 	var container = $('<div>').addClass('ol-control ol-unselectable osmcat-infobutton2').html($('<button type="button"><i class="fa fa-search-plus"></i></button>').on('click', function () {
 	//		window.location.href = 'https://mapcomplete.osm.be/index.html?userlayout=https://raw.githubusercontent.com/yopaseopor/mcquests/master/limits.json';
 	//	}));
 	//	return container[0];
@@ -362,6 +351,17 @@ $(function () {
 	//	element: infoControlBuild2()
 	//}));
 
+	// Info Control
+	var infoControlBuild = function () {
+		var container = $('<div>').addClass('ol-control ol-unselectable osmcat-infobutton').html($('<button type="button"><i class="fa fa-info-circle"></i></button>').on('click', function () {
+			window.location.href = 'https://github.com/yopaseopor/osmpoismap';
+		}));
+		return container[0];
+	};
+	map.addControl(new ol.control.Control({
+		element: infoControlBuild()
+	}));
+	
 	// Copy permalink button
 	var permalinkControlBuild = function () {
 		var container = $('<div>').addClass('ol-control ol-unselectable osmcat-sharebutton').html($('<button type="button"><i class="fa fa-share-alt-square"></i></button>').on('click', function () {
@@ -393,7 +393,7 @@ $(function () {
 	map.addControl(new ol.control.Control({
 		element: permalinkControlBuild()
 	}));
-	
+
 
 	// Rotate left button
 	var rotateleftControlBuild = function () {
@@ -579,4 +579,3 @@ function linearColorInterpolation(colorFrom, colorTo, weight) {
 		rgb = [Math.round(colorTo[0] * w1 + colorFrom[0] * w2), Math.round(colorTo[1] * w1 + colorFrom[1] * w2), Math.round(colorTo[2] * w1 + colorFrom[2] * w2)];
 	return rgb;
 }
-

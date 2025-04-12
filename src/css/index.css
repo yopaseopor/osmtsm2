@@ -169,6 +169,7 @@ a:hover {
   border-color: #555 transparent transparent transparent;
 }
 
+
 /* Nominatim Search Styles */
 .nominatim-search {
 	top: 30px;
@@ -253,6 +254,7 @@ a:hover {
     50% { transform: scale(1.2); }
     100% { transform: scale(1); }
 }
+
 
 /* Big screen */
 @media only screen and (min-width:600px) {
@@ -410,117 +412,4 @@ a:hover {
 .osmcat-panoramax button.active {
     background: #00447B;
     color: white;
-}
-
-/* OSRM Router Styles */
-.osrm-router {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 400px;
-    height: 300px;
-    background: white;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    z-index: 1000;
-    display: none;
-    margin-top: 3em; /* Add margin to avoid overlapping with controls */
-}
-
-.osrm-router.active {
-    display: block;
-}
-
-.osrm-router .close-button {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    color: #666;
-}
-
-.osrm-router .profile-selector {
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    z-index: 1;
-}
-
-.osrm-router .profile-selector select {
-    padding: 5px;
-    border: 1px solid #ddd;
-    border-radius: 3px;
-    background: white;
-}
-
-.osrm-router iframe {
-    width: 100%;
-    height: calc(100% - 30px);
-    border: none;
-    margin-top: 30px;
-}
-
-.osrm-router .resize-handle {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 10px;
-    height: 10px;
-    background: #ddd;
-    cursor: se-resize;
-}
-
-#map.router-active {
-    margin-right: 400px;
-}
-
-/* OSRM Router Button Styles */
-.osmcat-osrm {
-    background: rgba(255, 255, 255, 0.8);
-    border: none;
-    border-radius: 2px;
-    padding: 5px 10px;
-    cursor: pointer;
-    margin: 2px;
-    z-index: 1;
-}
-
-.osmcat-osrm button {
-    background: rgba(255, 255, 255, 0.8);
-    border: none;
-    border-radius: 2px;
-    padding: 5px 10px;
-    cursor: pointer;
-    margin: 2px;
-}
-
-.osmcat-osrm button:hover {
-    background: rgba(255, 255, 255, 1);
-}
-
-.osmcat-osrm button.active {
-    background: #00447B;
-    color: white;
-}
-
-/* Ensure OpenLayers controls are visible */
-.ol-control {
-    z-index: 0;
-}
-
-.ol-zoom {
-    top: 0.5em;
-    left: 0.5em;
-}
-
-.ol-rotate {
-    top: 0.5em;
-    right: 0.5em;
-}
-
-.ol-attribution {
-    bottom: 0;
-    right: 0;
 }
