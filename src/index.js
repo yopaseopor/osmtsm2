@@ -184,7 +184,59 @@ $(function () {
 		view: view
 	});
 	
-		// Initialize Nominatim search
+	// Add route layer
+	const routeLayer = new ol.layer.Vector({
+		source: new ol.source.Vector(),
+		style: new ol.style.Style({
+			stroke: new ol.style.Stroke({
+				color: '#ff0000',
+				width: 4
+			})
+		})
+	});
+	map.addLayer(routeLayer);
+
+	// Add router button
+	const routerButton = $('<button>')
+		.addClass('osmcat-button')
+		.html('<i class="fa fa-route"></i> Route')
+		.on('click', function() {
+			const start = prompt('Enter start location (lat,lon):');
+			const end = prompt('Enter end location (lat,lon):');
+			
+			if (start && end) {
+				loading.show();
+				const url = `https://router.project-osrm.org/route/v1/driving/${start};${end}?overview=full&geometries=geojson`;
+				
+				fetch(url)
+					.then(response => response.json())
+					.then(data => {
+						if (data.routes && data.routes[0]) {
+							const route = data.routes[0];
+							const format = new ol.format.GeoJSON();
+							const features = format.readFeatures(route.geometry);
+							routeLayer.getSource().clear();
+							routeLayer.getSource().addFeatures(features);
+							
+							// Zoom to route
+							const extent = routeLayer.getSource().getExtent();
+							map.getView().fit(extent, {
+								padding: [50, 50, 50, 50],
+								duration: 1000
+							});
+						}
+						loading.hide();
+					})
+					.catch(error => {
+						console.error('Error fetching route:', error);
+						loading.hide();
+					});
+			}
+		});
+
+	$('#menu').append(routerButton);
+
+	// Initialize Nominatim search
 	initNominatimSearch(map);
 
 	// Initialize PanoraMax viewer
