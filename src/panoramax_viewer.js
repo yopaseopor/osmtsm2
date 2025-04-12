@@ -37,14 +37,24 @@ function initPanoraMaxViewer(map) {
                 right: '8px'
             });
         
-        var button = $('<button type="button">')
+        // Street view button
+        var streetViewButton = $('<button type="button">')
             .html('<i class="fa fa-street-view"></i>')
             .on('click', function() {
                 var center = ol.proj.transform(map.getView().getCenter(), 'EPSG:3857', 'EPSG:4326');
-                showPanoraMaxViewer(center[1], center[0]);
+                showPanoraMaxViewer(center[1], center[0], 'viewer');
             });
         
-        // Add tracks toggle button
+        // Map view button
+        var mapViewButton = $('<button type="button">')
+            .html('<i class="fa fa-map"></i>')
+            .on('click', function() {
+                var center = ol.proj.transform(map.getView().getCenter(), 'EPSG:3857', 'EPSG:4326');
+                var zoom = map.getView().getZoom();
+                showPanoraMaxViewer(center[1], center[0], 'map', zoom);
+            });
+        
+        // Tracks toggle button
         var tracksButton = $('<button type="button">')
             .html('<i class="fa fa-map-marker"></i>')
             .on('click', function() {
@@ -52,7 +62,7 @@ function initPanoraMaxViewer(map) {
                 $(this).toggleClass('active');
             });
         
-        container.append(button, tracksButton);
+        container.append(streetViewButton, mapViewButton, tracksButton);
         return container[0];
     };
 
@@ -67,8 +77,13 @@ function initPanoraMaxViewer(map) {
     });
 
     // Function to show the viewer
-    function showPanoraMaxViewer(lat, lon) {
-        var url = `https://panoramax.xyz/viewer?lat=${lat}&lon=${lon}`;
+    function showPanoraMaxViewer(lat, lon, mode, zoom) {
+        var url;
+        if (mode === 'viewer') {
+            url = `https://panoramax.xyz/viewer?lat=${lat}&lon=${lon}`;
+        } else {
+            url = `https://api.panoramax.xyz/#focus=map&map=${zoom}/${lat}/${lon}`;
+        }
         $('.panoramax-viewer iframe').attr('src', url);
         $('.panoramax-viewer').addClass('active');
         $('#map').addClass('viewer-active');
@@ -86,6 +101,6 @@ function initPanoraMaxViewer(map) {
     // Handle map click events
     map.on('click', function(evt) {
         var coords = ol.proj.transform(evt.coordinate, 'EPSG:3857', 'EPSG:4326');
-        showPanoraMaxViewer(coords[1], coords[0]);
+        showPanoraMaxViewer(coords[1], coords[0], 'viewer');
     });
 } 
