@@ -293,6 +293,7 @@ a:hover {
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     display: none;
     z-index: 1000;
+    overflow: hidden;
 }
 
 .panoramax-viewer.active {
@@ -303,8 +304,9 @@ a:hover {
     width: 100%;
     height: calc(100% - 30px);
     border: none;
-    object-fit: contain;
-    margin-top: -20px;
+    margin-top: -40px;
+    position: relative;
+    z-index: 1;
 }
 
 .panoramax-viewer .close-button {
