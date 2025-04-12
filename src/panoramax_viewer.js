@@ -81,7 +81,8 @@ function initPanoraMaxViewer(map) {
             `map=${zoom}/${lat}/${lon}&` + // Map position
             `nav=any&` + // Allow navigation between pictures
             `theme=default&` + // Use default theme for markers
-            `background=streets`; // Use streets background
+            `background=streets&` + // Use streets background
+            `meta=none`; // Hide metadata section to show more map
         
         var iframe = $('#panoramax-iframe');
         
