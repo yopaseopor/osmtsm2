@@ -188,6 +188,9 @@ $(function () {
 	// Initialize Nominatim search
 	initNominatimSearch(map);
 
+	// Initialize PanoraMax viewer
+	initPanoraMaxViewer(map);
+
 	var layersControlBuild = function () {
 		var visibleLayer,
 			previousLayer,
