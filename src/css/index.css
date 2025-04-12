@@ -303,6 +303,7 @@ a:hover {
     width: 100%;
     height: calc(100% - 30px);
     border: none;
+    object-fit: contain;
 }
 
 .panoramax-viewer .close-button {
@@ -327,23 +328,24 @@ a:hover {
     align-items: center;
     justify-content: center;
     gap: 20px;
-    padding: 5px;
     font-size: 12px;
+    padding: 0 10px;
     z-index: 1001;
 }
 
-.panoramax-viewer .credit {
-    color: #666;
+.panoramax-viewer .credits .credit {
+    display: flex;
+    align-items: center;
 }
 
-.panoramax-viewer .credit a {
+.panoramax-viewer .credits a {
     color: #00447B;
     text-decoration: none;
+    margin-left: 5px;
 }
 
-.panoramax-viewer .credit a:hover {
+.panoramax-viewer .credits a:hover {
     color: #40F;
-    text-decoration: underline;
 }
 
 .panoramax-viewer .resize-handle {
@@ -425,6 +427,6 @@ a:hover {
 }
 
 .osmcat-panoramax button.active {
-    background: #FF0000;
+    background: #00447B;
     color: white;
 }

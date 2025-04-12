@@ -9,30 +9,10 @@ function initPanoraMaxViewer(map) {
         .append($('<div>').addClass('credits')
             .append($('<div>').addClass('credit').html('© <a href="https://panoramax.xyz" target="_blank">Panoramax</a>'))
             .append($('<div>').addClass('credit').html('© <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors'))
-            .append($('<div>').addClass('credit').html('© <a href="#" class="photographer-credit" target="_blank">Photographer</a>')))
+            .append($('<div>').addClass('credit').html('© <span class="photographer"></span>')))
         .append($('<iframe>'));
     
     $('body').append(viewerContainer);
-
-    // Create tracks layer
-    var tracksLayer = new ol.layer.Vector({
-        title: 'Panoramax Tracks',
-        source: new ol.source.Vector({
-            format: new ol.format.GeoJSON(),
-            url: 'https://api.panoramax.xyz/api/tracks',
-            strategy: ol.loadingstrategy.bbox
-        }),
-        style: new ol.style.Style({
-            stroke: new ol.style.Stroke({
-                color: '#FF0000',
-                width: 2
-            })
-        }),
-        visible: false
-    });
-
-    // Add tracks layer to map
-    map.addLayer(tracksLayer);
 
     // Create viewer button control
     var viewerControlBuild = function() {
@@ -46,20 +26,17 @@ function initPanoraMaxViewer(map) {
         var mapViewButton = $('<button type="button">')
             .html('<i class="fa fa-map"></i>')
             .on('click', function() {
-                var center = ol.proj.transform(map.getView().getCenter(), 'EPSG:3857', 'EPSG:4326');
-                var zoom = map.getView().getZoom();
-                showPanoraMaxViewer(center[1], center[0], zoom);
-            });
-        
-        // Tracks toggle button
-        var tracksButton = $('<button type="button">')
-            .html('<i class="fa fa-map-marker"></i>')
-            .on('click', function() {
-                tracksLayer.setVisible(!tracksLayer.getVisible());
+                if ($('.panoramax-viewer').hasClass('active')) {
+                    hidePanoraMaxViewer();
+                } else {
+                    var center = ol.proj.transform(map.getView().getCenter(), 'EPSG:3857', 'EPSG:4326');
+                    var zoom = map.getView().getZoom();
+                    showPanoraMaxViewer(center[1], center[0], zoom);
+                }
                 $(this).toggleClass('active');
             });
         
-        container.append(mapViewButton, tracksButton);
+        container.append(mapViewButton);
         return container[0];
     };
 
@@ -71,6 +48,7 @@ function initPanoraMaxViewer(map) {
     // Handle viewer close button
     $('.panoramax-viewer .close-button').on('click', function() {
         hidePanoraMaxViewer();
+        $('.osmcat-panoramax button').removeClass('active');
     });
 
     // Make viewer resizable
@@ -105,8 +83,10 @@ function initPanoraMaxViewer(map) {
 
     // Handle map click events
     map.on('click', function(evt) {
-        var coords = ol.proj.transform(evt.coordinate, 'EPSG:3857', 'EPSG:4326');
-        var zoom = map.getView().getZoom();
-        showPanoraMaxViewer(coords[1], coords[0], zoom);
+        if ($('.panoramax-viewer').hasClass('active')) {
+            var coords = ol.proj.transform(evt.coordinate, 'EPSG:3857', 'EPSG:4326');
+            var zoom = map.getView().getZoom();
+            showPanoraMaxViewer(coords[1], coords[0], zoom);
+        }
     });
 } 
