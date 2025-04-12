@@ -75,30 +75,20 @@ function initPanoraMaxViewer(map) {
 
     // Function to show the viewer
     function showPanoraMaxViewer(lat, lon, zoom) {
-        // Build URL with official parameters according to documentation
-        var url = new URL('https://panoramax.xyz/');
-        url.hash = [
-            // Interface settings
-            'focus=pic',           // Show picture as main element
-            'speed=1000',         // 1 second transition speed
-            'nav=any',            // Allow navigation between all pictures
-            
-            // Map settings
-            `map=${zoom}/${lat}/${lon}`,  // Map position
-            'theme=default',      // Default coloring for pictures
-            'background=streets', // Streets background
-            
-            // Picture settings
-            'pic_type=equirectangular', // Show 360° pictures
-            'pic_score=ABC'      // Show only A, B, or C grade pictures
-        ].join('&');
+        // Build URL with official parameters
+        var url = `https://panoramax.xyz/#` +
+            `focus=map&` + // Show map as main element
+            `map=${zoom}/${lat}/${lon}&` + // Map position
+            `nav=any&` + // Allow navigation between pictures
+            `theme=default&` + // Use default theme
+            `background=streets`; // Use streets background
         
         var iframe = $('#panoramax-iframe');
         
         // Force reload the iframe with new coordinates
         iframe.attr('src', 'about:blank');
         setTimeout(function() {
-            iframe.attr('src', url.toString());
+            iframe.attr('src', url);
         }, 100);
         
         $('.panoramax-viewer').addClass('active');
