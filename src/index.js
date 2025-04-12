@@ -384,6 +384,9 @@ $(function () {
 	// Initialize PanoraMax viewer
 	initPanoraMaxViewer(map);
 
+	// Initialize Router
+	initRouter(map);
+
 	var layersControlBuild = function () {
 		var visibleLayer,
 			previousLayer,
