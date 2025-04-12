@@ -58,20 +58,20 @@ function initPanoraMaxViewer(map) {
     $('.panoramax-viewer .prev-button').on('click', function() {
         var iframe = document.getElementById('panoramax-iframe');
         if (iframe && iframe.contentWindow) {
-            iframe.contentWindow.postMessage({ action: 'prev' }, 'https://api.panoramax.xyz');
+            iframe.contentWindow.postMessage({ action: 'prev' }, 'https://panoramax.xyz');
         }
     });
 
     $('.panoramax-viewer .next-button').on('click', function() {
         var iframe = document.getElementById('panoramax-iframe');
         if (iframe && iframe.contentWindow) {
-            iframe.contentWindow.postMessage({ action: 'next' }, 'https://api.panoramax.xyz');
+            iframe.contentWindow.postMessage({ action: 'next' }, 'https://panoramax.xyz');
         }
     });
 
     // Listen for messages from the iframe
     window.addEventListener('message', function(event) {
-        if (event.origin !== 'https://api.panoramax.xyz') return;
+        if (event.origin !== 'https://panoramax.xyz') return;
         
         if (event.data && event.data.photographer) {
             $('.panoramax-viewer .photographer').text(event.data.photographer);
@@ -93,7 +93,14 @@ function initPanoraMaxViewer(map) {
 
     // Function to show the viewer
     function showPanoraMaxViewer(lat, lon, zoom) {
-        var url = `https://api.panoramax.xyz/#focus=map&map=${zoom}/${lat}/${lon}`;
+        // Build URL with official parameters
+        var url = `https://panoramax.xyz/#` +
+            `focus=map&` + // Show map as main element
+            `map=${zoom}/${lat}/${lon}&` + // Map position
+            `nav=any&` + // Allow navigation between pictures
+            `theme=default&` + // Use default theme
+            `background=streets`; // Use streets background
+        
         var iframe = $('#panoramax-iframe');
         
         // Force reload the iframe with new coordinates
