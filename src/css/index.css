@@ -284,11 +284,10 @@ a:hover {
 /* PanoraMax Viewer Styles */
 .panoramax-viewer {
     position: fixed;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 800px;
-    height: 500px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: white;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     display: none;
@@ -304,7 +303,7 @@ a:hover {
     width: 100%;
     height: calc(100% - 30px);
     border: none;
-    margin-top: -200px;
+    margin-top: -80px; /* Adjust for mobile */
     position: relative;
     z-index: 1;
 }
@@ -318,28 +317,6 @@ a:hover {
     font-size: 20px;
     cursor: pointer;
     z-index: 1001;
-}
-
-.panoramax-viewer .controls {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    display: flex;
-    gap: 10px;
-    z-index: 1001;
-}
-
-.panoramax-viewer .controls button {
-    background: rgba(255, 255, 255, 0.8);
-    border: none;
-    border-radius: 2px;
-    padding: 5px 10px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.panoramax-viewer .controls button:hover {
-    background: rgba(255, 255, 255, 1);
 }
 
 .panoramax-viewer .credits {
@@ -373,69 +350,48 @@ a:hover {
     color: #40F;
 }
 
-.panoramax-viewer .resize-handle {
-    position: absolute;
-    bottom: 30px;
-    right: 0;
-    width: 20px;
-    height: 20px;
-    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABZ0RVh0Q3JlYXRpb24gVGltZQAxMC8yOS8xMiKqq3kAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzVxteM2AAABHklEQVRIib2Vyw6EIAxGWaKTyoQHcC4yL9dXK2gM4u0p69WqQYlYt0xb8svtb9pYd6m6XoPrtpWJKZvC0zX6MpwcA5wfzF4pdv30Vwu2dJED6ssF7I5DKYQY3h2iBj7cLgXvrS4AFgGXJwEUVh4nM3Z3f9ftV1UQ0x9PwN8Pzbrj6t4vsBAAAAAElFTkSuQmCC') no-repeat bottom right;
-    cursor: se-resize;
-}
-
-.ui-resizable-handle {
-    position: absolute;
-    font-size: 0.1px;
-    display: block;
-}
-
-.ui-resizable-e {
-    cursor: e-resize;
-    width: 7px;
-    right: -5px;
-    top: 0;
-    height: calc(100% - 30px);
-}
-
-.ui-resizable-s {
-    cursor: s-resize;
-    height: 7px;
-    width: 100%;
-    bottom: 23px;
-    left: 0;
-}
-
-.ui-resizable-se {
-    cursor: se-resize;
-    width: 12px;
-    height: 12px;
-    right: 1px;
-    bottom: 23px;
-}
-
-/* Adjust map height when viewer is active */
-.map.viewer-active {
-    height: 60% !important;
-}
-
-@media only screen and (min-width:600px) {
+/* Responsive styles */
+@media only screen and (min-width: 600px) {
     .panoramax-viewer {
+        top: 50%;
+        left: auto;
+        right: 0;
         width: 40%;
         height: 100%;
-        right: 0;
-        left: auto;
-        transform: translateX(100%);
+        transform: translate(100%, -50%);
+        transition: transform 0.3s ease-in-out;
     }
 
     .panoramax-viewer.active {
-        height: 100%;
-        transform: translateX(0);
+        transform: translate(0, -50%);
+    }
+
+    .panoramax-viewer iframe {
+        margin-top: -60px; /* Adjust for desktop */
     }
 
     .map.viewer-active {
-        height: 100% !important;
         width: 60% !important;
     }
+}
+
+@media only screen and (min-width: 1200px) {
+    .panoramax-viewer {
+        width: 50%;
+    }
+
+    .panoramax-viewer iframe {
+        margin-top: -40px; /* Adjust for larger screens */
+    }
+
+    .map.viewer-active {
+        width: 50% !important;
+    }
+}
+
+/* Adjust map when viewer is active */
+.map.viewer-active {
+    height: 100% !important;
 }
 
 .osmcat-panoramax button {
