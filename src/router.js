@@ -12,6 +12,27 @@ function initRouter(map) {
     });
     map.addLayer(routeLayer);
 
+    // Initialize loading spinner
+    const loading = {
+        init: function () {
+            this.count = 0;
+            this.spinner = $('<div>').addClass('ol-control osmcat-loading').html('<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>');
+            $('#map').append(this.spinner);
+        },
+        show: function () {
+            this.spinner.show();
+            ++this.count;
+        },
+        hide: function () {
+            --this.count;
+            if (this.count < 1) {
+                this.spinner.hide();
+                this.count = 0;
+            }
+        }
+    };
+    loading.init();
+
     let startPlace = null;
     let endPlace = null;
     let viaPlace = null;
@@ -185,9 +206,17 @@ function initRouter(map) {
                 
                 const url = `https://router.project-osrm.org/route/v1/${profile}/${waypoints}?overview=full&geometries=geojson`;
                 
+                console.log('Calculating route with URL:', url); // Debug log
+                
                 fetch(url)
-                    .then(response => response.json())
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        return response.json();
+                    })
                     .then(data => {
+                        console.log('Route data:', data); // Debug log
                         if (data.routes && data.routes[0]) {
                             const route = data.routes[0];
                             const format = new ol.format.GeoJSON();
@@ -206,6 +235,8 @@ function initRouter(map) {
                                 padding: [50, 50, 50, 50],
                                 duration: 1000
                             });
+                        } else {
+                            throw new Error('No route found');
                         }
                         loading.hide();
                         dialog.dialog('close');
@@ -213,7 +244,7 @@ function initRouter(map) {
                     .catch(error => {
                         console.error('Error fetching route:', error);
                         loading.hide();
-                        alert('Error calculating route. Please try again.');
+                        alert('Error calculating route: ' + error.message);
                     });
             });
 
