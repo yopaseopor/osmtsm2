@@ -408,6 +408,69 @@ a:hover {
 }
 
 .osmcat-panoramax button.active {
-    background: #00447B;
-    color: white;
+    background-color: rgba(0,60,136,.3);
+}
+
+/* Routing Control Styles */
+.ol-routing {
+	top: 30px;
+	right: 8px;
+}
+
+.ol-routing button {
+	background-color: rgba(255,255,255,0.4);
+	border: none;
+	border-radius: 2px;
+	padding: 2px;
+	cursor: pointer;
+}
+
+.ol-routing button:hover {
+	background-color: rgba(255,255,255,0.6);
+}
+
+.ol-routing .routing-container {
+	position: absolute;
+	top: 30px;
+	right: 0;
+	width: 300px;
+	background-color: rgba(255,255,255,0.9);
+	border-radius: 2px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+	padding: 10px;
+}
+
+.ol-routing .profile-selector {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+
+.ol-routing .profile-button {
+	padding: 5px 10px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.ol-routing .profile-button.active {
+	background-color: rgba(0,60,136,.3);
+}
+
+.ol-routing .waypoint-input {
+	width: 100%;
+	padding: 5px;
+	margin-bottom: 5px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+
+.ol-routing .route-info {
+	margin-top: 10px;
+	padding-top: 10px;
+	border-top: 1px solid #ccc;
+}
+
+.ol-routing .route-info div {
+	margin-bottom: 5px;
 }

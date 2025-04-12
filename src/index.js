@@ -3,45 +3,8 @@ $(function () {
 	$('#map').empty(); // Remove Javascript required message
 	var baseLayerIndex = 0;
 	
-	// Initialize OSRM Router
-	let osrmRouter;
-	let startPoint = null;
-	let endPoint = null;
-
-	// Add click handler for map to set route points
-	map.on('click', function(evt) {
-		const coordinate = evt.coordinate;
-		const lonLat = ol.proj.toLonLat(coordinate);
-		
-		if (!startPoint) {
-			startPoint = lonLat;
-			$('#start-location').val(`${lonLat[1].toFixed(6)}, ${lonLat[0].toFixed(6)}`);
-		} else if (!endPoint) {
-			endPoint = lonLat;
-			$('#end-location').val(`${lonLat[1].toFixed(6)}, ${lonLat[0].toFixed(6)}`);
-		}
-	});
-
-	// Handle route calculation button click
-	$('#calculate-route').on('click', function() {
-		if (startPoint && endPoint) {
-			if (!osrmRouter) {
-				osrmRouter = new OSRMRouter(map);
-			}
-			osrmRouter.calculateRoute(startPoint, endPoint);
-		} else {
-			alert('Please select both start and end points on the map');
-		}
-	});
-
-	// Clear route points
-	$('#start-location, #end-location').on('focus', function() {
-		if (this.id === 'start-location') {
-			startPoint = null;
-		} else {
-			endPoint = null;
-		}
-	});
+	
+	
 
 	//Object to manage the spinner layer
 	var loading = {
@@ -227,6 +190,41 @@ $(function () {
 
 	// Initialize PanoraMax viewer
 	initPanoraMaxViewer(map);
+
+	// Initialize Routing
+	var routingControl = new ol.control.Routing({
+		title: 'Routing',
+		className: 'ol-routing',
+		position: 'top-right',
+		profiles: [
+			{
+				name: 'Car',
+				profile: 'driving',
+				icon: 'fa-car'
+			},
+			{
+				name: 'Bike',
+				profile: 'cycling',
+				icon: 'fa-bicycle'
+			},
+			{
+				name: 'Foot',
+				profile: 'foot',
+				icon: 'fa-walking'
+			}
+		],
+		apiKey: '', // OSRM doesn't require an API key
+		url: 'https://router.project-osrm.org/route/v1',
+		geocoder: {
+			provider: 'nominatim',
+			url: 'https://nominatim.openstreetmap.org/search',
+			params: {
+				format: 'json',
+				limit: 5
+			}
+		}
+	});
+	map.addControl(routingControl);
 
 	var layersControlBuild = function () {
 		var visibleLayer,

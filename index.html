@@ -10,24 +10,12 @@
 	<link rel="stylesheet" href="src/css/font-awesome.css" type="text/css"/>
 	<link rel="stylesheet" href="src/css/index.css" type="text/css"/>
 	<link rel="icon" href="favicon.ico"/>
+	<link rel="stylesheet" href="https://unpkg.com/ol-routing-machine@latest/dist/ol-routing-machine.css" type="text/css"/>
 </head>
 <body>
 	<div class="flex-row">
 		<div id="map" class="map">Loading... You need Javascript...Cargando necesitas Javascript...Carregant...necessites Javascript</div>
-		<div id="menu" class="menu">
-			<div id="routing-controls" style="padding: 10px;">
-				<h3>Route Planner</h3>
-				<div>
-					<label>Start:</label>
-					<input type="text" id="start-location" placeholder="Click on map or enter coordinates"/>
-				</div>
-				<div>
-					<label>End:</label>
-					<input type="text" id="end-location" placeholder="Click on map or enter coordinates"/>
-				</div>
-				<button id="calculate-route">Calculate Route</button>
-			</div>
-		</div>
+		<div id="menu" class="menu"></div>
 	</div>
 	<script src="src/api/jquery/3.4.1/jquery.min.js" defer=""></script>
 	<script src="src/api/jquery-ui-1.12.1.custom/jquery-ui.min.js" defer=""></script>
@@ -37,7 +25,7 @@
 	<script src="https://dominique92.github.io/ol-geocoder/dist/ol-geocoder.js" defer=""></script>
 	<script src="src/nominatim_search.js" defer=""></script>
 	<script src="src/panoramax_viewer.js" defer=""></script>
-	<script src="src/osrm_router.js" defer=""></script>
 	<script src="src/index.js" defer=""></script>
+	<script src="https://unpkg.com/ol-routing-machine@latest/dist/ol-routing-machine.js" defer=""></script>
 </body>
 </html>
