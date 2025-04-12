@@ -5,6 +5,7 @@ function initPanoraMaxViewer(map) {
     // Create viewer container
     var viewerContainer = $('<div>').addClass('panoramax-viewer')
         .append($('<button>').addClass('close-button').html('<i class="fa fa-times"></i>'))
+        .append($('<div>').addClass('resize-handle'))
         .append($('<iframe>'));
     
     $('body').append(viewerContainer);
@@ -37,21 +38,13 @@ function initPanoraMaxViewer(map) {
                 right: '8px'
             });
         
-        // Street view button
-        var streetViewButton = $('<button type="button">')
-            .html('<i class="fa fa-street-view"></i>')
-            .on('click', function() {
-                var center = ol.proj.transform(map.getView().getCenter(), 'EPSG:3857', 'EPSG:4326');
-                showPanoraMaxViewer(center[1], center[0], 'viewer');
-            });
-        
         // Map view button
         var mapViewButton = $('<button type="button">')
             .html('<i class="fa fa-map"></i>')
             .on('click', function() {
                 var center = ol.proj.transform(map.getView().getCenter(), 'EPSG:3857', 'EPSG:4326');
                 var zoom = map.getView().getZoom();
-                showPanoraMaxViewer(center[1], center[0], 'map', zoom);
+                showPanoraMaxViewer(center[1], center[0], zoom);
             });
         
         // Tracks toggle button
@@ -62,7 +55,7 @@ function initPanoraMaxViewer(map) {
                 $(this).toggleClass('active');
             });
         
-        container.append(streetViewButton, mapViewButton, tracksButton);
+        container.append(mapViewButton, tracksButton);
         return container[0];
     };
 
@@ -76,14 +69,22 @@ function initPanoraMaxViewer(map) {
         hidePanoraMaxViewer();
     });
 
-    // Function to show the viewer
-    function showPanoraMaxViewer(lat, lon, mode, zoom) {
-        var url;
-        if (mode === 'viewer') {
-            url = `https://panoramax.xyz/viewer?lat=${lat}&lon=${lon}`;
-        } else {
-            url = `https://api.panoramax.xyz/#focus=map&map=${zoom}/${lat}/${lon}`;
+    // Make viewer resizable
+    $('.panoramax-viewer').resizable({
+        handles: 'e, s, se',
+        minWidth: 300,
+        minHeight: 200,
+        resize: function(event, ui) {
+            $('.panoramax-viewer iframe').css({
+                width: ui.size.width,
+                height: ui.size.height
+            });
         }
+    });
+
+    // Function to show the viewer
+    function showPanoraMaxViewer(lat, lon, zoom) {
+        var url = `https://api.panoramax.xyz/#focus=map&map=${zoom}/${lat}/${lon}`;
         $('.panoramax-viewer iframe').attr('src', url);
         $('.panoramax-viewer').addClass('active');
         $('#map').addClass('viewer-active');
@@ -101,6 +102,7 @@ function initPanoraMaxViewer(map) {
     // Handle map click events
     map.on('click', function(evt) {
         var coords = ol.proj.transform(evt.coordinate, 'EPSG:3857', 'EPSG:4326');
-        showPanoraMaxViewer(coords[1], coords[0], 'viewer');
+        var zoom = map.getView().getZoom();
+        showPanoraMaxViewer(coords[1], coords[0], zoom);
     });
 } 
