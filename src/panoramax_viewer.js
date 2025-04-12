@@ -9,6 +9,26 @@ function initPanoraMaxViewer(map) {
     
     $('body').append(viewerContainer);
 
+    // Create tracks layer
+    var tracksLayer = new ol.layer.Vector({
+        title: 'Panoramax Tracks',
+        source: new ol.source.Vector({
+            format: new ol.format.GeoJSON(),
+            url: 'https://api.panoramax.xyz/tracks.geojson',
+            strategy: ol.loadingstrategy.bbox
+        }),
+        style: new ol.style.Style({
+            stroke: new ol.style.Stroke({
+                color: '#FF0000',
+                width: 2
+            })
+        }),
+        visible: false
+    });
+
+    // Add tracks layer to map
+    map.addLayer(tracksLayer);
+
     // Create viewer button control
     var viewerControlBuild = function() {
         var container = $('<div>').addClass('ol-control ol-unselectable osmcat-panoramax')
@@ -24,7 +44,15 @@ function initPanoraMaxViewer(map) {
                 showPanoraMaxViewer(center[1], center[0]);
             });
         
-        container.append(button);
+        // Add tracks toggle button
+        var tracksButton = $('<button type="button">')
+            .html('<i class="fa fa-map-marker"></i>')
+            .on('click', function() {
+                tracksLayer.setVisible(!tracksLayer.getVisible());
+                $(this).toggleClass('active');
+            });
+        
+        container.append(button, tracksButton);
         return container[0];
     };
 
