@@ -201,9 +201,11 @@ function initRouter(map) {
 
     // Function to calculate route
     const calculateRoute = function() {
-        if (!startPlace || !endPlace) return;
-        
-        const profile = $('.profile-select').val();
+        if (!startPlace || !endPlace) {
+            alert('Please set both start and end points');
+            return;
+        }
+
         loading.show();
         
         let waypoints = `${startPlace.lon},${startPlace.lat}`;
@@ -212,24 +214,26 @@ function initRouter(map) {
         }
         waypoints += `;${endPlace.lon},${endPlace.lat}`;
         
+        const profile = $('.profile-select').val();
         const url = `https://router.project-osrm.org/route/v1/${profile}/${waypoints}?overview=full&geometries=geojson`;
         
+        console.log('Calculating route:', url);
+        
         fetch(url)
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
             .then(data => {
+                console.log('Route data:', data);
                 if (data.routes && data.routes[0]) {
                     const route = data.routes[0];
                     const format = new ol.format.GeoJSON();
                     const features = format.readFeatures(route.geometry, {
                         featureProjection: map.getView().getProjection(),
                         dataProjection: 'EPSG:4326'
-                    });
-                    
-                    // Remove alternative routes
-                    map.getLayers().forEach(l => {
-                        if (l !== routeLayer && l.get('type') === 'alternative') {
-                            map.removeLayer(l);
-                        }
                     });
                     
                     routeLayer.getSource().clear();
@@ -246,13 +250,19 @@ function initRouter(map) {
                         padding: [50, 50, 50, 50],
                         duration: 1000
                     });
+
+                    // Close the dialog after successful route calculation
+                    $('.router-dialog').dialog('close');
+                } else {
+                    throw new Error('No route found');
                 }
-                loading.hide();
             })
             .catch(error => {
-                console.error('Error fetching route:', error);
-                loading.hide();
+                console.error('Error:', error);
                 alert('Error calculating route: ' + error.message);
+            })
+            .finally(() => {
+                loading.hide();
             });
     };
 
@@ -521,7 +531,9 @@ function initRouter(map) {
                 font-size: 24px;
                 color: #4CAF50;
                 text-shadow: 0 0 3px white;
-                cursor: pointer;
+                cursor: move;
+                user-select: none;
+                -webkit-user-drag: element;
             }
             .route-marker:hover {
                 color: #45a049;
@@ -530,6 +542,10 @@ function initRouter(map) {
                 background-color: white;
                 border-radius: 50%;
                 padding: 5px;
+                pointer-events: auto;
+            }
+            .route-marker.dragging {
+                opacity: 0.7;
             }
         `)
         .appendTo('head');
