@@ -68,8 +68,15 @@ function initRouter(map) {
         });
         
         element.addEventListener('dragend', function(evt) {
-            const pixel = [evt.clientX, evt.clientY];
-            const coordinate = map.getEventCoordinate(pixel);
+            // Get the pixel position relative to the map
+            const mapRect = map.getTargetElement().getBoundingClientRect();
+            const pixel = [
+                evt.clientX - mapRect.left,
+                evt.clientY - mapRect.top
+            ];
+            
+            // Convert to map coordinates
+            const coordinate = map.getCoordinateFromPixel(pixel);
             const lonlat = ol.proj.toLonLat(coordinate);
             
             // Validate coordinates
@@ -226,13 +233,16 @@ function initRouter(map) {
         loading.show();
         
         const profile = $('.profile-select').val();
-        let waypoints = `${startPlace.lon},${startPlace.lat}`;
+        
+        // Format coordinates with proper precision
+        const formatCoord = (coord) => coord.toFixed(6);
+        let waypoints = `${formatCoord(startPlace.lon)},${formatCoord(startPlace.lat)}`;
         
         if (viaPlace) {
-            waypoints += `;${viaPlace.lon},${viaPlace.lat}`;
+            waypoints += `;${formatCoord(viaPlace.lon)},${formatCoord(viaPlace.lat)}`;
         }
         
-        waypoints += `;${endPlace.lon},${endPlace.lat}`;
+        waypoints += `;${formatCoord(endPlace.lon)},${formatCoord(endPlace.lat)}`;
         
         const url = `https://router.project-osrm.org/route/v1/${profile}/${waypoints}?overview=full&geometries=geojson`;
         
