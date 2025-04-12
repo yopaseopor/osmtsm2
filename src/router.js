@@ -217,7 +217,8 @@ function initRouter(map) {
         
         waypoints += `;${endPlace.lon},${endPlace.lat}`;
         
-        const url = `https://router.project-osrm.org/route/v1/${profile}/${waypoints}?overview=full&geometries=geojson`;
+        // Properly format the URL for OSRM API
+        const url = `https://router.project-osrm.org/route/v1/${profile}/${waypoints}?overview=full&geometries=geojson&steps=true`;
         
         console.log('Calculating route with URL:', url);
         
@@ -269,7 +270,15 @@ function initRouter(map) {
             })
             .catch(error => {
                 console.error('Error calculating route:', error);
-                alert('Error calculating route: ' + error.message);
+                let errorMessage = 'Error calculating route: ';
+                if (error.message.includes('400')) {
+                    errorMessage += 'Invalid coordinates or route not possible. Please try different locations.';
+                } else if (error.message.includes('No route found')) {
+                    errorMessage += 'No route found between the selected points. Please try different locations.';
+                } else {
+                    errorMessage += error.message;
+                }
+                alert(errorMessage);
             })
             .finally(() => {
                 loading.hide();
@@ -323,8 +332,8 @@ function initRouter(map) {
                     <div class="router-input">
                         <label>Profile:</label>
                         <select class="profile-select">
-                            <option value="driving">Car</option>
-                            <option value="cycling">Bicycle</option>
+                            <option value="car">Car</option>
+                            <option value="bike">Bicycle</option>
                             <option value="foot">Walking</option>
                         </select>
                     </div>
