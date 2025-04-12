@@ -13,7 +13,7 @@ function initPanoraMaxViewer(map) {
             .append($('<div>').addClass('credit').html('© <a href="https://panoramax.xyz" target="_blank">Panoramax</a>'))
             .append($('<div>').addClass('credit').html('© <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors'))
             .append($('<div>').addClass('credit').html('© <span class="photographer"></span>')))
-        .append($('<iframe>'));
+        .append($('<iframe>').attr('id', 'panoramax-iframe'));
     
     $('body').append(viewerContainer);
 
@@ -56,16 +56,25 @@ function initPanoraMaxViewer(map) {
 
     // Handle navigation buttons
     $('.panoramax-viewer .prev-button').on('click', function() {
-        var iframe = $('.panoramax-viewer iframe')[0];
+        var iframe = document.getElementById('panoramax-iframe');
         if (iframe && iframe.contentWindow) {
-            iframe.contentWindow.postMessage('prev', '*');
+            iframe.contentWindow.postMessage({ action: 'prev' }, 'https://api.panoramax.xyz');
         }
     });
 
     $('.panoramax-viewer .next-button').on('click', function() {
-        var iframe = $('.panoramax-viewer iframe')[0];
+        var iframe = document.getElementById('panoramax-iframe');
         if (iframe && iframe.contentWindow) {
-            iframe.contentWindow.postMessage('next', '*');
+            iframe.contentWindow.postMessage({ action: 'next' }, 'https://api.panoramax.xyz');
+        }
+    });
+
+    // Listen for messages from the iframe
+    window.addEventListener('message', function(event) {
+        if (event.origin !== 'https://api.panoramax.xyz') return;
+        
+        if (event.data && event.data.photographer) {
+            $('.panoramax-viewer .photographer').text(event.data.photographer);
         }
     });
 
@@ -85,10 +94,14 @@ function initPanoraMaxViewer(map) {
     // Function to show the viewer
     function showPanoraMaxViewer(lat, lon, zoom) {
         var url = `https://api.panoramax.xyz/#focus=map&map=${zoom}/${lat}/${lon}`;
-        var iframe = $('.panoramax-viewer iframe');
-        if (iframe.attr('src') !== url) {
+        var iframe = $('#panoramax-iframe');
+        
+        // Force reload the iframe with new coordinates
+        iframe.attr('src', 'about:blank');
+        setTimeout(function() {
             iframe.attr('src', url);
-        }
+        }, 100);
+        
         $('.panoramax-viewer').addClass('active');
         $('#map').addClass('viewer-active');
     }
@@ -98,7 +111,7 @@ function initPanoraMaxViewer(map) {
         $('.panoramax-viewer').removeClass('active');
         $('#map').removeClass('viewer-active');
         setTimeout(function() {
-            $('.panoramax-viewer iframe').attr('src', '');
+            $('#panoramax-iframe').attr('src', '');
         }, 300);
     }
 
