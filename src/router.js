@@ -18,6 +18,7 @@ function initRouter(map) {
     let startMarker = null;
     let endMarker = null;
     let viaMarker = null;
+    let clickHandler = null;
 
     // Create markers for points
     const createMarker = function(coordinate, type) {
@@ -43,6 +44,19 @@ function initRouter(map) {
         .addClass('osmcat-button')
         .html('<i class="fa fa-route"></i> Route')
         .on('click', function() {
+            // Clear any existing markers and route
+            if (startMarker) map.removeOverlay(startMarker);
+            if (endMarker) map.removeOverlay(endMarker);
+            if (viaMarker) map.removeOverlay(viaMarker);
+            routeLayer.getSource().clear();
+            
+            startPlace = null;
+            endPlace = null;
+            viaPlace = null;
+            startMarker = null;
+            endMarker = null;
+            viaMarker = null;
+
             const dialog = $('<div>').addClass('router-dialog').html(`
                 <div class="router-form">
                     <div class="router-input">
@@ -102,16 +116,16 @@ function initRouter(map) {
                                     resultsDiv.hide();
                                     const coordinate = ol.proj.fromLonLat([parseFloat(place.lon), parseFloat(place.lat)]);
                                     if (input.hasClass('start-place')) {
-                                        startPlace = place;
                                         if (startMarker) map.removeOverlay(startMarker);
+                                        startPlace = place;
                                         startMarker = createMarker(coordinate, 'start');
                                     } else if (input.hasClass('via-place')) {
-                                        viaPlace = place;
                                         if (viaMarker) map.removeOverlay(viaMarker);
+                                        viaPlace = place;
                                         viaMarker = createMarker(coordinate, 'via');
                                     } else {
-                                        endPlace = place;
                                         if (endMarker) map.removeOverlay(endMarker);
+                                        endPlace = place;
                                         endMarker = createMarker(coordinate, 'end');
                                     }
                                 });
@@ -128,23 +142,23 @@ function initRouter(map) {
             });
 
             // Handle map clicks
-            const clickHandler = function(evt) {
+            clickHandler = function(evt) {
                 const coordinate = evt.coordinate;
                 const lonlat = ol.proj.toLonLat(coordinate);
                 
                 if (!startPlace) {
-                    startPlace = { lon: lonlat[0], lat: lonlat[1] };
                     if (startMarker) map.removeOverlay(startMarker);
+                    startPlace = { lon: lonlat[0], lat: lonlat[1] };
                     startMarker = createMarker(coordinate, 'start');
                     dialog.find('.start-place').val('Selected on map');
                 } else if (!viaPlace) {
-                    viaPlace = { lon: lonlat[0], lat: lonlat[1] };
                     if (viaMarker) map.removeOverlay(viaMarker);
+                    viaPlace = { lon: lonlat[0], lat: lonlat[1] };
                     viaMarker = createMarker(coordinate, 'via');
                     dialog.find('.via-place').val('Selected on map');
                 } else if (!endPlace) {
-                    endPlace = { lon: lonlat[0], lat: lonlat[1] };
                     if (endMarker) map.removeOverlay(endMarker);
+                    endPlace = { lon: lonlat[0], lat: lonlat[1] };
                     endMarker = createMarker(coordinate, 'end');
                     dialog.find('.end-place').val('Selected on map');
                 }
@@ -208,7 +222,10 @@ function initRouter(map) {
                 width: 400,
                 modal: true,
                 close: function() {
-                    map.un('singleclick', clickHandler);
+                    if (clickHandler) {
+                        map.un('singleclick', clickHandler);
+                        clickHandler = null;
+                    }
                     $(this).dialog('destroy');
                 }
             });
@@ -289,4 +306,4 @@ function initRouter(map) {
             }
         `)
         .appendTo('head');
-} 
+}
