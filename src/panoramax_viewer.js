@@ -51,21 +51,6 @@ function initPanoraMaxViewer(map) {
         $('.osmcat-panoramax button').removeClass('active');
     });
 
-    // Handle navigation buttons
-    $('.panoramax-viewer .prev-button').on('click', function() {
-        var iframe = document.getElementById('panoramax-iframe');
-        if (iframe && iframe.contentWindow) {
-            iframe.contentWindow.postMessage({ action: 'prev' }, 'https://panoramax.xyz');
-        }
-    });
-
-    $('.panoramax-viewer .next-button').on('click', function() {
-        var iframe = document.getElementById('panoramax-iframe');
-        if (iframe && iframe.contentWindow) {
-            iframe.contentWindow.postMessage({ action: 'next' }, 'https://panoramax.xyz');
-        }
-    });
-
     // Listen for messages from the iframe
     window.addEventListener('message', function(event) {
         if (event.origin !== 'https://panoramax.xyz') return;
