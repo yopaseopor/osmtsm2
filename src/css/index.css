@@ -423,6 +423,7 @@ a:hover {
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
     z-index: 1000;
     display: none;
+    margin-top: 3em; /* Add margin to avoid overlapping with controls */
 }
 
 .osrm-router.active {
@@ -473,4 +474,53 @@ a:hover {
 
 #map.router-active {
     margin-right: 400px;
+}
+
+/* OSRM Router Button Styles */
+.osmcat-osrm {
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 2px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin: 2px;
+    z-index: 1;
+}
+
+.osmcat-osrm button {
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 2px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin: 2px;
+}
+
+.osmcat-osrm button:hover {
+    background: rgba(255, 255, 255, 1);
+}
+
+.osmcat-osrm button.active {
+    background: #00447B;
+    color: white;
+}
+
+/* Ensure OpenLayers controls are visible */
+.ol-control {
+    z-index: 0;
+}
+
+.ol-zoom {
+    top: 0.5em;
+    left: 0.5em;
+}
+
+.ol-rotate {
+    top: 0.5em;
+    right: 0.5em;
+}
+
+.ol-attribution {
+    bottom: 0;
+    right: 0;
 }

@@ -19,8 +19,8 @@ function initOSRMRouter(map) {
     var routerControlBuild = function() {
         var container = $('<div>').addClass('ol-control ol-unselectable osmcat-osrm')
             .css({
-                bottom: '150px',
-                right: '8px'
+                top: '0.5em',
+                right: '0.5em'
             });
         
         // Router button
