@@ -213,22 +213,39 @@ $(function () {
 				
 				// Add waypoint inputs
 				var waypoints = $('<div>').addClass('waypoints');
-				waypoints.append(
-					$('<input>').addClass('waypoint-input').attr('placeholder', 'Start point'),
-					$('<input>').addClass('waypoint-input').attr('placeholder', 'End point')
-				);
+				var startInput = $('<input>').addClass('waypoint-input').attr('placeholder', 'Start point (click on map)');
+				var endInput = $('<input>').addClass('waypoint-input').attr('placeholder', 'End point (click on map)');
 				
+				waypoints.append(startInput, endInput);
 				container.append(profileSelector, waypoints);
 				$('body').append(container);
 				
+				// Store coordinates
+				var startCoord = null;
+				var endCoord = null;
+				
+				// Handle map clicks
+				var clickHandler = map.on('click', function(evt) {
+					var coord = ol.proj.toLonLat(evt.coordinate);
+					if (!startCoord) {
+						startCoord = coord;
+						startInput.val(coord[0].toFixed(6) + ',' + coord[1].toFixed(6));
+					} else if (!endCoord) {
+						endCoord = coord;
+						endInput.val(coord[0].toFixed(6) + ',' + coord[1].toFixed(6));
+						updateRoute();
+					}
+				});
+				
 				function updateRoute() {
-					var start = waypoints.find('input').eq(0).val();
-					var end = waypoints.find('input').eq(1).val();
-					var profile = container.find('.profile-button.active').find('i').attr('class').split(' ')[1];
-					
-					if (start && end) {
-						// Use OSRM API to get route
+					if (startCoord && endCoord) {
+						var profile = container.find('.profile-button.active').find('i').attr('class').split(' ')[1];
 						var profileParam = profile === 'fa-car' ? 'driving' : profile === 'fa-bicycle' ? 'cycling' : 'foot';
+						
+						// Format coordinates for OSRM API
+						var start = startCoord[0] + ',' + startCoord[1];
+						var end = endCoord[0] + ',' + endCoord[1];
+						
 						$.get('https://router.project-osrm.org/route/v1/' + profileParam + '/' + start + ';' + end + '?geometries=geojson', function(data) {
 							if (data.routes && data.routes[0]) {
 								var route = data.routes[0];
@@ -279,6 +296,10 @@ $(function () {
 								map.removeLayer(layer);
 							}
 						});
+						// Remove click handler
+						ol.Observable.unByKey(clickHandler);
+						startCoord = null;
+						endCoord = null;
 					})
 				);
 			})

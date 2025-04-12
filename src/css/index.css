@@ -439,6 +439,7 @@ a:hover {
 	box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 	padding: 15px;
 	z-index: 1000;
+	min-width: 300px;
 }
 
 .profile-selector {
@@ -453,6 +454,13 @@ a:hover {
 	border-radius: 3px;
 	padding: 5px 10px;
 	cursor: pointer;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.profile-button i {
+	font-size: 16px;
 }
 
 .profile-button.active {
@@ -472,12 +480,20 @@ a:hover {
 	padding: 8px;
 	border: 1px solid #ccc;
 	border-radius: 3px;
+	background-color: rgba(255,255,255,0.8);
+}
+
+.waypoint-input:focus {
+	outline: none;
+	border-color: #00447B;
 }
 
 .route-info {
 	margin-top: 15px;
 	padding-top: 15px;
 	border-top: 1px solid #ccc;
+	font-size: 14px;
+	line-height: 1.5;
 }
 
 .close-button {
@@ -489,8 +505,16 @@ a:hover {
 	font-size: 20px;
 	cursor: pointer;
 	color: #666;
+	padding: 0;
+	width: 24px;
+	height: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .close-button:hover {
 	color: #000;
+	background-color: rgba(0,0,0,0.1);
+	border-radius: 50%;
 }
