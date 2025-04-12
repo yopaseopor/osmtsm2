@@ -202,22 +202,24 @@ function initRouter(map) {
     // Function to calculate route
     const calculateRoute = function() {
         if (!startPlace || !endPlace) {
-            alert('Please set both start and end points');
+            alert('Please set start and end points');
             return;
         }
 
         loading.show();
         
+        const profile = $('.profile-select').val();
         let waypoints = `${startPlace.lon},${startPlace.lat}`;
+        
         if (viaPlace) {
             waypoints += `;${viaPlace.lon},${viaPlace.lat}`;
         }
+        
         waypoints += `;${endPlace.lon},${endPlace.lat}`;
         
-        const profile = $('.profile-select').val();
         const url = `https://router.project-osrm.org/route/v1/${profile}/${waypoints}?overview=full&geometries=geojson`;
         
-        console.log('Calculating route:', url);
+        console.log('Calculating route with URL:', url);
         
         fetch(url)
             .then(response => {
@@ -227,38 +229,46 @@ function initRouter(map) {
                 return response.json();
             })
             .then(data => {
-                console.log('Route data:', data);
-                if (data.routes && data.routes[0]) {
-                    const route = data.routes[0];
-                    const format = new ol.format.GeoJSON();
-                    const features = format.readFeatures(route.geometry, {
-                        featureProjection: map.getView().getProjection(),
-                        dataProjection: 'EPSG:4326'
-                    });
-                    
-                    routeLayer.getSource().clear();
-                    routeLayer.getSource().addFeatures(features);
-                    
-                    // Show route info
-                    const distance = (route.distance / 1000).toFixed(1);
-                    const duration = Math.round(route.duration / 60);
-                    alert(`Route calculated!\nDistance: ${distance} km\nDuration: ${duration} minutes`);
-                    
-                    // Zoom to route
-                    const extent = routeLayer.getSource().getExtent();
-                    map.getView().fit(extent, {
-                        padding: [50, 50, 50, 50],
-                        duration: 1000
-                    });
-
-                    // Close the dialog after successful route calculation
-                    $('.router-dialog').dialog('close');
-                } else {
+                console.log('Route data received:', data);
+                
+                if (!data.routes || data.routes.length === 0) {
                     throw new Error('No route found');
                 }
+                
+                const route = data.routes[0];
+                const format = new ol.format.GeoJSON();
+                const features = format.readFeatures(route.geometry, {
+                    featureProjection: map.getView().getProjection(),
+                    dataProjection: 'EPSG:4326'
+                });
+                
+                // Remove alternative routes
+                map.getLayers().forEach(l => {
+                    if (l !== routeLayer && l.get('type') === 'alternative') {
+                        map.removeLayer(l);
+                    }
+                });
+                
+                routeLayer.getSource().clear();
+                routeLayer.getSource().addFeatures(features);
+                
+                // Show route info
+                const distance = (route.distance / 1000).toFixed(1);
+                const duration = Math.round(route.duration / 60);
+                alert(`Route calculated!\nDistance: ${distance} km\nDuration: ${duration} minutes`);
+                
+                // Zoom to route
+                const extent = routeLayer.getSource().getExtent();
+                map.getView().fit(extent, {
+                    padding: [50, 50, 50, 50],
+                    duration: 1000
+                });
+
+                // Close the dialog after successful route calculation
+                $('.router-dialog').dialog('close');
             })
             .catch(error => {
-                console.error('Error:', error);
+                console.error('Error calculating route:', error);
                 alert('Error calculating route: ' + error.message);
             })
             .finally(() => {
@@ -388,47 +398,6 @@ function initRouter(map) {
                     endPlace = { lon: lonlat[0], lat: lonlat[1] };
                     endMarker = createMarker(coordinate, 'end');
                     dialog.find('.end-place').val('Selected on map');
-                } else {
-                    // If all points are set, allow clicking to move any point
-                    const pixel = map.getEventPixel(evt);
-                    const feature = map.forEachFeatureAtPixel(pixel, function(feature) {
-                        return feature;
-                    });
-                    
-                    if (feature) {
-                        const extent = feature.getGeometry().getExtent();
-                        const center = ol.extent.getCenter(extent);
-                        const lonlat = ol.proj.toLonLat(center);
-                        
-                        // Find closest point to click
-                        const distances = [
-                            { type: 'start', point: startPlace, marker: startMarker },
-                            { type: 'via', point: viaPlace, marker: viaMarker },
-                            { type: 'end', point: endPlace, marker: endMarker }
-                        ].map(item => ({
-                            ...item,
-                            distance: Math.sqrt(
-                                Math.pow(lonlat[0] - item.point.lon, 2) +
-                                Math.pow(lonlat[1] - item.point.lat, 2)
-                            )
-                        })).sort((a, b) => a.distance - b.distance);
-                        
-                        const closest = distances[0];
-                        if (closest.distance < 0.01) { // Threshold for point selection
-                            if (closest.marker) map.removeOverlay(closest.marker);
-                            if (closest.type === 'start') {
-                                startPlace = { lon: lonlat[0], lat: lonlat[1] };
-                                startMarker = createMarker(coordinate, 'start');
-                            } else if (closest.type === 'via') {
-                                viaPlace = { lon: lonlat[0], lat: lonlat[1] };
-                                viaMarker = createMarker(coordinate, 'via');
-                            } else {
-                                endPlace = { lon: lonlat[0], lat: lonlat[1] };
-                                endMarker = createMarker(coordinate, 'end');
-                            }
-                            calculateRoute();
-                        }
-                    }
                 }
             };
 
@@ -441,7 +410,7 @@ function initRouter(map) {
             dialog.dialog({
                 title: 'Route Calculator',
                 width: 400,
-                modal: false, // Changed to false to allow map interaction
+                modal: false,
                 position: { my: 'left top', at: 'left+10 top+10' },
                 close: function() {
                     if (clickHandler) {
@@ -455,7 +424,7 @@ function initRouter(map) {
 
     $('#menu').append(routerButton);
 
-    // Add CSS for router dialog
+    // Add CSS for router dialog and markers
     $('<style>')
         .text(`
             .router-dialog {
@@ -543,9 +512,6 @@ function initRouter(map) {
                 border-radius: 50%;
                 padding: 5px;
                 pointer-events: auto;
-            }
-            .route-marker.dragging {
-                opacity: 0.7;
             }
         `)
         .appendTo('head');
