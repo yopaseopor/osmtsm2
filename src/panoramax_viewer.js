@@ -14,7 +14,7 @@ function initPanoraMaxViewer(map) {
         title: 'Panoramax Tracks',
         source: new ol.source.Vector({
             format: new ol.format.GeoJSON(),
-            url: 'https://api.panoramax.xyz/tracks.geojson',
+            url: 'https://api.panoramax.xyz/api/tracks',
             strategy: ol.loadingstrategy.bbox
         }),
         style: new ol.style.Style({
@@ -68,7 +68,7 @@ function initPanoraMaxViewer(map) {
 
     // Function to show the viewer
     function showPanoraMaxViewer(lat, lon) {
-        var url = `https://api.panoramax.xyz/embed?lat=${lat}&lon=${lon}`;
+        var url = `https://panoramax.xyz/viewer?lat=${lat}&lon=${lon}`;
         $('.panoramax-viewer iframe').attr('src', url);
         $('.panoramax-viewer').addClass('active');
         $('#map').addClass('viewer-active');
