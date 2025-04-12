@@ -192,37 +192,97 @@ $(function () {
 	initPanoraMaxViewer(map);
 
 	// Initialize Routing
-	var routingControl = new ol.control.Routing({
-		title: 'Routing',
-		className: 'ol-routing',
-		position: 'top-right',
-		profiles: [
-			{
-				name: 'Car',
-				profile: 'driving',
-				icon: 'fa-car'
-			},
-			{
-				name: 'Bike',
-				profile: 'cycling',
-				icon: 'fa-bicycle'
-			},
-			{
-				name: 'Foot',
-				profile: 'foot',
-				icon: 'fa-walking'
-			}
-		],
-		apiKey: '', // OSRM doesn't require an API key
-		url: 'https://router.project-osrm.org/route/v1',
-		geocoder: {
-			provider: 'nominatim',
-			url: 'https://nominatim.openstreetmap.org/search',
-			params: {
-				format: 'json',
-				limit: 5
-			}
-		}
+	var routingControl = new ol.control.Control({
+		element: $('<div>').addClass('ol-control ol-routing').html(
+			$('<button>').attr('type', 'button').html('<i class="fa fa-route"></i>').on('click', function() {
+				var container = $('<div>').addClass('routing-container');
+				var profileSelector = $('<div>').addClass('profile-selector');
+				
+				// Add profile buttons
+				['Car', 'Bike', 'Foot'].forEach(function(profile) {
+					profileSelector.append(
+						$('<button>').addClass('profile-button').html(
+							$('<i>').addClass('fa fa-' + (profile === 'Car' ? 'car' : profile === 'Bike' ? 'bicycle' : 'walking'))
+						).on('click', function() {
+							container.find('.profile-button').removeClass('active');
+							$(this).addClass('active');
+							updateRoute();
+						})
+					);
+				});
+				
+				// Add waypoint inputs
+				var waypoints = $('<div>').addClass('waypoints');
+				waypoints.append(
+					$('<input>').addClass('waypoint-input').attr('placeholder', 'Start point'),
+					$('<input>').addClass('waypoint-input').attr('placeholder', 'End point')
+				);
+				
+				container.append(profileSelector, waypoints);
+				$('body').append(container);
+				
+				function updateRoute() {
+					var start = waypoints.find('input').eq(0).val();
+					var end = waypoints.find('input').eq(1).val();
+					var profile = container.find('.profile-button.active').find('i').attr('class').split(' ')[1];
+					
+					if (start && end) {
+						// Use OSRM API to get route
+						var profileParam = profile === 'fa-car' ? 'driving' : profile === 'fa-bicycle' ? 'cycling' : 'foot';
+						$.get('https://router.project-osrm.org/route/v1/' + profileParam + '/' + start + ';' + end + '?geometries=geojson', function(data) {
+							if (data.routes && data.routes[0]) {
+								var route = data.routes[0];
+								var routeFeature = new ol.format.GeoJSON().readFeature(route.geometry);
+								routeFeature.getGeometry().transform('EPSG:4326', 'EPSG:3857');
+								
+								// Remove existing route layer if any
+								map.getLayers().forEach(function(layer) {
+									if (layer.get('name') === 'route') {
+										map.removeLayer(layer);
+									}
+								});
+								
+								// Add new route layer
+								var routeLayer = new ol.layer.Vector({
+									name: 'route',
+									source: new ol.source.Vector({
+										features: [routeFeature]
+									}),
+									style: new ol.style.Style({
+										stroke: new ol.style.Stroke({
+											color: '#00447B',
+											width: 3
+										})
+									})
+								});
+								
+								map.addLayer(routeLayer);
+								
+								// Show route info
+								var info = $('<div>').addClass('route-info').html(
+									'Distance: ' + (route.distance / 1000).toFixed(1) + ' km<br>' +
+									'Duration: ' + Math.round(route.duration / 60) + ' min'
+								);
+								container.append(info);
+							}
+						});
+					}
+				}
+				
+				// Close button
+				container.append(
+					$('<button>').addClass('close-button').html('×').on('click', function() {
+						container.remove();
+						// Remove route layer
+						map.getLayers().forEach(function(layer) {
+							if (layer.get('name') === 'route') {
+								map.removeLayer(layer);
+							}
+						});
+					})
+				);
+			})
+		)
 	});
 	map.addControl(routingControl);
 

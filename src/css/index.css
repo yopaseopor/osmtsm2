@@ -429,48 +429,68 @@ a:hover {
 	background-color: rgba(255,255,255,0.6);
 }
 
-.ol-routing .routing-container {
-	position: absolute;
-	top: 30px;
-	right: 0;
-	width: 300px;
+.routing-container {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	background-color: rgba(255,255,255,0.9);
 	border-radius: 2px;
 	box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-	padding: 10px;
+	padding: 15px;
+	z-index: 1000;
 }
 
-.ol-routing .profile-selector {
+.profile-selector {
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 }
 
-.ol-routing .profile-button {
-	padding: 5px 10px;
+.profile-button {
+	background: none;
 	border: 1px solid #ccc;
 	border-radius: 3px;
+	padding: 5px 10px;
 	cursor: pointer;
 }
 
-.ol-routing .profile-button.active {
+.profile-button.active {
 	background-color: rgba(0,60,136,.3);
+	border-color: #00447B;
 }
 
-.ol-routing .waypoint-input {
+.waypoints {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-bottom: 15px;
+}
+
+.waypoint-input {
 	width: 100%;
-	padding: 5px;
-	margin-bottom: 5px;
+	padding: 8px;
 	border: 1px solid #ccc;
 	border-radius: 3px;
 }
 
-.ol-routing .route-info {
-	margin-top: 10px;
-	padding-top: 10px;
+.route-info {
+	margin-top: 15px;
+	padding-top: 15px;
 	border-top: 1px solid #ccc;
 }
 
-.ol-routing .route-info div {
-	margin-bottom: 5px;
+.close-button {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	background: none;
+	border: none;
+	font-size: 20px;
+	cursor: pointer;
+	color: #666;
+}
+
+.close-button:hover {
+	color: #000;
 }
