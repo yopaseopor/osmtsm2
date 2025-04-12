@@ -408,113 +408,69 @@ a:hover {
 }
 
 .osmcat-panoramax button.active {
-    background-color: rgba(0,60,136,.3);
+    background: #00447B;
+    color: white;
 }
 
-/* Routing Control Styles */
-.ol-routing {
-	top: 30px;
-	right: 8px;
+/* OSRM Router Styles */
+.osrm-router {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 300px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    display: none;
 }
 
-.ol-routing button {
-	background-color: rgba(255,255,255,0.4);
-	border: none;
-	border-radius: 2px;
-	padding: 2px;
-	cursor: pointer;
+.osrm-router.active {
+    display: block;
 }
 
-.ol-routing button:hover {
-	background-color: rgba(255,255,255,0.6);
+.osrm-router .close-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #666;
 }
 
-.routing-container {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	background-color: rgba(255,255,255,0.9);
-	border-radius: 2px;
-	box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-	padding: 15px;
-	z-index: 1000;
-	min-width: 300px;
+.osrm-router .profile-selector {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 1;
 }
 
-.profile-selector {
-	display: flex;
-	justify-content: space-between;
-	margin-bottom: 15px;
+.osrm-router .profile-selector select {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background: white;
 }
 
-.profile-button {
-	background: none;
-	border: 1px solid #ccc;
-	border-radius: 3px;
-	padding: 5px 10px;
-	cursor: pointer;
-	display: flex;
-	align-items: center;
-	gap: 5px;
+.osrm-router iframe {
+    width: 100%;
+    height: calc(100% - 30px);
+    border: none;
+    margin-top: 30px;
 }
 
-.profile-button i {
-	font-size: 16px;
+.osrm-router .resize-handle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background: #ddd;
+    cursor: se-resize;
 }
 
-.profile-button.active {
-	background-color: rgba(0,60,136,.3);
-	border-color: #00447B;
-}
-
-.waypoints {
-	display: flex;
-	flex-direction: column;
-	gap: 10px;
-	margin-bottom: 15px;
-}
-
-.waypoint-input {
-	width: 100%;
-	padding: 8px;
-	border: 1px solid #ccc;
-	border-radius: 3px;
-	background-color: rgba(255,255,255,0.8);
-}
-
-.waypoint-input:focus {
-	outline: none;
-	border-color: #00447B;
-}
-
-.route-info {
-	margin-top: 15px;
-	padding-top: 15px;
-	border-top: 1px solid #ccc;
-	font-size: 14px;
-	line-height: 1.5;
-}
-
-.close-button {
-	position: absolute;
-	top: 5px;
-	right: 5px;
-	background: none;
-	border: none;
-	font-size: 20px;
-	cursor: pointer;
-	color: #666;
-	padding: 0;
-	width: 24px;
-	height: 24px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.close-button:hover {
-	color: #000;
-	background-color: rgba(0,0,0,0.1);
-	border-radius: 50%;
+#map.router-active {
+    margin-right: 400px;
 }
