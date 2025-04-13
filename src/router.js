@@ -481,20 +481,20 @@ function initRouter(map) {
                                 <div class="search-results start-results"></div>
                             </div>
                             <div class="router-input">
-                                <label>Via (optional):</label>
-                                <div class="location-input">
-                                    <input type="text" class="via-place" placeholder="Search via location...">
-                                    <button class="search-button"><i class="fa fa-search"></i></button>
-                                </div>
-                                <div class="search-results via-results"></div>
-                            </div>
-                            <div class="router-input">
                                 <label>End:</label>
                                 <div class="location-input">
                                     <input type="text" class="end-place" placeholder="Search end location...">
                                     <button class="search-button"><i class="fa fa-search"></i></button>
                                 </div>
                                 <div class="search-results end-results"></div>
+                            </div>
+                            <div class="router-input">
+                                <label>Via (optional):</label>
+                                <div class="location-input">
+                                    <input type="text" class="via-place" placeholder="Search via location...">
+                                    <button class="search-button"><i class="fa fa-search"></i></button>
+                                </div>
+                                <div class="search-results via-results"></div>
                             </div>
                             <div class="router-input">
                                 <label>Profile:</label>
@@ -512,6 +512,36 @@ function initRouter(map) {
                     </div>
                 </div>
             `);
+
+            // Handle map clicks
+            clickHandler = function(evt) {
+                const coordinate = evt.coordinate;
+                const lonlat = ol.proj.toLonLat(coordinate);
+                
+                if (!startPlace) {
+                    if (startMarker) map.removeOverlay(startMarker);
+                    startPlace = { lon: lonlat[0], lat: lonlat[1] };
+                    startMarker = createMarker(coordinate, 'start');
+                    routerContent.find('.start-place').val('Selected on map');
+                } else if (!endPlace) {
+                    if (endMarker) map.removeOverlay(endMarker);
+                    endPlace = { lon: lonlat[0], lat: lonlat[1] };
+                    endMarker = createMarker(coordinate, 'end');
+                    routerContent.find('.end-place').val('Selected on map');
+                } else if (!viaPlace) {
+                    if (viaMarker) map.removeOverlay(viaMarker);
+                    viaPlace = { lon: lonlat[0], lat: lonlat[1] };
+                    viaMarker = createMarker(coordinate, 'via');
+                    routerContent.find('.via-place').val('Selected on map');
+                }
+
+                // Calculate route automatically if we have start and end points
+                if (startPlace && endPlace) {
+                    calculateRoute();
+                }
+            };
+
+            map.on('singleclick', clickHandler);
 
             // Handle place search
             const searchPlace = function(input, resultsDiv) {
@@ -543,6 +573,11 @@ function initRouter(map) {
                                         endPlace = place;
                                         endMarker = createMarker(coordinate, 'end');
                                     }
+
+                                    // Calculate route automatically if we have start and end points
+                                    if (startPlace && endPlace) {
+                                        calculateRoute();
+                                    }
                                 });
                             resultsDiv.append(result);
                         });
@@ -555,31 +590,6 @@ function initRouter(map) {
                 const resultsDiv = input.closest('.router-input').find('.search-results');
                 searchPlace(input, resultsDiv);
             });
-
-            // Handle map clicks
-            clickHandler = function(evt) {
-                const coordinate = evt.coordinate;
-                const lonlat = ol.proj.toLonLat(coordinate);
-                
-                if (!startPlace) {
-                    if (startMarker) map.removeOverlay(startMarker);
-                    startPlace = { lon: lonlat[0], lat: lonlat[1] };
-                    startMarker = createMarker(coordinate, 'start');
-                    routerContent.find('.start-place').val('Selected on map');
-                } else if (!endPlace) {
-                    if (endMarker) map.removeOverlay(endMarker);
-                    endPlace = { lon: lonlat[0], lat: lonlat[1] };
-                    endMarker = createMarker(coordinate, 'end');
-                    routerContent.find('.end-place').val('Selected on map');
-                } else if (!viaPlace) {
-                    if (viaMarker) map.removeOverlay(viaMarker);
-                    viaPlace = { lon: lonlat[0], lat: lonlat[1] };
-                    viaMarker = createMarker(coordinate, 'via');
-                    routerContent.find('.via-place').val('Selected on map');
-                }
-            };
-
-            map.on('singleclick', clickHandler);
 
             // Calculate route
             routerContent.find('.calculate-route').on('click', function(e) {
