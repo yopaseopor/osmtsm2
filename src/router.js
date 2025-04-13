@@ -416,7 +416,7 @@ function initRouter(map) {
 
     // Add router button and dialog
     const routerButton = $('<button>')
-        .addClass('osmcat-button')
+        .addClass('osmcat-button osmcat-router')
         .attr('title', 'Route')
         .html('<i class="fa fa-route"></i>')
         .on('click', function() {
