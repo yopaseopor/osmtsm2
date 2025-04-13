@@ -89,20 +89,96 @@ function initRouter(map) {
             if (type === 'start') {
                 startPlace = { lon: lonlat[0], lat: lonlat[1] };
                 marker.setPosition(coordinate);
-                dialog.find('.start-place').val('Selected on map');
             } else if (type === 'via') {
                 viaPlace = { lon: lonlat[0], lat: lonlat[1] };
                 marker.setPosition(coordinate);
-                dialog.find('.via-place').val('Selected on map');
             } else if (type === 'end') {
                 endPlace = { lon: lonlat[0], lat: lonlat[1] };
                 marker.setPosition(coordinate);
-                dialog.find('.end-place').val('Selected on map');
             }
             
             // Only calculate route if we have both start and end points
             if (startPlace && endPlace) {
-                calculateRoute();
+                // Get the current profile
+                const profile = $('.profile-select').val();
+                
+                // Map profile values to OSRM API base URLs and profiles
+                const profileMap = {
+                    'car': {
+                        baseUrl: 'https://router.project-osrm.org/route/v1',
+                        profile: 'driving'
+                    },
+                    'bike': {
+                        baseUrl: 'https://routing.openstreetmap.de/routed-bike/route/v1',
+                        profile: 'bicycle'
+                    },
+                    'foot': {
+                        baseUrl: 'https://routing.openstreetmap.de/routed-foot/route/v1',
+                        profile: 'foot'
+                    }
+                };
+                
+                const routingConfig = profileMap[profile] || profileMap.car;
+                
+                // Format coordinates with proper precision
+                const formatCoord = (coord) => coord.toFixed(6);
+                let waypoints = `${formatCoord(startPlace.lon)},${formatCoord(startPlace.lat)}`;
+                
+                if (viaPlace) {
+                    waypoints += `;${formatCoord(viaPlace.lon)},${formatCoord(viaPlace.lat)}`;
+                }
+                
+                waypoints += `;${formatCoord(endPlace.lon)},${formatCoord(endPlace.lat)}`;
+                
+                const url = `${routingConfig.baseUrl}/${routingConfig.profile}/${waypoints}?overview=full&geometries=geojson`;
+                
+                console.log('Calculating route with URL:', url);
+                
+                loading.show();
+                
+                fetch(url)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        console.log('Route data received:', data);
+                        
+                        if (!data.routes || data.routes.length === 0) {
+                            throw new Error('No route found');
+                        }
+                        
+                        const route = data.routes[0];
+                        const format = new ol.format.GeoJSON();
+                        const features = format.readFeatures(route.geometry, {
+                            featureProjection: map.getView().getProjection(),
+                            dataProjection: 'EPSG:4326'
+                        });
+                        
+                        // Remove alternative routes
+                        map.getLayers().forEach(l => {
+                            if (l !== routeLayer && l.get('type') === 'alternative') {
+                                map.removeLayer(l);
+                            }
+                        });
+                        
+                        routeLayer.getSource().clear();
+                        routeLayer.getSource().addFeatures(features);
+                        
+                        // Show route info
+                        const distance = (route.distance / 1000).toFixed(1);
+                        const duration = Math.round(route.duration / 60);
+                        alert(`Route calculated!\nDistance: ${distance} km\nDuration: ${duration} minutes`);
+                    })
+                    .catch(error => {
+                        console.error('Error calculating route:', error);
+                        alert('Error calculating route: ' + error.message);
+                    })
+                    .finally(() => {
+                        loading.hide();
+                    });
             }
         });
         
@@ -419,15 +495,15 @@ function initRouter(map) {
                                     const coordinate = ol.proj.fromLonLat([parseFloat(place.lon), parseFloat(place.lat)]);
                                     if (input.hasClass('start-place')) {
                                         if (startMarker) map.removeOverlay(startMarker);
-                                        startPlace = { lon: parseFloat(place.lon), lat: parseFloat(place.lat) };
+                                        startPlace = place;
                                         startMarker = createMarker(coordinate, 'start');
                                     } else if (input.hasClass('via-place')) {
                                         if (viaMarker) map.removeOverlay(viaMarker);
-                                        viaPlace = { lon: parseFloat(place.lon), lat: parseFloat(place.lat) };
+                                        viaPlace = place;
                                         viaMarker = createMarker(coordinate, 'via');
                                     } else {
                                         if (endMarker) map.removeOverlay(endMarker);
-                                        endPlace = { lon: parseFloat(place.lon), lat: parseFloat(place.lat) };
+                                        endPlace = place;
                                         endMarker = createMarker(coordinate, 'end');
                                     }
                                 });
@@ -463,50 +539,6 @@ function initRouter(map) {
                     endPlace = { lon: lonlat[0], lat: lonlat[1] };
                     endMarker = createMarker(coordinate, 'end');
                     dialog.find('.end-place').val('Selected on map');
-                } else {
-                    // If all points are set, allow clicking to move any point
-                    const pixel = map.getEventPixel(evt);
-                    const feature = map.forEachFeatureAtPixel(pixel, function(feature) {
-                        return feature;
-                    });
-                    
-                    if (feature) {
-                        const extent = feature.getGeometry().getExtent();
-                        const center = ol.extent.getCenter(extent);
-                        const lonlat = ol.proj.toLonLat(center);
-                        
-                        // Find closest point to click
-                        const distances = [
-                            { type: 'start', point: startPlace, marker: startMarker },
-                            { type: 'via', point: viaPlace, marker: viaMarker },
-                            { type: 'end', point: endPlace, marker: endMarker }
-                        ].map(item => ({
-                            ...item,
-                            distance: Math.sqrt(
-                                Math.pow(lonlat[0] - item.point.lon, 2) +
-                                Math.pow(lonlat[1] - item.point.lat, 2)
-                            )
-                        })).sort((a, b) => a.distance - b.distance);
-                        
-                        const closest = distances[0];
-                        if (closest.distance < 0.01) { // Threshold for point selection
-                            if (closest.marker) map.removeOverlay(closest.marker);
-                            if (closest.type === 'start') {
-                                startPlace = { lon: lonlat[0], lat: lonlat[1] };
-                                startMarker = createMarker(coordinate, 'start');
-                                dialog.find('.start-place').val('Selected on map');
-                            } else if (closest.type === 'via') {
-                                viaPlace = { lon: lonlat[0], lat: lonlat[1] };
-                                viaMarker = createMarker(coordinate, 'via');
-                                dialog.find('.via-place').val('Selected on map');
-                            } else {
-                                endPlace = { lon: lonlat[0], lat: lonlat[1] };
-                                endMarker = createMarker(coordinate, 'end');
-                                dialog.find('.end-place').val('Selected on map');
-                            }
-                            calculateRoute();
-                        }
-                    }
                 }
             };
 
