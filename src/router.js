@@ -418,7 +418,7 @@ function initRouter(map) {
     const routerButton = $('<button>')
         .addClass('osmcat-button osmcat-router')
         .attr('title', 'Route')
-        .html('<i class="fa fa-route"></i>')
+        .html('<i class="fa fa-play-circle-o" aria-hidden="true"></i>')
         .on('click', function() {
             // Check if router is already open
             const existingRouter = $('.osmcat-menu .osmcat-layer').filter(function() {
