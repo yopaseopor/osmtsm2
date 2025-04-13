@@ -20,6 +20,11 @@ class TranslationManager {
             this.currentLanguage = lang;
             localStorage.setItem('language', lang);
             this.notifyListeners();
+            // Update the select element
+            const select = document.getElementById('lang-select');
+            if (select) {
+                select.value = lang;
+            }
         }
     }
 
@@ -59,5 +64,21 @@ class TranslationManager {
     }
 }
 
-export const i18n = new TranslationManager();
+// Create and export the translation manager
+const i18n = new TranslationManager();
+
+// Make it globally accessible
+window.i18n = i18n;
+
+// Initialize the language selector
+document.addEventListener('DOMContentLoaded', () => {
+    const select = document.getElementById('lang-select');
+    if (select) {
+        select.value = i18n.getCurrentLanguage();
+        select.addEventListener('change', (e) => {
+            i18n.setLanguage(e.target.value);
+        });
+    }
+});
+
 export default i18n; 
