@@ -328,11 +328,21 @@ a:hover {
     position: absolute;
     top: 10px;
     right: 10px;
-    background: none;
+    background-color: rgba(255,255,255,0.4);
     border: none;
-    font-size: 20px;
+    border-radius: 2px;
+    padding: 2px;
+    width: 1.375em;
+    height: 1.375em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     z-index: 1001;
+}
+
+.panoramax-viewer .close-button:hover {
+    background-color: rgba(255,255,255,0.6);
 }
 
 .panoramax-viewer .credits {
@@ -357,13 +367,13 @@ a:hover {
 }
 
 .panoramax-viewer .credits a {
-    color: #00447B;
+    color: rgba(0,60,136,.7);
     text-decoration: none;
     margin-left: 5px;
 }
 
 .panoramax-viewer .credits a:hover {
-    color: #40F;
+    color: rgba(0,60,136,1);
 }
 
 /* Responsive styles */
@@ -411,7 +421,7 @@ a:hover {
 }
 
 .osmcat-panoramax button {
-    background: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.8);
     border: none;
     border-radius: 2px;
     padding: 5px 10px;
@@ -436,6 +446,7 @@ a:hover {
 
 .osmcat-button {
     background-color: rgba(255,255,255,0.4);
+    border: none;
     border-radius: 2px;
     padding: 2px;
     margin: 2px;
@@ -458,8 +469,8 @@ a:hover {
 }
 
 .osmcat-button i {
-    color: black;
     font-size: 1.2em;
+    color: black;
 }
 
 .osmcat-button.active i {
@@ -493,16 +504,14 @@ a:hover {
 }
 
 .router-input .search-button {
-    padding: 5px 10px;
-    background-color: #4a90e2;
-    color: white;
-    border: none;
-    border-radius: 2px;
-    cursor: pointer;
+    position: relative;
+    padding: 2px;
+    width: 1.375em;
+    height: 1.375em;
 }
 
 .router-input .search-button:hover {
-    background-color: #357abd;
+    background-color: rgba(255,255,255,0.6);
 }
 
 .router-input select {
@@ -542,7 +551,7 @@ a:hover {
 .router-input .calculate-route {
     width: 100%;
     padding: 8px;
-    background-color: #4a90e2;
+    background-color: rgba(0,60,136,.7);
     color: white;
     border: none;
     border-radius: 2px;
@@ -551,7 +560,7 @@ a:hover {
 }
 
 .router-input .calculate-route:hover {
-    background-color: #357abd;
+    background-color: rgba(0,60,136,.9);
 }
 
 .route-marker {
@@ -590,4 +599,103 @@ a:hover {
     .osmcat-layer {
         width: 100%;
     }
+}
+
+/* Standardize button sizes and colors */
+.osmcat-button,
+.nominatim-search button,
+.osmcat-panoramax button,
+.router-input .search-button {
+    background-color: rgba(255,255,255,0.4);
+    border: none;
+    border-radius: 2px;
+    padding: 2px;
+    cursor: pointer;
+    width: 1.375em;
+    height: 1.375em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.osmcat-button:hover,
+.nominatim-search button:hover,
+.osmcat-panoramax button:hover,
+.router-input .search-button:hover {
+    background-color: rgba(255,255,255,0.6);
+}
+
+.osmcat-button.active,
+.osmcat-panoramax button.active {
+    background-color: rgba(0,60,136,.7);
+    color: white;
+}
+
+.osmcat-button i,
+.nominatim-search button i,
+.osmcat-panoramax button i,
+.router-input .search-button i {
+    font-size: 1.2em;
+    color: black;
+}
+
+.osmcat-button.active i,
+.osmcat-panoramax button.active i {
+    color: white;
+}
+
+/* Router specific styles */
+.osmcat-router {
+    top: .5em;
+    right: 8em;
+}
+
+/* PanoraMax viewer styles update */
+.panoramax-viewer .close-button {
+    background-color: rgba(255,255,255,0.4);
+    border: none;
+    border-radius: 2px;
+    padding: 2px;
+    width: 1.375em;
+    height: 1.375em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.panoramax-viewer .close-button:hover {
+    background-color: rgba(255,255,255,0.6);
+}
+
+.panoramax-viewer .credits a {
+    color: rgba(0,60,136,.7);
+}
+
+.panoramax-viewer .credits a:hover {
+    color: rgba(0,60,136,1);
+}
+
+/* Search button in router form */
+.router-input .search-button {
+    position: relative;
+    padding: 2px;
+    width: 1.375em;
+    height: 1.375em;
+}
+
+/* Calculate route button */
+.router-input .calculate-route {
+    width: 100%;
+    padding: 8px;
+    background-color: rgba(0,60,136,.7);
+    color: white;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.router-input .calculate-route:hover {
+    background-color: rgba(0,60,136,.9);
 }
