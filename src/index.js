@@ -430,6 +430,17 @@ $(function () {
 		element: rotaterightControlBuild()
 	}));
 
+	// Router Control
+	var routerControlBuild = function () {
+		var container = $('<div>').addClass('ol-control ol-unselectable osmcat-routebutton').html($('<button type="button"><i class="fa fa-route"></i></button>').on('click', function () {
+			initRouter(map);
+		}));
+		return container[0];
+	};
+	map.addControl(new ol.control.Control({
+		element: routerControlBuild()
+	}));
+
 	$('#map').css('cursor', 'grab');
 	map.on('movestart', function (evt) {
 		$('#map').css('cursor', 'grabbing');
@@ -572,191 +583,6 @@ $(function () {
 		});
 
 	});
-
-	// Add menu buttons
-	$('#menu').append(
-		$('<button>')
-			.addClass('osmcat-button')
-			.html('<i class="fa fa-search"></i> Search')
-			.on('click', function() {
-				searchDialog.dialog('open');
-			}),
-		$('<button>')
-			.addClass('osmcat-button')
-			.html('<i class="fa fa-map-marker"></i> Center')
-			.on('click', function() {
-				centerDialog.dialog('open');
-			}),
-		$('<button>')
-			.addClass('osmcat-button')
-			.html('<i class="fa fa-route"></i> Route')
-			.on('click', function() {
-				routerDialog.dialog('open');
-			})
-	);
-
-	// Add router dialog
-	const routerDialog = $('<div>').addClass('router-dialog').html(`
-		<div class="router-form">
-			<div class="router-input">
-				<label>Start:</label>
-				<div class="location-input">
-					<input type="text" class="start-place" placeholder="Search start location...">
-					<button class="search-button"><i class="fa fa-search"></i></button>
-				</div>
-				<div class="search-results start-results"></div>
-			</div>
-			<div class="router-input">
-				<label>Via:</label>
-				<div class="location-input">
-					<input type="text" class="via-place" placeholder="Search via location...">
-					<button class="search-button"><i class="fa fa-search"></i></button>
-				</div>
-				<div class="search-results via-results"></div>
-			</div>
-			<div class="router-input">
-				<label>End:</label>
-				<div class="location-input">
-					<input type="text" class="end-place" placeholder="Search end location...">
-					<button class="search-button"><i class="fa fa-search"></i></button>
-				</div>
-				<div class="search-results end-results"></div>
-			</div>
-			<div class="router-input">
-				<label>Profile:</label>
-				<select class="profile-select">
-					<option value="car">Car</option>
-					<option value="bike">Bicycle</option>
-					<option value="foot">Walking</option>
-				</select>
-			</div>
-			<div class="click-hint">
-				<i class="fa fa-info-circle"></i> Click on the map to set locations
-			</div>
-			<button class="calculate-route">Calculate Route</button>
-		</div>
-	`);
-
-	// Initialize router dialog
-	routerDialog.dialog({
-		title: 'Route Calculator',
-		width: 300,
-		height: 400,
-		autoOpen: false,
-		modal: false,
-		position: { my: 'right top', at: 'right-10 top+10' },
-		classes: {
-			"ui-dialog": "osmcat-dialog",
-			"ui-dialog-titlebar": "osmcat-dialog-titlebar"
-		},
-		close: function() {
-			if (clickHandler) {
-				map.un('singleclick', clickHandler);
-				clickHandler = null;
-			}
-		}
-	});
-
-	// Add CSS for router dialog
-	$('<style>')
-		.text(`
-			.router-dialog {
-				background-color: white;
-				border-radius: 4px;
-				box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-			}
-			.router-dialog .router-form {
-				padding: 10px;
-			}
-			.router-dialog .router-input {
-				margin-bottom: 15px;
-			}
-			.router-dialog label {
-				display: block;
-				margin-bottom: 5px;
-				font-weight: bold;
-			}
-			.router-dialog .location-input {
-				display: flex;
-				gap: 5px;
-			}
-			.router-dialog .location-input input {
-				flex: 1;
-				padding: 5px;
-				border: 1px solid #ccc;
-				border-radius: 4px;
-			}
-			.router-dialog .search-button {
-				padding: 5px 10px;
-				background-color: #4CAF50;
-				color: white;
-				border: none;
-				border-radius: 4px;
-				cursor: pointer;
-			}
-			.router-dialog .search-button:hover {
-				background-color: #45a049;
-			}
-			.router-dialog select {
-				width: 100%;
-				padding: 5px;
-				border: 1px solid #ccc;
-				border-radius: 4px;
-			}
-			.router-dialog .search-results {
-				max-height: 150px;
-				overflow-y: auto;
-				border: 1px solid #ccc;
-				margin-top: 5px;
-				display: none;
-				border-radius: 4px;
-			}
-			.router-dialog .search-result {
-				padding: 5px;
-				cursor: pointer;
-				border-bottom: 1px solid #eee;
-			}
-			.router-dialog .search-result:hover {
-				background-color: #f0f0f0;
-			}
-			.router-dialog .click-hint {
-				margin: 10px 0;
-				color: #666;
-				font-style: italic;
-				font-size: 0.9em;
-			}
-			.router-dialog .calculate-route {
-				width: 100%;
-				padding: 10px;
-				background-color: #4CAF50;
-				color: white;
-				border: none;
-				border-radius: 4px;
-				cursor: pointer;
-				font-weight: bold;
-			}
-			.router-dialog .calculate-route:hover {
-				background-color: #45a049;
-			}
-			.route-marker {
-				font-size: 24px;
-				color: #4CAF50;
-				text-shadow: 0 0 3px white;
-				cursor: move;
-				user-select: none;
-				-webkit-user-drag: element;
-			}
-			.route-marker:hover {
-				color: #45a049;
-			}
-			.route-marker i {
-				background-color: white;
-				border-radius: 50%;
-				padding: 5px;
-				pointer-events: auto;
-			}
-		`)
-		.appendTo('head');
 });
 
 function linearColorInterpolation(colorFrom, colorTo, weight) {
