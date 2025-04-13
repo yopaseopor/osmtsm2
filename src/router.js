@@ -419,7 +419,7 @@ function initRouter(map) {
 
     // Add router button and dialog
     const routerButton = $('<button>')
-        .addClass('ol-control osmcat-button')
+        .addClass('osmcat-button')
         .attr('title', 'Route')
         .html('<i class="fa fa-route"></i>')
         .on('click', function() {
@@ -575,16 +575,23 @@ function initRouter(map) {
     // Add CSS for router dialog and markers
     $('<style>')
         .text(`
-            .ol-control.osmcat-button {
-                background-color: #4CAF50;
+            .osmcat-button {
+                background-color: #4a90e2;
                 border-radius: 4px;
                 padding: 4px;
                 margin: 4px;
+                border: none;
+                cursor: pointer;
+                width: 32px;
+                height: 32px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
-            .ol-control.osmcat-button:hover {
-                background-color: #45a049;
+            .osmcat-button:hover {
+                background-color: #357abd;
             }
-            .ol-control.osmcat-button i {
+            .osmcat-button i {
                 color: white;
                 font-size: 1.2em;
             }
