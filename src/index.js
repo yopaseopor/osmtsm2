@@ -433,7 +433,7 @@ $(function () {
 	// Router Control
 	var routerControlBuild = function () {
 		var container = $('<div>').addClass('ol-control ol-unselectable osmcat-routebutton').html($('<button type="button"><i class="fa fa-route"></i></button>').on('click', function () {
-			$('.router-dialog').dialog('open');
+			initRouter(map);
 		}));
 		return container[0];
 	};
