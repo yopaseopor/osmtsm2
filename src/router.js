@@ -136,11 +136,20 @@ function initRouter(map) {
         const routes = [];
         let completed = 0;
         
+        // Map profile values to OSRM API values
+        const profileMap = {
+            'car': 'driving',
+            'bike': 'cycling',
+            'foot': 'foot'
+        };
+        
+        const osrmProfile = profileMap[profile] || 'driving';
+        
         offsets.forEach((offset, index) => {
             const viaLon = viaPlace.lon + offset[0];
             const viaLat = viaPlace.lat + offset[1];
             const waypoints = `${startPlace.lon},${startPlace.lat};${viaLon},${viaLat};${endPlace.lon},${endPlace.lat}`;
-            const url = `https://router.project-osrm.org/route/v1/${profile}/${waypoints}?overview=full&geometries=geojson`;
+            const url = `https://router.project-osrm.org/route/v1/${osrmProfile}/${waypoints}?overview=full&geometries=geojson`;
             
             fetch(url)
                 .then(response => response.json())
