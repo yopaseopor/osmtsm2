@@ -244,7 +244,15 @@ function initRouter(map) {
         
         waypoints += `;${formatCoord(endPlace.lon)},${formatCoord(endPlace.lat)}`;
         
-        const url = `https://router.project-osrm.org/route/v1/${profile}/${waypoints}?overview=full&geometries=geojson`;
+        // Map profile names to OSRM API profile names
+        const profileMap = {
+            'car': 'driving',
+            'bike': 'cycling',
+            'foot': 'foot-walking'
+        };
+        
+        const osrmProfile = profileMap[profile] || 'driving';
+        const url = `https://router.project-osrm.org/route/v1/${osrmProfile}/${waypoints}?overview=full&geometries=geojson`;
         
         console.log('Calculating route with URL:', url);
         
@@ -350,8 +358,8 @@ function initRouter(map) {
                     <div class="router-input">
                         <label>Profile:</label>
                         <select class="profile-select">
-                            <option value="driving">Car</option>
-                            <option value="cycling">Bicycle</option>
+                            <option value="car">Car</option>
+                            <option value="bike">Bicycle</option>
                             <option value="foot">Walking</option>
                         </select>
                     </div>
