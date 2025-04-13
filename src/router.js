@@ -136,20 +136,29 @@ function initRouter(map) {
         const routes = [];
         let completed = 0;
         
-        // Map profile values to OSRM API endpoints
+        // Map profile values to OSRM API base URLs and profiles
         const profileMap = {
-            'car': 'driving',
-            'bike': 'cycling',
-            'foot': 'foot-walking'
+            'car': {
+                baseUrl: 'https://router.project-osrm.org/route/v1',
+                profile: 'driving'
+            },
+            'bike': {
+                baseUrl: 'https://routing.openstreetmap.de/routed-bike/route/v1',
+                profile: 'bicycle'
+            },
+            'foot': {
+                baseUrl: 'https://routing.openstreetmap.de/routed-foot/route/v1',
+                profile: 'foot'
+            }
         };
         
-        const osrmProfile = profileMap[profile] || 'driving';
+        const routingConfig = profileMap[profile] || profileMap.car;
         
         offsets.forEach((offset, index) => {
             const viaLon = viaPlace.lon + offset[0];
             const viaLat = viaPlace.lat + offset[1];
             const waypoints = `${startPlace.lon},${startPlace.lat};${viaLon},${viaLat};${endPlace.lon},${endPlace.lat}`;
-            const url = `https://router.project-osrm.org/route/v1/${osrmProfile}/${waypoints}?overview=full&geometries=geojson`;
+            const url = `${routingConfig.baseUrl}/${routingConfig.profile}/${waypoints}?overview=full&geometries=geojson`;
             
             fetch(url)
                 .then(response => response.json())
@@ -253,15 +262,24 @@ function initRouter(map) {
         
         waypoints += `;${formatCoord(endPlace.lon)},${formatCoord(endPlace.lat)}`;
         
-        // Map profile values to OSRM API endpoints
+        // Map profile values to OSRM API base URLs and profiles
         const profileMap = {
-            'car': 'driving',
-            'bike': 'cycling',
-            'foot': 'foot-walking'
+            'car': {
+                baseUrl: 'https://router.project-osrm.org/route/v1',
+                profile: 'driving'
+            },
+            'bike': {
+                baseUrl: 'https://routing.openstreetmap.de/routed-bike/route/v1',
+                profile: 'bicycle'
+            },
+            'foot': {
+                baseUrl: 'https://routing.openstreetmap.de/routed-foot/route/v1',
+                profile: 'foot'
+            }
         };
         
-        const osrmProfile = profileMap[profile] || 'driving';
-        const url = `https://router.project-osrm.org/route/v1/${osrmProfile}/${waypoints}?overview=full&geometries=geojson`;
+        const routingConfig = profileMap[profile] || profileMap.car;
+        const url = `${routingConfig.baseUrl}/${routingConfig.profile}/${waypoints}?overview=full&geometries=geojson`;
         
         console.log('Calculating route with URL:', url);
         
