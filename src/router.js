@@ -616,6 +616,8 @@ function initRouter(map) {
                     clickHandler = null;
                 }
                 routerContent.remove();
+                routerButton.removeClass('active');
+                $('.osmcat-menu').removeClass('router-active');
             });
         });
 
