@@ -14,6 +14,12 @@ const en = {
         noNodesFound: "No information found.",
         wayLabel: "Way:",
         languageSelector: "Select language"
+    },
+    categories: {
+        food: "Food",
+        supermarkets: "Supermarkets",
+        layers: "Layers",
+        basemaps: "Base Maps"
     }
 };
 
@@ -32,6 +38,12 @@ const es = {
         noNodesFound: "No se ha encontrado información.",
         wayLabel: "Vía:",
         languageSelector: "Seleccionar idioma"
+    },
+    categories: {
+        food: "Alimentación",
+        supermarkets: "Supermercados",
+        layers: "Capas",
+        basemaps: "Mapas Base"
     }
 };
 
@@ -50,6 +62,12 @@ const ca = {
         noNodesFound: "No s'ha trobat informació.",
         wayLabel: "Via:",
         languageSelector: "Seleccionar idioma"
+    },
+    categories: {
+        food: "Alimentació",
+        supermarkets: "Supermercats",
+        layers: "Capes",
+        basemaps: "Mapes Base"
     }
 };
 
@@ -70,6 +88,10 @@ const i18n = {
             this.currentLanguage = lang;
             localStorage.setItem('language', lang);
             this.notifyListeners();
+            
+            // Update all translatable elements
+            this.updateAllTranslations();
+            
             // Update the select element
             const select = document.getElementById('lang-select');
             if (select) {
@@ -91,6 +113,43 @@ const i18n = {
         }
         
         return value;
+    },
+
+    updateAllTranslations: function() {
+        // Update all elements with data-translate attribute
+        document.querySelectorAll('[data-translate]').forEach(element => {
+            const key = element.getAttribute('data-translate');
+            element.textContent = this.translate(key);
+        });
+
+        // Update menu items
+        this.updateMenuTranslations();
+    },
+
+    updateMenuTranslations: function() {
+        // Update layer groups
+        document.querySelectorAll('.osmcat-menu h3').forEach(element => {
+            const originalText = element.getAttribute('data-original-text');
+            if (originalText) {
+                element.textContent = this.translate('categories.' + originalText.toLowerCase());
+            }
+        });
+
+        // Update layer titles
+        document.querySelectorAll('.osmcat-layer div').forEach(element => {
+            const originalText = element.getAttribute('data-original-text');
+            if (originalText) {
+                const translated = this.translate('categories.' + originalText.toLowerCase());
+                if (translated !== originalText) {
+                    const img = element.querySelector('img');
+                    if (img) {
+                        element.innerHTML = img.outerHTML + ' ' + translated;
+                    } else {
+                        element.textContent = translated;
+                    }
+                }
+            }
+        });
     },
 
     addListener: function(callback) {
@@ -126,4 +185,7 @@ document.addEventListener('DOMContentLoaded', function() {
             i18n.setLanguage(e.target.value);
         });
     }
+    
+    // Initial translation update
+    i18n.updateAllTranslations();
 }); 

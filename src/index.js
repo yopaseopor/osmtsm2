@@ -215,20 +215,24 @@ $(function () {
 		config.layers.forEach(layer => {
 			if (layer.get('type') === 'overlay') {
 				var title = layer.get('title'),
-					layerButton = $('<h3>').html(title),
+					layerButton = $('<h3>').html(title).attr('data-original-text', title),
 					overlayDivContent = $('<div>').addClass('osmcat-content osmcat-overlay overlay' + overlayIndex);
 
-				overlaySelect.append($('<option>').val('overlay' + overlayIndex).text(title));
+				overlaySelect.append($('<option>').val('overlay' + overlayIndex).text(title).attr('data-original-text', title));
 
 				layer.getLayers().forEach(overlay => {
 					var overlaySrc = overlay.get('iconSrc'),
 						overlayIconStyle = overlay.get('iconStyle') || '',
-						title = (overlaySrc ? '<img src="' + overlaySrc + '" height="16" style="' + overlayIconStyle + '"/> ' : '') + overlay.get('title'),
-						overlayButton = $('<div>').html(title).on('click', function () {
-							var visible = overlay.getVisible();
-							overlay.setVisible(!visible);
-							updatePermalink();
-						});
+						overlayTitle = overlay.get('title'),
+						title = (overlaySrc ? '<img src="' + overlaySrc + '" height="16" style="' + overlayIconStyle + '"/> ' : '') + overlayTitle,
+						overlayButton = $('<div>')
+							.html(title)
+							.attr('data-original-text', overlayTitle)
+							.on('click', function () {
+								var visible = overlay.getVisible();
+								overlay.setVisible(!visible);
+								updatePermalink();
+							});
 					overlayDivContent.append(overlayButton);
 					if (overlay.getVisible()) {
 						overlayButton.addClass('active');
@@ -247,27 +251,25 @@ $(function () {
 				overlayIndex++;
 			} else {
 				var layerSrc = layer.get('iconSrc'),
-					title = (layerSrc ? '<img src="' + layerSrc + '" height="16"/> ' : '') + layer.get('title'),
-					layerButton = $('<div>').html(title).on('click', function () {
-						var visible = layer.getVisible();
-
-						if (visible) { //Show the previous layer
+					layerTitle = layer.get('title'),
+					title = (layerSrc ? '<img src="' + layerSrc + '" height="16"/> ' : '') + layerTitle,
+					layerButton = $('<div>')
+						.html(title)
+						.attr('data-original-text', layerTitle)
+						.on('click', function () {
 							if (previousLayer) {
-								baseLayerIndex = previousLayer.get('layerIndex');
-								layer.setVisible(!visible);
-								previousLayer.setVisible(visible);
-								visibleLayer = previousLayer;
-								previousLayer = layer;
+								previousLayer.removeClass('active');
 							}
-						} else { //Active the selected layer and hide the current layer
-							baseLayerIndex = layer.get('layerIndex');
-							layer.setVisible(!visible);
-							visibleLayer.setVisible(visible);
-							previousLayer = visibleLayer;
+							layer.setVisible(true);
+							if (visibleLayer) {
+								visibleLayer.setVisible(false);
+							}
+							$(this).addClass('active');
+							previousLayer = $(this);
 							visibleLayer = layer;
-						}
-						updatePermalink();
-					});
+							baseLayerIndex = layerIndex;
+							updatePermalink();
+						});
 
 					layer.set('layerIndex', layerIndex);
 
