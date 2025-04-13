@@ -420,7 +420,7 @@ a:hover {
     border-radius: 4px;
     padding: 4px;
     margin: 4px;
-    margin-left: 54px;  /* 4px default margin + 50px additional */
+    margin-left: 54px;
     border: none;
     cursor: pointer;
     width: 32px;
@@ -439,102 +439,106 @@ a:hover {
     font-size: 1.2em;
 }
 
-.router-dialog {
-    z-index: 1000;
-}
-
-.router-dialog .ui-dialog-titlebar {
-    cursor: move;
-}
-
-.router-dialog .router-form {
+.router-form {
     padding: 10px;
 }
 
-.router-dialog .router-input {
+.router-input {
     margin-bottom: 15px;
 }
 
-.router-dialog label {
+.router-input label {
     display: block;
     margin-bottom: 5px;
+    color: #333;
 }
 
-.router-dialog .location-input {
+.router-input .location-input {
     display: flex;
     gap: 5px;
 }
 
-.router-dialog .location-input input {
+.router-input .location-input input {
     flex: 1;
     padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
 }
 
-.router-dialog .search-button {
+.router-input .search-button {
     padding: 5px 10px;
-    background-color: #4CAF50;
+    background-color: #4a90e2;
     color: white;
     border: none;
+    border-radius: 2px;
     cursor: pointer;
 }
 
-.router-dialog .search-button:hover {
-    background-color: #45a049;
+.router-input .search-button:hover {
+    background-color: #357abd;
 }
 
-.router-dialog select {
+.router-input select {
     width: 100%;
     padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
 }
 
-.router-dialog .search-results {
+.router-input .search-results {
     max-height: 150px;
     overflow-y: auto;
     border: 1px solid #ccc;
     margin-top: 5px;
     display: none;
+    background-color: white;
+    border-radius: 2px;
 }
 
-.router-dialog .search-result {
+.router-input .search-result {
     padding: 5px;
     cursor: pointer;
     border-bottom: 1px solid #eee;
 }
 
-.router-dialog .search-result:hover {
-    background-color: #f0f0f0;
+.router-input .search-result:hover {
+    background-color: rgba(0,60,136,.3);
+    color: white;
 }
 
-.router-dialog .click-hint {
+.router-input .click-hint {
     margin: 10px 0;
     color: #666;
     font-style: italic;
 }
 
-.router-dialog .calculate-route {
+.router-input .calculate-route {
     width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
+    padding: 8px;
+    background-color: #4a90e2;
     color: white;
     border: none;
+    border-radius: 2px;
     cursor: pointer;
+    margin-top: 10px;
 }
 
-.router-dialog .calculate-route:hover {
-    background-color: #45a049;
+.router-input .calculate-route:hover {
+    background-color: #357abd;
 }
 
 .route-marker {
     font-size: 24px;
-    color: #4CAF50;
+    color: #4a90e2;
     text-shadow: 0 0 3px white;
     cursor: move;
+    -webkit-user-select: none;
     user-select: none;
     -webkit-user-drag: element;
 }
 
 .route-marker:hover {
-    color: #45a049;
+    color: #357abd;
 }
 
 .route-marker i {
@@ -542,4 +546,16 @@ a:hover {
     border-radius: 50%;
     padding: 5px;
     pointer-events: auto;
+}
+
+/* Adjust router content in menu */
+.osmcat-layer .router-form {
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+}
+
+@media only screen and (min-width:600px) {
+    .osmcat-layer .router-form {
+        max-height: calc(50vh - 50px);
+    }
 }
