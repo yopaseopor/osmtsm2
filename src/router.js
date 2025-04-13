@@ -404,9 +404,6 @@ function initRouter(map) {
                     padding: [50, 50, 50, 50],
                     duration: 1000
                 });
-
-                // Close the dialog after successful route calculation
-                $('.router-dialog').dialog('close');
             })
             .catch(error => {
                 console.error('Error calculating route:', error);
@@ -552,7 +549,10 @@ function initRouter(map) {
             map.on('singleclick', clickHandler);
 
             // Calculate route
-            routerContent.find('.calculate-route').on('click', calculateRoute);
+            routerContent.find('.calculate-route').on('click', function(e) {
+                e.preventDefault();
+                calculateRoute();
+            });
 
             // Add router content to menu
             $('.osmcat-menu').append(routerContent);
