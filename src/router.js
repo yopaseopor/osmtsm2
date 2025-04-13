@@ -564,6 +564,25 @@ function initRouter(map) {
             });
         });
 
+    // Add router to Layers and Overlays panel
+    const routerLayer = $('<div>')
+        .addClass('osmcat-content')
+        .html(`
+            <div class="osmcat-layer">
+                <div class="osmcat-content">
+                    <div class="osmcat-map-pin">
+                        <i class="fa fa-route"></i>
+                    </div>
+                    <div class="osmcat-select">Route Calculator</div>
+                </div>
+            </div>
+        `)
+        .on('click', function() {
+            routerButton.trigger('click');
+        });
+
+    $('#menu .osmcat-menu').append(routerLayer);
+
     // Create a control element for the router button
     const routerControl = new ol.control.Control({
         element: routerButton[0]
