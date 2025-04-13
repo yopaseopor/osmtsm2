@@ -1,8 +1,9 @@
 import i18n from './translations/index.js';
 import config from './config.js';
 
-// Make i18n globally available
+// Make both i18n and config globally available
 window.i18n = i18n;
+window.config = config;
 
 // Initialize the language selector
 document.addEventListener('DOMContentLoaded', () => {
@@ -11,10 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
         select.value = i18n.getCurrentLanguage();
         select.addEventListener('change', (e) => {
             i18n.setLanguage(e.target.value);
-            // Update the config's i18n translations
-            if (window.config && window.config.i18n) {
-                window.config.i18n.setLanguage(e.target.value);
-            }
         });
     }
 });
@@ -23,7 +20,4 @@ document.addEventListener('DOMContentLoaded', () => {
 const mapElement = document.getElementById('map');
 if (mapElement) {
     mapElement.textContent = i18n.translate('ui.loading');
-}
-
-// Make config globally available
-window.config = config; 
+} 
