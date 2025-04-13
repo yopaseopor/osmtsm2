@@ -81,23 +81,26 @@ a:hover {
 	width: 100%;
 }
 
-/* Default styles for mobile/responsive mode */
 .osmcat-layer {
-    border: 1px solid #BBB;
-    padding-left: 5px;
-    width: 50%;  /* Default 50% width when router is not active */
-    height: 100%;
-    overflow-y: auto;
+	border: 1px solid #BBB;
+	padding-left: 5px;
+	width: 100%;
+	height: 100%;  /* Default height when router is not active */
+	overflow-y: auto;
 }
 
-/* Width adjustments when router is active in responsive mode */
+/* Height adjustments when router is active */
 .osmcat-menu.router-active .osmcat-layer {
-    width: 33.33%;  /* Each menu takes 33.33% width when router is active */
+	height: 33.33%;
 }
 
-/* Specific width adjustments for layers when router is not active in responsive mode */
-.osmcat-menu:not(.router-active) .osmcat-layer {
-    width: 50%;  /* Each menu takes 50% width when router is not active */
+/* Specific height adjustments for layers when router is not active */
+.osmcat-menu:not(.router-active) .osmcat-layer:first-child {
+	height: 50%;
+}
+
+.osmcat-menu:not(.router-active) .osmcat-layer:nth-child(2) {
+	height: 50%;
 }
 
 .osmcat-layer > div {
@@ -267,7 +270,6 @@ a:hover {
     100% { transform: scale(1); }
 }
 
-
 /* Mobile/Responsive Mode (screens < 600px) */
 @media only screen and (max-width: 599px) {
     .osmcat-menu {
@@ -291,27 +293,31 @@ a:hover {
 }
 
 /* Keep PC mode (min-width:600px) untouched */
+
+/* Big screen */
 @media only screen and (min-width:600px) {
-    .flex-row{
-        flex-wrap: nowrap;
-    }
-    .map{
-        height: 100%;
-    }
-    .menu{
-        height: 100%;
-        width: 300px;
-    }
-    .osmcat-menu{
-        display: block;
-    }
-    .osmcat-layer {
-        width: 100%;  /* Keep PC mode as is */
-    }
-    .osmcat-content > div:hover {
-        cursor: pointer;
-        background-color: rgba(36,0,136,.3);
-    }
+	.flex-row{
+		flex-wrap: nowrap;
+	}
+
+	.map{
+		height: 100%;
+	}
+
+	.menu{
+		height: 100%;
+		width: 300px;
+	}
+	.osmcat-menu{
+		display: block;
+	}
+	.osmcat-layer {
+		width: 100%;
+	}
+	.osmcat-content > div:hover {
+		cursor: pointer;
+		background-color: rgba(36,0,136,.3);
+	}
 }
 
 /* PanoraMax Viewer Styles */
