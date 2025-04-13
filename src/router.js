@@ -419,8 +419,9 @@ function initRouter(map) {
 
     // Add router button and dialog
     const routerButton = $('<button>')
-        .addClass('osmcat-button')
-        .html('<i class="fa fa-route"></i> Route')
+        .addClass('ol-control osmcat-button')
+        .attr('title', 'Route')
+        .html('<i class="fa fa-route"></i>')
         .on('click', function() {
             // Clear any existing markers and route
             if (startMarker) map.removeOverlay(startMarker);
@@ -563,11 +564,30 @@ function initRouter(map) {
             });
         });
 
-    $('#menu').append(routerButton);
+    // Create a control element for the router button
+    const routerControl = new ol.control.Control({
+        element: routerButton[0]
+    });
+
+    // Add the router control to the map
+    map.addControl(routerControl);
 
     // Add CSS for router dialog and markers
     $('<style>')
         .text(`
+            .ol-control.osmcat-button {
+                background-color: #4CAF50;
+                border-radius: 4px;
+                padding: 4px;
+                margin: 4px;
+            }
+            .ol-control.osmcat-button:hover {
+                background-color: #45a049;
+            }
+            .ol-control.osmcat-button i {
+                color: white;
+                font-size: 1.2em;
+            }
             .router-dialog {
                 z-index: 1000;
             }
