@@ -244,11 +244,11 @@ function initRouter(map) {
         
         waypoints += `;${formatCoord(endPlace.lon)},${formatCoord(endPlace.lat)}`;
         
-        // Map profile names to OSRM API profile names
+        // Map profile values to OSRM API values
         const profileMap = {
             'car': 'driving',
             'bike': 'cycling',
-            'foot': 'foot-walking'
+            'foot': 'foot'
         };
         
         const osrmProfile = profileMap[profile] || 'driving';
