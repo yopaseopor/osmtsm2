@@ -136,11 +136,11 @@ function initRouter(map) {
         const routes = [];
         let completed = 0;
         
-        // Map profile values to OSRM API values
+        // Map profile values to OSRM API endpoints
         const profileMap = {
             'car': 'driving',
             'bike': 'cycling',
-            'foot': 'foot'
+            'foot': 'foot-walking'
         };
         
         const osrmProfile = profileMap[profile] || 'driving';
@@ -253,11 +253,11 @@ function initRouter(map) {
         
         waypoints += `;${formatCoord(endPlace.lon)},${formatCoord(endPlace.lat)}`;
         
-        // Map profile values to OSRM API values
+        // Map profile values to OSRM API endpoints
         const profileMap = {
             'car': 'driving',
             'bike': 'cycling',
-            'foot': 'foot'
+            'foot': 'foot-walking'
         };
         
         const osrmProfile = profileMap[profile] || 'driving';
