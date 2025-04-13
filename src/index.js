@@ -3,6 +3,54 @@ $(function () {
 	$('#map').empty(); // Remove Javascript required message
 	var baseLayerIndex = 0;
 	
+	// Function to get translated text
+	function getTranslatedText(key) {
+		return window.i18n ? window.i18n.translate('ui.' + key) : config.i18n[key];
+	}
+	
+	// Function to update UI translations
+	function updateUITranslations() {
+		// Update layer label
+		$('.osmcat-menu b').html('&equiv; ' + getTranslatedText('layersLabel'));
+		
+		// Update layer groups
+		$('.osmcat-menu h3').each(function() {
+			var originalText = $(this).attr('data-original-text');
+			if (originalText) {
+				$(this).text(window.i18n.translate('categories.' + originalText.toLowerCase()));
+			}
+		});
+		
+		// Update layer items
+		$('.osmcat-layer div').each(function() {
+			var originalText = $(this).attr('data-original-text');
+			if (originalText) {
+				var img = $(this).find('img');
+				var translated = window.i18n.translate('categories.' + originalText.toLowerCase());
+				if (img.length) {
+					$(this).html(img[0].outerHTML + ' ' + translated);
+				} else {
+					$(this).text(translated);
+				}
+			}
+		});
+		
+		// Update select options
+		$('.osmcat-select option').each(function() {
+			var originalText = $(this).attr('data-original-text');
+			if (originalText) {
+				$(this).text(window.i18n.translate('categories.' + originalText.toLowerCase()));
+			}
+		});
+	}
+	
+	// Add language change listener
+	if (window.i18n) {
+		window.i18n.addListener(function() {
+			updateUITranslations();
+		});
+	}
+	
 	//Object to manage the spinner layer
 	var loading = {
 		init: function () {
@@ -202,12 +250,11 @@ $(function () {
 			layerDiv = $('<div>').addClass('osmcat-layer'),
 			overlaySelect = $('<select>').addClass('osmcat-select').on('change', function () {
 				var overlaySelected = $(this).find('option:selected');
-
 				container.find('.osmcat-overlay').hide();
 				container.find('.' + overlaySelected.val()).show();
 			}),
 			overlayDiv = $('<div>').hide().addClass('osmcat-layer').append($('<div>').append(overlaySelect)),
-			label = $('<div>').html('<b>&equiv; ' + config.i18n.layersLabel + '</b>').on('click', function () {
+			label = $('<div>').html('<b>&equiv; ' + getTranslatedText('layersLabel') + '</b>').on('click', function () {
 				content.toggle();
 			}),
 			content = $('<div>').addClass('osmcat-content');
@@ -296,6 +343,9 @@ $(function () {
 		layerDiv.append(label, content);
 		container.append(layerDiv, overlayDiv);
 		overlaySelect.trigger('change');
+
+		// Initial translation update
+		setTimeout(updateUITranslations, 0);
 
 		return container;
 	};

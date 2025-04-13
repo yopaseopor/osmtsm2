@@ -33,11 +33,32 @@
 	<script src="src/api/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
 	<script src="src/api/openlayers/v6.2.2-custom/ol.js"></script>
 	<script src="src/translations/index.js"></script>
-	<script src="src/translations/setup.js"></script>
 	<script src="src/config.js"></script>
 	<script src="src/index.js"></script>
 	<script src="src/nominatim_search.js"></script>
 	<script src="src/panoramax_viewer.js"></script>
 	<script src="src/router.js"></script>
+	<script>
+		// Initialize translations after all scripts are loaded
+		document.addEventListener('DOMContentLoaded', function() {
+			if (window.i18n) {
+				// Set initial language from localStorage or browser language
+				var lang = localStorage.getItem('language') || 
+						  (navigator.language || navigator.userLanguage).split('-')[0];
+				if (window.i18n.translations[lang]) {
+					window.i18n.setLanguage(lang);
+				}
+
+				// Set up language selector
+				var select = document.getElementById('lang-select');
+				if (select) {
+					select.value = window.i18n.getCurrentLanguage();
+					select.addEventListener('change', function(e) {
+						window.i18n.setLanguage(e.target.value);
+					});
+				}
+			}
+		});
+	</script>
 </body>
 </html>
