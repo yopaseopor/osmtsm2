@@ -1,4 +1,4 @@
-/* global config, ol, t */
+/* global config, ol */
 $(function () {
 	$('#map').empty(); // Remove Javascript required message
 	var baseLayerIndex = 0;
@@ -43,6 +43,7 @@ $(function () {
 				var me = this;
 				var epsg4326Extent = ol.proj.transformExtent(extent, projection, 'EPSG:4326');
 				var query = '[maxsize:536870912];' + overlay['query']; // Memory limit 512 MiB
+				//var query = layerQuery;
 				query = query.replace(/{{bbox}}/g, epsg4326Extent[1] + ',' + epsg4326Extent[0] + ',' + epsg4326Extent[3] + ',' + epsg4326Extent[2]);
 
 				var client = new XMLHttpRequest();
@@ -66,7 +67,7 @@ $(function () {
 							console.error('Error:', remark.text());
 							$('<div>').html(remark.text()).dialog({
 								modal: true,
-								title: t('error'),
+								title: 'Error',
 								close: function () {
 									$(this).dialog('destroy');
 								}
@@ -75,8 +76,9 @@ $(function () {
 						} else {
 							console.log('Nodes Found:', nodosLength);
 							if (nodosLength === 0) {
-								$('<div>').html(t('noNodesFound')).dialog({
+								$('<div>').html(config.i18n.noNodesFound).dialog({
 									modal: true,
+									//title: 'Error',
 									close: function () {
 										$(this).dialog('destroy');
 									}
@@ -135,6 +137,8 @@ $(function () {
 			vars[key] = value;
 		});
 		
+		
+
 		// map = zoom, center (lon, lat), [rotation]
 		var mapParam = getUrlParam('map', ''), parts;
 		if (mapParam !== '') {
@@ -203,7 +207,7 @@ $(function () {
 				container.find('.' + overlaySelected.val()).show();
 			}),
 			overlayDiv = $('<div>').hide().addClass('osmcat-layer').append($('<div>').append(overlaySelect)),
-			label = $('<div>').html('<b>&equiv; ' + t('layersLabel') + '</b>').on('click', function () {
+			label = $('<div>').html('<b>&equiv; ' + config.i18n.layersLabel + '</b>').on('click', function () {
 				content.toggle();
 			}),
 			content = $('<div>').addClass('osmcat-content');
@@ -245,66 +249,56 @@ $(function () {
 				var layerSrc = layer.get('iconSrc'),
 					title = (layerSrc ? '<img src="' + layerSrc + '" height="16"/> ' : '') + layer.get('title'),
 					layerButton = $('<div>').html(title).on('click', function () {
-						if (previousLayer !== undefined) {
-							previousLayer.setVisible(false);
+						var visible = layer.getVisible();
+
+						if (visible) { //Show the previous layer
+							if (previousLayer) {
+								baseLayerIndex = previousLayer.get('layerIndex');
+								layer.setVisible(!visible);
+								previousLayer.setVisible(visible);
+								visibleLayer = previousLayer;
+								previousLayer = layer;
+							}
+						} else { //Active the selected layer and hide the current layer
+							baseLayerIndex = layer.get('layerIndex');
+							layer.setVisible(!visible);
+							visibleLayer.setVisible(visible);
+							previousLayer = visibleLayer;
+							visibleLayer = layer;
 						}
-						layer.setVisible(true);
-						visibleLayer = layer;
-						previousLayer = layer;
 						updatePermalink();
 					});
-				layerDiv.append(layerButton);
+
+					layer.set('layerIndex', layerIndex);
+
+				content.append(layerButton);
 				if (layer.getVisible()) {
-					layerButton.addClass('active');
-					visibleLayer = layer;
-					previousLayer = layer;
+					if (visibleLayer === undefined) {
+						layerButton.addClass('active');
+						visibleLayer = layer;
+						baseLayerIndex = layerIndex;
+					} else {
+						layer.setVisible(false);
+					}
 				}
+				layer.on('change:visible', function () {
+					if (layer.getVisible()) {
+						layerButton.addClass('active');
+					} else {
+						layerButton.removeClass('active');
+					}
+				});
+				layerIndex++;
 			}
 		});
+		layerDiv.append(label, content);
+		container.append(layerDiv, overlayDiv);
+		overlaySelect.trigger('change');
 
-		container.append(label).append(content.append(layerDiv).append(overlayDiv));
-		$('#menu').append(container);
+		return container;
 	};
 
-	layersControlBuild();
-
-	// Add zoom controls
-	var zoomControl = new ol.control.Zoom({
-		zoomInTipLabel: t('zoomIn'),
-		zoomOutTipLabel: t('zoomOut')
-	});
-	map.addControl(zoomControl);
-
-	// Add rotation control
-	var rotateControl = new ol.control.Rotate({
-		tipLabel: t('resetRotation')
-	});
-	map.addControl(rotateControl);
-
-	// Add attribution control
-	var attributionControl = new ol.control.Attribution({
-		collapsible: true
-	});
-	map.addControl(attributionControl);
-
-	// Add scale line control
-	var scaleLineControl = new ol.control.ScaleLine();
-	map.addControl(scaleLineControl);
-
-	// Add full screen control
-	var fullScreenControl = new ol.control.FullScreen({
-		tipLabel: t('fullScreen')
-	});
-	map.addControl(fullScreenControl);
-
-	// Add geolocation control
-	var geolocationControl = new ol.control.Geolocation({
-		tipLabel: t('geolocation')
-	});
-	map.addControl(geolocationControl);
-
-	// Initialize translations
-	updateTranslations();
+	$('#menu').append(layersControlBuild());
 
 	map.addControl(new ol.control.MousePosition({
 		coordinateFormat: function (coordinate) {
@@ -315,6 +309,127 @@ $(function () {
 	map.addControl(new ol.control.ScaleLine({units: config.initialConfig.units}));
 	map.addControl(new ol.control.ZoomSlider());
 	
+
+
+
+	// Geolocation Control
+	// In some browsers, this feature is available only in secure contexts (HTTPS)
+	var geolocationControlBuild = function () {
+		var container = $('<div>').addClass('ol-control ol-unselectable osmcat-geobutton').html($('<button type="button"><i class="fa fa-bullseye"></i></button>').on('click', function () {
+			if (navigator.geolocation) {
+				if (location.protocol !== 'https') {
+					console.warn('In some browsers, this feature is available only in secure context (HTTPS)');
+				}
+				navigator.geolocation.getCurrentPosition(function (position) {
+					var latitude = position.coords.latitude;
+					var longitude = position.coords.longitude;
+
+					view.animate({
+						zoom: config.initialConfig.zoomGeolocation,
+						center: ol.proj.fromLonLat([longitude, latitude])
+					});
+				}, function (error) {
+					console.error(error.message, error);
+					alert(error.message);
+				});
+			} else {
+				console.error('Geolocation is not supported by your browser');
+			}
+		}));
+		return container[0];
+	};
+	map.addControl(new ol.control.Control({
+		element: geolocationControlBuild()
+	}));
+	
+	
+	// Como crear un control
+	//@@ poner un número extra a la var | var infoControlBuild2 = function () {
+	//@@ revisar osmcat-infobutton2 	var container = $('<div>').addClass('ol-control ol-unselectable osmcat-infobutton2').html($('<button type="button"><i class="fa fa-search-plus"></i></button>').on('click', function () {
+	//		window.location.href = 'https://mapcomplete.osm.be/index.html?userlayout=https://raw.githubusercontent.com/yopaseopor/mcquests/master/limits.json';
+	//	}));
+	//	return container[0];
+	//};
+	//map.addControl(new ol.control.Control({
+	//	element: infoControlBuild2()
+	//}));
+
+	// Info Control
+	var infoControlBuild = function () {
+		var container = $('<div>').addClass('ol-control ol-unselectable osmcat-infobutton').html($('<button type="button"><i class="fa fa-info-circle"></i></button>').on('click', function () {
+			window.location.href = 'https://github.com/yopaseopor/osmpoismap';
+		}));
+		return container[0];
+	};
+	map.addControl(new ol.control.Control({
+		element: infoControlBuild()
+	}));
+	
+	// Copy permalink button
+	var permalinkControlBuild = function () {
+		var container = $('<div>').addClass('ol-control ol-unselectable osmcat-sharebutton').html($('<button type="button"><i class="fa fa-share-alt-square"></i></button>').on('click', function () {
+			var dummyInput = $('<input>').val(window.location.href),
+				successful = false;
+
+			$('body').append(dummyInput);
+			dummyInput.focus();
+			dummyInput.select();
+			successful = document.execCommand('copy');
+			dummyInput.remove();
+			if (successful) {
+				var modalDialogTimeout,
+					modalDialog = $('<div>').html(config.i18n.copyDialog).dialog({
+					modal: true,
+					resizable: false,
+					close: function () {
+						clearTimeout(modalDialogTimeout);
+						$(this).dialog('destroy');
+					}
+				});
+				modalDialogTimeout = setTimeout(function(){
+					modalDialog.dialog('destroy');
+				}, 3000);
+			}
+		}));
+		return container[0];
+	};
+	map.addControl(new ol.control.Control({
+		element: permalinkControlBuild()
+	}));
+
+
+	// Rotate left button
+	var rotateleftControlBuild = function () {
+		var container = $('<div>').addClass('ol-control ol-unselectable osmcat-rotateleft').html($('<button type="button"><i class="fa fa-undo"></i></button>').on('click', function () {
+			var currentRotation = view.getRotation();
+			if (currentRotation > -6.1) { //360º = 2 Pi r =aprox 6.2
+				view.setRotation(round(currentRotation - 0.1, 2));
+			} else {
+				view.setRotation(0);
+			}
+		}));
+		return container[0];
+	};
+	map.addControl(new ol.control.Control({
+		element: rotateleftControlBuild()
+	}));
+
+	// Rotate right button
+	var rotaterightControlBuild = function () {
+		var container = $('<div>').addClass('ol-control ol-unselectable osmcat-rotateright').html($('<button type="button"><i class="fa fa-repeat"></i></button>').on('click', function () {
+			var currentRotation = view.getRotation();
+			if (currentRotation < 6.1) { //360º = 2 Pi r =aprox 6.2
+				view.setRotation(round(currentRotation + 0.1, 2));
+			} else {
+				view.setRotation(0);
+			}
+		}));
+		return container[0];
+	};
+	map.addControl(new ol.control.Control({
+		element: rotaterightControlBuild()
+	}));
+
 	$('#map').css('cursor', 'grab');
 	map.on('movestart', function (evt) {
 		$('#map').css('cursor', 'grabbing');
