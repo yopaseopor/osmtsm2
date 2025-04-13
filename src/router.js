@@ -433,6 +433,7 @@ function initRouter(map) {
                 }
                 existingRouter.remove();
                 routerButton.removeClass('active');
+                $('.osmcat-menu').removeClass('router-active');
 
                 // Clear markers and route when closing
                 if (startMarker) map.removeOverlay(startMarker);
@@ -452,6 +453,7 @@ function initRouter(map) {
 
             // Router is closed, open it
             routerButton.addClass('active');
+            $('.osmcat-menu').addClass('router-active');
 
             // Clear any existing markers and route
             if (startMarker) map.removeOverlay(startMarker);
