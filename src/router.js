@@ -481,7 +481,7 @@ function initRouter(map) {
                                 <div class="search-results start-results"></div>
                             </div>
                             <div class="router-input">
-                                <label>Via:</label>
+                                <label>Via (optional):</label>
                                 <div class="location-input">
                                     <input type="text" class="via-place" placeholder="Search via location...">
                                     <button class="search-button"><i class="fa fa-search"></i></button>
@@ -566,16 +566,16 @@ function initRouter(map) {
                     startPlace = { lon: lonlat[0], lat: lonlat[1] };
                     startMarker = createMarker(coordinate, 'start');
                     routerContent.find('.start-place').val('Selected on map');
-                } else if (!viaPlace) {
-                    if (viaMarker) map.removeOverlay(viaMarker);
-                    viaPlace = { lon: lonlat[0], lat: lonlat[1] };
-                    viaMarker = createMarker(coordinate, 'via');
-                    routerContent.find('.via-place').val('Selected on map');
                 } else if (!endPlace) {
                     if (endMarker) map.removeOverlay(endMarker);
                     endPlace = { lon: lonlat[0], lat: lonlat[1] };
                     endMarker = createMarker(coordinate, 'end');
                     routerContent.find('.end-place').val('Selected on map');
+                } else if (!viaPlace) {
+                    if (viaMarker) map.removeOverlay(viaMarker);
+                    viaPlace = { lon: lonlat[0], lat: lonlat[1] };
+                    viaMarker = createMarker(coordinate, 'via');
+                    routerContent.find('.via-place').val('Selected on map');
                 }
             };
 
