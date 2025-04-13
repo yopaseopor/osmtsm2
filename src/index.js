@@ -3,54 +3,6 @@ $(function () {
 	$('#map').empty(); // Remove Javascript required message
 	var baseLayerIndex = 0;
 	
-	// Function to get translated text
-	function getTranslatedText(key) {
-		return window.i18n ? window.i18n.translate('ui.' + key) : config.i18n[key];
-	}
-	
-	// Function to update UI translations
-	function updateUITranslations() {
-		// Update layer label
-		$('.osmcat-menu b').html('&equiv; ' + getTranslatedText('layersLabel'));
-		
-		// Update layer groups
-		$('.osmcat-menu h3').each(function() {
-			var originalText = $(this).attr('data-original-text');
-			if (originalText) {
-				$(this).text(window.i18n.translate('categories.' + originalText.toLowerCase()));
-			}
-		});
-		
-		// Update layer items
-		$('.osmcat-layer div').each(function() {
-			var originalText = $(this).attr('data-original-text');
-			if (originalText) {
-				var img = $(this).find('img');
-				var translated = window.i18n.translate('categories.' + originalText.toLowerCase());
-				if (img.length) {
-					$(this).html(img[0].outerHTML + ' ' + translated);
-				} else {
-					$(this).text(translated);
-				}
-			}
-		});
-		
-		// Update select options
-		$('.osmcat-select option').each(function() {
-			var originalText = $(this).attr('data-original-text');
-			if (originalText) {
-				$(this).text(window.i18n.translate('categories.' + originalText.toLowerCase()));
-			}
-		});
-	}
-	
-	// Add language change listener
-	if (window.i18n) {
-		window.i18n.addListener(function() {
-			updateUITranslations();
-		});
-	}
-	
 	//Object to manage the spinner layer
 	var loading = {
 		init: function () {
@@ -250,11 +202,12 @@ $(function () {
 			layerDiv = $('<div>').addClass('osmcat-layer'),
 			overlaySelect = $('<select>').addClass('osmcat-select').on('change', function () {
 				var overlaySelected = $(this).find('option:selected');
+
 				container.find('.osmcat-overlay').hide();
 				container.find('.' + overlaySelected.val()).show();
 			}),
 			overlayDiv = $('<div>').hide().addClass('osmcat-layer').append($('<div>').append(overlaySelect)),
-			label = $('<div>').html('<b>&equiv; ' + getTranslatedText('layersLabel') + '</b>').on('click', function () {
+			label = $('<div>').html('<b>&equiv; ' + config.i18n.layersLabel + '</b>').on('click', function () {
 				content.toggle();
 			}),
 			content = $('<div>').addClass('osmcat-content');
@@ -262,24 +215,20 @@ $(function () {
 		config.layers.forEach(layer => {
 			if (layer.get('type') === 'overlay') {
 				var title = layer.get('title'),
-					layerButton = $('<h3>').html(title).attr('data-original-text', title),
+					layerButton = $('<h3>').html(title),
 					overlayDivContent = $('<div>').addClass('osmcat-content osmcat-overlay overlay' + overlayIndex);
 
-				overlaySelect.append($('<option>').val('overlay' + overlayIndex).text(title).attr('data-original-text', title));
+				overlaySelect.append($('<option>').val('overlay' + overlayIndex).text(title));
 
 				layer.getLayers().forEach(overlay => {
 					var overlaySrc = overlay.get('iconSrc'),
 						overlayIconStyle = overlay.get('iconStyle') || '',
-						overlayTitle = overlay.get('title'),
-						title = (overlaySrc ? '<img src="' + overlaySrc + '" height="16" style="' + overlayIconStyle + '"/> ' : '') + overlayTitle,
-						overlayButton = $('<div>')
-							.html(title)
-							.attr('data-original-text', overlayTitle)
-							.on('click', function () {
-								var visible = overlay.getVisible();
-								overlay.setVisible(!visible);
-								updatePermalink();
-							});
+						title = (overlaySrc ? '<img src="' + overlaySrc + '" height="16" style="' + overlayIconStyle + '"/> ' : '') + overlay.get('title'),
+						overlayButton = $('<div>').html(title).on('click', function () {
+							var visible = overlay.getVisible();
+							overlay.setVisible(!visible);
+							updatePermalink();
+						});
 					overlayDivContent.append(overlayButton);
 					if (overlay.getVisible()) {
 						overlayButton.addClass('active');
@@ -298,25 +247,27 @@ $(function () {
 				overlayIndex++;
 			} else {
 				var layerSrc = layer.get('iconSrc'),
-					layerTitle = layer.get('title'),
-					title = (layerSrc ? '<img src="' + layerSrc + '" height="16"/> ' : '') + layerTitle,
-					layerButton = $('<div>')
-						.html(title)
-						.attr('data-original-text', layerTitle)
-						.on('click', function () {
+					title = (layerSrc ? '<img src="' + layerSrc + '" height="16"/> ' : '') + layer.get('title'),
+					layerButton = $('<div>').html(title).on('click', function () {
+						var visible = layer.getVisible();
+
+						if (visible) { //Show the previous layer
 							if (previousLayer) {
-								previousLayer.removeClass('active');
+								baseLayerIndex = previousLayer.get('layerIndex');
+								layer.setVisible(!visible);
+								previousLayer.setVisible(visible);
+								visibleLayer = previousLayer;
+								previousLayer = layer;
 							}
-							layer.setVisible(true);
-							if (visibleLayer) {
-								visibleLayer.setVisible(false);
-							}
-							$(this).addClass('active');
-							previousLayer = $(this);
+						} else { //Active the selected layer and hide the current layer
+							baseLayerIndex = layer.get('layerIndex');
+							layer.setVisible(!visible);
+							visibleLayer.setVisible(visible);
+							previousLayer = visibleLayer;
 							visibleLayer = layer;
-							baseLayerIndex = layerIndex;
-							updatePermalink();
-						});
+						}
+						updatePermalink();
+					});
 
 					layer.set('layerIndex', layerIndex);
 
@@ -343,9 +294,6 @@ $(function () {
 		layerDiv.append(label, content);
 		container.append(layerDiv, overlayDiv);
 		overlaySelect.trigger('change');
-
-		// Initial translation update
-		setTimeout(updateUITranslations, 0);
 
 		return container;
 	};
