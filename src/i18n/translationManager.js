@@ -1,16 +1,20 @@
 class TranslationManager {
     constructor() {
-        this.currentLanguage = 'en';
+        this.currentLanguage = 'ca';
         this.translations = {};
-        this.availableLanguages = ['en', 'es']; // Add more languages as needed
+        this.availableLanguages = ['en', 'es', 'ca'];
     }
 
     async loadLanguage(lang) {
         try {
-            const response = await fetch(`/src/i18n/${lang}.json`);
+            const response = await fetch(`src/i18n/${lang}.json`);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
             this.translations[lang] = await response.json();
             this.currentLanguage = lang;
             this.updateUI();
+            console.log(`Language changed to ${lang}`);
         } catch (error) {
             console.error(`Failed to load language ${lang}:`, error);
         }
@@ -25,7 +29,12 @@ class TranslationManager {
         // Update all elements with data-i18n attribute
         document.querySelectorAll('[data-i18n]').forEach(element => {
             const key = element.getAttribute('data-i18n');
-            element.textContent = this.t(key);
+            const translation = this.t(key);
+            if (element.tagName === 'INPUT' && element.type === 'text') {
+                element.value = translation;
+            } else {
+                element.textContent = translation;
+            }
         });
 
         // Update all elements with data-i18n-placeholder attribute

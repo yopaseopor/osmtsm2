@@ -32,5 +32,10 @@
     "about": "Acerca de",
     "help": "Ayuda",
     "settings": "Configuración",
-    "language": "Idioma"
+    "language": "Idioma",
+    "app_title": "Mapa de Señales de Tráfico OSM",
+    "select_language": "Seleccionar idioma",
+    "english": "Inglés",
+    "spanish": "Español",
+    "catalan": "Catalán"
 } 

@@ -32,5 +32,10 @@
     "about": "About",
     "help": "Help",
     "settings": "Settings",
-    "language": "Language"
+    "language": "Language",
+    "app_title": "OSM Traffic Signs Map",
+    "select_language": "Select Language",
+    "english": "English",
+    "spanish": "Spanish",
+    "catalan": "Catalan"
 } 

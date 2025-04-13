@@ -33,5 +33,9 @@
     "help": "Ajuda",
     "settings": "Configuració",
     "language": "Idioma",
-    "app_title": "Mapa de Senyals de Trànsit OSM"
+    "app_title": "Mapa de Senyals de Trànsit OSM",
+    "select_language": "Selecciona l'idioma",
+    "english": "Anglès",
+    "spanish": "Espanyol",
+    "catalan": "Català"
 } 
