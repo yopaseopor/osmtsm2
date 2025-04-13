@@ -420,6 +420,39 @@ function initRouter(map) {
         .attr('title', 'Route')
         .html('<i class="fa fa-route"></i>')
         .on('click', function() {
+            // Check if router is already open
+            const existingRouter = $('.osmcat-menu .osmcat-layer').filter(function() {
+                return $(this).find('.osmcat-select').text() === 'Router';
+            });
+
+            if (existingRouter.length > 0) {
+                // Router is open, close it
+                if (clickHandler) {
+                    map.un('singleclick', clickHandler);
+                    clickHandler = null;
+                }
+                existingRouter.remove();
+                routerButton.removeClass('active');
+
+                // Clear markers and route when closing
+                if (startMarker) map.removeOverlay(startMarker);
+                if (endMarker) map.removeOverlay(endMarker);
+                if (viaMarker) map.removeOverlay(viaMarker);
+                routeLayer.getSource().clear();
+                
+                startPlace = null;
+                endPlace = null;
+                viaPlace = null;
+                startMarker = null;
+                endMarker = null;
+                viaMarker = null;
+
+                return;
+            }
+
+            // Router is closed, open it
+            routerButton.addClass('active');
+
             // Clear any existing markers and route
             if (startMarker) map.removeOverlay(startMarker);
             if (endMarker) map.removeOverlay(endMarker);
