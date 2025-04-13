@@ -114,6 +114,9 @@ const i18n = {
     }
 };
 
+// Make i18n globally available
+window.i18n = i18n;
+
 // Initialize the language selector
 document.addEventListener('DOMContentLoaded', function() {
     const select = document.getElementById('lang-select');
@@ -123,7 +126,4 @@ document.addEventListener('DOMContentLoaded', function() {
             i18n.setLanguage(e.target.value);
         });
     }
-});
-
-// Make i18n globally available
-window.i18n = i18n; 
+}); 
