@@ -66,12 +66,13 @@ function initMapillaryViewer(map) {
 
     // Function to show the viewer
     function showMapillaryViewer(lat, lon, zoom) {
-        // Build URL with official parameters
-        var url = `https://www.mapillary.com/app/?` +
+        // Build URL with embed parameters
+        var url = `https://www.mapillary.com/embed?` +
+            `map_style=OpenStreetMap&` +
             `lat=${lat}&` +
             `lng=${lon}&` +
             `z=${zoom}&` +
-            `focus=map`;
+            `style=classic`;
         
         var iframe = $('#mapillary-iframe');
         
