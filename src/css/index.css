@@ -276,6 +276,7 @@ a:hover {
         flex-direction: column;
         height: 100vh;
         position: relative;
+        overflow: hidden;
     }
 
     .map {
@@ -287,41 +288,43 @@ a:hover {
     .menu {
         height: 30vh;
         width: 100%;
-        overflow: hidden;
         position: relative;
         z-index: 1;
         background: white;
+        display: flex;
+        flex-direction: column;
     }
 
     .osmcat-menu {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        width: 300%;  /* Width for 3 panels */
+        width: 300%;
         height: 100%;
         overflow-x: auto;
         overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
     }
 
     .osmcat-layer {
-        flex: 1;
-        width: 33.33%;  /* Each panel takes 1/3 of the width */
-        height: 100%;
-        min-width: 100vw;  /* Each panel takes full viewport width */
+        flex: 0 0 100%;
+        width: 100%;
+        min-width: 100vw;
         border: none;
         border-top: 1px solid #BBB;
         display: flex;
         flex-direction: column;
         overflow: hidden;
+        background: white;
     }
 
     .osmcat-layer > div:first-child {
         padding: 5px;
         background: white;
         border-bottom: 1px solid #BBB;
+        flex-shrink: 0;
     }
 
-    /* Content area should fill available space */
     .osmcat-content {
         flex: 1;
         overflow-y: auto;
@@ -330,23 +333,13 @@ a:hover {
         background: white;
     }
 
-    /* Hide horizontal scrollbar but keep functionality */
-    .osmcat-menu::-webkit-scrollbar {
-        display: none;
-    }
-    
-    .osmcat-menu {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
+    /* Share button position fix for mobile */
+    .osmcat-sharebutton {
+        bottom: 70px;
+        right: 44px;
     }
 
-    /* Ensure proper spacing in content */
-    .osmcat-content > div {
-        padding: 5px;
-        margin: 0;
-    }
-
-    /* Router specific mobile fixes */
+    /* Ensure proper menu height in router mode */
     .osmcat-menu.router-active {
         height: 100%;
     }
@@ -357,57 +350,33 @@ a:hover {
 
     .router-form {
         flex: 1;
-        height: calc(100% - 30px);
         overflow-y: auto;
         padding: 10px;
         -webkit-overflow-scrolling: touch;
+        background: white;
     }
+}
 
-    /* Mapillary viewer mobile styles */
-    .map.viewer-active {
-        height: 50vh !important;
-        width: 100% !important;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        z-index: 998;
-    }
+/* Mapillary dot styles - for both PC and mobile */
+.map .ol-layer canvas {
+    z-index: 1;
+}
 
-    /* Ensure vector layers (green dots) are above the map but below the viewer */
-    .map.viewer-active .ol-layers {
-        z-index: 999;
-    }
+/* Style for normal Mapillary dots */
+.map.viewer-active .ol-layers .ol-layer .ol-vector-layer circle {
+    fill: #05CB63;
+    stroke: #fff;
+    stroke-width: 1px;
+    r: 4;
+}
 
-    .mapillary-viewer {
-        height: 50vh;
-        width: 100%;
-        top: 0;
-        left: 0;
-        transform: none;
-        z-index: 1000;
-        position: fixed;
-    }
-
-    .mapillary-viewer.active {
-        transform: none;
-    }
-
-    /* Menu visibility when viewer is active */
-    .menu {
-        display: block;
-    }
-    
-    /* Only hide menu when viewer is active on mobile */
-    .mapillary-viewer.active ~ .flex-row .menu,
-    .panoramax-viewer.active ~ .flex-row .menu {
-        display: none;
-    }
-
-    /* Ensure map returns to normal state when viewer is closed */
-    .map:not(.viewer-active) {
-        position: relative;
-        height: 70vh;
-    }
+/* Style for active/selected Mapillary dot */
+.map.viewer-active .ol-layers .ol-layer .ol-vector-layer circle.active {
+    fill: #FF4444 !important;
+    stroke: #fff !important;
+    stroke-width: 3px !important;
+    r: 8 !important;
+    filter: drop-shadow(0 0 2px rgba(0,0,0,0.5));
 }
 
 /* Keep PC mode (min-width:600px) untouched */
