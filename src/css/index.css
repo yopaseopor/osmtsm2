@@ -355,12 +355,14 @@ a:hover {
         right: 80px;
     }
 
+    /* Mapillary viewer mobile styles */
     .map.viewer-active {
         height: 50% !important;
         width: 100% !important;
         position: fixed;
         bottom: 0;
         left: 0;
+        z-index: 999;
     }
 
     .mapillary-viewer {
@@ -369,19 +371,27 @@ a:hover {
         top: 0;
         left: 0;
         transform: none;
+        z-index: 1000;
     }
 
     .mapillary-viewer.active {
         transform: none;
     }
 
-    /* Hide menu when viewer is active on mobile */
+    /* Menu visibility when viewer is active */
     .menu {
-        display: none;
+        display: block;
     }
     
-    .map.viewer-active + .menu {
+    /* Only hide menu when viewer is active on mobile */
+    .mapillary-viewer.active ~ .flex-row .menu,
+    .panoramax-viewer.active ~ .flex-row .menu {
         display: none;
+    }
+
+    /* Ensure map is visible when viewer is not active */
+    .map:not(.viewer-active) {
+        position: relative;
     }
 }
 
