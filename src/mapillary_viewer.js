@@ -15,19 +15,20 @@ function initMapillaryViewer(map) {
 
     // Create viewer button control
     var viewerControlBuild = function() {
-        var container = $('<div>').addClass('ol-control ol-unselectable osmcat-mapillary')
-            .css({
-                bottom: '70px',
-                right: '8px'
-            });
+        var container = $('<div>').addClass('ol-control ol-unselectable osmcat-mapillary');
         
         // Map view button
         var mapViewButton = $('<button type="button">')
-            .html('<i class="fa fa-street-view"></i>')
+            .html('<i class="fa fa-camera"></i>')
             .on('click', function() {
                 if ($('.mapillary-viewer').hasClass('active')) {
                     hideMapillaryViewer();
                 } else {
+                    // Hide Panoramax viewer if it's active
+                    if ($('.panoramax-viewer').hasClass('active')) {
+                        hidePanoraMaxViewer();
+                        $('.osmcat-panoramax button').removeClass('active');
+                    }
                     var center = ol.proj.transform(map.getView().getCenter(), 'EPSG:3857', 'EPSG:4326');
                     var zoom = map.getView().getZoom();
                     showMapillaryViewer(center[1], center[0], zoom);

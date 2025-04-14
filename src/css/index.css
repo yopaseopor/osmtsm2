@@ -922,3 +922,15 @@ a:hover {
     background: #00447B;
     color: white;
 }
+
+/* PanoraMax viewer button position */
+.osmcat-panoramax {
+    bottom: 70px;
+    right: 8px;
+}
+
+/* Mapillary viewer button position */
+.osmcat-mapillary {
+    bottom: 110px;
+    right: 8px;
+}
