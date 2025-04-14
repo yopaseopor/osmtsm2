@@ -154,6 +154,16 @@ function initMapillaryViewer(map) {
         
         $('.mapillary-viewer').addClass('active');
         $('#map').addClass('viewer-active');
+
+        // On mobile, adjust map view center after showing viewer
+        if (window.innerWidth < 600) {
+            setTimeout(function() {
+                map.updateSize(); // Force OL to update its size calculations
+                if (imageId) {
+                    map.getView().setCenter(ol.proj.fromLonLat([lon, lat]));
+                }
+            }, 300);
+        }
     }
 
     // Function to hide the viewer
@@ -162,6 +172,7 @@ function initMapillaryViewer(map) {
         $('#map').removeClass('viewer-active');
         setTimeout(function() {
             $('#mapillary-iframe').attr('src', '');
+            map.updateSize(); // Force OL to update its size calculations
         }, 300);
     }
 
@@ -176,6 +187,13 @@ function initMapillaryViewer(map) {
                 var coords = ol.proj.transform(feature.getGeometry().getCoordinates(), 'EPSG:3857', 'EPSG:4326');
                 showMapillaryViewer(coords[1], coords[0], map.getView().getZoom(), feature.get('id'));
             }
+        }
+    });
+
+    // Handle window resize
+    $(window).on('resize', function() {
+        if ($('.mapillary-viewer').hasClass('active')) {
+            map.updateSize(); // Force OL to update its size calculations
         }
     });
 
