@@ -809,9 +809,10 @@ a:hover {
     width: 100%;
     height: calc(100% - 30px);
     border: none;
-    margin-top: -80px; /* Adjust for mobile */
     position: relative;
     z-index: 1;
+    margin: 0;
+    padding: 0;
 }
 
 .mapillary-viewer .close-button {
@@ -883,7 +884,7 @@ a:hover {
     }
 
     .mapillary-viewer iframe {
-        margin-top: -60px; /* Adjust for desktop */
+        height: calc(100% - 30px);
     }
 
     .map.viewer-active {
@@ -894,14 +895,6 @@ a:hover {
 @media only screen and (min-width: 1200px) {
     .mapillary-viewer {
         width: 50%;
-    }
-
-    .mapillary-viewer iframe {
-        margin-top: -40px; /* Adjust for larger screens */
-    }
-
-    .map.viewer-active {
-        width: 50% !important;
     }
 }
 

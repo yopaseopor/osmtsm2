@@ -124,10 +124,13 @@ function initMapillaryViewer(map) {
         // Build URL with embed parameters
         var url = `https://www.mapillary.com/embed?` +
             `client_id=9116824181759144&` +
+            `style=photo&` +
             `map_style=OpenStreetMap&` +
             `lat=${lat}&` +
             `lng=${lon}&` +
-            `z=${zoom}`;
+            `z=${zoom}&` +
+            `width=100%25&` +
+            `height=100%25`;
             
         if (imageId) {
             url += `&image_key=${imageId}`;
@@ -135,8 +138,16 @@ function initMapillaryViewer(map) {
         
         var iframe = $('#mapillary-iframe');
         
+        // Configure iframe
+        iframe.attr({
+            'src': 'about:blank',
+            'frameborder': '0',
+            'width': '100%',
+            'height': '100%',
+            'allowfullscreen': 'true'
+        });
+
         // Force reload the iframe with new coordinates
-        iframe.attr('src', 'about:blank');
         setTimeout(function() {
             iframe.attr('src', url);
         }, 100);
