@@ -335,8 +335,9 @@ a:hover {
 
     /* Share button position fix for mobile */
     .osmcat-sharebutton {
-        bottom: 70px;
+        bottom: 110px;
         right: 44px;
+        z-index: 1002;
     }
 
     /* Ensure proper menu height in router mode */
@@ -355,6 +356,22 @@ a:hover {
         -webkit-overflow-scrolling: touch;
         background: white;
     }
+
+    /* Adjust Mapillary viewer for better mobile layout */
+    .mapillary-viewer {
+        height: 50vh;
+    }
+
+    .mapillary-viewer iframe {
+        height: calc(100% - 30px);
+        margin: 0;
+    }
+
+    /* Ensure map takes remaining space */
+    .map.viewer-active {
+        height: 50vh !important;
+        width: 100% !important;
+    }
 }
 
 /* Mapillary dot styles - for both PC and mobile */
@@ -372,11 +389,26 @@ a:hover {
 
 /* Style for active/selected Mapillary dot */
 .map.viewer-active .ol-layers .ol-layer .ol-vector-layer circle.active {
-    fill: #FF4444 !important;
-    stroke: #fff !important;
-    stroke-width: 3px !important;
-    r: 8 !important;
-    filter: drop-shadow(0 0 2px rgba(0,0,0,0.5));
+    fill: #FF0000;
+    stroke: #FFFFFF;
+    stroke-width: 3px;
+    r: 8;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        r: 8;
+        stroke-width: 3px;
+    }
+    50% {
+        r: 10;
+        stroke-width: 4px;
+    }
+    100% {
+        r: 8;
+        stroke-width: 3px;
+    }
 }
 
 /* Keep PC mode (min-width:600px) untouched */
@@ -961,12 +993,29 @@ a:hover {
     fill: #05CB63;
     stroke: #fff;
     stroke-width: 1px;
+    r: 4;
 }
 
 /* Style for active/selected Mapillary dot */
 .map.viewer-active .ol-layers .ol-layer .ol-vector-layer circle.active {
-    fill: #FF4444;
-    stroke: #fff;
-    stroke-width: 2px;
-    r: 6;  /* Make active dot slightly larger */
+    fill: #FF0000;
+    stroke: #FFFFFF;
+    stroke-width: 3px;
+    r: 8;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        r: 8;
+        stroke-width: 3px;
+    }
+    50% {
+        r: 10;
+        stroke-width: 4px;
+    }
+    100% {
+        r: 8;
+        stroke-width: 3px;
+    }
 }
