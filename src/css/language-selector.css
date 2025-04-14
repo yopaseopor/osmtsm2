@@ -1,15 +1,3 @@
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-}
-
 .language-selector {
     position: absolute;
     top: 10px;
@@ -21,17 +9,16 @@
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
-#language-select {
-    padding: 5px 10px;
+.language-select {
     border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: white;
+    padding: 5px;
+    border-radius: 3px;
     font-size: 14px;
+    background: white;
     cursor: pointer;
 }
 
-#language-select:focus {
+.language-select:focus {
     outline: none;
     border-color: #4a90e2;
-    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
 } 
