@@ -335,9 +335,8 @@ a:hover {
 
     /* Share button position fix for mobile */
     .osmcat-sharebutton {
-        bottom: 110px;
+        bottom: 70px;
         right: 44px;
-        z-index: 1002;
     }
 
     /* Ensure proper menu height in router mode */
@@ -357,20 +356,28 @@ a:hover {
         background: white;
     }
 
-    /* Adjust Mapillary viewer for better mobile layout */
     .mapillary-viewer {
         height: 50vh;
     }
-
+    
     .mapillary-viewer iframe {
         height: calc(100% - 30px);
-        margin: 0;
     }
-
-    /* Ensure map takes remaining space */
+    
+    /* Adjust Mapillary's internal share button position */
+    .mapillary-viewer .mapillary-share-button {
+        bottom: 100px !important;
+        right: 10px !important;
+        z-index: 1002 !important;
+    }
+    
+    /* Ensure the map shows active sequence clearly */
     .map.viewer-active {
         height: 50vh !important;
-        width: 100% !important;
+    }
+    
+    .map.viewer-active .ol-layers {
+        z-index: 2;
     }
 }
 
@@ -393,22 +400,29 @@ a:hover {
     stroke: #FFFFFF;
     stroke-width: 3px;
     r: 8;
+    filter: drop-shadow(0 0 4px rgba(0,0,0,0.5));
     animation: pulse 1.5s infinite;
 }
 
+/* Style for sequence lines */
+.map.viewer-active .ol-layers .ol-layer .ol-vector-layer path {
+    stroke: #05CB63;
+    stroke-width: 2px;
+    opacity: 0.6;
+}
+
+/* Style for active sequence */
+.map.viewer-active .ol-layers .ol-layer .ol-vector-layer path.active {
+    stroke: #FF0000;
+    stroke-width: 3px;
+    opacity: 1;
+    filter: drop-shadow(0 0 2px rgba(0,0,0,0.3));
+}
+
 @keyframes pulse {
-    0% {
-        r: 8;
-        stroke-width: 3px;
-    }
-    50% {
-        r: 10;
-        stroke-width: 4px;
-    }
-    100% {
-        r: 8;
-        stroke-width: 3px;
-    }
+    0% { r: 8; opacity: 1; }
+    50% { r: 12; opacity: 0.7; }
+    100% { r: 8; opacity: 1; }
 }
 
 /* Keep PC mode (min-width:600px) untouched */
@@ -848,7 +862,7 @@ a:hover {
     top: 0;
     left: 0;
     width: 100%;
-    height: 50%; /* Default to 50% height on mobile */
+    height: 50%;
     background: white;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     display: none;
@@ -945,11 +959,20 @@ a:hover {
     .map.viewer-active {
         width: 60% !important;
     }
+    
+    /* Ensure sequence visibility on desktop */
+    .map.viewer-active .ol-layers {
+        z-index: 2;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
     .mapillary-viewer {
         width: 50%;
+    }
+    
+    .map.viewer-active {
+        width: 50% !important;
     }
 }
 
@@ -993,29 +1016,12 @@ a:hover {
     fill: #05CB63;
     stroke: #fff;
     stroke-width: 1px;
-    r: 4;
 }
 
 /* Style for active/selected Mapillary dot */
 .map.viewer-active .ol-layers .ol-layer .ol-vector-layer circle.active {
-    fill: #FF0000;
-    stroke: #FFFFFF;
-    stroke-width: 3px;
-    r: 8;
-    animation: pulse 1.5s infinite;
-}
-
-@keyframes pulse {
-    0% {
-        r: 8;
-        stroke-width: 3px;
-    }
-    50% {
-        r: 10;
-        stroke-width: 4px;
-    }
-    100% {
-        r: 8;
-        stroke-width: 3px;
-    }
+    fill: #FF4444;
+    stroke: #fff;
+    stroke-width: 2px;
+    r: 6;  /* Make active dot slightly larger */
 }
