@@ -287,9 +287,10 @@ a:hover {
     .menu {
         height: 30vh;
         width: 100%;
-        overflow-y: auto;
+        overflow: hidden;
         position: relative;
         z-index: 1;
+        background: white;
     }
 
     .osmcat-menu {
@@ -309,6 +310,52 @@ a:hover {
         min-width: 300px;
         border: none;
         border-top: 1px solid #BBB;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Content area should fill available space */
+    .osmcat-content {
+        flex: 1;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 5px;
+    }
+
+    /* Router specific mobile fixes */
+    .osmcat-menu.router-active {
+        height: 100%;
+    }
+
+    .osmcat-menu.router-active .osmcat-layer {
+        height: 100%;
+    }
+
+    .router-form {
+        height: auto;
+        min-height: calc(100% - 30px);
+        overflow-y: auto;
+        padding: 10px;
+    }
+
+    /* Layer title/header */
+    .osmcat-layer > div:first-child {
+        padding: 5px 0;
+    }
+
+    /* Hide horizontal scrollbar but keep functionality */
+    .osmcat-menu::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .osmcat-menu {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    /* Ensure proper spacing in content */
+    .osmcat-content > div {
+        padding: 5px 0;
     }
 
     /* Mapillary viewer mobile styles */
@@ -343,7 +390,6 @@ a:hover {
     /* Menu visibility when viewer is active */
     .menu {
         display: block;
-        background: white;
     }
     
     /* Only hide menu when viewer is active on mobile */
@@ -352,33 +398,10 @@ a:hover {
         display: none;
     }
 
-    /* Router specific mobile fixes */
-    .osmcat-menu.router-active {
-        height: 100%;
-    }
-
-    .osmcat-menu.router-active .osmcat-layer {
-        height: 100%;
-        overflow-y: auto;
-    }
-
-    .router-form {
-        height: auto;
-        min-height: calc(100% - 30px);
-        overflow-y: visible;
-    }
-
     /* Ensure map returns to normal state when viewer is closed */
     .map:not(.viewer-active) {
         position: relative;
         height: 70vh;
-    }
-
-    /* Fix menu scrolling */
-    .osmcat-content {
-        height: calc(100% - 30px);
-        overflow-y: auto;
-        -webkit-overflow-scrolling: touch;
     }
 }
 
