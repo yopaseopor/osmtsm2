@@ -786,3 +786,139 @@ a:hover {
 .router-input .calculate-route:hover {
     background-color: rgba(0,60,136,.9);
 }
+
+/* Mapillary Viewer Styles */
+.mapillary-viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    display: none;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.mapillary-viewer.active {
+    display: block;
+}
+
+.mapillary-viewer iframe {
+    width: 100%;
+    height: calc(100% - 30px);
+    border: none;
+    margin-top: -80px; /* Adjust for mobile */
+    position: relative;
+    z-index: 1;
+}
+
+.mapillary-viewer .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255,255,255,0.4);
+    border: none;
+    border-radius: 2px;
+    padding: 2px;
+    width: 1.375em;
+    height: 1.375em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.mapillary-viewer .close-button:hover {
+    background-color: rgba(255,255,255,0.6);
+}
+
+.mapillary-viewer .credits {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 12px;
+    padding: 0 10px;
+    z-index: 1001;
+}
+
+.mapillary-viewer .credits .credit {
+    display: flex;
+    align-items: center;
+}
+
+.mapillary-viewer .credits a {
+    color: rgba(0,60,136,.7);
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.mapillary-viewer .credits a:hover {
+    color: rgba(0,60,136,1);
+}
+
+/* Responsive styles */
+@media only screen and (min-width: 600px) {
+    .mapillary-viewer {
+        top: 50%;
+        left: auto;
+        right: 0;
+        width: 40%;
+        height: 100%;
+        transform: translate(100%, -50%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .mapillary-viewer.active {
+        transform: translate(0, -50%);
+    }
+
+    .mapillary-viewer iframe {
+        margin-top: -60px; /* Adjust for desktop */
+    }
+
+    .map.viewer-active {
+        width: 60% !important;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .mapillary-viewer {
+        width: 50%;
+    }
+
+    .mapillary-viewer iframe {
+        margin-top: -40px; /* Adjust for larger screens */
+    }
+
+    .map.viewer-active {
+        width: 50% !important;
+    }
+}
+
+.osmcat-mapillary button {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 2px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin: 2px;
+}
+
+.osmcat-mapillary button:hover {
+    background: rgba(255, 255, 255, 1);
+}
+
+.osmcat-mapillary button.active {
+    background: #00447B;
+    color: white;
+}

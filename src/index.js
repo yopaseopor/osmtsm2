@@ -190,6 +190,9 @@ $(function () {
 	// Initialize PanoraMax viewer
 	initPanoraMaxViewer(map);
 
+	// Initialize Mapillary viewer
+	initMapillaryViewer(map);
+
 	// Initialize Router
 	initRouter(map);
 
