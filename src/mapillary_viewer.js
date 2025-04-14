@@ -10,19 +10,24 @@ function initMapillaryViewer(map) {
             var bbox = epsg4326Extent.join(',');
             
             // Fetch Mapillary coverage data
-            fetch(`https://graph.mapillary.com/images?access_token=MLY|6441825774455901|3c5dde6c9c3a4c3c1c5e2b5e&bbox=${bbox}&fields=geometry,id`)
+            fetch(`https://graph.mapillary.com/images?access_token=MLY|9116824181759144|d7242bf6a8614c2c6d13c5b0787ab629&bbox=${bbox}&fields=geometry,id`)
                 .then(response => response.json())
                 .then(data => {
-                    var features = data.data.map(function(image) {
-                        return new ol.Feature({
-                            geometry: new ol.geom.Point(ol.proj.fromLonLat([
-                                image.geometry.coordinates[0],
-                                image.geometry.coordinates[1]
-                            ])),
-                            id: image.id
+                    if (data && data.data) {
+                        var features = data.data.map(function(image) {
+                            return new ol.Feature({
+                                geometry: new ol.geom.Point(ol.proj.fromLonLat([
+                                    image.geometry.coordinates[0],
+                                    image.geometry.coordinates[1]
+                                ])),
+                                id: image.id
+                            });
                         });
-                    });
-                    mapillarySource.addFeatures(features);
+                        mapillarySource.addFeatures(features);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching Mapillary data:', error);
                 });
         },
         strategy: ol.loadingstrategy.bbox
@@ -53,7 +58,10 @@ function initMapillaryViewer(map) {
         .append($('<div>').addClass('credits')
             .append($('<div>').addClass('credit').html('© <a href="https://www.mapillary.com" target="_blank">Mapillary</a>'))
             .append($('<div>').addClass('credit').html('© <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors')))
-        .append($('<iframe>').attr('id', 'mapillary-iframe'));
+        .append($('<iframe>').attr({
+            'id': 'mapillary-iframe',
+            'allowfullscreen': 'true'
+        }));
     
     $('body').append(viewerContainer);
 
@@ -115,6 +123,7 @@ function initMapillaryViewer(map) {
     function showMapillaryViewer(lat, lon, zoom, imageId) {
         // Build URL with embed parameters
         var url = `https://www.mapillary.com/embed?` +
+            `client_id=9116824181759144&` +
             `map_style=OpenStreetMap&` +
             `lat=${lat}&` +
             `lng=${lon}&` +
