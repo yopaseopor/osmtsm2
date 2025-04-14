@@ -1,15 +1,5 @@
 /* global config, ol */
 $(function () {
-	// Initialize translation system
-	const languageSelector = new LanguageSelector();
-	document.body.appendChild(languageSelector.getElement());
-
-	// Add language selector styles
-	const styleLink = document.createElement('link');
-	styleLink.rel = 'stylesheet';
-	styleLink.href = 'src/css/language-selector.css';
-	document.head.appendChild(styleLink);
-
 	$('#map').empty(); // Remove Javascript required message
 	var baseLayerIndex = 0;
 	
@@ -33,18 +23,6 @@ $(function () {
 		}
 	};
 	loading.init();
-
-	// Function to update text elements when language changes
-	function updateTextElements() {
-		// Update layer labels
-		$('.osmcat-menu b').html('&equiv; ' + window.i18n.translate('Layers'));
-		
-		// Update other text elements as needed
-		// Add more selectors and translations here
-	}
-
-	// Listen for language changes
-	document.addEventListener('languageChanged', updateTextElements);
 
 	var overlaysTemp = {};
 	$.each(config.overlays, function (index, overlay) {
