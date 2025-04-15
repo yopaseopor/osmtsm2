@@ -9,16 +9,75 @@
 
     function renderDropdown(results) {
         dropdown.innerHTML = '';
+        // Check for active base layer
+        var hasActiveLayer = false;
+        var activeLayer = null;
+        $.each(window.layers, function(indexLayer, layerObj) {
+            if (layerObj._olLayerGroup && layerObj._olLayerGroup.getVisible && layerObj._olLayerGroup.getVisible()) {
+                hasActiveLayer = true;
+                activeLayer = layerObj;
+            } else if (layerObj.getVisible && layerObj.getVisible()) {
+                hasActiveLayer = true;
+                activeLayer = layerObj;
+            }
+        });
+        // Add a 'Clear Active Layer' button if a layer is active
+        if (hasActiveLayer) {
+            var clearBtn = document.createElement('div');
+            clearBtn.textContent = '✖ Clear Active Layer';
+            clearBtn.style.cursor = 'pointer';
+            clearBtn.style.padding = '6px 10px';
+            clearBtn.style.background = '#ffeaea';
+            clearBtn.style.color = '#b00';
+            clearBtn.style.fontWeight = 'bold';
+            clearBtn.id = 'clear-active-layer-btn';
+            clearBtn.tabIndex = 0;
+            clearBtn.addEventListener('mousedown', function(e) {
+                e.preventDefault();
+                if (activeLayer && activeLayer._olLayerGroup && activeLayer._olLayerGroup.setVisible) {
+                    activeLayer._olLayerGroup.setVisible(false);
+                } else if (activeLayer && activeLayer.setVisible) {
+                    activeLayer.setVisible(false);
+                }
+                if (window.renderLayerList) window.renderLayerList([], '');
+                dropdown.style.display = 'none';
+                searchInput.value = '';
+            });
+            dropdown.appendChild(clearBtn);
+        }
         if (!results.length || !searchInput.value.trim()) {
             dropdown.style.display = 'none';
             return;
         }
+        // Limit results to 10
         results.slice(0, 10).forEach((layer, idx) => {
             const opt = document.createElement('div');
             opt.className = 'layer-search-option';
             opt.textContent = (layer.group ? layer.group + ': ' : '') + layer.title;
             opt.tabIndex = 0;
+
+            // Opacity slider
+            const slider = document.createElement('input');
+            slider.type = 'range';
+            slider.min = 0;
+            slider.max = 100;
+            slider.value = (layer._olLayerGroup && layer._olLayerGroup.getOpacity) ? Math.round(layer._olLayerGroup.getOpacity() * 100) : (layer.getOpacity ? Math.round(layer.getOpacity() * 100) : 100);
+            slider.style.marginLeft = '10px';
+            slider.style.verticalAlign = 'middle';
+            slider.title = 'Opacity';
+            slider.addEventListener('input', function(e) {
+                var val = parseInt(e.target.value, 10) / 100;
+                if (layer._olLayerGroup && layer._olLayerGroup.setOpacity) {
+                    layer._olLayerGroup.setOpacity(val);
+                } else if (layer.setOpacity) {
+                    layer.setOpacity(val);
+                }
+            });
+            opt.appendChild(slider);
+
             opt.addEventListener('mousedown', function(e) {
+                // Prevent slider from triggering layer activation
+                if (e.target === slider) return;
                 e.preventDefault();
                 searchInput.value = layer.title;
                 dropdown.style.display = 'none';
@@ -83,8 +142,14 @@
         }
     });
 
-    // Hide dropdown on blur
+    // Hide dropdown on blur, but keep it open if the clear button is being clicked
     searchInput.addEventListener('blur', function() {
-        setTimeout(()=>{ dropdown.style.display = 'none'; }, 150);
+        setTimeout(function() {
+            var clearBtn = document.getElementById('clear-active-layer-btn');
+            if (clearBtn && document.activeElement === clearBtn) {
+                return;
+            }
+            dropdown.style.display = 'none';
+        }, 100);
     });
 })();
