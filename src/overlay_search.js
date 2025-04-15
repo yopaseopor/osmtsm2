@@ -14,7 +14,40 @@
 
     function renderDropdown(results) {
         dropdown.innerHTML = '';
-        if (!results.length || !searchInput.value.trim()) {
+        var hasActiveOverlay = false;
+        var activeOverlay = null;
+        // Check if any overlay is currently active
+        $.each(config.layers, function(indexLayer, layerGroup) {
+            if (layerGroup.get && layerGroup.get('type') === 'overlay') {
+                $.each(layerGroup.getLayers().getArray(), function(idx, olayer) {
+                    if (olayer.getVisible && olayer.getVisible()) {
+                        hasActiveOverlay = true;
+                        activeOverlay = olayer;
+                    }
+                });
+            }
+        });
+        // Add a 'Clear Active Overlay' button if an overlay is active
+        if (hasActiveOverlay) {
+            var clearBtn = document.createElement('div');
+            clearBtn.textContent = '✖ Clear Active Overlay';
+            clearBtn.style.cursor = 'pointer';
+            clearBtn.style.padding = '6px 10px';
+            clearBtn.style.background = '#ffeaea';
+            clearBtn.style.color = '#b00';
+            clearBtn.style.fontWeight = 'bold';
+            clearBtn.addEventListener('mousedown', function(e) {
+                e.preventDefault();
+                if (activeOverlay && activeOverlay.setVisible) {
+                    activeOverlay.setVisible(false);
+                }
+                if (window.renderOverlayList) window.renderOverlayList([], '');
+                dropdown.style.display = 'none';
+                searchInput.value = '';
+            });
+            dropdown.appendChild(clearBtn);
+        }
+        if (!searchInput.value || !results.length) {
             dropdown.style.display = 'none';
             return;
         }
