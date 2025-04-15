@@ -1,5 +1,37 @@
 /* global config, ol */
 $(function () {
+    // --- Overlay Searcher Integration ---
+    // 1. Flatten overlays into window.overlays
+    window.overlays = [];
+    if (config && Array.isArray(config.overlays)) {
+        window.overlays = config.overlays.map(function(overlay) {
+            return {
+                title: overlay.title || '',
+                group: overlay.group || '',
+                id: overlay.id || '',
+                ...overlay
+            };
+        });
+    }
+    // 2. Define window.renderOverlayList
+    window.renderOverlayList = function(filtered) {
+        var $list = $('#overlay-list');
+        $list.empty();
+        if (!filtered || !filtered.length) {
+            $list.append('<div style="padding:8px;color:#888;">No overlays found.</div>');
+            return;
+        }
+        filtered.forEach(function(overlay) {
+            var $item = $('<div>').addClass('overlay-list-item').text((overlay.group ? overlay.group + ': ' : '') + overlay.title);
+            $list.append($item);
+        });
+    };
+    // Render all overlays initially
+    $(document).ready(function() {
+        window.renderOverlayList(window.overlays);
+    });
+    // --- End Overlay Searcher Integration ---
+
 	$('#map').empty(); // Remove Javascript required message
 	var baseLayerIndex = 0;
 	
@@ -301,7 +333,9 @@ $(function () {
 		return container;
 	};
 
-	$('#menu').append(layersControlBuild());
+    $('#menu').append(layersControlBuild());
+    // Optionally, re-render overlays after overlaysControl if needed
+    if (window.renderOverlayList && window.overlays) window.renderOverlayList(window.overlays);
 
 	map.addControl(new ol.control.MousePosition({
 		coordinateFormat: function (coordinate) {
