@@ -27,20 +27,38 @@
                 e.preventDefault();
                 searchInput.value = overlay.title;
                 dropdown.style.display = 'none';
-                if (window.activateOverlay) {
-                    // Prefer _olLayerGroup for direct activation if available
-                    if (overlay._olLayerGroup) {
-                        window.activateOverlay({
-                            id: overlay.id,
-                            title: overlay.title,
-                            group: overlay.group,
-                            _olLayerGroup: overlay._olLayerGroup
+                // Check if overlay is already active
+                var isActive = false;
+                $.each(config.layers, function(indexLayer, layerGroup) {
+                    if (layerGroup.get && layerGroup.get('type') === 'overlay') {
+                        $.each(layerGroup.getLayers().getArray(), function(idx, olayer) {
+                            if ((overlay.id && olayer.get('id') === overlay.id) ||
+                                (olayer.get('title') === overlay.title && olayer.get('group') === overlay.group)) {
+                                if (olayer.getVisible && olayer.getVisible()) {
+                                    isActive = true;
+                                    // Deactivate if already active
+                                    olayer.setVisible(false);
+                                }
+                            }
                         });
-                    } else {
-                        window.activateOverlay(overlay);
                     }
-                } else {
-                    filterAndRender([overlay]);
+                });
+                if (!isActive) {
+                    if (window.activateOverlay) {
+                        // Prefer _olLayerGroup for direct activation if available
+                        if (overlay._olLayerGroup) {
+                            window.activateOverlay({
+                                id: overlay.id,
+                                title: overlay.title,
+                                group: overlay.group,
+                                _olLayerGroup: overlay._olLayerGroup
+                            });
+                        } else {
+                            window.activateOverlay(overlay);
+                        }
+                    } else {
+                        filterAndRender([overlay]);
+                    }
                 }
             });
             dropdown.appendChild(opt);
