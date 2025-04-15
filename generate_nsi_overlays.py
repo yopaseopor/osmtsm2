@@ -416,12 +416,45 @@ class NSIOverlayGUI:
                     skipped += 1
                     continue
                 if overlay:
-                    entry = '    {\n' + \
-                        '        group: ' + json.dumps(overlay['group']) + ',\n' + \
-                        '        title: ' + json.dumps(overlay['title']) + ',\n' + \
-                        '        query: ' + json.dumps(overlay['query']) + ',\n' + \
-                        '        iconSrc: ' + json.dumps(overlay['iconSrc']) + ',\n' + \
-                        '        iconStyle: ' + json.dumps(overlay['iconStyle']) + '\n    }'
+                    # Overlay block with NO comments, matching user's exact format
+                    entry = (
+                        "{\n"
+                        f"    group: {json.dumps(overlay['group'])},\n"
+                        f"    title: {json.dumps(overlay['title'])},\n"
+                        f"    query: {json.dumps(overlay['query'])},\n"
+                        f"    iconSrc: {json.dumps(overlay['iconSrc'])},\n"
+                        f"    iconStyle: {json.dumps(overlay['iconStyle'])},\n"
+                        "    style: function (feature) {\n"
+                        "        var key_regex = /^name$/\n"
+                        "        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || \"name\"\n"
+                        "        var name = feature.get(name_key) || '';\n"
+                        "        var fill = new ol.style.Fill({\n"
+                        "            color: 'rgba(255,0,0,0.4)'\n"
+                        "        });\n"
+                        "        var stroke = new ol.style.Stroke({\n"
+                        "            color: 'rgba(255,0,0,1)',\n"
+                        "            width: 1\n"
+                        "        });\n"
+                        "        var style = new ol.style.Style({\n"
+                        "            image: new ol.style.Icon({\n"
+                        f"                src: {json.dumps(overlay['iconSrc'])},\n"
+                        "                scale:0.02\n"
+                        "            }),\n"
+                        "            text: new ol.style.Text({\n"
+                        "                text: name,\n"
+                        "                offsetX : 7,\n"
+                        "                offsetY : -12,\n"
+                        "                fill: new ol.style.Fill({\n"
+                        "                    color: 'rgba(0,0,0,1)'\n"
+                        "                }),\n"
+                        "            }),\n"
+                        "            fill: fill,\n"
+                        "            stroke: stroke\n"
+                        "        });\n"
+                        "        return style;\n"
+                        "    }\n"
+                        "},"
+                    )
                     overlays_js.append(entry)
                     overlays_written += 1
             js_entries = ',\n'.join(overlays_js)
