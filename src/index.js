@@ -30,69 +30,46 @@ $(function () {
             }
             return;
         }
-        // Make the list sortable (drag-and-drop)
-        $list.sortable({
-            axis: 'y',
-            update: function(event, ui) {
-                // Update map layer order based on new DOM order
-                var newOrder = $list.children().map(function(idx, el) {
-                    return $(el).data('layer');
-                }).get();
-                // Highest in the list = highest z-index
-                newOrder.reverse().forEach(function(layerObj, idx) {
-                    var olLayer = layerObj._olLayerGroup || layerObj;
-                    if (olLayer && olLayer.setZIndex) olLayer.setZIndex(idx+10); // base 10 to avoid conflicts
-                });
+        var activeLayer = null;
+        $.each(config.layers, function(indexLayer, layerGroup) {
+            if (layerGroup.get && layerGroup.get('type') !== 'overlay' && layerGroup.getVisible && layerGroup.getVisible()) {
+                activeLayer = layerGroup;
             }
         });
-        filtered.forEach(function(layer) {
-            var isActive = false;
-            if (layer._olLayerGroup && layer._olLayerGroup.getVisible && layer._olLayerGroup.getVisible()) isActive = true;
-            else if (layer.getVisible && layer.getVisible()) isActive = true;
+        filtered.forEach(function(layer, idx) {
+            var isActive = activeLayer && ((layer.id && activeLayer.get('id') === layer.id) || (activeLayer.get('title') === layer.title && activeLayer.get('group') === layer.group));
             var $item = $('<div>').addClass('layer-list-item').text((layer.group ? layer.group + ': ' : '') + layer.title);
-            $item.data('layer', layer);
-            $item.css({cursor:'grab', display:'flex', alignItems:'center', gap:'10px', userSelect:'none'});
-            // Toggle visibility checkbox
-            var $checkbox = $('<input type="checkbox">').prop('checked', isActive).css('margin-right','6px');
-            $checkbox.on('change', function(e) {
-                var visible = $(this).is(':checked');
-                if (layer._olLayerGroup && layer._olLayerGroup.setVisible) {
-                    layer._olLayerGroup.setVisible(visible);
-                } else if (layer.setVisible) {
-                    layer.setVisible(visible);
-                }
-                if (visible) $item.addClass('active');
-                else $item.removeClass('active');
+            if (isActive) $item.addClass('active').attr('tabindex', 0);
+            $item.css({cursor:'pointer'}).on('click', function() {
+                window.activateLayer(layer);
             });
-            $item.prepend($checkbox);
-            // Opacity slider
-            var $slider = $('<input type="range" min="0" max="100">').val(
-                (layer._olLayerGroup && layer._olLayerGroup.getOpacity) ? Math.round(layer._olLayerGroup.getOpacity()*100) : (layer.getOpacity ? Math.round(layer.getOpacity()*100) : 100)
-            ).css({marginLeft:'auto', width:'90px'});
-            $slider.on('input', function(e) {
-                var val = parseInt($(this).val(),10)/100;
-                if (layer._olLayerGroup && layer._olLayerGroup.setOpacity) {
-                    layer._olLayerGroup.setOpacity(val);
-                } else if (layer.setOpacity) {
-                    layer.setOpacity(val);
-                }
-            });
-            $item.append($slider);
             $list.append($item);
+            if (isActive) {
+                setTimeout(function(){
+                    $item[0].scrollIntoView({block:'nearest'});
+                    $item.focus();
+                }, 10);
+            }
         });
     };
 
+
     // 3. Define window.activateLayer
     window.activateLayer = function(layer) {
-        // Show the selected layer (by id or by group/title)
+        var activated = false;
+        // Hide all base layers and overlays, show only selected base layer
         $.each(config.layers, function(indexLayer, layerGroup) {
             if (layerGroup.get && layerGroup.get('type') !== 'overlay') {
                 // If _olLayerGroup exists and matches, activate directly
-                if (layer._olLayerGroup && layerGroup === layer._olLayerGroup) {
+                if (!activated && layer._olLayerGroup && layerGroup === layer._olLayerGroup) {
                     layerGroup.setVisible(true);
-                } else if ((layer.id && layerGroup.get('id') === layer.id) ||
-                    (layerGroup.get('title') === layer.title && layerGroup.get('group') === layer.group)) {
+                    activated = true;
+                } else if (!activated && ((layer.id && layerGroup.get('id') === layer.id) ||
+                    (layerGroup.get('title') === layer.title && layerGroup.get('group') === layer.group))) {
                     layerGroup.setVisible(true);
+                    activated = true;
+                } else {
+                    layerGroup.setVisible(false);
                 }
             } else if (layerGroup.get && layerGroup.get('type') === 'overlay') {
                 // Hide all overlays

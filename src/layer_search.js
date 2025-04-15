@@ -56,26 +56,81 @@
             opt.textContent = (layer.group ? layer.group + ': ' : '') + layer.title;
             opt.tabIndex = 0;
 
+            // Opacity slider
+            const slider = document.createElement('input');
+            slider.type = 'range';
+            slider.min = 0;
+            slider.max = 100;
+            slider.value = (layer._olLayerGroup && layer._olLayerGroup.getOpacity) ? Math.round(layer._olLayerGroup.getOpacity() * 100) : (layer.getOpacity ? Math.round(layer.getOpacity() * 100) : 100);
+            slider.style.marginLeft = '10px';
+            slider.style.verticalAlign = 'middle';
+            slider.title = 'Opacity';
+            slider.addEventListener('input', function(e) {
+                var val = parseInt(e.target.value, 10) / 100;
+                if (layer._olLayerGroup && layer._olLayerGroup.setOpacity) {
+                    layer._olLayerGroup.setOpacity(val);
+                } else if (layer.setOpacity) {
+                    layer.setOpacity(val);
+                }
+            });
+            opt.appendChild(slider);
+
+            // Layer orderer buttons
+            const upBtn = document.createElement('button');
+            upBtn.textContent = '↑';
+            upBtn.title = 'Move layer up';
+            upBtn.style.marginLeft = '10px';
+            upBtn.style.cursor = 'pointer';
+            upBtn.addEventListener('mousedown', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const idx = window.layers.indexOf(layer);
+                if (idx > 0) {
+                    // Swap in array
+                    [window.layers[idx-1], window.layers[idx]] = [window.layers[idx], window.layers[idx-1]];
+                    // Also swap in config.layers if present
+                    if (window.config && Array.isArray(window.config.layers)) {
+                        [window.config.layers[idx-1], window.config.layers[idx]] = [window.config.layers[idx], window.config.layers[idx-1]];
+                    }
+                    if (window.renderLayerList) window.renderLayerList(window.layers, searchInput.value);
+                    renderDropdown(window.layers.filter(l => l.title.toLowerCase().includes(searchInput.value.toLowerCase()) || (l.group && l.group.toLowerCase().includes(searchInput.value.toLowerCase()))));
+                }
+            });
+            opt.appendChild(upBtn);
+
+            const downBtn = document.createElement('button');
+            downBtn.textContent = '↓';
+            downBtn.title = 'Move layer down';
+            downBtn.style.marginLeft = '2px';
+            downBtn.style.cursor = 'pointer';
+            downBtn.addEventListener('mousedown', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const idx = window.layers.indexOf(layer);
+                if (idx < window.layers.length - 1) {
+                    [window.layers[idx], window.layers[idx+1]] = [window.layers[idx+1], window.layers[idx]];
+                    if (window.config && Array.isArray(window.config.layers)) {
+                        [window.config.layers[idx], window.config.layers[idx+1]] = [window.config.layers[idx+1], window.config.layers[idx]];
+                    }
+                    if (window.renderLayerList) window.renderLayerList(window.layers, searchInput.value);
+                    renderDropdown(window.layers.filter(l => l.title.toLowerCase().includes(searchInput.value.toLowerCase()) || (l.group && l.group.toLowerCase().includes(searchInput.value.toLowerCase()))));
+                }
+            });
+            opt.appendChild(downBtn);
 
             opt.addEventListener('mousedown', function(e) {
-                // Prevent slider from triggering layer activation
-                if (e.target === slider) return;
+                // Prevent slider or orderer from triggering layer activation
+                if (e.target === slider || e.target === upBtn || e.target === downBtn) return;
                 e.preventDefault();
                 searchInput.value = layer.title;
                 dropdown.style.display = 'none';
-                if (window.activateLayer) {
-                    // Prefer _olLayerGroup for direct activation
-                    if (layer._olLayerGroup) {
-                        window.activateLayer({
-                            id: layer.id,
-                            title: layer.title,
-                            group: layer.group,
-                            _olLayerGroup: layer._olLayerGroup
-                        });
-                    } else {
-                        window.activateLayer(layer);
-                    }
+                // Toggle layer visibility (allow multiple active)
+                if (layer._olLayerGroup && layer._olLayerGroup.setVisible) {
+                    layer._olLayerGroup.setVisible(!layer._olLayerGroup.getVisible());
+                } else if (layer.setVisible) {
+                    layer.setVisible(!layer.getVisible());
                 }
+                if (window.renderLayerList) window.renderLayerList(window.layers, searchInput.value);
             });
             dropdown.appendChild(opt);
         });

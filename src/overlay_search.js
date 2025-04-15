@@ -57,39 +57,7 @@
         results.slice(0, 10).forEach((overlay, idx) => {
             const opt = document.createElement('div');
             opt.className = 'overlay-search-option';
-            opt.style.display = 'flex';
-            opt.style.alignItems = 'center';
-            opt.style.gap = '10px';
-            // Title
-            const titleSpan = document.createElement('span');
-            titleSpan.textContent = (overlay.group ? overlay.group + ': ' : '') + overlay.title;
-            opt.appendChild(titleSpan);
-            // Opacity slider
-            const slider = document.createElement('input');
-            slider.type = 'range';
-            slider.min = 0;
-            slider.max = 100;
-            let olayer = null;
-            $.each(config.layers, function(indexLayer, layerGroup) {
-                if (layerGroup.get && layerGroup.get('type') === 'overlay') {
-                    $.each(layerGroup.getLayers().getArray(), function(idx, o) {
-                        if ((overlay.id && o.get('id') === overlay.id) || (o.get('title') === overlay.title && o.get('group') === overlay.group)) {
-                            olayer = o;
-                        }
-                    });
-                }
-            });
-            slider.value = (olayer && olayer.getOpacity) ? Math.round(olayer.getOpacity()*100) : 100;
-            slider.style.marginLeft = 'auto';
-            slider.style.width = '90px';
-            slider.title = 'Opacity';
-            slider.addEventListener('input', function(e) {
-                var val = parseInt(e.target.value, 10) / 100;
-                if (olayer && olayer.setOpacity) {
-                    olayer.setOpacity(val);
-                }
-            });
-            opt.appendChild(slider);
+            opt.textContent = overlay.group + ': ' + overlay.title;
             opt.tabIndex = 0;
             opt.addEventListener('mousedown', function(e) {
                 e.preventDefault();
