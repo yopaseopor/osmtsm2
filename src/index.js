@@ -460,15 +460,6 @@ $(function () {
 					layerButton.prepend(checkbox);
 
 					content.append(layerButton);
-					if (layer.getVisible()) {
-						if (visibleLayer === undefined) {
-							layerButton.addClass('active');
-							visibleLayer = layer;
-							baseLayerIndex = layerIndex;
-						} else {
-							layer.setVisible(false);
-						}
-					}
 					layer.on('change:visible', function () {
 						checkbox.prop('checked', layer.getVisible());
 						if (layer.getVisible()) {
