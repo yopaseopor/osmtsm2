@@ -408,12 +408,16 @@ $(function () {
 							var visible = overlay.getVisible();
 							overlay.setVisible(!visible);
 							updatePermalink();
-						});
-					overlayDivContent.append(overlayButton);
-					if (overlay.getVisible()) {
-						overlayButton.addClass('active');
-					}
+						}),
+						checkbox = $('<input type="checkbox">').css({marginRight:'6px'});
+					checkbox.prop('checked', overlay.getVisible());
+					checkbox.on('change', function() {
+						overlay.setVisible(this.checked);
+						updatePermalink();
+					});
+					overlayButton.prepend(checkbox);
 					overlay.on('change:visible', function () {
+						checkbox.prop('checked', overlay.getVisible());
 						if (overlay.getVisible()) {
 							overlayButton.addClass('active');
 						} else {
