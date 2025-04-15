@@ -1027,16 +1027,16 @@ a:hover {
 }
 
 /* Overlay search bar styles */
-#overlay-search-container {
+#overlay-search-container, #layer-search-container {
   position: relative;
 }
-#overlay-search {
+#overlay-search, #layer-search {
   border: 1px solid #bbb;
   border-radius: 4px;
   font-size: 1em;
   box-sizing: border-box;
 }
-.overlay-search-dropdown {
+.overlay-search-dropdown, #layer-search-dropdown {
   position: absolute;
   left: 0; right: 0;
   top: 100%;
@@ -1048,6 +1048,17 @@ a:hover {
   overflow-y: auto;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
   display: none;
+}
+.overlay-search-option, .layer-search-option {
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #222;
+}
+.overlay-search-option:hover, .overlay-search-option:focus,
+.layer-search-option:hover, .layer-search-option:focus {
+  background: #f0f0f0;
+  outline: none;
 }
 .overlay-search-option {
   padding: 6px 12px;

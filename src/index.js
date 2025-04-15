@@ -1,5 +1,62 @@
 /* global config, ol */
 $(function () {
+    // --- Layer Searcher Integration ---
+    // 1. Flatten base layers into window.layers
+    window.layers = [];
+    if (config && Array.isArray(config.layers)) {
+        window.layers = config.layers.filter(function(layerGroup) {
+            return layerGroup.get && layerGroup.get('type') !== 'overlay';
+        }).map(function(layerGroup) {
+            return {
+                title: layerGroup.get('title') || '',
+                group: layerGroup.get('group') || '',
+                id: layerGroup.get('id') || '',
+                _olLayerGroup: layerGroup
+            };
+        });
+    }
+    // 2. Define window.renderLayerList
+    window.renderLayerList = function(filtered) {
+        var $list = $('#layer-list');
+        if (!$list.length) {
+            $list = $('<div id="layer-list"></div>');
+            $('#menu').find('#layer-search-container').after($list);
+        }
+        $list.empty();
+        if (!filtered || !filtered.length) {
+            $list.append('<div style="padding:8px;color:#888;">No layers found.</div>');
+            return;
+        }
+        filtered.forEach(function(layer) {
+            var $item = $('<div>').addClass('layer-list-item').text((layer.group ? layer.group + ': ' : '') + layer.title);
+            $item.css({cursor:'pointer'}).on('click', function() {
+                window.activateLayer(layer);
+            });
+            $list.append($item);
+        });
+    };
+    // 3. Define window.activateLayer
+    window.activateLayer = function(layer) {
+        // Hide all base layers, show only selected
+        $.each(config.layers, function(indexLayer, layerGroup) {
+            if (layerGroup.get && layerGroup.get('type') !== 'overlay') {
+                if ((layer.id && layerGroup.get('id') === layer.id) ||
+                    (layerGroup.get('title') === layer.title && layerGroup.get('group') === layer.group)) {
+                    layerGroup.setVisible(true);
+                } else {
+                    layerGroup.setVisible(false);
+                }
+            }
+        });
+        // Optionally, update the layer list to show only this layer
+        window.renderLayerList([layer]);
+    };
+    // Render all layers initially
+    $(document).ready(function() {
+        window.renderLayerList(window.layers);
+    });
+    // --- End Layer Searcher Integration ---
+
     // --- Overlay Searcher Integration ---
     // 1. Flatten overlays into window.overlays
     window.overlays = [];
@@ -363,6 +420,8 @@ $(function () {
 	};
 
     $('#menu').append(layersControlBuild());
+    // Optionally, re-render layers after layersControl if needed
+    if (window.renderLayerList && window.layers) window.renderLayerList(window.layers);
     // Optionally, re-render overlays after overlaysControl if needed
     if (window.renderOverlayList && window.overlays) window.renderOverlayList(window.overlays);
 
