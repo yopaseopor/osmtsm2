@@ -16,15 +16,18 @@ $(function () {
         });
     }
     // 2. Define window.renderLayerList
-    window.renderLayerList = function(filtered) {
+    window.renderLayerList = function(filtered, query) {
         var $list = $('#layer-list');
         if (!$list.length) {
             $list = $('<div id="layer-list"></div>');
             $('#menu').find('#layer-search-container').after($list);
         }
         $list.empty();
-        if (!filtered || !filtered.length) {
-            $list.append('<div style="padding:8px;color:#888;">No layers found.</div>');
+        if (!query || !filtered || !filtered.length) {
+            // Only show message if there is a query
+            if (query && (!filtered || !filtered.length)) {
+                $list.append('<div style="padding:8px;color:#888;">No layers found.</div>');
+            }
             return;
         }
         filtered.forEach(function(layer) {
@@ -35,9 +38,10 @@ $(function () {
             $list.append($item);
         });
     };
+
     // 3. Define window.activateLayer
     window.activateLayer = function(layer) {
-        // Hide all base layers, show only selected
+        // Hide all base layers and overlays, show only selected base layer
         $.each(config.layers, function(indexLayer, layerGroup) {
             if (layerGroup.get && layerGroup.get('type') !== 'overlay') {
                 if ((layer.id && layerGroup.get('id') === layer.id) ||
@@ -46,11 +50,17 @@ $(function () {
                 } else {
                     layerGroup.setVisible(false);
                 }
+            } else if (layerGroup.get && layerGroup.get('type') === 'overlay') {
+                // Hide all overlays
+                $.each(layerGroup.getLayers().getArray(), function(idx, olayer) {
+                    olayer.setVisible(false);
+                });
             }
         });
         // Optionally, update the layer list to show only this layer
-        window.renderLayerList([layer]);
+        window.renderLayerList([layer], layer.title);
     };
+
     // Render all layers initially
     $(document).ready(function() {
         window.renderLayerList(window.layers);
@@ -71,11 +81,13 @@ $(function () {
         });
     }
     // 2. Define window.renderOverlayList
-    window.renderOverlayList = function(filtered) {
+    window.renderOverlayList = function(filtered, query) {
         var $list = $('#overlay-list');
         $list.empty();
-        if (!filtered || !filtered.length) {
-            $list.append('<div style="padding:8px;color:#888;">No overlays found.</div>');
+        if (!query || !filtered || !filtered.length) {
+            if (query && (!filtered || !filtered.length)) {
+                $list.append('<div style="padding:8px;color:#888;">No overlays found.</div>');
+            }
             return;
         }
         filtered.forEach(function(overlay) {
@@ -86,6 +98,7 @@ $(function () {
             $list.append($item);
         });
     };
+
 
     // Activate only the chosen overlay
     window.activateOverlay = function(overlay) {

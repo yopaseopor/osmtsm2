@@ -38,9 +38,9 @@
         dropdown.style.display = 'block';
     }
 
-    function filterAndRender(filtered) {
+    function filterAndRender(filtered, query) {
         if (window.renderOverlayList) {
-            window.renderOverlayList(filtered);
+            window.renderOverlayList(filtered, query);
         }
     }
 
@@ -48,7 +48,7 @@
         const query = this.value.trim().toLowerCase();
         if (!query) {
             dropdown.style.display = 'none';
-            filterAndRender(window.overlays);
+            filterAndRender([], '');
             return;
         }
         const filtered = window.overlays.filter(overlay =>
@@ -58,7 +58,7 @@
         lastResults = filtered;
         lastQuery = query;
         renderDropdown(filtered);
-        filterAndRender(filtered);
+        filterAndRender(filtered, query);
     });
 
     // Keyboard navigation for dropdown
