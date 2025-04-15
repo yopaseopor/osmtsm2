@@ -36,6 +36,8 @@
             clearBtn.style.background = '#ffeaea';
             clearBtn.style.color = '#b00';
             clearBtn.style.fontWeight = 'bold';
+            clearBtn.id = 'clear-active-overlay-btn';
+            clearBtn.tabIndex = 0;
             clearBtn.addEventListener('mousedown', function(e) {
                 e.preventDefault();
                 if (activeOverlay && activeOverlay.setVisible) {
@@ -51,6 +53,7 @@
             dropdown.style.display = 'none';
             return;
         }
+        // Limit results to 10 overlays
         results.slice(0, 10).forEach((overlay, idx) => {
             const opt = document.createElement('div');
             opt.className = 'overlay-search-option';
@@ -143,8 +146,16 @@
         }
     });
 
-    // Hide dropdown on blur
+    // Hide dropdown on blur, but keep it open if the clear button is being clicked
     searchInput.addEventListener('blur', function() {
-        setTimeout(()=>{ dropdown.style.display = 'none'; }, 150);
+        setTimeout(function() {
+            // Check if the active element is the clear button
+            var clearBtn = document.getElementById('clear-active-overlay-btn');
+            if (clearBtn && document.activeElement === clearBtn) {
+                // Do not hide dropdown
+                return;
+            }
+            dropdown.style.display = 'none';
+        }, 100);
     });
 })();
