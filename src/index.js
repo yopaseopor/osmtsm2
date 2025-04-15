@@ -451,23 +451,32 @@ $(function () {
 
 					layer.set('layerIndex', layerIndex);
 
-				content.append(layerButton);
-				if (layer.getVisible()) {
-					if (visibleLayer === undefined) {
-						layerButton.addClass('active');
-						visibleLayer = layer;
-						baseLayerIndex = layerIndex;
-					} else {
-						layer.setVisible(false);
-					}
-				}
-				layer.on('change:visible', function () {
+					// Add checkbox for enabling/disabling layer
+					var checkbox = $('<input type="checkbox">').css({marginRight:'6px'});
+					checkbox.prop('checked', layer.getVisible());
+					checkbox.on('change', function() {
+						layer.setVisible(this.checked);
+					});
+					layerButton.prepend(checkbox);
+
+					content.append(layerButton);
 					if (layer.getVisible()) {
-						layerButton.addClass('active');
-					} else {
-						layerButton.removeClass('active');
+						if (visibleLayer === undefined) {
+							layerButton.addClass('active');
+							visibleLayer = layer;
+							baseLayerIndex = layerIndex;
+						} else {
+							layer.setVisible(false);
+						}
 					}
-				});
+					layer.on('change:visible', function () {
+						checkbox.prop('checked', layer.getVisible());
+						if (layer.getVisible()) {
+							layerButton.addClass('active');
+						} else {
+							layerButton.removeClass('active');
+						}
+					});
 				layerIndex++;
 			}
 		});
