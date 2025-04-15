@@ -56,24 +56,6 @@
             opt.textContent = (layer.group ? layer.group + ': ' : '') + layer.title;
             opt.tabIndex = 0;
 
-            // Opacity slider
-            const slider = document.createElement('input');
-            slider.type = 'range';
-            slider.min = 0;
-            slider.max = 100;
-            slider.value = (layer._olLayerGroup && layer._olLayerGroup.getOpacity) ? Math.round(layer._olLayerGroup.getOpacity() * 100) : (layer.getOpacity ? Math.round(layer.getOpacity() * 100) : 100);
-            slider.style.marginLeft = '10px';
-            slider.style.verticalAlign = 'middle';
-            slider.title = 'Opacity';
-            slider.addEventListener('input', function(e) {
-                var val = parseInt(e.target.value, 10) / 100;
-                if (layer._olLayerGroup && layer._olLayerGroup.setOpacity) {
-                    layer._olLayerGroup.setOpacity(val);
-                } else if (layer.setOpacity) {
-                    layer.setOpacity(val);
-                }
-            });
-            opt.appendChild(slider);
 
             opt.addEventListener('mousedown', function(e) {
                 // Prevent slider from triggering layer activation
