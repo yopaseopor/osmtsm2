@@ -424,8 +424,8 @@ $(function () {
 							overlayButton.removeClass('active');
 						}
 					});
+					overlayDivContent.append(overlayButton);
 				});
-
 				overlayDiv.append(overlayDivContent);
 				overlayDiv.show();
 				overlayIndex++;
