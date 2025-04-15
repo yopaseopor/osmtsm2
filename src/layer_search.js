@@ -23,7 +23,17 @@
                 searchInput.value = layer.title;
                 dropdown.style.display = 'none';
                 if (window.activateLayer) {
-                    window.activateLayer(layer);
+                    // Prefer _olLayerGroup for direct activation
+                    if (layer._olLayerGroup) {
+                        window.activateLayer({
+                            id: layer.id,
+                            title: layer.title,
+                            group: layer.group,
+                            _olLayerGroup: layer._olLayerGroup
+                        });
+                    } else {
+                        window.activateLayer(layer);
+                    }
                 }
             });
             dropdown.appendChild(opt);

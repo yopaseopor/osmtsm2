@@ -60,7 +60,11 @@ $(function () {
         // Hide all base layers and overlays, show only selected base layer
         $.each(config.layers, function(indexLayer, layerGroup) {
             if (layerGroup.get && layerGroup.get('type') !== 'overlay') {
-                if (!activated && ((layer.id && layerGroup.get('id') === layer.id) ||
+                // If _olLayerGroup exists and matches, activate directly
+                if (!activated && layer._olLayerGroup && layerGroup === layer._olLayerGroup) {
+                    layerGroup.setVisible(true);
+                    activated = true;
+                } else if (!activated && ((layer.id && layerGroup.get('id') === layer.id) ||
                     (layerGroup.get('title') === layer.title && layerGroup.get('group') === layer.group))) {
                     layerGroup.setVisible(true);
                     activated = true;
@@ -81,6 +85,7 @@ $(function () {
         // Optionally, update the layer list to show only this layer
         window.renderLayerList([layer], layer.title);
     };
+
 
 
     // Render all layers initially

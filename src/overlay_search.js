@@ -28,7 +28,17 @@
                 searchInput.value = overlay.title;
                 dropdown.style.display = 'none';
                 if (window.activateOverlay) {
-                    window.activateOverlay(overlay);
+                    // Prefer _olLayerGroup for direct activation if available
+                    if (overlay._olLayerGroup) {
+                        window.activateOverlay({
+                            id: overlay.id,
+                            title: overlay.title,
+                            group: overlay.group,
+                            _olLayerGroup: overlay._olLayerGroup
+                        });
+                    } else {
+                        window.activateOverlay(overlay);
+                    }
                 } else {
                     filterAndRender([overlay]);
                 }
