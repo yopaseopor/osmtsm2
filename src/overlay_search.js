@@ -38,6 +38,8 @@
                                     isActive = true;
                                     // Deactivate if already active
                                     olayer.setVisible(false);
+                                    // Clear overlay search results from the UI
+                                    if (window.renderOverlayList) window.renderOverlayList([], '');
                                 }
                             }
                         });
