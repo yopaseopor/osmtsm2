@@ -27,7 +27,11 @@
                 e.preventDefault();
                 searchInput.value = overlay.title;
                 dropdown.style.display = 'none';
-                filterAndRender([overlay]);
+                if (window.activateOverlay) {
+                    window.activateOverlay(overlay);
+                } else {
+                    filterAndRender([overlay]);
+                }
             });
             dropdown.appendChild(opt);
         });

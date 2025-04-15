@@ -23,9 +23,38 @@ $(function () {
         }
         filtered.forEach(function(overlay) {
             var $item = $('<div>').addClass('overlay-list-item').text((overlay.group ? overlay.group + ': ' : '') + overlay.title);
+            $item.css({cursor:'pointer'}).on('click', function() {
+                window.activateOverlay(overlay);
+            });
             $list.append($item);
         });
     };
+
+    // Activate only the chosen overlay
+    window.activateOverlay = function(overlay) {
+        // Hide all overlays
+        $.each(config.layers, function(indexLayer, layerGroup) {
+            if (layerGroup.get && layerGroup.get('type') === 'overlay') {
+                $.each(layerGroup.getLayers().getArray(), function(idx, olayer) {
+                    olayer.setVisible(false);
+                });
+            }
+        });
+        // Show the selected overlay (by id or by group/title)
+        $.each(config.layers, function(indexLayer, layerGroup) {
+            if (layerGroup.get && layerGroup.get('type') === 'overlay') {
+                $.each(layerGroup.getLayers().getArray(), function(idx, olayer) {
+                    if ((overlay.id && olayer.get('id') === overlay.id) ||
+                        (olayer.get('title') === overlay.title && olayer.get('group') === overlay.group)) {
+                        olayer.setVisible(true);
+                    }
+                });
+            }
+        });
+        // Optionally, update the overlay list to show only this overlay
+        window.renderOverlayList([overlay]);
+    };
+
     // Render all overlays initially
     $(document).ready(function() {
         window.renderOverlayList(window.overlays);
