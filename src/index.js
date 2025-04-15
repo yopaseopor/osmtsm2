@@ -30,14 +30,29 @@ $(function () {
             }
             return;
         }
-        filtered.forEach(function(layer) {
+        var activeLayer = null;
+        $.each(config.layers, function(indexLayer, layerGroup) {
+            if (layerGroup.get && layerGroup.get('type') !== 'overlay' && layerGroup.getVisible && layerGroup.getVisible()) {
+                activeLayer = layerGroup;
+            }
+        });
+        filtered.forEach(function(layer, idx) {
+            var isActive = activeLayer && ((layer.id && activeLayer.get('id') === layer.id) || (activeLayer.get('title') === layer.title && activeLayer.get('group') === layer.group));
             var $item = $('<div>').addClass('layer-list-item').text((layer.group ? layer.group + ': ' : '') + layer.title);
+            if (isActive) $item.addClass('active').attr('tabindex', 0);
             $item.css({cursor:'pointer'}).on('click', function() {
                 window.activateLayer(layer);
             });
             $list.append($item);
+            if (isActive) {
+                setTimeout(function(){
+                    $item[0].scrollIntoView({block:'nearest'});
+                    $item.focus();
+                }, 10);
+            }
         });
     };
+
 
     // 3. Define window.activateLayer
     window.activateLayer = function(layer) {
@@ -90,14 +105,33 @@ $(function () {
             }
             return;
         }
-        filtered.forEach(function(overlay) {
+        var activeOverlay = null;
+        $.each(config.layers, function(indexLayer, layerGroup) {
+            if (layerGroup.get && layerGroup.get('type') === 'overlay') {
+                $.each(layerGroup.getLayers().getArray(), function(idx, olayer) {
+                    if (olayer.getVisible && olayer.getVisible()) {
+                        activeOverlay = olayer;
+                    }
+                });
+            }
+        });
+        filtered.forEach(function(overlay, idx) {
+            var isActive = activeOverlay && ((overlay.id && activeOverlay.get('id') === overlay.id) || (activeOverlay.get('title') === overlay.title && activeOverlay.get('group') === overlay.group));
             var $item = $('<div>').addClass('overlay-list-item').text((overlay.group ? overlay.group + ': ' : '') + overlay.title);
+            if (isActive) $item.addClass('active').attr('tabindex', 0);
             $item.css({cursor:'pointer'}).on('click', function() {
                 window.activateOverlay(overlay);
             });
             $list.append($item);
+            if (isActive) {
+                setTimeout(function(){
+                    $item[0].scrollIntoView({block:'nearest'});
+                    $item.focus();
+                }, 10);
+            }
         });
     };
+
 
 
     // Activate only the chosen overlay
