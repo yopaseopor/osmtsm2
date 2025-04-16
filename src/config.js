@@ -172,14 +172,26 @@ var config = {
 	* iconSrc: string ruta de la imatge
 	* style: function see https://openlayers.org/en/latest/apidoc/module-ol_style_Style-Style.html
 	*/
-	overlays: [
+	// overlays: [
+//   ... (removed for dynamic loading)
+// ],
 
+// Overlay loader for proof of concept
+const overlayFiles = [
+  'src/overlays/Alimentacion.json'
+];
 
+window.loadOverlays = async function() {
+  const overlayArrays = await Promise.all(
+    overlayFiles.map(file => fetch(file).then(res => res.json()))
+  );
+  return overlayArrays.flat();
+};
 
-		
-				
-		
-{
+// Usage example (in selector/searcher):
+// window.loadOverlays().then(overlays => { ... });
+
+		{
 			group: 'Alimentación',
 			title: 'Supermercados',
 			query: '(nwr["shop"="supermarket"]({{bbox}});node(w););out meta;',
