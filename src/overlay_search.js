@@ -52,6 +52,10 @@
             searchInput.value = '';
         });
         dropdown.appendChild(clearBtn);
+        var limited = results;
+        if (!lastQuery || results.length > 10) {
+            limited = results.slice(0, 10);
+        }
         limited.forEach(function(overlay) {
             var opt = document.createElement('div');
             opt.className = 'overlay-search-option';
