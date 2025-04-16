@@ -110,18 +110,17 @@ $(function () {
     $(document).ready(function() {
         window.renderLayerList(window.layers);
         window.renderOverlayList(window.overlays);
-        function updateUIWithTranslations() {
+        window.updateUIWithTranslations = function updateUIWithTranslations() {
             // Reset batch state for lists
             window._layerListLoaded = window._layerListBatchSize || 50;
             window._overlayListLoaded = window._overlayListBatchSize || 50;
-
-            // Listen for language change
-            $('#language-selector').off('change').on('change', function() {
-                var newLang = $(this).val();
-                loadTranslations(newLang, updateUIWithTranslations);
-            });
+            // Only update UI here, do NOT attach event handlers
         }
         updateUIWithTranslations();
+        $('#language-selector').on('change', function() {
+            var newLang = $(this).val();
+            console.log('Language changed to:', newLang);
+            loadTranslations(newLang, updateUIWithTranslations);
         });
     });
     // --- End Layer Searcher Integration ---
