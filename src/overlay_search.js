@@ -2,6 +2,22 @@
 // Assumes overlays are available globally as window.overlays
 
 (function() {
+    // Inject overlay-search-icon CSS if not present
+    if (!document.getElementById('overlay-search-icon-style')) {
+        var style = document.createElement('style');
+        style.id = 'overlay-search-icon-style';
+        style.innerHTML = `
+        .overlay-search-icon {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+            margin-right: 8px;
+            vertical-align: middle;
+            display: inline-block;
+        }
+        `;
+        document.head.appendChild(style);
+    }
     // Create predictive dropdown
     const searchInput = document.getElementById('overlay-search');
     const dropdown = document.createElement('div');
