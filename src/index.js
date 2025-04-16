@@ -95,20 +95,72 @@ $(function () {
     // --- End Layer Searcher Integration ---
 
     // --- Overlay Searcher Integration ---
-    // 1. Flatten overlays into window.overlays
+    // 1. Load overlays from JSON and initialize overlay UI
     window.overlays = [];
-    if (config && Array.isArray(config.overlays)) {
-        window.overlays = config.overlays.map(function(overlay) {
-            return {
-                title: overlay.title || '',
-                group: overlay.group || '',
-                id: overlay.id || '',
-                ...overlay
+    if (window.loadOverlays) {
+        window.loadOverlays().then(function(overlays) {
+            window.overlays = overlays;
+            // 2. Define window.renderOverlayList
+            window.renderOverlayList = function(filtered, query) {
+                var $list = $('#overlay-list');
+                $list.empty();
+                if (!query || !filtered || !filtered.length) {
+                    if (query && (!filtered || !filtered.length)) {
+                        $list.append('<div style="padding:8px;color:#888;">No overlays found.</div>');
+                    }
+                    return;
+                }
+                var activeOverlay = null;
+                $.each(config.layers, function(indexLayer, layerGroup) {
+                    if (layerGroup.get && layerGroup.get('type') === 'overlay') {
+                        $.each(layerGroup.getLayers().getArray(), function(idx, olayer) {
+                            if (olayer.getVisible && olayer.getVisible()) {
+                                activeOverlay = olayer;
+                            }
+                        });
+                    }
+                });
+                filtered.forEach(function(overlay, idx) {
+                    var isActive = activeOverlay && ((overlay.id && activeOverlay.get('id') === overlay.id) || (activeOverlay.get('title') === overlay.title && activeOverlay.get('group') === overlay.group));
+                    var $item = $('<div>').addClass('overlay-list-item').text((overlay.group ? overlay.group + ': ' : '') + overlay.title);
+                    if (isActive) $item.addClass('active').attr('tabindex', 0);
+                    $item.css({cursor:'pointer'}).on('click', function() {
+                        window.activateOverlay(overlay);
+                    });
+                    $list.append($item);
+                    if (isActive) {
+                        setTimeout(function(){
+                            $item[0].scrollIntoView({block:'nearest'});
+                            $item.focus();
+                        }, 10);
+                    }
+                });
             };
+            // 3. Define window.activateOverlay
+            window.activateOverlay = function(overlay) {
+                // Toggle visibility of the selected overlay (by id or by group/title)
+                $.each(config.layers, function(indexLayer, layerGroup) {
+                    if (layerGroup.get && layerGroup.get('type') === 'overlay') {
+                        $.each(layerGroup.getLayers().getArray(), function(idx, olayer) {
+                            if ((overlay.id && olayer.get('id') === overlay.id) ||
+                                (olayer.get('title') === overlay.title && olayer.get('group') === overlay.group)) {
+                                olayer.setVisible(!olayer.getVisible());
+                            }
+                        });
+                    }
+                });
+                // Optionally, update the overlay list UI
+                if (window.renderOverlayList) window.renderOverlayList([], '');
+            };
+            // Render all overlays initially
+            window.renderOverlayList(window.overlays);
         });
     }
-    // 2. Define window.renderOverlayList
-    window.renderOverlayList = function(filtered, query) {
+    else {
+        // Fallback: overlays not loaded
+        window.renderOverlayList = function(){ $('#overlay-list').empty().append('<div style="padding:8px;color:#888;">No overlays loaded.</div>'); };
+    }
+
         var $list = $('#overlay-list');
         $list.empty();
         if (!query || !filtered || !filtered.length) {
@@ -163,10 +215,6 @@ $(function () {
         if (window.renderOverlayList) window.renderOverlayList([], '');
     };
 
-    // Render all overlays initially
-    $(document).ready(function() {
-        window.renderOverlayList(window.overlays);
-    });
     // --- End Overlay Searcher Integration ---
 
 	$('#map').empty(); // Remove Javascript required message
