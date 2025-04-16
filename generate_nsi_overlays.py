@@ -66,9 +66,16 @@ CATEGORY_MAP = {
 }
 
 # --- Helper to generate Overpass query from tags ---
+import re
+
+def escape_overpass(s):
+    # Escape double quotes and backslashes for Overpass QL
+    return str(s).replace('\\', '\\\\').replace('"', '\\"')
+
 def build_query(tags):
-    tag_str = ''.join(f'["{k}"="{v}"]' for k, v in tags.items())
+    tag_str = ''.join(f'["{escape_overpass(k)}"="{escape_overpass(v)}"]' for k, v in tags.items())
     return f'(nwr{tag_str}({{bbox}});node(w););out meta;'
+
 
 # --- Helper to get logo URL ---
 def build_logo_url(category, subcategory, brand_id):
@@ -354,20 +361,31 @@ class NSIOverlayGUI:
                         # Prefer logo from NSI item if available
                         logo_url = None
                         logos = item.get('logos', {})
-                        # Try 'default', then 'openstreetmap', then 'wikidata', then any
-                        for key in ['default', 'openstreetmap', 'wikidata']:
-                            if key in logos:
-                                logo_url = logos[key]
-                                break
-                        if not logo_url and isinstance(logos, dict) and logos:
-                            # Pick any logo if present
-                            logo_url = next(iter(logos.values()))
-                        # Try imageURL if available
-                        if not logo_url and 'imageURL' in item:
+                        # 1. Wikimedia Commons
+                        if 'wikimedia_commons' in logos and logos['wikimedia_commons'] and 'nsi.guide' not in logos['wikimedia_commons']:
+                            logo_url = logos['wikimedia_commons']
+                        # 2. Facebook
+                        elif 'facebook' in logos and logos['facebook'] and 'nsi.guide' not in logos['facebook']:
+                            logo_url = logos['facebook']
+                        # 3. Any other logo (prefer non-nsi.guide)
+                        elif isinstance(logos, dict) and logos:
+                            for k, v in logos.items():
+                                if v and 'nsi.guide' not in v:
+                                    logo_url = v
+                                    break
+                        # 4. imageURL if available (non-nsi.guide)
+                        if not logo_url and 'imageURL' in item and item['imageURL'] and 'nsi.guide' not in item['imageURL']:
                             logo_url = item['imageURL']
-                        # Fallback to constructed URL
+                        # 5. logo or image field (non-nsi.guide)
+                        if not logo_url and 'logo' in item and item['logo'] and 'nsi.guide' not in item['logo']:
+                            logo_url = item['logo']
+                        if not logo_url and 'image' in item and item['image'] and 'nsi.guide' not in item['image']:
+                            logo_url = item['image']
+                        # 6. Fallback to nsi.guide only if nothing else
                         if not logo_url:
-                            logo_url = build_logo_url(category, subcat, item['id'].split('-')[0].lower())
+                            # Use full brand id for nsi.guide fallback (not just first part)
+                            logo_url = build_logo_url(category, subcat, item['id'].replace(':','_').replace('/','_').replace('#','').lower())
+
                         # Build Overpass query using only the most specific/reliable tag
                         # Priority: brand:wikidata > brand > name > main tag+brand
                         query = None
@@ -457,7 +475,10 @@ class NSIOverlayGUI:
                     )
                     overlays_js.append(entry)
                     overlays_written += 1
-            js_entries = ',\n'.join(overlays_js)
+            # Fix comma formatting: no leading comma, no double commas
+            js_entries = '\n'.join(
+                [entry.rstrip(',') if i == len(overlays_js)-1 else entry for i, entry in enumerate(overlays_js)]
+            )
             new_content = before + marker + '\n' + js_entries + '\n' + after
             with open(self.file_path, 'w', encoding='utf-8') as f:
                 f.write(new_content)
