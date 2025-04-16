@@ -16,14 +16,14 @@ $(function () {
         });
     }
     // 2. Define window.renderLayerList
-    // Pagination state for layers
-    window._layerListBatchSize = 50;
-    window._layerListLoaded = 50;
-    window.renderLayerList = function(filtered, query, resetBatch) {
-        if (resetBatch) window._layerListLoaded = window._layerListBatchSize;
-        filtered = filtered || window.layers;
-        var total = filtered.length;
-        var loaded = Math.min(window._layerListLoaded, total);
+    // Max items to show per batch
+    var LAYER_BATCH_SIZE = 50;
+    var OVERLAY_BATCH_SIZE = 50;
+    var layerListState = { shown: LAYER_BATCH_SIZE };
+    var overlayListState = { shown: OVERLAY_BATCH_SIZE };
+
+    window.renderLayerList = function(filtered, query, reset) {
+        if (reset) layerListState.shown = LAYER_BATCH_SIZE;
         // Update the layer list title with translation
         $('#layer-list-title').remove();
         var $title = $('<div id="layer-list-title" class="list-title"></div>').text(t('layers.osm_layer'));
@@ -49,7 +49,8 @@ $(function () {
                 activeLayer = layerGroup;
             }
         });
-        filtered.slice(0, loaded).forEach(function(layer, idx) {
+        var toShow = filtered.slice(0, layerListState.shown);
+        toShow.forEach(function(layer, idx) {
             var isActive = activeLayer && ((layer.id && activeLayer.get('id') === layer.id) || (activeLayer.get('title') === layer.title && activeLayer.get('group') === layer.group));
             // Use translation key if provided, else fallback to title
             var titleKey = layer.title && layer.title.startsWith('layers.') ? layer.title : null;
@@ -108,18 +109,13 @@ $(function () {
 
     // Render all layers initially
     $(document).ready(function() {
-        window.renderLayerList(window.layers);
-        window.renderOverlayList(window.overlays);
-        window.updateUIWithTranslations = function updateUIWithTranslations() {
-            // Reset batch state for lists
-            window._layerListLoaded = window._layerListBatchSize || 50;
-            window._overlayListLoaded = window._overlayListBatchSize || 50;
-            // Only update UI here, do NOT attach event handlers
-        }
+        window.renderLayerList(window.layers, '', true);
+        window.renderOverlayList(window.overlays, '', true);
         updateUIWithTranslations();
-        $('#language-selector').on('change', function() {
+
+        // Listen for language change
+        $('#language-selector').off('change').on('change', function() {
             var newLang = $(this).val();
-            console.log('Language changed to:', newLang);
             loadTranslations(newLang, updateUIWithTranslations);
         });
     });
@@ -139,14 +135,8 @@ $(function () {
         });
     }
     // 2. Define window.renderOverlayList
-    // Pagination state for overlays
-    window._overlayListBatchSize = 50;
-    window._overlayListLoaded = 50;
-    window.renderOverlayList = function(filtered, query, resetBatch) {
-        if (resetBatch) window._overlayListLoaded = window._overlayListBatchSize;
-        filtered = filtered || window.overlays;
-        var total = filtered.length;
-        var loaded = Math.min(window._overlayListLoaded, total);
+    window.renderOverlayList = function(filtered, query, reset) {
+        if (reset) overlayListState.shown = OVERLAY_BATCH_SIZE;
         // Update the overlay list title with translation
         $('#overlay-list-title').remove();
         var $title = $('<div id="overlay-list-title" class="list-title"></div>').text(t('overlays.nsi_overlay'));
@@ -173,7 +163,8 @@ $(function () {
         });
         // Group overlays by first letter only, show max 10 per letter
         var letterMap = {};
-        filtered.slice(0, loaded).forEach(function(overlay) {
+        var toShow = filtered.slice(0, overlayListState.shown);
+        toShow.forEach(function(overlay) {
             var titleOrGroup = (overlay.title || overlay.group || '').trim();
             var firstLetter = titleOrGroup.charAt(0) ? titleOrGroup.charAt(0).toUpperCase() : '_';
             if (!letterMap[firstLetter]) letterMap[firstLetter] = [];
