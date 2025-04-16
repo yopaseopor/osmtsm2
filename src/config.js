@@ -21322,11 +21322,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Amazon Hub Locker",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Amazon Hub"]["brand:wikidata"="Q100274430"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Amazon Hub Locker',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Amazon Hub"]["brand:wikidata"="Q100274430"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -21340,7 +21340,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -21358,11 +21358,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Amazon Hub \u30ed\u30c3\u30ab\u30fc",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Amazon Hub \u30ed\u30c3\u30ab\u30fc"]["brand:en"="Amazon Hub Locker"]["brand:ja"="Amazon Hub \u30ed\u30c3\u30ab\u30fc"]["brand:wikidata"="Q100274430"]["name"="Amazon Hub \u30ed\u30c3\u30ab\u30fc"]["name:en"="Amazon Hub Locker"]["name:ja"="Amazon Hub \u30ed\u30c3\u30ab\u30fc"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Amazon Hub \u30ed\u30c3\u30ab\u30fc',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Amazon Hub \u30ed\u30c3\u30ab\u30fc"]["brand:en"="Amazon Hub Locker"]["brand:ja"="Amazon Hub \u30ed\u30c3\u30ab\u30fc"]["brand:wikidata"="Q100274430"]["name"="Amazon Hub \u30ed\u30c3\u30ab\u30fc"]["name:en"="Amazon Hub Locker"]["name:ja"="Amazon Hub \u30ed\u30c3\u30ab\u30fc"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -21376,7 +21376,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -21394,11 +21394,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Amazon Locker",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Amazon Locker"]["brand:wikidata"="Q16974764"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Amazon_locker_logotype.png",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Amazon Locker',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Amazon Locker"]["brand:wikidata"="Q16974764"]({{bbox}});node(w););out meta;',
+    iconSrc: 'https://commons.wikimedia.org/wiki/Special:FilePath/Amazon_locker_logotype.png',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -21412,7 +21412,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Amazon_locker_logotype.png",
+                src: 'https://commons.wikimedia.org/wiki/Special:FilePath/Amazon_locker_logotype.png',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -21430,11 +21430,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Appkomat InPost",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Appkomat InPost"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Appkomat InPost',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Appkomat InPost"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -21448,7 +21448,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -21466,11 +21466,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Australia Post Parcel Locker",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Australia Post"]["brand:wikidata"="Q1142936"]["name"="Australia Post Parcel Locker"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Australia_Post.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Australia Post Parcel Locker',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Australia Post"]["brand:wikidata"="Q1142936"]["name"="Australia Post Parcel Locker"]({{bbox}});node(w););out meta;',
+    iconSrc: 'https://commons.wikimedia.org/wiki/Special:FilePath/Australia_Post.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -21484,7 +21484,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Australia_Post.svg",
+                src: 'https://commons.wikimedia.org/wiki/Special:FilePath/Australia_Post.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -21502,11 +21502,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "automat przesy\u0142kowy AliExpress",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="AliExpress"]["brand:wikidata"="Q29904317"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/AliExpress_2024.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'automat przesy\u0142kowy AliExpress',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="AliExpress"]["brand:wikidata"="Q29904317"]({{bbox}});node(w););out meta;',
+    iconSrc: 'https://commons.wikimedia.org/wiki/Special:FilePath/AliExpress_2024.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -21520,7 +21520,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/AliExpress_2024.svg",
+                src: 'https://commons.wikimedia.org/wiki/Special:FilePath/AliExpress_2024.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -21538,11 +21538,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Bal\u00edkoBOX",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Bal\u00edkoBOX"]["brand:wikidata"="Q131136953"]["name"="Bal\u00edkoBOX"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Bal\u00edkoBOX',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Bal\u00edkoBOX"]["brand:wikidata"="Q131136953"]["name"="Bal\u00edkoBOX"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -21556,7 +21556,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -21574,11 +21574,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "bal\u00edkovo box",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="bal\u00edkovo box"]["brand:wikidata"="Q132188077"]["name"="bal\u00edkovo box"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'bal\u00edkovo box',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="bal\u00edkovo box"]["brand:wikidata"="Q132188077"]["name"="bal\u00edkovo box"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -21592,7 +21592,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -21610,11 +21610,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Box Now (Hrvatska)",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Box Now"]["brand:wikidata"="Q117195375"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Box Now (Hrvatska)',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Box Now"]["brand:wikidata"="Q117195375"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -21628,7 +21628,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -21646,11 +21646,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Box Now (\u0395\u03bb\u03bb\u03ac\u03b4\u03b1)",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Box Now"]["brand:wikidata"="Q117195376"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Box Now (\u0395\u03bb\u03bb\u03ac\u03b4\u03b1)',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Box Now"]["brand:wikidata"="Q117195376"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -21664,7 +21664,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -21682,11 +21682,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Box Now (\u0411\u044a\u043b\u0433\u0430\u0440\u0438\u044f)",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Box Now"]["brand:wikidata"="Q117195372"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Box Now (\u0411\u044a\u043b\u0433\u0430\u0440\u0438\u044f)',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Box Now"]["brand:wikidata"="Q117195372"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -21700,7 +21700,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -21718,11 +21718,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "bpost",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="bpost"]["brand:wikidata"="Q740553"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bpost_logo.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'bpost',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="bpost"]["brand:wikidata"="Q740553"]({{bbox}});node(w););out meta;',
+    iconSrc: 'https://commons.wikimedia.org/wiki/Special:FilePath/Bpost_logo.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -21736,7 +21736,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bpost_logo.svg",
+                src: 'https://commons.wikimedia.org/wiki/Special:FilePath/Bpost_logo.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -21754,11 +21754,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Budbee",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Budbee"]["brand:wikidata"="Q123582538"]["name"="Budbee"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Budbee',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Budbee"]["brand:wikidata"="Q123582538"]["name"="Budbee"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -21772,7 +21772,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -21790,11 +21790,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Cainiao",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Cainiao"]["name"="Cainiao"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Cainiao',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Cainiao"]["name"="Cainiao"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -21808,7 +21808,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -21826,11 +21826,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "CityPaq",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="CityPaq"]["brand:wikidata"="Q110748819"]["name"="CityPaq"]["operator"="Correos"]["operator:wikidata"="Q776605"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Cajeros_autom\u00e1ticos_de_paqueter\u00eda_en_los_mercados_de_Madrid_(01).jpg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'CityPaq',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="CityPaq"]["brand:wikidata"="Q110748819"]["name"="CityPaq"]["operator"="Correos"]["operator:wikidata"="Q776605"]({{bbox}});node(w););out meta;',
+    iconSrc: 'https://commons.wikimedia.org/wiki/Special:FilePath/Cajeros_autom\u00e1ticos_de_paqueter\u00eda_en_los_mercados_de_Madrid_(01).jpg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -21844,7 +21844,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Cajeros_autom\u00e1ticos_de_paqueter\u00eda_en_los_mercados_de_Madrid_(01).jpg",
+                src: 'https://commons.wikimedia.org/wiki/Special:FilePath/Cajeros_autom\u00e1ticos_de_paqueter\u00eda_en_los_mercados_de_Madrid_(01).jpg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -21862,11 +21862,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Costco.com",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Costco"]["brand:wikidata"="Q715583"]["name"="Costco.com"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Costco_Wholesale_logo_2010-10-26.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Costco.com',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Costco"]["brand:wikidata"="Q715583"]["name"="Costco.com"]({{bbox}});node(w););out meta;',
+    iconSrc: 'https://commons.wikimedia.org/wiki/Special:FilePath/Costco_Wholesale_logo_2010-10-26.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -21880,7 +21880,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Costco_Wholesale_logo_2010-10-26.svg",
+                src: 'https://commons.wikimedia.org/wiki/Special:FilePath/Costco_Wholesale_logo_2010-10-26.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -21898,11 +21898,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "de Buren",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="de Buren"]["brand:wikidata"="Q119648956"]["name"="de Buren"]["operator"="de Buren"]["operator:wikidata"="Q119648956"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'de Buren',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="de Buren"]["brand:wikidata"="Q119648956"]["name"="de Buren"]["operator"="de Buren"]["operator:wikidata"="Q119648956"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -21916,7 +21916,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -21934,11 +21934,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Deutsche Post",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Deutsche Post"]["brand:wikidata"="Q157645"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Deutsche_Post_DHL.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Deutsche Post',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Deutsche Post"]["brand:wikidata"="Q157645"]({{bbox}});node(w););out meta;',
+    iconSrc: 'https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Deutsche_Post_DHL.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -21952,7 +21952,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Deutsche_Post_DHL.svg",
+                src: 'https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Deutsche_Post_DHL.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -21970,11 +21970,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "DExpress",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="DExpress"]["name"="DExpress"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'DExpress',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="DExpress"]["name"="DExpress"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -21988,7 +21988,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -22006,11 +22006,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "DHL BOX 24/7",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="DHL BOX 24/7"]["brand:wikidata"="Q115568785"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'DHL BOX 24/7',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="DHL BOX 24/7"]["brand:wikidata"="Q115568785"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -22024,7 +22024,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -22042,11 +22042,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "DHL csomagautomata",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="DHL"]["brand:wikidata"="Q131712019"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'DHL csomagautomata',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="DHL"]["brand:wikidata"="Q131712019"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -22060,7 +22060,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -22078,11 +22078,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "DHL Packstation",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="DHL Packstation"]["brand:wikidata"="Q1766703"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Packstation_winter.jpg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'DHL Packstation',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="DHL Packstation"]["brand:wikidata"="Q1766703"]({{bbox}});node(w););out meta;',
+    iconSrc: 'https://commons.wikimedia.org/wiki/Special:FilePath/Packstation_winter.jpg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -22096,7 +22096,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Packstation_winter.jpg",
+                src: 'https://commons.wikimedia.org/wiki/Special:FilePath/Packstation_winter.jpg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -22114,11 +22114,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "DHL Paketbox",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Paketbox"]["brand:wikidata"="Q2046604"]["name"="DHL Paketbox"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'DHL Paketbox',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Paketbox"]["brand:wikidata"="Q2046604"]["name"="DHL Paketbox"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -22132,7 +22132,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -22150,11 +22150,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "DHL Pakketautomaat",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="DHL"]["brand:wikidata"="Q132858576"]["name"="DHL Pakketautomaat"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'DHL Pakketautomaat',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="DHL"]["brand:wikidata"="Q132858576"]["name"="DHL Pakketautomaat"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -22168,7 +22168,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -22186,11 +22186,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "DHL Poststation",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="DHL Poststation"]["brand:wikidata"="Q123120984"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/DHL_Poststation_(2022).png",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'DHL Poststation',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="DHL Poststation"]["brand:wikidata"="Q123120984"]({{bbox}});node(w););out meta;',
+    iconSrc: 'https://commons.wikimedia.org/wiki/Special:FilePath/DHL_Poststation_(2022).png',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -22204,7 +22204,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/DHL_Poststation_(2022).png",
+                src: 'https://commons.wikimedia.org/wiki/Special:FilePath/DHL_Poststation_(2022).png',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -22222,11 +22222,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "DPD",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="DPD"]["brand:wikidata"="Q541030"]["operator"="DPD Latvia"]["operator:wikidata"="Q125973085"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/DPD_logo_(2015).svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'DPD',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="DPD"]["brand:wikidata"="Q541030"]["operator"="DPD Latvia"]["operator:wikidata"="Q125973085"]({{bbox}});node(w););out meta;',
+    iconSrc: 'https://commons.wikimedia.org/wiki/Special:FilePath/DPD_logo_(2015).svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -22240,7 +22240,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/DPD_logo_(2015).svg",
+                src: 'https://commons.wikimedia.org/wiki/Special:FilePath/DPD_logo_(2015).svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -22258,11 +22258,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "DPD Pickup Station",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="DPD Pickup Station"]["brand:wikidata"="Q114273730"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/DPD_logo_(2015).svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'DPD Pickup Station',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="DPD Pickup Station"]["brand:wikidata"="Q114273730"]({{bbox}});node(w););out meta;',
+    iconSrc: 'https://commons.wikimedia.org/wiki/Special:FilePath/DPD_logo_(2015).svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -22276,7 +22276,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/DPD_logo_(2015).svg",
+                src: 'https://commons.wikimedia.org/wiki/Special:FilePath/DPD_logo_(2015).svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -22294,11 +22294,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Dr. Max Box",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Dr. Max Box"]["brand:wikidata"="Q133275002"]["operator"="Dr. Max"]["operator:wikidata"="Q56317371"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Dr. Max Box',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Dr. Max Box"]["brand:wikidata"="Q133275002"]["operator"="Dr. Max"]["operator:wikidata"="Q56317371"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -22312,7 +22312,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -22330,11 +22330,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "DSV Locker",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="DSV Locker"]["brand:wikidata"="Q1155771"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/DSV_Logo.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'DSV Locker',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="DSV Locker"]["brand:wikidata"="Q1155771"]({{bbox}});node(w););out meta;',
+    iconSrc: 'https://commons.wikimedia.org/wiki/Special:FilePath/DSV_Logo.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -22348,7 +22348,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/DSV_Logo.svg",
+                src: 'https://commons.wikimedia.org/wiki/Special:FilePath/DSV_Logo.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -22366,11 +22366,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "easybox",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="easybox"]["brand:wikidata"="Q114496224"]["payment:cash"="no"]["payment:contactless"="yes"]["payment:maestro"="yes"]["payment:mastercard"="yes"]["payment:mastercard_contactless"="yes"]["payment:mastercard_electronic"="yes"]["payment:visa"="yes"]["payment:visa_electron"="yes"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Sameday_easybox_logo.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'easybox',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="easybox"]["brand:wikidata"="Q114496224"]["payment:cash"="no"]["payment:contactless"="yes"]["payment:maestro"="yes"]["payment:mastercard"="yes"]["payment:mastercard_contactless"="yes"]["payment:mastercard_electronic"="yes"]["payment:visa"="yes"]["payment:visa_electron"="yes"]({{bbox}});node(w););out meta;',
+    iconSrc: 'https://commons.wikimedia.org/wiki/Special:FilePath/Sameday_easybox_logo.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -22384,7 +22384,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Sameday_easybox_logo.svg",
+                src: 'https://commons.wikimedia.org/wiki/Special:FilePath/Sameday_easybox_logo.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -22402,11 +22402,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Evri",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Evri"]["brand:wikidata"="Q115200168"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Evri',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Evri"]["brand:wikidata"="Q115200168"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -22420,7 +22420,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -22438,11 +22438,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Express One csomagpont",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Express One"]["brand:wikidata"="Q131629851"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Express One csomagpont',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Express One"]["brand:wikidata"="Q131629851"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -22456,7 +22456,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -22474,11 +22474,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "FANbox",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="FANbox"]["brand:wikidata"="Q115351090"]["name"="FANbox"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/FANbox_in_Mega_Image_of_Drumul_Fermei.jpg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'FANbox',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="FANbox"]["brand:wikidata"="Q115351090"]["name"="FANbox"]({{bbox}});node(w););out meta;',
+    iconSrc: 'https://commons.wikimedia.org/wiki/Special:FilePath/FANbox_in_Mega_Image_of_Drumul_Fermei.jpg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -22492,7 +22492,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/FANbox_in_Mega_Image_of_Drumul_Fermei.jpg",
+                src: 'https://commons.wikimedia.org/wiki/Special:FilePath/FANbox_in_Mega_Image_of_Drumul_Fermei.jpg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -22510,11 +22510,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Foxpost",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Foxpost"]["brand:wikidata"="Q126538316"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Foxpost,_Coop,_Eszperant\u00f3_t\u00e9r,_Sz\u00e9kesfeh\u00e9rv\u00e1r_00002.jpg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Foxpost',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Foxpost"]["brand:wikidata"="Q126538316"]({{bbox}});node(w););out meta;',
+    iconSrc: 'https://commons.wikimedia.org/wiki/Special:FilePath/Foxpost,_Coop,_Eszperant\u00f3_t\u00e9r,_Sz\u00e9kesfeh\u00e9rv\u00e1r_00002.jpg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -22528,7 +22528,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Foxpost,_Coop,_Eszperant\u00f3_t\u00e9r,_Sz\u00e9kesfeh\u00e9rv\u00e1r_00002.jpg",
+                src: 'https://commons.wikimedia.org/wiki/Special:FilePath/Foxpost,_Coop,_Eszperant\u00f3_t\u00e9r,_Sz\u00e9kesfeh\u00e9rv\u00e1r_00002.jpg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -22546,11 +22546,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "GLS",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="GLS"]["brand:wikidata"="Q366182"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/GLS_Logo.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'GLS',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="GLS"]["brand:wikidata"="Q366182"]({{bbox}});node(w););out meta;',
+    iconSrc: 'https://commons.wikimedia.org/wiki/Special:FilePath/GLS_Logo.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -22564,7 +22564,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/GLS_Logo.svg",
+                src: 'https://commons.wikimedia.org/wiki/Special:FilePath/GLS_Logo.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -22582,11 +22582,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "GLS Bal\u00edkomat",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="GLS Bal\u00edkomat"]["brand:wikidata"="Q366182"]["name"="GLS Bal\u00edkomat"]["operator"="GLS General Logistics Systems Slovakia"]["operator:wikidata"="Q133842648"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/GLS_Logo.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'GLS Bal\u00edkomat',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="GLS Bal\u00edkomat"]["brand:wikidata"="Q366182"]["name"="GLS Bal\u00edkomat"]["operator"="GLS General Logistics Systems Slovakia"]["operator:wikidata"="Q133842648"]({{bbox}});node(w););out meta;',
+    iconSrc: 'https://commons.wikimedia.org/wiki/Special:FilePath/GLS_Logo.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -22600,7 +22600,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/GLS_Logo.svg",
+                src: 'https://commons.wikimedia.org/wiki/Special:FilePath/GLS_Logo.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -22618,11 +22618,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "GLS Paketomat",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="GLS Paketomat"]["brand:wikidata"="Q366182"]["name"="GLS Paketomat"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/GLS_Logo.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'GLS Paketomat',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="GLS Paketomat"]["brand:wikidata"="Q366182"]["name"="GLS Paketomat"]({{bbox}});node(w););out meta;',
+    iconSrc: 'https://commons.wikimedia.org/wiki/Special:FilePath/GLS_Logo.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -22636,7 +22636,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/GLS_Logo.svg",
+                src: 'https://commons.wikimedia.org/wiki/Special:FilePath/GLS_Logo.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -22654,11 +22654,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Growing Communities",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Growing Communities"]["brand:wikidata"="Q109768523"]["name"="Growing Communities"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Growing Communities',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Growing Communities"]["brand:wikidata"="Q109768523"]["name"="Growing Communities"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -22672,7 +22672,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -22690,11 +22690,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "IKEA csomagpont",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="IKEA"]["brand:wikidata"="Q131629951"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'IKEA csomagpont',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="IKEA"]["brand:wikidata"="Q131629951"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -22708,7 +22708,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -22726,11 +22726,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "InPost",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="InPost"]["brand:wikidata"="Q3182097"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/InPost_logo.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'InPost',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="InPost"]["brand:wikidata"="Q3182097"]({{bbox}});node(w););out meta;',
+    iconSrc: 'https://commons.wikimedia.org/wiki/Special:FilePath/InPost_logo.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -22744,7 +22744,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/InPost_logo.svg",
+                src: 'https://commons.wikimedia.org/wiki/Special:FilePath/InPost_logo.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -22762,11 +22762,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Instabox",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Instabox"]["brand:wikidata"="Q109923726"]["name"="Instabox"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Instabox',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Instabox"]["brand:wikidata"="Q109923726"]["name"="Instabox"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -22780,7 +22780,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -22798,11 +22798,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "i\u90f5\u7bb1",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="i\u90f5\u7bb1"]["brand:en"="iBox"]["brand:nan"="i-i\u00fb-siu\u207f"]["brand:nan-Hant"="i\u90f5\u7bb1"]["brand:nan-Latn-pehoeji"="i-i\u00fb-siu\u207f"]["brand:nan-Latn-tailo"="i-i\u00fb-siunn"]["brand:wikidata"="Q4375439"]["brand:zh"="i\u90f5\u7bb1"]["operator"="\u4e2d\u83ef\u90f5\u653f"]["operator:en"="Chunghwa Post"]["operator:nan"="Tiong-h\u00f4a I\u00fb-ch\u00e8ng"]["operator:nan-Hant"="\u4e2d\u83ef\u90f5\u653f"]["operator:nan-Latn-pehoeji"="Tiong-h\u00f4a I\u00fb-ch\u00e8ng"]["operator:nan-Latn-tailo"="Tiong-hu\u00e2 I\u00fb-ts\u00ecng"]["operator:wikidata"="Q709259"]["operator:zh"="\u4e2d\u83ef\u90f5\u653f"]["operator:zh-Hans"="\u4e2d\u534e\u90ae\u653f"]["operator:zh-Hant"="\u4e2d\u83ef\u90f5\u653f"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/TRA_Taipei_Station_(4)_iBox_20190615.jpg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'i\u90f5\u7bb1',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="i\u90f5\u7bb1"]["brand:en"="iBox"]["brand:nan"="i-i\u00fb-siu\u207f"]["brand:nan-Hant"="i\u90f5\u7bb1"]["brand:nan-Latn-pehoeji"="i-i\u00fb-siu\u207f"]["brand:nan-Latn-tailo"="i-i\u00fb-siunn"]["brand:wikidata"="Q4375439"]["brand:zh"="i\u90f5\u7bb1"]["operator"="\u4e2d\u83ef\u90f5\u653f"]["operator:en"="Chunghwa Post"]["operator:nan"="Tiong-h\u00f4a I\u00fb-ch\u00e8ng"]["operator:nan-Hant"="\u4e2d\u83ef\u90f5\u653f"]["operator:nan-Latn-pehoeji"="Tiong-h\u00f4a I\u00fb-ch\u00e8ng"]["operator:nan-Latn-tailo"="Tiong-hu\u00e2 I\u00fb-ts\u00ecng"]["operator:wikidata"="Q709259"]["operator:zh"="\u4e2d\u83ef\u90f5\u653f"]["operator:zh-Hans"="\u4e2d\u534e\u90ae\u653f"]["operator:zh-Hant"="\u4e2d\u83ef\u90f5\u653f"]({{bbox}});node(w););out meta;',
+    iconSrc: 'https://commons.wikimedia.org/wiki/Special:FilePath/TRA_Taipei_Station_(4)_iBox_20190615.jpg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -22816,7 +22816,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/TRA_Taipei_Station_(4)_iBox_20190615.jpg",
+                src: 'https://commons.wikimedia.org/wiki/Special:FilePath/TRA_Taipei_Station_(4)_iBox_20190615.jpg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -22834,11 +22834,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Latvijas Pasts",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Latvijas Pasts"]["brand:wikidata"="Q1807088"]["name"="Latvijas Pasts"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Riga_(13.08.2011)_071.JPG",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Latvijas Pasts',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Latvijas Pasts"]["brand:wikidata"="Q1807088"]["name"="Latvijas Pasts"]({{bbox}});node(w););out meta;',
+    iconSrc: 'https://commons.wikimedia.org/wiki/Special:FilePath/Riga_(13.08.2011)_071.JPG',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -22852,7 +22852,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Riga_(13.08.2011)_071.JPG",
+                src: 'https://commons.wikimedia.org/wiki/Special:FilePath/Riga_(13.08.2011)_071.JPG',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -22870,11 +22870,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Locker.ge Parcel Locker",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Locker.ge"]["brand:ka"="Locker.ge"]["brand:wikidata"="Q131470040"]["name"="Locker.ge"]["name:en"="Locker.ge"]["name:ka"="Locker.ge"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Locker.ge Parcel Locker',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Locker.ge"]["brand:ka"="Locker.ge"]["brand:wikidata"="Q131470040"]["name"="Locker.ge"]["name:en"="Locker.ge"]["name:ka"="Locker.ge"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -22888,7 +22888,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -22906,11 +22906,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "LockerPost",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="LockerPost"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'LockerPost',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="LockerPost"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -22924,7 +22924,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -22942,11 +22942,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "LP Express",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="LP Express"]["name"="LP Express"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'LP Express',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="LP Express"]["name"="LP Express"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -22960,7 +22960,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -22978,11 +22978,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Meest",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Meest"]["brand:wikidata"="Q25432124"]["name"="Meest"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Mist.PNG",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Meest',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Meest"]["brand:wikidata"="Q25432124"]["name"="Meest"]({{bbox}});node(w););out meta;',
+    iconSrc: 'https://commons.wikimedia.org/wiki/Special:FilePath/Mist.PNG',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -22996,7 +22996,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Mist.PNG",
+                src: 'https://commons.wikimedia.org/wiki/Special:FilePath/Mist.PNG',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -23014,11 +23014,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Mondial Relay",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Mondial Relay"]["brand:wikidata"="Q3320547"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/2006-2014_L4H3_Citroen_Jumper_panel_van_(rr).jpg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Mondial Relay',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Mondial Relay"]["brand:wikidata"="Q3320547"]({{bbox}});node(w););out meta;',
+    iconSrc: 'https://commons.wikimedia.org/wiki/Special:FilePath/2006-2014_L4H3_Citroen_Jumper_panel_van_(rr).jpg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -23032,7 +23032,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/2006-2014_L4H3_Citroen_Jumper_panel_van_(rr).jpg",
+                src: 'https://commons.wikimedia.org/wiki/Special:FilePath/2006-2014_L4H3_Citroen_Jumper_panel_van_(rr).jpg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -23050,11 +23050,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "MPL (Magyar Posta Logisztika)",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="MPL"]["brand:wikidata"="Q131431491"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'MPL (Magyar Posta Logisztika)',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="MPL"]["brand:wikidata"="Q131431491"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -23068,7 +23068,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -23086,11 +23086,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "My Post 24",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="My Post 24"]["brand:wikidata"="Q110748685"]["name"="My Post 24"]["operator"="Die Post"]["operator:de"="Die Post"]["operator:en"="Swiss Post"]["operator:fr"="La Poste"]["operator:it"="La Posta"]["operator:rm"="La Posta"]["operator:wikidata"="Q614803"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Schweizerische_Post_Logo.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'My Post 24',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="My Post 24"]["brand:wikidata"="Q110748685"]["name"="My Post 24"]["operator"="Die Post"]["operator:de"="Die Post"]["operator:en"="Swiss Post"]["operator:fr"="La Poste"]["operator:it"="La Posta"]["operator:rm"="La Posta"]["operator:wikidata"="Q614803"]({{bbox}});node(w););out meta;',
+    iconSrc: 'https://commons.wikimedia.org/wiki/Special:FilePath/Schweizerische_Post_Logo.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -23104,7 +23104,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Schweizerische_Post_Logo.svg",
+                src: 'https://commons.wikimedia.org/wiki/Special:FilePath/Schweizerische_Post_Logo.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -23122,11 +23122,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Myflexbox",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Myflexbox"]["brand:wikidata"="Q117313525"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Myflexbox',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Myflexbox"]["brand:wikidata"="Q117313525"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -23140,7 +23140,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -23158,11 +23158,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Nova Poshta",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Nova Poshta"]["brand:wikidata"="Q97191085"]["name"="Nova Poshta"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Nova Poshta',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Nova Poshta"]["brand:wikidata"="Q97191085"]["name"="Nova Poshta"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -23176,7 +23176,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -23194,11 +23194,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Omniva",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Omniva"]["brand:wikidata"="Q282457"]["name"="Omniva"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Omniva.png",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Omniva',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Omniva"]["brand:wikidata"="Q282457"]["name"="Omniva"]({{bbox}});node(w););out meta;',
+    iconSrc: 'https://commons.wikimedia.org/wiki/Special:FilePath/Omniva.png',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -23212,7 +23212,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Omniva.png",
+                src: 'https://commons.wikimedia.org/wiki/Special:FilePath/Omniva.png',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -23230,11 +23230,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Orlen Paczka",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Orlen Paczka"]["brand:wikidata"="Q110457879"]["operator"="Orlen"]["operator:wikidata"="Q971649"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Orlen_paczka_logo.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Orlen Paczka',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Orlen Paczka"]["brand:wikidata"="Q110457879"]["operator"="Orlen"]["operator:wikidata"="Q971649"]({{bbox}});node(w););out meta;',
+    iconSrc: 'https://commons.wikimedia.org/wiki/Special:FilePath/Orlen_paczka_logo.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -23248,7 +23248,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Orlen_paczka_logo.svg",
+                src: 'https://commons.wikimedia.org/wiki/Special:FilePath/Orlen_paczka_logo.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -23266,11 +23266,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Ozon Box",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Ozon Box"]["brand:wikidata"="Q2365235"]["name"="Ozon Box"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Ozon_logo_clear.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Ozon Box',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Ozon Box"]["brand:wikidata"="Q2365235"]["name"="Ozon Box"]({{bbox}});node(w););out meta;',
+    iconSrc: 'https://commons.wikimedia.org/wiki/Special:FilePath/Ozon_logo_clear.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -23284,7 +23284,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Ozon_logo_clear.svg",
+                src: 'https://commons.wikimedia.org/wiki/Special:FilePath/Ozon_logo_clear.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -23302,11 +23302,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Packeta",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Packeta"]["brand:wikidata"="Q67809905"]["name"="Z-Box"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Packeta',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Packeta"]["brand:wikidata"="Q67809905"]["name"="Z-Box"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -23320,7 +23320,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -23338,11 +23338,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Paczkomat InPost",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Paczkomat InPost"]["brand:wikidata"="Q110970254"]["operator"="InPost"]["operator:wikidata"="Q3182097"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/InPost_logo.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Paczkomat InPost',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Paczkomat InPost"]["brand:wikidata"="Q110970254"]["operator"="InPost"]["operator:wikidata"="Q3182097"]({{bbox}});node(w););out meta;',
+    iconSrc: 'https://commons.wikimedia.org/wiki/Special:FilePath/InPost_logo.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -23356,7 +23356,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/InPost_logo.svg",
+                src: 'https://commons.wikimedia.org/wiki/Special:FilePath/InPost_logo.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -23374,11 +23374,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Paket24",
-    query: "(nwr["alt_name"="Paketomat"]["amenity"="parcel_locker"]["brand"="Paket24"]["brand:wikidata"="Q110748166"]["name"="Paket24"]["operator"="Hrvatska po\u0161ta"]["operator:wikidata"="Q507289"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Paket24',
+    query: '(nwr["alt_name"="Paketomat"]["amenity"="parcel_locker"]["brand"="Paket24"]["brand:wikidata"="Q110748166"]["name"="Paket24"]["operator"="Hrvatska po\u0161ta"]["operator:wikidata"="Q507289"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -23392,7 +23392,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -23410,11 +23410,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Pakkeboksen",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Pakkeboksen"]["brand:wikidata"="Q12309164"]["name"="Pakkeboksen"]["operator"="PostNord Danmark"]["operator:wikidata"="Q1334647"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Doegnposten,_Lindholm_2010_(ubt).jpeg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Pakkeboksen',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Pakkeboksen"]["brand:wikidata"="Q12309164"]["name"="Pakkeboksen"]["operator"="PostNord Danmark"]["operator:wikidata"="Q1334647"]({{bbox}});node(w););out meta;',
+    iconSrc: 'https://commons.wikimedia.org/wiki/Special:FilePath/Doegnposten,_Lindholm_2010_(ubt).jpeg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -23428,7 +23428,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Doegnposten,_Lindholm_2010_(ubt).jpeg",
+                src: 'https://commons.wikimedia.org/wiki/Special:FilePath/Doegnposten,_Lindholm_2010_(ubt).jpeg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -23446,11 +23446,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Parcel Pending",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Parcel Pending"]["brand:wikidata"="Q127685418"]["operator"="Quadient"]["operator:wikidata"="Q70117211"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Parcel Pending',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Parcel Pending"]["brand:wikidata"="Q127685418"]["operator"="Quadient"]["operator:wikidata"="Q70117211"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -23464,7 +23464,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -23482,11 +23482,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Penguin Box",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Penguin Box"]["brand:wikidata"="Q120022128"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Penguin Box',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Penguin Box"]["brand:wikidata"="Q120022128"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -23500,7 +23500,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -23518,11 +23518,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Pick",
-    query: "(nwr["alt_name"="Shop 'n' Pick;Pick Locker"]["amenity"="parcel_locker"]["brand"="Pick"]["brand:wikidata"="Q120051152"]["name"="Pick"]["operator"="Pick Network"]["operator:wikidata"="Q120047262"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Pick',
+    query: '(nwr["alt_name"="Shop 'n' Pick;Pick Locker"]["amenity"="parcel_locker"]["brand"="Pick"]["brand:wikidata"="Q120051152"]["name"="Pick"]["operator"="Pick Network"]["operator:wikidata"="Q120047262"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -23536,7 +23536,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -23554,11 +23554,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "PickPoint",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="PickPoint"]["brand:wikidata"="Q110276197"]["name"="PickPoint"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'PickPoint',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="PickPoint"]["brand:wikidata"="Q110276197"]["name"="PickPoint"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -23572,7 +23572,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -23590,11 +23590,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Pickup Station",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Pickup Station"]["brand:wikidata"="Q110748562"]["name"="Pickup Station"]["operator"="La Poste"]["operator:wikidata"="Q373724"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/La_Poste_(Frankreich)_logo.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Pickup Station',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Pickup Station"]["brand:wikidata"="Q110748562"]["name"="Pickup Station"]["operator"="La Poste"]["operator:wikidata"="Q373724"]({{bbox}});node(w););out meta;',
+    iconSrc: 'https://commons.wikimedia.org/wiki/Special:FilePath/La_Poste_(Frankreich)_logo.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -23608,7 +23608,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/La_Poste_(Frankreich)_logo.svg",
+                src: 'https://commons.wikimedia.org/wiki/Special:FilePath/La_Poste_(Frankreich)_logo.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -23626,11 +23626,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Pilulka Box",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Pilulka Box"]["brand:wikidata"="Q130684499"]["name"="Pilulka Box"]["operator"="Pilulka"]["operator:wikidata"="Q41960196"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Pilulka Box',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Pilulka Box"]["brand:wikidata"="Q130684499"]["name"="Pilulka Box"]["operator"="Pilulka"]["operator:wikidata"="Q41960196"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -23644,7 +23644,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -23662,11 +23662,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Pocztex",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Pocztex"]["brand:wikidata"="Q127106701"]["opening_hours"="24/7"]["operator"="Poczta Polska"]["operator:wikidata"="Q168833"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Pocztex',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Pocztex"]["brand:wikidata"="Q127106701"]["opening_hours"="24/7"]["operator"="Poczta Polska"]["operator:wikidata"="Q168833"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -23680,7 +23680,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -23698,11 +23698,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "POPStation",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="POPStation"]["brand:wikidata"="Q120048216"]["name"="POPStation"]["operator"="Singapore Post"]["operator:wikidata"="Q4049531"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'POPStation',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="POPStation"]["brand:wikidata"="Q120048216"]["name"="POPStation"]["operator"="Singapore Post"]["operator:wikidata"="Q4049531"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -23716,7 +23716,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -23734,11 +23734,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Post Abholstation",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Post Abholstation"]["brand:wikidata"="Q110748491"]["name"="Post Abholstation"]["operator"="\u00d6sterreichische Post"]["operator:wikidata"="Q1763505"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Post Abholstation',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Post Abholstation"]["brand:wikidata"="Q110748491"]["name"="Post Abholstation"]["operator"="\u00d6sterreichische Post"]["operator:wikidata"="Q1763505"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -23752,7 +23752,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -23770,11 +23770,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "POST PackUp",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="POST Luxembourg"]["brand:wikidata"="Q1570910"]["name"="PackUp"]["operator"="POST Luxembourg"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'POST PackUp',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="POST Luxembourg"]["brand:wikidata"="Q1570910"]["name"="PackUp"]["operator"="POST Luxembourg"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -23788,7 +23788,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -23806,11 +23806,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "PostNL Pakketautomaat",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="PostNL"]["brand:wikidata"="Q5921598"]["name"="PostNL Pakketautomaat"]["operator"="PostNL"]["operator:wikidata"="Q5921598"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/PostNL_logo_fullcolor.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'PostNL Pakketautomaat',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="PostNL"]["brand:wikidata"="Q5921598"]["name"="PostNL Pakketautomaat"]["operator"="PostNL"]["operator:wikidata"="Q5921598"]({{bbox}});node(w););out meta;',
+    iconSrc: 'https://commons.wikimedia.org/wiki/Special:FilePath/PostNL_logo_fullcolor.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -23824,7 +23824,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/PostNL_logo_fullcolor.svg",
+                src: 'https://commons.wikimedia.org/wiki/Special:FilePath/PostNL_logo_fullcolor.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -23842,11 +23842,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "PostNord",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="PostNord"]["brand:wikidata"="Q3181430"]["name"="PostNord"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/PostNord_wordmark.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'PostNord',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="PostNord"]["brand:wikidata"="Q3181430"]["name"="PostNord"]({{bbox}});node(w););out meta;',
+    iconSrc: 'https://commons.wikimedia.org/wiki/Special:FilePath/PostNord_wordmark.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -23860,7 +23860,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/PostNord_wordmark.svg",
+                src: 'https://commons.wikimedia.org/wiki/Special:FilePath/PostNord_wordmark.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -23878,11 +23878,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "PPL Parcelbox",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="PPL Parcelbox"]["brand:wikidata"="Q132131206"]["name"="PPL Parcelbox"]["operator"="PPL CZ"]["operator:wikidata"="Q12043470"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'PPL Parcelbox',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="PPL Parcelbox"]["brand:wikidata"="Q132131206"]["name"="PPL Parcelbox"]["operator"="PPL CZ"]["operator:wikidata"="Q12043470"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -23896,7 +23896,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -23914,11 +23914,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "PS Paketomat",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="PS Paketomat"]["brand:wikidata"="Q110748273"]["name"="PS Paketomat"]["operator"="Po\u0161ta Slovenije"]["operator:wikidata"="Q6522631"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'PS Paketomat',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="PS Paketomat"]["brand:wikidata"="Q110748273"]["name"="PS Paketomat"]["operator"="Po\u0161ta Slovenije"]["operator:wikidata"="Q6522631"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -23932,7 +23932,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -23950,11 +23950,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "pudo",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="pudo"]["brand:wikidata"="Q116753323"]["operator"="The Courier Guy"]["operator:wikidata"="Q116753262"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'pudo',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="pudo"]["brand:wikidata"="Q116753323"]["operator"="The Courier Guy"]["operator:wikidata"="Q116753262"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -23968,7 +23968,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -23986,11 +23986,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "PUDO\u30b9\u30c6\u30fc\u30b7\u30e7\u30f3",
-    query: "(nwr["alt_name"="\u30d7\u30c9\u30fc\u30fb\u30b9\u30c6\u30fc\u30b7\u30e7\u30f3"]["amenity"="parcel_locker"]["brand"="\u30d7\u30c9\u30fc"]["brand:en"="PUDO"]["brand:ja"="\u30d7\u30c9\u30fc"]["brand:wikidata"="Q86738066"]["name"="PUDO\u30b9\u30c6\u30fc\u30b7\u30e7\u30f3"]["name:en"="PUDO Station"]["name:ja"="PUDO\u30b9\u30c6\u30fc\u30b7\u30e7\u30f3"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'PUDO\u30b9\u30c6\u30fc\u30b7\u30e7\u30f3',
+    query: '(nwr["alt_name"="\u30d7\u30c9\u30fc\u30fb\u30b9\u30c6\u30fc\u30b7\u30e7\u30f3"]["amenity"="parcel_locker"]["brand"="\u30d7\u30c9\u30fc"]["brand:en"="PUDO"]["brand:ja"="\u30d7\u30c9\u30fc"]["brand:wikidata"="Q86738066"]["name"="PUDO\u30b9\u30c6\u30fc\u30b7\u30e7\u30f3"]["name:en"="PUDO Station"]["name:ja"="PUDO\u30b9\u30c6\u30fc\u30b7\u30e7\u30f3"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -24004,7 +24004,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -24022,11 +24022,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "PuntoPoste",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="PuntoPoste"]["brand:wikidata"="Q110748322"]["name"="PuntoPoste"]["operator"="Poste Italiane"]["operator:wikidata"="Q495026"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'PuntoPoste',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="PuntoPoste"]["brand:wikidata"="Q110748322"]["name"="PuntoPoste"]["operator"="Poste Italiane"]["operator:wikidata"="Q495026"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -24040,7 +24040,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -24058,11 +24058,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Royal Mail",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Royal Mail"]["brand:wikidata"="Q638098"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Royal_Mail_LDV.JPG",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Royal Mail',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Royal Mail"]["brand:wikidata"="Q638098"]({{bbox}});node(w););out meta;',
+    iconSrc: 'https://commons.wikimedia.org/wiki/Special:FilePath/Royal_Mail_LDV.JPG',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -24076,7 +24076,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Royal_Mail_LDV.JPG",
+                src: 'https://commons.wikimedia.org/wiki/Special:FilePath/Royal_Mail_LDV.JPG',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -24094,11 +24094,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Rozetka",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Rozetka"]["brand:wikidata"="Q12072279"]["name"="Rozetka"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/ROZETKA-Logo-L3-B-RGB.png",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Rozetka',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Rozetka"]["brand:wikidata"="Q12072279"]["name"="Rozetka"]({{bbox}});node(w););out meta;',
+    iconSrc: 'https://commons.wikimedia.org/wiki/Special:FilePath/ROZETKA-Logo-L3-B-RGB.png',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -24112,7 +24112,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/ROZETKA-Logo-L3-B-RGB.png",
+                src: 'https://commons.wikimedia.org/wiki/Special:FilePath/ROZETKA-Logo-L3-B-RGB.png',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -24130,11 +24130,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Ship & Go",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Ship & Go"]["brand:wikidata"="Q117327750"]["name"="Cargus Ship & Go"]["operator"="Cargus"]["operator:wikidata"="Q12723442"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Ship & Go',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Ship & Go"]["brand:wikidata"="Q117327750"]["name"="Cargus Ship & Go"]["operator"="Cargus"]["operator:wikidata"="Q12723442"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -24148,7 +24148,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -24166,11 +24166,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Smartpost",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Smartpost"]["brand:wikidata"="Q7543889"]["name"="Smartpost"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Smartpost',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Smartpost"]["brand:wikidata"="Q7543889"]["name"="Smartpost"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -24184,7 +24184,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -24202,11 +24202,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Smartpost Itella",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Smartpost"]["brand:wikidata"="Q7543889"]["operator"="Itella"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Smartpost Itella',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Smartpost"]["brand:wikidata"="Q7543889"]["operator"="Itella"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -24220,7 +24220,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -24238,11 +24238,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "SmartPosti",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="SmartPosti"]["brand:wikidata"="Q132157239"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'SmartPosti',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="SmartPosti"]["brand:wikidata"="Q132157239"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -24256,7 +24256,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -24274,11 +24274,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Speedy",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Speedy"]["brand:wikidata"="Q131312685"]["name"="Speedy"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Speedy',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Speedy"]["brand:wikidata"="Q131312685"]["name"="Speedy"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -24292,7 +24292,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -24310,11 +24310,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Tamburi",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Tamburi"]["brand:wikidata"="Q125176523"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Tamburi',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Tamburi"]["brand:wikidata"="Q125176523"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -24328,7 +24328,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -24346,11 +24346,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Venipak",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Venipak"]["brand:wikidata"="Q124379827"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Venipak_duty_vehicle_in_Jelgava.jpg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Venipak',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Venipak"]["brand:wikidata"="Q124379827"]({{bbox}});node(w););out meta;',
+    iconSrc: 'https://commons.wikimedia.org/wiki/Special:FilePath/Venipak_duty_vehicle_in_Jelgava.jpg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -24364,7 +24364,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Venipak_duty_vehicle_in_Jelgava.jpg",
+                src: 'https://commons.wikimedia.org/wiki/Special:FilePath/Venipak_duty_vehicle_in_Jelgava.jpg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -24382,11 +24382,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "Yeep",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="Yeep"]["brand:wikidata"="Q123421114"]["name"="Yeep"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: 'Yeep',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="Yeep"]["brand:wikidata"="Q123421114"]["name"="Yeep"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -24400,7 +24400,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -24418,11 +24418,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "\u0415\u043a\u043e\u043d\u0442\u043e\u043c\u0430\u0442",
-    query: "(nwr["alt_name"="\u0415\u043a\u043e\u043d\u0442\u043e\u043c\u0430\u0442"]["alt_name:bg"="\u0415\u043a\u043e\u043d\u0442\u043e\u043c\u0430\u0442"]["alt_name:en"="Econtomat"]["amenity"="parcel_locker"]["brand"="\u0415\u043a\u043e\u043d\u0442"]["brand:wikidata"="Q12279603"]["name"="\u0415\u043a\u043e\u043d\u0442"]["name:bg"="\u0415\u043a\u043e\u043d\u0442"]["name:en"="Econt"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: '\u0415\u043a\u043e\u043d\u0442\u043e\u043c\u0430\u0442',
+    query: '(nwr["alt_name"="\u0415\u043a\u043e\u043d\u0442\u043e\u043c\u0430\u0442"]["alt_name:bg"="\u0415\u043a\u043e\u043d\u0442\u043e\u043c\u0430\u0442"]["alt_name:en"="Econtomat"]["amenity"="parcel_locker"]["brand"="\u0415\u043a\u043e\u043d\u0442"]["brand:wikidata"="Q12279603"]["name"="\u0415\u043a\u043e\u043d\u0442"]["name:bg"="\u0415\u043a\u043e\u043d\u0442"]["name:en"="Econt"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -24436,7 +24436,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -24454,11 +24454,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "\u0415\u043f\u0456\u0446\u0435\u043d\u0442\u0440 \u041a",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="\u0415\u043f\u0456\u0446\u0435\u043d\u0442\u0440 \u041a"]["brand:wikidata"="Q4532244"]["name"="\u0415\u043f\u0456\u0446\u0435\u043d\u0442\u0440 \u041a"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Word_epic_cent.png",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: '\u0415\u043f\u0456\u0446\u0435\u043d\u0442\u0440 \u041a',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="\u0415\u043f\u0456\u0446\u0435\u043d\u0442\u0440 \u041a"]["brand:wikidata"="Q4532244"]["name"="\u0415\u043f\u0456\u0446\u0435\u043d\u0442\u0440 \u041a"]({{bbox}});node(w););out meta;',
+    iconSrc: 'https://commons.wikimedia.org/wiki/Special:FilePath/Word_epic_cent.png',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -24472,7 +24472,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Word_epic_cent.png",
+                src: 'https://commons.wikimedia.org/wiki/Special:FilePath/Word_epic_cent.png',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -24490,11 +24490,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "\u049a\u0430\u0437\u043f\u043e\u0448\u0442\u0430",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="\u049a\u0430\u0437\u043f\u043e\u0448\u0442\u0430"]["brand:en"="Kazpost"]["brand:kk"="\u049a\u0430\u0437\u043f\u043e\u0448\u0442\u0430"]["brand:ru"="\u041a\u0430\u0437\u043f\u043e\u0447\u0442\u0430"]["brand:wikidata"="Q746263"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/QazPost_logo.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: '\u049a\u0430\u0437\u043f\u043e\u0448\u0442\u0430',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="\u049a\u0430\u0437\u043f\u043e\u0448\u0442\u0430"]["brand:en"="Kazpost"]["brand:kk"="\u049a\u0430\u0437\u043f\u043e\u0448\u0442\u0430"]["brand:ru"="\u041a\u0430\u0437\u043f\u043e\u0447\u0442\u0430"]["brand:wikidata"="Q746263"]({{bbox}});node(w););out meta;',
+    iconSrc: 'https://commons.wikimedia.org/wiki/Special:FilePath/QazPost_logo.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -24508,7 +24508,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/QazPost_logo.svg",
+                src: 'https://commons.wikimedia.org/wiki/Special:FilePath/QazPost_logo.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -24526,11 +24526,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "\u041d\u043e\u0432\u0430 \u041f\u043e\u0448\u0442\u0430",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="\u041d\u043e\u0432\u0430 \u041f\u043e\u0448\u0442\u0430"]["brand:wikidata"="Q12133863"]["name"="\u041d\u043e\u0432\u0430 \u041f\u043e\u0448\u0442\u0430"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Nova_Poshta_2022_logo.png",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: '\u041d\u043e\u0432\u0430 \u041f\u043e\u0448\u0442\u0430',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="\u041d\u043e\u0432\u0430 \u041f\u043e\u0448\u0442\u0430"]["brand:wikidata"="Q12133863"]["name"="\u041d\u043e\u0432\u0430 \u041f\u043e\u0448\u0442\u0430"]({{bbox}});node(w););out meta;',
+    iconSrc: 'https://commons.wikimedia.org/wiki/Special:FilePath/Nova_Poshta_2022_logo.png',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -24544,7 +24544,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Nova_Poshta_2022_logo.png",
+                src: 'https://commons.wikimedia.org/wiki/Special:FilePath/Nova_Poshta_2022_logo.png',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -24562,11 +24562,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "\u041e\u043c\u043d\u0438\u0421\u0414\u042d\u041a",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="\u041e\u043c\u043d\u0438\u0421\u0414\u042d\u041a"]["brand:en"="OmniCEDK"]["brand:ru"="\u041e\u043c\u043d\u0438\u0421\u0414\u042d\u041a"]["brand:wikidata"="Q110240113"]["name"="\u041e\u043c\u043d\u0438\u0421\u0414\u042d\u041a"]["name:en"="OmniCDEK"]["name:ru"="\u041e\u043c\u043d\u0438\u0421\u0414\u042d\u041a"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: '\u041e\u043c\u043d\u0438\u0421\u0414\u042d\u041a',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="\u041e\u043c\u043d\u0438\u0421\u0414\u042d\u041a"]["brand:en"="OmniCEDK"]["brand:ru"="\u041e\u043c\u043d\u0438\u0421\u0414\u042d\u041a"]["brand:wikidata"="Q110240113"]["name"="\u041e\u043c\u043d\u0438\u0421\u0414\u042d\u041a"]["name:en"="OmniCDEK"]["name:ru"="\u041e\u043c\u043d\u0438\u0421\u0414\u042d\u041a"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -24580,7 +24580,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -24598,11 +24598,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438"]["brand:en"="Russian Post"]["brand:ru"="\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438"]["brand:wikidata"="Q1502763"]["name"="\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438"]["name:en"="Russian Post"]["name:ru"="\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Russian_Post_wordmark.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: '\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438"]["brand:en"="Russian Post"]["brand:ru"="\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438"]["brand:wikidata"="Q1502763"]["name"="\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438"]["name:en"="Russian Post"]["name:ru"="\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438"]({{bbox}});node(w););out meta;',
+    iconSrc: 'https://commons.wikimedia.org/wiki/Special:FilePath/Russian_Post_wordmark.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -24616,7 +24616,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Russian_Post_wordmark.svg",
+                src: 'https://commons.wikimedia.org/wiki/Special:FilePath/Russian_Post_wordmark.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -24634,11 +24634,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "\u041f\u043e\u0448\u0442\u0438\u043d \u043f\u0430\u043a\u0435\u0442\u043e\u043c\u0430\u0442",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="\u041f\u043e\u0448\u0442\u0438\u043d \u043f\u0430\u043a\u0435\u0442\u043e\u043c\u0430\u0442"]["name"="\u041f\u043e\u0448\u0442\u0438\u043d \u043f\u0430\u043a\u0435\u0442\u043e\u043c\u0430\u0442"]["name:sr"="\u041f\u043e\u0448\u0442\u0438\u043d \u043f\u0430\u043a\u0435\u0442\u043e\u043c\u0430\u0442"]["name:sr-Latn"="Po\u0161tin paketomat"]["operator"="\u041f\u043e\u0448\u0442\u0430 \u0421\u0440\u0431\u0438\u0458\u0435"]["operator:wikidata"="Q769311"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: '\u041f\u043e\u0448\u0442\u0438\u043d \u043f\u0430\u043a\u0435\u0442\u043e\u043c\u0430\u0442',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="\u041f\u043e\u0448\u0442\u0438\u043d \u043f\u0430\u043a\u0435\u0442\u043e\u043c\u0430\u0442"]["name"="\u041f\u043e\u0448\u0442\u0438\u043d \u043f\u0430\u043a\u0435\u0442\u043e\u043c\u0430\u0442"]["name:sr"="\u041f\u043e\u0448\u0442\u0438\u043d \u043f\u0430\u043a\u0435\u0442\u043e\u043c\u0430\u0442"]["name:sr-Latn"="Po\u0161tin paketomat"]["operator"="\u041f\u043e\u0448\u0442\u0430 \u0421\u0440\u0431\u0438\u0458\u0435"]["operator:wikidata"="Q769311"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -24652,7 +24652,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -24670,11 +24670,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "\u041f\u0440\u043e\u0434\u0443\u043a\u0442\u043e\u043c\u0430\u0442 \u0423\u0442\u043a\u043e\u043d\u043e\u0441",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="\u041f\u0440\u043e\u0434\u0443\u043a\u0442\u043e\u043c\u0430\u0442 \u0423\u0442\u043a\u043e\u043d\u043e\u0441"]["name"="\u041f\u0440\u043e\u0434\u0443\u043a\u0442\u043e\u043c\u0430\u0442 \u0423\u0442\u043a\u043e\u043d\u043e\u0441"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: '\u041f\u0440\u043e\u0434\u0443\u043a\u0442\u043e\u043c\u0430\u0442 \u0423\u0442\u043a\u043e\u043d\u043e\u0441',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="\u041f\u0440\u043e\u0434\u0443\u043a\u0442\u043e\u043c\u0430\u0442 \u0423\u0442\u043a\u043e\u043d\u043e\u0441"]["name"="\u041f\u0440\u043e\u0434\u0443\u043a\u0442\u043e\u043c\u0430\u0442 \u0423\u0442\u043a\u043e\u043d\u043e\u0441"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -24688,7 +24688,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -24706,11 +24706,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "\u0421\u0414\u042d\u041a",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="\u0421\u0414\u042d\u041a"]["name"="\u0421\u0414\u042d\u041a"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: '\u0421\u0414\u042d\u041a',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="\u0421\u0414\u042d\u041a"]["name"="\u0421\u0414\u042d\u041a"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -24724,7 +24724,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -24742,11 +24742,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "\u0425\u0430\u043b\u0432\u0430",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="\u0425\u0430\u043b\u0432\u0430"]["name"="\u0425\u0430\u043b\u0432\u0430"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: '\u0425\u0430\u043b\u0432\u0430',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="\u0425\u0430\u043b\u0432\u0430"]["name"="\u0425\u0430\u043b\u0432\u0430"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -24760,7 +24760,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -24778,11 +24778,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "\u042f\u043d\u0434\u0435\u043a\u0441.\u041c\u0430\u0440\u043a\u0435\u0442",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="\u042f\u043d\u0434\u0435\u043a\u0441.\u041c\u0430\u0440\u043a\u0435\u0442"]["name"="\u042f\u043d\u0434\u0435\u043a\u0441.\u041c\u0430\u0440\u043a\u0435\u0442"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: '\u042f\u043d\u0434\u0435\u043a\u0441.\u041c\u0430\u0440\u043a\u0435\u0442',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="\u042f\u043d\u0434\u0435\u043a\u0441.\u041c\u0430\u0440\u043a\u0435\u0442"]["name"="\u042f\u043d\u0434\u0435\u043a\u0441.\u041c\u0430\u0440\u043a\u0435\u0442"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -24796,7 +24796,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -24814,11 +24814,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "\u306f\u3053\u307d\u3059",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="\u306f\u3053\u307d\u3059"]["brand:en"="HAKO POST"]["brand:ja"="\u306f\u3053\u307d\u3059"]["brand:wikidata"="Q117428085"]["name"="\u306f\u3053\u307d\u3059"]["name:en"="Hako Post"]["name:ja"="\u306f\u3053\u307d\u3059"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Hako_Post_(Aoba_Post_Office).jpg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: '\u306f\u3053\u307d\u3059',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="\u306f\u3053\u307d\u3059"]["brand:en"="HAKO POST"]["brand:ja"="\u306f\u3053\u307d\u3059"]["brand:wikidata"="Q117428085"]["name"="\u306f\u3053\u307d\u3059"]["name:en"="Hako Post"]["name:ja"="\u306f\u3053\u307d\u3059"]({{bbox}});node(w););out meta;',
+    iconSrc: 'https://commons.wikimedia.org/wiki/Special:FilePath/Hako_Post_(Aoba_Post_Office).jpg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -24832,7 +24832,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Hako_Post_(Aoba_Post_Office).jpg",
+                src: 'https://commons.wikimedia.org/wiki/Special:FilePath/Hako_Post_(Aoba_Post_Office).jpg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -24850,11 +24850,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "\u4e30\u5de2",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="\u4e30\u5de2"]["brand:en"="Hive Box"]["brand:wikidata"="Q96076112"]["brand:zh"="\u4e30\u5de2"]["name"="\u4e30\u5de2"]["name:en"="Hive Box"]["name:zh"="\u4e30\u5de2"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: '\u4e30\u5de2',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="\u4e30\u5de2"]["brand:en"="Hive Box"]["brand:wikidata"="Q96076112"]["brand:zh"="\u4e30\u5de2"]["name"="\u4e30\u5de2"]["name:en"="Hive Box"]["name:zh"="\u4e30\u5de2"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -24868,7 +24868,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -24886,11 +24886,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "\u667a\u90f5\u5bc4 iPostal Kiosk",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="\u9999\u6e2f\u90f5\u653f Hongkong Post"]["brand:en"="Hongkong Post"]["brand:wikidata"="Q196631"]["brand:zh"="\u9999\u6e2f\u90f5\u653f"]["name"="\u667a\u90f5\u5bc4 iPostal Kiosk"]["name:en"="iPostal Kiosk"]["name:zh"="\u667a\u90f5\u5bc4"]["operator"="\u9999\u6e2f\u90f5\u653f Hongkong Post"]["operator:en"="Hongkong Post"]["operator:wikidata"="Q196631"]["operator:zh"="\u9999\u6e2f\u90f5\u653f"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/HK_CWB_Postmen_and_Post_car.jpg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: '\u667a\u90f5\u5bc4 iPostal Kiosk',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="\u9999\u6e2f\u90f5\u653f Hongkong Post"]["brand:en"="Hongkong Post"]["brand:wikidata"="Q196631"]["brand:zh"="\u9999\u6e2f\u90f5\u653f"]["name"="\u667a\u90f5\u5bc4 iPostal Kiosk"]["name:en"="iPostal Kiosk"]["name:zh"="\u667a\u90f5\u5bc4"]["operator"="\u9999\u6e2f\u90f5\u653f Hongkong Post"]["operator:en"="Hongkong Post"]["operator:wikidata"="Q196631"]["operator:zh"="\u9999\u6e2f\u90f5\u653f"]({{bbox}});node(w););out meta;',
+    iconSrc: 'https://commons.wikimedia.org/wiki/Special:FilePath/HK_CWB_Postmen_and_Post_car.jpg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -24904,7 +24904,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/HK_CWB_Postmen_and_Post_car.jpg",
+                src: 'https://commons.wikimedia.org/wiki/Special:FilePath/HK_CWB_Postmen_and_Post_car.jpg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -24922,11 +24922,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "\u667a\u90f5\u7ad9 iPostal Station",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="\u9999\u6e2f\u90f5\u653f Hongkong Post"]["brand:en"="Hongkong Post"]["brand:wikidata"="Q196631"]["brand:zh"="\u9999\u6e2f\u90f5\u653f"]["name"="\u667a\u90f5\u7ad9 iPostal Station"]["name:en"="iPostal Station"]["name:zh"="\u667a\u90f5\u7ad9"]["operator"="\u9999\u6e2f\u90f5\u653f Hongkong Post"]["operator:en"="Hongkong Post"]["operator:wikidata"="Q196631"]["operator:zh"="\u9999\u6e2f\u90f5\u653f"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/HK_CWB_Postmen_and_Post_car.jpg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: '\u667a\u90f5\u7ad9 iPostal Station',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="\u9999\u6e2f\u90f5\u653f Hongkong Post"]["brand:en"="Hongkong Post"]["brand:wikidata"="Q196631"]["brand:zh"="\u9999\u6e2f\u90f5\u653f"]["name"="\u667a\u90f5\u7ad9 iPostal Station"]["name:en"="iPostal Station"]["name:zh"="\u667a\u90f5\u7ad9"]["operator"="\u9999\u6e2f\u90f5\u653f Hongkong Post"]["operator:en"="Hongkong Post"]["operator:wikidata"="Q196631"]["operator:zh"="\u9999\u6e2f\u90f5\u653f"]({{bbox}});node(w););out meta;',
+    iconSrc: 'https://commons.wikimedia.org/wiki/Special:FilePath/HK_CWB_Postmen_and_Post_car.jpg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -24940,7 +24940,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/HK_CWB_Postmen_and_Post_car.jpg",
+                src: 'https://commons.wikimedia.org/wiki/Special:FilePath/HK_CWB_Postmen_and_Post_car.jpg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -24958,11 +24958,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "\u8766\u76ae\u5e97\u5230\u5e97",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="\u8766\u76ae\u5e97\u5230\u5e97"]["brand:wikidata"="Q109676747"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: '\u8766\u76ae\u5e97\u5230\u5e97',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="\u8766\u76ae\u5e97\u5230\u5e97"]["brand:wikidata"="Q109676747"]({{bbox}});node(w););out meta;',
+    iconSrc: 'src/img/logos/generic.svg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -24976,7 +24976,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: 'src/img/logos/generic.svg',
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -24994,11 +24994,11 @@ style: function (feature) {
     }
 },
 {
-    group: "Amenities",
-    title: "\u9806\u8c50\u81ea\u52a9\u6ac3 SF Locker",
-    query: "(nwr["amenity"="parcel_locker"]["brand"="\u9806\u8c50\u901f\u904b SF Express"]["brand:en"="SF Express"]["brand:wikidata"="Q7390019"]["brand:zh"="\u9806\u8c50\u901f\u904b"]["name"="\u9806\u8c50\u81ea\u52a9\u6ac3 SF Locker"]["name:en"="SF Locker"]["name:zh"="\u9806\u8c50\u81ea\u52a9\u6ac3"]["operator"="\u9806\u8c50\u901f\u904b SF Express"]["operator:en"="SF Express"]["operator:wikidata"="Q7390019"]["operator:zh"="\u9806\u8c50\u901f\u904b"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/HK_SW_\u4e0a\u74b0_Sheung_Wan_\u6587\u54b8\u8857_Bonham_Strand_shops_n_buildings_March_2020_SS2_16.jpg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    group: 'Amenities',
+    title: '\u9806\u8c50\u81ea\u52a9\u6ac3 SF Locker',
+    query: '(nwr["amenity"="parcel_locker"]["brand"="\u9806\u8c50\u901f\u904b SF Express"]["brand:en"="SF Express"]["brand:wikidata"="Q7390019"]["brand:zh"="\u9806\u8c50\u901f\u904b"]["name"="\u9806\u8c50\u81ea\u52a9\u6ac3 SF Locker"]["name:en"="SF Locker"]["name:zh"="\u9806\u8c50\u81ea\u52a9\u6ac3"]["operator"="\u9806\u8c50\u901f\u904b SF Express"]["operator:en"="SF Express"]["operator:wikidata"="Q7390019"]["operator:zh"="\u9806\u8c50\u901f\u904b"]({{bbox}});node(w););out meta;',
+    iconSrc: 'https://commons.wikimedia.org/wiki/Special:FilePath/HK_SW_\u4e0a\u74b0_Sheung_Wan_\u6587\u54b8\u8857_Bonham_Strand_shops_n_buildings_March_2020_SS2_16.jpg',
+    iconStyle: 'background-color:rgba(255,255,255,0.4)',
     style: function (feature) {
         var key_regex = /^name$/
         var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -25012,7 +25012,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/HK_SW_\u4e0a\u74b0_Sheung_Wan_\u6587\u54b8\u8857_Bonham_Strand_shops_n_buildings_March_2020_SS2_16.jpg",
+                src: 'https://commons.wikimedia.org/wiki/Special:FilePath/HK_SW_\u4e0a\u74b0_Sheung_Wan_\u6587\u54b8\u8857_Bonham_Strand_shops_n_buildings_March_2020_SS2_16.jpg',
                 scale:0.02
             }),
             text: new ol.style.Text({
