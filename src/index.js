@@ -106,8 +106,9 @@ $(function () {
         updateUIWithTranslations();
 
         // Listen for language change
-        $('#language-selector').on('change', function() {
-            updateUIWithTranslations();
+        $('#language-selector').off('change').on('change', function() {
+            var newLang = $(this).val();
+            loadTranslations(newLang, updateUIWithTranslations);
         });
     });
     // --- End Layer Searcher Integration ---

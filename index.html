@@ -41,22 +41,56 @@
       <option value="ca">Català</option>
     </select>
   </div>
-	<div class="flex-row">
-  <!--@@ Modificar comentario de Javascript -->
+	<style>
+html, body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+#menu {
+  min-width: 200px;
+  max-width: 600px;
+  width: 320px;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow-y: auto;
+  z-index: 2;
+}
+#menu-resizer {
+  width: 6px;
+  cursor: ew-resize;
+  background: #eee;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  z-index: 3;
+}
+#map {
+  flex: 1 1 0%;
+  height: 100vh;
+  min-width: 0;
+  position: relative;
+}
+</style>
+<div class="flex-row">
   <div id="menu" class="osmcat-menu">
     <div id="legend"><h3 id="legend-title"></h3></div>
-    <!-- Layer Searcher (at the top) -->
     <div id="layer-search-container">
       <input type="text" id="layer-search" placeholder="Search layers...">
       <div id="layer-search-dropdown"></div>
     </div>
-    <!-- Layers section -->
-    <!-- Overlay Searcher (between Layers and Overlays) -->
     <div id="overlay-search-container">
       <input type="text" id="overlay-search" placeholder="Search overlays...">
       <div id="overlay-search-dropdown"></div>
     </div>
-    <!-- Overlays section -->
     <div id="overlay-list"></div>
   </div>
   <div id="menu-resizer"></div>
@@ -65,6 +99,29 @@
     Loading... You need Javascript...Cargando necesitas Javascript...Carregant...necessites Javascript
   </div>
 </div>
+<script>
+(function(){
+  var resizer = document.getElementById('menu-resizer');
+  var menu = document.getElementById('menu');
+  var startX, startWidth;
+  resizer.addEventListener('mousedown', function(e) {
+    startX = e.clientX;
+    startWidth = menu.offsetWidth;
+    document.body.style.cursor = 'ew-resize';
+    document.addEventListener('mousemove', resizeMenu);
+    document.addEventListener('mouseup', stopResize);
+  });
+  function resizeMenu(e) {
+    var newWidth = Math.min(Math.max(startWidth + (e.clientX - startX), 200), 600);
+    menu.style.width = newWidth + 'px';
+  }
+  function stopResize() {
+    document.body.style.cursor = '';
+    document.removeEventListener('mousemove', resizeMenu);
+    document.removeEventListener('mouseup', stopResize);
+  }
+})();
+</script>
 <style>
 .flex-row {
   display: flex;
