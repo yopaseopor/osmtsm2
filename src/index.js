@@ -54,8 +54,8 @@ $(function () {
             // Use translation key if provided, else fallback to title
             var titleKey = layer.title && layer.title.startsWith('layers.') ? layer.title : null;
             var groupKey = layer.group && layer.group.startsWith('category.') ? layer.group : null;
-            var displayTitle = titleKey ? t(layer.title) : layer.title;
-            var displayGroup = groupKey ? t(layer.group) : (layer.group || '');
+            var displayTitle = titleKey && t(layer.title) !== layer.title ? t(layer.title) : (layer.title || '');
+            var displayGroup = groupKey && t(layer.group) !== layer.group ? t(layer.group) : (layer.group || '');
             var $item = $('<div>').addClass('layer-list-item').text((displayGroup ? displayGroup + ': ' : '') + displayTitle);
             if (isActive) $item.addClass('active').attr('tabindex', 0);
             $item.css({cursor:'pointer'}).on('click', function() {
@@ -189,8 +189,8 @@ $(function () {
                 // Use translation key if provided, else fallback to title
                 var titleKey = overlay.title && overlay.title.startsWith('overlays.') ? overlay.title : null;
                 var groupKey = overlay.group && overlay.group.startsWith('category.') ? overlay.group : null;
-                var displayTitle = titleKey ? t(overlay.title) : overlay.title;
-                var displayGroup = groupKey ? t(overlay.group) : (overlay.group || '');
+                var displayTitle = titleKey && t(overlay.title) !== overlay.title ? t(overlay.title) : (overlay.title || '');
+                var displayGroup = groupKey && t(overlay.group) !== overlay.group ? t(overlay.group) : (overlay.group || '');
                 var $item = $('<div>').addClass('overlay-list-item').text((displayGroup ? displayGroup + ': ' : '') + displayTitle);
                 if (isActive) $item.addClass('active').attr('tabindex', 0);
                 $item.css({cursor:'pointer'}).on('click', function() {
