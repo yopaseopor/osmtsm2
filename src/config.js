@@ -25028,7 +25028,7 @@ style: function (feature) {
         });
         return style;
     }
-}
+},
 
 
 
