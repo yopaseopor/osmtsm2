@@ -16,7 +16,14 @@ $(function () {
         });
     }
     // 2. Define window.renderLayerList
-    window.renderLayerList = function(filtered, query) {
+    // Pagination state for layers
+    window._layerListBatchSize = 50;
+    window._layerListLoaded = 50;
+    window.renderLayerList = function(filtered, query, resetBatch) {
+        if (resetBatch) window._layerListLoaded = window._layerListBatchSize;
+        filtered = filtered || window.layers;
+        var total = filtered.length;
+        var loaded = Math.min(window._layerListLoaded, total);
         // Update the layer list title with translation
         $('#layer-list-title').remove();
         var $title = $('<div id="layer-list-title" class="list-title"></div>').text(t('layers.osm_layer'));
@@ -42,7 +49,7 @@ $(function () {
                 activeLayer = layerGroup;
             }
         });
-        filtered.forEach(function(layer, idx) {
+        filtered.slice(0, loaded).forEach(function(layer, idx) {
             var isActive = activeLayer && ((layer.id && activeLayer.get('id') === layer.id) || (activeLayer.get('title') === layer.title && activeLayer.get('group') === layer.group));
             // Use translation key if provided, else fallback to title
             var titleKey = layer.title && layer.title.startsWith('layers.') ? layer.title : null;
@@ -103,12 +110,18 @@ $(function () {
     $(document).ready(function() {
         window.renderLayerList(window.layers);
         window.renderOverlayList(window.overlays);
-        updateUIWithTranslations();
+        function updateUIWithTranslations() {
+            // Reset batch state for lists
+            window._layerListLoaded = window._layerListBatchSize || 50;
+            window._overlayListLoaded = window._overlayListBatchSize || 50;
 
-        // Listen for language change
-        $('#language-selector').off('change').on('change', function() {
-            var newLang = $(this).val();
-            loadTranslations(newLang, updateUIWithTranslations);
+            // Listen for language change
+            $('#language-selector').off('change').on('change', function() {
+                var newLang = $(this).val();
+                loadTranslations(newLang, updateUIWithTranslations);
+            });
+        }
+        updateUIWithTranslations();
         });
     });
     // --- End Layer Searcher Integration ---
@@ -127,7 +140,14 @@ $(function () {
         });
     }
     // 2. Define window.renderOverlayList
-    window.renderOverlayList = function(filtered, query) {
+    // Pagination state for overlays
+    window._overlayListBatchSize = 50;
+    window._overlayListLoaded = 50;
+    window.renderOverlayList = function(filtered, query, resetBatch) {
+        if (resetBatch) window._overlayListLoaded = window._overlayListBatchSize;
+        filtered = filtered || window.overlays;
+        var total = filtered.length;
+        var loaded = Math.min(window._overlayListLoaded, total);
         // Update the overlay list title with translation
         $('#overlay-list-title').remove();
         var $title = $('<div id="overlay-list-title" class="list-title"></div>').text(t('overlays.nsi_overlay'));
@@ -154,7 +174,7 @@ $(function () {
         });
         // Group overlays by first letter only, show max 10 per letter
         var letterMap = {};
-        filtered.forEach(function(overlay) {
+        filtered.slice(0, loaded).forEach(function(overlay) {
             var titleOrGroup = (overlay.title || overlay.group || '').trim();
             var firstLetter = titleOrGroup.charAt(0) ? titleOrGroup.charAt(0).toUpperCase() : '_';
             if (!letterMap[firstLetter]) letterMap[firstLetter] = [];
