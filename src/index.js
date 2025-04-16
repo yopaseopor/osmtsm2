@@ -127,21 +127,22 @@ $(function () {
                 });
             }
         });
-        // Group overlays by (first letter, group, second letter)
+        // Group overlays by (first letter, group, second letter) and strictly limit to 10 per combo
         var groupMap = {};
         filtered.forEach(function(overlay) {
             var titleOrGroup = (overlay.title || overlay.group || '').trim();
-            var firstLetter = titleOrGroup.charAt(0).toUpperCase();
-            var secondLetter = titleOrGroup.charAt(1) ? titleOrGroup.charAt(1).toUpperCase() : '';
-            var groupKey = overlay.group || '';
+            var firstLetter = titleOrGroup.charAt(0) ? titleOrGroup.charAt(0).toUpperCase() : '_';
+            var secondLetter = titleOrGroup.charAt(1) ? titleOrGroup.charAt(1).toUpperCase() : '_';
+            var groupKey = overlay.group || '_';
             var key = firstLetter + '|' + groupKey + '|' + secondLetter;
             if (!groupMap[key]) groupMap[key] = [];
-            groupMap[key].push(overlay);
+            if (groupMap[key].length < 10) {
+                groupMap[key].push(overlay);
+            }
         });
-        // For each group, show up to 10 overlays
+        // Render overlays (max 10 per key)
         Object.keys(groupMap).sort().forEach(function(key) {
-            var overlays = groupMap[key].slice(0, 10);
-            overlays.forEach(function(overlay) {
+            groupMap[key].forEach(function(overlay) {
                 var isActive = activeOverlay && ((overlay.id && activeOverlay.get('id') === overlay.id) || (activeOverlay.get('title') === overlay.title && activeOverlay.get('group') === overlay.group));
                 var $item = $('<div>').addClass('overlay-list-item').text((overlay.group ? overlay.group + ': ' : '') + overlay.title);
                 if (isActive) $item.addClass('active').attr('tabindex', 0);
