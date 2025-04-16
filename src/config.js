@@ -21214,10 +21214,10 @@ style: function (feature) {
 },
    // --- NSI Brand Overlays (auto-generated) ---
 {
-    group: "Shops",
-    title: "AFGRI Equipment",
-    query: "(nwr["brand:wikidata"="Q119264464"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "&pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"&pizza\"][\"brand:wikidata\"=\"Q21189222\"][\"cuisine\"=\"pizza\"][\"name\"=\"&pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/&pizza_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -21232,7 +21232,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/&pizza_logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -21250,9 +21250,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "AG Warehouse",
-    query: "(nwr["brand:wikidata"="Q119261591"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "21\u98a8\u5473\u9928",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"21\u98a8\u5473\u9928\"][\"brand:en\"=\"21Plus\"][\"brand:wikidata\"=\"Q28416350\"][\"brand:zh\"=\"21\u98a8\u5473\u9928\"][\"cuisine\"=\"chicken\"][\"name\"=\"21\u98a8\u5473\u9928\"][\"name:en\"=\"21Plus\"][\"name:zh\"=\"21\u98a8\u5473\u9928\"][\"operator\"=\"\u7d71\u4e00\u8d85\u5546\"][\"operator:wikidata\"=\"Q4642867\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -21286,10 +21286,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Coastals",
-    query: "(nwr["brand:wikidata"="Q122964329"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "241 Pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"241 Pizza\"][\"brand:wikidata\"=\"Q4631768\"][\"cuisine\"=\"pizza\"][\"name\"=\"241 Pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/241_Pizza_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -21304,7 +21304,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/241_Pizza_logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -21322,10 +21322,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Felleskj\u00f8pet",
-    query: "(nwr["brand:wikidata"="Q5442461"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "4Fingers Crispy Chicken",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"4Fingers Crispy Chicken\"][\"brand:wikidata\"=\"Q23043391\"][\"cuisine\"=\"chicken\"][\"name\"=\"4Fingers Crispy Chicken\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/4fingersbrisbane.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -21340,7 +21340,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/4fingersbrisbane.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -21358,9 +21358,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Grene",
-    query: "(nwr["brand"="Grene"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "72\u8857",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"72\u8857\"][\"brand:en\"=\"72 Street\"][\"brand:wikidata\"=\"Q108683743\"][\"brand:zh\"=\"72\u8857\"][\"cuisine\"=\"chinese\"][\"name\"=\"72\u8857\"][\"name:en\"=\"72 Street\"][\"name:zh\"=\"72\u8857\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -21394,10 +21394,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Southern States",
-    query: "(nwr["brand:wikidata"="Q7570508"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "A&W (Canada)",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"A&W\"][\"brand:wikidata\"=\"Q2818848\"][\"cuisine\"=\"burger\"][\"name\"=\"A&W\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/A&W_Canada_Logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -21412,7 +21412,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/A&W_Canada_Logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -21430,9 +21430,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "UFA",
-    query: "(nwr["brand:wikidata"="Q1809831"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "A&W (Malaysia)",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"A&W\"][\"brand:wikidata\"=\"Q132858554\"][\"cuisine\"=\"burger\"][\"name\"=\"A&W\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -21466,10 +21466,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Wilco",
-    query: "(nwr["brand:wikidata"="Q8000290"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "A&W (USA)",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"A&W\"][\"brand:wikidata\"=\"Q277641\"][\"cuisine\"=\"burger\"][\"name\"=\"A&W\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/All_American_Food_Logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -21484,7 +21484,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/All_American_Food_Logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -21502,9 +21502,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "ZG Raiffeisen Agrar",
-    query: "(nwr["brand:wikidata"="Q136135"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Abokado",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Abokado\"][\"brand:wikidata\"=\"Q21006819\"][\"cuisine\"=\"japanese\"][\"name\"=\"Abokado\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -21538,9 +21538,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "ZG Raiffeisen Technik",
-    query: "(nwr["brand:wikidata"="Q136135"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "A\u00e7a\u00ed Concept",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"A\u00e7a\u00ed Concept\"][\"brand:wikidata\"=\"Q110138105\"][\"cuisine\"=\"a\u00e7a\u00ed\"][\"name\"=\"A\u00e7a\u00ed Concept\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -21574,9 +21574,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "1. day",
-    query: "(nwr["brand:wikidata"="Q108149927"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Aik \u0411\u0438\u0441\u0442\u0440\u043e",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Aik \u0411\u0438\u0441\u0442\u0440\u043e\"][\"cuisine\"=\"burger;kebab;pizza;shawarma\"][\"name\"=\"Aik \u0411\u0438\u0441\u0442\u0440\u043e\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -21610,9 +21610,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "ABC (North Carolina)",
-    query: "(nwr["brand:wikidata"="Q7054415"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Al's Beef",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Al's Beef\"][\"brand:wikidata\"=\"Q110609570\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Al's Beef\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -21646,9 +21646,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Alcohol & Tabakoff",
-    query: "(nwr["brand:wikidata"="Q111364479"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Aladin Foods",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Aladin Foods\"][\"brand:wikidata\"=\"Q115656547\"][\"cuisine\"=\"bulgarian\"][\"name\"=\"Aladin Foods\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -21682,9 +21682,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Alko",
-    query: "(nwr["brand:wikidata"="Q1849187"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Ali Baba's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Ali Baba's\"][\"brand:wikidata\"=\"Q105398745\"][\"cuisine\"=\"shawarma\"][\"name\"=\"Ali Baba's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -21718,9 +21718,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Bargain Booze",
-    query: "(nwr["brand:wikidata"="Q16971315"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Alice",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Alice\"][\"brand:wikidata\"=\"Q113973272\"][\"cuisine\"=\"pizza\"][\"name\"=\"Alice\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -21754,9 +21754,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Barrique",
-    query: "(nwr["brand:wikidata"="Q114133164"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Aloha Pok\u0113 Co",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Aloha Pok\u0113 Co\"][\"brand:wikidata\"=\"Q111231031\"][\"cuisine\"=\"poke\"][\"name\"=\"Aloha Pok\u0113 Co\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -21790,9 +21790,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "BC Liquor Store",
-    query: "(nwr["brand:wikidata"="Q43079557"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Amato's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Amato's\"][\"brand:wikidata\"=\"Q4740614\"][\"cuisine\"=\"sandwich;italian\"][\"name\"=\"Amato's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -21826,9 +21826,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Beer Market",
-    query: "(nwr["brand:wikidata"="Q119202199"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "American Deli",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"American Deli\"][\"brand:wikidata\"=\"Q119993570\"][\"cuisine\"=\"american\"][\"name\"=\"American Deli\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -21862,9 +21862,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Bevco",
-    query: "(nwr["brand:wikidata"="Q6393413"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Amigos",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Amigos\"][\"brand:wikidata\"=\"Q104878696\"][\"cuisine\"=\"tex-mex\"][\"name\"=\"Amigos\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -21898,9 +21898,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "BevMo!",
-    query: "(nwr["brand:wikidata"="Q4899308"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Andok's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Andok's\"][\"brand:wikidata\"=\"Q62267166\"][\"cuisine\"=\"chicken\"][\"name\"=\"Andok's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -21934,9 +21934,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Binny's Beverage Depot",
-    query: "(nwr["brand:wikidata"="Q30687714"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Angel's Burger",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Angel's Burger\"][\"brand:wikidata\"=\"Q62267228\"][\"cuisine\"=\"burger\"][\"name\"=\"Angel's Burger\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -21970,10 +21970,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Blue Bottle Liquors",
-    query: "(nwr["brand:wikidata"="Q116861688"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "AnyTyme",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"AnyTyme\"][\"brand:wikidata\"=\"Q116172805\"][\"cuisine\"=\"friture\"][\"name\"=\"AnyTyme\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/AnyTime,_Blijham_(2018)_01.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -21988,7 +21988,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/AnyTime,_Blijham_(2018)_01.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -22006,10 +22006,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Blue Bottle Liquors Express",
-    query: "(nwr["brand:wikidata"="Q116861688"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Apache Pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Apache Pizza\"][\"brand:wikidata\"=\"Q22031794\"][\"cuisine\"=\"pizza\"][\"name\"=\"Apache Pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Apache_Pizza_HQ.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -22024,7 +22024,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Apache_Pizza_HQ.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -22042,10 +22042,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Blue Bottle Liquors Platinum",
-    query: "(nwr["brand:wikidata"="Q116861688"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Arby's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Arby's\"][\"brand:wikidata\"=\"Q630866\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Arby's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Arby's_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -22060,7 +22060,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Arby's_logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -22078,10 +22078,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Blue Bottle Liquors XL",
-    query: "(nwr["brand:wikidata"="Q116861688"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Arctic Circle",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Arctic Circle\"][\"brand:wikidata\"=\"Q4787501\"][\"cuisine\"=\"burger\"][\"name\"=\"Arctic Circle\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Arctic_Circle_Restaurant.jpeg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -22096,7 +22096,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Arctic_Circle_Restaurant.jpeg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -22114,9 +22114,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Bottlemart",
-    query: "(nwr["brand:wikidata"="Q102863175"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Asiahung",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Asiahung\"][\"brand:wikidata\"=\"Q100406310\"][\"cuisine\"=\"asian\"][\"name\"=\"Asiahung\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -22150,10 +22150,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Boxer Liquors",
-    query: "(nwr["brand:wikidata"="Q122766666"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Au Bon Pain",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Au Bon Pain\"][\"brand:wikidata\"=\"Q4818942\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Au Bon Pain\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Au_Bon_Pain_2018_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -22168,7 +22168,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Au_Bon_Pain_2018_logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -22186,10 +22186,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "BWS",
-    query: "(nwr["brand:wikidata"="Q4836848"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Auntie Anne's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Auntie Anne's\"][\"brand:wikidata\"=\"Q4822010\"][\"cuisine\"=\"pretzel\"][\"name\"=\"Auntie Anne's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Auntie_Anne's_logo_and_slogan.png",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -22204,7 +22204,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Auntie_Anne's_logo_and_slogan.png",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -22222,9 +22222,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Carry Out",
-    query: "(nwr["brand:wikidata"="Q116645699"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "B-Bop's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"B-Bop's\"][\"brand:wikidata\"=\"Q4833669\"][\"cuisine\"=\"burger\"][\"name\"=\"B-Bop's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -22258,10 +22258,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Cavavin",
-    query: "(nwr["brand"="Cavavin"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Back Yard Burgers",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Back Yard Burgers\"][\"brand:wikidata\"=\"Q2878376\"][\"cuisine\"=\"burger\"][\"name\"=\"Back Yard Burgers\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Back_Yard_Burgers_Hendersonville_TN_USA.JPG",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -22276,7 +22276,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Back_Yard_Burgers_Hendersonville_TN_USA.JPG",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -22294,9 +22294,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Cellarbrations",
-    query: "(nwr["brand:wikidata"="Q109807592"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Bafang Dumpling",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Bafang Dumpling\"][\"brand:wikidata\"=\"Q28417381\"][\"cuisine\"=\"dumplings\"][\"name\"=\"Bafang Dumpling\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -22330,9 +22330,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Clapton Craft",
-    query: "(nwr["brand:wikidata"="Q110154844"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Bafra Kebab",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Bafra Kebab\"][\"brand:wikidata\"=\"Q130582122\"][\"cuisine\"=\"kebab\"][\"name\"=\"Bafra Kebab\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -22366,9 +22366,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Cortez",
-    query: "(nwr["brand:wikidata"="Q132184090"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Bagel Corner",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Bagel Corner\"][\"brand:wikidata\"=\"Q104649272\"][\"cuisine\"=\"bagel\"][\"name\"=\"Bagel Corner\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -22402,10 +22402,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Dan Murphy's",
-    query: "(nwr["brand:wikidata"="Q5214075"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Bageterie Boulevard",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Bageterie Boulevard\"][\"brand:wikidata\"=\"Q10859823\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Bageterie Boulevard\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bageterie_Boulevard_logo.png",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -22420,7 +22420,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bageterie_Boulevard_logo.png",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -22438,9 +22438,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Dirck III",
-    query: "(nwr["brand:wikidata"="Q109188079"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Baguette & Baguette",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Baguette & Baguette\"][\"brand:wikidata\"=\"Q109726861\"][\"cuisine\"=\"burger\"][\"name\"=\"Baguette & Baguette\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -22474,10 +22474,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Duncan's",
-    query: "(nwr["brand:wikidata"="Q119104909"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Baja Fresh",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Baja Fresh\"][\"brand:wikidata\"=\"Q2880019\"][\"cuisine\"=\"mexican\"][\"name\"=\"Baja Fresh\"][\"official_name\"=\"Baja Fresh Mexican Grill\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_of_Baja_Fresh_(2012\u20132017).png",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -22492,7 +22492,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_of_Baja_Fresh_(2012\u20132017).png",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -22510,9 +22510,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Du\u017cy Ben",
-    query: "(nwr["brand:wikidata"="Q110428071"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Baliwag",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Baliwag\"][\"brand:wikidata\"=\"Q120755696\"][\"cuisine\"=\"barbecue;filipino\"][\"name\"=\"Baliwag\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -22546,9 +22546,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Fine Wine & Good Spirits",
-    query: "(nwr["brand:wikidata"="Q64514776"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Barberitos",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Barberitos\"][\"brand:wikidata\"=\"Q4859607\"][\"cuisine\"=\"mexican\"][\"name\"=\"Barberitos\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -22582,9 +22582,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "First Choice Liquor",
-    query: "(nwr["brand:wikidata"="Q4596269"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "BarBurrito (Canada)",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"BarBurrito\"][\"brand:wikidata\"=\"Q104844862\"][\"cuisine\"=\"mexican\"][\"name\"=\"BarBurrito\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -22618,10 +22618,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Gall & Gall",
-    query: "(nwr["brand:wikidata"="Q13639185"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Barburrito (UK)",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Barburrito\"][\"brand:wikidata\"=\"Q16983668\"][\"cuisine\"=\"mexican\"][\"name\"=\"Barburrito\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Barburito,_Boar_Lane,_Leeds_(30th_March_2013).JPG",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -22636,7 +22636,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Barburito,_Boar_Lane,_Leeds_(30th_March_2013).JPG",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -22654,9 +22654,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Good Beer",
-    query: "(nwr["brand:wikidata"="Q122413735"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Basil Box",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Basil Box\"][\"brand:wikidata\"=\"Q112966056\"][\"cuisine\"=\"thai\"][\"name\"=\"Basil Box\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -22690,9 +22690,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Henry's",
-    query: "(nwr["brand:wikidata"="Q111017798"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Bayd\u00f6ner",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Bayd\u00f6ner\"][\"brand:wikidata\"=\"Q28940521\"][\"cuisine\"=\"kebab\"][\"name\"=\"Bayd\u00f6ner\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -22726,9 +22726,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Hop Hey",
-    query: "(nwr["brand:wikidata"="Q104829481"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Beijing Bites",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Beijing Bites\"][\"brand:wikidata\"=\"Q124374289\"][\"cuisine\"=\"chinese\"][\"delivery\"=\"yes\"][\"name\"=\"Beijing Bites\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -22762,10 +22762,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "La Cervoiserie",
-    query: "(nwr["brand:wikidata"="Q101788539"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Bembos",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Bembos\"][\"brand:wikidata\"=\"Q466971\"][\"cuisine\"=\"burger\"][\"name\"=\"Bembos\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bembos_logo15.png",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -22780,7 +22780,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bembos_logo15.png",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -22798,9 +22798,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Ladoga Wine",
-    query: "(nwr["brand"="Ladoga Wine"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Bento",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Bento\"][\"brand:wikidata\"=\"Q105906945\"][\"cuisine\"=\"japanese\"][\"name\"=\"Bento\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -22834,9 +22834,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "LCBO",
-    query: "(nwr["brand:wikidata"="Q845263"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Berlin D\u00f6ner Kebap",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Berlin D\u00f6ner Kebap\"][\"brand:wikidata\"=\"Q126195313\"][\"cuisine\"=\"kebab\"][\"name\"=\"Berlin D\u00f6ner Kebap\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -22870,9 +22870,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Legion Co",
-    query: "(nwr["brand"="Legion Co"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Betty's Burgers",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Betty's Burgers\"][\"brand:wikidata\"=\"Q109406096\"][\"cuisine\"=\"burger\"][\"name\"=\"Betty's Burgers\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -22906,9 +22906,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Liquor City",
-    query: "(nwr["brand:wikidata"="Q116620538"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Big Apple Bagels",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Big Apple Bagels\"][\"brand:wikidata\"=\"Q4904937\"][\"cuisine\"=\"bagel\"][\"name\"=\"Big Apple Bagels\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -22942,10 +22942,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Liquor Depot",
-    query: "(nwr["brand"="Liquor Depot"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Big Bite",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Big Bite\"][\"brand:wikidata\"=\"Q11960977\"][\"cuisine\"=\"sandwich\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Big_Bite_Logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -22960,7 +22960,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Big_Bite_Logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -22978,10 +22978,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Liquor Mart",
-    query: "(nwr["brand:wikidata"="Q124030913"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Big Fernand",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Big Fernand\"][\"brand:wikidata\"=\"Q19521346\"][\"cuisine\"=\"burger\"][\"name\"=\"Big Fernand\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Big_Fernand.png",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -22996,7 +22996,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Big_Fernand.png",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -23014,9 +23014,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Liquorland (Australia)",
-    query: "(nwr["brand:wikidata"="Q2283837"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Bill Miller Bar-B-Q",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Bill Miller Bar-B-Q\"][\"brand:wikidata\"=\"Q4910194\"][\"cuisine\"=\"barbecue\"][\"name\"=\"Bill Miller Bar-B-Q\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -23050,9 +23050,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Liquorland (New Zealand)",
-    query: "(nwr["brand:wikidata"="Q110295342"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Billy Tacos",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Billy Tacos\"][\"brand:wikidata\"=\"Q122167398\"][\"cuisine\"=\"tacos;mexican\"][\"name\"=\"Billy Tacos\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -23086,10 +23086,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "LiquorShop Checkers",
-    query: "(nwr["brand:wikidata"="Q5089126"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Biscuitville",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Biscuitville\"][\"brand:wikidata\"=\"Q4917274\"][\"cuisine\"=\"american;breakfast\"][\"name\"=\"Biscuitville\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/2008-08-10_Biscuitville_in_Durham.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -23104,7 +23104,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/2008-08-10_Biscuitville_in_Durham.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -23122,9 +23122,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "LiquorShop Shoprite",
-    query: "(nwr["brand:wikidata"="Q1857639"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Blackjack Pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Blackjack Pizza\"][\"brand:wikidata\"=\"Q4923061\"][\"cuisine\"=\"pizza\"][\"name\"=\"Blackjack Pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -23158,10 +23158,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Majestic",
-    query: "(nwr["brand:wikidata"="Q6737725"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Blake's Lotaburger",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Blake's Lotaburger\"][\"brand:wikidata\"=\"Q4924308\"][\"cuisine\"=\"burger\"][\"name\"=\"Blake's Lotaburger\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Blakes_Lotaburger_Logo.png",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -23176,7 +23176,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Blakes_Lotaburger_Logo.png",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -23194,10 +23194,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Market Liquors",
-    query: "(nwr["brand:wikidata"="Q116895063"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Blimpie",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Blimpie\"][\"brand:wikidata\"=\"Q4926479\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Blimpie\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Blimpie_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -23212,7 +23212,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Blimpie_logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -23230,9 +23230,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Mitra",
-    query: "(nwr["brand:wikidata"="Q109186241"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Blue Star Donuts",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Blue Star Donuts\"][\"brand:wikidata\"=\"Q96373725\"][\"cuisine\"=\"donut\"][\"name\"=\"Blue Star Donuts\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -23266,9 +23266,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Modelorama",
-    query: "(nwr["brand:wikidata"="Q122153017"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "BMS \u0411\u044a\u043b\u0433\u0430\u0440\u0441\u043a\u0430 \u043a\u0443\u0445\u043d\u044f",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"BMS \u0411\u044a\u043b\u0433\u0430\u0440\u0441\u043a\u0430 \u043a\u0443\u0445\u043d\u044f\"][\"brand:wikidata\"=\"Q118558950\"][\"cuisine\"=\"regional\"][\"name\"=\"BMS \u0411\u044a\u043b\u0433\u0430\u0440\u0441\u043a\u0430 \u043a\u0443\u0445\u043d\u044f\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -23302,9 +23302,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Mr Liquor",
-    query: "(nwr["brand:wikidata"="Q117822077"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Board & Brew",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Board & Brew\"][\"brand:wikidata\"=\"Q110648005\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Board & Brew\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -23338,10 +23338,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "New Hampshire Liquor & Wine Outlet",
-    query: "(nwr["brand:wikidata"="Q98400557"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Bob's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Bob's\"][\"brand:wikidata\"=\"Q1392113\"][\"cuisine\"=\"burger\"][\"name\"=\"Bob's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bobs_2014_Logo.png",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -23356,7 +23356,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bobs_2014_Logo.png",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -23374,9 +23374,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Nicolas",
-    query: "(nwr["brand:wikidata"="Q3340012"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Bobablastic",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Bobablastic\"][\"brand:wikidata\"=\"Q108499280\"][\"cuisine\"=\"bubble_tea\"][\"name\"=\"Bobablastic\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -23410,10 +23410,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "NSLC",
-    query: "(nwr["brand:wikidata"="Q17018587"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Bojangles'",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Bojangles'\"][\"brand:wikidata\"=\"Q891163\"][\"cuisine\"=\"chicken\"][\"name\"=\"Bojangles'\"][\"official_name\"=\"Bojangles' Famous Chicken 'n Biscuits\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/DAP_Bull_890625b.JPG",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -23428,7 +23428,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/DAP_Bull_890625b.JPG",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -23446,9 +23446,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "O'Briens Wine",
-    query: "(nwr["brand:wikidata"="Q113151266"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Boojum",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Boojum\"][\"brand:wikidata\"=\"Q111973095\"][\"cuisine\"=\"mexican\"][\"name\"=\"Boojum\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -23482,10 +23482,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "OK Liquor",
-    query: "(nwr["brand:wikidata"="Q116520424"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Booster Juice",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Booster Juice\"][\"brand:wikidata\"=\"Q4943796\"][\"cuisine\"=\"juice\"][\"name\"=\"Booster Juice\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BoosterJuiceMarkhamTownSquare.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -23500,7 +23500,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/BoosterJuiceMarkhamTownSquare.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -23518,10 +23518,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Pick n Pay Liquor",
-    query: "(nwr["brand:wikidata"="Q122764458"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Boston Market",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Boston Market\"][\"brand:wikidata\"=\"Q603617\"][\"cuisine\"=\"american;chicken\"][\"name\"=\"Boston Market\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/2008-08-11_Boston_Market_in_Durham.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -23536,7 +23536,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/2008-08-11_Boston_Market_in_Durham.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -23554,9 +23554,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Prestons",
-    query: "(nwr["brand:wikidata"="Q116861728"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Bourbon St. Grill",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Bourbon St. Grill\"][\"brand:wikidata\"=\"Q123409942\"][\"cuisine\"=\"cajun\"][\"name\"=\"Bourbon St. Grill\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -23590,10 +23590,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Prolicor",
-    query: "(nwr["brand"="Prolicor"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Bram Ladage",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Bram Ladage\"][\"brand:wikidata\"=\"Q2216467\"][\"cuisine\"=\"friture\"][\"name\"=\"Bram Ladage\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bram_Ladage_logo_01.png",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -23608,7 +23608,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bram_Ladage_logo_01.png",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -23626,10 +23626,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "SAQ",
-    query: "(nwr["brand:wikidata"="Q3488077"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Braum's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Braum's\"][\"brand:wikidata\"=\"Q4958263\"][\"cuisine\"=\"ice_cream;burger\"][\"name\"=\"Braum's\"][\"shop\"=\"dairy\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Braums_Sign_Kansas_Restaurant_2009-09-06.JPG",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -23644,7 +23644,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Braums_Sign_Kansas_Restaurant_2009-09-06.JPG",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -23662,10 +23662,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "SAQ Express",
-    query: "(nwr["brand:wikidata"="Q3488077"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Brezelk\u00f6nig",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Brezelk\u00f6nig\"][\"brand:wikidata\"=\"Q111728604\"][\"cuisine\"=\"pretzel\"][\"name\"=\"Brezelk\u00f6nig\"][\"takeaway\"=\"only\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Brezelk\u00f6nig.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -23680,7 +23680,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Brezelk\u00f6nig.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -23698,9 +23698,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "SAQ S\u00e9lection",
-    query: "(nwr["brand:wikidata"="Q3488077"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Bronson's Burgers",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Bronson's Burgers\"][\"brand:wikidata\"=\"Q130324220\"][\"cuisine\"=\"burger\"][\"diet:halal\"=\"yes\"][\"diet:vegan\"=\"no\"][\"diet:vegetarian\"=\"no\"][\"name\"=\"Bronson's Burgers\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -23734,9 +23734,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Smugglers / \u10e1\u10db\u10d0\u10d2\u10da\u10d4\u10e0\u10e1\u10d8 / \u0421\u043c\u0430\u0433\u043b\u0435\u0440\u0441",
-    query: "(nwr["brand:wikidata"="Q131469986"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Brown's Chicken",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Brown's Chicken\"][\"brand:wikidata\"=\"Q4975925\"][\"cuisine\"=\"chicken\"][\"name\"=\"Brown's Chicken\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -23770,10 +23770,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Sobeys Liquor",
-    query: "(nwr["brand:wikidata"="Q1143340"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Bruegger's Bagels",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Bruegger's Bagels\"][\"brand:wikidata\"=\"Q4978656\"][\"cuisine\"=\"bagel\"][\"name\"=\"Bruegger's Bagels\"][\"short_name\"=\"Bruegger's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Original_Brueggers.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -23788,7 +23788,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Original_Brueggers.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -23806,9 +23806,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Spec's",
-    query: "(nwr["brand:wikidata"="Q7574415"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Brut Butcher",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Brut Butcher\"][\"brand:wikidata\"=\"Q100324445\"][\"cuisine\"=\"barbecue;burger;chicken;ice_cream;meat;steak_house\"][\"name\"=\"Brut Butcher\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -23842,9 +23842,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Super Liquor",
-    query: "(nwr["brand:wikidata"="Q112038718"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Bubbakoo's Burritos",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Bubbakoo's Burritos\"][\"brand:wikidata\"=\"Q114619751\"][\"cuisine\"=\"mexican\"][\"name\"=\"Bubbakoo's Burritos\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -23878,10 +23878,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Systembolaget",
-    query: "(nwr["brand:wikidata"="Q1476113"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Buddy's Pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Buddy's Pizza\"][\"brand:wikidata\"=\"Q4984775\"][\"cuisine\"=\"pizza\"][\"name\"=\"Buddy's Pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Buddy's_Pizza_restaurant_Livonia_Michigan.JPG",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -23896,7 +23896,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Buddy's_Pizza_restaurant_Livonia_Michigan.JPG",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -23914,10 +23914,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "The Beer Store",
-    query: "(nwr["brand:wikidata"="Q16243674"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Bufkes",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Bufkes\"][\"brand:wikidata\"=\"Q124348748\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Bufkes\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bufkes_Logo.png",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -23932,7 +23932,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bufkes_Logo.png",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -23950,9 +23950,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "The Bottle-O",
-    query: "(nwr["brand:wikidata"="Q111015122"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Bumpers",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Bumpers\"][\"brand:wikidata\"=\"Q108523527\"][\"cuisine\"=\"american\"][\"name\"=\"Bumpers\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -23986,10 +23986,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Thirsty Camel",
-    query: "(nwr["brand:wikidata"="Q113503937"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Buona",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Buona\"][\"brand:wikidata\"=\"Q23461372\"][\"cuisine\"=\"italian\"][\"name\"=\"Buona\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Buona_St._Charles_2016.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -24004,7 +24004,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Buona_St._Charles_2016.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -24022,10 +24022,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Thirsty Liquor",
-    query: "(nwr["brand"="Thirsty Liquor"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Burger King",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Burger King\"][\"brand:wikidata\"=\"Q177054\"][\"cuisine\"=\"burger\"][\"name\"=\"Burger King\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Burger_King_2020.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -24040,7 +24040,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Burger_King_2020.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -24058,9 +24058,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Tops at Spar",
-    query: "(nwr["brand:wikidata"="Q116377563"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Burger Machine",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Burger Machine\"][\"brand:wikidata\"=\"Q4998549\"][\"cuisine\"=\"burger\"][\"name\"=\"Burger Machine\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -24094,9 +24094,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Total Wine",
-    query: "(nwr["brand:wikidata"="Q7828084"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Burger Street",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Burger Street\"][\"brand:wikidata\"=\"Q4998556\"][\"cuisine\"=\"burger;sandwich\"][\"name\"=\"Burger Street\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -24130,10 +24130,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Ultra Liquors",
-    query: "(nwr["brand:wikidata"="Q116620602"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Burger Urge",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Burger Urge\"][\"brand:wikidata\"=\"Q19589751\"][\"cuisine\"=\"burger\"][\"name\"=\"Burger Urge\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Burger_Urge.png",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -24148,7 +24148,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Burger_Urge.png",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -24166,10 +24166,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "V and B",
-    query: "(nwr["brand:wikidata"="Q100706329"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Burgeranch",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Burgeranch\"][\"brand:wikidata\"=\"Q950269\"][\"cuisine\"=\"burger\"][\"name\"=\"\u05d1\u05d5\u05e8\u05d2\u05e8\u05d0\u05e0\u05e5'\"][\"name:en\"=\"Burgeranch\"][\"name:he\"=\"\u05d1\u05d5\u05e8\u05d2\u05e8\u05d0\u05e0\u05e5'\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Burger_ranch.JPG",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -24184,7 +24184,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Burger_ranch.JPG",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -24202,10 +24202,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Vinmonopolet",
-    query: "(nwr["brand:wikidata"="Q1740534"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "BurgerFi",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"BurgerFi\"][\"brand:wikidata\"=\"Q39045496\"][\"cuisine\"=\"burger\"][\"name\"=\"BurgerFi\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Burgerfi,_Miracle_Plaza,_Thomasville_Road,_Tallahassee.JPG",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -24220,7 +24220,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Burgerfi,_Miracle_Plaza,_Thomasville_Road,_Tallahassee.JPG",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -24238,10 +24238,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Vintage Cellars",
-    query: "(nwr["brand:wikidata"="Q7932815"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "BurgerFuel",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"BurgerFuel\"][\"brand:wikidata\"=\"Q4998537\"][\"cuisine\"=\"burger\"][\"name\"=\"BurgerFuel\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/V8_Vegan.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -24256,7 +24256,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/V8_Vegan.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -24274,9 +24274,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Virginia ABC",
-    query: "(nwr["brand:wikidata"="Q7934236"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Burgerim (Israel)",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Burgerim\"][\"brand:en\"=\"Burgerim\"][\"brand:he\"=\"\u05d1\u05d5\u05e8\u05d2\u05e8\u05d9\u05dd\"][\"brand:wikidata\"=\"Q64760354\"][\"cuisine\"=\"burger\"][\"name\"=\"Burgerim\"][\"name:en\"=\"Burgerim\"][\"name:he\"=\"\u05d1\u05d5\u05e8\u05d2\u05e8\u05d9\u05dd\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -24310,10 +24310,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Volna",
-    query: "(nwr["brand"="Volna"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "BurgerIM (USA)",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"BurgerIM\"][\"brand:wikidata\"=\"Q61473337\"][\"cuisine\"=\"burger\"][\"name\"=\"BurgerIM\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Little_Caesars,_BurgerIM,_Southern_Cove_Outfitters,_Valdosta.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -24328,7 +24328,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Little_Caesars,_BurgerIM,_Southern_Cove_Outfitters,_Valdosta.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -24346,9 +24346,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u0410\u0432\u0430\u043d\u0442\u0438",
-    query: "(nwr["brand:wikidata"="Q111364476"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "burgerme",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"burgerme\"][\"brand:wikidata\"=\"Q108866856\"][\"cuisine\"=\"burger\"][\"delivery\"=\"yes\"][\"name\"=\"burgerme\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -24382,9 +24382,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u0410\u043b\u043a\u043e\u043c\u0430\u0440\u043a\u0435\u0442",
-    query: "(nwr["brand"="\u0410\u043b\u043a\u043e\u043c\u0430\u0440\u043a\u0435\u0442"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Burgermeister",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Burgermeister\"][\"brand:wikidata\"=\"Q116382535\"][\"cuisine\"=\"burger\"][\"name\"=\"Burgermeister\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -24418,9 +24418,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u0410\u043b\u043a\u043e\u0442\u0435\u043a\u0430",
-    query: "(nwr["brand"="\u0410\u043b\u043a\u043e\u0442\u0435\u043a\u0430"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Burgers Bar",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Burgers Bar\"][\"brand:en\"=\"Burgers Bar\"][\"brand:he\"=\"\u05d1\u05d5\u05e8\u05d2\u05e8\u05e1 \u05d1\u05e8\"][\"brand:wikidata\"=\"Q64760337\"][\"cuisine\"=\"burger\"][\"diet:kosher\"=\"yes\"][\"name\"=\"Burgers Bar\"][\"name:en\"=\"Burgers Bar\"][\"name:he\"=\"\u05d1\u05d5\u05e8\u05d2\u05e8\u05e1 \u05d1\u05e8\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -24454,10 +24454,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u0410\u0440\u043e\u043c\u0430\u0442\u043d\u044b\u0439 \u043c\u0438\u0440",
-    query: "(nwr["brand:wikidata"="Q109852336"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Burgerville",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Burgerville\"][\"brand:wikidata\"=\"Q4998570\"][\"cuisine\"=\"burger\"][\"name\"=\"Burgerville\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Cornell_Square_Burgerville_-_Hillsboro,_Oregon.JPG",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -24472,7 +24472,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Cornell_Square_Burgerville_-_Hillsboro,_Oregon.JPG",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -24490,9 +24490,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u0411\u0430\u0440\u0438\u043a",
-    query: "(nwr["brand"="\u0411\u0430\u0440\u0438\u043a"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Burrito Boyz",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Burrito Boyz\"][\"brand:wikidata\"=\"Q123409967\"][\"cuisine\"=\"mexican\"][\"name\"=\"Burrito Boyz\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -24526,10 +24526,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u0411\u0456\u043b\u0435 \u0421\u0443\u0445\u0435",
-    query: "(nwr["brand:wikidata"="Q121464345"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Burrito Company",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Burrito Company\"][\"brand:wikidata\"=\"Q114958215\"][\"cuisine\"=\"mexican\"][\"name\"=\"Burrito Company\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Burrito_Company_-_wordlogo_white.png",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -24544,7 +24544,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Burrito_Company_-_wordlogo_white.png",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -24562,9 +24562,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u0411\u043e\u0447\u043a\u0430",
-    query: "(nwr["brand"="\u0411\u043e\u0447\u043a\u0430"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Bush's Chicken",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Bush's Chicken\"][\"brand:wikidata\"=\"Q5001349\"][\"cuisine\"=\"chicken\"][\"name\"=\"Bush's Chicken\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -24598,9 +24598,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u0411\u0440\u0438\u0441\u0442\u043e\u043b\u044c",
-    query: "(nwr["brand:wikidata"="Q59155583"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Butchies",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Butchies\"][\"brand:wikidata\"=\"Q111015134\"][\"cuisine\"=\"chicken\"][\"name\"=\"Butchies\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -24634,10 +24634,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u0412\u0438\u043d\u043b\u0430\u0431",
-    query: "(nwr["brand:wikidata"="Q109907753"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Caf\u00e9 Yumm!",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Caf\u00e9 Yumm!\"][\"brand:wikidata\"=\"Q48816450\"][\"cuisine\"=\"american\"][\"name\"=\"Caf\u00e9 Yumm!\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Cafe_Yumm_in_Eagle,_Idaho.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -24652,7 +24652,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Cafe_Yumm_in_Eagle,_Idaho.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -24670,9 +24670,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u0412\u0438\u043d\u043e\u0433\u0440\u0430\u0434",
-    query: "(nwr["brand"="\u0412\u0438\u043d\u043e\u0433\u0440\u0430\u0434"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Caf\u00e9 Zupas",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Caf\u00e9 Zupas\"][\"brand:wikidata\"=\"Q123687995\"][\"cuisine\"=\"sandwich;salad;soup\"][\"name\"=\"Caf\u00e9 Zupas\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -24706,9 +24706,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u0413\u043b\u0430\u0432\u043f\u0438\u0432\u043e",
-    query: "(nwr["brand:wikidata"="Q110138058"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "California Fish Grill",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"California Fish Grill\"][\"brand:wikidata\"=\"Q55606435\"][\"cuisine\"=\"seafood\"][\"name\"=\"California Fish Grill\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -24742,9 +24742,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u0413\u043e\u0440\u0438\u043b\u043a\u0430",
-    query: "(nwr["brand"="\u0413\u043e\u0440\u0438\u043b\u043a\u0430"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "California Sandwiches",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"California Sandwiches\"][\"brand:wikidata\"=\"Q113001391\"][\"cuisine\"=\"sandwich\"][\"name\"=\"California Sandwiches\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -24778,9 +24778,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u0413\u0440\u0430\u0434\u0443\u0441",
-    query: "(nwr["brand"="\u0413\u0440\u0430\u0434\u0443\u0441"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Call a Pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Call a Pizza\"][\"brand:wikidata\"=\"Q1027107\"][\"cuisine\"=\"pizza\"][\"name\"=\"Call a Pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -24814,9 +24814,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u0413\u0440\u0430\u0434\u0443\u0441\u044b",
-    query: "(nwr["brand:wikidata"="Q110137876"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Caprinos Pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Caprinos\"][\"brand:wikidata\"=\"Q125623745\"][\"cuisine\"=\"pizza\"][\"name\"=\"Caprinos Pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -24850,10 +24850,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u041a\u0440\u0430\u0441\u043d\u043e\u0435&\u0411\u0435\u043b\u043e\u0435",
-    query: "(nwr["brand:wikidata"="Q24933790"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Capriotti's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Capriotti's\"][\"brand:wikidata\"=\"Q5036283\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Capriotti's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Capriotti's_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -24868,7 +24868,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Capriotti's_logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -24886,9 +24886,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u041a\u0440\u0438\u0441\u0442\u0430\u043b\u043b",
-    query: "(nwr["brand"="\u041a\u0440\u0438\u0441\u0442\u0430\u043b\u043b"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Captain D's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Captain D's\"][\"brand:wikidata\"=\"Q5036616\"][\"cuisine\"=\"seafood\"][\"name\"=\"Captain D's\"][\"official_name\"=\"Captain D's Seafood Kitchen\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -24922,10 +24922,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u041b\u0438\u043e\u043d",
-    query: "(nwr["brand"="\u041b\u0438\u043e\u043d"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Carl's Jr.",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Carl's Jr.\"][\"brand:wikidata\"=\"Q1043486\"][\"cuisine\"=\"burger\"][\"name\"=\"Carl's Jr.\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Carl's_Jr_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -24940,7 +24940,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Carl's_Jr_logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -24958,9 +24958,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u041c\u0430\u0432\u0442-\u0412\u0438\u043d\u043e\u0442\u0435\u043a\u0430",
-    query: "(nwr["brand"="\u041c\u0430\u0432\u0442-\u0412\u0438\u043d\u043e\u0442\u0435\u043a\u0430"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Chamas Tacos",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Chamas Tacos\"][\"brand:wikidata\"=\"Q127411207\"][\"cuisine\"=\"french_tacos\"][\"name\"=\"Chamas Tacos\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -24994,9 +24994,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u041c\u0438\u043d\u0441\u043a \u041a\u0440\u0438\u0441\u0442\u0430\u043b\u043b",
-    query: "(nwr["brand:wikidata"="Q6869455"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Champs Chicken",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Champs Chicken\"][\"brand:wikidata\"=\"Q120122669\"][\"cuisine\"=\"chicken\"][\"name\"=\"Champs Chicken\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -25030,10 +25030,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u041d\u043e\u0440\u043c\u0430\u043d",
-    query: "(nwr["brand:wikidata"="Q109907481"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Charleys Philly Steaks",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Charleys Philly Steaks\"][\"brand:wikidata\"=\"Q1066777\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Charleys Philly Steaks\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Charleys_Philly_Steaks_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -25048,7 +25048,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Charleys_Philly_Steaks_logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -25066,10 +25066,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u041e\u0442\u0434\u043e\u0445\u043d\u0438",
-    query: "(nwr["brand"="\u041e\u0442\u0434\u043e\u0445\u043d\u0438"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Checkers",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Checkers\"][\"brand:wikidata\"=\"Q63919315\"][\"cuisine\"=\"burger\"][\"name\"=\"Checkers\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Checkers_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -25084,7 +25084,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Checkers_logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -25102,9 +25102,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u041f\u0438\u0432&\u043a\u043e",
-    query: "(nwr["brand"="\u041f\u0438\u0432&\u043a\u043e"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Cheezzy pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Cheezzy pizza\"][\"brand:wikidata\"=\"Q125895139\"][\"cuisine\"=\"pizza\"][\"delivery\"=\"yes\"][\"name\"=\"Cheezzy pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -25138,10 +25138,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u041f\u0438\u0432\u043d\u043e\u0439 \u0434\u0432\u043e\u0440",
-    query: "(nwr["brand"="\u041f\u0438\u0432\u043d\u043e\u0439 \u0434\u0432\u043e\u0440"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Chefette",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Chefette\"][\"brand:wikidata\"=\"Q5089525\"][\"cuisine\"=\"chicken\"][\"name\"=\"Chefette\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Chefette_in_Speightstown.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -25156,7 +25156,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Chefette_in_Speightstown.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -25174,9 +25174,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u041f\u0438\u0432\u043e\u043c\u0430\u043d",
-    query: "(nwr["brand"="\u041f\u0438\u0432\u043e\u043c\u0430\u043d"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Chester's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Chester's\"][\"brand:wikidata\"=\"Q5093401\"][\"cuisine\"=\"chicken\"][\"name\"=\"Chester's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -25210,10 +25210,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u041f\u0438\u0432\u0442\u043e\u0447\u043a\u0430",
-    query: "(nwr["brand:wikidata"="Q110138021"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Chez Ashton",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Chez Ashton\"][\"brand:wikidata\"=\"Q2963156\"][\"cuisine\"=\"poutine\"][\"name\"=\"Chez Ashton\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Ashton_logo.png",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -25228,7 +25228,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Ashton_logo.png",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -25246,9 +25246,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u041f\u043e\u0440\u0442 \u043c\u0430\u0440\u043a\u0435\u0442",
-    query: "(nwr["brand"="\u041f\u043e\u0440\u0442 \u043c\u0430\u0440\u043a\u0435\u0442"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Chez l'Ancien",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Chez l'Ancien\"][\"brand:wikidata\"=\"Q130216395\"][\"cuisine\"=\"burger\"][\"name\"=\"Chez l'Ancien\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -25282,10 +25282,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u0420\u0430\u0437\u043b\u0438\u0432\u043d\u043e\u0439 \u0440\u0430\u0439",
-    query: "(nwr["brand"="\u0420\u0430\u0437\u043b\u0438\u0432\u043d\u043e\u0439 \u0440\u0430\u0439"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Chick-fil-A",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Chick-fil-A\"][\"brand:wikidata\"=\"Q491516\"][\"cuisine\"=\"chicken\"][\"name\"=\"Chick-fil-A\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Chick-fil-A_Logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -25300,7 +25300,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Chick-fil-A_Logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -25318,10 +25318,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u0420\u043e\u0441\u0410\u043b",
-    query: "(nwr["brand:wikidata"="Q110137999"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Chicken Cottage",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Chicken Cottage\"][\"brand:wikidata\"=\"Q5096233\"][\"cuisine\"=\"chicken\"][\"name\"=\"Chicken Cottage\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Chicken_Cottage,_North_End_Road,_Fulham,_London_01.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -25336,7 +25336,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Chicken_Cottage,_North_End_Road,_Fulham,_London_01.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -25354,10 +25354,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u0420\u0443\u0441\u0430\u043b\u043a\u0430",
-    query: "(nwr["brand"="\u0420\u0443\u0441\u0430\u043b\u043a\u0430"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Chicken Express",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Chicken Express\"][\"brand:wikidata\"=\"Q5096235\"][\"cuisine\"=\"chicken\"][\"name\"=\"Chicken Express\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Commerce_August_2015_28_(Chicken_Express).jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -25372,7 +25372,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Commerce_August_2015_28_(Chicken_Express).jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -25390,9 +25390,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u0420\u0443\u0441\u0441\u043a\u0438\u0439 \u0420\u0430\u0437\u0433\u0443\u043b\u044f\u0439\u043a\u0430",
-    query: "(nwr["brand:wikidata"="Q132173527"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Chicken Licken",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Chicken Licken\"][\"brand:wikidata\"=\"Q4164819\"][\"cuisine\"=\"chicken\"][\"name\"=\"Chicken Licken\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -25426,10 +25426,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u0421\u0435\u043c\u044c \u041f\u044f\u0442\u043d\u0438\u0446",
-    query: "(nwr["brand"="\u0421\u0435\u043c\u044c \u041f\u044f\u0442\u043d\u0438\u0446"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Chicken Republic",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Chicken Republic\"][\"brand:wikidata\"=\"Q23461416\"][\"cuisine\"=\"chicken\"][\"name\"=\"Chicken Republic\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Chicken_Republic_Akure.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -25444,7 +25444,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Chicken_Republic_Akure.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -25462,10 +25462,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u0425\u043c\u0435\u043b\u044c \u0421\u043e\u043b\u043e\u0434",
-    query: "(nwr["brand"="\u0425\u043c\u0435\u043b\u044c \u0421\u043e\u043b\u043e\u0434"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Chicken Salad Chick",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Chicken Salad Chick\"][\"brand:wikidata\"=\"Q19720749\"][\"cuisine\"=\"chicken\"][\"name\"=\"Chicken Salad Chick\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Chicken_Salad_Chick,_Tifton.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -25480,7 +25480,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Chicken_Salad_Chick,_Tifton.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -25498,9 +25498,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u0427\u0430\u0440\u043a\u0430 \u0434\u043e \u0441\u0432\u044f\u0442\u0430",
-    query: "(nwr["brand:wikidata"="Q118120356"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Chicken Shop",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Chicken Shop\"][\"brand:wikidata\"=\"Q124528731\"][\"cuisine\"=\"chicken\"][\"diet:halal\"=\"yes\"][\"name\"=\"Chicken Shop\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -25534,9 +25534,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u10d0\u10da\u10d9\u10dd\u10e0\u10d8\u10e3\u10db\u10d8",
-    query: "(nwr["brand:wikidata"="Q131469985"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Chicken Star",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Chicken Star\"][\"cuisine\"=\"chicken\"][\"name\"=\"Chicken Star\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -25570,9 +25570,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u30ab\u30af\u30e4\u30b9",
-    query: "(nwr["brand:wikidata"="Q11293990"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Chicken Street",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Chicken Street\"][\"brand:wikidata\"=\"Q124669862\"][\"cuisine\"=\"chicken\"][\"diet:halal\"=\"only\"][\"name\"=\"Chicken Street\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -25606,9 +25606,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u3084\u307e\u3084",
-    query: "(nwr["brand:wikidata"="Q17224765"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Chicken Treat",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Chicken Treat\"][\"brand:wikidata\"=\"Q5096274\"][\"cuisine\"=\"chicken\"][\"name\"=\"Chicken Treat\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -25642,10 +25642,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u30ea\u30ab\u30fc\u30de\u30a6\u30f3\u30c6\u30f3",
-    query: "(nwr["brand:wikidata"="Q11347883"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Chigo x Flip",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Chigo x Flip\"][\"brand:wikidata\"=\"Q118515768\"][\"cuisine\"=\"chicken\"][\"diet:halal\"=\"only\"][\"name\"=\"Chigo x Flip\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Chigo_x_Flip.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -25660,7 +25660,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Chigo_x_Flip.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -25678,9 +25678,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u30a2\u30cb\u30e1\u30a4\u30c8",
-    query: "(nwr["brand:wikidata"="Q1041890"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Chilango",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Chilango\"][\"brand:wikidata\"=\"Q107610595\"][\"cuisine\"=\"mexican\"][\"name\"=\"Chilango\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -25714,9 +25714,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u30b1\u30a4\u30fb\u30d6\u30c3\u30af\u30b9",
-    query: "(nwr["brand:wikidata"="Q11227310"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "China in Box",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"China in Box\"][\"brand:wikidata\"=\"Q18463999\"][\"cuisine\"=\"chinese\"][\"name\"=\"China in Box\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -25750,10 +25750,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u30b8\u30e3\u30f3\u30d7\u30b7\u30e7\u30c3\u30d7",
-    query: "(nwr["brand:wikidata"="Q11310200"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "China Wok",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"China Wok\"][\"brand:wikidata\"=\"Q5766542\"][\"cuisine\"=\"chinese\"][\"name\"=\"China Wok\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/China_Wok_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -25768,7 +25768,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/China_Wok_logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -25786,10 +25786,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u30dd\u30b1\u30e2\u30f3\u30bb\u30f3\u30bf\u30fc",
-    query: "(nwr["brand:wikidata"="Q89673816"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Chipotle",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Chipotle\"][\"brand:wikidata\"=\"Q465751\"][\"cuisine\"=\"mexican\"][\"name\"=\"Chipotle\"][\"official_name\"=\"Chipotle Mexican Grill\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Chipotle_Brandon.jpeg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -25804,7 +25804,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Chipotle_Brandon.jpeg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -25822,10 +25822,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u307e\u3093\u3060\u3089\u3051",
-    query: "(nwr["brand:wikidata"="Q6747833"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Chooks to Go",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Chooks to Go\"][\"brand:wikidata\"=\"Q17065023\"][\"cuisine\"=\"chicken\"][\"name\"=\"Chooks to Go\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Chooks-to-Go_Outlet_Facade.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -25840,7 +25840,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Chooks-to-Go_Outlet_Facade.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -25858,9 +25858,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u3089\u3057\u3093\u3070\u3093",
-    query: "(nwr["brand:wikidata"="Q11281322"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "ChopChop",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"ChopChop\"][\"brand:wikidata\"=\"Q104631081\"][\"cuisine\"=\"asian\"][\"name\"=\"ChopChop\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -25894,9 +25894,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Appliance Repair by Asurion",
-    query: "(nwr["brand:wikidata"="Q4811938"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Chopstix",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Chopstix\"][\"brand:wikidata\"=\"Q115327253\"][\"cuisine\"=\"noodle\"][\"name\"=\"Chopstix\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -25930,10 +25930,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Ar\u00e7elik",
-    query: "(nwr["brand:wikidata"="Q640497"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Chopt",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Chopt\"][\"brand:wikidata\"=\"Q17509305\"][\"cuisine\"=\"salad\"][\"name\"=\"Chopt\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Chopt_logo.png",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -25948,7 +25948,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Chopt_logo.png",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -25966,10 +25966,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Beko",
-    query: "(nwr["brand:wikidata"="Q631792"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Chowking",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Chowking\"][\"brand:wikidata\"=\"Q1076816\"][\"cuisine\"=\"asian\"][\"name\"=\"Chowking\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Chowkingjf.JPG",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -25984,7 +25984,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Chowkingjf.JPG",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -26002,9 +26002,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Beko (Georgia)",
-    query: "(nwr["brand:wikidata"="Q631792"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Chungchun",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Chungchun Rice Dog\"][\"brand:en\"=\"Chungchun Rice Dog\"][\"brand:ko\"=\"\uccad\ucd98\uac10\uc131\uc300\ud56b\ub3c4\uadf8\"][\"brand:wikidata\"=\"Q115803477\"][\"cuisine\"=\"hot_dog;korean\"][\"name\"=\"Chungchun\"][\"name:en\"=\"Chungchun\"][\"name:ko\"=\"\uccad\ucd98\uac10\uc131\uc300\ud56b\ub3c4\uadf8\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -26038,10 +26038,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Gollo",
-    query: "(nwr["brand"="Gollo"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Church's Chicken",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Church's Chicken\"][\"brand:wikidata\"=\"Q1089932\"][\"cuisine\"=\"chicken\"][\"name\"=\"Church's Chicken\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Churchs-logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -26056,7 +26056,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Churchs-logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -26074,9 +26074,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Profilo",
-    query: "(nwr["brand:wikidata"="Q6043911"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "\u00c7i\u011fk\u00f6ftem",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u00c7i\u011fk\u00f6ftem\"][\"brand:wikidata\"=\"Q106597459\"][\"cuisine\"=\"turkish\"][\"diet:vegan\"=\"yes\"][\"diet:vegetarian\"=\"only\"][\"name\"=\"\u00c7i\u011fk\u00f6ftem\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -26110,10 +26110,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Tien21",
-    query: "(nwr["brand:wikidata"="Q120442324"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Cinnabon",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Cinnabon\"][\"brand:wikidata\"=\"Q1092539\"][\"cuisine\"=\"dessert\"][\"name\"=\"Cinnabon\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Cinnabon_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -26128,7 +26128,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Cinnabon_logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -26146,9 +26146,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u0627\u0633\u0646\u0648\u0627",
-    query: "(nwr["brand:wikidata"="Q20109567"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Class'croute",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Class'croute\"][\"brand:wikidata\"=\"Q2975695\"][\"cuisine\"=\"sandwich;salad\"][\"name\"=\"Class'croute\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -26182,9 +26182,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "DeSerres",
-    query: "(nwr["brand:wikidata"="Q3020049"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Clean Juice",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Clean Juice\"][\"brand:wikidata\"=\"Q60775550\"][\"cuisine\"=\"juice\"][\"name\"=\"Clean Juice\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -26218,9 +26218,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Lumas",
-    query: "(nwr["brand:wikidata"="Q1452381"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Cluck-U Chicken",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Cluck-U Chicken\"][\"brand:wikidata\"=\"Q5136557\"][\"cuisine\"=\"chicken\"][\"name\"=\"Cluck-U Chicken\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -26254,9 +26254,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "YellowKorner",
-    query: "(nwr["brand:wikidata"="Q3572115"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Coco di Mama",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Coco di Mama\"][\"brand:wikidata\"=\"Q118146052\"][\"cuisine\"=\"italian\"][\"name\"=\"Coco di Mama\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -26290,9 +26290,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Aubert",
-    query: "(nwr["brand:wikidata"="Q62964657"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "C\u0153ur de Bl\u00e9",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"C\u0153ur de Bl\u00e9\"][\"brand:en\"=\"Coeur de Bl\u00e9\"][\"brand:fr\"=\"C\u0153ur de Bl\u00e9\"][\"brand:wikidata\"=\"Q95745666\"][\"cuisine\"=\"sandwich\"][\"name\"=\"C\u0153ur de Bl\u00e9\"][\"name:en\"=\"Coeur de Bl\u00e9\"][\"name:fr\"=\"C\u0153ur de Bl\u00e9\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -26326,10 +26326,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Autour de B\u00e9b\u00e9",
-    query: "(nwr["brand:wikidata"="Q117842411"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Cojean",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Cojean\"][\"brand:wikidata\"=\"Q2981929\"][\"cuisine\"=\"salad;sandwich\"][\"name\"=\"Cojean\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo-cojean-2022.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -26344,7 +26344,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo-cojean-2022.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -26362,9 +26362,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Babies R Us (Canada)",
-    query: "(nwr["brand:wikidata"="Q17232036"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Cook Door",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Cook Door\"][\"brand:wikidata\"=\"Q12236500\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Cook Door\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -26398,10 +26398,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Babies R Us (Southern Africa)",
-    query: "(nwr["brand:wikidata"="Q17232036"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Cook Out",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Cook Out\"][\"brand:wikidata\"=\"Q5166992\"][\"cuisine\"=\"american\"][\"name\"=\"Cook Out\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Cook_Out_restaurant,_Watson_Blvd,_Warner_Robins.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -26416,7 +26416,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Cook_Out_restaurant,_Watson_Blvd,_Warner_Robins.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -26434,9 +26434,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Baby Bunting",
-    query: "(nwr["brand:wikidata"="Q109626935"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Cos\u00ec",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Cos\u00ec\"][\"brand:wikidata\"=\"Q5175243\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Cos\u00ec\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -26470,9 +26470,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Baby City",
-    query: "(nwr["brand:wikidata"="Q116732888"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Costa Vida",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Costa Vida\"][\"brand:wikidata\"=\"Q108403192\"][\"cuisine\"=\"mexican\"][\"name\"=\"Costa Vida\"][\"official_name\"=\"Costa Vida Fresh Mexican Grill\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -26506,10 +26506,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "baby-walz",
-    query: "(nwr["brand:wikidata"="Q108004413"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Costco Food Court",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Costco\"][\"brand:wikidata\"=\"Q715583\"][\"cuisine\"=\"hot_dog;pizza;sandwich\"][\"name\"=\"Costco Food Court\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Costco_Wholesale_logo_2010-10-26.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -26524,7 +26524,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Costco_Wholesale_logo_2010-10-26.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -26542,9 +26542,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "BabyOne",
-    query: "(nwr["brand:wikidata"="Q57540408"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "C\u00f4t\u00e9 Sushi",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"C\u00f4t\u00e9 Sushi\"][\"brand:wikidata\"=\"Q130731390\"][\"cuisine\"=\"sushi;japanese\"][\"name\"=\"C\u00f4t\u00e9 Sushi\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -26578,9 +26578,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "B\u00e9b\u00e9 9",
-    query: "(nwr["brand"="B\u00e9b\u00e9 9"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Cottage Inn Pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Cottage Inn Pizza\"][\"brand:wikidata\"=\"Q16988753\"][\"cuisine\"=\"pizza\"][\"name\"=\"Cottage Inn Pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -26614,10 +26614,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Buy Buy Baby",
-    query: "(nwr["brand:wikidata"="Q5003352"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Cousins Subs",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Cousins Subs\"][\"brand:wikidata\"=\"Q5178843\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Cousins Subs\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Cousins_Submarines_(Cousins_Subs)_Logo.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -26632,7 +26632,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Cousins_Submarines_(Cousins_Subs)_Logo.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -26650,9 +26650,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Chicco",
-    query: "(nwr["brand:wikidata"="Q27897515"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Crosstown",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Crosstown\"][\"brand:wikidata\"=\"Q109943342\"][\"cuisine\"=\"donut\"][\"diet:vegan\"=\"yes\"][\"name\"=\"Crosstown\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -26686,9 +26686,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Dreambaby",
-    query: "(nwr["brand:wikidata"="Q116460054"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Crust",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Crust\"][\"brand:wikidata\"=\"Q100792715\"][\"cuisine\"=\"pizza\"][\"name\"=\"Crust\"][\"official_name\"=\"Crust Gourmet Pizza Bar\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -26722,9 +26722,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "ebebek",
-    query: "(nwr["brand:wikidata"="Q106803057"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Cultures",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Cultures\"][\"brand:wikidata\"=\"Q64876898\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Cultures\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -26758,10 +26758,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Mamas & Papas",
-    query: "(nwr["brand:wikidata"="Q6745447"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Culver's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Culver's\"][\"brand:wikidata\"=\"Q1143589\"][\"cuisine\"=\"burger\"][\"name\"=\"Culver's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Culver's_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -26776,7 +26776,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Culver's_logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -26794,10 +26794,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Mothercare",
-    query: "(nwr["brand:wikidata"="Q136738"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "D'Angelo Grilled Sandwiches",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"D'Angelo Grilled Sandwiches\"][\"brand:wikidata\"=\"Q5203069\"][\"cuisine\"=\"sandwich\"][\"name\"=\"D'Angelo Grilled Sandwiches\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/D'Angelo_Grilled_Sandwiches_Logo.png",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -26812,7 +26812,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/D'Angelo_Grilled_Sandwiches_Logo.png",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -26830,10 +26830,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Natalys",
-    query: "(nwr["brand:wikidata"="Q3336439"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Dairy Queen",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Dairy Queen\"][\"brand:wikidata\"=\"Q1141226\"][\"cuisine\"=\"ice_cream;burger\"][\"name\"=\"Dairy Queen\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Dairy_Queen_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -26848,7 +26848,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Dairy_Queen_logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -26866,10 +26866,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Pr\u00e9natal",
-    query: "(nwr["brand:wikidata"="Q105961413"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Daisy's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Daisy's\"][\"brand:wikidata\"=\"Q10466019\"][\"cuisine\"=\"burger\"][\"name\"=\"Daisy's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Daisy_fastfood_(3).jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -26884,7 +26884,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Daisy_fastfood_(3).jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -26902,9 +26902,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Shilav",
-    query: "(nwr["brand:wikidata"="Q7496633"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Daniel's Donuts",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Daniel's Donuts\"][\"brand:wikidata\"=\"Q116147181\"][\"cuisine\"=\"donut;pie;milkshake\"][\"name\"=\"Daniel's Donuts\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -26938,9 +26938,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Suavinex",
-    query: "(nwr["brand:wikidata"="Q122258837"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Dave's Hot Chicken",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Dave's Hot Chicken\"][\"brand:wikidata\"=\"Q108292298\"][\"cuisine\"=\"chicken\"][\"name\"=\"Dave's Hot Chicken\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -26974,9 +26974,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "The Baby Factory",
-    query: "(nwr["brand:wikidata"="Q110298660"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Daylight Donuts",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Daylight Donuts\"][\"brand:wikidata\"=\"Q48970508\"][\"cuisine\"=\"donut\"][\"name\"=\"Daylight Donuts\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -27010,10 +27010,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Zippy",
-    query: "(nwr["brand:wikidata"="Q10395161"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "dean&david",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"dean&david\"][\"brand:wikidata\"=\"Q66132404\"][\"cuisine\"=\"salad;sandwich\"][\"name\"=\"dean&david\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Dean_&_david.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -27028,7 +27028,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Dean_&_david.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -27046,9 +27046,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u0414\u0435\u0442\u043a\u0438",
-    query: "(nwr["brand:wikidata"="Q110290787"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Debonairs Pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Debonairs Pizza\"][\"brand:wikidata\"=\"Q65079407\"][\"cuisine\"=\"pizza\"][\"name\"=\"Debonairs Pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -27082,10 +27082,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u0414\u0435\u0442\u0441\u043a\u0438\u0439 \u043c\u0438\u0440",
-    query: "(nwr["brand:wikidata"="Q16643324"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Del Taco",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Del Taco\"][\"brand:wikidata\"=\"Q1183818\"][\"cuisine\"=\"mexican\"][\"name\"=\"Del Taco\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_of_Del_Taco.png",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -27100,7 +27100,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_of_Del_Taco.png",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -27118,9 +27118,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u0414\u043e\u0447\u043a\u0438-\u0441\u044b\u043d\u043e\u0447\u043a\u0438",
-    query: "(nwr["brand:wikidata"="Q110290698"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Deliway",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Deliway\"][\"brand:wikidata\"=\"Q126195408\"][\"cuisine\"=\"sandwich;bakery\"][\"name\"=\"Deliway\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -27154,10 +27154,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u30a2\u30ab\u30c1\u30e3\u30f3\u30db\u30f3\u30dd",
-    query: "(nwr["brand:wikidata"="Q11257015"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "DiBella's Subs",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"DiBella's Subs\"][\"brand:wikidata\"=\"Q5269976\"][\"cuisine\"=\"sandwich\"][\"name\"=\"DiBella's Subs\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/DiBella's_Logo_red.JPG",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -27172,7 +27172,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/DiBella's_Logo_red.JPG",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -27190,10 +27190,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u897f\u677e\u5c4b",
-    query: "(nwr["brand:wikidata"="Q11628761"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Dig",
+    query: "(nwr[\"alt_name\"=\"Dig Inn\"][\"amenity\"=\"fast_food\"][\"brand\"=\"Dig\"][\"brand:wikidata\"=\"Q28226241\"][\"cuisine\"=\"regional\"][\"name\"=\"Dig\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/DigInnStorefrontNY.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -27208,7 +27208,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/DigInnStorefrontNY.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -27226,9 +27226,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "American Tourister",
-    query: "(nwr["brand:wikidata"="Q4745268"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Dim Coffee",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Dim Coffee\"][\"cuisine\"=\"coffee_shop\"][\"name\"=\"Dim Coffee\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -27262,9 +27262,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Away",
-    query: "(nwr["brand:wikidata"="Q48743138"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "District Taco",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"District Taco\"][\"brand:wikidata\"=\"Q26237090\"][\"cuisine\"=\"mexican\"][\"name\"=\"District Taco\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -27298,9 +27298,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Bentley",
-    query: "(nwr["brand:wikidata"="Q65947700"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Dixy Chicken",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Dixy Chicken\"][\"brand:wikidata\"=\"Q5285003\"][\"cuisine\"=\"chicken\"][\"diet:halal\"=\"yes\"][\"name\"=\"Dixy Chicken\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -27334,9 +27334,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Carpisa",
-    query: "(nwr["brand:wikidata"="Q28035409"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Do.Bro Coffee",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Do.Bro Coffee\"][\"cuisine\"=\"coffee_shop\"][\"name\"=\"Do.Bro Coffee\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -27370,9 +27370,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Coach",
-    query: "(nwr["brand:wikidata"="Q727697"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Dog Haus",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Dog Haus\"][\"brand:wikidata\"=\"Q105529843\"][\"cuisine\"=\"hot_dog\"][\"name\"=\"Dog Haus\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -27406,10 +27406,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Coccinelle",
-    query: "(nwr["brand:wikidata"="Q944874"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Domino's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Domino's\"][\"brand:wikidata\"=\"Q839466\"][\"cuisine\"=\"pizza\"][\"name\"=\"Domino's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Domino's_pizza_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -27424,7 +27424,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Domino's_pizza_logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -27442,9 +27442,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Colette by Colette Hayman",
-    query: "(nwr["brand:wikidata"="Q117746003"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Don Pollo",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Don Pollo\"][\"cuisine\"=\"chicken\"][\"name\"=\"Don Pollo\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -27478,9 +27478,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Frasers",
-    query: "(nwr["brand:wikidata"="Q116740926"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Don.C",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Don.C\"][\"brand:wikidata\"=\"Q120755724\"][\"cuisine\"=\"barbecue;filipino\"][\"name\"=\"Don.C\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -27514,9 +27514,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Kipling",
-    query: "(nwr["brand:wikidata"="Q6414641"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "D\u00f6ner \u041c\u0430\u0440\u043a\u0435\u0442",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"D\u00f6ner \u041c\u0430\u0440\u043a\u0435\u0442\"][\"brand:wikidata\"=\"Q119437091\"][\"cuisine\"=\"kebab\"][\"name\"=\"D\u00f6ner \u041c\u0430\u0440\u043a\u0435\u0442\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -27550,9 +27550,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "LARA BAGS",
-    query: "(nwr["brand:wikidata"="Q116737805"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Donut King",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Donut King\"][\"brand:wikidata\"=\"Q5296921\"][\"cuisine\"=\"donut;coffee_shop\"][\"name\"=\"Donut King\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -27586,9 +27586,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "LIEBESKIND Berlin",
-    query: "(nwr["brand:wikidata"="Q107156547"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Doughnut Time",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Doughnut Time\"][\"brand:wikidata\"=\"Q117286917\"][\"cuisine\"=\"donut\"][\"name\"=\"Doughnut Time\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -27622,10 +27622,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Misako",
-    query: "(nwr["brand:wikidata"="Q127264670"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "DQ Grill & Chill",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"DQ Grill & Chill\"][\"brand:wikidata\"=\"Q1141226\"][\"cuisine\"=\"ice_cream;burger\"][\"name\"=\"DQ Grill & Chill\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Dairy_Queen_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -27640,7 +27640,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Dairy_Queen_logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -27658,9 +27658,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Rimowa",
-    query: "(nwr["brand:wikidata"="Q1287437"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "DROPTOP",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"DROPTOP\"][\"brand:wikidata\"=\"Q119213536\"][\"cuisine\"=\"juice\"][\"name\"=\"DROPTOP\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -27694,9 +27694,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Samsonite",
-    query: "(nwr["brand:wikidata"="Q1203426"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Duck Donuts",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Duck Donuts\"][\"brand:wikidata\"=\"Q54958282\"][\"cuisine\"=\"donut\"][\"name\"=\"Duck Donuts\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -27730,10 +27730,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Strandbags",
-    query: "(nwr["brand:wikidata"="Q111946652"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Dunkin'",
+    query: "(nwr[\"alt_name\"=\"Dunkin' Donuts\"][\"amenity\"=\"fast_food\"][\"brand\"=\"Dunkin'\"][\"brand:wikidata\"=\"Q847743\"][\"cuisine\"=\"donut;coffee_shop\"][\"name\"=\"Dunkin'\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Dunkin1.JPG",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -27748,7 +27748,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Dunkin1.JPG",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -27766,10 +27766,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Totto",
-    query: "(nwr["brand:wikidata"="Q132745694"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Dunkin' Coffee",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Dunkin' Coffee\"][\"brand:wikidata\"=\"Q847743\"][\"cuisine\"=\"donut;coffee_shop\"][\"name\"=\"Dunkin' Coffee\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Dunkin1.JPG",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -27784,7 +27784,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Dunkin1.JPG",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -27802,10 +27802,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Tumi",
-    query: "(nwr["brand:wikidata"="Q4465402"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "DUNKIN\u5510\u6069\u90fd\u4e50'",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"DUNKIN\u5510\u6069\u90fd\u4e50\"][\"brand:en\"=\"Dunkin' Donuts\"][\"brand:wikidata\"=\"Q847743\"][\"brand:zh\"=\"\u5510\u6069\u90fd\u4e50\"][\"cuisine\"=\"donut;coffee_shop\"][\"name\"=\"DUNKIN\u5510\u6069\u90fd\u4e50\"][\"name:en\"=\"Dunkin' Donuts\"][\"name:zh\"=\"\u5510\u6069\u90fd\u4e50\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Dunkin1.JPG",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -27820,7 +27820,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Dunkin1.JPG",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -27838,9 +27838,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Vera Bradley",
-    query: "(nwr["brand:wikidata"="Q7920749"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "East of Chicago Pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"East of Chicago Pizza\"][\"brand:wikidata\"=\"Q5329751\"][\"cuisine\"=\"pizza\"][\"name\"=\"East of Chicago Pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -27874,10 +27874,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "A Padaria Portuguesa",
-    query: "(nwr["brand:wikidata"="Q113951278"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Eazie",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Eazie\"][\"brand:wikidata\"=\"Q123412939\"][\"cuisine\"=\"asian\"][\"name\"=\"Eazie\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Eazie_Logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -27892,7 +27892,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Eazie_Logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -27910,10 +27910,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "A-1 Bakery",
-    query: "(nwr["brand:wikidata"="Q117270360"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Eddie Rocket's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Eddie Rocket's\"][\"brand:wikidata\"=\"Q1007312\"][\"cuisine\"=\"american\"][\"name\"=\"Eddie Rocket's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Eddie-Rocket's-Ennis,-co.-Clare.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -27928,7 +27928,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Eddie-Rocket's-Ennis,-co.-Clare.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -27946,9 +27946,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "AILI",
-    query: "(nwr["brand"="AILI"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Eddys Pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Eddys Pizza\"][\"brand:wikidata\"=\"Q115571642\"][\"cuisine\"=\"pizza\"][\"delivery\"=\"yes\"][\"name\"=\"Eddys Pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -27982,9 +27982,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Ange",
-    query: "(nwr["brand:wikidata"="Q98383422"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Edo Japan",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Edo Japan\"][\"brand:wikidata\"=\"Q17492665\"][\"cuisine\"=\"japanese\"][\"name\"=\"Edo Japan\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -28018,10 +28018,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Anker",
-    query: "(nwr["brand:wikidata"="Q557116"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Eegee's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Eegee's\"][\"brand:wikidata\"=\"Q5347035\"][\"cuisine\"=\"sandwich;slushy\"][\"name\"=\"Eegee's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Eegee's_Tucson.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -28036,7 +28036,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Eegee's_Tucson.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -28054,9 +28054,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Armbruster",
-    query: "(nwr["brand:wikidata"="Q67987954"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Eggdrop",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Eggdrop\"][\"brand:en\"=\"Eggdrop\"][\"brand:ko\"=\"\uc5d0\uadf8\ub4dc\ub78d\"][\"brand:wikidata\"=\"Q133044923\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Eggdrop\"][\"name:en\"=\"Eggdrop\"][\"name:ko\"=\"\uc5d0\uadf8\ub4dc\ub78d\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -28090,10 +28090,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Au Pain de mon Grand-P\u00e8re",
-    query: "(nwr["brand:wikidata"="Q128837687"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Eggslut",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Eggslut\"][\"brand:wikidata\"=\"Q17239262\"][\"cuisine\"=\"burger\"][\"name\"=\"Eggslut\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Eggslut_-_Vegas_-_2019_Stierch.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -28108,7 +28108,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Eggslut_-_Vegas_-_2019_Stierch.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -28126,10 +28126,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Augustin",
-    query: "(nwr["brand:wikidata"="Q130232585"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Einstein Bros. Bagels",
+    query: "(nwr[\"alt_name\"=\"Einstein Brothers Bagels\"][\"amenity\"=\"fast_food\"][\"brand\"=\"Einstein Bros. Bagels\"][\"brand:wikidata\"=\"Q5349788\"][\"cuisine\"=\"bagel\"][\"name\"=\"Einstein Bros. Bagels\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Einstein_Bros._Bagels_restaurant_Plymouth_Michigan.JPG",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -28144,7 +28144,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Einstein_Bros._Bagels_restaurant_Plymouth_Michigan.JPG",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -28162,10 +28162,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Awiteks",
-    query: "(nwr["brand:wikidata"="Q62054190"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "El Corral",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"El Corral\"][\"brand:wikidata\"=\"Q4703422\"][\"cuisine\"=\"burger\"][\"name\"=\"El Corral\"][\"official_name\"=\"Hamburguesas El Corral\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/El_Corral.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -28180,7 +28180,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/El_Corral.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -28198,9 +28198,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Bachmeier",
-    query: "(nwr["brand:wikidata"="Q106823498"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "El Jannah",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"El Jannah\"][\"brand:wikidata\"=\"Q96377069\"][\"cuisine\"=\"chicken\"][\"name\"=\"El Jannah\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -28234,10 +28234,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Back-Factory",
-    query: "(nwr["brand:wikidata"="Q21200483"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "El Pollo Loco",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"El Pollo Loco\"][\"brand:wikidata\"=\"Q2353849\"][\"cuisine\"=\"mexican\"][\"name\"=\"El Pollo Loco\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Elpollolocoheadquartersentrance.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -28252,7 +28252,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Elpollolocoheadquartersentrance.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -28270,9 +28270,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "B\u00e4cker Andresen",
-    query: "(nwr["brand:wikidata"="Q111152310"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "El Rinconsito",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"El Rinconsito\"][\"brand:wikidata\"=\"Q114187652\"][\"cuisine\"=\"mexican\"][\"name\"=\"El Rinconsito\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -28306,9 +28306,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "B\u00e4cker G\u00f6rtz",
-    query: "(nwr["brand:wikidata"="Q97572517"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Elevation Burger",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Elevation Burger\"][\"brand:wikidata\"=\"Q15291092\"][\"cuisine\"=\"burger\"][\"name\"=\"Elevation Burger\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -28342,9 +28342,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "B\u00e4ckerei Fuchs",
-    query: "(nwr["brand:wikidata"="Q42825993"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Epic Wings N' Things",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Epic Wings N' Things\"][\"brand:wikidata\"=\"Q113292980\"][\"cuisine\"=\"wings\"][\"name\"=\"Epic Wings N' Things\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -28378,9 +28378,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "B\u00e4ckerei Grimminger",
-    query: "(nwr["brand:wikidata"="Q106823533"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Erbert & Gerbert's Sandwich Shop",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Erbert & Gerbert's\"][\"brand:wikidata\"=\"Q5385097\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Erbert & Gerbert's\"][\"official_name\"=\"Erbert & Gerbert's Sandwich Shop\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -28414,9 +28414,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "B\u00e4ckerei Happ",
-    query: "(nwr["brand:wikidata"="Q60303275"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Erik's DeliCaf\u00e9",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Erik's DeliCaf\u00e9\"][\"brand:wikidata\"=\"Q116922917\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Erik's DeliCaf\u00e9\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -28450,9 +28450,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "B\u00e4ckerei Schmidt",
-    query: "(nwr["brand:wikidata"="Q107985300"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Es Teler 77",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Es Teler 77\"][\"brand:wikidata\"=\"Q5396630\"][\"cuisine\"=\"indonesian\"][\"name\"=\"Es Teler 77\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -28486,9 +28486,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "B\u00e4ckerei Schneider",
-    query: "(nwr["brand:wikidata"="Q107985229"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Everbowl",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Everbowl\"][\"brand:wikidata\"=\"Q108194281\"][\"cuisine\"=\"a\u00e7a\u00ed\"][\"name\"=\"Everbowl\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -28522,9 +28522,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "B\u00e4ckerei Wahl",
-    query: "(nwr["brand:wikidata"="Q124726142"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Everest",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Everest\"][\"brand:wikidata\"=\"Q62273299\"][\"cuisine\"=\"burger\"][\"name\"=\"Everest\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -28558,9 +28558,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Backhaus Hackner",
-    query: "(nwr["brand:wikidata"="Q122761485"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Evergreens",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Evergreens\"][\"brand:wikidata\"=\"Q109328830\"][\"cuisine\"=\"salad\"][\"name\"=\"Evergreens\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -28594,9 +28594,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Backhaus Hennig",
-    query: "(nwr["brand:wikidata"="Q112186151"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "EVOS",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"EVOS\"][\"cuisine\"=\"burger;hot_dog\"][\"name\"=\"EVOS\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -28630,10 +28630,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Backhaus Nahrstedt",
-    query: "(nwr["brand:wikidata"="Q798438"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Exki",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Exki\"][\"brand:wikidata\"=\"Q251760\"][\"cuisine\"=\"healthy;sandwich;salad;pie\"][\"diet:vegetarian\"=\"yes\"][\"name\"=\"Exki\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Panneau_H\u00f4tel_Moreau-22_rue_de_la_Chauss\u00e9e-d'Antin.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -28648,7 +28648,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Panneau_H\u00f4tel_Moreau-22_rue_de_la_Chauss\u00e9e-d'Antin.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -28666,9 +28666,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Backstube W\u00fcnsche",
-    query: "(nwr["brand:wikidata"="Q66085325"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Extrawurst",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Extrawurst\"][\"brand:wikidata\"=\"Q109443803\"][\"cuisine\"=\"sausage\"][\"name\"=\"Extrawurst\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -28702,10 +28702,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Backwerk",
-    query: "(nwr["brand:wikidata"="Q798298"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Extreme Pita",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Extreme Pita\"][\"brand:wikidata\"=\"Q5422367\"][\"cuisine\"=\"pita\"][\"name\"=\"Extreme Pita\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/ExtremePita_Web_Stacked.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -28720,7 +28720,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/ExtremePita_Web_Stacked.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -28738,9 +28738,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Bagietka",
-    query: "(nwr["brand"="Bagietka"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Extreme Pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Extreme Pizza\"][\"brand:wikidata\"=\"Q5422364\"][\"cuisine\"=\"pizza\"][\"name\"=\"Extreme Pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -28774,9 +28774,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Baguette",
-    query: "(nwr["brand:wikidata"="Q82512635"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Ezell's Chicken",
+    query: "(nwr[\"alt_name\"=\"Ezell's Famous Chicken\"][\"amenity\"=\"fast_food\"][\"brand\"=\"Ezell's Chicken\"][\"brand:wikidata\"=\"Q5423177\"][\"cuisine\"=\"chicken\"][\"name\"=\"Ezell's Chicken\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -28810,10 +28810,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Baker's Cottage",
-    query: "(nwr["brand:wikidata"="Q107801364"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Farmer Boys",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Farmer Boys\"][\"brand:wikidata\"=\"Q5435711\"][\"cuisine\"=\"burger\"][\"name\"=\"Farmer Boys\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Farmer_Boys_Riverbank,_California.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -28828,7 +28828,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Farmer_Boys_Riverbank,_California.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -28846,9 +28846,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Bakers Delight",
-    query: "(nwr["brand:wikidata"="Q4849261"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Farsh",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Farsh\"][\"cuisine\"=\"burger\"][\"name\"=\"Farsh\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -28882,10 +28882,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Bakker Bart",
-    query: "(nwr["brand:wikidata"="Q2177445"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Fasf\u00fa Burgers",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Fasf\u00fa Burgers\"][\"brand:wikidata\"=\"Q109324172\"][\"cuisine\"=\"burger\"][\"delivery\"=\"yes\"][\"name\"=\"Fasf\u00fa Burgers\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Fasf\u00fa_Burgers.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -28900,7 +28900,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Fasf\u00fa_Burgers.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -28918,9 +28918,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Bakker van Maanen",
-    query: "(nwr["brand:wikidata"="Q123435188"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Fat Bastard Burrito",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Fat Bastard Burrito\"][\"brand:wikidata\"=\"Q123865546\"][\"cuisine\"=\"mexican\"][\"name\"=\"Fat Bastard Burrito\"][\"official_name\"=\"Fat Bastard Burrito Co.\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -28954,10 +28954,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Balfours",
-    query: "(nwr["brand:wikidata"="Q4850765"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Fatburger",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Fatburger\"][\"brand:wikidata\"=\"Q1397976\"][\"cuisine\"=\"burger\"][\"name\"=\"Fatburger\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Fatburger_(8048327541).jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -28972,7 +28972,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Fatburger_(8048327541).jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -28990,9 +28990,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Banette",
-    query: "(nwr["brand:wikidata"="Q2882405"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Favorite Chicken & Ribs",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Favorite Chicken & Ribs\"][\"brand:wikidata\"=\"Q120070660\"][\"cuisine\"=\"chicken\"][\"name\"=\"Favorite Chicken & Ribs\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -29026,10 +29026,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Banjo's Bakery Cafe",
-    query: "(nwr["brand:wikidata"="Q105904686"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Fazoli's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Fazoli's\"][\"brand:wikidata\"=\"Q1399195\"][\"cuisine\"=\"italian\"][\"name\"=\"Fazoli's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Fazoli's,_St._Augustine_Rd.,_Valdosta.JPG",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -29044,7 +29044,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Fazoli's,_St._Augustine_Rd.,_Valdosta.JPG",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -29062,9 +29062,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Barbarossa B\u00e4ckerei",
-    query: "(nwr["brand:wikidata"="Q807766"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "FEBO",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"FEBO\"][\"brand:wikidata\"=\"Q582245\"][\"cuisine\"=\"friture\"][\"name\"=\"FEBO\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -29098,9 +29098,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Bayne's",
-    query: "(nwr["brand:wikidata"="Q131864367"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Figaro's Pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Figaro's Pizza\"][\"brand:wikidata\"=\"Q48802600\"][\"cuisine\"=\"pizza\"][\"name\"=\"Figaro's Pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -29134,10 +29134,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Beechworth Bakery",
-    query: "(nwr["brand:wikidata"="Q28183324"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Fireaway Pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Fireaway\"][\"brand:wikidata\"=\"Q110484131\"][\"cuisine\"=\"pizza\"][\"name\"=\"Fireaway Pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Fire_Horizontal_cmy.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -29152,7 +29152,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Fire_Horizontal_cmy.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -29170,10 +29170,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Birds",
-    query: "(nwr["brand:wikidata"="Q63001935"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Firehouse Subs",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Firehouse Subs\"][\"brand:wikidata\"=\"Q5451873\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Firehouse Subs\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Firehouse_Subs_1.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -29188,7 +29188,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Firehouse_Subs_1.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -29206,9 +29206,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Borek",
-    query: "(nwr["brand:wikidata"="Q133856049"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Fishaways",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Fishaways\"][\"brand:wikidata\"=\"Q116618989\"][\"cuisine\"=\"fish_and_chips\"][\"name\"=\"Fishaways\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -29242,9 +29242,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Boulangerie Feuillette",
-    query: "(nwr["brand"="Boulangerie Feuillette"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Fishbowl",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Fishbowl\"][\"brand:wikidata\"=\"Q110785465\"][\"cuisine\"=\"salad\"][\"name\"=\"Fishbowl\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -29278,10 +29278,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Boulangerie Louise (Belgique)",
-    query: "(nwr["brand"="Boulangerie Louise"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Five Guys",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Five Guys\"][\"brand:wikidata\"=\"Q1131810\"][\"cuisine\"=\"burger\"][\"name\"=\"Five Guys\"][\"official_name\"=\"Five Guys Burgers and Fries\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Five_Guys_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -29296,7 +29296,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Five_Guys_logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -29314,9 +29314,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Boulangerie Louise (France)",
-    query: "(nwr["brand:wikidata"="Q127591514"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Five Star Chicken",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Five Star Chicken\"][\"brand:wikidata\"=\"Q127784422\"][\"cuisine\"=\"chicken\"][\"delivery\"=\"yes\"][\"name\"=\"Five Star Chicken\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -29350,9 +29350,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Bread Ahead",
-    query: "(nwr["brand:wikidata"="Q110984949"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Flippin' Pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Flippin' Pizza\"][\"brand:wikidata\"=\"Q113138241\"][\"cuisine\"=\"pizza\"][\"name\"=\"Flippin' Pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -29386,9 +29386,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "BreadTalk",
-    query: "(nwr["brand:wikidata"="Q1106640"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Flower Burger",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Flower Burger\"][\"brand:wikidata\"=\"Q67168925\"][\"cuisine\"=\"burger\"][\"diet:vegan\"=\"only\"][\"name\"=\"Flower Burger\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -29422,9 +29422,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Breadtop",
-    query: "(nwr["brand:wikidata"="Q4959217"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Food Solutions",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Food Solutions\"][\"brand:wikidata\"=\"Q118149812\"][\"cuisine\"=\"burger\"][\"name\"=\"Food Solutions\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -29458,9 +29458,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Brioche Dor\u00e9e",
-    query: "(nwr["brand:wikidata"="Q2925606"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Foodmaker",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Foodmaker\"][\"brand:wikidata\"=\"Q133859069\"][\"cuisine\"=\"salad\"][\"name\"=\"Foodmaker\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -29494,9 +29494,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Br\u00f6d & Salt",
-    query: "(nwr["brand:wikidata"="Q124048835"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Foodmaster",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Foodmaster\"][\"brand:wikidata\"=\"Q108920789\"][\"cuisine\"=\"friture\"][\"name\"=\"Foodmaster\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -29530,10 +29530,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "BrotHaus",
-    query: "(nwr["brand:wikidata"="Q26951425"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Fosters Freeze",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Fosters Freeze\"][\"brand:wikidata\"=\"Q5473851\"][\"cuisine\"=\"burger;ice_cream\"][\"name\"=\"Fosters Freeze\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Fosters_Freeze_Lompoc.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -29548,7 +29548,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Fosters_Freeze_Lompoc.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -29566,10 +29566,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Brumby's Bakeries",
-    query: "(nwr["brand:wikidata"="Q4978794"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Four Star Pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Four Star Pizza\"][\"brand:wikidata\"=\"Q5475559\"][\"cuisine\"=\"pizza\"][\"name\"=\"Four Star Pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/4starlogo.png",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -29584,7 +29584,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/4starlogo.png",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -29602,9 +29602,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Burns the Bread",
-    query: "(nwr["brand:wikidata"="Q102003578"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Franks n' Burgers",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Franks n' Burgers\"][\"brand:wikidata\"=\"Q120722614\"][\"cuisine\"=\"burger\"][\"name\"=\"Franks n' Burgers\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -29638,10 +29638,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Bursa Halk Ekmek",
-    query: "(nwr["brand:wikidata"="Q122834688"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Frasses",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Frasses\"][\"brand:wikidata\"=\"Q3374476\"][\"cuisine\"=\"burger\"][\"name\"=\"Frasses\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Frasses_ersboda.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -29656,7 +29656,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Frasses_ersboda.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -29674,9 +29674,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "B\u00fcsch",
-    query: "(nwr["brand:wikidata"="Q106823554"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Freddy Fresh",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Freddy Fresh\"][\"brand:wikidata\"=\"Q124255344\"][\"cuisine\"=\"pizza\"][\"name\"=\"Freddy Fresh\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -29710,10 +29710,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Cadera",
-    query: "(nwr["brand:wikidata"="Q62086410"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Freddy's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Freddy's\"][\"brand:wikidata\"=\"Q5496837\"][\"cuisine\"=\"ice_cream;burger\"][\"name\"=\"Freddy's\"][\"official_name\"=\"Freddy's Frozen Custard & Steakburgers\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Freddy's_Frozen_Custard_&_Steakburgers_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -29728,7 +29728,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Freddy's_Frozen_Custard_&_Steakburgers_logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -29746,10 +29746,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Campaillette",
-    query: "(nwr["brand:wikidata"="Q88085399"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Freebirds",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Freebirds\"][\"brand:wikidata\"=\"Q5500367\"][\"cuisine\"=\"mexican\"][\"name\"=\"Freebirds\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Updated_Freebirds_Logo.png",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -29764,7 +29764,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Updated_Freebirds_Logo.png",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -29782,9 +29782,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Casta\u00f1o",
-    query: "(nwr["brand:wikidata"="Q5049629"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Fresh\u00ebns",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Fresh\u00ebns\"][\"brand:wikidata\"=\"Q88353412\"][\"cuisine\"=\"juice;salad\"][\"name\"=\"Fresh\u00ebns\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -29818,9 +29818,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "COBS Bread",
-    query: "(nwr["brand:wikidata"="Q116771375"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Freshly Squeezed",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Freshly Squeezed\"][\"brand:wikidata\"=\"Q124035170\"][\"cuisine\"=\"juice\"][\"name\"=\"Freshly Squeezed\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -29854,9 +29854,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Cooplands",
-    query: "(nwr["brand:wikidata"="Q5167971"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Freshslice Pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Freshslice Pizza\"][\"brand:wikidata\"=\"Q5503082\"][\"cuisine\"=\"pizza\"][\"name\"=\"Freshslice Pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -29890,10 +29890,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Cornish Bakery",
-    query: "(nwr["brand:wikidata"="Q124030035"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Frisby",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Frisby\"][\"brand:wikidata\"=\"Q7225732\"][\"cuisine\"=\"chicken\"][\"delivery\"=\"yes\"][\"name\"=\"Frisby\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo-frisby.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -29908,7 +29908,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo-frisby.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -29926,9 +29926,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Coupland's",
-    query: "(nwr["brand:wikidata"="Q107297544"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Frittenwerk",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Frittenwerk\"][\"brand:wikidata\"=\"Q121094275\"][\"cuisine\"=\"friture\"][\"name\"=\"Frittenwerk\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -29962,9 +29962,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Dallmeyers Backhus",
-    query: "(nwr["brand:wikidata"="Q107719238"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Froots",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Froots\"][\"brand:wikidata\"=\"Q96203860\"][\"cuisine\"=\"juice;salad\"][\"name\"=\"Froots\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -29998,9 +29998,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Dat Backhus",
-    query: "(nwr["brand:wikidata"="Q62093175"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Fuzzy's Taco Shop",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Fuzzy's Taco Shop\"][\"brand:wikidata\"=\"Q85762348\"][\"cuisine\"=\"mexican\"][\"name\"=\"Fuzzy's Taco Shop\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -30034,10 +30034,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "De Echte Bakker",
-    query: "(nwr["brand:wikidata"="Q16920716"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "G La Dalle",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"G La Dalle\"][\"brand:wikidata\"=\"Q121816862\"][\"cuisine\"=\"burger\"][\"name\"=\"G La Dalle\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/G_La_Dalle.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -30052,7 +30052,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/G_La_Dalle.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -30070,9 +30070,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "D\u00e9lifrance",
-    query: "(nwr["brand:wikidata"="Q5320229"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Gabriel Pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Gabriel Pizza\"][\"brand:wikidata\"=\"Q5515791\"][\"cuisine\"=\"pizza\"][\"name\"=\"Gabriel Pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -30106,9 +30106,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Der B\u00e4cker Eifler",
-    query: "(nwr["brand:wikidata"="Q130551734"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Gagawa",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Gagawa\"][\"brand:wikidata\"=\"Q132156132\"][\"cuisine\"=\"chicken\"][\"name\"=\"Gagawa\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -30142,10 +30142,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Der B\u00e4cker Ruetz",
-    query: "(nwr["brand:wikidata"="Q108266694"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Galito's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Galito's\"][\"brand:wikidata\"=\"Q116619555\"][\"cuisine\"=\"chicken\"][\"name\"=\"Galito's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Galito's_Claremont.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -30160,7 +30160,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Galito's_Claremont.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -30178,9 +30178,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Der Beck",
-    query: "(nwr["brand:wikidata"="Q1192443"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Genghis Grill",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Genghis Grill\"][\"brand:wikidata\"=\"Q29470710\"][\"cuisine\"=\"american\"][\"name\"=\"Genghis Grill\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -30214,10 +30214,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Der Mann",
-    query: "(nwr["brand:wikidata"="Q74356398"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "German Doner Kebab",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"German Doner Kebab\"][\"brand:wikidata\"=\"Q112913418\"][\"cuisine\"=\"kebab\"][\"name\"=\"German Doner Kebab\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Sutton_High_Street,_Sutton,_London,_German_Doner_Kebab.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -30232,7 +30232,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Sutton_High_Street,_Sutton,_London,_German_Doner_Kebab.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -30250,9 +30250,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Die Lohner's",
-    query: "(nwr["brand:wikidata"="Q105688772"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Gino's Pizza (Canada)",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Gino's Pizza\"][\"brand:wikidata\"=\"Q84029134\"][\"cuisine\"=\"pizza\"][\"name\"=\"Gino's Pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -30286,10 +30286,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Ditsch",
-    query: "(nwr["brand:wikidata"="Q911573"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Gino's Pizza & Spaghetti House (West Virginia)",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Gino's Pizza & Spaghetti House\"][\"brand:wikidata\"=\"Q5563205\"][\"cuisine\"=\"pizza\"][\"name\"=\"Gino's Pizza & Spaghetti House\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Ginos-Huntington-WV.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -30304,7 +30304,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Ginos-Huntington-WV.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -30322,9 +30322,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "D\u00f6bbe",
-    query: "(nwr["brand:wikidata"="Q107406829"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Gionino's Pizzeria",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Gionino's Pizzeria\"][\"brand:wikidata\"=\"Q115238201\"][\"cuisine\"=\"pizza\"][\"name\"=\"Gionino's Pizzeria\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -30358,10 +30358,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Drei\u00dfig",
-    query: "(nwr["brand:wikidata"="Q1018923"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Giraffas",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Giraffas\"][\"brand:wikidata\"=\"Q5564100\"][\"cuisine\"=\"burger\"][\"name\"=\"Giraffas\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Giraffas_(fast_food).svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -30376,7 +30376,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Giraffas_(fast_food).svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -30394,9 +30394,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Emil Reimann",
-    query: "(nwr["brand:wikidata"="Q15110332"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Giraffe Stop",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Giraffe\"][\"brand:wikidata\"=\"Q5564102\"][\"cuisine\"=\"international;burger\"][\"name\"=\"Giraffe Stop\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -30430,10 +30430,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Eric Kayser",
-    query: "(nwr["brand:wikidata"="Q99231745"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Gold Star Chili",
+    query: "(nwr[\"alt_name\"=\"Gold Star\"][\"amenity\"=\"fast_food\"][\"brand\"=\"Gold Star Chili\"][\"brand:wikidata\"=\"Q16994254\"][\"cuisine\"=\"chili\"][\"name\"=\"Gold Star Chili\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Gold_Star_Chili_logo.png",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -30448,7 +30448,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Gold_Star_Chili_logo.png",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -30466,9 +30466,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Erster Wiener",
-    query: "(nwr["brand:wikidata"="Q15854357"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Golden Chick",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Golden Chick\"][\"brand:wikidata\"=\"Q3772930\"][\"cuisine\"=\"chicken\"][\"name\"=\"Golden Chick\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -30502,9 +30502,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Fabrique",
-    query: "(nwr["brand:wikidata"="Q110533127"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Golden Krust Caribbean Bakery & Grill",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Golden Krust Caribbean Bakery & Grill\"][\"brand:wikidata\"=\"Q5579615\"][\"cuisine\"=\"caribbean\"][\"name\"=\"Golden Krust\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -30538,10 +30538,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Familijna",
-    query: "(nwr["brand:wikidata"="Q133596647"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Goli Vada Pav",
+    query: "(nwr[\"alt_name\"=\"Goli Vada Pav No.1\"][\"amenity\"=\"fast_food\"][\"brand\"=\"Goli Vada Pav\"][\"brand:wikidata\"=\"Q5580697\"][\"cuisine\"=\"indian\"][\"name\"=\"Goli Vada Pav\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Goli_vada_pav_logo.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -30556,7 +30556,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Goli_vada_pav_logo.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -30574,9 +30574,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Ferguson Plarre's Bakehouse",
-    query: "(nwr["brand:wikidata"="Q5444249"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Good Times",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Good Times\"][\"brand:wikidata\"=\"Q5583024\"][\"cuisine\"=\"burger;ice_cream\"][\"name\"=\"Good Times\"][\"official_name\"=\"Good Times Burgers & Frozen Custard\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -30610,10 +30610,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Festival des Pains",
-    query: "(nwr["brand:wikidata"="Q3070334"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "GOSCH Sylt",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"GOSCH Sylt\"][\"brand:wikidata\"=\"Q83870795\"][\"cuisine\"=\"seafood\"][\"name\"=\"GOSCH Sylt\"][\"short_name\"=\"GOSCH\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/GOSCH_Sylt_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -30628,7 +30628,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/GOSCH_Sylt_logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -30646,10 +30646,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Fornetti",
-    query: "(nwr["brand:wikidata"="Q1003020"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Gourmet Burger Kitchen",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Gourmet Burger Kitchen\"][\"brand:wikidata\"=\"Q5588445\"][\"cuisine\"=\"burger\"][\"name\"=\"Gourmet Burger Kitchen\"][\"short_name\"=\"GBK\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Gourmet_Burger_Kitchen_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -30664,7 +30664,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Gourmet_Burger_Kitchen_logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -30682,9 +30682,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Franz",
-    query: "(nwr["brand:wikidata"="Q7889571"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Great American Cookies",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Great American Cookies\"][\"brand:wikidata\"=\"Q5598629\"][\"cuisine\"=\"cookies\"][\"name\"=\"Great American Cookies\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -30718,9 +30718,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "GAIL's",
-    query: "(nwr["brand:wikidata"="Q110662562"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Great Wraps",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Great Wraps\"][\"brand:wikidata\"=\"Q5600272\"][\"cuisine\"=\"burrito\"][\"name\"=\"Great Wraps\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -30754,10 +30754,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Galeria Wypiek\u00f3w Lubaszka",
-    query: "(nwr["brand:wikidata"="Q108586693"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Greenwich",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Greenwich\"][\"brand:wikidata\"=\"Q2691308\"][\"cuisine\"=\"pizza\"][\"name\"=\"Greenwich\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Greenwich_Pizza_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -30772,7 +30772,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Greenwich_Pizza_logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -30790,10 +30790,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Gilgen's",
-    query: "(nwr["brand:wikidata"="Q1524314"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Greggs",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Greggs\"][\"brand:wikidata\"=\"Q3403981\"][\"cuisine\"=\"sandwich;bakery\"][\"name\"=\"Greggs\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Modern_Greggs_The_Bakery.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -30808,7 +30808,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Modern_Greggs_The_Bakery.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -30826,9 +30826,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Glocken B\u00e4ckerei",
-    query: "(nwr["brand:wikidata"="Q1531851"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Grill'd",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Grill'd\"][\"brand:wikidata\"=\"Q18165852\"][\"cuisine\"=\"burger\"][\"name\"=\"Grill'd\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -30862,9 +30862,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Goeken backen",
-    query: "(nwr["brand:wikidata"="Q106823580"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Guac Mexi Grill",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Guac Mexi Grill\"][\"brand:wikidata\"=\"Q123865514\"][\"cuisine\"=\"mexican\"][\"name\"=\"Guac Mexi Grill\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -30898,10 +30898,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Goldilocks",
-    query: "(nwr["brand:wikidata"="Q5580198"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Guthrie's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Guthrie's\"][\"brand:wikidata\"=\"Q5621751\"][\"cuisine\"=\"chicken\"][\"name\"=\"Guthrie's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Guthrie's_Chicken_on_Tennessee_Street,_Tallahassee,_Florida.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -30916,7 +30916,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Guthrie's_Chicken_on_Tennessee_Street,_Tallahassee,_Florida.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -30934,9 +30934,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Gor\u0105co Polecam",
-    query: "(nwr["brand:wikidata"="Q113228125"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Guzman y Gomez",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Guzman y Gomez\"][\"brand:wikidata\"=\"Q23019759\"][\"cuisine\"=\"mexican\"][\"name\"=\"Guzman y Gomez\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -30970,10 +30970,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Granier",
-    query: "(nwr["brand:wikidata"="Q102311169"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Habib's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Habib's\"][\"brand:wikidata\"=\"Q2504930\"][\"cuisine\"=\"middle_eastern\"][\"name\"=\"Habib's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Habibs_em_curitiba.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -30988,7 +30988,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Habibs_em_curitiba.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -31006,9 +31006,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Great Harvest Bread Company",
-    query: "(nwr["brand:wikidata"="Q5599297"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Halal Fried Chicken",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Halal Fried Chicken\"][\"brand:wikidata\"=\"Q108133913\"][\"cuisine\"=\"chicken\"][\"diet:halal\"=\"only\"][\"name\"=\"Halal Fried Chicken\"][\"short_name\"=\"HFC\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -31042,9 +31042,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Greenhalgh's",
-    query: "(nwr["brand:wikidata"="Q99939079"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Haldiram's",
+    query: "(nwr[\"alt_name\"=\"Haldiram\"][\"amenity\"=\"fast_food\"][\"brand\"=\"Haldiram's\"][\"brand:wikidata\"=\"Q17054442\"][\"cuisine\"=\"indian\"][\"name\"=\"Haldiram's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -31078,9 +31078,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Grochola",
-    query: "(nwr["brand:wikidata"="Q133272217"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Hallo Pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Hallo Pizza\"][\"brand:wikidata\"=\"Q1571798\"][\"cuisine\"=\"pizza\"][\"name\"=\"Hallo Pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -31114,9 +31114,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Gromulski",
-    query: "(nwr["brand:wikidata"="Q113308317"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Hampi Pizza Corner",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Hampi Pizza Corner\"][\"cuisine\"=\"pizza\"][\"name\"=\"Hampi Pizza Corner\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -31150,9 +31150,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Grzybki",
-    query: "(nwr["brand:wikidata"="Q108586331"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Hangry Joe's Hot Chicken",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Hangry Joe's Hot Chicken\"][\"brand:wikidata\"=\"Q131378216\"][\"cuisine\"=\"chicken\"][\"name\"=\"Hangry Joe's Hot Chicken\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -31186,10 +31186,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Haubis",
-    query: "(nwr["brand"="Haubis"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Hardee's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Hardee's\"][\"brand:wikidata\"=\"Q1585088\"][\"cuisine\"=\"burger\"][\"name\"=\"Hardee's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Hardee_brand_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -31204,7 +31204,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Hardee_brand_logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -31222,9 +31222,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Hert",
-    query: "(nwr["brand:wikidata"="Q128931723"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Harold's Chicken Shack",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Harold's Chicken Shack\"][\"brand:wikidata\"=\"Q5659832\"][\"cuisine\"=\"chicken\"][\"name\"=\"Harold's Chicken Shack\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -31258,10 +31258,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Hinnerb\u00e4cker",
-    query: "(nwr["brand:wikidata"="Q107985183"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Harry Ramsden's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Harry Ramsden's\"][\"brand:wikidata\"=\"Q5671849\"][\"cuisine\"=\"fish_and_chips\"][\"name\"=\"Harry Ramsden's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Harry_Ramsden's_at_White_Cross_-_geograph.org.uk_-_32382.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -31276,7 +31276,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Harry_Ramsden's_at_White_Cross_-_geograph.org.uk_-_32382.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -31294,10 +31294,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Hofpfisterei",
-    query: "(nwr["brand:wikidata"="Q1623217"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Harvey's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Harvey's\"][\"brand:wikidata\"=\"Q1466184\"][\"cuisine\"=\"burger\"][\"name\"=\"Harvey's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Harvey's_logo_2024.png",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -31312,7 +31312,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Harvey's_logo_2024.png",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -31330,9 +31330,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Holland Bakery",
-    query: "(nwr["brand:wikidata"="Q19726345"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Haus des D\u00f6ners",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Haus des D\u00f6ners\"][\"brand:wikidata\"=\"Q133461235\"][\"cuisine\"=\"kebab\"][\"name\"=\"Haus des D\u00f6ners\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -31366,10 +31366,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Hollywood Bakery",
-    query: "(nwr["brand:wikidata"="Q118464724"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Hell Pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Hell Pizza\"][\"brand:wikidata\"=\"Q1602607\"][\"cuisine\"=\"pizza\"][\"name\"=\"Hell\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Pizza_from_Hell!.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -31384,7 +31384,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Pizza_from_Hell!.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -31402,10 +31402,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Hosselmann",
-    query: "(nwr["brand:wikidata"="Q107203160"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Hero Certified Burgers",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Hero Certified Burgers\"][\"brand:wikidata\"=\"Q5742641\"][\"cuisine\"=\"burger\"][\"name\"=\"Hero Certified Burgers\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/HeroCertifiedBurgersQueenWest.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -31420,7 +31420,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/HeroCertifiedBurgersQueenWest.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -31438,10 +31438,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Ihle",
-    query: "(nwr["brand:wikidata"="Q1626371"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Hesburger",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Hesburger\"][\"brand:wikidata\"=\"Q1276832\"][\"cuisine\"=\"burger\"][\"name\"=\"Hesburger\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Hesburger_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -31456,7 +31456,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Hesburger_logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -31474,9 +31474,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Ihr Landb\u00e4cker",
-    query: "(nwr["brand:wikidata"="Q111022612"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "HNT",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"HNT\"][\"brand:wikidata\"=\"Q85765387\"][\"cuisine\"=\"chicken\"][\"name\"=\"HNT\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -31510,9 +31510,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Il Fornaio",
-    query: "(nwr["brand"="Il Fornaio"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "HokBen",
+    query: "(nwr[\"alt_name\"=\"Hoka Hoka Bento\"][\"amenity\"=\"fast_food\"][\"brand\"=\"HokBen\"][\"brand:wikidata\"=\"Q5877948\"][\"cuisine\"=\"japanese\"][\"name\"=\"HokBen\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -31546,9 +31546,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Il Forno",
-    query: "(nwr["brand"="Il Forno"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Home Burgers",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Home Burgers\"][\"brand:wikidata\"=\"Q133522137\"][\"cuisine\"=\"burger\"][\"name\"=\"Home Burgers\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -31582,10 +31582,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Il Pane Quotidiano",
-    query: "(nwr["brand"="Il Pane Quotidiano"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Honey Baked Ham",
+    query: "(nwr[\"alt_name\"=\"HoneyBaked Ham\"][\"amenity\"=\"fast_food\"][\"brand\"=\"Honey Baked Ham\"][\"brand:wikidata\"=\"Q5893363\"][\"cuisine\"=\"american\"][\"name\"=\"Honey Baked Ham\"][\"official_name\"=\"The Honey Baked Ham Company\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/The_Honey_Baked_Ham_Company.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -31600,7 +31600,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/The_Honey_Baked_Ham_Company.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -31618,10 +31618,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u0130stanbul Halk Ekmek",
-    query: "(nwr["brand:wikidata"="Q6073041"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Hopdoddy Burger Bar",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Hopdoddy Burger Bar\"][\"brand:wikidata\"=\"Q123689179\"][\"cuisine\"=\"burger\"][\"name\"=\"Hopdoddy Burger Bar\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Carriage_Gate_Hopdoddy.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -31636,7 +31636,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Carriage_Gate_Hopdoddy.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -31654,10 +31654,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Julie's",
-    query: "(nwr["brand:wikidata"="Q120020522"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Hot Dog on a Stick",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Hot Dog on a Stick\"][\"brand:wikidata\"=\"Q5909922\"][\"cuisine\"=\"hot_dog\"][\"name\"=\"Hot Dog on a Stick\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Hot_Dog_on_a_Stick_Vintage_Faire_Mall_Modesto,_California.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -31672,7 +31672,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Hot_Dog_on_a_Stick_Vintage_Faire_Mall_Modesto,_California.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -31690,9 +31690,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Junge",
-    query: "(nwr["brand:wikidata"="Q1561751"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Hot Head Burritos",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Hot Head Burritos\"][\"brand:wikidata\"=\"Q5910008\"][\"cuisine\"=\"mexican\"][\"name\"=\"Hot Head Burritos\"][\"short_name\"=\"Hot Head\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -31726,10 +31726,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "K&U B\u00e4ckerei",
-    query: "(nwr["brand:wikidata"="Q1719433"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Hungry Howie's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Hungry Howie's\"][\"brand:wikidata\"=\"Q16985303\"][\"cuisine\"=\"pizza\"][\"name\"=\"Hungry Howie's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Hungry_Howies_Athens_OH_USA.JPG",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -31744,7 +31744,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Hungry_Howies_Athens_OH_USA.JPG",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -31762,10 +31762,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Kaisers Gute Backstube",
-    query: "(nwr["brand:wikidata"="Q15116031"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Hungry Jack's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Hungry Jack's\"][\"brand:wikidata\"=\"Q3036373\"][\"cuisine\"=\"burger\"][\"name\"=\"Hungry Jack's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Hungry_Jack's_Melbourne_Airport.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -31780,7 +31780,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Hungry_Jack's_Melbourne_Airport.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -31798,9 +31798,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Kamps",
-    query: "(nwr["brand:wikidata"="Q1723381"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Hungry Lion",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Hungry Lion\"][\"brand:wikidata\"=\"Q115636930\"][\"cuisine\"=\"chicken\"][\"name\"=\"Hungry Lion\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -31834,10 +31834,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Klein's Backstube",
-    query: "(nwr["brand:wikidata"="Q15859675"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Hunt Brothers Pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Hunt Brothers Pizza\"][\"brand:wikidata\"=\"Q5943909\"][\"cuisine\"=\"pizza\"][\"name\"=\"Hunt Brothers Pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Hunt_Brothers_Pizza_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -31852,7 +31852,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Hunt_Brothers_Pizza_logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -31870,9 +31870,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Kolls",
-    query: "(nwr["brand:wikidata"="Q107151170"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Hwy55",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Hwy55\"][\"brand:wikidata\"=\"Q17183098\"][\"cuisine\"=\"burger;fries;ice_cream\"][\"name\"=\"Hwy55\"][\"official_name\"=\"Hwy55 Burgers, Shakes & Fries\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -31906,9 +31906,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "KONRAD",
-    query: "(nwr["brand:wikidata"="Q124726120"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Ike's Love and Sandwiches",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Ike's Love and Sandwiches\"][\"brand:wikidata\"=\"Q112028897\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Ike's Love and Sandwiches\"][\"short_name\"=\"Ike's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -31942,10 +31942,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Kuhn",
-    query: "(nwr["brand:wikidata"="Q111728345"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "IKEA Bistro",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"IKEA\"][\"brand:wikidata\"=\"Q54078\"][\"cuisine\"=\"swedish\"][\"name\"=\"IKEA Bistro\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Ikea_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -31960,7 +31960,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Ikea_logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -31978,10 +31978,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "L'Atelier Papilles",
-    query: "(nwr["brand:wikidata"="Q130232695"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "IKEA Restaurant",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"IKEA\"][\"brand:wikidata\"=\"Q54078\"][\"cuisine\"=\"swedish\"][\"name\"=\"IKEA Restaurant\"][\"name:en\"=\"IKEA Restaurant\"][\"name:ru\"=\"\u0420\u0435\u0441\u0442\u043e\u0440\u0430\u043d \u0418\u041a\u0415\u0410\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Ikea_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -31996,7 +31996,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Ikea_logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -32014,9 +32014,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "La Mie C\u00e2line",
-    query: "(nwr["brand:wikidata"="Q3210704"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "immergr\u00fcn",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"immergr\u00fcn\"][\"brand:wikidata\"=\"Q62589254\"][\"cuisine\"=\"sandwich;salad;juice\"][\"name\"=\"immergr\u00fcn\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -32050,10 +32050,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "La Paneti\u00e8re",
-    query: "(nwr["brand:wikidata"="Q100712234"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Imo's Pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Imo's Pizza\"][\"brand:wikidata\"=\"Q6005623\"][\"cuisine\"=\"pizza\"][\"name\"=\"Imo's Pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Imos_Pizza_in_the_box_1.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -32068,7 +32068,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Imos_Pizza_in_the_box_1.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -32086,10 +32086,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "La Talemelerie",
-    query: "(nwr["brand:wikidata"="Q130214384"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "In-N-Out Burger",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"In-N-Out Burger\"][\"brand:wikidata\"=\"Q1205312\"][\"cuisine\"=\"burger\"][\"name\"=\"In-N-Out Burger\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/InNOut_2021_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -32104,7 +32104,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/InNOut_2021_logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -32122,10 +32122,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Lagkagehuset",
-    query: "(nwr["brand:wikidata"="Q12323572"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Indira Canteen",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Indira Canteen\"][\"brand:wikidata\"=\"Q36164828\"][\"cuisine\"=\"south_indian\"][\"name\"=\"Indira Canteen\"][\"operator\"=\"BBMP\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Indira_Canteens_Domlur.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -32140,7 +32140,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Indira_Canteens_Domlur.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -32158,9 +32158,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Lagler",
-    query: "(nwr["brand:wikidata"="Q119807471"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Island Pok\u00e9",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Island Pok\u00e9\"][\"brand:wikidata\"=\"Q110694826\"][\"cuisine\"=\"hawaiian\"][\"name\"=\"Island Pok\u00e9\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -32194,10 +32194,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Landb\u00e4ckerei Schmidt",
-    query: "(nwr["brand:wikidata"="Q107985521"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "itsu",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"itsu\"][\"brand:wikidata\"=\"Q6094914\"][\"cuisine\"=\"asian\"][\"name\"=\"itsu\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Itsu,_Commercial_Street,_Leeds_(29th_March_2018).jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -32212,7 +32212,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Itsu,_Commercial_Street,_Leeds_(29th_March_2018).jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -32230,9 +32230,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Le Crobag",
-    query: "(nwr["brand:wikidata"="Q1558025"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Izzo's Illegal Burrito",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Izzo's Illegal Burrito\"][\"brand:wikidata\"=\"Q110780418\"][\"cuisine\"=\"mexican\"][\"name\"=\"Izzo's Illegal Burrito\"][\"short_name\"=\"Izzo's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -32266,9 +32266,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Le Pain du Jour",
-    query: "(nwr["brand:wikidata"="Q114432625"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "J.Co Donuts",
+    query: "(nwr[\"alt_name\"=\"J.Co Donuts and Coffee\"][\"amenity\"=\"fast_food\"][\"brand\"=\"J.Co Donuts'\"][\"brand:wikidata\"=\"Q4260444\"][\"cuisine\"=\"donut;coffee_shop\"][\"name\"=\"J.Co\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -32302,10 +32302,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Le P\u00e9trin Ribe\u00efrou",
-    query: "(nwr["brand:wikidata"="Q89209633"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Jack in the Box",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Jack in the Box\"][\"brand:wikidata\"=\"Q1538507\"][\"cuisine\"=\"burger\"][\"name\"=\"Jack in the Box\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Jack_in_the_Box_2009_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -32320,7 +32320,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Jack_in_the_Box_2009_logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -32338,10 +32338,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Leifert",
-    query: "(nwr["brand:wikidata"="Q66086129"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Jack's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Jack's\"][\"brand:wikidata\"=\"Q6110826\"][\"cuisine\"=\"burger\"][\"name\"=\"Jack's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Jacks_logo_2018.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -32356,7 +32356,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Jacks_logo_2018.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -32374,10 +32374,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Les Fournils de France",
-    query: "(nwr["brand:wikidata"="Q104649900"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Jamba",
+    query: "(nwr[\"alt_name\"=\"Jamba Juice\"][\"amenity\"=\"fast_food\"][\"brand\"=\"Jamba\"][\"brand:wikidata\"=\"Q3088784\"][\"cuisine\"=\"juice\"][\"name\"=\"Jamba\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Jamba_Juice-Sendmail_headquarters.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -32392,7 +32392,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Jamba_Juice-Sendmail_headquarters.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -32410,10 +32410,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Lila B\u00e4cker",
-    query: "(nwr["brand:wikidata"="Q57516591"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Jeno's Pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Jeno's Pizza\"][\"brand:wikidata\"=\"Q4269128\"][\"cuisine\"=\"pizza\"][\"name\"=\"Jeno's Pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Jenos_logo.png",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -32428,7 +32428,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Jenos_logo.png",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -32446,10 +32446,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Lip\u00f3ti P\u00e9ks\u00e9g",
-    query: "(nwr["brand:wikidata"="Q128245525"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Jersey Mike's Subs",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Jersey Mike's Subs\"][\"brand:wikidata\"=\"Q6184897\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Jersey Mike's Subs\"][\"short_name\"=\"Jersey Mike's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Jersey_Mike's_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -32464,7 +32464,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Jersey_Mike's_logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -32482,10 +32482,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "L\u00f6wenb\u00e4cker Schaper",
-    query: "(nwr["brand:wikidata"="Q62075965"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Jimmy John's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Jimmy John's\"][\"brand:wikidata\"=\"Q1689380\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Jimmy John's\"][\"official_name\"=\"Jimmy John's Gourmet Sandwiches\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Jimmy_Johns_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -32500,7 +32500,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Jimmy_Johns_logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -32518,9 +32518,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Luca",
-    query: "(nwr["brand:wikidata"="Q114647790"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Jimmy the Greek",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Jimmy the Greek\"][\"brand:wikidata\"=\"Q17077817\"][\"cuisine\"=\"greek\"][\"name\"=\"Jimmy the Greek\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -32554,9 +32554,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Maison B\u00e9cam",
-    query: "(nwr["brand:wikidata"="Q130232721"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Joe's Pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Joe's Pizza\"][\"brand:wikidata\"=\"Q122209788\"][\"cuisine\"=\"pizza\"][\"name\"=\"Joe's Pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -32590,9 +32590,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Maison Planchot",
-    query: "(nwr["brand:wikidata"="Q117814025"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Johnny's Burger Company",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Johnny's Burger Company\"][\"brand:wikidata\"=\"Q108920805\"][\"cuisine\"=\"burger\"][\"name\"=\"Johnny's Burger Company\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -32626,10 +32626,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "MAKO Cake and Bakery",
-    query: "(nwr["brand:wikidata"="Q124824681"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Jollibee",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Jollibee\"][\"brand:wikidata\"=\"Q37614\"][\"cuisine\"=\"burger\"][\"name\"=\"Jollibee\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Jollibee,_Central,_Hong_Kong_1.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -32644,7 +32644,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Jollibee,_Central,_Hong_Kong_1.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -32662,9 +32662,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Malcolm Barnecutt",
-    query: "(nwr["brand:wikidata"="Q120865030"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Joys Tacos",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Joys Tacos\"][\"brand:wikidata\"=\"Q127411825\"][\"cuisine\"=\"french_tacos\"][\"name\"=\"Joys Tacos\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -32698,9 +32698,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Malzers",
-    query: "(nwr["brand:wikidata"="Q19278095"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Juan Pollo",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Juan Pollo\"][\"brand:wikidata\"=\"Q6300799\"][\"cuisine\"=\"chicken;mexican\"][\"name\"=\"Juan Pollo\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -32734,9 +32734,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Marie Blach\u00e8re",
-    query: "(nwr["brand:wikidata"="Q62082410"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Jugo Juice",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Jugo Juice\"][\"brand:wikidata\"=\"Q119705456\"][\"cuisine\"=\"juice\"][\"name\"=\"Jugo Juice\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -32770,9 +32770,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Mariette",
-    query: "(nwr["brand:wikidata"="Q130232600"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Juice It Up!",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Juice It Up!\"][\"brand:wikidata\"=\"Q6305173\"][\"cuisine\"=\"juice\"][\"name\"=\"Juice It Up!\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -32806,9 +32806,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Markt-B\u00e4ckerei",
-    query: "(nwr["brand:wikidata"="Q1719433"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Juice Press",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Juice Press\"][\"brand:wikidata\"=\"Q27150131\"][\"cuisine\"=\"juice\"][\"name\"=\"Juice Press\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -32842,9 +32842,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Martin Auer",
-    query: "(nwr["brand:wikidata"="Q55523880"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "JuiceLand",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"JuiceLand\"][\"brand:wikidata\"=\"Q123022671\"][\"cuisine\"=\"juice;smoothie\"][\"name\"=\"JuiceLand\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -32878,9 +32878,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Meffert",
-    query: "(nwr["brand:wikidata"="Q125887062"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Julia's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Julia's\"][\"brand:wikidata\"=\"Q123421877\"][\"cuisine\"=\"pasta\"][\"name\"=\"Julia's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -32914,9 +32914,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Merzenich",
-    query: "(nwr["brand:wikidata"="Q110455846"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Jumbo King",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Jumbo King\"][\"brand:wikidata\"=\"Q6310895\"][\"cuisine\"=\"burger\"][\"name\"=\"Jumbo King\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -32950,9 +32950,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Milkau",
-    query: "(nwr["brand:wikidata"="Q66208652"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Jump Juice",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Jump Juice\"][\"brand:wikidata\"=\"Q118139675\"][\"cuisine\"=\"juice\"][\"name\"=\"Jump Juice\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -32986,9 +32986,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Millie's Cookies",
-    query: "(nwr["brand:wikidata"="Q1935533"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Jureskogs",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Jureskogs\"][\"brand:wikidata\"=\"Q70613310\"][\"cuisine\"=\"burger\"][\"name\"=\"Jureskogs\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -33022,10 +33022,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Minit",
-    query: "(nwr["brand:wikidata"="Q116681166"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Just Salad",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Just Salad\"][\"brand:wikidata\"=\"Q23091823\"][\"cuisine\"=\"salad\"][\"name\"=\"Just Salad\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Just_Salad_logo.png",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -33040,7 +33040,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Just_Salad_logo.png",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -33058,9 +33058,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Mlinar",
-    query: "(nwr["brand:wikidata"="Q62082464"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "KaatiZone",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"KaatiZone\"][\"brand:wikidata\"=\"Q6343638\"][\"cuisine\"=\"indian\"][\"name\"=\"KaatiZone\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -33094,9 +33094,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "M\u00fcller & Egerer",
-    query: "(nwr["brand:wikidata"="Q64140618"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Kannam Chicken",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Kannam Chicken\"][\"cuisine\"=\"chicken;korean\"][\"name\"=\"Kannam Chicken\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -33130,9 +33130,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "MultiVlaai",
-    query: "(nwr["brand:wikidata"="Q5439846"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "KBTR",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"KBTR\"][\"brand:wikidata\"=\"Q6382370\"][\"cuisine\"=\"kebab\"][\"name\"=\"KBTR\"][\"official_name\"=\"Kebab Turki Baba Rafi\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -33166,10 +33166,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Musmanni",
-    query: "(nwr["brand:wikidata"="Q19382082"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Kebab King",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Kebab King\"][\"brand:wikidata\"=\"Q113093758\"][\"cuisine\"=\"kebab\"][\"name\"=\"Kebab King\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Kebab_King,_Gdansk_(LRM_20201004_104305).jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -33184,7 +33184,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kebab_King,_Gdansk_(LRM_20201004_104305).jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -33202,9 +33202,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Nobis",
-    query: "(nwr["brand:wikidata"="Q1994827"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Kebhouze",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Kebhouze\"][\"brand:wikidata\"=\"Q130465663\"][\"cuisine\"=\"kebab\"][\"name\"=\"Kebhouze\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -33238,9 +33238,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Nur Hier",
-    query: "(nwr["brand:wikidata"="Q107985207"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Kelly's Cajun Grill",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Kelly's Cajun Grill\"][\"brand:wikidata\"=\"Q108412784\"][\"cuisine\"=\"cajun\"][\"name\"=\"Kelly's Cajun Grill\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -33274,9 +33274,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Oebel",
-    query: "(nwr["brand:wikidata"="Q116215714"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Kernels Popcorn",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Kernels Popcorn\"][\"brand:wikidata\"=\"Q64876684\"][\"cuisine\"=\"popcorn\"][\"name\"=\"Kernels Popcorn\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -33310,10 +33310,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Ogi Berri",
-    query: "(nwr["brand:wikidata"="Q116009401"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "KFC",
+    query: "(nwr[\"alt_name\"=\"Kentucky Fried Chicken\"][\"amenity\"=\"fast_food\"][\"brand\"=\"KFC\"][\"brand:wikidata\"=\"Q524757\"][\"cuisine\"=\"chicken\"][\"name\"=\"KFC\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Kfc_textlogo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -33328,7 +33328,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kfc_textlogo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -33346,10 +33346,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Ole & Steen",
-    query: "(nwr["brand:wikidata"="Q12323572"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "KFC (India/Pakistan)",
+    query: "(nwr[\"alt_name\"=\"Kentucky Fried Chicken\"][\"alt_name:en\"=\"Kentucky Fried Chicken\"][\"alt_name:hi\"=\"\u0915\u0947\u0902\u091f\u0941\u0915\u0940 \u092b\u094d\u0930\u093e\u0907\u0921 \u091a\u093f\u0915\u0928\"][\"alt_name:pa\"=\"\u0a15\u0a48\u0a02\u0a1f\u0a41\u0a15\u0a40 \u0a2b\u0a4d\u0a30\u0a3e\u0a08\u0a21 \u0a1a\u0a3f\u0a15\u0a28\"][\"alt_name:pnb\"=\"\u06a9\u06cc\u0646\u0679\u06a9\u06cc \u0641\u0631\u0627\u0626\u06cc\u0688 \u0686\u06a9\u0646\"][\"alt_name:ur\"=\"\u06a9\u06cc\u0646\u0679\u06a9\u06cc \u0641\u0631\u0627\u0626\u06cc\u0688 \u0686\u06a9\u0646\"][\"amenity\"=\"fast_food\"][\"brand\"=\"KFC\"][\"brand:en\"=\"KFC\"][\"brand:hi\"=\"\u0915\u0947\u090f\u092b\u0938\u0940\"][\"brand:pa\"=\"\u0a15\u0a47\u0a10\u0a2b\u0a38\u0a40\"][\"brand:pnb\"=\"\u06a9\u06d2 \u0627\u06cc\u0641 \u0633\u06cc\"][\"brand:ur\"=\"\u06a9\u06d2 \u0627\u06cc\u0641 \u0633\u06cc\"][\"brand:wikidata\"=\"Q524757\"][\"cuisine\"=\"chicken\"][\"name\"=\"KFC\"][\"name:en\"=\"KFC\"][\"name:hi\"=\"\u0915\u0947\u090f\u092b\u0938\u0940\"][\"name:pa\"=\"\u0a15\u0a47\u0a10\u0a2b\u0a38\u0a40\"][\"name:pnb\"=\"\u06a9\u06d2 \u0627\u06cc\u0641 \u0633\u06cc\"][\"name:ur\"=\"\u06a9\u06d2 \u0627\u06cc\u0641 \u0633\u06cc\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Kfc_textlogo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -33364,7 +33364,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kfc_textlogo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -33382,10 +33382,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Oskroba",
-    query: "(nwr["brand:wikidata"="Q109323856"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "KFC (Vi\u1ec7t Nam)",
+    query: "(nwr[\"alt_name\"=\"G\u00e0 R\u00e1n Kentucky\"][\"alt_name:en\"=\"Kentucky Fried Chicken\"][\"alt_name:vi\"=\"G\u00e0 R\u00e1n Kentucky\"][\"amenity\"=\"fast_food\"][\"brand\"=\"KFC\"][\"brand:wikidata\"=\"Q524757\"][\"cuisine\"=\"fried_chicken\"][\"name\"=\"KFC\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Kfc_textlogo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -33400,7 +33400,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kfc_textlogo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -33418,9 +33418,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Pan de Manila",
-    query: "(nwr["brand:wikidata"="Q130382308"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Kilimanjaro",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Kilimanjaro\"][\"brand:wikidata\"=\"Q28453128\"][\"cuisine\"=\"nigerian\"][\"name\"=\"Kilimanjaro\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -33454,9 +33454,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Pan Pa' Ya!",
-    query: "(nwr["brand:wikidata"="Q131744932"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "King Kebab",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"King Kebab\"][\"cuisine\"=\"kebab\"][\"name\"=\"King Kebab\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -33490,10 +33490,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Pan-pek",
-    query: "(nwr["brand:wikidata"="Q125813932"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "King of Donair",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"King of Donair\"][\"brand:wikidata\"=\"Q6412223\"][\"cuisine\"=\"kebab;pizza\"][\"name\"=\"King of Donair\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/King_of_Donairs.JPG",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -33508,7 +33508,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/King_of_Donairs.JPG",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -33526,9 +33526,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Panishop",
-    query: "(nwr["brand:wikidata"="Q108472015"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "King Pie",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"King Pie\"][\"brand:wikidata\"=\"Q116619039\"][\"cuisine\"=\"pie\"][\"name\"=\"King Pie\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -33562,9 +33562,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Pappert",
-    query: "(nwr["brand:wikidata"="Q28549952"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "King Taco",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"King Taco\"][\"brand:wikidata\"=\"Q6412104\"][\"cuisine\"=\"mexican\"][\"name\"=\"King Taco\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -33598,10 +33598,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Paris Baguette",
-    query: "(nwr["brand:wikidata"="Q62605260"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Kippie",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Kippie\"][\"brand:wikidata\"=\"Q65970311\"][\"cuisine\"=\"chicken\"][\"name\"=\"Kippie\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Kippie_Logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -33616,7 +33616,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kippie_Logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -33634,10 +33634,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Paul",
-    query: "(nwr["brand:wikidata"="Q3370417"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Kochl\u00f6ffel",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Kochl\u00f6ffel\"][\"brand:wikidata\"=\"Q315539\"][\"cuisine\"=\"burger\"][\"name\"=\"Kochl\u00f6ffel\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Kochloeffel-Logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -33652,7 +33652,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kochloeffel-Logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -33670,9 +33670,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Pekara",
-    query: "(nwr["brand"="Pekara"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Kokoriko",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Kokoriko\"][\"brand:wikidata\"=\"Q99433560\"][\"cuisine\"=\"chicken\"][\"name\"=\"Kokoriko\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -33706,9 +33706,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Peters gute Backstube",
-    query: "(nwr["brand:wikidata"="Q67987587"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "KOKORO",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"KOKORO\"][\"brand:wikidata\"=\"Q117050264\"][\"cuisine\"=\"japanese;korean;sushi\"][\"name\"=\"KOKORO\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -33742,10 +33742,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Piekarenka",
-    query: "(nwr["brand"="Piekarenka"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Komagene",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Komagene\"][\"brand:wikidata\"=\"Q108919263\"][\"cuisine\"=\"kebab\"][\"name\"=\"Komagene\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Komagene.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -33760,7 +33760,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Komagene.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -33778,10 +33778,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Piekarnia Szwajcarska",
-    query: "(nwr["brand:wikidata"="Q113308253"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Kotipizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Kotipizza\"][\"brand:wikidata\"=\"Q1628625\"][\"cuisine\"=\"pizza\"][\"name\"=\"Kotipizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Kotipizza.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -33796,7 +33796,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kotipizza.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -33814,10 +33814,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Pod Telegrafem",
-    query: "(nwr["brand"="Pod Telegrafem"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Krispy Kreme",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Krispy Kreme\"][\"brand:wikidata\"=\"Q1192805\"][\"cuisine\"=\"donut\"][\"name\"=\"Krispy Kreme\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo.KrispyKreme.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -33832,7 +33832,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo.KrispyKreme.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -33850,9 +33850,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Poundbakery",
-    query: "(nwr["brand:wikidata"="Q21061591"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Krispy Krunchy Chicken",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Krispy Krunchy Chicken\"][\"brand:wikidata\"=\"Q65087447\"][\"cuisine\"=\"chicken\"][\"name\"=\"Krispy Krunchy Chicken\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -33886,9 +33886,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Przystanek Piekarnia",
-    query: "(nwr["brand:wikidata"="Q113228396"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Krowarzywa",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Krowarzywa\"][\"brand:wikidata\"=\"Q107299031\"][\"cuisine\"=\"burger\"][\"delivery\"=\"yes\"][\"diet:vegan\"=\"only\"][\"name\"=\"Krowarzywa\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -33922,10 +33922,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Putka",
-    query: "(nwr["brand:wikidata"="Q113093586"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Krystal",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Krystal\"][\"brand:wikidata\"=\"Q472195\"][\"cuisine\"=\"burger\"][\"name\"=\"Krystal\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/KrystalNO.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -33940,7 +33940,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/KrystalNO.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -33958,10 +33958,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Red Ribbon",
-    query: "(nwr["brand:wikidata"="Q7304789"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Kura Sushi",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Kura Sushi\"][\"brand:wikidata\"=\"Q6445491\"][\"cuisine\"=\"sushi\"][\"name\"=\"Kura Sushi\"][\"official_name\"=\"Kura Revolving Sushi Bar\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Kura_sushi.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -33976,7 +33976,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kura_sushi.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -33994,9 +33994,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Richters Altstadt-B\u00e4ckerei",
-    query: "(nwr["brand:wikidata"="Q66212346"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Kwalitaria",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Kwalitaria\"][\"brand:wikidata\"=\"Q108923597\"][\"cuisine\"=\"friture\"][\"name\"=\"Kwalitaria\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -34030,10 +34030,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Rischart",
-    query: "(nwr["brand:wikidata"="Q2154631"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "l'artigiano",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"l'artigiano\"][\"brand:wikidata\"=\"Q115145931\"][\"cuisine\"=\"pizza\"][\"delivery\"=\"yes\"][\"name\"=\"l'artigiano\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/L'artigiano_logo_2022.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -34048,7 +34048,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/L'artigiano_logo_2022.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -34066,10 +34066,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Ronde des Pains",
-    query: "(nwr["brand:wikidata"="Q3441707"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "L&L Drive-Inn",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"L&L Drive-Inn\"][\"brand:wikidata\"=\"Q6455441\"][\"cuisine\"=\"hawaiian\"][\"name\"=\"L&L Drive-Inn\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/L&L_Hawaiian_Barbecue_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -34084,7 +34084,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/L&L_Hawaiian_Barbecue_logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -34102,10 +34102,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Roti'O",
-    query: "(nwr["brand:wikidata"="Q124354233"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "L&L Hawaiian Barbecue",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"L&L Hawaiian Barbecue\"][\"brand:wikidata\"=\"Q6455441\"][\"cuisine\"=\"hawaiian\"][\"name\"=\"L&L Hawaiian Barbecue\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/L&L_Hawaiian_Barbecue_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -34120,7 +34120,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/L&L_Hawaiian_Barbecue_logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -34138,10 +34138,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Rotiboy",
-    query: "(nwr["brand:wikidata"="Q2168802"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "La Belle Province",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"La Belle Province\"][\"brand:wikidata\"=\"Q3206579\"][\"cuisine\"=\"burger;sandwich\"][\"name\"=\"La Belle Province\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Montr\u00e9al_Mont-Royal_305_(8212987725).jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -34156,7 +34156,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Montr\u00e9al_Mont-Royal_305_(8212987725).jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -34174,9 +34174,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "sander's backstube",
-    query: "(nwr["brand:wikidata"="Q66207337"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "La Bo\u00eete \u00e0 Pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"La Bo\u00eete \u00e0 Pizza\"][\"brand:wikidata\"=\"Q3206840\"][\"cuisine\"=\"pizza\"][\"delivery\"=\"yes\"][\"name\"=\"La Bo\u00eete \u00e0 Pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -34210,9 +34210,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Santagloria",
-    query: "(nwr["brand:wikidata"="Q54606497"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "La Croissanterie",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"La Croissanterie\"][\"brand:wikidata\"=\"Q3207961\"][\"cuisine\"=\"sandwich\"][\"name\"=\"La Croissanterie\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -34246,9 +34246,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Sch\u00e4fer Dein B\u00e4cker",
-    query: "(nwr["brand:wikidata"="Q127417068"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "La Lucha Sangucheria Criolla",
+    query: "(nwr[\"alt_name\"=\"La Lucha\"][\"amenity\"=\"fast_food\"][\"brand\"=\"La Lucha Sangucheria Criolla\"][\"brand:wikidata\"=\"Q111903592\"][\"cuisine\"=\"peruvian\"][\"name\"=\"La Lucha Sangucheria Criolla\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -34282,9 +34282,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Sch\u00e4fer's",
-    query: "(nwr["brand:wikidata"="Q1464562"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "La Piadineria",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"La Piadineria\"][\"brand:wikidata\"=\"Q108195414\"][\"cuisine\"=\"piadina\"][\"name\"=\"La Piadineria\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -34318,9 +34318,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Schw\u00e4lmer Brotladen",
-    query: "(nwr["brand:wikidata"="Q133461373"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "La Salsa",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"La Salsa\"][\"brand:wikidata\"=\"Q48835190\"][\"cuisine\"=\"tex-mex\"][\"name\"=\"La Salsa\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -34354,10 +34354,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Schwerdtner",
-    query: "(nwr["brand:wikidata"="Q111431951"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Lafleur Restaurant",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Lafleur Restaurant\"][\"brand:wikidata\"=\"Q3216107\"][\"cuisine\"=\"hot_dog;hamburger\"][\"name\"=\"Lafleur Restaurant\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/St-Pierre_MTL.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -34372,7 +34372,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/St-Pierre_MTL.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -34390,9 +34390,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Sehne",
-    query: "(nwr["brand:wikidata"="Q1314761"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Laredo Taco Company",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Laredo Taco Company\"][\"brand:wikidata\"=\"Q114108971\"][\"cuisine\"=\"tex-mex\"][\"name\"=\"Laredo Taco Company\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -34426,10 +34426,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Semeur\u8056\u5a1c",
-    query: "(nwr["brand:wikidata"="Q108366557"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Larry's Giant Subs",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Larry's Giant Subs\"][\"brand:wikidata\"=\"Q6489839\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Larry's Giant Subs\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Larry's_Giant_Subs,_US341,_Dock_Junction.JPG",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -34444,7 +34444,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Larry's_Giant_Subs,_US341,_Dock_Junction.JPG",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -34462,9 +34462,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Simit Saray\u0131",
-    query: "(nwr["brand:wikidata"="Q28042608"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Laughing Planet",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Laughing Planet\"][\"brand:wikidata\"=\"Q61603998\"][\"cuisine\"=\"mexican\"][\"name\"=\"Laughing Planet\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -34498,9 +34498,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Sipl",
-    query: "(nwr["brand:wikidata"="Q122771409"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Le Kiosque \u00e0 Pizzas",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Le Kiosque \u00e0 Pizzas\"][\"brand:wikidata\"=\"Q3223839\"][\"cuisine\"=\"pizza\"][\"name\"=\"Le Kiosque \u00e0 Pizzas\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -34534,9 +34534,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Somerset Bakehouse",
-    query: "(nwr["brand:wikidata"="Q131143706"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Le Tacos de Lyon",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Le Tacos de Lyon\"][\"brand:wikidata\"=\"Q127412004\"][\"cuisine\"=\"french_tacos\"][\"name\"=\"Le Tacos de Lyon\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -34570,10 +34570,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Sophie Lebreuilly",
-    query: "(nwr["brand:wikidata"="Q66372229"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Lee's Famous Recipe Chicken",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Lee's Famous Recipe Chicken\"][\"brand:wikidata\"=\"Q6512810\"][\"cuisine\"=\"chicken\"][\"name\"=\"Lee's Famous Recipe Chicken\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Lee's_Famous_Recipe_Chicken_logo.png",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -34588,7 +34588,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Lee's_Famous_Recipe_Chicken_logo.png",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -34606,10 +34606,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "SPC",
-    query: "(nwr["brand:wikidata"="Q108586596"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Lee's Sandwiches",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Lee's Sandwiches\"][\"brand:wikidata\"=\"Q6512823\"][\"cuisine\"=\"vietnamese;sandwich\"][\"name\"=\"Lee's Sandwiches\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Lee's_Sandwiches_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -34624,7 +34624,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Lee's_Sandwiches_logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -34642,9 +34642,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Stadtb\u00e4ckerei Kamp",
-    query: "(nwr["brand:wikidata"="Q111682475"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "LemonShark Pok\u00e9",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"LemonShark Pok\u00e9\"][\"brand:wikidata\"=\"Q115411660\"][\"cuisine\"=\"poke\"][\"name\"=\"LemonShark Pok\u00e9.\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -34678,10 +34678,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Stangengr\u00fcner M\u00fchlenb\u00e4ckerei",
-    query: "(nwr["brand:wikidata"="Q114729344"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "LEON",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"LEON\"][\"brand:wikidata\"=\"Q6524851\"][\"cuisine\"=\"burger;sandwich\"][\"name\"=\"LEON\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Kingsx-6119.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -34696,7 +34696,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kingsx-6119.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -34714,10 +34714,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Starke B\u00e4cker",
-    query: "(nwr["brand:wikidata"="Q66133336"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Les Burgers de Papa",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Les Burgers de Papa\"][\"brand:wikidata\"=\"Q111059493\"][\"cuisine\"=\"burger\"][\"name\"=\"Les Burgers de Papa\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Burger_de_Papa.png",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -34732,7 +34732,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Burger_de_Papa.png",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -34750,9 +34750,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Steinecke",
-    query: "(nwr["brand:wikidata"="Q57516278"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Lion's Choice",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Lion's Choice\"][\"brand:wikidata\"=\"Q6555311\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Lion's Choice\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -34786,10 +34786,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Steiner",
-    query: "(nwr["brand:wikidata"="Q111728988"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Little Big Burger",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Little Big Burger\"][\"brand:wikidata\"=\"Q63874404\"][\"cuisine\"=\"burger\"][\"name\"=\"Little Big Burger\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Northeast_Portland,_Oregon_(2019)_-_161.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -34804,7 +34804,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Northeast_Portland,_Oregon_(2019)_-_161.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -34822,10 +34822,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Steiskal",
-    query: "(nwr["brand:wikidata"="Q111686819"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Little Caesars",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Little Caesars\"][\"brand:wikidata\"=\"Q1393809\"][\"cuisine\"=\"pizza\"][\"name\"=\"Little Caesars\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Little_Caesars_in_Marquette,_Michigan.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -34840,7 +34840,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Little_Caesars_in_Marquette,_Michigan.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -34858,9 +34858,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Sternenb\u00e4ck",
-    query: "(nwr["brand:wikidata"="Q62595021"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Loco Burrito",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Loco Burrito\"][\"brand:wikidata\"=\"Q125545750\"][\"cuisine\"=\"mexican\"][\"name\"=\"Loco Burrito\"][\"name:en\"=\"Loco Burrito\"][\"name:ko\"=\"\ub85c\uaf2c\ube0c\ub9ac\ub610 \uccad\uc8fc\uc810\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -34894,9 +34894,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Stinges",
-    query: "(nwr["brand:wikidata"="Q60478280"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Lola Nena's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Lola Nena's\"][\"brand:wikidata\"=\"Q120142295\"][\"cuisine\"=\"regional;pichi-pichi;donuts;noodles\"][\"name\"=\"Lola Nena's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -34930,10 +34930,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Str\u00f6ck",
-    query: "(nwr["brand:wikidata"="Q2357607"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Long John Silver's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Long John Silver's\"][\"brand:wikidata\"=\"Q1535221\"][\"cuisine\"=\"seafood\"][\"name\"=\"Long John Silver's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Kfc-longjohnsilvers.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -34948,7 +34948,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kfc-longjohnsilvers.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -34966,9 +34966,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Taumberger",
-    query: "(nwr["brand:wikidata"="Q119807559"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Lord of the Fries",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Lord of the Fries\"][\"brand:wikidata\"=\"Q104088629\"][\"cuisine\"=\"burger\"][\"diet:vegan\"=\"only\"][\"name\"=\"Lord of the Fries\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -35002,9 +35002,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "The Cheesecake Shop",
-    query: "(nwr["brand:wikidata"="Q117717103"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Lots'a Pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Lots'a Pizza\"][\"brand:wikidata\"=\"Q121090232\"][\"cuisine\"=\"pizza\"][\"name\"=\"Lots'a Pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -35038,10 +35038,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Tous les Jours",
-    query: "(nwr["brand:wikidata"="Q3535609"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Lotteria",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Lotteria\"][\"brand:wikidata\"=\"Q249525\"][\"cuisine\"=\"burger\"][\"name\"=\"Lotteria\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Lotteria_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -35056,7 +35056,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Lotteria_logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -35074,9 +35074,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Uncle Tetsu's Cheesecake",
-    query: "(nwr["brand:wikidata"="Q28153939"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Louisiana Famous Fried Chicken",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Louisiana Famous Fried Chicken\"][\"brand:wikidata\"=\"Q6689122\"][\"cuisine\"=\"chicken\"][\"name\"=\"Louisiana Famous Fried Chicken\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -35110,10 +35110,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Valerio's Tropical Bakeshop",
-    query: "(nwr["brand:wikidata"="Q125537872"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Lviv Croissants",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Lviv Croissants\"][\"brand:wikidata\"=\"Q116871093\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Lviv Croissants\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/\u041c\u043e\u0442\u0443.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -35128,7 +35128,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/\u041c\u043e\u0442\u0443.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -35146,10 +35146,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Vincent",
-    query: "(nwr["brand:wikidata"="Q113308366"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Ma'loa",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Ma'loa\"][\"brand:wikidata\"=\"Q116898012\"][\"cuisine\"=\"poke\"][\"name\"=\"Ma'loa\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/MALOA_Pok\u00e9_Bowl_Dresden.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -35164,7 +35164,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/MALOA_Pok\u00e9_Bowl_Dresden.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -35182,9 +35182,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "von Allw\u00f6rden",
-    query: "(nwr["brand:wikidata"="Q60411349"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Mac's Sushi",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Mac's Sushi\"][\"brand:wikidata\"=\"Q133254906\"][\"cuisine\"=\"sushi\"][\"name\"=\"Mac's Sushi\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -35218,10 +35218,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Warrens Bakery",
-    query: "(nwr["brand:wikidata"="Q7970646"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Mak.by",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Mak.by\"][\"brand:wikidata\"=\"Q118149500\"][\"cuisine\"=\"burger\"][\"name\"=\"Mak.by\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Mak.by.png",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -35236,7 +35236,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Mak.by.png",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -35254,9 +35254,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Wenzel's",
-    query: "(nwr["brand:wikidata"="Q99357750"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Malv\u00f3n",
+    query: "(nwr[\"alt_name\"=\"Empanadas Argentinas Malv\u00f3n\"][\"amenity\"=\"fast_food\"][\"brand\"=\"Malv\u00f3n\"][\"brand:wikidata\"=\"Q109877196\"][\"cuisine\"=\"empanada\"][\"name\"=\"Malv\u00f3n\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -35290,10 +35290,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Wiener Feinb\u00e4cker Heberer",
-    query: "(nwr["brand:wikidata"="Q15854357"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Manchu Wok",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Manchu Wok\"][\"brand:wikidata\"=\"Q6747622\"][\"cuisine\"=\"chinese\"][\"name\"=\"Manchu Wok\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Manchu_Wok_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -35308,7 +35308,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Manchu_Wok_logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -35326,10 +35326,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Wienerroither",
-    query: "(nwr["brand:wikidata"="Q110474658"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Mang Inasal",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Mang Inasal\"][\"brand:wikidata\"=\"Q6748573\"][\"cuisine\"=\"barbecue\"][\"name\"=\"Mang Inasal\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Mang_Inasal.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -35344,7 +35344,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Mang_Inasal.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -35362,9 +35362,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Wolf",
-    query: "(nwr["brand:wikidata"="Q125783445"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Manhattan Bagel",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Manhattan Bagel\"][\"brand:wikidata\"=\"Q64517333\"][\"cuisine\"=\"bagel\"][\"name\"=\"Manhattan Bagel\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -35398,10 +35398,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Woops!",
-    query: "(nwr["brand:wikidata"="Q110474786"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Marco's Pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Marco's Pizza\"][\"brand:wikidata\"=\"Q6757382\"][\"cuisine\"=\"pizza\"][\"name\"=\"Marco's Pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Marco's_Pizza_Van_Buren_Township_Michigan.JPG",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -35416,7 +35416,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Marco's_Pizza_Van_Buren_Township_Michigan.JPG",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -35434,10 +35434,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Zagreba\u010dke pekarne Klara",
-    query: "(nwr["brand:wikidata"="Q125815636"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Marrybrown",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Marrybrown\"][\"brand:wikidata\"=\"Q3380773\"][\"cuisine\"=\"malaysian;chicken;burger\"][\"diet:halal\"=\"yes\"][\"name\"=\"Marrybrown\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Marrybrown_Jalan_Tan_Hiok_Nee.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -35452,7 +35452,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Marrybrown_Jalan_Tan_Hiok_Nee.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -35470,10 +35470,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Zeit f\u00fcr Brot",
-    query: "(nwr["brand:wikidata"="Q109780385"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Marugame Udon",
+    query: "(nwr[\"alt_name\"=\"Marugame Seimen\"][\"amenity\"=\"fast_food\"][\"brand\"=\"Marugame Seimen\"][\"brand:wikidata\"=\"Q10877253\"][\"cuisine\"=\"noodle\"][\"name\"=\"Marugame Udon\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Marugame_Seimen_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -35488,7 +35488,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Marugame_Seimen_logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -35506,10 +35506,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Zeppitz",
-    query: "(nwr["brand:wikidata"="Q119808019"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Mary Brown's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Mary Brown's\"][\"brand:wikidata\"=\"Q6779125\"][\"cuisine\"=\"chicken\"][\"name\"=\"Mary Brown's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Mary_Browns_in_Guelph_ON.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -35524,7 +35524,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Mary_Browns_in_Guelph_ON.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -35542,10 +35542,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Ziarenko",
-    query: "(nwr["brand:wikidata"="Q133855957"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Max",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Max\"][\"brand:wikidata\"=\"Q1912172\"][\"cuisine\"=\"burger\"][\"name\"=\"Max\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Max_(Restaurant)_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -35560,7 +35560,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Max_(Restaurant)_logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -35578,10 +35578,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u0392\u03b5\u03bd\u03ad\u03c4\u03b7",
-    query: "(nwr["brand:wikidata"="Q106776278"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "McDonald's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"McDonald's\"][\"brand:wikidata\"=\"Q38076\"][\"cuisine\"=\"burger\"][\"name\"=\"McDonald's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/McDonald's_with_slogan_2020.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -35596,7 +35596,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/McDonald's_with_slogan_2020.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -35614,10 +35614,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u03a4\u03b5\u03c1\u03ba\u03b5\u03bd\u03bb\u03ae\u03c2",
-    query: "(nwr["brand:wikidata"="Q16956985"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "McDonald's (France)",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"McDonald's\"][\"brand:wikidata\"=\"Q38076\"][\"cuisine\"=\"burger\"][\"name\"=\"McDonald's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/McDonald's_with_slogan_2020.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -35632,7 +35632,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/McDonald's_with_slogan_2020.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -35650,10 +35650,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u0411\u0443\u043b\u043e\u0447\u043d\u044b\u0435 \u0424. \u0412\u043e\u043b\u044c\u0447\u0435\u043a\u0430",
-    query: "(nwr["brand:wikidata"="Q109910298"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "McDonald's (Norge)",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"McDonald's\"][\"brand:wikidata\"=\"Q38076\"][\"cuisine\"=\"burger\"][\"name\"=\"McDonald's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/McDonald's_with_slogan_2020.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -35668,7 +35668,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/McDonald's_with_slogan_2020.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -35686,10 +35686,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u0411\u0443\u0445\u0430\u043d\u043a\u0430",
-    query: "(nwr["brand"="\u0411\u0443\u0445\u0430\u043d\u043a\u0430"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "McDonald's (\u0423\u043a\u0440\u0430\u0457\u043d\u0430)",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"McDonald's\"][\"brand:en\"=\"McDonald's\"][\"brand:uk\"=\"\u041c\u0430\u043a\u0414\u043e\u043d\u0430\u043b\u044c\u0434\u0437\"][\"brand:wikidata\"=\"Q4043856\"][\"cuisine\"=\"burger\"][\"delivery\"=\"yes\"][\"name\"=\"McDonald's\"][\"name:en\"=\"McDonald's\"][\"name:uk\"=\"\u041c\u0430\u043a\u0414\u043e\u043d\u0430\u043b\u044c\u0434\u0437\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/McDonald's_Golden_Arches.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -35704,7 +35704,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/McDonald's_Golden_Arches.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -35722,9 +35722,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u0431\u0443\u0448\u0435",
-    query: "(nwr["brand:wikidata"="Q110044050"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Mediterr\u00e1neo",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Mediterr\u00e1neo\"][\"brand:wikidata\"=\"Q116374013\"][\"cuisine\"=\"peruvian\"][\"name\"=\"Mediterr\u00e1neo\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -35758,9 +35758,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u0416\u0430\u0440 \u0441\u0432\u0435\u0436\u0430\u0440",
-    query: "(nwr["brand"="\u0416\u0430\u0440 \u0441\u0432\u0435\u0436\u0430\u0440"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Megamatte",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Megamatte\"][\"brand:wikidata\"=\"Q122811191\"][\"cuisine\"=\"brazilian\"][\"name\"=\"Megamatte\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -35794,10 +35794,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u041a\u0438\u0457\u0432\u0445\u043b\u0456\u0431",
-    query: "(nwr["brand:wikidata"="Q12110306"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Mendocino Farms",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Mendocino Farms\"][\"brand:wikidata\"=\"Q110671982\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Mendocino Farms\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Mendocino_Farms_logo.png",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -35812,7 +35812,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Mendocino_Farms_logo.png",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -35830,10 +35830,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u041a\u0443\u043b\u0438\u043d\u0430\u0440\u0438\u044f",
-    query: "(nwr["brand"="\u041a\u0443\u043b\u0438\u043d\u0430\u0440\u0438\u044f"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Meson Sandwiches",
+    query: "(nwr[\"alt_name\"=\"El Meson Sandwiches\"][\"amenity\"=\"fast_food\"][\"brand\"=\"Meson Sandwiches\"][\"brand:wikidata\"=\"Q5351585\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Meson Sandwiches\"][\"short_name\"=\"Meson\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/El_Meson_Sandwiches_logo.png",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -35848,7 +35848,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/El_Meson_Sandwiches_logo.png",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -35866,10 +35866,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u041a\u0443\u043b\u0438\u043d\u0438\u0447\u0456",
-    query: "(nwr["brand:wikidata"="Q117003960"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Mesopotamia",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Mesopotamia\"][\"brand:wikidata\"=\"Q130717694\"][\"cuisine\"=\"kebab\"][\"name\"=\"Mesopotamia\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo-mesopotamia-patrat.png",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -35884,7 +35884,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo-mesopotamia-patrat.png",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -35902,9 +35902,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u041f\u0435\u0440\u0448\u0430 \u041f\u0435\u043a\u0430\u0440\u043d\u044f \u0422\u0432\u043e\u0433\u043e \u041c\u0456\u0441\u0442\u0430",
-    query: "(nwr["brand:wikidata"="Q123856059"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Miami Grill",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Miami Grill\"][\"brand:wikidata\"=\"Q6827420\"][\"cuisine\"=\"american\"][\"name\"=\"Miami Grill\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -35938,9 +35938,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u0421\u0456\u043c\u0435\u0439\u043d\u0430 \u043f\u0435\u043a\u0430\u0440\u043d\u044f",
-    query: "(nwr["brand:wikidata"="Q117705965"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Mighty Taco",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Mighty Taco\"][\"brand:wikidata\"=\"Q6844210\"][\"cuisine\"=\"mexican\"][\"name\"=\"Mighty Taco\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -35974,10 +35974,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u0425\u043b\u0435\u0431 \u041d\u0430\u0441\u0443\u0449\u043d\u044b\u0439",
-    query: "(nwr["brand:wikidata"="Q109910218"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Migros Take Away",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Migros Take Away\"][\"brand:wikidata\"=\"Q111826610\"][\"cuisine\"=\"international\"][\"name\"=\"Migros Take Away\"][\"takeaway\"=\"only\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Migros_Take_Away.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -35992,7 +35992,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Migros_Take_Away.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -36010,9 +36010,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u0425\u043b\u0435\u0431\u043d\u0438\u043a",
-    query: "(nwr["brand:wikidata"="Q110085956"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Milano Pizzeria",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Milano Pizzeria\"][\"brand:wikidata\"=\"Q133228353\"][\"cuisine\"=\"pizza\"][\"name\"=\"Milano Pizzeria\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -36046,9 +36046,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u0426\u0430\u0440 \u0425\u043b\u0456\u0431",
-    query: "(nwr["brand:wikidata"="Q122028573"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Milio's Sandwiches",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Milio's\"][\"brand:wikidata\"=\"Q6851893\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Milio's\"][\"official_name\"=\"Milio's Sandwiches\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -36082,9 +36082,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u05de\u05d0\u05e4\u05d4 \u05e0\u05d0\u05de\u05df",
-    query: "(nwr["brand:wikidata"="Q117711642"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Milo's Hamburgers",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Milo's Hamburgers\"][\"brand:wikidata\"=\"Q6860268\"][\"cuisine\"=\"burger\"][\"name\"=\"Milo's Hamburgers\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -36118,9 +36118,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u0628\u0631\u0628\u0631\u06cc",
-    query: "(nwr["brand"="\u0628\u0631\u0628\u0631\u06cc"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Minute Burger",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Minute Burger\"][\"brand:wikidata\"=\"Q62273503\"][\"cuisine\"=\"burger\"][\"name\"=\"Minute Burger\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -36154,9 +36154,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u0633\u0646\u06af\u06a9",
-    query: "(nwr["brand"="\u0633\u0646\u06af\u06a9"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Miss Millie's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Miss Millie's\"][\"brand:wikidata\"=\"Q117856745\"][\"cuisine\"=\"chicken\"][\"name\"=\"Miss Millie's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -36190,10 +36190,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u0633\u0646\u06af\u06a9\u06cc",
-    query: "(nwr["brand"="\u0633\u0646\u06af\u06a9\u06cc"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Mister Donut",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Mister Donut\"][\"brand:en\"=\"Mister Donut\"][\"brand:wikidata\"=\"Q1065819\"][\"cuisine\"=\"donut\"][\"name\"=\"Mister Donut\"][\"name:en\"=\"Mister Donut\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Mister_Donut_Logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -36208,7 +36208,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Mister_Donut_Logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -36226,10 +36226,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u0644\u0648\u0627\u0634\u06cc",
-    query: "(nwr["brand"="\u0644\u0648\u0627\u0634\u06cc"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Mister Donut (\u81fa\u7063)",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Mister Donut\"][\"brand:en\"=\"Mister Donut\"][\"brand:ja\"=\"\u30df\u30b9\u30bf\u30fc\u30c9\u30fc\u30ca\u30c4\"][\"brand:wikidata\"=\"Q1065819\"][\"brand:zh\"=\"Mister Donut\"][\"cuisine\"=\"donut\"][\"name\"=\"Mister Donut\"][\"name:en\"=\"Mister Donut\"][\"name:ja\"=\"\u30df\u30b9\u30bf\u30fc\u30c9\u30fc\u30ca\u30c4\"][\"name:zh\"=\"Mister Donut\"][\"operator\"=\"\u7d71\u4e00\u591a\u62ff\u6ecb\u80a1\u4efd\u6709\u9650\u516c\u53f8\"][\"operator:wikidata\"=\"Q15934112\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Mister_Donut_Logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -36244,7 +36244,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Mister_Donut_Logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -36262,9 +36262,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u0646\u0627\u0646\u0648\u0627\u06cc\u06cc \u062a\u0627\u0641\u062a\u0648\u0646",
-    query: "(nwr["brand"="\u0646\u0627\u0646\u0648\u0627\u06cc\u06cc \u062a\u0627\u0641\u062a\u0648\u0646"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Mizzoni's Pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Mizzoni's Pizza\"][\"brand:wikidata\"=\"Q113637632\"][\"cuisine\"=\"pizza\"][\"name\"=\"Mizzoni's Pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -36298,9 +36298,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\ub69c\ub808\uc96c\ub974",
-    query: "(nwr["brand:wikidata"="Q3535609"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Mleczarnia Jerozolimska",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Mleczarnia Jerozolimska\"][\"brand:wikidata\"=\"Q108585732\"][\"cuisine\"=\"polish\"][\"name\"=\"Mleczarnia Jerozolimska\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -36334,10 +36334,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\ud30c\ub9ac\ubc14\uac8c\ub728 (\ub300\ud55c\ubbfc\uad6d)",
-    query: "(nwr["brand:wikidata"="Q62605260"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Mo'men",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Mo'men\"][\"brand:wikidata\"=\"Q3317535\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Mo'men\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Momen_New_Logo.png",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -36352,7 +36352,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Momen_New_Logo.png",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -36370,9 +36370,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u30a2\u30f3\u30c7\u30eb\u30bb\u30f3",
-    query: "(nwr["brand:wikidata"="Q17192637"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Mochachos",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Mochachos\"][\"brand:wikidata\"=\"Q116619117\"][\"cuisine\"=\"mexican;chicken\"][\"name\"=\"Mochachos\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -36406,9 +36406,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u30f4\u30a3\u30fb\u30c9\u30fb\u30d5\u30e9\u30f3\u30b9",
-    query: "(nwr["brand:wikidata"="Q7928249"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Mochinut",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Mochinut\"][\"brand:wikidata\"=\"Q112757409\"][\"cuisine\"=\"donut;bubble_tea\"][\"name\"=\"Mochinut\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -36442,9 +36442,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u30b5\u30f3\u30b8\u30a7\u30eb\u30de\u30f3",
-    query: "(nwr["brand:wikidata"="Q11305612"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "MOD Pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"MOD Pizza\"][\"brand:wikidata\"=\"Q19903469\"][\"cuisine\"=\"pizza\"][\"name\"=\"MOD Pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -36478,10 +36478,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u30c9\u30f3\u30af",
-    query: "(nwr["brand:wikidata"="Q11323428"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Moe's Italian Sandwiches",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Moe's Italian Sandwiches\"][\"brand:wikidata\"=\"Q6889933\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Moe's Italian Sandwiches\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Moe's_Italian_Sandwiches_logo.png",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -36496,7 +36496,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Moe's_Italian_Sandwiches_logo.png",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -36514,10 +36514,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u30dd\u30f3\u30d1\u30c9\u30a6\u30eb",
-    query: "(nwr["brand:wikidata"="Q11339403"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Moe's Southwest Grill",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Moe's Southwest Grill\"][\"brand:wikidata\"=\"Q6889938\"][\"cuisine\"=\"mexican\"][\"name\"=\"Moe's Southwest Grill\"][\"short_name\"=\"Moe's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Moe's_Southwest_Grill,_Garden_Hills,_Atlanta_GA.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -36532,7 +36532,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Moe's_Southwest_Grill,_Garden_Hills,_Atlanta_GA.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -36550,10 +36550,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u30ea\u30c8\u30eb\u30de\u30fc\u30e1\u30a4\u30c9",
-    query: "(nwr["brand:wikidata"="Q96186008"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Mooyah",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Mooyah\"][\"brand:wikidata\"=\"Q6908759\"][\"cuisine\"=\"burger\"][\"name\"=\"Mooyah\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Mooyah-boston-ma-1.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -36568,7 +36568,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Mooyah-boston-ma-1.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -36586,9 +36586,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u4e00\u4e4b\u8ed2",
-    query: "(nwr["brand:wikidata"="Q57269686"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Morley's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Morley's\"][\"brand:wikidata\"=\"Q21008528\"][\"cuisine\"=\"chicken\"][\"name\"=\"Morley's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -36622,10 +36622,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u4e43\u304c\u7f8e",
-    query: "(nwr["brand:wikidata"="Q75563038"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Mostaza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Mostaza\"][\"brand:wikidata\"=\"Q16609167\"][\"cuisine\"=\"burger\"][\"name\"=\"Mostaza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Mostaza_restaurant_logo.png",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -36640,7 +36640,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Mostaza_restaurant_logo.png",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -36658,10 +36658,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u539f\u9ea6\u5c71\u4e18",
-    query: "(nwr["brand:wikidata"="Q61056698"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Mr Bigg's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Mr Bigg's\"][\"brand:wikidata\"=\"Q955488\"][\"cuisine\"=\"nigerian\"][\"name\"=\"Mr Bigg's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Mr._Bigg's.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -36676,7 +36676,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Mr._Bigg's.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -36694,10 +36694,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u5473\u591a\u7f8e",
-    query: "(nwr["brand:wikidata"="Q96323645"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Mr. Hero",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Mr. Hero\"][\"brand:wikidata\"=\"Q123341537\"][\"cuisine\"=\"sandwich;burger\"][\"name\"=\"Mr. Hero\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Mr._Hero_logo.png",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -36712,7 +36712,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Mr._Hero_logo.png",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -36730,9 +36730,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u591a\u4e50\u4e4b\u65e5",
-    query: "(nwr["brand:wikidata"="Q3535609"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Mr. Liempo",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Mr. Liempo\"][\"brand:wikidata\"=\"Q121090282\"][\"cuisine\"=\"barbecue\"][\"name\"=\"Mr. Liempo\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -36766,9 +36766,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u5927\u73ed\u9eb5\u5305\u897f\u9905 Taipan Bread & Cakes",
-    query: "(nwr["brand:wikidata"="Q10936779"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Mr. Pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Mr. Pizza\"][\"brand:wikidata\"=\"Q5361801\"][\"cuisine\"=\"pizza\"][\"name:en\"=\"Mr. Pizza\"][\"name:ko\"=\"\ubbf8\uc2a4\ud130\ud53c\uc790\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -36802,9 +36802,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u5947\u83ef\u9905\u5bb6 Kee Wah Bakery",
-    query: "(nwr["brand:wikidata"="Q6382658"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Mr. Pretzels",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Mr. Pretzels\"][\"brand:wikidata\"=\"Q115728208\"][\"cuisine\"=\"pretzel\"][\"name\"=\"Mr. Pretzels\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -36838,9 +36838,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u597d\u5229\u6765",
-    query: "(nwr["brand:wikidata"="Q97862657"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Mr. Sub",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Mr. Sub\"][\"brand:wikidata\"=\"Q6929225\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Mr. Sub\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -36874,10 +36874,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u5c71\u5d0e\u88fd\u30d1\u30f3",
-    query: "(nwr["brand:wikidata"="Q3138937"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "MrBeast Burger",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"MrBeast Burger\"][\"brand:wikidata\"=\"Q106013567\"][\"cuisine\"=\"burger\"][\"name\"=\"MrBeast Burger\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/MrBeast_Burger_text_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -36892,7 +36892,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/MrBeast_Burger_text_logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -36910,9 +36910,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u5c71\u5d0e\u9eb5\u5305",
-    query: "(nwr["brand:wikidata"="Q3138937"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Muchas Gracias Mexican Food",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Muchas Gracias Mexican Food\"][\"brand:wikidata\"=\"Q115412808\"][\"cuisine\"=\"mexican\"][\"name\"=\"Muchas Gracias Mexican Food\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -36946,9 +36946,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u5c71\u5d0e\u9eb5\u5305 Yamazaki Bakery",
-    query: "(nwr["brand:wikidata"="Q3138937"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Mucho Burrito",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Mucho Burrito\"][\"brand:wikidata\"=\"Q65148332\"][\"cuisine\"=\"mexican\"][\"name\"=\"Mucho Burrito\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -36982,9 +36982,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u5df4\u9ece\u8d1d\u751c (\u4e2d\u56fd)",
-    query: "(nwr["brand:wikidata"="Q62605260"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Myungrang Hotdog",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Myungrang Hotdog\"][\"brand:wikidata\"=\"Q130527587\"][\"cuisine\"=\"hot_dog\"][\"name\"=\"Myungrang Hotdog\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -37018,10 +37018,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u6771\u6d77\u5802 Arome Bakery",
-    query: "(nwr["brand:wikidata"="Q1305627"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Nathan's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Nathan's\"][\"brand:wikidata\"=\"Q1319505\"][\"cuisine\"=\"hot_dog\"][\"name\"=\"Nathan's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Nathan's_Famous.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -37036,7 +37036,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Nathan's_Famous.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -37054,9 +37054,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u6a02\u7530\u9eb5\u5305\u5c4b",
-    query: "(nwr["brand:wikidata"="Q108366505"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Nation's Giant Hamburgers",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Nation's Giant Hamburgers\"][\"brand:wikidata\"=\"Q17061887\"][\"cuisine\"=\"burger\"][\"name\"=\"Nation's Giant Hamburgers\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -37090,9 +37090,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u798f\u5229\u9eb5\u5305",
-    query: "(nwr["brand:wikidata"="Q111128271"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Neat",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Neat\"][\"brand:wikidata\"=\"Q114006169\"][\"cuisine\"=\"burger;salad;sandwich\"][\"diet:vegan\"=\"only\"][\"name\"=\"Neat\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -37126,9 +37126,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u7f8e\u5fc3\u897f\u9905 Maxim's Cakes",
-    query: "(nwr["brand:wikidata"="Q15924792"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "N\u00e9kter Juice Bar",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"N\u00e9kter Juice Bar\"][\"brand:wikidata\"=\"Q112826281\"][\"cuisine\"=\"juice\"][\"name\"=\"N\u00e9kter Juice Bar\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -37162,10 +37162,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u8056\u5b89\u5a1c\u9905\u5c4b Saint Honore Cake Shop",
-    query: "(nwr["brand:wikidata"="Q7401373"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "New Deli",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"New Deli\"][\"brand:wikidata\"=\"Q110687861\"][\"cuisine\"=\"sandwich\"][\"diet:kosher\"=\"yes\"][\"name\"=\"New Deli\"][\"name:en\"=\"New Deli\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/\u05e8\u05e9\u05ea_New_Deli.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -37180,7 +37180,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/\u05e8\u05e9\u05ea_New_Deli.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -37198,9 +37198,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u9762\u5305\u65b0\u8bed",
-    query: "(nwr["brand:wikidata"="Q1106640"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "New Orleans Pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"New Orleans Pizza\"][\"brand:wikidata\"=\"Q133249464\"][\"cuisine\"=\"pizza\"][\"name\"=\"New Orleans Pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -37234,9 +37234,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u9806\u6210\u86cb\u7cd5",
-    query: "(nwr["brand:wikidata"="Q126364999"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "New School Tacos",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"New School Tacos\"][\"brand:wikidata\"=\"Q127412152\"][\"cuisine\"=\"french_tacos\"][\"name\"=\"New School Tacos\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -37270,10 +37270,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u99ac\u53ef\u5148\u751f",
-    query: "(nwr["brand:wikidata"="Q108366217"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "New York Fries",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"New York Fries\"][\"brand:wikidata\"=\"Q7013558\"][\"cuisine\"=\"fries\"][\"name\"=\"New York Fries\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/NYF_Logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -37288,7 +37288,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/NYF_Logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -37306,10 +37306,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u9c8d\u5e08\u5085",
-    query: "(nwr["brand:wikidata"="Q115000221"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "New York Pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"New York Pizza\"][\"brand:wikidata\"=\"Q2639128\"][\"cuisine\"=\"pizza\"][\"name\"=\"New York Pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/New_York_Pizza,_Leiden_(2018)_01.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -37324,7 +37324,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/New_York_Pizza,_Leiden_(2018)_01.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -37342,9 +37342,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u9eb5\u5305\u65b0\u8a9e BreadTalk",
-    query: "(nwr["brand:wikidata"="Q1106640"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Next Level Burger",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Next Level Burger\"][\"brand:wikidata\"=\"Q124039629\"][\"cuisine\"=\"burger\"][\"diet:vegan\"=\"only\"][\"name\"=\"Next Level Burger\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -37378,9 +37378,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Easy Bathrooms",
-    query: "(nwr["brand:wikidata"="Q114348566"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Nick The Greek",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Nick The Greek\"][\"brand:wikidata\"=\"Q117222612\"][\"cuisine\"=\"greek\"][\"name\"=\"Nick The Greek\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -37414,10 +37414,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Kohler",
-    query: "(nwr["brand:wikidata"="Q6426036"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Noah's Bagels",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Noah's Bagels\"][\"brand:wikidata\"=\"Q64517373\"][\"cuisine\"=\"bagel\"][\"name\"=\"Noah's Bagels\"][\"official_name\"=\"Noah's New York Bagels\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Noah's_Bagel_Dog_(ID_Picture)_(21246066352).jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -37432,7 +37432,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Noah's_Bagel_Dog_(ID_Picture)_(21246066352).jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -37450,9 +37450,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Sani-Dump",
-    query: "(nwr["brand:wikidata"="Q123249250"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Noodle Box",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Noodle Box\"][\"brand:wikidata\"=\"Q7049671\"][\"cuisine\"=\"noodle\"][\"name\"=\"Noodle Box\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -37486,9 +37486,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Sanidirect",
-    query: "(nwr["brand:wikidata"="Q123511078"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Noodle Canteen",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Noodle Canteen\"][\"brand:wikidata\"=\"Q115565791\"][\"cuisine\"=\"noodle\"][\"name\"=\"Noodle Canteen\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -37522,9 +37522,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "X2O",
-    query: "(nwr["brand:wikidata"="Q126165101"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Noodle King",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Noodle King\"][\"brand:wikidata\"=\"Q112571654\"][\"cuisine\"=\"noodle\"][\"name\"=\"Noodle King\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -37558,10 +37558,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u0411\u0430\u043d\u044f \u0421\u0442\u0438\u043b",
-    query: "(nwr["brand:wikidata"="Q123002946"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Nordsee",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Nordsee\"][\"brand:wikidata\"=\"Q74866\"][\"cuisine\"=\"seafood\"][\"name\"=\"Nordsee\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Nordseelogo.png",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -37576,7 +37576,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Nordseelogo.png",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -37594,10 +37594,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u0420\u043e\u0441\u043a\u0435\u0434\u0440",
-    query: "(nwr["brand"="\u0420\u043e\u0441\u043a\u0435\u0434\u0440"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Norky's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Norky's\"][\"brand:wikidata\"=\"Q109378465\"][\"cuisine\"=\"peruvian\"][\"name\"=\"Norky's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Norky's_-_Lima,_Peru.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -37612,7 +37612,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Norky's_-_Lima,_Peru.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -37630,9 +37630,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u0421\u0430\u043d\u0442\u0435\u0445\u043d\u0438\u043a\u0430-\u041e\u043d\u043b\u0430\u0439\u043d",
-    query: "(nwr["brand"="\u0421\u0430\u043d\u0442\u0435\u0445\u043d\u0438\u043a\u0430-\u041e\u043d\u043b\u0430\u0439\u043d"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Nravizza pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Nravizza\"][\"brand:wikidata\"=\"Q125747982\"][\"cuisine\"=\"pizza\"][\"name\"=\"Nravizza Pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -37666,9 +37666,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Barbeques Galore",
-    query: "(nwr["brand:wikidata"="Q4859570"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Num Pang",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Num Pang\"][\"brand:wikidata\"=\"Q62079702\"][\"cuisine\"=\"cambodian;sandwich\"][\"name\"=\"Num Pang\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -37702,10 +37702,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Amazing Lash Studio",
-    query: "(nwr["brand:wikidata"="Q108469240"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "O'Tacos",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"O'Tacos\"][\"brand:wikidata\"=\"Q28494040\"][\"cuisine\"=\"french_tacos\"][\"name\"=\"O'Tacos\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Haguenau_o'tacos_rue_du_kestlerhof.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -37720,7 +37720,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Haguenau_o'tacos_rue_du_kestlerhof.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -37738,9 +37738,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Anthony Vinc\u00e9 Nail Spa",
-    query: "(nwr["brand:wikidata"="Q110972931"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Oakberry A\u00e7a\u00ed bowls",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Oakberry A\u00e7a\u00ed bowls\"][\"brand:wikidata\"=\"Q104870840\"][\"cuisine\"=\"a\u00e7a\u00ed\"][\"name\"=\"Oakberry A\u00e7a\u00ed bowls\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -37774,9 +37774,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "AYK Sonnenstudio",
-    query: "(nwr["brand"="AYK Sonnenstudio"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Ochaya",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Ochaya\"][\"brand:wikidata\"=\"Q118835881\"][\"cuisine\"=\"bubble_tea\"][\"name\"=\"Ochaya\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -37810,10 +37810,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Benefit Brow Bar",
-    query: "(nwr["brand:wikidata"="Q2895769"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Old Chang Kee",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Old Chang Kee\"][\"brand:wikidata\"=\"Q17005286\"][\"cuisine\"=\"snacks;singaporean\"][\"name\"=\"Old Chang Kee\"][\"name:en\"=\"Old Chang Kee\"][\"name:zh\"=\"\u8001\u66fe\u8bb0\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Old_Chang_Kee.JPG",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -37828,7 +37828,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Old_Chang_Kee.JPG",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -37846,9 +37846,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Body Details",
-    query: "(nwr["brand:wikidata"="Q119982718"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Oliver's Super Sandwiches",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Oliver's Super Sandwiches\"][\"brand:en\"=\"Oliver's Super Sandwiches\"][\"brand:wikidata\"=\"Q106634645\"][\"brand:zh\"=\"\u5229\u83ef\u8d85\u7d1a\u4e09\u6587\u6cbb\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Oliver's Super Sandwiches\"][\"name:en\"=\"Oliver's Super Sandwiches\"][\"name:zh\"=\"\u5229\u83ef\u8d85\u7d1a\u4e09\u6587\u6cbb\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -37882,10 +37882,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Body Minute",
-    query: "(nwr["brand:wikidata"="Q104972220"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "One Price Coffee",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"One Price Coffee\"][\"brand:wikidata\"=\"Q108215010\"][\"cuisine\"=\"coffee_shop\"][\"name\"=\"One Price Coffee\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/2023-10-21_-_One_Price_Coffee.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -37900,7 +37900,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/2023-10-21_-_One_Price_Coffee.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -37918,9 +37918,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Brow Art 23",
-    query: "(nwr["brand:wikidata"="Q115675881"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Oowee Vegan",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Oowee Vegan\"][\"brand:wikidata\"=\"Q111358494\"][\"cuisine\"=\"burger\"][\"diet:vegan\"=\"only\"][\"name\"=\"Oowee Vegan\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -37954,9 +37954,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Brow Studio 7",
-    query: "(nwr["brand:wikidata"="Q108410558"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Oporto",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Oporto\"][\"brand:wikidata\"=\"Q4412342\"][\"cuisine\"=\"burger;chicken\"][\"name\"=\"Oporto\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -37990,9 +37990,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Carlance",
-    query: "(nwr["brand:wikidata"="Q91601625"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Oqtepa Lavash",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Oqtepa Lavash\"][\"cuisine\"=\"burger;kebab;pizza\"][\"name\"=\"Oqtepa Lavash\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -38026,10 +38026,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Citron Vert",
-    query: "(nwr["brand:wikidata"="Q89503945"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Orange Julius",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Orange Julius\"][\"brand:wikidata\"=\"Q3355059\"][\"cuisine\"=\"juice\"][\"name\"=\"Orange Julius\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Orange_Julius-SG.JPG",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -38044,7 +38044,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Orange_Julius-SG.JPG",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -38062,10 +38062,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "DaVi Nails",
-    query: "(nwr["brand:wikidata"="Q108726836"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Original Tommy's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Original Tommy's\"][\"brand:wikidata\"=\"Q7102588\"][\"cuisine\"=\"burger\"][\"name\"=\"Original Tommy's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/052607-004-TommysChiliFries.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -38080,7 +38080,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/052607-004-TommysChiliFries.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -38098,9 +38098,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Deka Lash",
-    query: "(nwr["brand:wikidata"="Q120505973"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Osama Sushi",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Osama Sushi\"][\"brand:wikidata\"=\"Q124744871\"][\"cuisine\"=\"sushi\"][\"name\"=\"Osama Sushi\"][\"takeaway\"=\"only\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -38134,10 +38134,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "D\u00e9pil Tech",
-    query: "(nwr["brand:wikidata"="Q120762716"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Osmow's",
+    query: "(nwr[\"alt_name\"=\"Osmow's Shawarma\"][\"amenity\"=\"fast_food\"][\"brand\"=\"Osmow's\"][\"brand:wikidata\"=\"Q115048716\"][\"cuisine\"=\"mediterranean;shawarma\"][\"name\"=\"Osmow's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Osmows_Peterborough.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -38152,7 +38152,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Osmows_Peterborough.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -38170,9 +38170,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Depyl Action",
-    query: "(nwr["brand:wikidata"="Q115728327"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "P. Terry's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"P. Terry's\"][\"brand:wikidata\"=\"Q19903521\"][\"cuisine\"=\"burger\"][\"name\"=\"P. Terry's\"][\"official_name\"=\"P. Terry's Burger Stand\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -38206,10 +38206,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Endlich Ohne Tattooentfernung",
-    query: "(nwr["brand:wikidata"="Q119982663"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Pal's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pal's\"][\"brand:wikidata\"=\"Q7126094\"][\"cuisine\"=\"burger\"][\"name\"=\"Pal's\"][\"official_name\"=\"Pal's Sudden Service\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Pal\u2019s_28_-_Morristown,_TN.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -38224,7 +38224,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Pal\u2019s_28_-_Morristown,_TN.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -38242,10 +38242,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Espa\u00e7olaser",
-    query: "(nwr["brand:wikidata"="Q112326409"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Panago",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Panago\"][\"brand:wikidata\"=\"Q17111672\"][\"cuisine\"=\"pizza\"][\"name\"=\"Panago\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Panago_wordmark_(2021).svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -38260,7 +38260,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Panago_wordmark_(2021).svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -38278,10 +38278,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Esthetic Center",
-    query: "(nwr["brand:wikidata"="Q123321775"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Panda Express",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Panda Express\"][\"brand:wikidata\"=\"Q1358690\"][\"cuisine\"=\"chinese\"][\"name\"=\"Panda Express\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Panda_Express_at_Ala_Moana_Center.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -38296,7 +38296,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Panda_Express_at_Ala_Moana_Center.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -38314,10 +38314,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "European Wax Center",
-    query: "(nwr["brand:wikidata"="Q5413426"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Panera Bread",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Panera Bread\"][\"brand:wikidata\"=\"Q7130852\"][\"cuisine\"=\"sandwich;bakery\"][\"name\"=\"Panera Bread\"][\"short_name\"=\"Panera\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Panera_Bread_wordmark.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -38332,7 +38332,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Panera_Bread_wordmark.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -38350,9 +38350,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Eyebrow Plus",
-    query: "(nwr["brand:wikidata"="Q108412880"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Panku Streetfood",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Panku Streetfood\"][\"brand:wikidata\"=\"Q114805636\"][\"cuisine\"=\"japanese;korean;sushi;thai\"][\"name\"=\"Panku Streetfood\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -38386,10 +38386,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Fabutan",
-    query: "(nwr["brand:wikidata"="Q120765494"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Panos",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Panos\"][\"brand:wikidata\"=\"Q3384496\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Panos\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Panos_logo_(2011).svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -38404,7 +38404,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Panos_logo_(2011).svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -38422,9 +38422,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "G Point",
-    query: "(nwr["brand:wikidata"="Q131763160"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Pans & Company",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pans & Company\"][\"brand:wikidata\"=\"Q11697586\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Pans & Company\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -38458,10 +38458,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Guinot",
-    query: "(nwr["brand:wikidata"="Q123408957"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Papa John's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Papa John's\"][\"brand:wikidata\"=\"Q2759586\"][\"cuisine\"=\"pizza\"][\"name\"=\"Papa John's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Papa_John's_Logo_2019.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -38476,7 +38476,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Papa_John's_Logo_2019.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -38494,10 +38494,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Indigo Sun",
-    query: "(nwr["brand:wikidata"="Q63436906"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Papa Murphy's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Papa Murphy's\"][\"brand:wikidata\"=\"Q7132349\"][\"cuisine\"=\"pizza\"][\"name\"=\"Papa Murphy's\"][\"official_name\"=\"Papa Murphy's Take 'N' Bake Pizza\"][\"takeaway\"=\"only\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Papa_Murphy's_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -38512,7 +38512,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Papa_Murphy's_logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -38530,9 +38530,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Laser Love",
-    query: "(nwr["brand"="Laser Love"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Papa's Pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Papa's Pizza\"][\"brand:wikidata\"=\"Q125895068\"][\"cuisine\"=\"pizza\"][\"delivery\"=\"yes\"][\"name\"=\"Papa's Pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -38566,9 +38566,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "LaserAway",
-    query: "(nwr["brand:wikidata"="Q119982751"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Papaye Fast Food",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Papaye Fast Food\"][\"brand:wikidata\"=\"Q96104325\"][\"cuisine\"=\"local\"][\"name\"=\"Papaye Fast Food\"][\"operator\"=\"Papaye Fast Foods Limited\"][\"operator:type\"=\"private\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -38602,9 +38602,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Madison Reed Color Bar",
-    query: "(nwr["brand:wikidata"="Q60770929"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Pasaport Pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pasaport Pizza\"][\"brand:wikidata\"=\"Q6057390\"][\"cuisine\"=\"pizza\"][\"name\"=\"Pasaport Pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -38638,9 +38638,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Me Spa",
-    query: "(nwr["brand:wikidata"="Q110972988"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Pasibus",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pasibus\"][\"brand:wikidata\"=\"Q110428053\"][\"cuisine\"=\"burger\"][\"name\"=\"Pasibus\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -38674,9 +38674,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Milan Laser Hair Removal",
-    query: "(nwr["brand:wikidata"="Q133042646"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "PDQ",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"PDQ\"][\"brand:wikidata\"=\"Q87675367\"][\"cuisine\"=\"chicken\"][\"name\"=\"PDQ\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -38710,10 +38710,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Nails for You",
-    query: "(nwr["brand:wikidata"="Q123410053"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Penn Station",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Penn Station\"][\"brand:wikidata\"=\"Q7163311\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Penn Station\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Penn_Station_(restaurant)_original_logo.png",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -38728,7 +38728,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Penn_Station_(restaurant)_original_logo.png",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -38746,9 +38746,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Naturals",
-    query: "(nwr["brand:wikidata"="Q125728261"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Pepe's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pepe's\"][\"brand:wikidata\"=\"Q120645662\"][\"cuisine\"=\"chicken\"][\"name\"=\"Pepe's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -38782,10 +38782,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Palm Beach Tan",
-    query: "(nwr["brand:wikidata"="Q64027086"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Pepper Lunch",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pepper Lunch\"][\"brand:wikidata\"=\"Q1016072\"][\"cuisine\"=\"teppanyaki\"][\"name\"=\"Pepper Lunch\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Pepper_Lunch.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -38800,7 +38800,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Pepper_Lunch.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -38818,9 +38818,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Perfect Brows NYC",
-    query: "(nwr["brand"="Perfect Brows NYC"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Pepperoni's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pepperoni's\"][\"brand:wikidata\"=\"Q117229592\"][\"cuisine\"=\"pizza\"][\"name\"=\"Pepperoni's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -38854,10 +38854,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Regal Nails",
-    query: "(nwr["brand:wikidata"="Q108918028"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "PFK",
+    query: "(nwr[\"alt_name\"=\"Poulet Frit Kentucky\"][\"amenity\"=\"fast_food\"][\"brand\"=\"KFC\"][\"brand:wikidata\"=\"Q524757\"][\"cuisine\"=\"chicken\"][\"name\"=\"PFK\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Kfc_textlogo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -38872,7 +38872,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kfc_textlogo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -38890,9 +38890,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Removery",
-    query: "(nwr["brand:wikidata"="Q119982405"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Philly Pretzel Factory",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Philly Pretzel Factory\"][\"brand:wikidata\"=\"Q60097339\"][\"cuisine\"=\"pretzel\"][\"name\"=\"Philly Pretzel Factory\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -38926,10 +38926,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Restore Hyper Wellness",
-    query: "(nwr["brand:wikidata"="Q122705364"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Pick Up Stix",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pick Up Stix\"][\"brand:wikidata\"=\"Q7190707\"][\"cuisine\"=\"asian\"][\"name\"=\"Pick Up Stix\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Pick_Up_Stix_logo_plain.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -38944,7 +38944,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Pick_Up_Stix_logo_plain.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -38962,9 +38962,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Seva Beauty",
-    query: "(nwr["brand:wikidata"="Q109329648"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Pie City",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pie City\"][\"brand:wikidata\"=\"Q116619195\"][\"cuisine\"=\"pie\"][\"name\"=\"Pie City\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -38998,9 +38998,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Skin Laundry",
-    query: "(nwr["brand:wikidata"="Q113513202"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Pinulito",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pinulito\"][\"brand:wikidata\"=\"Q62273613\"][\"cuisine\"=\"chicken\"][\"name\"=\"Pinulito\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -39034,9 +39034,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Sola Salons",
-    query: "(nwr["brand:wikidata"="Q64337426"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Pita Land",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pita Land\"][\"brand:wikidata\"=\"Q133249489\"][\"cuisine\"=\"pita\"][\"name\"=\"Pita Land\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -39070,10 +39070,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Sun Tan City",
-    query: "(nwr["brand:wikidata"="Q120733136"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Pita Pit",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pita Pit\"][\"brand:wikidata\"=\"Q7757289\"][\"cuisine\"=\"pita\"][\"name\"=\"Pita Pit\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/PitaPit,_Princess_St_Kingston_ON,_Apr_2019.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -39088,7 +39088,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/PitaPit,_Princess_St_Kingston_ON,_Apr_2019.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -39106,9 +39106,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Sunpoint",
-    query: "(nwr["brand:wikidata"="Q2366612"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Pitaya",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pitaya\"][\"brand:wikidata\"=\"Q114970230\"][\"cuisine\"=\"thai\"][\"delivery\"=\"yes\"][\"name\"=\"Pitaya\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -39142,9 +39142,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Tan Republic",
-    query: "(nwr["brand:wikidata"="Q84112774"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Pizza 73",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pizza 73\"][\"brand:wikidata\"=\"Q7199950\"][\"cuisine\"=\"pizza\"][\"name\"=\"Pizza 73\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -39178,9 +39178,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Tanning Shop",
-    query: "(nwr["brand:wikidata"="Q123101132"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Pizza Boli's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pizza Boli's\"][\"brand:wikidata\"=\"Q105882930\"][\"cuisine\"=\"pizza\"][\"name\"=\"Pizza Boli's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -39214,9 +39214,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "The Lash Lounge",
-    query: "(nwr["brand:wikidata"="Q112765439"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Pizza Capers",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pizza Capers\"][\"brand:wikidata\"=\"Q17021875\"][\"cuisine\"=\"pizza\"][\"name\"=\"Pizza Capers\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -39250,9 +39250,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "The Skin Bar at Ulta Beauty",
-    query: "(nwr["brand:wikidata"="Q7880076"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Pizza Day",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pizza Day\"][\"brand:wikidata\"=\"Q122869046\"][\"cuisine\"=\"pizza\"][\"name\"=\"Pizza Day\"][\"takeaway\"=\"only\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -39286,9 +39286,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "The Ten Spot",
-    query: "(nwr["brand:wikidata"="Q133255656"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Pizza Depot",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pizza Depot\"][\"brand:wikidata\"=\"Q133254934\"][\"cuisine\"=\"pizza\"][\"name\"=\"Pizza Depot\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -39322,9 +39322,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Th\u00e9rapie Clinic",
-    query: "(nwr["brand:wikidata"="Q123034602"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Pizza GoGo",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pizza GoGo\"][\"brand:wikidata\"=\"Q118121277\"][\"cuisine\"=\"pizza\"][\"name\"=\"Pizza GoGo\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -39358,10 +39358,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Waxing the City",
-    query: "(nwr["brand:wikidata"="Q120599883"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Pizza Hut Delivery",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pizza Hut\"][\"brand:wikidata\"=\"Q191615\"][\"cuisine\"=\"pizza\"][\"delivery\"=\"yes\"][\"name\"=\"Pizza Hut Delivery\"][\"takeaway\"=\"only\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Pizza_Hut_international_logo_2014.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -39376,7 +39376,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Pizza_Hut_international_logo_2014.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -39394,9 +39394,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u041f\u0435\u0440\u0441\u043e\u043d\u0430",
-    query: "(nwr["brand:wikidata"="Q126163981"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Pizza Hut Delivery (UK)",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pizza Hut Delivery\"][\"brand:wikidata\"=\"Q107293079\"][\"cuisine\"=\"pizza\"][\"delivery\"=\"yes\"][\"name\"=\"Pizza Hut Delivery\"][\"takeaway\"=\"only\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -39430,10 +39430,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u0421\u0430\u0445\u0430\u0440",
-    query: "(nwr["brand"="\u0421\u0430\u0445\u0430\u0440"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Pizza Hut Express",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pizza Hut\"][\"brand:wikidata\"=\"Q191615\"][\"cuisine\"=\"pizza\"][\"name\"=\"Pizza Hut Express\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Pizza_Hut_international_logo_2014.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -39448,7 +39448,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Pizza_Hut_international_logo_2014.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -39466,10 +39466,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u8a69\u5a01\u7279",
-    query: "(nwr["brand:wikidata"="Q132360529"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Pizza Inn",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pizza Inn\"][\"brand:wikidata\"=\"Q4118850\"][\"cuisine\"=\"pizza\"][\"name\"=\"Pizza Inn\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Pizza_Inn_in_Popular_Bluff,_MO.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -39484,7 +39484,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Pizza_Inn_in_Popular_Bluff,_MO.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -39502,9 +39502,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Amerisleep",
-    query: "(nwr["brand:wikidata"="Q85741266"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Pizza Lab",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pizza Lab\"][\"brand:wikidata\"=\"Q118558924\"][\"cuisine\"=\"pizza\"][\"name\"=\"Pizza Lab\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -39538,9 +39538,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Arya Home",
-    query: "(nwr["brand"="Arya Home"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Pizza Max (Deutschland)",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pizza Max\"][\"brand:wikidata\"=\"Q114189329\"][\"cuisine\"=\"pizza\"][\"name\"=\"Pizza Max\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -39574,9 +39574,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Bambi Yatak",
-    query: "(nwr["brand:wikidata"="Q106803706"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Pizza Max (Ireland)",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pizza Max\"][\"brand:wikidata\"=\"Q113637535\"][\"cuisine\"=\"pizza\"][\"name\"=\"Pizza Max\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -39610,10 +39610,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "BedMart",
-    query: "(nwr["brand:wikidata"="Q107674817"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Pizza M\u00f3vil",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pizza M\u00f3vil\"][\"brand:wikidata\"=\"Q12397697\"][\"cuisine\"=\"pizza\"][\"name\"=\"Pizza M\u00f3vil\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Pizza_M\u00f3vil_Pontevedra.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -39628,7 +39628,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Pizza_M\u00f3vil_Pontevedra.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -39646,10 +39646,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Beds R Us (Australia)",
-    query: "(nwr["brand:wikidata"="Q126179491"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Pizza Nova",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pizza Nova\"][\"brand:wikidata\"=\"Q7199971\"][\"cuisine\"=\"pizza\"][\"name\"=\"Pizza Nova\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_of_Pizza_Nova.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -39664,7 +39664,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_of_Pizza_Nova.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -39682,9 +39682,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Bedshed",
-    query: "(nwr["brand:wikidata"="Q84452962"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Pizza Pa\u00ef",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pizza Pa\u00ef\"][\"brand:wikidata\"=\"Q3389501\"][\"cuisine\"=\"pizza\"][\"name\"=\"Pizza Pa\u00ef\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -39718,9 +39718,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "BedsRus (New Zealand)",
-    query: "(nwr["brand:wikidata"="Q111018938"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Pizza Patr\u00f3n",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pizza Patr\u00f3n\"][\"brand:wikidata\"=\"Q7199972\"][\"cuisine\"=\"pizza\"][\"name\"=\"Pizza Patr\u00f3n\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -39754,9 +39754,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Bensons for Beds",
-    query: "(nwr["brand:wikidata"="Q4890299"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Pizza Perfect",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pizza Perfect\"][\"brand:wikidata\"=\"Q116619227\"][\"cuisine\"=\"pizza\"][\"name\"=\"Pizza Perfect\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -39790,10 +39790,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Beter Bed",
-    query: "(nwr["brand:wikidata"="Q831076"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Pizza Pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pizza Pizza\"][\"brand:wikidata\"=\"Q1194143\"][\"cuisine\"=\"pizza\"][\"name\"=\"Pizza Pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Pizza_Pizza_Corporate_HQ.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -39808,7 +39808,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Pizza_Pizza_Corporate_HQ.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -39826,9 +39826,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Beyosa",
-    query: "(nwr["brand"="Beyosa"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Pizza Salvator\u00e9",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pizza Salvator\u00e9\"][\"brand:wikidata\"=\"Q121738133\"][\"cuisine\"=\"pizza\"][\"name\"=\"Pizza Salvator\u00e9\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -39862,9 +39862,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "brava",
-    query: "(nwr["brand:wikidata"="Q121913063"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Pizza Schmizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pizza Schmizza\"][\"brand:wikidata\"=\"Q7199979\"][\"cuisine\"=\"pizza\"][\"name\"=\"Pizza Schmizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -39898,9 +39898,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Casper",
-    query: "(nwr["brand:wikidata"="Q20539294"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Pizza Tutto",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pizza Tutto\"][\"brand:wikidata\"=\"Q72115627\"][\"cuisine\"=\"pizza\"][\"name\"=\"Pizza Tutto\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -39934,9 +39934,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Dial-a-Bed",
-    query: "(nwr["brand:wikidata"="Q116429178"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Pizza Union",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pizza Union\"][\"brand:wikidata\"=\"Q110473017\"][\"cuisine\"=\"pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -39970,9 +39970,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Dreams",
-    query: "(nwr["brand:wikidata"="Q5306688"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Pizza Vito",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pizza Vito\"][\"brand:wikidata\"=\"Q116537147\"][\"cuisine\"=\"pizza\"][\"name\"=\"Pizza Vito\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -40006,10 +40006,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Forty Winks",
-    query: "(nwr["brand:wikidata"="Q106283438"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Pizzabakeren",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pizzabakeren\"][\"brand:wikidata\"=\"Q11995777\"][\"cuisine\"=\"pizza\"][\"name\"=\"Pizzabakeren\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Pizzabakeren_Sogndal.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -40024,7 +40024,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Pizzabakeren_Sogndal.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -40042,10 +40042,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "France Literie",
-    query: "(nwr["brand:wikidata"="Q100249535"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Pizzaman Chickenman",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pizzaman Chickenman\"][\"brand:wikidata\"=\"Q123097576\"][\"cuisine\"=\"pizza;chicken\"][\"name\"=\"Pizzaman Chickenman\"][\"operator\"=\"Ceqa Foods & Beverages\"][\"operator:type\"=\"private\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Pizzaman-Chickenman.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -40060,7 +40060,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Pizzaman-Chickenman.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -40078,9 +40078,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Grand Litier",
-    query: "(nwr["brand:wikidata"="Q21030208"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Pizzaville",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pizzaville\"][\"brand:wikidata\"=\"Q113001369\"][\"cuisine\"=\"pizza\"][\"name\"=\"Pizzaville\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -40114,9 +40114,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u0130DA\u015e",
-    query: "(nwr["brand:wikidata"="Q106803871"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Planet Smoothie",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Planet Smoothie\"][\"brand:wikidata\"=\"Q7201170\"][\"cuisine\"=\"smoothie\"][\"name\"=\"Planet Smoothie\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -40150,10 +40150,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "La Compagnie du Lit",
-    query: "(nwr["brand:wikidata"="Q120749952"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Playa Bowls",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Playa Bowls\"][\"brand:wikidata\"=\"Q114618507\"][\"cuisine\"=\"a\u00e7a\u00ed\"][\"name\"=\"Playa Bowls\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Playa_Bowl_East_Brunswick_2.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -40168,7 +40168,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Playa_Bowl_East_Brunswick_2.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -40186,9 +40186,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Le Roi du Matelas",
-    query: "(nwr["brand:wikidata"="Q122931917"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Pokawa",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pokawa\"][\"brand:wikidata\"=\"Q123018553\"][\"cuisine\"=\"poke\"][\"name\"=\"Pokawa\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -40222,9 +40222,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Lova Yatak",
-    query: "(nwr["brand:wikidata"="Q130538416"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Poke Bros.",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Poke Bros.\"][\"brand:wikidata\"=\"Q113640421\"][\"cuisine\"=\"poke\"][\"name\"=\"Poke Bros.\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -40258,9 +40258,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Maison de la Literie",
-    query: "(nwr["brand:wikidata"="Q80955776"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Poke House",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Poke House\"][\"brand:wikidata\"=\"Q123399421\"][\"cuisine\"=\"poke\"][\"name\"=\"Poke House\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -40294,10 +40294,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Matratzen Concord",
-    query: "(nwr["brand:wikidata"="Q18629057"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Pollo Campero",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pollo Campero\"][\"brand:wikidata\"=\"Q942741\"][\"cuisine\"=\"chicken\"][\"name\"=\"Pollo Campero\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/PolloCampero_Logo.png",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -40312,7 +40312,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/PolloCampero_Logo.png",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -40330,9 +40330,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Mattress Depot USA",
-    query: "(nwr["brand:wikidata"="Q108413386"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Pollo Feliz",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pollo Feliz\"][\"brand:wikidata\"=\"Q88788024\"][\"cuisine\"=\"chicken\"][\"name\"=\"Pollo Feliz\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -40366,9 +40366,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Mattress Firm",
-    query: "(nwr["brand:wikidata"="Q6791878"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Pollo Granjero (Costa Rica)",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pollo Granjero\"][\"brand:wikidata\"=\"Q62273665\"][\"cuisine\"=\"chicken\"][\"name\"=\"Pollo Granjero\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -40402,9 +40402,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Mattress Firm Clearance",
-    query: "(nwr["brand:wikidata"="Q6791878"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Pollo Granjero (Guatemala)",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pollo Granjero\"][\"brand:wikidata\"=\"Q62273652\"][\"cuisine\"=\"chicken\"][\"name\"=\"Pollo Granjero\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -40438,10 +40438,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Mattress Warehouse",
-    query: "(nwr["brand:wikidata"="Q61995079"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Pollo Tropical",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pollo Tropical\"][\"brand:wikidata\"=\"Q3395356\"][\"cuisine\"=\"chicken\"][\"name\"=\"Pollo Tropical\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Pollo_Tropical_in_Woodstock,_Georgia.JPG",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -40456,7 +40456,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Pollo_Tropical_in_Woodstock,_Georgia.JPG",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -40474,9 +40474,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Mattress World Northwest",
-    query: "(nwr["brand:wikidata"="Q108413373"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Pollolandia",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pollolandia\"][\"cuisine\"=\"chicken\"][\"name\"=\"Pollolandia\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -40510,9 +40510,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Maxcolchon",
-    query: "(nwr["brand:wikidata"="Q130243984"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Pomme de Pain",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pomme de Pain\"][\"brand:wikidata\"=\"Q3276265\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Pomme de Pain\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -40546,9 +40546,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Metro Mattress",
-    query: "(nwr["brand:wikidata"="Q123558941"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Pommesfreunde",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pommesfreunde\"][\"brand:wikidata\"=\"Q117083946\"][\"cuisine\"=\"fries\"][\"name\"=\"Pommesfreunde\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -40582,10 +40582,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "MFO Matratzen",
-    query: "(nwr["brand:wikidata"="Q26794529"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Popeyes",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Popeyes\"][\"brand:wikidata\"=\"Q1330910\"][\"cuisine\"=\"chicken\"][\"name\"=\"Popeyes\"][\"official_name\"=\"Popeyes Louisiana Kitchen\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Popeyes_Logo_2020.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -40600,7 +40600,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Popeyes_Logo_2020.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -40618,10 +40618,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Original Mattress Factory",
-    query: "(nwr["brand:wikidata"="Q123014288"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Port of Subs",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Port of Subs\"][\"brand:wikidata\"=\"Q7231273\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Port of Subs\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Port_of_Subs_Utah.png",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -40636,7 +40636,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Port_of_Subs_Utah.png",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -40654,10 +40654,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Ormatek",
-    query: "(nwr["brand"="Ormatek"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Portillo's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Portillo's\"][\"brand:wikidata\"=\"Q3399307\"][\"cuisine\"=\"hot_dog;burger\"][\"name\"=\"Portillo's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Portillos.png",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -40672,7 +40672,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Portillos.png",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -40690,9 +40690,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Ortobom",
-    query: "(nwr["brand:wikidata"="Q110087205"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Potato Corner",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Potato Corner\"][\"brand:wikidata\"=\"Q60741625\"][\"cuisine\"=\"fries\"][\"name\"=\"Potato Corner\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -40726,10 +40726,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Pan Materac",
-    query: "(nwr["brand:wikidata"="Q133269903"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Potbelly",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Potbelly\"][\"brand:wikidata\"=\"Q7234777\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Potbelly\"][\"official_name\"=\"Potbelly Sandwich Works\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/PotbellyLogo.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -40744,7 +40744,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/PotbellyLogo.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -40762,9 +40762,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "PreSp\u00e1nok",
-    query: "(nwr["brand:wikidata"="Q131526398"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Pressed Juicery",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pressed\"][\"brand:wikidata\"=\"Q123005477\"][\"cuisine\"=\"juice\"][\"name\"=\"Pressed Juicery\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -40798,9 +40798,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "ProSp\u00e1nek",
-    query: "(nwr["brand:wikidata"="Q116895610"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Presto",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Presto\"][\"brand:wikidata\"=\"Q116935976\"][\"cuisine\"=\"american\"][\"name\"=\"Presto\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -40834,10 +40834,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Purple",
-    query: "(nwr["brand:wikidata"="Q28228105"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Pret A Manger",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pret A Manger\"][\"brand:wikidata\"=\"Q2109109\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Pret A Manger\"][\"short_name\"=\"Pret\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/PretAManger_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -40852,7 +40852,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/PretAManger_logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -40870,9 +40870,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Sleep Country",
-    query: "(nwr["brand:wikidata"="Q7539684"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Pretzelmaker",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pretzelmaker\"][\"brand:wikidata\"=\"Q7242321\"][\"cuisine\"=\"pretzel\"][\"name\"=\"Pretzelmaker\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -40906,9 +40906,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Sleep Experts",
-    query: "(nwr["brand:wikidata"="Q7539688"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "PrimoHoagies",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"PrimoHoagies\"][\"brand:wikidata\"=\"Q54953929\"][\"cuisine\"=\"sandwich\"][\"name\"=\"PrimoHoagies\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -40942,9 +40942,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Sleep Number",
-    query: "(nwr["brand:wikidata"="Q7447640"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Pure",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Pure\"][\"brand:wikidata\"=\"Q30599327\"][\"cuisine\"=\"breakfast;salad\"][\"name\"=\"Pure\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -40978,10 +40978,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Sleep Outfitters",
-    query: "(nwr["brand:wikidata"="Q120509459"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Qburger",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Qburger\"][\"brand:wikidata\"=\"Q131858964\"][\"cuisine\"=\"american;breakfast\"][\"name\"=\"Qburger\"][\"operator\"=\"\u9957\u6a02\u9910\u98f2\u5be6\u696d\u80a1\u4efd\u6709\u9650\u516c\u53f8\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Qburger_Logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -40996,7 +40996,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Qburger_Logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -41014,10 +41014,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Sleepmasters",
-    query: "(nwr["brand:wikidata"="Q116475002"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Qdoba",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Qdoba\"][\"brand:wikidata\"=\"Q1363885\"][\"cuisine\"=\"mexican\"][\"name\"=\"Qdoba\"][\"official_name\"=\"Qdoba Mexican Eats\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Qdoba_Logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -41032,7 +41032,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Qdoba_Logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -41050,9 +41050,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Swiss Sense",
-    query: "(nwr["brand:wikidata"="Q110908101"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Quesada",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Quesada\"][\"brand:wikidata\"=\"Q66070360\"][\"cuisine\"=\"mexican\"][\"name\"=\"Quesada\"][\"official_name\"=\"Quesada Burritos & Tacos\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -41086,10 +41086,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Ted",
-    query: "(nwr["brand:wikidata"="Q124281587"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Quick",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Quick\"][\"brand:wikidata\"=\"Q286494\"][\"cuisine\"=\"burger\"][\"name\"=\"Quick\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Quick_2023_logo.webp",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -41104,7 +41104,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Quick_2023_logo.webp",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -41122,10 +41122,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Tempur-Pedic",
-    query: "(nwr["brand:wikidata"="Q1756920"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Quiznos",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Quiznos\"][\"brand:wikidata\"=\"Q1936229\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Quiznos\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Quiznos_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -41140,7 +41140,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Quiznos_logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -41158,10 +41158,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "The Bed Shop",
-    query: "(nwr["brand:wikidata"="Q129571574"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Raising Cane's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Raising Cane's\"][\"brand:wikidata\"=\"Q7285144\"][\"cuisine\"=\"chicken\"][\"name\"=\"Raising Cane's\"][\"official_name\"=\"Raising Cane's Chicken Fingers\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Raising_Cane's_Chicken_Fingers_logo.png",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -41176,7 +41176,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Raising_Cane's_Chicken_Fingers_logo.png",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -41194,10 +41194,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "The Bed Store",
-    query: "(nwr["brand:wikidata"="Q116429563"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Rally's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Rally's\"][\"brand:wikidata\"=\"Q63919323\"][\"cuisine\"=\"burger\"][\"name\"=\"Rally's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Rally's_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -41212,7 +41212,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Rally's_logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -41230,10 +41230,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Tuft & Needle",
-    query: "(nwr["brand:wikidata"="Q25022241"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Red Rooster",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Red Rooster\"][\"brand:wikidata\"=\"Q376466\"][\"cuisine\"=\"chicken\"][\"name\"=\"Red Rooster\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Red_Rooster_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -41248,7 +41248,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Red_Rooster_logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -41266,9 +41266,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Yata\u015f Bedding",
-    query: "(nwr["brand:wikidata"="Q19613071"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Risa Chicken",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Risa Chicken\"][\"brand:wikidata\"=\"Q115374573\"][\"cuisine\"=\"chicken\"][\"name\"=\"Risa Chicken\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -41302,9 +41302,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Yatsan",
-    query: "(nwr["brand:wikidata"="Q106803959"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Robeks",
+    query: "(nwr[\"alt_name\"=\"Robeks Juice\"][\"amenity\"=\"fast_food\"][\"brand\"=\"Robeks\"][\"brand:wikidata\"=\"Q17029777\"][\"cuisine\"=\"juice\"][\"name\"=\"Robeks\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -41338,10 +41338,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "alldrink",
-    query: "(nwr["brand:wikidata"="Q110155637"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Roberto's Taco Shop",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Roberto's Taco Shop\"][\"brand:wikidata\"=\"Q101109953\"][\"cuisine\"=\"mexican\"][\"name\"=\"Roberto's Taco Shop\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/First_Roberto\u2019s_Taco_Shop_3.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -41356,7 +41356,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/First_Roberto\u2019s_Taco_Shop_3.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -41374,9 +41374,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Benz Wein- und Getr\u00e4nkemarkt",
-    query: "(nwr["brand:wikidata"="Q108885696"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Robin's Donuts",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Robin's Donuts\"][\"brand:wikidata\"=\"Q7352199\"][\"cuisine\"=\"donut\"][\"name\"=\"Robin's Donuts\"][\"short_name\"=\"Robin's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -41410,10 +41410,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "bilgro",
-    query: "(nwr["brand:wikidata"="Q108029888"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Rodilla",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Rodilla\"][\"brand:wikidata\"=\"Q7356777\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Rodilla\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/RodillaRodilla.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -41428,7 +41428,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/RodillaRodilla.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -41446,9 +41446,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "EDEKA Getr\u00e4nkemarkt",
-    query: "(nwr["brand:wikidata"="Q57450576"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Roky's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Roky's\"][\"brand:wikidata\"=\"Q116374108\"][\"cuisine\"=\"peruvian\"][\"name\"=\"Roky's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -41482,9 +41482,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Fiiz Drinks",
-    query: "(nwr["brand:wikidata"="Q124327883"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Roll'd",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Roll'd\"][\"brand:wikidata\"=\"Q113114631\"][\"cuisine\"=\"vietnamese\"][\"name\"=\"Roll'd\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -41518,9 +41518,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Finkbeiner",
-    query: "(nwr["brand:wikidata"="Q114116029"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Roman's Pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Roman's Pizza\"][\"brand:wikidata\"=\"Q65079427\"][\"cuisine\"=\"pizza\"][\"name\"=\"Roman's Pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -41554,9 +41554,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Fr\u00e4nky Getr\u00e4nkemarkt",
-    query: "(nwr["brand:wikidata"="Q107356988"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Rosati's Pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Rosati's\"][\"brand:wikidata\"=\"Q65052579\"][\"cuisine\"=\"pizza\"][\"name\"=\"Rosati's\"][\"official_name\"=\"Rosati's Authentic Chicago Pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -41590,9 +41590,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Fristo",
-    query: "(nwr["brand:wikidata"="Q1465151"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Rostic's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Rostic's\"][\"brand:wikidata\"=\"Q3442874\"][\"cuisine\"=\"chicken\"][\"name\"=\"Rostic's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -41626,10 +41626,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Getr\u00e4nke Arena",
-    query: "(nwr["brand:wikidata"="Q107116272"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Roy Rogers",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Roy Rogers\"][\"brand:wikidata\"=\"Q7373311\"][\"cuisine\"=\"burger;sandwich;chicken\"][\"name\"=\"Roy Rogers\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Roy_Rogers_Roast_Beef_sign,_New_Orleans,_Louisiana_LCCN2017709855_crop.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -41644,7 +41644,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Roy_Rogers_Roast_Beef_sign,_New_Orleans,_Louisiana_LCCN2017709855_crop.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -41662,9 +41662,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Getr\u00e4nke City",
-    query: "(nwr["brand:wikidata"="Q101480351"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Royal Donuts",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Royal Donuts\"][\"brand:wikidata\"=\"Q112186115\"][\"cuisine\"=\"donut\"][\"name\"=\"Royal Donuts\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -41698,9 +41698,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Getr\u00e4nke Hoffmann",
-    query: "(nwr["brand:wikidata"="Q19284021"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Royal Kebab",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Royal Kebab\"][\"cuisine\"=\"kebab\"][\"name\"=\"Royal Kebab\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -41734,10 +41734,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Getr\u00e4nke Quelle",
-    query: "(nwr["brand:wikidata"="Q111540507"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Rubio's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Rubio's\"][\"brand:wikidata\"=\"Q7376154\"][\"cuisine\"=\"mexican\"][\"name\"=\"Rubio's\"][\"official_name\"=\"Rubio's Coastal Grill\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/RubiosMexicanGrillOrigMar2011.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -41752,7 +41752,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/RubiosMexicanGrillOrigMar2011.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -41770,10 +41770,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Getr\u00e4nkeland",
-    query: "(nwr["brand:wikidata"="Q62594849"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Ruby's Diner",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Ruby's Diner\"][\"brand:wikidata\"=\"Q7376227\"][\"cuisine\"=\"burger\"][\"name\"=\"Ruby's Diner\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Ruby_on_Ruby_2.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -41788,7 +41788,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Ruby_on_Ruby_2.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -41806,10 +41806,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Getr\u00e4nkewelt",
-    query: "(nwr["brand:wikidata"="Q19964998"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Runza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Runza\"][\"brand:wikidata\"=\"Q108795782\"][\"cuisine\"=\"sandwich;burger\"][\"name\"=\"Runza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Runza_Restaurant_(cropped).jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -41824,7 +41824,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Runza_Restaurant_(cropped).jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -41842,9 +41842,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Getr\u00e4nkewelt (HSE)",
-    query: "(nwr["brand:wikidata"="Q107370287"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Rush Bowls",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Rush Bowls\"][\"brand:wikidata\"=\"Q112765292\"][\"cuisine\"=\"a\u00e7a\u00ed\"][\"name\"=\"Rush Bowls\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -41878,9 +41878,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Hol'ab",
-    query: "(nwr["brand:wikidata"="Q57557270"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Sal's Pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Sal's Pizza\"][\"brand:wikidata\"=\"Q115566078\"][\"cuisine\"=\"pizza\"][\"name\"=\"Sal's Pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -41914,9 +41914,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "H\u00f6rl",
-    query: "(nwr["brand:wikidata"="Q110258331"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Salad and Go",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Salad and Go\"][\"brand:wikidata\"=\"Q110127908\"][\"cuisine\"=\"salad\"][\"name\"=\"Salad and Go\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -41950,9 +41950,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "logo Getr\u00e4nke-Fachmarkt",
-    query: "(nwr["brand:wikidata"="Q28777575"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Saladworks",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Saladworks\"][\"brand:wikidata\"=\"Q7403411\"][\"cuisine\"=\"salad\"][\"name\"=\"Saladworks\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -41986,9 +41986,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Markgrafen Getr\u00e4nkemarkt",
-    query: "(nwr["brand:wikidata"="Q100324493"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Salsarita's Fresh Mexican Grill",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Salsarita's Fresh Mexican Grill\"][\"brand:wikidata\"=\"Q85799275\"][\"cuisine\"=\"mexican\"][\"name\"=\"Salsarita's Fresh Mexican Grill\"][\"short_name\"=\"Salsarita's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -42022,10 +42022,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Netto Getr\u00e4nke-Discount",
-    query: "(nwr["brand:wikidata"="Q879858"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Sam's Chicken",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Sam's Chicken\"][\"brand:wikidata\"=\"Q24439129\"][\"cuisine\"=\"chicken\"][\"name\"=\"Sam's Chicken\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Sam's_Chicken,_King_Street,_Hammersmith.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -42040,7 +42040,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Sam's_Chicken,_King_Street,_Hammersmith.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -42058,10 +42058,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Orterer Getr\u00e4nkemarkt",
-    query: "(nwr["brand:wikidata"="Q23787118"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "S\u00e1ndwich Qbano",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"S\u00e1ndwich Qbano\"][\"brand:wikidata\"=\"Q20022286\"][\"cuisine\"=\"sandwich\"][\"name\"=\"S\u00e1ndwich Qbano\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Tienda_de_QBano_en_Bogot\u00e1_N.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -42076,7 +42076,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Tienda_de_QBano_en_Bogot\u00e1_N.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -42094,10 +42094,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "REWE Getr\u00e4nkemarkt",
-    query: "(nwr["brand:wikidata"="Q57519344"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Saravanaa Bhavan",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Saravanaa Bhavan\"][\"brand:wikidata\"=\"Q3528082\"][\"cuisine\"=\"indian;south_indian\"][\"name\"=\"Saravanaa Bhavan\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Saravanaa_Bhavan_Logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -42112,7 +42112,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Saravanaa_Bhavan_Logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -42130,9 +42130,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Sagasser",
-    query: "(nwr["brand:wikidata"="Q30838417"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Sarku Japan",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Sarku Japan\"][\"brand:wikidata\"=\"Q7424243\"][\"cuisine\"=\"japanese\"][\"name\"=\"Sarku Japan\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -42166,9 +42166,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Sobi",
-    query: "(nwr["brand:wikidata"="Q98509159"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Sarpino's Pizzeria",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Sarpino's Pizzeria\"][\"brand:wikidata\"=\"Q28229116\"][\"cuisine\"=\"pizza\"][\"name\"=\"Sarpino's Pizzeria\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -42202,9 +42202,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Trink & Spare",
-    query: "(nwr["brand:wikidata"="Q99284521"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Sausage Saloon",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Sausage Saloon\"][\"brand:wikidata\"=\"Q116619342\"][\"cuisine\"=\"hot_dog\"][\"name\"=\"Sausage Saloon\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -42238,10 +42238,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "trinkgut",
-    query: "(nwr["brand:wikidata"="Q2453627"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Sbarro",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Sbarro\"][\"brand:wikidata\"=\"Q2589409\"][\"cuisine\"=\"pizza\"][\"name\"=\"Sbarro\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Sbarro_LLC_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -42256,7 +42256,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Sbarro_LLC_logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -42274,10 +42274,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "\u9d3b\u798f\u5802 Hung Fook Tong",
-    query: "(nwr["brand:wikidata"="Q11173952"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Schlotzsky's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Schlotzsky's\"][\"brand:wikidata\"=\"Q2244796\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Schlotzsky's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Schlotzsky's_logo.png",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -42292,7 +42292,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Schlotzsky's_logo.png",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -42310,9 +42310,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "99 Bikes",
-    query: "(nwr["brand:wikidata"="Q110288298"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Schnitz",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Schnitz\"][\"brand:wikidata\"=\"Q48792277\"][\"cuisine\"=\"chicken\"][\"name\"=\"Schnitz\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -42346,10 +42346,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Alltricks",
-    query: "(nwr["brand:wikidata"="Q28872992"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Secret Recipe",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Secret Recipe\"][\"brand:wikidata\"=\"Q7444079\"][\"cuisine\"=\"cake;malaysian\"][\"name\"=\"Secret Recipe\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Secret_Recipe_Logo.png",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -42364,7 +42364,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Secret_Recipe_Logo.png",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -42382,10 +42382,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Amslod Experience Center",
-    query: "(nwr["brand:wikidata"="Q116172590"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "SHABU to go",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"SHABU to go\"][\"brand:wikidata\"=\"Q124246770\"][\"cuisine\"=\"sushi\"][\"delivery\"=\"yes\"][\"name\"=\"SHABU to go\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/SHABU_to_go_Logo.png",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -42400,7 +42400,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/SHABU_to_go_Logo.png",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -42418,10 +42418,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "B.O.C.",
-    query: "(nwr["brand:wikidata"="Q107103852"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Shake Shack",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Shake Shack\"][\"brand:wikidata\"=\"Q1058722\"][\"cuisine\"=\"burger\"][\"name\"=\"Shake Shack\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Shake_Shack_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -42436,7 +42436,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Shake_Shack_logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -42454,9 +42454,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Balfe's Bikes",
-    query: "(nwr["brand:wikidata"="Q113483414"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "ShakeAway",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"ShakeAway\"][\"brand:wikidata\"=\"Q108443709\"][\"cuisine\"=\"frozen_yogurt;dessert\"][\"name\"=\"ShakeAway\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -42490,9 +42490,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Bike Totaal",
-    query: "(nwr["brand:wikidata"="Q123536506"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Shanghai 360",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Shanghai 360\"][\"brand:wikidata\"=\"Q112966568\"][\"cuisine\"=\"chinese\"][\"name\"=\"Shanghai 360\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -42526,10 +42526,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Bouticycle",
-    query: "(nwr["brand:wikidata"="Q130216203"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Shipley Do-Nuts",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Shipley Do-Nuts\"][\"brand:wikidata\"=\"Q7498017\"][\"cuisine\"=\"donut\"][\"name\"=\"Shipley Do-Nuts\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/ShipleyDonutsBellaire.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -42544,7 +42544,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/ShipleyDonutsBellaire.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -42562,10 +42562,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Culture V\u00e9lo",
-    query: "(nwr["brand:wikidata"="Q130215001"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Sibylla",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Sibylla\"][\"brand:wikidata\"=\"Q488643\"][\"cuisine\"=\"burger\"][\"name\"=\"Sibylla\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Sibylla_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -42580,7 +42580,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Sibylla_logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -42598,9 +42598,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Cyclable",
-    query: "(nwr["brand:wikidata"="Q130214989"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Simple Simon's Pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Simple Simon's Pizza\"][\"brand:wikidata\"=\"Q116737866\"][\"cuisine\"=\"pizza\"][\"name\"=\"Simple Simon's Pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -42634,9 +42634,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Cycle Lab",
-    query: "(nwr["brand:wikidata"="Q130487839"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Skippers",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Skippers\"][\"brand:wikidata\"=\"Q116619140\"][\"cuisine\"=\"fish_and_chips\"][\"name\"=\"Skippers\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -42670,9 +42670,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Evans Cycles",
-    query: "(nwr["brand:wikidata"="Q5415901"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Slapfish",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Slapfish\"][\"brand:wikidata\"=\"Q60785140\"][\"cuisine\"=\"seafood\"][\"name\"=\"Slapfish\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -42706,10 +42706,10 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Fahrrad XXL",
-    query: "(nwr["brand:wikidata"="Q99976386"]({{bbox}});node(w););out meta;",
-    iconSrc: "src/img/logos/generic.svg",
+    group: "Amenities",
+    title: "Slim Chickens",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Slim Chickens\"][\"brand:wikidata\"=\"Q30647224\"][\"cuisine\"=\"chicken\"][\"name\"=\"Slim Chickens\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Slim_Chickens_on_Apalachee_Parkway,_Tallahassee,_Florida.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -42724,7 +42724,7 @@ style: function (feature) {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "src/img/logos/generic.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Slim_Chickens_on_Apalachee_Parkway,_Tallahassee,_Florida.jpg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -42742,9 +42742,11025 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Fietsenwinkel.nl",
-    query: "(nwr["brand:wikidata"="Q116172638"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "Smashburger",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Smashburger\"][\"brand:wikidata\"=\"Q17061332\"][\"cuisine\"=\"burger\"][\"name\"=\"Smashburger\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Smashburgerlogo.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Smashburgerlogo.jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Smiley's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Smiley's\"][\"brand:wikidata\"=\"Q60998945\"][\"cuisine\"=\"pizza\"][\"name\"=\"Smiley's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Smoke's Poutinerie",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Smoke's Poutinerie\"][\"brand:wikidata\"=\"Q7545801\"][\"cuisine\"=\"poutine\"][\"name\"=\"Smoke's Poutinerie\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Smokin' Joe's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Smokin' Joe's\"][\"brand:wikidata\"=\"Q7546011\"][\"cuisine\"=\"pizza\"][\"name\"=\"Smokin' Joe's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Smoothie King",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Smoothie King\"][\"brand:wikidata\"=\"Q5491421\"][\"cuisine\"=\"juice\"][\"name\"=\"Smoothie King\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Smullers",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Smullers\"][\"brand:wikidata\"=\"Q92552501\"][\"cuisine\"=\"friture\"][\"name\"=\"Smullers\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Smullers_snackbar,_Amsterdam_Central_Station_(2018).jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Smullers_snackbar,_Amsterdam_Central_Station_(2018).jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Snarf's Sandwiches",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Snarf's Sandwiches\"][\"brand:wikidata\"=\"Q113900887\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Snarf's Sandwiches\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Snarf's_Sandwhiches_logo.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Snarf's_Sandwhiches_logo.png",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Sneaky Pete's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Sneaky Pete's\"][\"brand:wikidata\"=\"Q7547507\"][\"cuisine\"=\"hot_dog\"][\"name\"=\"Sneaky Pete's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Sonic",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Sonic\"][\"brand:wikidata\"=\"Q7561808\"][\"cuisine\"=\"burger\"][\"drive_in\"=\"yes\"][\"name\"=\"Sonic\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/SONIC_New_Logo_2020.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/SONIC_New_Logo_2020.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Soul Origin",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Soul Origin\"][\"brand:wikidata\"=\"Q110473093\"][\"cuisine\"=\"coffee_shop;salad;sandwich\"][\"name\"=\"Soul Origin\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "South Street Burger",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"South Street Burger\"][\"brand:wikidata\"=\"Q123410175\"][\"cuisine\"=\"burger\"][\"name\"=\"South Street Burger\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Southern Fried Chicken",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Southern Fried Chicken\"][\"brand:wikidata\"=\"Q7569934\"][\"cuisine\"=\"chicken\"][\"name\"=\"Southern Fried Chicken\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Spangles",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Spangles\"][\"brand:wikidata\"=\"Q7573095\"][\"cuisine\"=\"burger;ice_cream\"][\"name\"=\"Spangles\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Spangles_logo.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Spangles_logo.png",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Spare Rib Express",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Spare Rib Express\"][\"brand:wikidata\"=\"Q108923605\"][\"cuisine\"=\"barbecue\"][\"name\"=\"Spare Rib Express\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Spizzico",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Spizzico\"][\"brand:wikidata\"=\"Q1419041\"][\"cuisine\"=\"pizza\"][\"name\"=\"Spizzico\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Spizzico_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Spizzico_logo.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Spoleto",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Spoleto\"][\"brand:wikidata\"=\"Q7578935\"][\"cuisine\"=\"italian\"][\"name\"=\"Spoleto\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "St-Hubert Express",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"St-Hubert\"][\"brand:wikidata\"=\"Q3495225\"][\"cuisine\"=\"chicken;barbecue\"][\"name\"=\"St-Hubert Express\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Steak 'n Shake",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Steak 'n Shake\"][\"brand:wikidata\"=\"Q7605233\"][\"cuisine\"=\"burger\"][\"name\"=\"Steak 'n Shake\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/2011-06-21_Raleigh_Steak-n-Shake_at_night.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/2011-06-21_Raleigh_Steak-n-Shake_at_night.jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Steak Escape",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Steak Escape\"][\"brand:wikidata\"=\"Q7605235\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Steak Escape\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Steers",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Steers\"][\"brand:wikidata\"=\"Q3056765\"][\"cuisine\"=\"burger\"][\"name\"=\"Steers\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Subway",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Subway\"][\"brand:wikidata\"=\"Q244457\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Subway\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Subway_2016_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Subway_2016_logo.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Suki Hana",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Suki Hana\"][\"brand:wikidata\"=\"Q108413837\"][\"cuisine\"=\"japanese\"][\"name\"=\"Suki Hana\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Sumo Salad",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Sumo Salad\"][\"brand:wikidata\"=\"Q16951700\"][\"cuisine\"=\"salad\"][\"name\"=\"Sumo Salad\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Super Chix",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Super Chix\"][\"brand:wikidata\"=\"Q131281252\"][\"cuisine\"=\"chicken\"][\"name\"=\"Super Chix\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Supermac's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Supermac's\"][\"brand:wikidata\"=\"Q7643750\"][\"cuisine\"=\"burger\"][\"name\"=\"Supermac's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Sushi Moji",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Sushi Moji\"][\"cuisine\"=\"sushi\"][\"name\"=\"Sushi Moji\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Sushi Shop (Canada)",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Sushi Shop\"][\"brand:wikidata\"=\"Q64840990\"][\"cuisine\"=\"sushi\"][\"name\"=\"Sushi Shop\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Sushi Shop (Europe)",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Sushi Shop\"][\"brand:wikidata\"=\"Q3505657\"][\"cuisine\"=\"sushi\"][\"name\"=\"Sushi Shop\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Sushi_Shop.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Sushi_Shop.jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Sushi Story",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Sushi Story\"][\"brand:wikidata\"=\"Q119213347\"][\"cuisine\"=\"sushi\"][\"name\"=\"Sushi Story\"][\"takeaway\"=\"only\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "SushiDog",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"SushiDog\"][\"brand:wikidata\"=\"Q118464914\"][\"cuisine\"=\"japanese\"][\"name\"=\"SushiDog\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "SushiPoint",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"SushiPoint\"][\"brand:wikidata\"=\"Q108923610\"][\"cuisine\"=\"sushi\"][\"name\"=\"SushiPoint\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "SUSU & Sons",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"SUSU & Sons\"][\"brand:en\"=\"SUSU & Sons\"][\"brand:he\"=\"\u05e1\u05d5\u05e1\u05d5 \u05d0\u05e0\u05d3 \u05e1\u05d0\u05e0\u05e1\"][\"brand:wikidata\"=\"Q64760081\"][\"cuisine\"=\"burger\"][\"name\"=\"SUSU & Sons\"][\"name:en\"=\"SUSU & Sons\"][\"name:he\"=\"\u05e1\u05d5\u05e1\u05d5 \u05d0\u05e0\u05d3 \u05e1\u05d0\u05e0\u05e1\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Sweetgreen",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Sweetgreen\"][\"brand:wikidata\"=\"Q18636413\"][\"cuisine\"=\"salad\"][\"name\"=\"Sweetgreen\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Sweetgreen_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Sweetgreen_logo.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Swing Kitchen",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Swing Kitchen\"][\"brand:wikidata\"=\"Q116943226\"][\"cuisine\"=\"burger\"][\"diet:vegan\"=\"only\"][\"name\"=\"Swing Kitchen\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Taco Bar",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Taco Bar\"][\"brand:wikidata\"=\"Q10689652\"][\"cuisine\"=\"tex-mex\"][\"name\"=\"Taco Bar\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Taco Bell",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Taco Bell\"][\"brand:wikidata\"=\"Q752941\"][\"cuisine\"=\"tex-mex\"][\"name\"=\"Taco Bell\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Taco_Bell,_Camilla_(cropped).JPG",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Taco_Bell,_Camilla_(cropped).JPG",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Taco Bell Cantina",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Taco Bell\"][\"brand:wikidata\"=\"Q111972226\"][\"cuisine\"=\"tex-mex\"][\"name\"=\"Taco Bell Cantina\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Taco_Bell_Cantina_in_Las_Vegas_-_2020.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Taco_Bell_Cantina_in_Las_Vegas_-_2020.jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Taco Bueno",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Taco Bueno\"][\"brand:wikidata\"=\"Q7673958\"][\"cuisine\"=\"mexican\"][\"name\"=\"Taco Bueno\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Taco Cabana",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Taco Cabana\"][\"brand:wikidata\"=\"Q12070488\"][\"cuisine\"=\"mexican\"][\"name\"=\"Taco Cabana\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Taco_Cabana_Dallas_sign.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Taco_Cabana_Dallas_sign.jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Taco Casa",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Taco Casa\"][\"brand:wikidata\"=\"Q123307075\"][\"cuisine\"=\"tacos;tex-mex\"][\"name\"=\"Taco Casa\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Taco_casa_wordmark.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Taco_casa_wordmark.png",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Taco Del Mar",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Taco Del Mar\"][\"brand:wikidata\"=\"Q7673972\"][\"cuisine\"=\"mexican\"][\"name\"=\"Taco Del Mar\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Taco_Del_Mar_shop_Livonia_Michigan.JPG",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Taco_Del_Mar_shop_Livonia_Michigan.JPG",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Taco John's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Taco John's\"][\"brand:wikidata\"=\"Q7673962\"][\"cuisine\"=\"mexican\"][\"name\"=\"Taco John's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Taco_John's_Drive_Thru_Restaurant,_Cheyenne,_WY.JPG",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Taco_John's_Drive_Thru_Restaurant,_Cheyenne,_WY.JPG",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Taco Mayo",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Taco Mayo\"][\"brand:wikidata\"=\"Q2386946\"][\"cuisine\"=\"tex-mex\"][\"name\"=\"Taco Mayo\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Taco Mundo",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Taco Mundo\"][\"brand:wikidata\"=\"Q108923671\"][\"cuisine\"=\"mexican\"][\"name\"=\"Taco Mundo\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Taco Palenque",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Taco Palenque\"][\"brand:wikidata\"=\"Q7673965\"][\"cuisine\"=\"tex-mex\"][\"name\"=\"Taco Palenque\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Taco Time",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Taco Time\"][\"brand:wikidata\"=\"Q7673969\"][\"cuisine\"=\"mexican\"][\"name\"=\"Taco Time\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/TacoTimeTheDallesOR.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/TacoTimeTheDallesOR.jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Taco Time Northwest",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Taco Time\"][\"brand:wikidata\"=\"Q7673970\"][\"cuisine\"=\"mexican\"][\"name\"=\"Taco Time\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Tacos Avenue",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Tacos Avenue\"][\"brand:wikidata\"=\"Q127412294\"][\"cuisine\"=\"french_tacos\"][\"name\"=\"Tacos Avenue\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Takos King",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Takos King\"][\"brand:wikidata\"=\"Q127412429\"][\"cuisine\"=\"french_tacos\"][\"name\"=\"Takos King\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Tantalizers",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Tantalizers\"][\"brand:wikidata\"=\"Q7683795\"][\"cuisine\"=\"nigerian\"][\"name\"=\"Tantalizers\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Tashir Pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Tashir Pizza\"][\"brand:ka\"=\"Tashir Pizza\"][\"brand:wikidata\"=\"Q118347431\"][\"cuisine\"=\"pizza\"][\"delivery\"=\"yes\"][\"name\"=\"Tashir Pizza\"][\"name:ka\"=\"Tashir Pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Tastee Fried Chicken",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Tastee Fried Chicken\"][\"brand:wikidata\"=\"Q7687722\"][\"cuisine\"=\"chicken\"][\"name\"=\"Tastee Fried Chicken\"][\"short_name\"=\"Tastee\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Tavuk D\u00fcnyas\u0131",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Tavuk D\u00fcnyas\u0131\"][\"brand:wikidata\"=\"Q126924105\"][\"cuisine\"=\"chicken\"][\"name\"=\"Tavuk D\u00fcnyas\u0131\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Taziki's Mediterranean Cafe",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Taziki's Mediterranean Cafe\"][\"brand:wikidata\"=\"Q19849840\"][\"cuisine\"=\"mediterranean\"][\"name\"=\"Taziki's Mediterranean Cafe\"][\"short_name\"=\"Taziki's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Taziki's_Mediterranean_Caf\u00e9,_Suwanee_GA,_Oct_2017.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Taziki's_Mediterranean_Caf\u00e9,_Suwanee_GA,_Oct_2017.jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Ted's Hot Dogs",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Ted's Hot Dogs\"][\"brand:wikidata\"=\"Q7692930\"][\"cuisine\"=\"hot_dog\"][\"name\"=\"Ted's Hot Dogs\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Teddy's Bigger Burgers",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Teddy's Bigger Burgers\"][\"brand:wikidata\"=\"Q21188859\"][\"cuisine\"=\"burger\"][\"name\"=\"Teddy's Bigger Burgers\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Telepizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Telepizza\"][\"brand:wikidata\"=\"Q2699863\"][\"cuisine\"=\"pizza\"][\"name\"=\"Telepizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_telepizza.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_telepizza.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Temple of Seitan",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Temple of Seitan\"][\"brand:wikidata\"=\"Q110086323\"][\"cuisine\"=\"burger;chicken;seitan\"][\"diet:vegan\"=\"only\"][\"name\"=\"Temple of Seitan\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Tender Greens",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Tender Greens\"][\"brand:wikidata\"=\"Q113585516\"][\"cuisine\"=\"salad\"][\"name\"=\"Tender Greens\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Teriyaki Experience",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Teriyaki Experience\"][\"brand:wikidata\"=\"Q7702453\"][\"cuisine\"=\"japanese\"][\"name\"=\"Teriyaki Experience\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Teriyaki Madness",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Teriyaki Madness\"][\"brand:wikidata\"=\"Q107692862\"][\"cuisine\"=\"japanese\"][\"name\"=\"Teriyaki Madness\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Tex's Chicken & Burgers",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Tex's Chicken & Burgers\"][\"brand:wikidata\"=\"Q107303396\"][\"cuisine\"=\"burger;chicken\"][\"diet:halal\"=\"yes\"][\"name\"=\"Tex's Chicken & Burgers\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Texas Chicken",
+    query: "(nwr[\"alt_name\"=\"Church's Chicken\"][\"amenity\"=\"fast_food\"][\"brand\"=\"Texas Chicken\"][\"brand:wikidata\"=\"Q1089932\"][\"cuisine\"=\"chicken\"][\"name\"=\"Texas Chicken\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Churchs-logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Churchs-logo.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Tha\u00ef Express (North America)",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Tha\u00ef Express\"][\"brand:wikidata\"=\"Q7711610\"][\"cuisine\"=\"thai\"][\"name\"=\"Tha\u00ef Express\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/YorkUThaiExpress.JPG",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/YorkUThaiExpress.JPG",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Thai Express (Singapore)",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Thai Express\"][\"brand:wikidata\"=\"Q7709119\"][\"cuisine\"=\"thai\"][\"name\"=\"Thai Express\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "The Burger's Priest",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"The Burger's Priest\"][\"brand:wikidata\"=\"Q100255453\"][\"cuisine\"=\"burger\"][\"name\"=\"The Burger's Priest\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "The Chicken Rice Shop",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"The Chicken Rice Shop\"][\"brand:wikidata\"=\"Q7722411\"][\"cuisine\"=\"malaysian;chicken_rice\"][\"diet:halal\"=\"yes\"][\"name\"=\"The Chicken Rice Shop\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "The D\u00f6ner Company",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"The D\u00f6ner Company\"][\"brand:wikidata\"=\"Q108923682\"][\"cuisine\"=\"kebab\"][\"name\"=\"The D\u00f6ner Company\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "The Fish & Chip Co",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"The Fish & Chip Co\"][\"brand:wikidata\"=\"Q126916268\"][\"cuisine\"=\"fish_and_chips\"][\"name\"=\"The Fish & Chip Co\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "The Flame Broiler",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"The Flame Broiler\"][\"brand:wikidata\"=\"Q30593122\"][\"cuisine\"=\"asian\"][\"name\"=\"The Flame Broiler\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "The Good Burger",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"The Good Burger\"][\"brand:wikidata\"=\"Q20962086\"][\"cuisine\"=\"burger\"][\"delivery\"=\"yes\"][\"name\"=\"The Good Burger\"][\"short_name\"=\"TGB\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/The_Good_Burger_(TGB).jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/The_Good_Burger_(TGB).jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "The Habit Burger Grill",
+    query: "(nwr[\"alt_name\"=\"Habit Burger Grill\"][\"amenity\"=\"fast_food\"][\"brand\"=\"The Habit Burger Grill\"][\"brand:wikidata\"=\"Q18158741\"][\"cuisine\"=\"burger\"][\"name\"=\"The Habit Burger Grill\"][\"short_name\"=\"Habit Burger\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Marketplace_At_Lake_Meridian,_Kent,_United_States_Sep_25,_2020_09-45-48_PM.jpeg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Marketplace_At_Lake_Meridian,_Kent,_United_States_Sep_25,_2020_09-45-48_PM.jpeg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "The Halal Guys",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"The Halal Guys\"][\"brand:wikidata\"=\"Q10846129\"][\"cuisine\"=\"chicken;falafel;gyros\"][\"diet:halal\"=\"yes\"][\"name\"=\"The Halal Guys\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/53rd_and_6th.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/53rd_and_6th.jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "The Japanese Canteen",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"The Japanese Canteen\"][\"brand:wikidata\"=\"Q114437254\"][\"cuisine\"=\"japanese\"][\"name\"=\"The Japanese Canteen\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "The Pizza Company",
+    query: "(nwr[\"alt_name\"=\"Pizza Company\"][\"amenity\"=\"fast_food\"][\"brand\"=\"The Pizza Company\"][\"brand:wikidata\"=\"Q2413520\"][\"cuisine\"=\"pizza\"][\"name\"=\"The Pizza Company\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/The_Pizza_Company_Logo_(2023).svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/The_Pizza_Company_Logo_(2023).svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "The Rameshwaram Cafe",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"The Rameshwaram Cafe\"][\"brand:wikidata\"=\"Q124374630\"][\"cuisine\"=\"south_indian\"][\"name\"=\"The Rameshwaram Cafe\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "The Yard Milkshake Bar",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"The Yard Milkshake Bar\"][\"brand:wikidata\"=\"Q116737896\"][\"cuisine\"=\"milkshake\"][\"name\"=\"The Yard Milkshake Bar\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "TKK Fried Chicken",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"TKK Fried Chicken\"][\"brand:en\"=\"TKK Fried Chicken\"][\"brand:wikidata\"=\"Q15715284\"][\"brand:zh\"=\"\u9802\u5471\u5471\"][\"cuisine\"=\"chicken\"][\"name\"=\"TKK Fried Chicken\"][\"name:en\"=\"TKK Fried Chicken\"][\"name:zh\"=\"\u9802\u5471\u5471\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Togo's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Togo's\"][\"brand:wikidata\"=\"Q3530375\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Togo's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Togo's_logo.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Togo's_logo.png",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Tokyo Tokyo",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Tokyo Tokyo\"][\"brand:wikidata\"=\"Q7814003\"][\"cuisine\"=\"japanese\"][\"name\"=\"Tokyo Tokyo\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/899Cuisine_of_the_Philippines_Foods_Meals_05.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/899Cuisine_of_the_Philippines_Foods_Meals_05.jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Tommi's Burger Joint",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Tommi's Burger Joint\"][\"brand:wikidata\"=\"Q126741276\"][\"cuisine\"=\"burger\"][\"name\"=\"Tommi's Burger Joint\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Topper's Pizza (Canada)",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Topper's Pizza\"][\"brand:wikidata\"=\"Q7825105\"][\"cuisine\"=\"pizza\"][\"name\"=\"Topper's Pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Tops Pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Tops Pizza\"][\"brand:wikidata\"=\"Q24439136\"][\"cuisine\"=\"pizza\"][\"name\"=\"Tops Pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Torchy's Tacos",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Torchy's Tacos\"][\"brand:wikidata\"=\"Q106769573\"][\"cuisine\"=\"tex-mex\"][\"name\"=\"Torchy's Tacos\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Tortilla",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Tortilla\"][\"brand:wikidata\"=\"Q21006828\"][\"cuisine\"=\"tex-mex\"][\"name\"=\"Tortilla\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Tossed",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Tossed\"][\"brand:wikidata\"=\"Q25183519\"][\"cuisine\"=\"salad\"][\"name\"=\"Tossed\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Tropical Smoothie Cafe",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Tropical Smoothie Cafe\"][\"brand:wikidata\"=\"Q7845817\"][\"cuisine\"=\"juice\"][\"name\"=\"Tropical Smoothie Cafe\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Tropical_Smoothie_Cafe_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Tropical_Smoothie_Cafe_logo.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Tubby's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Tubby's\"][\"brand:wikidata\"=\"Q7850742\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Tubby's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Tubby's_grilled_submarines_store_South_Lyon_Michigan.JPG",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Tubby's_grilled_submarines_store_South_Lyon_Michigan.JPG",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Tudor's Biscuit World",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Tudor's Biscuit World\"][\"brand:wikidata\"=\"Q7851262\"][\"cuisine\"=\"american\"][\"name\"=\"Tudor's Biscuit World\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Tudor's_Biscuit_World.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Tudor's_Biscuit_World.jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "T\u00fcrkis",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"T\u00fcrkis\"][\"brand:wikidata\"=\"Q112157842\"][\"cuisine\"=\"turkish\"][\"diet:halal\"=\"yes\"][\"name\"=\"T\u00fcrkis\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/T\u00fcrkis_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/T\u00fcrkis_logo.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Tutti Pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Tutti Pizza\"][\"brand:wikidata\"=\"Q130248532\"][\"cuisine\"=\"pizza\"][\"name\"=\"Tutti Pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Twisters",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Twisters\"][\"brand:wikidata\"=\"Q18062004\"][\"cuisine\"=\"burger\"][\"name\"=\"Twisters\"][\"official_name\"=\"Twisters Burgers & Burritos\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Twisters,_Isleta_Blvd,_South_Valley_NM.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Twisters,_Isleta_Blvd,_South_Valley_NM.jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Two Hands Corn Dog",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Two Hands Corn Dog\"][\"brand:wikidata\"=\"Q116817465\"][\"cuisine\"=\"corn_dog\"][\"name\"=\"Two Hands\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "UGO",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"UGO\"][\"brand:wikidata\"=\"Q108126892\"][\"cuisine\"=\"juice\"][\"name\"=\"UGO\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Uling Roasters",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Uling Roasters\"][\"brand:wikidata\"=\"Q121090320\"][\"cuisine\"=\"chicken\"][\"name\"=\"Uling Roasters\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Upper Crust",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Upper Crust\"][\"brand:wikidata\"=\"Q7898585\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Upper Crust\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Urban Plates",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Urban Plates\"][\"brand:wikidata\"=\"Q96413021\"][\"cuisine\"=\"american\"][\"delivery\"=\"yes\"][\"name\"=\"Urban Plates\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Usta D\u00f6nerci",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Usta D\u00f6nerci\"][\"brand:ka\"=\"Usta D\u00f6nerci\"][\"brand:wikidata\"=\"Q126723224\"][\"cuisine\"=\"turkish\"][\"delivery\"=\"yes\"][\"name\"=\"Usta D\u00f6nerci\"][\"name:ka\"=\"Usta D\u00f6nerci\"][\"name:ru\"=\"\u0423\u0441\u0442\u0430 \u0414\u0451\u043d\u0435\u0440\u0434\u0436\u0438\"][\"name:tr\"=\"Usta D\u00f6nerci\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Usta D\u00f6nerci (Georgia)",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Usta D\u00f6nerci\"][\"brand:ka\"=\"Usta D\u00f6nerci\"][\"brand:wikidata\"=\"Q126723224\"][\"cuisine\"=\"turkish\"][\"delivery\"=\"yes\"][\"name\"=\"Usta D\u00f6nerci\"][\"name:ka\"=\"Usta D\u00f6nerci\"][\"name:ru\"=\"\u0423\u0441\u0442\u0430 \u0414\u0451\u043d\u0435\u0440\u0434\u0436\u0438\"][\"name:tr\"=\"Usta D\u00f6nerci\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Valentine",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Valentine\"][\"brand:wikidata\"=\"Q3553635\"][\"cuisine\"=\"burger\"][\"name\"=\"Valentine\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Valentine_(restaurant)_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Valentine_(restaurant)_logo.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Veggie Grill",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Veggie Grill\"][\"brand:wikidata\"=\"Q18636427\"][\"cuisine\"=\"american\"][\"diet:vegan\"=\"only\"][\"name\"=\"Veggie Grill\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Verhage",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Verhage\"][\"brand:wikidata\"=\"Q27169843\"][\"cuisine\"=\"friture\"][\"name\"=\"Verhage\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Verhage_logo.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Verhage_logo.png",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Victorico's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Victorico's\"][\"brand:wikidata\"=\"Q110998916\"][\"cuisine\"=\"mexican\"][\"name\"=\"Victorico's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Villa Madina",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Villa Madina\"][\"brand:wikidata\"=\"Q64876884\"][\"cuisine\"=\"mediterranean\"][\"name\"=\"Villa Madina\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Vocelli Pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Vocelli Pizza\"][\"brand:wikidata\"=\"Q7939247\"][\"cuisine\"=\"pizza\"][\"name\"=\"Vocelli Pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Voodoo Doughnut",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Voodoo Doughnut\"][\"brand:wikidata\"=\"Q7941645\"][\"cuisine\"=\"donut\"][\"name\"=\"Voodoo Doughnut\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Line_in_front_of_Voodoo_Doughtnut.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Line_in_front_of_Voodoo_Doughtnut.jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "WaBa Grill",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"WaBa Grill\"][\"brand:wikidata\"=\"Q113163467\"][\"cuisine\"=\"asian\"][\"name\"=\"WaBa Grill\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Waba_Grill_logo.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Waba_Grill_logo.png",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Waffle Cabin",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Waffle Cabin\"][\"brand:wikidata\"=\"Q132455388\"][\"cuisine\"=\"waffle\"][\"name\"=\"Waffle Cabin\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Waffle_Cabin.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Waffle_Cabin.png",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Wahoo's Fish Taco",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Wahoo's Fish Taco\"][\"brand:wikidata\"=\"Q7959827\"][\"cuisine\"=\"seafood;mexican\"][\"name\"=\"Wahoo's Fish Taco\"][\"short_name\"=\"Wahoo's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Wahoo's_Fish_Taco_Restaurant_Sign_&_Street_Scene_-_Orange_-_California_-_USA_(6773610740).jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Wahoo's_Fish_Taco_Restaurant_Sign_&_Street_Scene_-_Orange_-_California_-_USA_(6773610740).jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Ward's Restaurant",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Ward's Restaurant\"][\"brand:wikidata\"=\"Q119716752\"][\"cuisine\"=\"burger;fries;hot_dog\"][\"name\"=\"Ward's Restaurant\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Ward's_burger_and_fries.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Ward's_burger_and_fries.jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Wasabi",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Wasabi\"][\"brand:wikidata\"=\"Q23891278\"][\"cuisine\"=\"japanese\"][\"name\"=\"Wasabi\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Wasabi_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Wasabi_logo.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Wayback Burgers",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Wayback Burgers\"][\"brand:wikidata\"=\"Q16997570\"][\"cuisine\"=\"burger\"][\"name\"=\"Wayback Burgers\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Wayback_Burgers_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Wayback_Burgers_logo.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Wendy's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Wendy's\"][\"brand:wikidata\"=\"Q550258\"][\"cuisine\"=\"burger\"][\"name\"=\"Wendy's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Wendy's_flagship_restaurant_(Dublin,_Ohio).jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Wendy's_flagship_restaurant_(Dublin,_Ohio).jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "West Cornwall Pasty Co.",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"West Cornwall Pasty Co.\"][\"brand:wikidata\"=\"Q7774268\"][\"cuisine\"=\"pasty\"][\"name\"=\"West Cornwall Pasty Co.\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/West_Cornwall_Pasty_Company_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/West_Cornwall_Pasty_Company_logo.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Wetzel's Pretzels",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Wetzel's Pretzels\"][\"brand:wikidata\"=\"Q7990205\"][\"cuisine\"=\"pretzel\"][\"name\"=\"Wetzel's Pretzels\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Whataburger",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Whataburger\"][\"brand:wikidata\"=\"Q376627\"][\"cuisine\"=\"burger\"][\"name\"=\"Whataburger\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Whataburger_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Whataburger_logo.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Which Wich?",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Which Wich?\"][\"brand:wikidata\"=\"Q7993556\"][\"cuisine\"=\"sandwich\"][\"name\"=\"Which Wich?\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Which_Wich,_Village_Commons,_Tallahassee.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Which_Wich,_Village_Commons,_Tallahassee.jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "White Castle",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"White Castle\"][\"brand:wikidata\"=\"Q1244034\"][\"cuisine\"=\"burger\"][\"name\"=\"White Castle\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/White_Castle_Sign.JPG",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/White_Castle_Sign.JPG",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Wienerschnitzel",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Wienerschnitzel\"][\"brand:wikidata\"=\"Q324679\"][\"cuisine\"=\"hot_dog\"][\"name\"=\"Wienerschnitzel\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Wienerschnitzel_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Wienerschnitzel_logo.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Wimpy",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Wimpy\"][\"brand:wikidata\"=\"Q2811992\"][\"cuisine\"=\"burger\"][\"name\"=\"Wimpy\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_of_Wimpy.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_of_Wimpy.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Winchell's Donut House",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Winchell's Donut House\"][\"brand:wikidata\"=\"Q8023756\"][\"cuisine\"=\"donut\"][\"name\"=\"Winchell's Donut House\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/WinchellsMelrose.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/WinchellsMelrose.jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Wing Zone",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Wing Zone\"][\"brand:wikidata\"=\"Q8025122\"][\"cuisine\"=\"chicken;wings\"][\"name\"=\"Wing Zone\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Wing_Zone_at_Flamingo_Las_Vegas.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Wing_Zone_at_Flamingo_Las_Vegas.jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Wingstop",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Wingstop\"][\"brand:wikidata\"=\"Q8025339\"][\"cuisine\"=\"wings\"][\"name\"=\"Wingstop\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Wingstop_chicken_and_chips.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Wingstop_chicken_and_chips.jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "WingStreet",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"WingStreet\"][\"brand:wikidata\"=\"Q946630\"][\"cuisine\"=\"wings\"][\"name\"=\"WingStreet\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/WingStreet.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/WingStreet.jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Wok a Holic",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Wok a Holic\"][\"brand:wikidata\"=\"Q108413797\"][\"cuisine\"=\"chinese\"][\"name\"=\"Wok a Holic\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Wok To Go",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Wok To Go\"][\"brand:wikidata\"=\"Q125169083\"][\"cuisine\"=\"asian\"][\"name\"=\"Wok To Go\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Wok_To_Go_Logo_2022.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Wok_To_Go_Logo_2022.png",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Wok to Walk",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Wok to Walk\"][\"brand:wikidata\"=\"Q4020634\"][\"cuisine\"=\"asian\"][\"name\"=\"Wok to Walk\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Wok_to_Walk_Logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Wok_to_Walk_Logo.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Wow! Momo",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Wow! Momo\"][\"brand:wikidata\"=\"Q8037446\"][\"cuisine\"=\"momo\"][\"name\"=\"Wow! Momo\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Wrapchic",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Wrapchic\"][\"brand:wikidata\"=\"Q20539361\"][\"cuisine\"=\"indian;burrito\"][\"name\"=\"Wrapchic\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Xi'an Famous Foods",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Xi'an Famous Foods\"][\"brand:wikidata\"=\"Q8044020\"][\"cuisine\"=\"chinese\"][\"name\"=\"Xi'an Famous Foods\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Xi'an_Famous_Foods_logo.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Xi'an_Famous_Foods_logo.png",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Yard Sale Pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Yard Sale Pizza\"][\"brand:wikidata\"=\"Q110066789\"][\"cuisine\"=\"pizza\"][\"diet:vegan\"=\"yes\"][\"name\"=\"Yard Sale Pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Yellow Cab Pizza",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Yellow Cab Pizza\"][\"brand:wikidata\"=\"Q8051689\"][\"cuisine\"=\"pizza\"][\"name\"=\"Yellow Cab Pizza\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Yolk",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Yolk\"][\"brand:wikidata\"=\"Q118611156\"][\"breakfast\"=\"yes\"][\"cuisine\"=\"coffee_shop;sandwich;salad\"][\"name\"=\"Yolk\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Yoshinoya",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Yoshinoya\"][\"brand:en\"=\"Yoshinoya\"][\"brand:wikidata\"=\"Q776272\"][\"cuisine\"=\"beef_bowl\"][\"name\"=\"Yoshinoya\"][\"name:en\"=\"Yoshinoya\"][\"name:ja\"=\"\u5409\u91ce\u5bb6\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Yoshinoya_Logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Yoshinoya_Logo.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "You Me Sushi",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"You Me Sushi\"][\"brand:wikidata\"=\"Q125604759\"][\"cuisine\"=\"sushi\"][\"name\"=\"You Me Sushi\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Yum Yum Donuts",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Yum Yum Donuts\"][\"brand:wikidata\"=\"Q8061011\"][\"cuisine\"=\"donut\"][\"name\"=\"Yum Yum Donuts\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/YumYumDonutsMelrose.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/YumYumDonutsMelrose.jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Z!Eats",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Z!Eats\"][\"brand:wikidata\"=\"Q108606713\"][\"cuisine\"=\"soup;sandwich\"][\"name\"=\"Z!Eats\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Zahir Kebab",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Zahir Kebab\"][\"brand:wikidata\"=\"Q116148750\"][\"cuisine\"=\"kebab\"][\"name\"=\"Zahir Kebab\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Zambrero",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Zambrero\"][\"brand:wikidata\"=\"Q18636431\"][\"cuisine\"=\"mexican\"][\"name\"=\"Zambrero\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Zambrero_logo.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Zambrero_logo.png",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Zaxby's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Zaxby's\"][\"brand:wikidata\"=\"Q8067525\"][\"cuisine\"=\"chicken\"][\"name\"=\"Zaxby's\"][\"official_name\"=\"Zaxby's Chicken Fingers & Buffalo Wings\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Zebro's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Zebro's\"][\"brand:wikidata\"=\"Q116619443\"][\"cuisine\"=\"chicken\"][\"name\"=\"Zebro's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Zero Degrees",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Zero Degrees\"][\"brand:wikidata\"=\"Q113412940\"][\"cuisine\"=\"asian_fusion\"][\"name\"=\"Zero Degrees\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Zip's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Zip's\"][\"brand:wikidata\"=\"Q28373904\"][\"cuisine\"=\"burger\"][\"name\"=\"Zip's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Zippy's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Zippy's\"][\"brand:wikidata\"=\"Q8072671\"][\"cuisine\"=\"hawaiian;japanese;chinese;american\"][\"name\"=\"Zippy's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Zippy's_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Zippy's_logo.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "Zo\u00ebs Kitchen",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Zo\u00ebs Kitchen\"][\"brand:wikidata\"=\"Q8074747\"][\"cuisine\"=\"mediterranean\"][\"name\"=\"Zo\u00ebs Kitchen\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Zoeslogo.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Zoeslogo.jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u0392\u0395\u0391\u03a4",
+    query: "(nwr[\"alt_name\"=\"B-eat\"][\"amenity\"=\"fast_food\"][\"brand\"=\"\u0392\u0395\u0391\u03a4\"][\"brand:wikidata\"=\"Q114830599\"][\"cuisine\"=\"sandwich\"][\"delivery\"=\"yes\"][\"name\"=\"\u0392\u0395\u0391\u03a4\"][\"opening_hours\"=\"24/7\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u0393\u03c1\u03b7\u03b3\u03cc\u03c1\u03b7\u03c2",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u0393\u03c1\u03b7\u03b3\u03cc\u03c1\u03b7\u03c2\"][\"brand:el\"=\"\u0393\u03c1\u03b7\u03b3\u03cc\u03c1\u03b7\u03c2\"][\"brand:en\"=\"Gregory's\"][\"brand:wikidata\"=\"Q62273834\"][\"cuisine\"=\"sandwich\"][\"name\"=\"\u0393\u03c1\u03b7\u03b3\u03cc\u03c1\u03b7\u03c2\"][\"name:el\"=\"\u0393\u03c1\u03b7\u03b3\u03cc\u03c1\u03b7\u03c2\"][\"name:en\"=\"Gregory's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/\u0393\u03c1\u03b7\u03b3\u03cc\u03c1\u03b7\u03c2_(logo).svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/\u0393\u03c1\u03b7\u03b3\u03cc\u03c1\u03b7\u03c2_(logo).svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u0410\u0432\u0442\u043e\u0441\u0443\u0448\u0438 \u0410\u0432\u0442\u043e\u043f\u0438\u0446\u0446\u0430",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u0410\u0432\u0442\u043e\u0441\u0443\u0448\u0438 \u0410\u0432\u0442\u043e\u043f\u0438\u0446\u0446\u0430\"][\"cuisine\"=\"pizza;sushi\"][\"name\"=\"\u0410\u0432\u0442\u043e\u0441\u0443\u0448\u0438 \u0410\u0432\u0442\u043e\u043f\u0438\u0446\u0446\u0430\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u0411\u0435\u043b\u043e\u0440\u0443\u0441\u043d\u0435\u0444\u0442\u044c",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u0411\u0435\u043b\u043e\u0440\u0443\u0441\u043d\u0435\u0444\u0442\u044c\"][\"brand:wikidata\"=\"Q4082693\"][\"cuisine\"=\"hot_dog;burger\"][\"name\"=\"\u0411\u0435\u043b\u043e\u0440\u0443\u0441\u043d\u0435\u0444\u0442\u044c\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/\u041b\u043e\u0433\u043e\u0442\u0438\u043f_\u0411\u0435\u043b\u043e\u0440\u0443\u0441\u043d\u0435\u0444\u0442\u044c.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/\u041b\u043e\u0433\u043e\u0442\u0438\u043f_\u0411\u0435\u043b\u043e\u0440\u0443\u0441\u043d\u0435\u0444\u0442\u044c.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u0411\u0443\u0440\u0433\u0435\u0440 \u041a\u0438\u043d\u0433",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u0411\u0443\u0440\u0433\u0435\u0440 \u041a\u0438\u043d\u0433\"][\"brand:en\"=\"Burger King\"][\"brand:ru\"=\"\u0411\u0443\u0440\u0433\u0435\u0440 \u041a\u0438\u043d\u0433\"][\"brand:wikidata\"=\"Q177054\"][\"cuisine\"=\"burger\"][\"name\"=\"\u0411\u0443\u0440\u0433\u0435\u0440 \u041a\u0438\u043d\u0433\"][\"name:en\"=\"Burger King\"][\"name:ru\"=\"\u0411\u0443\u0440\u0433\u0435\u0440 \u041a\u0438\u043d\u0433\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Burger_King_2020.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Burger_King_2020.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u0412\u043a\u0443\u0441\u043d\u043e \u2014 \u0438 \u0442\u043e\u0447\u043a\u0430",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u0412\u043a\u0443\u0441\u043d\u043e \u2014 \u0438 \u0442\u043e\u0447\u043a\u0430\"][\"brand:en\"=\"Vkusno i tochka\"][\"brand:ru\"=\"\u0412\u043a\u0443\u0441\u043d\u043e \u2014 \u0438 \u0442\u043e\u0447\u043a\u0430\"][\"brand:wikidata\"=\"Q112406961\"][\"cuisine\"=\"burger\"][\"name\"=\"\u0412\u043a\u0443\u0441\u043d\u043e \u2014 \u0438 \u0442\u043e\u0447\u043a\u0430\"][\"name:en\"=\"Vkusno i tochka\"][\"name:ru\"=\"\u0412\u043a\u0443\u0441\u043d\u043e \u2014 \u0438 \u0442\u043e\u0447\u043a\u0430\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Vkusno_I_Tochka_symbol.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Vkusno_I_Tochka_symbol.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u0414\u043e\u0434\u043e \u041f\u0438\u0446\u0446\u0430",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u0414\u043e\u0434\u043e \u041f\u0438\u0446\u0446\u0430\"][\"brand:en\"=\"Dodo Pizza\"][\"brand:ru\"=\"\u0414\u043e\u0434\u043e \u041f\u0438\u0446\u0446\u0430\"][\"brand:wikidata\"=\"Q61949318\"][\"cuisine\"=\"pizza\"][\"name\"=\"\u0414\u043e\u0434\u043e \u041f\u0438\u0446\u0446\u0430\"][\"name:en\"=\"Dodo Pizza\"][\"name:ru\"=\"\u0414\u043e\u0434\u043e \u041f\u0438\u0446\u0446\u0430\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Dodo_Torzhok.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Dodo_Torzhok.jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u0414\u043e\u043c\u0438\u043d\u043e'c",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u0414\u043e\u043c\u0438\u043d\u043e'c\"][\"brand:en\"=\"Domino's\"][\"brand:ru\"=\"\u0414\u043e\u043c\u0438\u043d\u043e'c\"][\"brand:wikidata\"=\"Q839466\"][\"cuisine\"=\"pizza\"][\"name\"=\"\u0414\u043e\u043c\u0438\u043d\u043e'c\"][\"name:en\"=\"Domino's\"][\"name:ru\"=\"\u0414\u043e\u043c\u0438\u043d\u043e'c\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Domino's_pizza_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Domino's_pizza_logo.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u0415\u0432\u0440\u043e \u041a\u0435\u0431\u0430\u0431",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u0415\u0432\u0440\u043e \u041a\u0435\u0431\u0430\u0431\"][\"brand:en\"=\"Euro Kebab\"][\"brand:ru\"=\"\u0415\u0432\u0440\u043e \u041a\u0435\u0431\u0430\u0431\"][\"brand:wikidata\"=\"Q109943635\"][\"cuisine\"=\"kebab\"][\"name\"=\"\u0415\u0432\u0440\u043e \u041a\u0435\u0431\u0430\u0431\"][\"name:en\"=\"Euro Kebab\"][\"name:ru\"=\"\u0415\u0432\u0440\u043e \u041a\u0435\u0431\u0430\u0431\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u041a\u0440\u043e\u0448\u043a\u0430 \u041a\u0430\u0440\u0442\u043e\u0448\u043a\u0430",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u041a\u0440\u043e\u0448\u043a\u0430 \u041a\u0430\u0440\u0442\u043e\u0448\u043a\u0430\"][\"brand:en\"=\"Kroshka Kartoshka\"][\"brand:ru\"=\"\u041a\u0440\u043e\u0448\u043a\u0430 \u041a\u0430\u0440\u0442\u043e\u0448\u043a\u0430\"][\"brand:wikidata\"=\"Q4241838\"][\"cuisine\"=\"potato\"][\"name\"=\"\u041a\u0440\u043e\u0448\u043a\u0430 \u041a\u0430\u0440\u0442\u043e\u0448\u043a\u0430\"][\"name:en\"=\"Kroshka Kartoshka\"][\"name:ru\"=\"\u041a\u0440\u043e\u0448\u043a\u0430 \u041a\u0430\u0440\u0442\u043e\u0448\u043a\u0430\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Kroshka_Kartoshka.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kroshka_Kartoshka.jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u041c\u0438\u043b\u0442\u0438",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u041c\u0438\u043b\u0442\u0438\"][\"cuisine\"=\"deli\"][\"name\"=\"\u041c\u0438\u043b\u0442\u0438\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u041c\u043e\u043a\u043a\u0430\u043d\u043e",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u041c\u043e\u043a\u043a\u0430\u043d\u043e\"][\"cuisine\"=\"sushi\"][\"name\"=\"\u041c\u043e\u043a\u043a\u0430\u043d\u043e\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u041f\u0430\u043f\u0430 \u0414\u0436\u043e\u043d\u0441",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u041f\u0430\u043f\u0430 \u0414\u0436\u043e\u043d\u0441\"][\"brand:en\"=\"Papa John's\"][\"brand:ru\"=\"\u041f\u0430\u043f\u0430 \u0414\u0436\u043e\u043d\u0441\"][\"brand:wikidata\"=\"Q2759586\"][\"cuisine\"=\"pizza\"][\"name\"=\"\u041f\u0430\u043f\u0430 \u0414\u0436\u043e\u043d\u0441\"][\"name:en\"=\"Papa John's\"][\"name:ru\"=\"\u041f\u0430\u043f\u0430 \u0414\u0436\u043e\u043d\u0441\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Papa_John's_Logo_2019.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Papa_John's_Logo_2019.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u041f\u0438\u0446\u0446\u0430\u0424\u0430\u0431\u0440\u0438\u043a\u0430",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u041f\u0438\u0446\u0446\u0430\u0424\u0430\u0431\u0440\u0438\u043a\u0430\"][\"cuisine\"=\"pizza\"][\"name\"=\"\u041f\u0438\u0446\u0446\u0430\u0424\u0430\u0431\u0440\u0438\u043a\u0430\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u041f\u0440\u043e\u0441\u0442\u043e \u0412\u0430\u0441\u044f",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u041f\u0440\u043e\u0441\u0442\u043e \u0412\u0430\u0441\u044f\"][\"cuisine\"=\"kebab\"][\"name\"=\"\u041f\u0440\u043e\u0441\u0442\u043e \u0412\u0430\u0441\u044f\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u041f\u0443\u0437\u0430\u0442\u0430 \u0425\u0430\u0442\u0430",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u041f\u0443\u0437\u0430\u0442\u0430 \u0425\u0430\u0442\u0430\"][\"brand:en\"=\"Puzata Hata\"][\"brand:ru\"=\"\u041f\u0443\u0437\u0430\u0442\u0430 \u0425\u0430\u0442\u0430\"][\"brand:uk\"=\"\u041f\u0443\u0437\u0430\u0442\u0430 \u0425\u0430\u0442\u0430\"][\"brand:wikidata\"=\"Q11832009\"][\"cuisine\"=\"ukrainian\"][\"fast_food\"=\"cafeteria\"][\"name\"=\"\u041f\u0443\u0437\u0430\u0442\u0430 \u0425\u0430\u0442\u0430\"][\"name:en\"=\"Puzata Hata\"][\"name:ru\"=\"\u041f\u0443\u0437\u0430\u0442\u0430 \u0425\u0430\u0442\u0430\"][\"name:uk\"=\"\u041f\u0443\u0437\u0430\u0442\u0430 \u0425\u0430\u0442\u0430\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Puzata_Hata.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Puzata_Hata.jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u0420\u043e\u0431\u0438\u043d \u0421\u0434\u043e\u0431\u0438\u043d",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u0420\u043e\u0431\u0438\u043d \u0421\u0434\u043e\u0431\u0438\u043d\"][\"brand:en\"=\"Robins Dobin\"][\"brand:ru\"=\"\u0420\u043e\u0431\u0438\u043d \u0421\u0434\u043e\u0431\u0438\u043d\"][\"brand:wikidata\"=\"Q62273880\"][\"cuisine\"=\"burger\"][\"name\"=\"\u0420\u043e\u0431\u0438\u043d \u0421\u0434\u043e\u0431\u0438\u043d\"][\"name:en\"=\"Robins Dobin\"][\"name:ru\"=\"\u0420\u043e\u0431\u0438\u043d \u0421\u0434\u043e\u0431\u0438\u043d\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u0420\u0443\u0441\u0441\u043a\u0438\u0439 \u0410\u043f\u043f\u0435\u0442\u0438\u0442",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u0420\u0443\u0441\u0441\u043a\u0438\u0439 \u0410\u043f\u043f\u0435\u0442\u0438\u0442\"][\"brand:en\"=\"Russkiy Appetit\"][\"brand:ru\"=\"\u0420\u0443\u0441\u0441\u043a\u0438\u0439 \u0410\u043f\u043f\u0435\u0442\u0438\u0442\"][\"brand:wikidata\"=\"Q62086063\"][\"cuisine\"=\"sandwich;salad;regional\"][\"name\"=\"\u0420\u0443\u0441\u0441\u043a\u0438\u0439 \u0410\u043f\u043f\u0435\u0442\u0438\u0442\"][\"name:en\"=\"Russkiy Appetit\"][\"name:ru\"=\"\u0420\u0443\u0441\u0441\u043a\u0438\u0439 \u0410\u043f\u043f\u0435\u0442\u0438\u0442\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u0421\u0442\u0430\u0440\u0434\u043e\u0433s",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u0421\u0442\u0430\u0440\u0434\u043e\u0433s\"][\"brand:en\"=\"Stardogs\"][\"brand:ru\"=\"\u0421\u0442\u0430\u0440\u0434\u043e\u0433s\"][\"brand:wikidata\"=\"Q4439856\"][\"cuisine\"=\"sausage\"][\"name\"=\"\u0421\u0442\u0430\u0440\u0434\u043e\u0433s\"][\"name:en\"=\"Stardogs\"][\"name:ru\"=\"\u0421\u0442\u0430\u0440\u0434\u043e\u0433s\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Stardog!s_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Stardog!s_logo.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u0421\u0443\u0448\u0438 Wok",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u0421\u0443\u0448\u0438 Wok\"][\"brand:en\"=\"Sushi Wok\"][\"brand:ru\"=\"\u0421\u0443\u0448\u0438 Wok\"][\"brand:wikidata\"=\"Q25444754\"][\"cuisine\"=\"asian\"][\"name\"=\"\u0421\u0443\u0448\u0438 Wok\"][\"name:en\"=\"Sushi Wok\"][\"name:ru\"=\"\u0421\u0443\u0448\u0438 Wok\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u0421\u0443\u0448\u0438 \u043c\u0430\u043a\u0435",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u0421\u0443\u0448\u0438 \u043c\u0430\u043a\u0435\"][\"cuisine\"=\"sushi\"][\"name\"=\"\u0421\u0443\u0448\u0438 \u043c\u0430\u043a\u0435\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u0421\u0443\u0448\u0438-\u041c\u0430\u0440\u043a\u0435\u0442",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u0421\u0443\u0448\u0438-\u041c\u0430\u0440\u043a\u0435\u0442\"][\"brand:wikidata\"=\"Q120268393\"][\"cuisine\"=\"sushi\"][\"name\"=\"\u0421\u0443\u0448\u0438-\u041c\u0430\u0440\u043a\u0435\u0442\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u0421\u0443\u0448\u0438\u0448\u043e\u043f",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u0421\u0443\u0448\u0438\u0448\u043e\u043f\"][\"brand:en\"=\"Sushishop\"][\"brand:ru\"=\"\u0421\u0443\u0448\u0438\u0448\u043e\u043f\"][\"brand:wikidata\"=\"Q104003006\"][\"cuisine\"=\"sushi\"][\"name\"=\"\u0421\u0443\u0448\u0438\u0448\u043e\u043f\"][\"name:en\"=\"Sushishop\"][\"name:ru\"=\"\u0421\u0443\u0448\u0438\u0448\u043e\u043f\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u0422\u0435\u0440\u0435\u043c\u043e\u043a",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u0422\u0435\u0440\u0435\u043c\u043e\u043a\"][\"brand:en\"=\"Teremok\"][\"brand:ru\"=\"\u0422\u0435\u0440\u0435\u043c\u043e\u043a\"][\"brand:wikidata\"=\"Q4455593\"][\"cuisine\"=\"crepe;russian\"][\"name\"=\"\u0422\u0435\u0440\u0435\u043c\u043e\u043a\"][\"name:en\"=\"Teremok\"][\"name:ru\"=\"\u0422\u0435\u0440\u0435\u043c\u043e\u043a\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Teremok_red_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Teremok_red_logo.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u0427\u0435\u0431\u0443\u0440\u0435\u043a\u041c\u0438",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u0427\u0435\u0431\u0443\u0440\u0435\u043a\u041c\u0438\"][\"brand:wikidata\"=\"Q129419587\"][\"cuisine\"=\"coffee_shop;international\"][\"name\"=\"\u0427\u0435\u0431\u0443\u0440\u0435\u043a\u041c\u0438\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u0428\u0430\u0432\u0435\u0440\u043b\u044d\u043d\u0434",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u0428\u0430\u0432\u0435\u0440\u043b\u044d\u043d\u0434\"][\"cuisine\"=\"kebab;shawarma\"][\"name\"=\"\u0428\u0430\u0432\u0435\u0440\u043b\u044d\u043d\u0434\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u10d1\u10e3\u10e0\u10d2\u10d4\u10e0 \u10d9\u10d8\u10dc\u10d2\u10d8",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u10d1\u10e3\u10e0\u10d2\u10d4\u10e0 \u10d9\u10d8\u10dc\u10d2\u10d8\"][\"brand:ka\"=\"\u10d1\u10e3\u10e0\u10d2\u10d4\u10e0 \u10d9\u10d8\u10dc\u10d2\u10d8\"][\"brand:wikidata\"=\"Q177054\"][\"cuisine\"=\"burger\"][\"delivery\"=\"yes\"][\"name\"=\"\u10d1\u10e3\u10e0\u10d2\u10d4\u10e0 \u10d9\u10d8\u10dc\u10d2\u10d8\"][\"name:en\"=\"Burger King\"][\"name:ka\"=\"\u10d1\u10e3\u10e0\u10d2\u10d4\u10e0 \u10d9\u10d8\u10dc\u10d2\u10d8\"][\"name:ru\"=\"\u0411\u0443\u0440\u0433\u0435\u0440 \u041a\u0438\u043d\u0433\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Burger_King_2020.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Burger_King_2020.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u10d3\u10d0\u10dc\u10d9\u10d8\u10dc \u10d3\u10dd\u10dc\u10d0\u10d7\u10e1\u10d8",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u10d3\u10d0\u10dc\u10d9\u10d8\u10dc \u10d3\u10dd\u10dc\u10d0\u10d7\u10e1\u10d8\"][\"brand:en\"=\"Dunkin' Donuts\"][\"brand:ka\"=\"\u10d3\u10d0\u10dc\u10d9\u10d8\u10dc \u10d3\u10dd\u10dc\u10d0\u10d7\u10e1\u10d8\"][\"brand:wikidata\"=\"Q847743\"][\"cuisine\"=\"donut;bagel;pizza;hot_dog;burger\"][\"delivery\"=\"yes\"][\"name\"=\"\u10d3\u10d0\u10dc\u10d9\u10d8\u10dc \u10d3\u10dd\u10dc\u10d0\u10d7\u10e1\u10d8\"][\"name:en\"=\"Dunkin' Donuts\"][\"name:ka\"=\"\u10d3\u10d0\u10dc\u10d9\u10d8\u10dc \u10d3\u10dd\u10dc\u10d0\u10d7\u10e1\u10d8\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Dunkin1.JPG",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Dunkin1.JPG",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u10d3\u10d4\u10d2\u10e3\u10e1\u10e2\u10dd",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u10d3\u10d4\u10d2\u10e3\u10e1\u10e2\u10dd\"][\"brand:en\"=\"Degusto\"][\"brand:ka\"=\"\u10d3\u10d4\u10d2\u10e3\u10e1\u10e2\u10dd\"][\"brand:ru\"=\"\u0414\u0435\u0433\u0443\u0441\u0442\u043e\"][\"brand:wikidata\"=\"Q131469960\"][\"cuisine\"=\"georgian\"][\"delivery\"=\"yes\"][\"fast_food\"=\"cafeteria\"][\"name\"=\"\u10d3\u10d4\u10d2\u10e3\u10e1\u10e2\u10dd\"][\"name:en\"=\"Degusto\"][\"name:ka\"=\"\u10d3\u10d4\u10d2\u10e3\u10e1\u10e2\u10dd\"][\"name:ru\"=\"\u0414\u0435\u0433\u0443\u0441\u0442\u043e\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u10d5\u10d4\u10dc\u10d3\u10d8'\u10e1",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u10d5\u10d4\u10dc\u10d3\u10d8'\u10e1\"][\"brand:en\"=\"Wendy's\"][\"brand:ka\"=\"\u10d5\u10d4\u10dc\u10d3\u10d8'\u10e1\"][\"brand:wikidata\"=\"Q550258\"][\"cuisine\"=\"burger\"][\"delivery\"=\"yes\"][\"name\"=\"\u10d5\u10d4\u10dc\u10d3\u10d8'\u10e1\"][\"name:en\"=\"Wendy's\"][\"name:ka\"=\"\u10d5\u10d4\u10dc\u10d3\u10d8'\u10e1\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Wendy's_flagship_restaurant_(Dublin,_Ohio).jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Wendy's_flagship_restaurant_(Dublin,_Ohio).jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u10d9\u10d4\u10d8 \u10d4\u10e4 \u10e1\u10d8",
+    query: "(nwr[\"alt_name:en\"=\"Kentucky Fried Chicken\"][\"amenity\"=\"fast_food\"][\"brand\"=\"\u10d9\u10d4\u10d8 \u10d4\u10e4 \u10e1\u10d8\"][\"brand:ka\"=\"\u10d9\u10d4\u10d8 \u10d4\u10e4 \u10e1\u10d8\"][\"brand:wikidata\"=\"Q524757\"][\"cuisine\"=\"burger;wings;chicken\"][\"delivery\"=\"yes\"][\"name\"=\"\u10d9\u10d4\u10d8 \u10d4\u10e4 \u10e1\u10d8\"][\"name:en\"=\"KFC\"][\"name:ka\"=\"\u10d9\u10d4\u10d8 \u10d4\u10e4 \u10e1\u10d8\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Kfc_textlogo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kfc_textlogo.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u10db\u10d0\u10d9\u10d3\u10dd\u10dc\u10d0\u10da\u10d3\u10e1\u10d8",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u10db\u10d0\u10d9\u10d3\u10dd\u10dc\u10d0\u10da\u10d3\u10e1\u10d8\"][\"brand:en\"=\"McDonald's\"][\"brand:ka\"=\"\u10db\u10d0\u10d9\u10d3\u10dd\u10dc\u10d0\u10da\u10d3\u10e1\u10d8\"][\"brand:ru\"=\"\u041c\u0430\u043a\u0434\u043e\u043d\u0430\u043b\u044c\u0434\u0441\"][\"brand:wikidata\"=\"Q38076\"][\"cuisine\"=\"burger\"][\"delivery\"=\"yes\"][\"name\"=\"\u10db\u10d0\u10d9\u10d3\u10dd\u10dc\u10d0\u10da\u10d3\u10e1\u10d8\"][\"name:en\"=\"McDonald's\"][\"name:ka\"=\"\u10db\u10d0\u10d9\u10d3\u10dd\u10dc\u10d0\u10da\u10d3\u10e1\u10d8\"][\"name:ru\"=\"\u041c\u0430\u043a\u0434\u043e\u043d\u0430\u043b\u044c\u0434\u0441\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/McDonald's_with_slogan_2020.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/McDonald's_with_slogan_2020.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u10db\u10d0\u10d9\u10e8\u10d0\u10e3\u10e0\u10db\u10d0",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u10db\u10d0\u10d9\u10e8\u10d0\u10e3\u10e0\u10db\u10d0\"][\"brand:ka\"=\"\u10db\u10d0\u10d9\u10e8\u10d0\u10e3\u10e0\u10db\u10d0\"][\"brand:wikidata\"=\"Q131469956\"][\"cuisine\"=\"shawarma\"][\"delivery\"=\"yes\"][\"name\"=\"\u10db\u10d0\u10d9\u10e8\u10d0\u10e3\u10e0\u10db\u10d0\"][\"name:en\"=\"MacShaurma\"][\"name:ka\"=\"\u10db\u10d0\u10d9\u10e8\u10d0\u10e3\u10e0\u10db\u10d0\"][\"name:ru\"=\"\u041c\u0430\u043a\u0428\u0430\u0443\u0440\u043c\u0430\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u10e1\u10d0\u10d1\u10d5\u10d4\u10d8",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u10e1\u10d0\u10d1\u10d5\u10d4\u10d8\"][\"brand:ka\"=\"\u10e1\u10d0\u10d1\u10d5\u10d4\u10d8\"][\"brand:wikidata\"=\"Q244457\"][\"cuisine\"=\"sandwich\"][\"delivery\"=\"yes\"][\"name\"=\"\u10e1\u10d0\u10d1\u10d5\u10d4\u10d8\"][\"name:en\"=\"Subway\"][\"name:ka\"=\"\u10e1\u10d0\u10d1\u10d5\u10d4\u10d8\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Subway_2016_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Subway_2016_logo.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u10e1\u10d9\u10d0 \u10ef\u10e3\u10e1 \u10d1\u10d0\u10e0\u10d8",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u10e1\u10d9\u10d0 \u10ef\u10e3\u10e1 \u10d1\u10d0\u10e0\u10d8\"][\"brand:en\"=\"Ska Juice Bar\"][\"brand:ka\"=\"\u10e1\u10d9\u10d0 \u10ef\u10e3\u10e1 \u10d1\u10d0\u10e0\u10d8\"][\"brand:wikidata\"=\"Q131469954\"][\"cuisine\"=\"juice;smoothie;sandwich\"][\"delivery\"=\"yes\"][\"name\"=\"\u10e1\u10d9\u10d0 \u10ef\u10e3\u10e1 \u10d1\u10d0\u10e0\u10d8\"][\"name:en\"=\"Ska Juice Bar\"][\"name:ka\"=\"\u10e1\u10d9\u10d0 \u10ef\u10e3\u10e1 \u10d1\u10d0\u10e0\u10d8\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u10e2\u10d4\u10db\u10de\u10dd",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u10e2\u10d4\u10db\u10de\u10dd\"][\"brand:en\"=\"Tempo\"][\"brand:ka\"=\"\u10e2\u10d4\u10db\u10de\u10dd\"][\"brand:wikidata\"=\"Q131469961\"][\"cuisine\"=\"coffee_shop;sandwich\"][\"name\"=\"\u10e2\u10d4\u10db\u10de\u10dd\"][\"name:en\"=\"Tempo\"][\"name:ka\"=\"\u10e2\u10d4\u10db\u10de\u10dd\"][\"name:ru\"=\"\u0422\u0435\u043c\u043f\u043e\"][\"takeaway\"=\"only\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u05d0\u05d2\u05d3\u05d9\u05e8",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u05d0\u05d2\u05d3\u05d9\u05e8\"][\"brand:en\"=\"Agadir\"][\"brand:he\"=\"\u05d0\u05d2\u05d3\u05d9\u05e8\"][\"brand:wikidata\"=\"Q64760070\"][\"cuisine\"=\"burger\"][\"name\"=\"\u05d0\u05d2\u05d3\u05d9\u05e8\"][\"name:en\"=\"Agadir\"][\"name:he\"=\"\u05d0\u05d2\u05d3\u05d9\u05e8\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u05de\u05e7\u05d3\u05d5\u05e0\u05dc\u05d3'\u05e1",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u05de\u05e7\u05d3\u05d5\u05e0\u05dc\u05d3'\u05e1\"][\"brand:en\"=\"McDonald's\"][\"brand:he\"=\"\u05de\u05e7\u05d3\u05d5\u05e0\u05dc\u05d3'\u05e1\"][\"brand:wikidata\"=\"Q12061542\"][\"cuisine\"=\"burger\"][\"name\"=\"\u05de\u05e7\u05d3\u05d5\u05e0\u05dc\u05d3'\u05e1\"][\"name:en\"=\"McDonald's\"][\"name:he\"=\"\u05de\u05e7\u05d3\u05d5\u05e0\u05dc\u05d3'\u05e1\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/McDonald's_IL_WV.JPG",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/McDonald's_IL_WV.JPG",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u05e2\u05d2\u05d1\u05e0\u05d9\u05d4",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"Agvania Pizza\"][\"brand:en\"=\"Agvania Pizza\"][\"brand:he\"=\"\u05e2\u05d2\u05d1\u05e0\u05d9\u05d4\"][\"cuisine\"=\"pizza\"][\"delivery\"=\"yes\"][\"name\"=\"\u05e2\u05d2\u05d1\u05e0\u05d9\u05d4\"][\"name:en\"=\"Agvania\"][\"name:he\"=\"\u05e2\u05d2\u05d1\u05e0\u05d9\u05d4\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u05e2\u05d3 \u05d4\u05e2\u05e6\u05dd \u05d0\u05e7\u05e1\u05e4\u05e8\u05e1",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u05e2\u05d3 \u05d4\u05e2\u05e6\u05dd \u05d0\u05e7\u05e1\u05e4\u05e8\u05e1\"][\"brand:en\"=\"Ad Haetzem Express\"][\"brand:he\"=\"\u05e2\u05d3 \u05d4\u05e2\u05e6\u05dd \u05d0\u05e7\u05e1\u05e4\u05e8\u05e1\"][\"brand:wikidata\"=\"Q64760165\"][\"cuisine\"=\"burger\"][\"name\"=\"\u05e2\u05d3 \u05d4\u05e2\u05e6\u05dd \u05d0\u05e7\u05e1\u05e4\u05e8\u05e1\"][\"name:en\"=\"Ad Haetzem Express\"][\"name:he\"=\"\u05e2\u05d3 \u05d4\u05e2\u05e6\u05dd \u05d0\u05e7\u05e1\u05e4\u05e8\u05e1\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u05e4\u05d9\u05e6\u05d4 \u05e4\u05e8\u05d2\u05d5",
+    query: "(nwr[\"alt_name:en\"=\"Prego Pizza\"][\"amenity\"=\"fast_food\"][\"brand\"=\"\u05e4\u05d9\u05e6\u05d4 \u05e4\u05e8\u05d2\u05d5\"][\"brand:he\"=\"\u05e4\u05d9\u05e6\u05d4 \u05e4\u05e8\u05d2\u05d5\"][\"brand:wikidata\"=\"Q99769214\"][\"cuisine\"=\"pizza\"][\"delivery\"=\"yes\"][\"diet:vegan\"=\"yes\"][\"name\"=\"\u05e4\u05d9\u05e6\u05d4 \u05e4\u05e8\u05d2\u05d5\"][\"name:en\"=\"Pizza Prego\"][\"name:he\"=\"\u05e4\u05d9\u05e6\u05d4 \u05e4\u05e8\u05d2\u05d5\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u05e4\u05d9\u05e6\u05d4 \u05e9\u05de\u05e9",
+    query: "(nwr[\"alt_name:en\"=\"Shemesh Pizza\"][\"amenity\"=\"fast_food\"][\"brand\"=\"\u05e4\u05d9\u05e6\u05d4 \u05e9\u05de\u05e9\"][\"brand:he\"=\"\u05e4\u05d9\u05e6\u05d4 \u05e9\u05de\u05e9\"][\"brand:wikidata\"=\"Q99769124\"][\"cuisine\"=\"pizza\"][\"delivery\"=\"yes\"][\"diet:kosher\"=\"yes\"][\"name\"=\"\u05e4\u05d9\u05e6\u05d4 \u05e9\u05de\u05e9\"][\"name:en\"=\"Pizza Shemesh\"][\"name:he\"=\"\u05e4\u05d9\u05e6\u05d4 \u05e9\u05de\u05e9\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u0627\u0644\u0628\u064a\u0643",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u0627\u0644\u0628\u064a\u0643\"][\"brand:ar\"=\"\u0627\u0644\u0628\u064a\u0643\"][\"brand:en\"=\"Albaik\"][\"brand:wikidata\"=\"Q4703536\"][\"cuisine\"=\"chicken\"][\"name\"=\"\u0627\u0644\u0628\u064a\u0643\"][\"name:ar\"=\"\u0627\u0644\u0628\u064a\u0643\"][\"name:en\"=\"Albaik\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Albaik_logo.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Albaik_logo.png",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u0627\u0644\u0637\u0627\u0632\u062c",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u0627\u0644\u0637\u0627\u0632\u062c\"][\"brand:ar\"=\"\u0627\u0644\u0637\u0627\u0632\u062c\"][\"brand:en\"=\"Al Tazaj\"][\"brand:wikidata\"=\"Q4704878\"][\"cuisine\"=\"chicken\"][\"name\"=\"\u0627\u0644\u0637\u0627\u0632\u062c\"][\"name:ar\"=\"\u0627\u0644\u0637\u0627\u0632\u062c\"][\"name:en\"=\"Al Tazaj\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Al_Tazaj_Buraidah.JPG",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Al_Tazaj_Buraidah.JPG",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u062f\u0627\u0646\u0643\u0646 \u062f\u0648\u0646\u062a\u0633",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u062f\u0627\u0646\u0643\u0646\"][\"brand:ar\"=\"\u062f\u0627\u0646\u0643\u0646\"][\"brand:en\"=\"Dunkin'\"][\"brand:wikidata\"=\"Q847743\"][\"cuisine\"=\"donut;coffee_shop\"][\"name\"=\"\u062f\u0627\u0646\u0643\u0646 \u062f\u0648\u0646\u062a\u0633\"][\"name:ar\"=\"\u062f\u0627\u0646\u0643\u0646 \u062f\u0648\u0646\u062a\u0633\"][\"name:en\"=\"Dunkin' Donuts\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Dunkin1.JPG",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Dunkin1.JPG",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u062f\u062c\u0627\u062c \u0643\u0646\u062a\u0627\u0643\u064a",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u062f\u062c\u0627\u062c \u0643\u0646\u062a\u0627\u0643\u064a\"][\"brand:ar\"=\"\u062f\u062c\u0627\u062c \u0643\u0646\u062a\u0627\u0643\u064a\"][\"brand:en\"=\"KFC\"][\"brand:wikidata\"=\"Q524757\"][\"cuisine\"=\"chicken\"][\"name\"=\"\u062f\u062c\u0627\u062c \u0643\u0646\u062a\u0627\u0643\u064a\"][\"name:ar\"=\"\u062f\u062c\u0627\u062c \u0643\u0646\u062a\u0627\u0643\u064a\"][\"name:en\"=\"KFC\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Kfc_textlogo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kfc_textlogo.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u0634\u0627\u0648\u0631\u0645\u0631",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u0634\u0627\u0648\u0631\u0645\u0631\"][\"brand:ar\"=\"\u0634\u0627\u0648\u0631\u0645\u0631\"][\"brand:en\"=\"Shawarmer\"][\"brand:wikidata\"=\"Q29509653\"][\"cuisine\"=\"shawarma\"][\"name\"=\"\u0634\u0627\u0648\u0631\u0645\u0631\"][\"name:ar\"=\"\u0634\u0627\u0648\u0631\u0645\u0631\"][\"name:en\"=\"Shawarmer\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u0643\u0631\u0633\u0628\u064a \u0643\u0631\u064a\u0645",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u0643\u0631\u0633\u0628\u064a \u0643\u0631\u064a\u0645\"][\"brand:ar\"=\"\u0643\u0631\u0633\u0628\u064a \u0643\u0631\u064a\u0645\"][\"brand:en\"=\"Krispy Krem\"][\"brand:wikidata\"=\"Q1192805\"][\"cuisine\"=\"donut\"][\"name\"=\"\u0643\u0631\u0633\u0628\u064a \u0643\u0631\u064a\u0645\"][\"name:ar\"=\"\u0643\u0631\u0633\u0628\u064a \u0643\u0631\u064a\u0645\"][\"name:en\"=\"Krispy Krem\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo.KrispyKreme.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo.KrispyKreme.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u0643\u0648\u062f\u0648",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u0643\u0648\u062f\u0648\"][\"brand:ar\"=\"\u0643\u0648\u062f\u0648\"][\"brand:en\"=\"Kudu\"][\"brand:wikidata\"=\"Q6441777\"][\"cuisine\"=\"sandwich\"][\"name\"=\"\u0643\u0648\u062f\u0648\"][\"name:ar\"=\"\u0643\u0648\u062f\u0648\"][\"name:en\"=\"Kudu\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Kudu_logo_(Saudi_Arabia,_2016)_(background,_without_wordmark_variant).svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kudu_logo_(Saudi_Arabia,_2016)_(background,_without_wordmark_variant).svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u0645\u0627\u0643\u062f\u0648\u0646\u0627\u0644\u062f\u0632",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u0645\u0627\u0643\u062f\u0648\u0646\u0627\u0644\u062f\u0632\"][\"brand:ar\"=\"\u0645\u0627\u0643\u062f\u0648\u0646\u0627\u0644\u062f\u0632\"][\"brand:en\"=\"McDonald's\"][\"brand:wikidata\"=\"Q38076\"][\"cuisine\"=\"burger\"][\"name\"=\"\u0645\u0627\u0643\u062f\u0648\u0646\u0627\u0644\u062f\u0632\"][\"name:ar\"=\"\u0645\u0627\u0643\u062f\u0648\u0646\u0627\u0644\u062f\u0632\"][\"name:en\"=\"McDonald's\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/McDonald's_with_slogan_2020.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/McDonald's_with_slogan_2020.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u0647\u0631\u0641\u064a",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u0647\u0631\u0641\u064a\"][\"brand:ar\"=\"\u0647\u0631\u0641\u064a\"][\"brand:en\"=\"Herfy\"][\"brand:wikidata\"=\"Q5738371\"][\"cuisine\"=\"burger\"][\"name\"=\"\u0647\u0631\u0641\u064a\"][\"name:ar\"=\"\u0647\u0631\u0641\u064a\"][\"name:en\"=\"Herfy\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/\u0647\u0631\u0641\u064a_\u0627\u0644\u0633\u0639\u0648\u062f\u064a\u0629.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/\u0647\u0631\u0641\u064a_\u0627\u0644\u0633\u0639\u0648\u062f\u064a\u0629.jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\uad50\ucd0c\uce58\ud0a8",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\uad50\ucd0c\uce58\ud0a8\"][\"brand:en\"=\"KyoChon\"][\"brand:ko\"=\"\uad50\ucd0c\uce58\ud0a8\"][\"brand:ko-Latn\"=\"Gyochonchikin\"][\"brand:wikidata\"=\"Q6451885\"][\"cuisine\"=\"chicken\"][\"name\"=\"\uad50\ucd0c\uce58\ud0a8\"][\"name:en\"=\"KyoChon\"][\"name:ko\"=\"\uad50\ucd0c\uce58\ud0a8\"][\"name:ko-Latn\"=\"Gyochonchikin\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\uad7d\ub124\uce58\ud0a8",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\uad7d\ub124\uce58\ud0a8\"][\"brand:en\"=\"Goobne Chicken\"][\"brand:ko\"=\"\uad7d\ub124\uce58\ud0a8\"][\"brand:ko-Latn\"=\"Gumnechikin\"][\"cuisine\"=\"chicken\"][\"name\"=\"\uad7d\ub124\uce58\ud0a8\"][\"name:en\"=\"Goobne Chicken\"][\"name:ko\"=\"\uad7d\ub124\uce58\ud0a8\"][\"name:ko-Latn\"=\"Gumnechikin\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\ub86f\ub370\ub9ac\uc544",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\ub86f\ub370\ub9ac\uc544\"][\"brand:en\"=\"Lotteria\"][\"brand:ko\"=\"\ub86f\ub370\ub9ac\uc544\"][\"brand:wikidata\"=\"Q249525\"][\"cuisine\"=\"burger\"][\"name\"=\"\ub86f\ub370\ub9ac\uc544\"][\"name:en\"=\"Lotteria\"][\"name:ko\"=\"\ub86f\ub370\ub9ac\uc544\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Lotteria_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Lotteria_logo.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\ub9d8\uc2a4\ud130\uce58",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\ub9d8\uc2a4\ud130\uce58\"][\"brand:en\"=\"Mom's Touch\"][\"brand:ko\"=\"\ub9d8\uc2a4\ud130\uce58\"][\"brand:wikidata\"=\"Q23044856\"][\"cuisine\"=\"burger\"][\"name\"=\"\ub9d8\uc2a4\ud130\uce58\"][\"name:en\"=\"Mom's Touch\"][\"name:ko\"=\"\ub9d8\uc2a4\ud130\uce58\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\ub9e5\ub3c4\ub0a0\ub4dc",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\ub9e5\ub3c4\ub0a0\ub4dc\"][\"brand:en\"=\"McDonald's\"][\"brand:ko\"=\"\ub9e5\ub3c4\ub0a0\ub4dc\"][\"brand:wikidata\"=\"Q38076\"][\"cuisine\"=\"burger\"][\"name\"=\"\ub9e5\ub3c4\ub0a0\ub4dc\"][\"name:en\"=\"McDonald's\"][\"name:ko\"=\"\ub9e5\ub3c4\ub0a0\ub4dc\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/McDonald's_with_slogan_2020.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/McDonald's_with_slogan_2020.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\ubc84\uac70\ud0b9",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\ubc84\uac70\ud0b9\"][\"brand:en\"=\"Burger King\"][\"brand:ko\"=\"\ubc84\uac70\ud0b9\"][\"brand:wikidata\"=\"Q177054\"][\"cuisine\"=\"burger\"][\"name\"=\"\ubc84\uac70\ud0b9\"][\"name:en\"=\"Burger King\"][\"name:ko\"=\"\ubc84\uac70\ud0b9\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Burger_King_2020.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Burger_King_2020.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\uccad\ucd98\uac10\uc131\uc300\ud56b\ub3c4\uadf8",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\uccad\ucd98\uac10\uc131\uc300\ud56b\ub3c4\uadf8\"][\"brand:en\"=\"Chungchun Rice Dog\"][\"brand:ko\"=\"\uccad\ucd98\uac10\uc131\uc300\ud56b\ub3c4\uadf8\"][\"brand:wikidata\"=\"Q115803477\"][\"cuisine\"=\"hot_dog\"][\"name\"=\"\uccad\ucd98\uac10\uc131\uc300\ud56b\ub3c4\uadf8\"][\"name:en\"=\"Chungchun\"][\"name:ko\"=\"\uccad\ucd98\uac10\uc131\uc300\ud56b\ub3c4\uadf8\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\ud06c\ub9ac\uc2a4\ud53c\ud06c\ub9bc\ub3c4\ub11b",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\ud06c\ub9ac\uc2a4\ud53c\ud06c\ub9bc\ub3c4\ub11b\"][\"brand:en\"=\"Krispy Kreme\"][\"brand:ko\"=\"\ud06c\ub9ac\uc2a4\ud53c\ud06c\ub9bc\ub3c4\ub11b\"][\"brand:wikidata\"=\"Q1192805\"][\"cuisine\"=\"donut\"][\"name\"=\"\ud06c\ub9ac\uc2a4\ud53c\ud06c\ub9bc\ub3c4\ub11b\"][\"name:en\"=\"Krispy Kreme\"][\"name:ko\"=\"\ud06c\ub9ac\uc2a4\ud53c\ud06c\ub9bc\ub3c4\ub11b\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo.KrispyKreme.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo.KrispyKreme.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\ud64d\ub8e8\uc774\uc820",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\ud64d\ub8e8\uc774\uc820\"][\"brand:en\"=\"Horng Ruey Jen Sandwich\"][\"brand:ko\"=\"\ud64d\ub8e8\uc774\uc820\"][\"brand:wikidata\"=\"Q6464133\"][\"brand:zh\"=\"\u6d2a\u745e\u73cd\u4e09\u660e\u6cbb\"][\"cuisine\"=\"sandwich\"][\"name\"=\"\ud64d\ub8e8\uc774\uc820\"][\"name:en\"=\"Horng Ruey Jen Sandwich\"][\"name:ko\"=\"\ud64d\ub8e8\uc774\uc820\"][\"name:zh\"=\"\u6d2a\u745e\u73cd\u4e09\u660e\u6cbb\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u30a6\u30a7\u30f3\u30c7\u30a3\u30fc\u30ba",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u30a6\u30a7\u30f3\u30c7\u30a3\u30fc\u30ba\"][\"brand:en\"=\"Wendy's\"][\"brand:ja\"=\"\u30a6\u30a7\u30f3\u30c7\u30a3\u30fc\u30ba\"][\"brand:wikidata\"=\"Q550258\"][\"cuisine\"=\"burger\"][\"name\"=\"\u30a6\u30a7\u30f3\u30c7\u30a3\u30fc\u30ba\"][\"name:en\"=\"Wendy's\"][\"name:ja\"=\"\u30a6\u30a7\u30f3\u30c7\u30a3\u30fc\u30ba\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Wendy's_flagship_restaurant_(Dublin,_Ohio).jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Wendy's_flagship_restaurant_(Dublin,_Ohio).jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u30aa\u30ea\u30b8\u30f3\u5f01\u5f53",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u30aa\u30ea\u30b8\u30f3\u5f01\u5f53\"][\"brand:en\"=\"Origin Bent\u014d\"][\"brand:ja\"=\"\u30aa\u30ea\u30b8\u30f3\u5f01\u5f53\"][\"brand:wikidata\"=\"Q11292632\"][\"cuisine\"=\"japanese\"][\"name\"=\"\u30aa\u30ea\u30b8\u30f3\u5f01\u5f53\"][\"name:en\"=\"Origin Bent\u014d\"][\"name:ja\"=\"\u30aa\u30ea\u30b8\u30f3\u5f01\u5f53\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u304b\u3063\u3071\u5bff\u53f8",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u304b\u3063\u3071\u5bff\u53f8\"][\"brand:en\"=\"Kappa Sushi\"][\"brand:ja\"=\"\u304b\u3063\u3071\u5bff\u53f8\"][\"brand:wikidata\"=\"Q11263916\"][\"cuisine\"=\"sushi\"][\"name\"=\"\u304b\u3063\u3071\u5bff\u53f8\"][\"name:en\"=\"Kappa Sushi\"][\"name:ja\"=\"\u304b\u3063\u3071\u5bff\u53f8\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Kappa.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kappa.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u304b\u3064\u3084",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u304b\u3064\u3084\"][\"brand:en\"=\"Katsuya\"][\"brand:ja\"=\"\u304b\u3064\u3084\"][\"brand:wikidata\"=\"Q2855257\"][\"cuisine\"=\"fried_food\"][\"name\"=\"\u304b\u3064\u3084\"][\"name:en\"=\"Katsuya\"][\"name:ja\"=\"\u304b\u3064\u3084\"][\"name:ko\"=\"\uce74\ucbd4\uc57c\"][\"name:zh\"=\"\u5409\u8c5a\u5c4b\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Katsuya_Nara_Amagatsuji_store.JPG",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Katsuya_Nara_Amagatsuji_store.JPG",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u30ad\u30c3\u30c1\u30f3\u30aa\u30ea\u30b8\u30f3",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u30ad\u30c3\u30c1\u30f3\u30aa\u30ea\u30b8\u30f3\"][\"brand:en\"=\"Kitchen Origin\"][\"brand:ja\"=\"\u30ad\u30c3\u30c1\u30f3\u30aa\u30ea\u30b8\u30f3\"][\"brand:wikidata\"=\"Q92658990\"][\"cuisine\"=\"japanese\"][\"name\"=\"\u30ad\u30c3\u30c1\u30f3\u30aa\u30ea\u30b8\u30f3\"][\"name:en\"=\"Kitchen Origin\"][\"name:ja\"=\"\u30ad\u30c3\u30c1\u30f3\u30aa\u30ea\u30b8\u30f3\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u304f\u3089\u5bff\u53f8",
+    query: "(nwr[\"alt_name:en\"=\"Kurazushi\"][\"amenity\"=\"fast_food\"][\"brand\"=\"\u304f\u3089\u5bff\u53f8\"][\"brand:en\"=\"Kura Sushi\"][\"brand:ja\"=\"\u304f\u3089\u5bff\u53f8\"][\"brand:wikidata\"=\"Q6445491\"][\"cuisine\"=\"sushi\"][\"name\"=\"\u304f\u3089\u5bff\u53f8\"][\"name:en\"=\"Kura Sushi\"][\"name:ja\"=\"\u304f\u3089\u5bff\u53f8\"][\"official_name\"=\"\u7121\u6dfb\u304f\u3089\u5bff\u53f8\"][\"official_name:en\"=\"Muten Kura Sushi\"][\"official_name:ja\"=\"\u7121\u6dfb\u304f\u3089\u5bff\u53f8\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Kura_sushi.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kura_sushi.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u30af\u30ea\u30b9\u30d4\u30fc\u30fb\u30af\u30ea\u30fc\u30e0\u30fb\u30c9\u30fc\u30ca\u30c4",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u30af\u30ea\u30b9\u30d4\u30fc\u30fb\u30af\u30ea\u30fc\u30e0\u30fb\u30c9\u30fc\u30ca\u30c4\"][\"brand:en\"=\"Krispy Kreme Doughnuts\"][\"brand:ja\"=\"\u30af\u30ea\u30b9\u30d4\u30fc\u30fb\u30af\u30ea\u30fc\u30e0\u30fb\u30c9\u30fc\u30ca\u30c4\"][\"brand:wikidata\"=\"Q1192805\"][\"cuisine\"=\"donut\"][\"name\"=\"\u30af\u30ea\u30b9\u30d4\u30fc\u30fb\u30af\u30ea\u30fc\u30e0\u30fb\u30c9\u30fc\u30ca\u30c4\"][\"name:en\"=\"Krispy Kreme Doughnuts\"][\"name:ja\"=\"\u30af\u30ea\u30b9\u30d4\u30fc\u30fb\u30af\u30ea\u30fc\u30e0\u30fb\u30c9\u30fc\u30ca\u30c4\"][\"short_name:en\"=\"Krispy Kreme\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo.KrispyKreme.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo.KrispyKreme.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u30b1\u30f3\u30bf\u30c3\u30ad\u30fc\u30d5\u30e9\u30a4\u30c9\u30c1\u30ad\u30f3",
+    query: "(nwr[\"alt_name:en\"=\"Kentucky Fried Chicken\"][\"amenity\"=\"fast_food\"][\"brand\"=\"\u30b1\u30f3\u30bf\u30c3\u30ad\u30fc\u30d5\u30e9\u30a4\u30c9\u30c1\u30ad\u30f3\"][\"brand:en\"=\"KFC\"][\"brand:ja\"=\"\u30b1\u30f3\u30bf\u30c3\u30ad\u30fc\u30d5\u30e9\u30a4\u30c9\u30c1\u30ad\u30f3\"][\"brand:wikidata\"=\"Q524757\"][\"cuisine\"=\"chicken\"][\"name\"=\"\u30b1\u30f3\u30bf\u30c3\u30ad\u30fc\u30d5\u30e9\u30a4\u30c9\u30c1\u30ad\u30f3\"][\"name:en\"=\"KFC\"][\"name:ja\"=\"\u30b1\u30f3\u30bf\u30c3\u30ad\u30fc\u30d5\u30e9\u30a4\u30c9\u30c1\u30ad\u30f3\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Kfc_textlogo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kfc_textlogo.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u30b4\u30fc\u30b4\u30fc\u30ab\u30ec\u30fc",
+    query: "(nwr[\"alt_name:en\"=\"Go Go Curry\"][\"amenity\"=\"fast_food\"][\"brand\"=\"\u30b4\u30fc\u30b4\u30fc\u30ab\u30ec\u30fc\"][\"brand:en\"=\"Go!Go!Curry\"][\"brand:ja\"=\"\u30b4\u30fc\u30b4\u30fc\u30ab\u30ec\u30fc\"][\"brand:wikidata\"=\"Q11303801\"][\"cuisine\"=\"curry\"][\"name\"=\"\u30b4\u30fc\u30b4\u30fc\u30ab\u30ec\u30fc\"][\"name:en\"=\"Go!Go!Curry\"][\"name:ja\"=\"\u30b4\u30fc\u30b4\u30fc\u30ab\u30ec\u30fc\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/GoGoCurry_Akihabara1.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/GoGoCurry_Akihabara1.jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u30b5\u30d6\u30a6\u30a7\u30a4",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u30b5\u30d6\u30a6\u30a7\u30a4\"][\"brand:en\"=\"Subway\"][\"brand:ja\"=\"\u30b5\u30d6\u30a6\u30a7\u30a4\"][\"brand:wikidata\"=\"Q244457\"][\"cuisine\"=\"sandwich\"][\"name\"=\"\u30b5\u30d6\u30a6\u30a7\u30a4\"][\"name:en\"=\"Subway\"][\"name:ja\"=\"\u30b5\u30d6\u30a6\u30a7\u30a4\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Subway_2016_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Subway_2016_logo.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u3059\u304d\u5bb6 (\u65e5\u672c)",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u3059\u304d\u5bb6\"][\"brand:en\"=\"Sukiya\"][\"brand:ja\"=\"\u3059\u304d\u5bb6\"][\"brand:wikidata\"=\"Q6137375\"][\"cuisine\"=\"beef_bowl\"][\"name\"=\"\u3059\u304d\u5bb6\"][\"name:en\"=\"Sukiya\"][\"name:ja\"=\"\u3059\u304d\u5bb6\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Sukiya_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Sukiya_logo.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u3059\u304d\u5bb6 (\u81fa\u7063)",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u3059\u304d\u5bb6\"][\"brand:en\"=\"Sukiya\"][\"brand:ja\"=\"\u3059\u304d\u5bb6\"][\"brand:wikidata\"=\"Q6137375\"][\"brand:zh\"=\"\u98df\u5176\u5bb6\"][\"cuisine\"=\"beef_bowl\"][\"name\"=\"\u3059\u304d\u5bb6\"][\"name:en\"=\"Sukiya\"][\"name:ja\"=\"\u3059\u304d\u5bb6\"][\"name:zh\"=\"\u98df\u5176\u5bb6\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Sukiya_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Sukiya_logo.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u3059\u304d\u5bb6 Sukiya",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u3059\u304d\u5bb6 Sukiya\"][\"brand:en\"=\"Sukiya\"][\"brand:ja\"=\"\u3059\u304d\u5bb6\"][\"brand:wikidata\"=\"Q6137375\"][\"brand:zh\"=\"\u98df\u5176\u5bb6\"][\"cuisine\"=\"beef_bowl\"][\"name\"=\"\u3059\u304d\u5bb6 Sukiya\"][\"name:en\"=\"Sukiya\"][\"name:ja\"=\"\u3059\u304d\u5bb6\"][\"name:zh\"=\"\u98df\u5176\u5bb6\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Sukiya_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Sukiya_logo.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u30b9\u30b7\u30ed\u30fc",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u30b9\u30b7\u30ed\u30fc\"][\"brand:en\"=\"Sushiro\"][\"brand:ja\"=\"\u30b9\u30b7\u30ed\u30fc\"][\"brand:wikidata\"=\"Q11257037\"][\"cuisine\"=\"sushi\"][\"name\"=\"\u30b9\u30b7\u30ed\u30fc\"][\"name:en\"=\"Sushiro\"][\"name:ja\"=\"\u30b9\u30b7\u30ed\u30fc\"][\"name:zh\"=\"\u58fd\u53f8\u90ce\"][\"official_name\"=\"\u3042\u304d\u3093\u3069\u30b9\u30b7\u30ed\u30fc\"][\"official_name:en\"=\"Akindo Sushiro\"][\"official_name:ja\"=\"\u3042\u304d\u3093\u3069\u30b9\u30b7\u30ed\u30fc\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Sushiro.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Sushiro.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u3061\u3088\u3060\u9ba8",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u3061\u3088\u3060\u9ba8\"][\"brand:en\"=\"Chiyoda Sushi\"][\"brand:ja\"=\"\u3061\u3088\u3060\u9ba8\"][\"brand:wikidata\"=\"Q11272065\"][\"cuisine\"=\"sushi\"][\"name\"=\"\u3061\u3088\u3060\u9ba8\"][\"name:en\"=\"Chiyoda Sushi\"][\"name:ja\"=\"\u3061\u3088\u3060\u9ba8\"][\"takeaway\"=\"only\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u3066\u3093\u3084",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u3066\u3093\u3084\"][\"brand:en\"=\"Tenya\"][\"brand:ja\"=\"\u3066\u3093\u3084\"][\"brand:wikidata\"=\"Q11319830\"][\"cuisine\"=\"fries\"][\"name\"=\"\u3066\u3093\u3084\"][\"name:en\"=\"Tenya\"][\"name:ja\"=\"\u3066\u3093\u3084\"][\"official_name\"=\"\u5929\u4e3c\u3066\u3093\u3084\"][\"official_name:en\"=\"Tendon Tenya\"][\"official_name:ja\"=\"\u5929\u4e3c\u3066\u3093\u3084\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u30c9\u30df\u30ce\u30fb\u30d4\u30b6",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u30c9\u30df\u30ce\"][\"brand:en\"=\"Domino's\"][\"brand:ja\"=\"\u30c9\u30df\u30ce\"][\"brand:wikidata\"=\"Q839466\"][\"cuisine\"=\"pizza\"][\"name\"=\"\u30c9\u30df\u30ce\u30fb\u30d4\u30b6\"][\"name:en\"=\"Domino's Pizza\"][\"name:ja\"=\"\u30c9\u30df\u30ce\u30fb\u30d4\u30b6\"][\"short_name\"=\"\u30c9\u30df\u30ce\"][\"short_name:en\"=\"Domino's\"][\"short_name:ja\"=\"\u30c9\u30df\u30ce\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Domino's_pizza_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Domino's_pizza_logo.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u3069\u3093\u3069\u3093\u4ead",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u3069\u3093\u3069\u3093\u4ead\"][\"brand:en\"=\"Dondontei\"][\"brand:ja\"=\"\u3069\u3093\u3069\u3093\u4ead\"][\"brand:wikidata\"=\"Q96101856\"][\"cuisine\"=\"japanese\"][\"name\"=\"\u3069\u3093\u3069\u3093\u4ead\"][\"name:en\"=\"Dondontei\"][\"name:ja\"=\"\u3069\u3093\u3069\u3093\u4ead\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u306a\u304b\u536f",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u306a\u304b\u536f\"][\"brand:en\"=\"Nakau\"][\"brand:ja\"=\"\u306a\u304b\u536f\"][\"brand:wikidata\"=\"Q11274132\"][\"cuisine\"=\"udon\"][\"name\"=\"\u306a\u304b\u536f\"][\"name:en\"=\"Nakau\"][\"name:ja\"=\"\u306a\u304b\u536f\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Nakau_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Nakau_logo.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u30d0\u30fc\u30ac\u30fc\u30ad\u30f3\u30b0",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u30d0\u30fc\u30ac\u30fc\u30ad\u30f3\u30b0\"][\"brand:en\"=\"Burger King\"][\"brand:ja\"=\"\u30d0\u30fc\u30ac\u30fc\u30ad\u30f3\u30b0\"][\"brand:wikidata\"=\"Q177054\"][\"cuisine\"=\"burger\"][\"name\"=\"\u30d0\u30fc\u30ac\u30fc\u30ad\u30f3\u30b0\"][\"name:en\"=\"Burger King\"][\"name:ja\"=\"\u30d0\u30fc\u30ac\u30fc\u30ad\u30f3\u30b0\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Burger_King_2020.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Burger_King_2020.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u306f\u307e\u5bff\u53f8",
+    query: "(nwr[\"alt_name:en\"=\"Hamazushi\"][\"amenity\"=\"fast_food\"][\"brand\"=\"\u306f\u307e\u5bff\u53f8\"][\"brand:en\"=\"HAMA-SUSHI\"][\"brand:ja\"=\"\u306f\u307e\u5bff\u53f8\"][\"brand:wikidata\"=\"Q17220385\"][\"cuisine\"=\"sushi\"][\"name\"=\"\u306f\u307e\u5bff\u53f8\"][\"name:en\"=\"Hamasushi\"][\"name:ja\"=\"\u306f\u307e\u5bff\u53f8\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Hama_zushi.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Hama_zushi.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u306f\u307e\u5bff\u53f8 (\u81fa\u7063)",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u306f\u307e\u5bff\u53f8\"][\"brand:en\"=\"HAMA-SUSHI\"][\"brand:ja\"=\"\u306f\u307e\u5bff\u53f8\"][\"brand:wikidata\"=\"Q17220385\"][\"brand:zh\"=\"\u306f\u307e\u5bff\u53f8\"][\"cuisine\"=\"sushi\"][\"name\"=\"\u306f\u307e\u5bff\u53f8\"][\"name:en\"=\"Hamasushi\"][\"name:ja\"=\"\u306f\u307e\u5bff\u53f8\"][\"name:zh\"=\"\u306f\u307e\u5bff\u53f8\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Hama_zushi.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Hama_zushi.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u30d4\u30b6\u30fb\u30ab\u30ea\u30d5\u30a9\u30eb\u30cb\u30a2",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u30d4\u30b6\u30fb\u30ab\u30ea\u30d5\u30a9\u30eb\u30cb\u30a2\"][\"brand:en\"=\"Pizza California\"][\"brand:ja\"=\"\u30d4\u30b6\u30fb\u30ab\u30ea\u30d5\u30a9\u30eb\u30cb\u30a2\"][\"brand:wikidata\"=\"Q75324\"][\"cuisine\"=\"pizza\"][\"name\"=\"\u30d4\u30b6\u30fb\u30ab\u30ea\u30d5\u30a9\u30eb\u30cb\u30a2\"][\"name:en\"=\"Pizza California\"][\"name:ja\"=\"\u30d4\u30b6\u30fb\u30ab\u30ea\u30d5\u30a9\u30eb\u30cb\u30a2\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u30d4\u30b6\u30fc\u30e9",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u30d4\u30b6\u30fc\u30e9\"][\"brand:en\"=\"Pizza-La\"][\"brand:ja\"=\"\u30d4\u30b6\u30fc\u30e9\"][\"brand:wikidata\"=\"Q7199948\"][\"cuisine\"=\"pizza\"][\"name\"=\"\u30d4\u30b6\u30fc\u30e9\"][\"name:en\"=\"Pizza-La\"][\"name:ja\"=\"\u30d4\u30b6\u30fc\u30e9\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u30d4\u30b6\u30cf\u30c3\u30c8",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u30d4\u30b6\u30cf\u30c3\u30c8\"][\"brand:en\"=\"Pizza Hut\"][\"brand:ja\"=\"\u30d4\u30b6\u30cf\u30c3\u30c8\"][\"brand:wikidata\"=\"Q191615\"][\"cuisine\"=\"pizza\"][\"name\"=\"\u30d4\u30b6\u30cf\u30c3\u30c8\"][\"name:en\"=\"Pizza Hut\"][\"name:ja\"=\"\u30d4\u30b6\u30cf\u30c3\u30c8\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Pizza_Hut_international_logo_2014.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Pizza_Hut_international_logo_2014.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u30d4\u30b6\u30dd\u30b1\u30c3\u30c8",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u30d4\u30b6\u30dd\u30b1\u30c3\u30c8\"][\"brand:en\"=\"Pizza Pocket's\"][\"brand:ja\"=\"\u30d4\u30b6\u30dd\u30b1\u30c3\u30c8\"][\"brand:wikidata\"=\"Q11331462\"][\"cuisine\"=\"pizza\"][\"name\"=\"\u30d4\u30b6\u30dd\u30b1\u30c3\u30c8\"][\"name:en\"=\"Pizza Pocket's\"][\"name:ja\"=\"\u30d4\u30b6\u30dd\u30b1\u30c3\u30c8\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u30d5\u30a1\u30fc\u30b9\u30c8\u30ad\u30c3\u30c1\u30f3",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u30d5\u30a1\u30fc\u30b9\u30c8\u30ad\u30c3\u30c1\u30f3\"][\"brand:en\"=\"First Kitchen\"][\"brand:ja\"=\"\u30d5\u30a1\u30fc\u30b9\u30c8\u30ad\u30c3\u30c1\u30f3\"][\"brand:wikidata\"=\"Q5453133\"][\"cuisine\"=\"friture\"][\"name\"=\"\u30d5\u30a1\u30fc\u30b9\u30c8\u30ad\u30c3\u30c1\u30f3\"][\"name:en\"=\"First Kitchen\"][\"name:ja\"=\"\u30d5\u30a1\u30fc\u30b9\u30c8\u30ad\u30c3\u30c1\u30f3\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/First-kitchen_Fast_food_(02).jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/First-kitchen_Fast_food_(02).jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u30d5\u30ec\u30c3\u30b7\u30e5\u30cd\u30b9\u30d0\u30fc\u30ac\u30fc",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u30d5\u30ec\u30c3\u30b7\u30e5\u30cd\u30b9\u30d0\u30fc\u30ac\u30fc\"][\"brand:en\"=\"Freshness Burger\"][\"brand:ja\"=\"\u30d5\u30ec\u30c3\u30b7\u30e5\u30cd\u30b9\u30d0\u30fc\u30ac\u30fc\"][\"brand:wikidata\"=\"Q5503087\"][\"cuisine\"=\"burger\"][\"name\"=\"\u30d5\u30ec\u30c3\u30b7\u30e5\u30cd\u30b9\u30d0\u30fc\u30ac\u30fc\"][\"name:en\"=\"Freshness Burger\"][\"name:ja\"=\"\u30d5\u30ec\u30c3\u30b7\u30e5\u30cd\u30b9\u30d0\u30fc\u30ac\u30fc\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u307b\u3063\u304b\u307b\u3063\u304b\u4ead",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u307b\u3063\u304b\u307b\u3063\u304b\u4ead\"][\"brand:en\"=\"Hokka Hokka Tei\"][\"brand:ja\"=\"\u307b\u3063\u304b\u307b\u3063\u304b\u4ead\"][\"brand:wikidata\"=\"Q5878035\"][\"cuisine\"=\"japanese\"][\"name\"=\"\u307b\u3063\u304b\u307b\u3063\u304b\u4ead\"][\"name:en\"=\"Hokka Hokka Tei\"][\"name:ja\"=\"\u307b\u3063\u304b\u307b\u3063\u304b\u4ead\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Hokka-Hokka_Tei_logo.gif",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Hokka-Hokka_Tei_logo.gif",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u307b\u3063\u3068\u3082\u3063\u3068",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u307b\u3063\u3068\u3082\u3063\u3068\"][\"brand:en\"=\"Hotto Motto\"][\"brand:ja\"=\"\u307b\u3063\u3068\u3082\u3063\u3068\"][\"brand:wikidata\"=\"Q10850949\"][\"cuisine\"=\"japanese\"][\"name\"=\"\u307b\u3063\u3068\u3082\u3063\u3068\"][\"name:en\"=\"Hotto Motto\"][\"name:ja\"=\"\u307b\u3063\u3068\u3082\u3063\u3068\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u30de\u30af\u30c9\u30ca\u30eb\u30c9",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u30de\u30af\u30c9\u30ca\u30eb\u30c9\"][\"brand:en\"=\"McDonald's\"][\"brand:ja\"=\"\u30de\u30af\u30c9\u30ca\u30eb\u30c9\"][\"brand:wikidata\"=\"Q38076\"][\"cuisine\"=\"burger\"][\"name\"=\"\u30de\u30af\u30c9\u30ca\u30eb\u30c9\"][\"name:en\"=\"McDonald's\"][\"name:ja\"=\"\u30de\u30af\u30c9\u30ca\u30eb\u30c9\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/McDonald's_with_slogan_2020.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/McDonald's_with_slogan_2020.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u30df\u30b9\u30bf\u30fc\u30c9\u30fc\u30ca\u30c4",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u30df\u30b9\u30bf\u30fc\u30c9\u30fc\u30ca\u30c4\"][\"brand:en\"=\"Mister Donut\"][\"brand:ja\"=\"\u30df\u30b9\u30bf\u30fc\u30c9\u30fc\u30ca\u30c4\"][\"brand:wikidata\"=\"Q1065819\"][\"cuisine\"=\"donut\"][\"name\"=\"\u30df\u30b9\u30bf\u30fc\u30c9\u30fc\u30ca\u30c4\"][\"name:en\"=\"Mister Donut\"][\"name:ja\"=\"\u30df\u30b9\u30bf\u30fc\u30c9\u30fc\u30ca\u30c4\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Mister_Donut_Logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Mister_Donut_Logo.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u30e2\u30b9\u30d0\u30fc\u30ac\u30fc",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u30e2\u30b9\u30d0\u30fc\u30ac\u30fc\"][\"brand:en\"=\"MOS Burger\"][\"brand:ja\"=\"\u30e2\u30b9\u30d0\u30fc\u30ac\u30fc\"][\"brand:wikidata\"=\"Q1204169\"][\"cuisine\"=\"burger\"][\"name\"=\"\u30e2\u30b9\u30d0\u30fc\u30ac\u30fc\"][\"name:en\"=\"MOS Burger\"][\"name:ja\"=\"\u30e2\u30b9\u30d0\u30fc\u30ac\u30fc\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/MOS-Burger-Logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/MOS-Burger-Logo.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u3086\u3067\u592a\u90ce",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u3086\u3067\u592a\u90ce\"][\"brand:en\"=\"Yudetaro\"][\"brand:ja\"=\"\u3086\u3067\u592a\u90ce\"][\"brand:wikidata\"=\"Q11280824\"][\"cuisine\"=\"noodle\"][\"name\"=\"\u3086\u3067\u592a\u90ce\"][\"name:en\"=\"Yudetaro\"][\"name:ja\"=\"\u3086\u3067\u592a\u90ce\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u30e9\u30fc\u30e1\u30f3\u4e8c\u90ce",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u30e9\u30fc\u30e1\u30f3\u4e8c\u90ce\"][\"brand:en\"=\"Ramen Jiro\"][\"brand:ja\"=\"\u30e9\u30fc\u30e1\u30f3\u4e8c\u90ce\"][\"brand:wikidata\"=\"Q11347765\"][\"cuisine\"=\"ramen\"][\"name\"=\"\u30e9\u30fc\u30e1\u30f3\u4e8c\u90ce\"][\"name:en\"=\"Ramen Jiro\"][\"name:ja\"=\"\u30e9\u30fc\u30e1\u30f3\u4e8c\u90ce\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/\u30e9\u30fc\u30e1\u30f3\u4e8c\u90ce_\u4e09\u7530\u672c\u5e97_2015_(24631072969).jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/\u30e9\u30fc\u30e1\u30f3\u4e8c\u90ce_\u4e09\u7530\u672c\u5e97_2015_(24631072969).jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u30ed\u30c3\u30c6\u30ea\u30a2",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u30ed\u30c3\u30c6\u30ea\u30a2\"][\"brand:en\"=\"Lotteria\"][\"brand:ja\"=\"\u30ed\u30c3\u30c6\u30ea\u30a2\"][\"brand:wikidata\"=\"Q249525\"][\"cuisine\"=\"burger\"][\"name\"=\"\u30ed\u30c3\u30c6\u30ea\u30a2\"][\"name:en\"=\"Lotteria\"][\"name:ja\"=\"\u30ed\u30c3\u30c6\u30ea\u30a2\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Lotteria_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Lotteria_logo.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u4e00\u7ca5\u9eb5 Super Super Congee & Noodles",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u4e00\u7ca5\u9eb5 Super Super Congee & Noodles\"][\"brand:en\"=\"Super Super Congee & Noodles\"][\"brand:wikidata\"=\"Q20687979\"][\"brand:zh\"=\"\u4e00\u7ca5\u9eb5\"][\"brand:zh-Hans\"=\"\u4e00\u7ca5\u9762\"][\"brand:zh-Hant\"=\"\u4e00\u7ca5\u9eb5\"][\"cuisine\"=\"chinese\"][\"name\"=\"\u4e00\u7ca5\u9eb5 Super Super Congee & Noodles\"][\"name:en\"=\"Super Super Congee & Noodles\"][\"name:zh\"=\"\u4e00\u7ca5\u9eb5\"][\"name:zh-Hans\"=\"\u4e00\u7ca5\u9762\"][\"name:zh-Hant\"=\"\u4e00\u7ca5\u9eb5\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u4e09\u5546\u70b8\u96de",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u4e09\u5546\u70b8\u96de\"][\"brand:en\"=\"33 Fried Chicken\"][\"brand:wikidata\"=\"Q130214438\"][\"brand:zh\"=\"\u4e09\u5546\u70b8\u96de\"][\"cuisine\"=\"fried_chicken\"][\"name\"=\"\u4e09\u5546\u70b8\u96de\"][\"name:en\"=\"33 Fried Chicken\"][\"name:zh\"=\"\u4e09\u5546\u70b8\u96de\"][\"operator\"=\"\u4e09\u5546\u4f01\u696d\u96c6\u5718\"][\"operator:en\"=\"Mercuries Group\"][\"operator:wikidata\"=\"Q130214438\"][\"operator:zh\"=\"\u4e09\u5546\u4f01\u696d\u96c6\u5718\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u4e38\u4e80\u88fd\u9eba",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u4e38\u4e80\u88fd\u9eba\"][\"brand:en\"=\"Marugame Seimen\"][\"brand:ja\"=\"\u4e38\u4e80\u88fd\u9eba\"][\"brand:wikidata\"=\"Q10877253\"][\"brand:zh\"=\"\u4e38\u4e80\u88fd\u9eb5\"][\"cuisine\"=\"noodle\"][\"name\"=\"\u4e38\u4e80\u88fd\u9eba\"][\"name:en\"=\"Marugame Seimen\"][\"name:ja\"=\"\u4e38\u4e80\u88fd\u9eba\"][\"name:zh\"=\"\u4e38\u4e80\u88fd\u9eb5\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Marugame_Seimen_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Marugame_Seimen_logo.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u4e39\u4e39\u6f22\u5821",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u4e39\u4e39\u6f22\u5821\"][\"brand:en\"=\"Dandan Hamburger\"][\"brand:nan\"=\"Tan-tan H\u00e0n-p\u00f3\"][\"brand:nan-Hant\"=\"\u4e39\u4e39\u6f22\u5821\"][\"brand:nan-Latn-pehoeji\"=\"Tan-tan H\u00e0n-p\u00f3\"][\"brand:nan-Latn-tailo\"=\"Tan-tan H\u00e0n-p\u00f3\"][\"brand:wikidata\"=\"Q30948118\"][\"brand:zh\"=\"\u4e39\u4e39\u6f22\u5821\"][\"brand:zh-Hant\"=\"\u4e39\u4e39\u6f22\u5821\"][\"cuisine\"=\"burger\"][\"name\"=\"\u4e39\u4e39\u6f22\u5821\"][\"name:en\"=\"Dandan Hamburger\"][\"name:nan\"=\"Tan-tan H\u00e0n-p\u00f3\"][\"name:nan-Hant\"=\"\u4e39\u4e39\u6f22\u5821\"][\"name:nan-Latn-pehoeji\"=\"Tan-tan H\u00e0n-p\u00f3\"][\"name:nan-Latn-tailo\"=\"Tan-tan H\u00e0n-p\u00f3\"][\"name:zh\"=\"\u4e39\u4e39\u6f22\u5821\"][\"name:zh-Hant\"=\"\u4e39\u4e39\u6f22\u5821\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u5143\u6c17\u5bff\u53f8",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u5143\u6c17\u5bff\u53f8\"][\"brand:en\"=\"Genki Sushi\"][\"brand:ja\"=\"\u5143\u6c17\u5bff\u53f8\"][\"brand:wikidata\"=\"Q5533323\"][\"cuisine\"=\"sushi\"][\"name\"=\"\u5143\u6c17\u5bff\u53f8\"][\"name:en\"=\"Genki Sushi\"][\"name:ja\"=\"\u5143\u6c17\u5bff\u53f8\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Genki_Sushi_concept_store_in_apm_2016.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Genki_Sushi_concept_store_in_apm_2016.jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u516b\u65b9\u96f2\u96c6",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u516b\u65b9\u96f2\u96c6\"][\"brand:en\"=\"Eight Way\"][\"brand:wikidata\"=\"Q28417381\"][\"brand:zh\"=\"\u516b\u65b9\u96f2\u96c6\"][\"cuisine\"=\"dumplings\"][\"name\"=\"\u516b\u65b9\u96f2\u96c6\"][\"name:en\"=\"Eight Way\"][\"name:zh\"=\"\u516b\u65b9\u96f2\u96c6\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u516b\u65b9\u96f2\u96c6 Bafang Dumpling",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u516b\u65b9\u96f2\u96c6 Bafang Dumpling\"][\"brand:en\"=\"Bafang Dumpling\"][\"brand:wikidata\"=\"Q28417381\"][\"brand:zh\"=\"\u516b\u65b9\u96f2\u96c6\"][\"brand:zh-Hans\"=\"\u516b\u65b9\u4e91\u96c6\"][\"brand:zh-Hant\"=\"\u516b\u65b9\u96f2\u96c6\"][\"cuisine\"=\"dumplings\"][\"name\"=\"\u516b\u65b9\u96f2\u96c6 Bafang Dumpling\"][\"name:en\"=\"Bafang Dumpling\"][\"name:zh\"=\"\u516b\u65b9\u96f2\u96c6\"][\"name:zh-Hans\"=\"\u516b\u65b9\u4e91\u96c6\"][\"name:zh-Hant\"=\"\u516b\u65b9\u96f2\u96c6\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u534e\u83b1\u58eb",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u534e\u83b1\u58eb\"][\"brand:en\"=\"CNHLS\"][\"brand:wikidata\"=\"Q15939607\"][\"brand:zh\"=\"\u534e\u83b1\u58eb\"][\"cuisine\"=\"burger;chicken\"][\"name\"=\"\u534e\u83b1\u58eb\"][\"name:en\"=\"CNHLS\"][\"name:zh\"=\"\u534e\u83b1\u58eb\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Wallace_at_Lianfu_Xincun_(20201004131225).jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Wallace_at_Lianfu_Xincun_(20201004131225).jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u5409\u91ce\u5bb6",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u5409\u91ce\u5bb6\"][\"brand:en\"=\"Yoshinoya\"][\"brand:ja\"=\"\u5409\u91ce\u5bb6\"][\"brand:wikidata\"=\"Q776272\"][\"brand:zh\"=\"\u5409\u91ce\u5bb6\"][\"brand:zh-Hans\"=\"\u5409\u91ce\u5bb6\"][\"brand:zh-Hant\"=\"\u5409\u91ce\u5bb6\"][\"cuisine\"=\"beef_bowl\"][\"name\"=\"\u5409\u91ce\u5bb6\"][\"name:en\"=\"Yoshinoya\"][\"name:ja\"=\"\u5409\u91ce\u5bb6\"][\"name:zh\"=\"\u5409\u91ce\u5bb6\"][\"name:zh-Hans\"=\"\u5409\u91ce\u5bb6\"][\"name:zh-Hant\"=\"\u5409\u91ce\u5bb6\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Yoshinoya_Logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Yoshinoya_Logo.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u5409\u91ce\u5bb6 Yoshinoya",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u5409\u91ce\u5bb6 Yoshinoya\"][\"brand:en\"=\"Yoshinoya\"][\"brand:ja\"=\"\u5409\u91ce\u5bb6\"][\"brand:wikidata\"=\"Q776272\"][\"brand:zh\"=\"\u5409\u91ce\u5bb6\"][\"brand:zh-Hans\"=\"\u5409\u91ce\u5bb6\"][\"brand:zh-Hant\"=\"\u5409\u91ce\u5bb6\"][\"cuisine\"=\"beef_bowl\"][\"name\"=\"\u5409\u91ce\u5bb6 Yoshinoya\"][\"name:en\"=\"Yoshinoya\"][\"name:ja\"=\"\u5409\u91ce\u5bb6\"][\"name:zh\"=\"\u5409\u91ce\u5bb6\"][\"name:zh-Hans\"=\"\u5409\u91ce\u5bb6\"][\"name:zh-Hant\"=\"\u5409\u91ce\u5bb6\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Yoshinoya_Logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Yoshinoya_Logo.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u5477\u5c1a\u5bf6",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u5477\u5c1a\u5bf6\"][\"brand:en\"=\"JSP\"][\"brand:wikidata\"=\"Q109996570\"][\"brand:zh\"=\"\u5477\u5c1a\u5bf6\"][\"cuisine\"=\"burger\"][\"name\"=\"\u5477\u5c1a\u5bf6\"][\"name:en\"=\"JSP\"][\"name:zh\"=\"\u5477\u5c1a\u5bf6\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u5510\u8a18\u5305\u9ede Tong Kee Bao Dim",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u5510\u8a18\u5305\u9ede Tong Kee Bao Dim\"][\"brand:en\"=\"Tong Kee Bao Dim\"][\"brand:wikidata\"=\"Q97349712\"][\"brand:zh\"=\"\u5510\u8a18\u5305\u9ede\"][\"cuisine\"=\"chinese\"][\"name\"=\"\u5510\u8a18\u5305\u9ede Tong Kee Bao Dim\"][\"name:en\"=\"Tong Kee Bao Dim\"][\"name:zh\"=\"\u5510\u8a18\u5305\u9ede\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u5927\u5bb6\u4e50",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u5927\u5bb6\u4e50\"][\"brand:en\"=\"Caf\u00e9 de Coral\"][\"brand:wikidata\"=\"Q16241484\"][\"brand:zh\"=\"\u5927\u5bb6\u4e50\"][\"cuisine\"=\"cantonese;western\"][\"name\"=\"\u5927\u5bb6\u4e50\"][\"name:en\"=\"Caf\u00e9 de Coral\"][\"name:zh\"=\"\u5927\u5bb6\u4e50\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u5927\u5bb6\u6a02 Caf\u00e9 de Coral",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u5927\u5bb6\u6a02 Caf\u00e9 de Coral\"][\"brand:en\"=\"Caf\u00e9 de Coral\"][\"brand:wikidata\"=\"Q16241484\"][\"brand:zh\"=\"\u5927\u5bb6\u6a02\"][\"brand:zh-Hans\"=\"\u5927\u5bb6\u4e50\"][\"brand:zh-Hant\"=\"\u5927\u5bb6\u6a02\"][\"cuisine\"=\"cantonese;western\"][\"name\"=\"\u5927\u5bb6\u6a02 Caf\u00e9 de Coral\"][\"name:en\"=\"Caf\u00e9 de Coral\"][\"name:zh\"=\"\u5927\u5bb6\u6a02\"][\"name:zh-Hans\"=\"\u5927\u5bb6\u4e50\"][\"name:zh-Hant\"=\"\u5927\u5bb6\u6a02\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u5927\u5feb\u6d3b Fairwood",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u5927\u5feb\u6d3b Fairwood\"][\"brand:en\"=\"Fairwood\"][\"brand:wikidata\"=\"Q5430935\"][\"brand:zh\"=\"\u5927\u5feb\u6d3b\"][\"brand:zh-Hans\"=\"\u5927\u5feb\u6d3b\"][\"brand:zh-Hant\"=\"\u5927\u5feb\u6d3b\"][\"cuisine\"=\"cantonese;western\"][\"name\"=\"\u5927\u5feb\u6d3b Fairwood\"][\"name:en\"=\"Fairwood\"][\"name:zh\"=\"\u5927\u5feb\u6d3b\"][\"name:zh-Hans\"=\"\u5927\u5feb\u6d3b\"][\"name:zh-Hant\"=\"\u5927\u5feb\u6d3b\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u597d\u4f26\u54e5",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u597d\u4f26\u54e5\"][\"brand:en\"=\"Origus\"][\"brand:wikidata\"=\"Q21274949\"][\"brand:zh\"=\"\u597d\u4f26\u54e5\"][\"cuisine\"=\"pizza\"][\"name\"=\"\u597d\u4f26\u54e5\"][\"name:en\"=\"Origus\"][\"name:zh\"=\"\u597d\u4f26\u54e5\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Origus_at_Zhongguancun_Book_Building_(20190818111826).jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Origus_at_Zhongguancun_Book_Building_(20190818111826).jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u5b9c\u5bb6\u5bb6\u5c45\u9910\u5ef3 IKEA Restaurant",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"IKEA\"][\"brand:en\"=\"IKEA\"][\"brand:wikidata\"=\"Q54078\"][\"brand:zh\"=\"\u5b9c\u5bb6\u5bb6\u5c45\"][\"cuisine\"=\"swedish\"][\"name\"=\"\u5b9c\u5bb6\u5bb6\u5c45\u9910\u5ef3\"][\"name:en\"=\"IKEA Restaurant\"][\"name:zh\"=\"\u5b9c\u5bb6\u5bb6\u5c45\u9910\u5ef3\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Ikea_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Ikea_logo.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u5b9c\u5bb6\u9910\u5385",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"IKEA\"][\"brand:en\"=\"IKEA\"][\"brand:wikidata\"=\"Q54078\"][\"brand:zh\"=\"\u5b9c\u5bb6\u9910\u5385\"][\"cuisine\"=\"swedish\"][\"name\"=\"\u5b9c\u5bb6\u9910\u5385\"][\"name:en\"=\"IKEA Restaurant\"][\"name:zh\"=\"\u5b9c\u5bb6\u9910\u5385\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Ikea_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Ikea_logo.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u5bcc\u58eb\u305d\u3070",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u5bcc\u58eb\u305d\u3070\"][\"brand:en\"=\"Fuji Soba\"][\"brand:ja\"=\"\u5bcc\u58eb\u305d\u3070\"][\"brand:wikidata\"=\"Q11414722\"][\"cuisine\"=\"soba\"][\"name\"=\"\u5bcc\u58eb\u305d\u3070\"][\"name:en\"=\"Fuji Soba\"][\"name:ja\"=\"\u5bcc\u58eb\u305d\u3070\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u5c0f\u50e7\u5bff\u3057",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u5c0f\u50e7\u5bff\u3057\"][\"brand:en\"=\"Kozosushi\"][\"brand:ja\"=\"\u5c0f\u50e7\u5bff\u3057\"][\"brand:wikidata\"=\"Q11459064\"][\"cuisine\"=\"sushi\"][\"name\"=\"\u5c0f\u50e7\u5bff\u3057\"][\"name:en\"=\"Kozosushi\"][\"name:ja\"=\"\u5c0f\u50e7\u5bff\u3057\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u5de8\u6797\u7f8e\u800c\u7f8e",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u5de8\u6797\u7f8e\u800c\u7f8e\"][\"brand:en\"=\"Jyulin Mei & Mei\"][\"brand:wikidata\"=\"Q105722219\"][\"brand:zh\"=\"\u5de8\u6797\u7f8e\u800c\u7f8e\"][\"cuisine\"=\"breakfast\"][\"name\"=\"\u5de8\u6797\u7f8e\u800c\u7f8e\"][\"name:en\"=\"Jyulin Mei & Mei\"][\"name:zh\"=\"\u5de8\u6797\u7f8e\u800c\u7f8e\"][\"operator\"=\"\u5de8\u6797\u98df\u54c1\u4f01\u696d\u6709\u9650\u516c\u53f8\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u5df4\u6bd4\u9992\u5934",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u5df4\u6bd4\u9992\u5934\"][\"brand:en\"=\"Babi\"][\"brand:wikidata\"=\"Q109413209\"][\"brand:zh\"=\"\u5df4\u6bd4\u9992\u5934\"][\"cuisine\"=\"baozi\"][\"diet:halal\"=\"no\"][\"name\"=\"\u5df4\u6bd4\u9992\u5934\"][\"name:en\"=\"Babi\"][\"name:zh\"=\"\u5df4\u6bd4\u9992\u5934\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u5e78\u697d\u82d1",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u5e78\u697d\u82d1\"][\"brand:en\"=\"Kourakuen\"][\"brand:ja\"=\"\u5e78\u697d\u82d1\"][\"brand:wikidata\"=\"Q11484003\"][\"cuisine\"=\"ramen\"][\"name\"=\"\u5e78\u697d\u82d1\"][\"name:en\"=\"Kourakuen\"][\"name:ja\"=\"\u5e78\u697d\u82d1\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/\u5e78\u697d\u82d1\u30ed\u30b4.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/\u5e78\u697d\u82d1\u30ed\u30b4.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u4e61\u6751\u57fa",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u4e61\u6751\u57fa\"][\"brand:en\"=\"CSC\"][\"brand:wikidata\"=\"Q16510256\"][\"brand:zh\"=\"\u4e61\u6751\u57fa\"][\"cuisine\"=\"chicken\"][\"name\"=\"\u4e61\u6751\u57fa\"][\"name:en\"=\"CSC\"][\"name:zh\"=\"\u4e61\u6751\u57fa\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/CSC_at_Shangdi_Brilliant_International_(20250409172845).jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/CSC_at_Shangdi_Brilliant_International_(20250409172845).jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u5e86\u4e30\u5305\u5b50\u94fa",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u5e86\u4e30\u5305\u5b50\u94fa\"][\"brand:en\"=\"Qingfeng Steamed Dumpling Shop\"][\"brand:wikidata\"=\"Q24841010\"][\"brand:zh\"=\"\u5e86\u4e30\u5305\u5b50\u94fa\"][\"cuisine\"=\"chinese\"][\"name\"=\"\u5e86\u4e30\u5305\u5b50\u94fa\"][\"name:en\"=\"Qingfeng Steamed Dumpling Shop\"][\"name:zh\"=\"\u5e86\u4e30\u5305\u5b50\u94fa\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Qingfeng_Steamed_Stuffed_Bun_Shop_at_Yuetan_North_St_(20201130160213).jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Qingfeng_Steamed_Stuffed_Bun_Shop_at_Yuetan_North_St_(20201130160213).jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u5f18\u723a\u6f22\u5821",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u5f18\u723a\u6f22\u5821\"][\"brand:en\"=\"Hong Ya Hambuger\"][\"brand:wikidata\"=\"Q105377817\"][\"brand:zh\"=\"\u5f18\u723a\u6f22\u5821\"][\"cuisine\"=\"american;breakfast\"][\"name\"=\"\u5f18\u723a\u6f22\u5821\"][\"name:en\"=\"Hong Ya Hambuger\"][\"name:zh\"=\"\u5f18\u723a\u6f22\u5821\"][\"operator\"=\"\u5f18\u723a\u570b\u969b\u4f01\u696d\u80a1\u4efd\u6709\u9650\u516c\u53f8\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u5fb7\u514b\u58eb",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u5fb7\u514b\u58eb\"][\"brand:en\"=\"Dicos\"][\"brand:wikidata\"=\"Q5273883\"][\"brand:zh\"=\"\u5fb7\u514b\u58eb\"][\"cuisine\"=\"burger;chicken\"][\"name\"=\"\u5fb7\u514b\u58eb\"][\"name:en\"=\"Dicos\"][\"name:zh\"=\"\u5fb7\u514b\u58eb\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/ShanghaiQibaoAreaDicos.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/ShanghaiQibaoAreaDicos.jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u5fb7\u514b\u58eb Dicos",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u5fb7\u514b\u58eb Dicos\"][\"brand:en\"=\"Dicos\"][\"brand:wikidata\"=\"Q5273883\"][\"brand:zh\"=\"\u5fb7\u514b\u58eb\"][\"cuisine\"=\"burger;chicken\"][\"name\"=\"\u5fb7\u514b\u58eb Dicos\"][\"name:en\"=\"Dicos\"][\"name:zh\"=\"\u5fb7\u514b\u58eb\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/ShanghaiQibaoAreaDicos.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/ShanghaiQibaoAreaDicos.jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u62c9\u4e9e\u6f22\u5821",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u62c9\u4e9e\u6f22\u5821\"][\"brand:en\"=\"Laya Burger\"][\"brand:wikidata\"=\"Q67933743\"][\"brand:zh\"=\"\u62c9\u4e9e\u6f22\u5821\"][\"cuisine\"=\"burger;breakfast\"][\"name\"=\"\u62c9\u4e9e\u6f22\u5821\"][\"name:en\"=\"Laya Burger\"][\"name:zh\"=\"\u62c9\u4e9e\u6f22\u5821\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Neili_Rear_Station_Store,_Laya_Burger_20211120.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Neili_Rear_Station_Store,_Laya_Burger_20211120.jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u62ff\u5761\u91cc\u62ab\u85a9",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u62ff\u5761\u91cc\u62ab\u85a9\"][\"brand:en\"=\"Napoli Pizza\"][\"brand:wikidata\"=\"Q48927936\"][\"brand:zh\"=\"\u62ff\u5761\u91cc\u62ab\u85a9\"][\"cuisine\"=\"pizza;fried_chicken\"][\"name\"=\"\u62ff\u5761\u91cc\u62ab\u85a9\"][\"name:en\"=\"Napoli Pizza\"][\"name:zh\"=\"\u62ff\u5761\u91cc\u62ab\u85a9\"][\"operator\"=\"\u4e09\u5546\u4f01\u696d\u96c6\u5718\"][\"operator:en\"=\"Mercuries Group\"][\"operator:wikidata\"=\"Q10865578\"][\"operator:zh\"=\"\u4e09\u5546\u4f01\u696d\u96c6\u5718\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u6469\u65af\u6f22\u5821",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u6469\u65af\u6f22\u5821\"][\"brand:en\"=\"MOS Burger\"][\"brand:wikidata\"=\"Q1204169\"][\"brand:zh\"=\"\u6469\u65af\u6f22\u5821\"][\"cuisine\"=\"burger\"][\"name\"=\"\u6469\u65af\u6f22\u5821\"][\"name:en\"=\"MOS Burger\"][\"name:zh\"=\"\u6469\u65af\u6f22\u5821\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/MOS-Burger-Logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/MOS-Burger-Logo.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u6469\u65af\u6f22\u5821 MOS Burger",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u6469\u65af\u6f22\u5821 MOS Burger\"][\"brand:en\"=\"MOS Burger\"][\"brand:wikidata\"=\"Q1204169\"][\"brand:zh\"=\"\u6469\u65af\u6f22\u5821\"][\"brand:zh-Hans\"=\"\u6469\u65af\u6c49\u5821\"][\"brand:zh-Hant\"=\"\u6469\u65af\u6f22\u5821\"][\"cuisine\"=\"burger\"][\"name\"=\"\u6469\u65af\u6f22\u5821 MOS Burger\"][\"name:en\"=\"MOS Burger\"][\"name:zh\"=\"\u6469\u65af\u6f22\u5821\"][\"name:zh-Hans\"=\"\u6469\u65af\u6c49\u5821\"][\"name:zh-Hant\"=\"\u6469\u65af\u6f22\u5821\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/MOS-Burger-Logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/MOS-Burger-Logo.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u65e5\u9ad8\u5c4b",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u65e5\u9ad8\u5c4b\"][\"brand:en\"=\"Hidakaya\"][\"brand:ja\"=\"\u65e5\u9ad8\u5c4b\"][\"brand:wikidata\"=\"Q11326050\"][\"cuisine\"=\"noodle\"][\"name\"=\"\u65e5\u9ad8\u5c4b\"][\"name:en\"=\"Hidakaya\"][\"name:ja\"=\"\u65e5\u9ad8\u5c4b\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u65e9\u5b89\u7f8e\u829d\u57ce",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u65e9\u5b89\u7f8e\u829d\u57ce\"][\"brand:en\"=\"Good Morning MACC\"][\"brand:wikidata\"=\"Q30941219\"][\"brand:zh\"=\"\u65e9\u5b89\u7f8e\u829d\u57ce\"][\"cuisine\"=\"breakfast\"][\"name\"=\"\u65e9\u5b89\u7f8e\u829d\u57ce\"][\"name:en\"=\"Good Morning MACC\"][\"name:zh\"=\"\u65e9\u5b89\u7f8e\u829d\u57ce\"][\"operator\"=\"\u7f8e\u829d\u57ce\u5be6\u696d\u80a1\u4efd\u6709\u9650\u516c\u53f8\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u672c\u5bb6\u304b\u307e\u3069\u3084",
+    query: "(nwr[\"alt_name\"=\"\u304b\u307e\u3069\u3084\"][\"amenity\"=\"fast_food\"][\"brand\"=\"\u672c\u5bb6\u304b\u307e\u3069\u3084\"][\"brand:en\"=\"Honke Kamadoya\"][\"brand:ja\"=\"\u672c\u5bb6\u304b\u307e\u3069\u3084\"][\"brand:wikidata\"=\"Q11520140\"][\"cuisine\"=\"japanese\"][\"name\"=\"\u672c\u5bb6\u304b\u307e\u3069\u3084\"][\"name:en\"=\"Honke Kamadoya\"][\"name:ja\"=\"\u672c\u5bb6\u304b\u307e\u3069\u3084\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u677e\u5c4b",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u677e\u5c4b\"][\"brand:en\"=\"Matsuya\"][\"brand:ja\"=\"\u677e\u5c4b\"][\"brand:wikidata\"=\"Q848773\"][\"brand:zh\"=\"\u677e\u5c4b\"][\"cuisine\"=\"beef_bowl\"][\"name\"=\"\u677e\u5c4b\"][\"name:en\"=\"Matsuya\"][\"name:ja\"=\"\u677e\u5c4b\"][\"name:zh\"=\"\u677e\u5c4b\"][\"operator\"=\"\u677e\u5c4b\u30d5\u30fc\u30ba\"][\"operator:en\"=\"Matsuya Foods\"][\"operator:ja\"=\"\u677e\u5c4b\u30d5\u30fc\u30ba\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/MATSUYA_in_Japan.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/MATSUYA_in_Japan.jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u6804\u5bff\u53f8",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u6804\u5bff\u53f8\"][\"brand:en\"=\"Sakae Sushi\"][\"brand:ja\"=\"\u6804\u5bff\u53f8\"][\"brand:wikidata\"=\"Q14955169\"][\"cuisine\"=\"japanese\"][\"name\"=\"\u6804\u5bff\u53f8\"][\"name:en\"=\"Sakae Sushi\"][\"name:ja\"=\"\u6804\u5bff\u53f8\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u6b63\u65b0\u9e21\u6392",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u6b63\u65b0\u9e21\u6392\"][\"brand:en\"=\"ZHENGXIN CHICKEN STEAK\"][\"brand:wikidata\"=\"Q104093084\"][\"brand:zh\"=\"\u6b63\u65b0\u9e21\u6392\"][\"cuisine\"=\"chicken_steak\"][\"name\"=\"\u6b63\u65b0\u9e21\u6392\"][\"name:en\"=\"ZHENGXIN CHICKEN STEAK\"][\"name:zh\"=\"\u6b63\u65b0\u9e21\u6392\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u6c38\u548c\u5927\u738b",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u6c38\u548c\u5927\u738b\"][\"brand:en\"=\"Yonghe King\"][\"brand:wikidata\"=\"Q8055004\"][\"brand:zh\"=\"\u6c38\u548c\u5927\u738b\"][\"cuisine\"=\"chinese\"][\"name\"=\"\u6c38\u548c\u5927\u738b\"][\"name:en\"=\"Yonghe King\"][\"name:zh\"=\"\u6c38\u548c\u5927\u738b\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u6c49\u5821\u738b",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u6c49\u5821\u738b\"][\"brand:en\"=\"Burger King\"][\"brand:wikidata\"=\"Q177054\"][\"brand:zh\"=\"\u6c49\u5821\u738b\"][\"cuisine\"=\"burger\"][\"name\"=\"\u6c49\u5821\u738b\"][\"name:en\"=\"Burger King\"][\"name:zh\"=\"\u6c49\u5821\u738b\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Burger_King_2020.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Burger_King_2020.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u6f22\u5821\u738b",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u6f22\u5821\u738b\"][\"brand:en\"=\"Burger King\"][\"brand:wikidata\"=\"Q177054\"][\"brand:zh\"=\"\u6f22\u5821\u738b\"][\"cuisine\"=\"burger\"][\"name\"=\"\u6f22\u5821\u738b\"][\"name:en\"=\"Burger King\"][\"name:zh\"=\"\u6f22\u5821\u738b\"][\"operator\"=\"\u5bb6\u57ce\u80a1\u4efd\u6709\u9650\u516c\u53f8\"][\"ref:vatin\"=\"TW23309178\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Burger_King_2020.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Burger_King_2020.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u745e\u9e9f\u7f8e\u800c\u7f8e",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u745e\u9e9f\u7f8e\u800c\u7f8e\"][\"brand:en\"=\"Rueilin Mei & Mei\"][\"brand:wikidata\"=\"Q105722191\"][\"brand:zh\"=\"\u745e\u9e9f\u7f8e\u800c\u7f8e\"][\"cuisine\"=\"breakfast\"][\"name\"=\"\u745e\u9e9f\u7f8e\u800c\u7f8e\"][\"name:en\"=\"Rueilin Mei & Mei\"][\"name:zh\"=\"\u745e\u9e9f\u7f8e\u800c\u7f8e\"][\"operator\"=\"\u7f8e\u800c\u7f8e\u9910\u98f2\u9023\u9396\u4f01\u696d\u96c6\u5718\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u771f\u529f\u592b",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u771f\u529f\u592b\"][\"brand:en\"=\"Kungfu\"][\"brand:wikidata\"=\"Q15909765\"][\"brand:zh\"=\"\u771f\u529f\u592b\"][\"cuisine\"=\"chinese\"][\"name\"=\"\u771f\u529f\u592b\"][\"name:en\"=\"Kungfu\"][\"name:zh\"=\"\u771f\u529f\u592b\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Kung_fu_fastfood.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kung_fu_fastfood.jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u7bb1\u6839\u305d\u3070",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u7bb1\u6839\u305d\u3070\"][\"brand:en\"=\"Hakone Soba\"][\"brand:ja\"=\"\u7bb1\u6839\u305d\u3070\"][\"brand:wikidata\"=\"Q11603345\"][\"cuisine\"=\"soba\"][\"name\"=\"\u7bb1\u6839\u305d\u3070\"][\"name:en\"=\"Hakone Soba\"][\"name:ja\"=\"\u7bb1\u6839\u305d\u3070\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u7bc9\u5730\u9280\u3060\u3053",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u7bc9\u5730\u9280\u3060\u3053\"][\"brand:en\"=\"Gindaco\"][\"brand:ja\"=\"\u7bc9\u5730\u9280\u3060\u3053\"][\"brand:wikidata\"=\"Q11603490\"][\"cuisine\"=\"takoyaki\"][\"name\"=\"\u7bc9\u5730\u9280\u3060\u3053\"][\"name:en\"=\"Gindaco\"][\"name:ja\"=\"\u7bc9\u5730\u9280\u3060\u3053\"][\"short_name\"=\"\u9280\u3060\u3053\"][\"short_name:ja\"=\"\u9280\u3060\u3053\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u7bc9\u5730\u9280\u3060\u3053 Gindaco",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u7bc9\u5730\u9280\u3060\u3053\"][\"brand:en\"=\"Gindaco\"][\"brand:ja\"=\"\u7bc9\u5730\u9280\u3060\u3053\"][\"brand:wikidata\"=\"Q11603490\"][\"cuisine\"=\"takoyaki\"][\"name\"=\"\u7bc9\u5730\u9280\u3060\u3053 Gindaco\"][\"name:en\"=\"Gindaco\"][\"name:ja\"=\"\u7bc9\u5730\u9280\u3060\u3053\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u7e7c\u5149\u9999\u9999\u96de",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u7e7c\u5149\u9999\u9999\u96de\"][\"brand:en\"=\"J&G Fried Chicken\"][\"brand:nan\"=\"K\u00e8-kong Hiong-hiong-koe\"][\"brand:nan-Hant\"=\"\u7e7c\u5149\u9999\u9999\u96de\"][\"brand:nan-Latn-pehoeji\"=\"K\u00e8-kong Hiong-hiong-koe\"][\"brand:nan-Latn-tailo\"=\"K\u00e8-Kong Hiong-hiong-kue\"][\"brand:wikidata\"=\"Q110256533\"][\"brand:zh\"=\"\u7e7c\u5149\u9999\u9999\u96de\"][\"cuisine\"=\"fried_food\"][\"name\"=\"\u7e7c\u5149\u9999\u9999\u96de\"][\"name:en\"=\"J&G Fried Chicken\"][\"name:nan\"=\"K\u00e8-kong Hiong-hiong-koe\"][\"name:nan-Hant\"=\"\u7e7c\u5149\u9999\u9999\u96de\"][\"name:nan-Latn-pehoeji\"=\"K\u00e8-kong Hiong-hiong-koe\"][\"name:nan-Latn-tailo\"=\"K\u00e8-Kong Hiong-hiong-kue\"][\"name:zh\"=\"\u7e7c\u5149\u9999\u9999\u96de\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u7e7c\u5149\u9999\u9999\u96de J&G Fried Chicken",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u7e7c\u5149\u9999\u9999\u96de\"][\"brand:en\"=\"J&G Fried Chicken\"][\"brand:wikidata\"=\"Q110256533\"][\"brand:zh\"=\"\u7e7c\u5149\u9999\u9999\u96de\"][\"cuisine\"=\"fried_food\"][\"name\"=\"\u7e7c\u5149\u9999\u9999\u96de J&G Fried Chicken\"][\"name:en\"=\"J&G Fried Chicken\"][\"name:zh\"=\"\u7e7c\u5149\u9999\u9999\u96de\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u7f8e\u5fc3MX Maxim's MX",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u7f8e\u5fc3MX Maxim's MX\"][\"brand:en\"=\"Maxim's MX\"][\"brand:wikidata\"=\"Q7213063\"][\"brand:zh\"=\"\u7f8e\u5fc3MX\"][\"cuisine\"=\"cantonese;western\"][\"name\"=\"\u7f8e\u5fc3MX Maxim's MX\"][\"name:en\"=\"Maxim's MX\"][\"name:zh\"=\"\u7f8e\u5fc3MX\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/HK_Maxims_MX_60421.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/HK_Maxims_MX_60421.jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u7f8e\u800c\u7f8e",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u7f8e\u800c\u7f8e\"][\"brand:en\"=\"Mei & Mei\"][\"brand:zh\"=\"\u7f8e\u800c\u7f8e\"][\"cuisine\"=\"breakfast\"][\"name\"=\"\u7f8e\u800c\u7f8e\"][\"name:en\"=\"Mei & Mei\"][\"name:zh\"=\"\u7f8e\u800c\u7f8e\"][\"operator\"=\"\u4e0a\u6d77\u745e\u9e9f\u9910\u996e\u4f01\u4e1a\u7ba1\u7406\u6709\u9650\u516c\u53f8\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u7fe0\u534e\u9910\u5385",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u7fe0\u534e\u9910\u5385\"][\"brand:en\"=\"Tsui Wah Restaurant\"][\"brand:wikidata\"=\"Q7850018\"][\"brand:zh\"=\"\u7fe0\u534e\u9910\u5385\"][\"cuisine\"=\"cantonese\"][\"name\"=\"\u7fe0\u534e\u9910\u5385\"][\"name:en\"=\"Tsui Wah Restaurant\"][\"name:zh\"=\"\u7fe0\u534e\u9910\u5385\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u7fe0\u83ef\u9910\u5ef3 Tsui Wah Restaurant",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u7fe0\u83ef\u9910\u5ef3 Tsui Wah Restaurant\"][\"brand:en\"=\"Tsui Wah Restaurant\"][\"brand:wikidata\"=\"Q7850018\"][\"brand:zh\"=\"\u7fe0\u83ef\u9910\u5ef3\"][\"cuisine\"=\"cantonese\"][\"name\"=\"\u7fe0\u83ef\u9910\u5ef3 Tsui Wah Restaurant\"][\"name:en\"=\"Tsui Wah Restaurant\"][\"name:zh\"=\"\u7fe0\u83ef\u9910\u5ef3\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u8001\u66fe\u8bb0",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u8001\u66fe\u8bb0\"][\"brand:en\"=\"Old Chang Kee\"][\"brand:wikidata\"=\"Q17005286\"][\"brand:zh\"=\"\u8001\u66fe\u8bb0\"][\"cuisine\"=\"snacks\"][\"name\"=\"\u8001\u66fe\u8bb0\"][\"name:en\"=\"Old Chang Kee\"][\"name:zh\"=\"\u8001\u66fe\u8bb0\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Old_Chang_Kee.JPG",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Old_Chang_Kee.JPG",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u80af\u5fb7\u57fa",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u80af\u5fb7\u57fa\"][\"brand:en\"=\"KFC\"][\"brand:wikidata\"=\"Q524757\"][\"brand:zh\"=\"\u80af\u5fb7\u57fa\"][\"cuisine\"=\"chicken\"][\"name\"=\"\u80af\u5fb7\u57fa\"][\"name:en\"=\"KFC\"][\"name:zh\"=\"\u80af\u5fb7\u57fa\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Kfc_textlogo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kfc_textlogo.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u80af\u5fb7\u57fa KFC",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u80af\u5fb7\u57fa KFC\"][\"brand:en\"=\"KFC\"][\"brand:wikidata\"=\"Q524757\"][\"brand:zh\"=\"\u80af\u5fb7\u57fa\"][\"brand:zh-Hans\"=\"\u80af\u5fb7\u57fa\"][\"brand:zh-Hant\"=\"\u80af\u5fb7\u57fa\"][\"cuisine\"=\"chicken\"][\"name\"=\"\u80af\u5fb7\u57fa KFC\"][\"name:en\"=\"KFC\"][\"name:zh\"=\"\u80af\u5fb7\u57fa\"][\"name:zh-Hans\"=\"\u80af\u5fb7\u57fa\"][\"name:zh-Hant\"=\"\u80af\u5fb7\u57fa\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Kfc_textlogo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kfc_textlogo.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u80d6\u8001\u7239\u7f8e\u5f0f\u70b8\u96de",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u80d6\u8001\u7239\u7f8e\u5f0f\u70b8\u96de\"][\"brand:en\"=\"Fat Daddy American Fried Chicken\"][\"brand:wikidata\"=\"Q66768745\"][\"brand:zh\"=\"\u80d6\u8001\u7239\u7f8e\u5f0f\u70b8\u96de\"][\"cuisine\"=\"chicken\"][\"name\"=\"\u80d6\u8001\u7239\u7f8e\u5f0f\u70b8\u96de\"][\"name:en\"=\"Fat Daddy American Fried Chicken\"][\"name:zh\"=\"\u80d6\u8001\u7239\u7f8e\u5f0f\u70b8\u96de\"][\"takeaway\"=\"only\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Jixiang_Store,_Fat_Daddy_American_Fried_Chicken_20211016.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Jixiang_Store,_Fat_Daddy_American_Fried_Chicken_20211016.jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u82b3\u73cd\u852c\u98df",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u82b3\u73cd\u852c\u98df\"][\"brand:en\"=\"FJ Veggie\"][\"brand:wikidata\"=\"Q130458837\"][\"brand:zh\"=\"\u82b3\u73cd\u852c\u98df\"][\"cuisine\"=\"vegetarian\"][\"name\"=\"\u82b3\u73cd\u852c\u98df\"][\"name:en\"=\"FJ Veggie\"][\"name:zh\"=\"\u82b3\u73cd\u852c\u98df\"][\"operator\"=\"\u516b\u65b9\u96f2\u96c6\"][\"operator:en\"=\"Eight Way\"][\"operator:wikidata\"=\"Q28417381\"][\"operator:zh\"=\"\u516b\u65b9\u96f2\u96c6\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u83ef\u5fa1\u7d50 hana-musubi",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u83ef\u5fa1\u7d50 hana-musubi\"][\"brand:en\"=\"hana-musubi\"][\"brand:wikidata\"=\"Q123655626\"][\"brand:zh\"=\"\u83ef\u5fa1\u7d50\"][\"cuisine\"=\"japanese\"][\"name\"=\"\u83ef\u5fa1\u7d50 hana-musubi\"][\"name:en\"=\"hana-musubi\"][\"name:zh\"=\"\u83ef\u5fa1\u7d50\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/HK_\u9ec3\u57d4\u7ad9_Whampoa_Station_MTR_shop_\u83ef\u5fa1\u7d50_Hana-musubi_December_2021_SS2_07.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/HK_\u9ec3\u57d4\u7ad9_Whampoa_Station_MTR_shop_\u83ef\u5fa1\u7d50_Hana-musubi_December_2021_SS2_07.jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u85cf\u58fd\u53f8",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u85cf\u58fd\u53f8\"][\"brand:en\"=\"Kura Sushi\"][\"brand:wikidata\"=\"Q6445491\"][\"brand:zh\"=\"\u85cf\u58fd\u53f8\"][\"cuisine\"=\"sushi\"][\"name\"=\"\u85cf\u58fd\u53f8\"][\"name:en\"=\"Kura Sushi\"][\"name:zh\"=\"\u85cf\u58fd\u53f8\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Kura_sushi.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kura_sushi.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u8d5b\u767e\u5473",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u8d5b\u767e\u5473\"][\"brand:en\"=\"Subway\"][\"brand:wikidata\"=\"Q244457\"][\"brand:zh\"=\"\u8d5b\u767e\u5473\"][\"cuisine\"=\"sandwich\"][\"name\"=\"\u8d5b\u767e\u5473\"][\"name:en\"=\"Subway\"][\"name:zh\"=\"\u8d5b\u767e\u5473\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Subway_2016_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Subway_2016_logo.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u8d85\u610f\u5174",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u8d85\u610f\u5174\"][\"brand:en\"=\"CHAOYIXING\"][\"brand:wikidata\"=\"Q110221371\"][\"brand:zh\"=\"\u8d85\u610f\u5174\"][\"cuisine\"=\"chinese\"][\"name\"=\"\u8d85\u610f\u5174\"][\"name:en\"=\"CHAOYIXING\"][\"name:zh\"=\"\u8d85\u610f\u5174\"][\"operator\"=\"\u6d4e\u5357\u8d85\u610f\u5174\u9910\u996e\u6709\u9650\u516c\u53f8\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u8fbe\u7f8e\u4e50\u6bd4\u8428",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u8fbe\u7f8e\u4e50\u6bd4\u8428\"][\"brand:en\"=\"Domino's\"][\"brand:wikidata\"=\"Q839466\"][\"brand:zh\"=\"\u8fbe\u7f8e\u4e50\u6bd4\u8428\"][\"cuisine\"=\"pizza\"][\"name\"=\"\u8fbe\u7f8e\u4e50\u6bd4\u8428\"][\"name:en\"=\"Domino's\"][\"name:zh\"=\"\u8fbe\u7f8e\u4e50\u6bd4\u8428\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Domino's_pizza_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Domino's_pizza_logo.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u9053\u3068\u3093\u5800",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u9053\u3068\u3093\u5800\"][\"brand:en\"=\"Dohtonbori\"][\"brand:ja\"=\"\u9053\u3068\u3093\u5800\"][\"brand:wikidata\"=\"Q11640595\"][\"cuisine\"=\"okonomiyaki\"][\"name\"=\"\u9053\u3068\u3093\u5800\"][\"name:en\"=\"Dohtonbori\"][\"name:ja\"=\"\u9053\u3068\u3093\u5800\"][\"official_name\"=\"\u304a\u597d\u307f\u713c\u9053\u3068\u3093\u5800\"][\"official_name:en\"=\"Okonomiyaki Dohtonbori\"][\"official_name:ja\"=\"\u304a\u597d\u307f\u713c\u9053\u3068\u3093\u5800\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Doutouokonomi.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Doutouokonomi.png",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u9054\u7f8e\u6a02\u62ab\u85a9",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u9054\u7f8e\u6a02\u62ab\u85a9\"][\"brand:en\"=\"Domino's\"][\"brand:wikidata\"=\"Q839466\"][\"brand:zh\"=\"\u9054\u7f8e\u6a02\u62ab\u85a9\"][\"cuisine\"=\"pizza\"][\"name\"=\"\u9054\u7f8e\u6a02\u62ab\u85a9\"][\"name:en\"=\"Domino's\"][\"name:zh\"=\"\u9054\u7f8e\u6a02\u62ab\u85a9\"][\"operator\"=\"\u6676\u83ef\u570b\u969b\u9152\u5e97\u96c6\u5718\"][\"operator:wikidata\"=\"Q11090227\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Domino's_pizza_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Domino's_pizza_logo.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u929a\u5b50\u4e38",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u929a\u5b50\u4e38\"][\"brand:en\"=\"Choushimaru\"][\"brand:ja\"=\"\u929a\u5b50\u4e38\"][\"brand:wikidata\"=\"Q11650214\"][\"cuisine\"=\"sushi\"][\"name\"=\"\u929a\u5b50\u4e38\"][\"name:en\"=\"Choushimaru\"][\"name:ja\"=\"\u929a\u5b50\u4e38\"][\"official_name\"=\"\u3059\u3057\u929a\u5b50\u4e38\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/202401011658_IMG_7974.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/202401011658_IMG_7974.jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u9802\u5471\u5471",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u9802\u5471\u5471\"][\"brand:en\"=\"TKK Fried Chicken\"][\"brand:wikidata\"=\"Q15715284\"][\"brand:zh\"=\"\u9802\u5471\u5471\"][\"cuisine\"=\"chicken\"][\"name\"=\"\u9802\u5471\u5471\"][\"name:en\"=\"TKK Fried Chicken\"][\"name:zh\"=\"\u9802\u5471\u5471\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -42778,9 +53794,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Fietswereld",
-    query: "(nwr["brand:wikidata"="Q116172680"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "\u9876\u5471\u5471",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u9876\u5471\u5471\"][\"brand:en\"=\"TKK Fried Chicken\"][\"brand:wikidata\"=\"Q15715284\"][\"brand:zh\"=\"\u9876\u5471\u5471\"][\"cuisine\"=\"chicken\"][\"name\"=\"\u9876\u5471\u5471\"][\"name:en\"=\"TKK Fried Chicken\"][\"name:zh\"=\"\u9876\u5471\u5471\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -42797,6 +53813,42 @@ style: function (feature) {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u98df\u5176\u5bb6",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u98df\u5176\u5bb6\"][\"brand:en\"=\"Sukiya\"][\"brand:ja\"=\"\u3059\u304d\u5bb6\"][\"brand:wikidata\"=\"Q6137375\"][\"brand:zh\"=\"\u98df\u5176\u5bb6\"][\"cuisine\"=\"beef_bowl\"][\"name\"=\"\u98df\u5176\u5bb6\"][\"name:en\"=\"Sukiya\"][\"name:ja\"=\"\u3059\u304d\u5bb6\"][\"name:zh\"=\"\u98df\u5176\u5bb6\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Sukiya_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Sukiya_logo.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -42814,9 +53866,9 @@ style: function (feature) {
     }
 },
 {
-    group: "Shops",
-    title: "Fri BikeShop",
-    query: "(nwr["brand:wikidata"="Q26721030"]({{bbox}});node(w););out meta;",
+    group: "Amenities",
+    title: "\u9b5a\u3079\u3044",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u9b5a\u3079\u3044\"][\"brand:en\"=\"Uobei\"][\"brand:ja\"=\"\u9b5a\u3079\u3044\"][\"brand:wikidata\"=\"Q115008809\"][\"cuisine\"=\"sushi\"][\"name\"=\"\u9b5a\u3079\u3044\"][\"name:en\"=\"Uobei\"][\"name:ja\"=\"\u9b5a\u3079\u3044\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -42833,6 +53885,114 @@ style: function (feature) {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u9ea5\u7576\u52de",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u9ea5\u7576\u52de\"][\"brand:en\"=\"McDonald's\"][\"brand:wikidata\"=\"Q38076\"][\"brand:zh\"=\"\u9ea5\u7576\u52de\"][\"brand:zh-Hant\"=\"\u9ea5\u7576\u52de\"][\"cuisine\"=\"burger\"][\"name\"=\"\u9ea5\u7576\u52de\"][\"name:en\"=\"McDonald's\"][\"name:zh\"=\"\u9ea5\u7576\u52de\"][\"name:zh-Hant\"=\"\u9ea5\u7576\u52de\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/McDonald's_with_slogan_2020.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/McDonald's_with_slogan_2020.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u9ea5\u7576\u52de McDonald's",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u9ea5\u7576\u52de McDonald's\"][\"brand:en\"=\"McDonald's\"][\"brand:wikidata\"=\"Q38076\"][\"brand:zh\"=\"\u9ea5\u7576\u52de\"][\"brand:zh-Hans\"=\"\u9ea6\u5f53\u52b3\"][\"brand:zh-Hant\"=\"\u9ea5\u7576\u52de\"][\"cuisine\"=\"burger\"][\"name\"=\"\u9ea5\u7576\u52de McDonald's\"][\"name:en\"=\"McDonald's\"][\"name:zh\"=\"\u9ea5\u7576\u52de\"][\"name:zh-Hans\"=\"\u9ea6\u5f53\u52b3\"][\"name:zh-Hant\"=\"\u9ea5\u7576\u52de\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/McDonald's_with_slogan_2020.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/McDonald's_with_slogan_2020.svg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: "Amenities",
+    title: "\u9ea6\u5f53\u52b3",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u9ea6\u5f53\u52b3\"][\"brand:en\"=\"McDonald's\"][\"brand:wikidata\"=\"Q38076\"][\"brand:zh\"=\"\u9ea6\u5f53\u52b3\"][\"cuisine\"=\"burger\"][\"name\"=\"\u9ea6\u5f53\u52b3\"][\"name:en\"=\"McDonald's\"][\"name:zh\"=\"\u9ea6\u5f53\u52b3\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/McDonald's_with_slogan_2020.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/McDonald's_with_slogan_2020.svg",
                 scale:0.02
             }),
             text: new ol.style.Text({
@@ -42849,6 +54009,49 @@ style: function (feature) {
         return style;
     }
 },
+{
+    group: "Amenities",
+    title: "\u9f4a\u67cf\u6797\u71b1\u72d7 Zeppelin Hot Dog",
+    query: "(nwr[\"amenity\"=\"fast_food\"][\"brand\"=\"\u9f4a\u67cf\u6797\u71b1\u72d7 Zeppelin Hot Dog\"][\"brand:en\"=\"Zeppelin Hot Dog\"][\"brand:wikidata\"=\"Q115598077\"][\"brand:zh\"=\"\u9f4a\u67cf\u6797\u71b1\u72d7\"][\"cuisine\"=\"hot_dog\"][\"name\"=\"\u9f4a\u67cf\u6797\u71b1\u72d7 Zeppelin Hot Dog\"][\"name:en\"=\"Zeppelin Hot Dog\"][\"name:zh\"=\"\u9f4a\u67cf\u6797\u71b1\u72d7\"][\"takeaway\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Zeppelin_Hot_Dog,_Shek_Kip_Mei.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Zeppelin_Hot_Dog,_Shek_Kip_Mei.jpg",
+                scale:0.02
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+}
+
+
+
+
+
+
+
 
 
 		{
