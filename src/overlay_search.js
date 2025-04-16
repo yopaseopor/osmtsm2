@@ -65,10 +65,6 @@
                 icon.src = overlay.iconSrc;
                 icon.alt = '';
                 icon.className = 'overlay-search-icon';
-                icon.style.width = '20px';
-                icon.style.height = '20px';
-                icon.style.verticalAlign = 'middle';
-                icon.style.marginRight = '6px';
                 opt.appendChild(icon);
             }
             // Add title text
