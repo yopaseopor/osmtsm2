@@ -68,51 +68,58 @@
             searchInput.value = '';
         });
         dropdown.appendChild(clearBtn);
-        var limited = results;
-        if (!lastQuery || results.length > 10) {
-            limited = results.slice(0, 10);
-        }
-        limited.forEach(function(overlay) {
-            var opt = document.createElement('div');
-            opt.className = 'overlay-search-option';
-            // Add icon if present
-            if (overlay.iconSrc) {
-                var icon = document.createElement('img');
-                icon.src = overlay.iconSrc;
-                icon.alt = '';
-                icon.className = 'overlay-search-icon';
-                opt.appendChild(icon);
-            }
-            // Add title text
-            var span = document.createElement('span');
-            span.textContent = overlay.title;
-            opt.appendChild(span);
-            opt.tabIndex = 0;
-            opt.addEventListener('mousedown', function(e) {
-                e.preventDefault();
-                searchInput.value = overlay.title;
-                dropdown.style.display = 'none';
-                // Toggle overlay visibility independently
-                $.each(config.layers, function(indexLayer, layerGroup) {
-                    if (layerGroup.get && layerGroup.get('type') === 'overlay') {
-                        $.each(layerGroup.getLayers().getArray(), function(idx, olayer) {
-                            if ((overlay.id && olayer.get('id') === overlay.id) ||
-                                (olayer.get('title') === overlay.title && olayer.get('group') === overlay.group)) {
-                                if (olayer.getVisible && olayer.getVisible()) {
-                                    // If already visible, hide it
-                                    olayer.setVisible(false);
-                                } else {
-                                    // If hidden, show it
-                                    olayer.setVisible(true);
+        // Group overlays by the first letter of title (or group if no title)
+        var groups = {};
+        results.forEach(function(overlay) {
+            var key = (overlay.title || overlay.group || '').trim().charAt(0).toUpperCase();
+            if (!groups[key]) groups[key] = [];
+            groups[key].push(overlay);
+        });
+        // For each group, show up to 10 overlays
+        Object.keys(groups).sort().forEach(function(letter) {
+            var overlays = groups[letter].slice(0, 10);
+            overlays.forEach(function(overlay) {
+                var opt = document.createElement('div');
+                opt.className = 'overlay-search-option';
+                // Add icon if present
+                if (overlay.iconSrc) {
+                    var icon = document.createElement('img');
+                    icon.src = overlay.iconSrc;
+                    icon.alt = '';
+                    icon.className = 'overlay-search-icon';
+                    opt.appendChild(icon);
+                }
+                // Add title text
+                var span = document.createElement('span');
+                span.textContent = overlay.title;
+                opt.appendChild(span);
+                opt.tabIndex = 0;
+                opt.addEventListener('mousedown', function(e) {
+                    e.preventDefault();
+                    searchInput.value = overlay.title;
+                    dropdown.style.display = 'none';
+                    // Toggle overlay visibility independently
+                    $.each(config.layers, function(indexLayer, layerGroup) {
+                        if (layerGroup.get && layerGroup.get('type') === 'overlay') {
+                            $.each(layerGroup.getLayers().getArray(), function(idx, olayer) {
+                                if ((overlay.id && olayer.get('id') === overlay.id) ||
+                                    (olayer.get('title') === overlay.title && olayer.get('group') === overlay.group)) {
+                                    if (olayer.getVisible && olayer.getVisible()) {
+                                        // If already visible, hide it
+                                        olayer.setVisible(false);
+                                    } else {
+                                        // If hidden, show it
+                                        olayer.setVisible(true);
+                                    }
                                 }
-                            }
-                        });
-                    }
+                            });
+                        }
+                    });
+                    // Optionally update overlay list UI
+                    if (window.renderOverlayList) window.renderOverlayList([], '');
                 });
-                // Optionally update overlay list UI
-                if (window.renderOverlayList) window.renderOverlayList([], '');
+                dropdown.appendChild(opt);
             });
-            dropdown.appendChild(opt);
         });
         dropdown.style.display = 'block';
     }
