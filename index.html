@@ -14,12 +14,41 @@
 	<link rel="stylesheet" href="src/css/index.css" type="text/css"/>
 	
 	<link rel="icon" href="favicon.ico"/>
+  <script src="src/translations/i18n.js"></script>
+  <script>
+    // Language selector
+    function setLanguage(lang) {
+      loadTranslations(lang, function() {
+        // Optionally, trigger a UI refresh
+        if (typeof updateUIWithTranslations === 'function') updateUIWithTranslations();
+      });
+      localStorage.setItem('lang', lang);
+    }
+    // On load, set language from localStorage or browser
+    var userLang = localStorage.getItem('lang') || (navigator.language || navigator.userLanguage || 'en').substring(0,2);
+    if (!['en','es','ca'].includes(userLang)) userLang = 'en';
+    loadTranslations(userLang);
+  </script>
+  <style>
+    .lang-selector { position:absolute; top:10px; right:10px; z-index:1000; }
+  </style>
 </head>
 <body>
+  <div class="lang-selector">
+    <select onchange="setLanguage(this.value)">
+      <option value="en">English</option>
+      <option value="es">Español</option>
+      <option value="ca">Català</option>
+    </select>
+  </div>
 	<div class="flex-row">
 	<!--@@ Modificar comentario de Javascript -->
-		<div id="map" class="map">Loading... You need Javascript...Cargando necesitas Javascript...Carregant...necessites Javascript</div>
-		<div id="menu" class="menu">
+		<div id="map" class="map">
+      <h2 id="map-title"></h2>
+      Loading... You need Javascript...Cargando necesitas Javascript...Carregant...necessites Javascript
+    </div>
+		<div id="menu" class="osmcat-menu">
+			<div id="legend"><h3 id="legend-title"></h3></div>
 			<!-- Layer Searcher (at the top) -->
 			<div id="layer-search-container">
 			  <input type="text" id="layer-search" placeholder="Search layers...">

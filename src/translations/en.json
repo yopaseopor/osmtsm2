@@ -1,0 +1,14 @@
+{
+  "map": {
+    "title": "Traffic Signs Map",
+    "legend": "Legend",
+    "search": "Search",
+    "settings": "Settings"
+  },
+  "overlays": {
+    "nsi_overlay": "NSI Overlay"
+  },
+  "layers": {
+    "osm_layer": "OSM Layer"
+  }
+}

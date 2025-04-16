@@ -1,0 +1,14 @@
+{
+  "map": {
+    "title": "Mapa de senyals de trànsit",
+    "legend": "Llegenda",
+    "search": "Cercar",
+    "settings": "Configuració"
+  },
+  "overlays": {
+    "nsi_overlay": "Capa NSI"
+  },
+  "layers": {
+    "osm_layer": "Capa OSM"
+  }
+}

@@ -17,6 +17,10 @@ $(function () {
     }
     // 2. Define window.renderLayerList
     window.renderLayerList = function(filtered, query) {
+        // Update the layer list title with translation
+        $('#layer-list-title').remove();
+        var $title = $('<div id="layer-list-title" class="list-title"></div>').text(t('layers.osm_layer'));
+        $('#menu').prepend($title);
         var $list = $('#layer-list');
         if (!$list.length) {
             $list = $('<div id="layer-list"></div>');
@@ -38,7 +42,7 @@ $(function () {
         });
         filtered.forEach(function(layer, idx) {
             var isActive = activeLayer && ((layer.id && activeLayer.get('id') === layer.id) || (activeLayer.get('title') === layer.title && activeLayer.get('group') === layer.group));
-            var $item = $('<div>').addClass('layer-list-item').text((layer.group ? layer.group + ': ' : '') + layer.title);
+            var $item = $('<div>').addClass('layer-list-item').text((layer.group ? layer.group + ': ' : '') + t('layers.osm_layer'));
             if (isActive) $item.addClass('active').attr('tabindex', 0);
             $item.css({cursor:'pointer'}).on('click', function() {
                 window.activateLayer(layer);
@@ -91,6 +95,8 @@ $(function () {
     // Render all layers initially
     $(document).ready(function() {
         window.renderLayerList(window.layers);
+        window.renderOverlayList(window.overlays);
+        updateUIWithTranslations();
     });
     // --- End Layer Searcher Integration ---
 
@@ -109,6 +115,10 @@ $(function () {
     }
     // 2. Define window.renderOverlayList
     window.renderOverlayList = function(filtered, query) {
+        // Update the overlay list title with translation
+        $('#overlay-list-title').remove();
+        var $title = $('<div id="overlay-list-title" class="list-title"></div>').text(t('overlays.nsi_overlay'));
+        $('#menu').prepend($title);
         var $list = $('#overlay-list');
         $list.empty();
         if (!query || !filtered || !filtered.length) {
@@ -141,7 +151,7 @@ $(function () {
         Object.keys(letterMap).sort().forEach(function(letter) {
             letterMap[letter].forEach(function(overlay) {
                 var isActive = activeOverlay && ((overlay.id && activeOverlay.get('id') === overlay.id) || (activeOverlay.get('title') === overlay.title && activeOverlay.get('group') === overlay.group));
-                var $item = $('<div>').addClass('overlay-list-item').text((overlay.group ? overlay.group + ': ' : '') + overlay.title);
+                var $item = $('<div>').addClass('overlay-list-item').text((overlay.group ? overlay.group + ': ' : '') + t('overlays.nsi_overlay'));
                 if (isActive) $item.addClass('active').attr('tabindex', 0);
                 $item.css({cursor:'pointer'}).on('click', function() {
                     window.activateOverlay(overlay);

@@ -1,0 +1,14 @@
+{
+  "map": {
+    "title": "Mapa de señales de tráfico",
+    "legend": "Leyenda",
+    "search": "Buscar",
+    "settings": "Configuración"
+  },
+  "overlays": {
+    "nsi_overlay": "Capa NSI"
+  },
+  "layers": {
+    "osm_layer": "Capa OSM"
+  }
+}
