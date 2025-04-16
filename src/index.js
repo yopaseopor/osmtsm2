@@ -127,12 +127,14 @@ $(function () {
                 });
             }
         });
-        // Group overlays by (first letter, group)
+        // Group overlays by (first letter, group, second letter)
         var groupMap = {};
         filtered.forEach(function(overlay) {
-            var firstLetter = (overlay.title || overlay.group || '').trim().charAt(0).toUpperCase();
+            var titleOrGroup = (overlay.title || overlay.group || '').trim();
+            var firstLetter = titleOrGroup.charAt(0).toUpperCase();
+            var secondLetter = titleOrGroup.charAt(1) ? titleOrGroup.charAt(1).toUpperCase() : '';
             var groupKey = overlay.group || '';
-            var key = firstLetter + '|' + groupKey;
+            var key = firstLetter + '|' + groupKey + '|' + secondLetter;
             if (!groupMap[key]) groupMap[key] = [];
             groupMap[key].push(overlay);
         });
