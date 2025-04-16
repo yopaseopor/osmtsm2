@@ -66,41 +66,25 @@
                 e.preventDefault();
                 searchInput.value = overlay.title;
                 dropdown.style.display = 'none';
-                // Check if overlay is already active
-                var isActive = false;
+                // Toggle overlay visibility independently
                 $.each(config.layers, function(indexLayer, layerGroup) {
                     if (layerGroup.get && layerGroup.get('type') === 'overlay') {
                         $.each(layerGroup.getLayers().getArray(), function(idx, olayer) {
                             if ((overlay.id && olayer.get('id') === overlay.id) ||
                                 (olayer.get('title') === overlay.title && olayer.get('group') === overlay.group)) {
                                 if (olayer.getVisible && olayer.getVisible()) {
-                                    isActive = true;
-                                    // Deactivate if already active
+                                    // If already visible, hide it
                                     olayer.setVisible(false);
-                                    // Clear overlay search results from the UI
-                                    if (window.renderOverlayList) window.renderOverlayList([], '');
+                                } else {
+                                    // If hidden, show it
+                                    olayer.setVisible(true);
                                 }
                             }
                         });
                     }
                 });
-                if (!isActive) {
-                    if (window.activateOverlay) {
-                        // Prefer _olLayerGroup for direct activation if available
-                        if (overlay._olLayerGroup) {
-                            window.activateOverlay({
-                                id: overlay.id,
-                                title: overlay.title,
-                                group: overlay.group,
-                                _olLayerGroup: overlay._olLayerGroup
-                            });
-                        } else {
-                            window.activateOverlay(overlay);
-                        }
-                    } else {
-                        filterAndRender([overlay]);
-                    }
-                }
+                // Optionally update overlay list UI
+                if (window.renderOverlayList) window.renderOverlayList([], '');
             });
             dropdown.appendChild(opt);
         });

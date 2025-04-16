@@ -146,29 +146,21 @@ $(function () {
 
 
 
-    // Activate only the chosen overlay
+    // Toggle the chosen overlay independently
     window.activateOverlay = function(overlay) {
-        // Hide all overlays
-        $.each(config.layers, function(indexLayer, layerGroup) {
-            if (layerGroup.get && layerGroup.get('type') === 'overlay') {
-                $.each(layerGroup.getLayers().getArray(), function(idx, olayer) {
-                    olayer.setVisible(false);
-                });
-            }
-        });
-        // Show the selected overlay (by id or by group/title)
+        // Toggle visibility of the selected overlay (by id or by group/title)
         $.each(config.layers, function(indexLayer, layerGroup) {
             if (layerGroup.get && layerGroup.get('type') === 'overlay') {
                 $.each(layerGroup.getLayers().getArray(), function(idx, olayer) {
                     if ((overlay.id && olayer.get('id') === overlay.id) ||
                         (olayer.get('title') === overlay.title && olayer.get('group') === overlay.group)) {
-                        olayer.setVisible(true);
+                        olayer.setVisible(!olayer.getVisible());
                     }
                 });
             }
         });
-        // Optionally, update the overlay list to show only this overlay
-        window.renderOverlayList([overlay]);
+        // Optionally, update the overlay list UI
+        if (window.renderOverlayList) window.renderOverlayList([], '');
     };
 
     // Render all overlays initially
