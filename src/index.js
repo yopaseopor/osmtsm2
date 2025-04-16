@@ -21,6 +21,8 @@ $(function () {
         $('#layer-list-title').remove();
         var $title = $('<div id="layer-list-title" class="list-title"></div>').text(t('layers.osm_layer'));
         $('#menu').prepend($title);
+        // Update search placeholder
+        $('#layer-search').attr('placeholder', t('map.search') + '...');
         var $list = $('#layer-list');
         if (!$list.length) {
             $list = $('<div id="layer-list"></div>');
@@ -30,7 +32,7 @@ $(function () {
         if (!query || !filtered || !filtered.length) {
             // Only show message if there is a query
             if (query && (!filtered || !filtered.length)) {
-                $list.append('<div style="padding:8px;color:#888;">No layers found.</div>');
+                $list.append('<div style="padding:8px;color:#888;">' + t('map.no_layers_found') + '</div>');
             }
             return;
         }
@@ -42,7 +44,12 @@ $(function () {
         });
         filtered.forEach(function(layer, idx) {
             var isActive = activeLayer && ((layer.id && activeLayer.get('id') === layer.id) || (activeLayer.get('title') === layer.title && activeLayer.get('group') === layer.group));
-            var $item = $('<div>').addClass('layer-list-item').text((layer.group ? layer.group + ': ' : '') + t('layers.osm_layer'));
+            // Use translation key if provided, else fallback to title
+            var titleKey = layer.title && layer.title.startsWith('layers.') ? layer.title : null;
+            var groupKey = layer.group && layer.group.startsWith('category.') ? layer.group : null;
+            var displayTitle = titleKey ? t(layer.title) : layer.title;
+            var displayGroup = groupKey ? t(layer.group) : (layer.group || '');
+            var $item = $('<div>').addClass('layer-list-item').text((displayGroup ? displayGroup + ': ' : '') + displayTitle);
             if (isActive) $item.addClass('active').attr('tabindex', 0);
             $item.css({cursor:'pointer'}).on('click', function() {
                 window.activateLayer(layer);
@@ -97,6 +104,11 @@ $(function () {
         window.renderLayerList(window.layers);
         window.renderOverlayList(window.overlays);
         updateUIWithTranslations();
+
+        // Listen for language change
+        $('#language-selector').on('change', function() {
+            updateUIWithTranslations();
+        });
     });
     // --- End Layer Searcher Integration ---
 
@@ -119,11 +131,13 @@ $(function () {
         $('#overlay-list-title').remove();
         var $title = $('<div id="overlay-list-title" class="list-title"></div>').text(t('overlays.nsi_overlay'));
         $('#menu').prepend($title);
+        // Update search placeholder
+        $('#overlay-search').attr('placeholder', t('map.search') + '...');
         var $list = $('#overlay-list');
         $list.empty();
         if (!query || !filtered || !filtered.length) {
             if (query && (!filtered || !filtered.length)) {
-                $list.append('<div style="padding:8px;color:#888;">No overlays found.</div>');
+                $list.append('<div style="padding:8px;color:#888;">' + t('map.no_overlays_found') + '</div>');
             }
             return;
         }
@@ -151,7 +165,12 @@ $(function () {
         Object.keys(letterMap).sort().forEach(function(letter) {
             letterMap[letter].forEach(function(overlay) {
                 var isActive = activeOverlay && ((overlay.id && activeOverlay.get('id') === overlay.id) || (activeOverlay.get('title') === overlay.title && activeOverlay.get('group') === overlay.group));
-                var $item = $('<div>').addClass('overlay-list-item').text((overlay.group ? overlay.group + ': ' : '') + t('overlays.nsi_overlay'));
+                // Use translation key if provided, else fallback to title
+                var titleKey = overlay.title && overlay.title.startsWith('overlays.') ? overlay.title : null;
+                var groupKey = overlay.group && overlay.group.startsWith('category.') ? overlay.group : null;
+                var displayTitle = titleKey ? t(overlay.title) : overlay.title;
+                var displayGroup = groupKey ? t(overlay.group) : (overlay.group || '');
+                var $item = $('<div>').addClass('overlay-list-item').text((displayGroup ? displayGroup + ': ' : '') + displayTitle);
                 if (isActive) $item.addClass('active').attr('tabindex', 0);
                 $item.css({cursor:'pointer'}).on('click', function() {
                     window.activateOverlay(overlay);
