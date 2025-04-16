@@ -55,7 +55,22 @@
         limited.forEach(function(overlay) {
             var opt = document.createElement('div');
             opt.className = 'overlay-search-option';
-            opt.textContent = overlay.group + ': ' + overlay.title;
+            // Add icon if present
+            if (overlay.iconSrc) {
+                var icon = document.createElement('img');
+                icon.src = overlay.iconSrc;
+                icon.alt = '';
+                icon.className = 'overlay-search-icon';
+                icon.style.width = '20px';
+                icon.style.height = '20px';
+                icon.style.verticalAlign = 'middle';
+                icon.style.marginRight = '6px';
+                opt.appendChild(icon);
+            }
+            // Add title text
+            var span = document.createElement('span');
+            span.textContent = overlay.title;
+            opt.appendChild(span);
             opt.tabIndex = 0;
             opt.addEventListener('mousedown', function(e) {
                 e.preventDefault();
