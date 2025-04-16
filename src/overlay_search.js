@@ -52,13 +52,8 @@
             searchInput.value = '';
         });
         dropdown.appendChild(clearBtn);
-        if (!searchInput.value || !results.length) {
-            dropdown.style.display = 'none';
-            return;
-        }
-        // Limit results to 10 overlays
-        results.slice(0, 10).forEach((overlay, idx) => {
-            const opt = document.createElement('div');
+        limited.forEach(function(overlay) {
+            var opt = document.createElement('div');
             opt.className = 'overlay-search-option';
             opt.textContent = overlay.group + ': ' + overlay.title;
             opt.tabIndex = 0;
