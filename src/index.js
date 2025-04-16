@@ -127,20 +127,33 @@ $(function () {
                 });
             }
         });
-        filtered.forEach(function(overlay, idx) {
-            var isActive = activeOverlay && ((overlay.id && activeOverlay.get('id') === overlay.id) || (activeOverlay.get('title') === overlay.title && activeOverlay.get('group') === overlay.group));
-            var $item = $('<div>').addClass('overlay-list-item').text((overlay.group ? overlay.group + ': ' : '') + overlay.title);
-            if (isActive) $item.addClass('active').attr('tabindex', 0);
-            $item.css({cursor:'pointer'}).on('click', function() {
-                window.activateOverlay(overlay);
+        // Group overlays by (first letter, group)
+        var groupMap = {};
+        filtered.forEach(function(overlay) {
+            var firstLetter = (overlay.title || overlay.group || '').trim().charAt(0).toUpperCase();
+            var groupKey = overlay.group || '';
+            var key = firstLetter + '|' + groupKey;
+            if (!groupMap[key]) groupMap[key] = [];
+            groupMap[key].push(overlay);
+        });
+        // For each group, show up to 10 overlays
+        Object.keys(groupMap).sort().forEach(function(key) {
+            var overlays = groupMap[key].slice(0, 10);
+            overlays.forEach(function(overlay) {
+                var isActive = activeOverlay && ((overlay.id && activeOverlay.get('id') === overlay.id) || (activeOverlay.get('title') === overlay.title && activeOverlay.get('group') === overlay.group));
+                var $item = $('<div>').addClass('overlay-list-item').text((overlay.group ? overlay.group + ': ' : '') + overlay.title);
+                if (isActive) $item.addClass('active').attr('tabindex', 0);
+                $item.css({cursor:'pointer'}).on('click', function() {
+                    window.activateOverlay(overlay);
+                });
+                $list.append($item);
+                if (isActive) {
+                    setTimeout(function(){
+                        $item[0].scrollIntoView({block:'nearest'});
+                        $item.focus();
+                    }, 10);
+                }
             });
-            $list.append($item);
-            if (isActive) {
-                setTimeout(function(){
-                    $item[0].scrollIntoView({block:'nearest'});
-                    $item.focus();
-                }, 10);
-            }
         });
     };
 
