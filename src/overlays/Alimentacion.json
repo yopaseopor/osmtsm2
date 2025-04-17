@@ -1,0 +1,16 @@
+[
+  {
+    "group": "Alimentación",
+    "title": "Supermercados",
+    "query": "(nwr[\"shop\"=\"supermarket\"]({{bbox}});node(w););out meta;",
+    "iconSrc": "src/img/icones/maxspeed_empty.svg",
+    "iconStyle": "background-color:rgba(255,255,255,0.4)"
+  },
+  {
+    "group": "Alimentación",
+    "title": "Colmados-Ultramarinos",
+    "query": "(nwr[\"shop\"=\"convenience\"]({{bbox}});node(w););out meta;",
+    "iconSrc": "src/img/icones/maxspeed_empty.svg",
+    "iconStyle": "background-color:rgba(255,255,255,0.4)"
+  }
+]
