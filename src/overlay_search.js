@@ -56,8 +56,18 @@
             dropdown.style.display = 'none';
             return;
         }
-        // Limit results to 10 overlays
-        results.slice(0, 10).forEach((overlay, idx) => {
+        // Group overlays by first letter, limit to 10 per letter
+        let letterMap = {};
+        results.forEach(function(overlay) {
+            var titleOrGroup = (overlay.title || overlay.group || '').trim();
+            var firstLetter = titleOrGroup.charAt(0) ? titleOrGroup.charAt(0).toUpperCase() : '_';
+            if (!letterMap[firstLetter]) letterMap[firstLetter] = [];
+            if (letterMap[firstLetter].length < 10) {
+                letterMap[firstLetter].push(overlay);
+            }
+        });
+        Object.keys(letterMap).sort().forEach(function(letter) {
+            letterMap[letter].forEach(function(overlay, idx) {
             const opt = document.createElement('div');
             opt.className = 'overlay-search-option';
             opt.textContent = overlay.group + ': ' + overlay.title;
@@ -87,6 +97,7 @@
                 if (window.renderOverlayList) window.renderOverlayList([], '');
             });
             dropdown.appendChild(opt);
+            });
         });
         dropdown.style.display = 'block';
     }
