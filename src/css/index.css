@@ -97,19 +97,6 @@ a:hover {
     padding: 0 0 2px 0;
     background: #f4f7fb;
     border-radius: 4px;
-    display: flex;
-    align-items: center;
-    min-height: 54px;
-}
-#active-overlay-icon {
-    max-width: 50px;
-    max-height: 50px;
-    width: auto;
-    height: auto;
-    display: block;
-    margin-right: 10px;
-    margin-bottom: 0;
-    flex-shrink: 0;
 }
 
 .clear-active-overlay-btn {
@@ -1136,6 +1123,25 @@ a:hover {
   cursor: pointer;
   font-size: 1em;
   color: #222;
+  display: flex;
+  align-items: center;
+}
+
+.overlay-search-option-icon {
+  max-width: 30px;
+  max-height: 30px;
+  width: auto;
+  height: auto;
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.overlay-search-option-text {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.2;
+  word-break: break-word;
 }
 .overlay-search-option:hover, .overlay-search-option:focus,
 .layer-search-option:hover, .layer-search-option:focus {

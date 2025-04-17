@@ -109,36 +109,6 @@ $(function () {
     }
     // 2. Define window.renderOverlayList
     window.renderOverlayList = function(filtered, query) {
-        // Show active overlay icon in the searcher
-        var $searchContainer = $('#overlay-search-container');
-        var activeOverlay = null;
-        $.each(config.layers, function(indexLayer, layerGroup) {
-            if (layerGroup.get && layerGroup.get('type') === 'overlay') {
-                $.each(layerGroup.getLayers().getArray(), function(idx, olayer) {
-                    if (olayer.getVisible && olayer.getVisible()) {
-                        activeOverlay = olayer;
-                    }
-                });
-            }
-        });
-        $('#active-overlay-icon').remove();
-        if (activeOverlay && activeOverlay.get && activeOverlay.get('iconSrc')) {
-            var $icon = $('<img>')
-                .attr('src', activeOverlay.get('iconSrc'))
-                .attr('id', 'active-overlay-icon')
-                .css({
-                    maxWidth: '50px',
-                    maxHeight: '50px',
-                    width: 'auto',
-                    height: 'auto',
-                    display: 'block',
-                    float: 'left',
-                    marginRight: '10px',
-                    marginBottom: '4px',
-                });
-            $searchContainer.prepend($icon);
-        }
-
         var $list = $('#overlay-list');
         $list.empty();
         // Ensure Clear Overlay button is always at the bottom of the menu, not inside the overlay list
