@@ -49,33 +49,44 @@ a:hover {
 }
 
 .menu {
-    height: 20%;
-    width: 100%;
+    height: 100vh;
+    width: 320px;
+    min-width: 260px;
+    max-width: 400px;
     background: #f8f9fa;
     border-right: 1px solid #ddd;
     box-shadow: 2px 0 8px rgba(0,0,0,0.03);
-    padding: 0 0 8px 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 #overlay-list {
     background: #fff;
     border-radius: 6px;
-    margin: 8px 10px 0 10px;
+    margin: 0 8px 8px 8px;
     padding: 8px 0;
     box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-    min-height: 50px;
-    max-height: 60vh;
+    min-height: 40px;
+    flex: 1 1 0%;
+    max-height: none;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 #overlay-search-container {
-    margin: 0 10px 6px 10px;
-    padding-bottom: 2px;
+    margin: 8px 8px 4px 8px;
+    padding: 0 0 2px 0;
     background: #f4f7fb;
     border-radius: 4px;
 }
+
+.clear-active-overlay-btn {
+    margin: 8px 8px 0 8px;
+}
+
 
 .osmcat-geobutton {
 	bottom: 30px;
