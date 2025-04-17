@@ -46,17 +46,22 @@
             letterMap[letter].forEach(function(overlay, idx) {
             const opt = document.createElement('div');
             opt.className = 'overlay-search-option';
-            // Icon (if present)
+            // Add icon if available
             if (overlay.icon) {
                 const iconImg = document.createElement('img');
                 iconImg.src = overlay.icon;
-                iconImg.alt = overlay.title + ' icon';
+                iconImg.alt = '';
                 iconImg.className = 'overlay-search-option-icon';
+                iconImg.style.maxWidth = '30px';
+                iconImg.style.maxHeight = '30px';
+                iconImg.style.width = 'auto';
+                iconImg.style.height = 'auto';
+                iconImg.style.marginRight = '10px';
+                iconImg.style.verticalAlign = 'middle';
                 opt.appendChild(iconImg);
             }
-            // Text (category: title)
+            // Add the text (group/category: title)
             const textSpan = document.createElement('span');
-            textSpan.className = 'overlay-search-option-text';
             textSpan.textContent = overlay.group + ': ' + overlay.title;
             opt.appendChild(textSpan);
             opt.tabIndex = 0;

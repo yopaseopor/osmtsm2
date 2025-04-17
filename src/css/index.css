@@ -1133,15 +1133,9 @@ a:hover {
   width: auto;
   height: auto;
   margin-right: 10px;
+  flex-shrink: 0;
   display: inline-block;
   vertical-align: middle;
-}
-
-.overlay-search-option-text {
-  display: inline-block;
-  vertical-align: middle;
-  line-height: 1.2;
-  word-break: break-word;
 }
 .overlay-search-option:hover, .overlay-search-option:focus,
 .layer-search-option:hover, .layer-search-option:focus {
