@@ -329,23 +329,65 @@ a:hover {
         position: relative;
         overflow: hidden;
     }
-
     .map {
         height: 70vh;
         border: none;
         position: relative;
+        width: 100vw;
     }
-
     .menu {
         height: 30vh;
-        width: 100%;
-        position: relative;
-        z-index: 1;
-        background: white;
+        min-height: 180px;
+        max-height: 45vh;
+        width: 100vw;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        z-index: 100;
+        background: #f8f9fa;
         display: flex;
         flex-direction: column;
+        box-shadow: 0 -2px 8px rgba(0,0,0,0.08);
+        border-top: 1px solid #ddd;
+        padding: 0;
     }
-
+    #overlay-list {
+        margin: 0 4px 56px 4px;
+        border-radius: 6px;
+        padding: 4px 0;
+        min-height: 40px;
+        flex: 1 1 0%;
+        max-height: unset;
+        overflow-y: auto;
+        background: #fff;
+    }
+    #overlay-search-container {
+        margin: 4px 4px 2px 4px;
+        padding: 0 0 2px 0;
+        background: #f4f7fb;
+        border-radius: 4px;
+    }
+    #clear-overlay-container {
+        width: 100vw;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 10;
+        background: #f8f9fa;
+        border-top: 1px solid #eee;
+        padding-bottom: 8px;
+    }
+    .clear-active-overlay-btn {
+        margin: 8px 8px 0 8px;
+        font-size: 1.1em;
+        touch-action: manipulation;
+        min-height: 36px;
+    }
+    .layer-list-item, .overlay-list-item {
+        font-size: 1.1em;
+        padding: 8px 8px;
+    }
+}
     .osmcat-menu {
         display: flex;
         flex-direction: row;
