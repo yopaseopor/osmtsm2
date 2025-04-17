@@ -14,9 +14,10 @@
         // Toggle open on handle tap
         handle.addEventListener('click', function(e) {
             if (!dragging) {
-                menu.classList.toggle('open');
-                overlay.style.display = menu.classList.contains('open') ? 'block' : 'none';
-                document.body.classList.toggle('menu-open', menu.classList.contains('open'));
+                var isOpen = menu.classList.contains('open');
+                menu.classList.toggle('open', !isOpen);
+                overlay.style.display = !isOpen ? 'block' : 'none';
+                document.body.classList.toggle('menu-open', !isOpen);
             }
         });
         // Drag to open/close
