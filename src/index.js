@@ -1,7 +1,5 @@
 /* global config, ol */
 $(function () {
-    // Load draggable menu resizer
-    $.getScript('src/menu_resizer.js');
     // --- Persistent Clear Overlays Button in Footer ---
     var $menuFooter = $('<div class="menu-footer"></div>');
     var $clearBtn = $('<div>')

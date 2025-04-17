@@ -51,10 +51,10 @@ a:hover {
 .menu {
     height: 100vh;
     width: 320px;
-    min-width: 200px;
-    max-width: 600px;
+    min-width: 260px;
+    max-width: 400px;
     background: #f8f9fa;
-    border-right: none;
+    border-right: 1px solid #ddd;
     box-shadow: 2px 0 8px rgba(0,0,0,0.03);
     padding: 0;
     display: flex;
@@ -64,23 +64,15 @@ a:hover {
     left: 0;
     top: 0;
     z-index: 2000;
+    transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+    transform: translateX(0);
 }
-
-.menu-separator {
-    position: fixed;
-    left: 320px;
-    top: 0;
-    height: 100vh;
-    width: 7px;
-    background: linear-gradient(to right, #e1e1e1 70%, #fff 100%);
-    cursor: ew-resize;
-    z-index: 2100;
-    border-radius: 0 4px 4px 0;
-    box-shadow: 2px 0 6px rgba(0,0,0,0.03);
-    transition: background 0.2s;
+.menu.menu-hidden {
+    transform: translateX(-100%);
+    box-shadow: none;
 }
-.menu-separator:hover {
-    background: linear-gradient(to right, #b8b8b8 70%, #fff 100%);
+.menu.menu-slide-right {
+    transform: translateX(0);
 }
 
 .menu-footer {
