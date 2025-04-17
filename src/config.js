@@ -172,62 +172,24 @@ var config = {
 	* iconSrc: string ruta de la imatge
 	* style: function see https://openlayers.org/en/latest/apidoc/module-ol_style_Style-Style.html
 	*/
-	overlays: [], // Will be filled after loading overlay category files
+	overlays: [], 
 
-		// Overlay categories are now loaded from separate files in src/overlays/
-		// Example: overlays/alimentacion.js, overlays/economia.js, etc.
-		// Each file should define a global array like window.overlayCategory_alimentacion
-		// After all category files are loaded, we combine them below.
-		
-{
-			group: 'Alimentación',
-			title: 'Supermercados',
-			query: '(nwr["shop"="supermarket"]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
-			iconStyle: 'background-color:rgba(255,255,255,0.4)',
-style: function (feature) {
-				var key_regex = /^name$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba(117,63,79,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(117,63,79,1)',
-					width: 1
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Icon({
-							src: imgSrc + 'icones/maxspeed_empty.svg',
-							scale:0.03
-						}),
-							text: new ol.style.Text({
-								text: name,
-								offsetX : 7,
-								offsetY : -12,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
-						}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
+	// Overlay categories are now loaded from separate files in src/overlays/
+	// Example: overlays/alimentacion.js, overlays/salud.js, overlays/economia.js, etc.
+	// Each file should define a global array like window.overlayCategory_alimentacion
+	// After all category files are loaded, we combine them below.
+	//
+	// This block ensures backward compatibility with code expecting config.overlays
+};
 
-/*@@ inicio-fin de copia */			},
-/*   abrir */							{
-/*@@ nombre del grupo al que pertenecen */	group: 'Economía',
-/*@@ título de la opción */					title: 'Banco Sabadell',
-/*@@ consulta overpass */					query: '(nwr["brand:wikidata"="Q762330"]({{bbox}});node(w););out meta;',
-/*@@ ruta del icono (URL o relativa) */		iconSrc: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/BSabadell_Logo.svg/220px-BSabadell_Logo.svg.png',
-/*@@ color del fondo del icono (r,g,b,a) */	iconStyle: 'background-color:rgba(255,255,255,0.4)',
-											style: function (feature) {
-/*@@ etiqueta para texto entre barras / / */	var key_regex = /^name:ca$/
-												var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-												var name = feature.get(name_key) || '';
-												var fill = new ol.style.Fill({
-/*@@ color del relleno (r,g,b,a) */					color: 'rgba(255,0,0,0.4)'
+if (typeof window !== 'undefined') {
+	config.overlays = [];
+	for (const key in window) {
+		if (key.startsWith('overlayCategory_') && Array.isArray(window[key])) {
+			config.overlays = config.overlays.concat(window[key]);
+		}
+	}
+}
 /*   cerrar */									});
 /*subrallado*/									var stroke = new ol.style.Stroke({
 /*@@ color de la línea (r,g,b,a) */					color: 'rgba(255,0,0,1)',
@@ -250,24 +212,6 @@ style: function (feature) {
 /*   cerrar */														}),
 /*   cerrar */												}),
 /*   texto */										fill: fill,
-													stroke: stroke
-/*   cerrar */									});
-											return style;
-/*   cerrar */								}
-
-/*@@ fin-inicio de copia */			},
-/*   abrir */							{	
-/*@@ nombre del grupo al que pertenecen */				group: 'BCN (CC 4.0 Dades Ajuntament BCN)',
-/*@@ título de la opción */								title: 'Ja sense activitat',
-/*@@ ruta del archivo geojson con datos */				geojson: 'https://raw.githubusercontent.com/yopaseopor/osmpoismap/main/src/test_bcn.geojson',
-/*@@ ruta del icono (URL o relativa) */					iconSrc: 'https://raw.githubusercontent.com/yopaseopor/osmpoismap/main/src/img/icones/closed.svg',
-/*@@ color del fondo del icono (r,g,b,a) */				iconStyle: 'background-color:rgba(255,255,255,0.4)',
-			style: function (feature) {
-/*@@ clave escogida entre barras / / para mostrar en texto sus valores  */					var key_regex = /^Nom_Local/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var styles = {
-/*@@ clave 1 para filtrar */						'Nom_Activitat': {
 /*@@ valor 1 de clave 1 para mostrar */							'Locals buits en venda i lloguer': new ol.style.Style({
 /*   icono */						image: new ol.style.Icon({
 /*@@ ruta del icono (URL o relativa) */								src: 'https://raw.githubusercontent.com/yopaseopor/osmpoismap/main/src/img/icones/rent_sell.svg',
