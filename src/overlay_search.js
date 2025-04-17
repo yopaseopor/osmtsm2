@@ -46,10 +46,10 @@
             letterMap[letter].forEach(function(overlay, idx) {
             const opt = document.createElement('div');
             opt.className = 'overlay-search-option';
-            // Add icon if available
-            if (overlay.icon) {
+            // Add icon if available (use iconSrc from config)
+            if (overlay.iconSrc) {
                 const iconImg = document.createElement('img');
-                iconImg.src = overlay.icon;
+                iconImg.src = overlay.iconSrc;
                 iconImg.alt = '';
                 iconImg.className = 'overlay-search-option-icon';
                 iconImg.style.maxWidth = '30px';
