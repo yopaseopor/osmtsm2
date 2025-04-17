@@ -60,7 +60,40 @@ a:hover {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2000;
+    transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+    transform: translateX(0);
 }
+.menu.menu-hidden {
+    transform: translateX(-100%);
+    box-shadow: none;
+}
+.menu.menu-slide-right {
+    transform: translateX(0);
+}
+
+.menu-footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
+    padding: 10px 12px 12px 12px;
+    z-index: 2100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clear-active-overlay-btn {
+    margin: 0;
+    width: 100%;
+}
+
 
 #overlay-list {
     background: #fff;

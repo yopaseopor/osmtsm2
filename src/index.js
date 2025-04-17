@@ -1,5 +1,44 @@
 /* global config, ol */
 $(function () {
+    // --- Sliding Menu Toggle Button ---
+    var $menu = $('.menu');
+    if (!$menu.length) $menu = $('#menu');
+    var $toggleBtn = $('<div>')
+        .addClass('menu-slide-toggle')
+        .css({position:'fixed',top:'12px',left:'320px',zIndex:2101,background:'#fff',border:'1px solid #ddd',borderRadius:'0 4px 4px 0',padding:'4px 10px',cursor:'pointer',boxShadow:'2px 0 8px rgba(0,0,0,0.08)'} )
+        .html('&#9776;')
+        .on('click', function() {
+            var menuIsHidden = $menu.hasClass('menu-hidden');
+            if (menuIsHidden) {
+                $menu.removeClass('menu-hidden').addClass('menu-slide-right');
+                $toggleBtn.css('left','320px');
+            } else {
+                $menu.addClass('menu-hidden').removeClass('menu-slide-right');
+                $toggleBtn.css('left','0');
+            }
+        });
+    $('body').append($toggleBtn);
+
+    // --- Persistent Clear Overlays Button in Footer ---
+    var $menuFooter = $('<div class="menu-footer"></div>');
+    var $clearBtn = $('<div>')
+        .addClass('clear-active-overlay-btn')
+        .text('✖ Clear Active Overlay')
+        .attr('tabindex', 0)
+        .on('click', function() {
+            // Hide all overlays
+            $.each(config.layers, function(indexLayer, layerGroup) {
+                if (layerGroup.get && layerGroup.get('type') === 'overlay') {
+                    $.each(layerGroup.getLayers().getArray(), function(idx, olayer) {
+                        if (olayer.setVisible) olayer.setVisible(false);
+                    });
+                }
+            });
+            if (window.renderOverlayList) window.renderOverlayList([], '');
+            $('#overlay-search').val('');
+        });
+    $menuFooter.append($clearBtn);
+    if ($menu.length) $menu.append($menuFooter);
     // --- Layer Searcher Integration ---
     // 1. Flatten base layers into window.layers
     window.layers = [];
@@ -111,25 +150,8 @@ $(function () {
     window.renderOverlayList = function(filtered, query) {
         var $list = $('#overlay-list');
         $list.empty();
-        // Always show Clear Active Overlay button at the top
-        var $clearBtn = $('<div>')
-            .addClass('clear-active-overlay-btn')
-            .text('✖ Clear Active Overlay')
-            .css({cursor:'pointer',padding:'6px 10px',background:'#ffeaea',color:'#b00',fontWeight:'bold',marginBottom:'6px'})
-            .attr('tabindex', 0)
-            .on('click', function() {
-                // Hide all overlays
-                $.each(config.layers, function(indexLayer, layerGroup) {
-                    if (layerGroup.get && layerGroup.get('type') === 'overlay') {
-                        $.each(layerGroup.getLayers().getArray(), function(idx, olayer) {
-                            if (olayer.setVisible) olayer.setVisible(false);
-                        });
-                    }
-                });
-                if (window.renderOverlayList) window.renderOverlayList([], '');
-                $('#overlay-search').val('');
-            });
-        $list.append($clearBtn);
+        // (No clear button here - it will be in the menu footer)
+
         var $list = $('#overlay-list');
         $list.empty();
         if (!query || !filtered || !filtered.length) {
