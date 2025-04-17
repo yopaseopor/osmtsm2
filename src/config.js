@@ -190,49 +190,11 @@ if (typeof window !== 'undefined') {
 		}
 	}
 }
-/*   cerrar */									});
-/*subrallado*/									var stroke = new ol.style.Stroke({
-/*@@ color de la línea (r,g,b,a) */					color: 'rgba(255,0,0,1)',
-/*@@ anchura de la línea */							width: 1
-/*   cerrar */									});
-												var style = new ol.style.Style({
-/*   icono */										image: new ol.style.Icon({
-/*@@ ruta del icono (URL o relativa) */					src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/BSabadell_Logo.svg/220px-BSabadell_Logo.svg.png',		
-/*@@ rotación */										rotation:0.9,
-/*@@ tamaño (en relativo) */							scale:0.30
-/*   cerrar */										}),
-/*   texto */												text: new ol.style.Text({
-																text: name,
-/*@@ peso,tamaño y cuerpo del texto */							font: 'bold 13px Arial, Verdana, Helvetica, sans-serif',
-/*@@ rotación del texto */										rotation:0.9,
-/*@@ posición x texto relativa al punto */						offsetX : 7,
-/*@@ posición y texto relativa al punto */						offsetY : -12,
-/* "relleno" del texto */										fill: new ol.style.Fill({
-/*@@ color del texto (r,g,b,a) */           						color: 'rgba(255,255,255,1)'
-/*   cerrar */														}),
-/*   cerrar */												}),
-/*   texto */										fill: fill,
-/*@@ valor 1 de clave 1 para mostrar */							'Locals buits en venda i lloguer': new ol.style.Style({
-/*   icono */						image: new ol.style.Icon({
-/*@@ ruta del icono (URL o relativa) */								src: 'https://raw.githubusercontent.com/yopaseopor/osmpoismap/main/src/img/icones/rent_sell.svg',
-/*@@ tamaño (en relativo) */							scale:1
-/*   cerrar */							}),
-/*   texto */												text: new ol.style.Text({
-																text: name,
-/*@@ peso,tamaño y cuerpo del texto */							font: 'bold 13px Arial, Verdana, Helvetica, sans-serif',
-/*@@ rotación del texto */										rotation:0.9,
-/*@@ posición x texto relativa al punto */						offsetX : 7,
-/*@@ posición y texto relativa al punto */						offsetY : -12,
-/* "relleno" del texto */										fill: new ol.style.Fill({
-/*@@ color del texto (r,g,b,a) */           						color: 'rgba(255,255,255,1)'
-/*   cerrar */														}),
-/*   cerrar */							})
-/*   cerrar */						}),
+						}),
 /*@@ valor 2 de clave 1 para mostrar */						'Locals buits en venda': new ol.style.Style({
 /*   icono */					image: new ol.style.Icon({
 /*@@ ruta del icono (URL o relativa) */							src: 'https://raw.githubusercontent.com/yopaseopor/osmpoismap/main/src/img/icones/sell.svg',
-/*@@ tamaño (en relativo) */							scale:1
-/*   cerrar */						}),
+/*@@ tamaño (en relativo) */							scale:1						}),
 /*   texto */							text: new ol.style.Text({
 								text: name,
 /*@@ peso,tamaño y cuerpo del texto */							font: 'bold 13px Arial, Verdana, Helvetica, sans-serif',
@@ -240,15 +202,11 @@ if (typeof window !== 'undefined') {
 /*@@ posición x texto relativa al punto */						offsetX : 7,
 /*@@ posición y texto relativa al punto */						offsetY : -12,
 /* "relleno" del texto */										fill: new ol.style.Fill({
-/*@@ color del texto (r,g,b,a) */                             color: 'rgba(0,0,0,1)'
-/*   cerrar */														}),
-/*   cerrar */							})
-/*   cerrar */						}),
+/*@@ color del texto (r,g,b,a) */                             color: 'rgba(0,0,0,1)'														}),							})						}),
 /*@@ valor 3 de clave 1 para mostrar */						'Sense informació': new ol.style.Style({
 /*   icono */					image: new ol.style.Icon({
 /*@@ ruta del icono (URL o relativa) */							src: 'https://raw.githubusercontent.com/yopaseopor/osmpoismap/main/src/img/icones/noinfo.svg',
-/*@@ tamaño (en relativo) */							scale:1
-/*   cerrar */							}),
+/*@@ tamaño (en relativo) */							scale:1							}),
 /*   texto */												text: new ol.style.Text({
 																text: name,
 /*@@ peso,tamaño y cuerpo del texto */							font: 'bold 13px Arial, Verdana, Helvetica, sans-serif',
@@ -256,15 +214,11 @@ if (typeof window !== 'undefined') {
 /*@@ posición x texto relativa al punto */						offsetX : 7,
 /*@@ posición y texto relativa al punto */						offsetY : -12,
 /* "relleno" del texto */										fill: new ol.style.Fill({
-/*@@ color del texto (r,g,b,a) */                             color: 'rgba(0,0,0,1)'
-/*   cerrar */														}),
-/*   cerrar */							})
-/*   cerrar */						}),
+/*@@ color del texto (r,g,b,a) */                             color: 'rgba(0,0,0,1)'														}),							})						}),
 /*@@ valor 4 de clave 1 para mostrar */						'Sense informació - Havia tingut activitat (rètol)': new ol.style.Style({
 /*   icono */					image: new ol.style.Icon({
 /*@@ ruta del icono (URL o relativa) */								src: 'https://raw.githubusercontent.com/yopaseopor/osmpoismap/main/src/img/icones/noinfo.svg',
-/*@@ tamaño (en relativo) */							scale:1
-/*   cerrar */							}),
+/*@@ tamaño (en relativo) */							scale:1							}),
 /*   texto */												text: new ol.style.Text({
 																text: name,
 /*@@ peso,tamaño y cuerpo del texto */							font: 'bold 13px Arial, Verdana, Helvetica, sans-serif',
@@ -272,15 +226,11 @@ if (typeof window !== 'undefined') {
 /*@@ posición x texto relativa al punto */						offsetX : 7,
 /*@@ posición y texto relativa al punto */						offsetY : -12,
 /* "relleno" del texto */										fill: new ol.style.Fill({
-/*@@ color del texto (r,g,b,a) */                             color: 'rgba(0,0,0,1)'
-/*   cerrar */														}),
-/*   cerrar */							})
-/*   cerrar */						}),
+/*@@ color del texto (r,g,b,a) */                             color: 'rgba(0,0,0,1)'														}),							})						}),
 /*@@ valor 5 de clave 1 para mostrar */							'Locals buits en lloguer': new ol.style.Style({
 /*   icono */					image: new ol.style.Icon({
 /*@@ ruta del icono (URL o relativa) */								src: 'https://raw.githubusercontent.com/yopaseopor/osmpoismap/main/src/img/icones/rent.svg',
-/*@@ tamaño (en relativo) */							scale:1
-/*   cerrar */							}),
+/*@@ tamaño (en relativo) */							scale:1							}),
 /*   texto */												text: new ol.style.Text({
 																text: name,
 /*@@ peso,tamaño y cuerpo del texto */							font: 'bold 13px Arial, Verdana, Helvetica, sans-serif',
@@ -288,24 +238,14 @@ if (typeof window !== 'undefined') {
 /*@@ posición x texto relativa al punto */						offsetX : 7,
 /*@@ posición y texto relativa al punto */						offsetY : -12,
 /* "relleno" del texto */										fill: new ol.style.Fill({
-/*@@ color del texto (r,g,b,a) */                             color: 'rgba(0,0,0,1)'
-/*   cerrar */														}),
-/*   cerrar */							})
-/*   cerrar */						}),
-/*   cerrar */					}
-/*   cerrar */				};
+/*@@ color del texto (r,g,b,a) */                             color: 'rgba(0,0,0,1)'														}),							})						}),					}				};
 				for (var key in styles) {
 					var value = feature.get(key);
 					if (value !== undefined) {
 						for (var regexp in styles[key]) {
 							if (new RegExp(regexp).test(value)) {
-								return styles[key][regexp];
-/*   cerrar */							}
-/*   cerrar */						}
-/*   cerrar */					}
-/*   cerrar */				}
-				return null;
-/*   cerrar */			}
+								return styles[key][regexp];							}						}					}				}
+				return null;			}
 
 /*@@ inicio-fin de copia */	},
 		{
