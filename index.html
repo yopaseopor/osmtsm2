@@ -19,42 +19,26 @@
 	<div class="flex-row">
 	<!--@@ Modificar comentario de Javascript -->
 		<div id="map" class="map">Loading... You need Javascript...Cargando necesitas Javascript...Carregant...necessites Javascript</div>
-		<!-- Desktop/Tablet Menu (visible only on desktop/tablet) -->
+		<!-- Unified Menu: will be styled as sidebar on desktop/tablet, and as bottom sheet on mobile -->
 		<div id="menu" class="menu">
 			<!-- Layer Searcher (at the top) -->
 			<div id="layer-search-container" style="margin: 10px 0;">
 			  <input type="text" id="layer-search" placeholder="Search layers..." style="width: 100%; padding: 5px;">
 			  <div id="layer-search-dropdown"></div>
 			</div>
-			<!-- Layers section -->
+			<!-- Layers section will be rendered here by JS -->
 			<!-- Overlay Searcher (between Layers and Overlays) -->
 			<div id="overlay-search-container" style="margin: 10px 0;">
 			  <input type="text" id="overlay-search" placeholder="Search overlays..." style="width: 100%; padding: 5px;">
 			  <div id="overlay-search-dropdown"></div>
 			</div>
-			<!-- Overlays section -->
+			<!-- Overlays section will be rendered here by JS -->
 			<div id="overlay-list"></div>
 		</div>
-		<!-- Mobile Bottom Sheet Menu (visible only on mobile, CSS/JS will control) -->
+		<!-- Mobile Bottom Sheet Menu: only the handle and content wrapper, menu is moved inside with JS/CSS -->
 		<div class="mobile-bottom-menu">
 			<div class="slide-handle"></div>
-			<div class="menu-content">
-				<div class="menu">
-					<!-- Layer Searcher (at the top) -->
-					<div id="layer-search-container" style="margin: 10px 0;">
-					  <input type="text" id="layer-search" placeholder="Search layers..." style="width: 100%; padding: 5px;">
-					  <div id="layer-search-dropdown"></div>
-					</div>
-					<!-- Layers section -->
-					<!-- Overlay Searcher (between Layers and Overlays) -->
-					<div id="overlay-search-container" style="margin: 10px 0;">
-					  <input type="text" id="overlay-search" placeholder="Search overlays..." style="width: 100%; padding: 5px;">
-					  <div id="overlay-search-dropdown"></div>
-					</div>
-					<!-- Overlays section -->
-					<div id="overlay-list"></div>
-				</div>
-			</div>
+			<div class="menu-content"></div>
 		</div>
 		<div class="mobile-menu-overlay"></div>
 	</div>

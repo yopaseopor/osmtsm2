@@ -647,6 +647,25 @@ $(function () {
 	var shouldUpdate = true;
 	// restore the view state when navigating through the history, see
 	// https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onpopstate
+	window.addEventListener('DOMContentLoaded', function() {
+    // Responsive menu placement: move #menu into .mobile-bottom-menu .menu-content on mobile, restore on desktop
+    function moveMenuForMobile() {
+        var menu = document.getElementById('menu');
+        var menuContent = document.querySelector('.mobile-bottom-menu .menu-content');
+        var flexRow = document.querySelector('.flex-row');
+        if (window.matchMedia('(max-width: 599px)').matches) {
+            if (menu && menuContent && !menuContent.contains(menu)) {
+                menuContent.appendChild(menu);
+            }
+        } else {
+            if (menu && flexRow && !flexRow.contains(menu)) {
+                flexRow.insertBefore(menu, flexRow.children[1]); // after map
+            }
+        }
+    }
+    moveMenuForMobile();
+    window.addEventListener('resize', moveMenuForMobile);
+	});
 	window.addEventListener('popstate', function(event) {
 		if (event.state === null) {
 			return;
