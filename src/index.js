@@ -1,6 +1,4 @@
 /* global config, ol */
-import './mobile_menu_toggle.js';
-
 $(function () {
     // --- Layer Searcher Integration ---
     // 1. Flatten base layers into window.layers
