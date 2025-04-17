@@ -1,25 +1,5 @@
 /* global config, ol */
 $(function () {
-    // --- Persistent Clear Overlays Button in Footer ---
-    var $menuFooter = $('<div class="menu-footer"></div>');
-    var $clearBtn = $('<div>')
-        .addClass('clear-active-overlay-btn')
-        .text('✖ Clear Active Overlay')
-        .attr('tabindex', 0)
-        .on('click', function() {
-            // Hide all overlays
-            $.each(config.layers, function(indexLayer, layerGroup) {
-                if (layerGroup.get && layerGroup.get('type') === 'overlay') {
-                    $.each(layerGroup.getLayers().getArray(), function(idx, olayer) {
-                        if (olayer.setVisible) olayer.setVisible(false);
-                    });
-                }
-            });
-            if (window.renderOverlayList) window.renderOverlayList([], '');
-            $('#overlay-search').val('');
-        });
-    $menuFooter.append($clearBtn);
-    if ($menu.length) $menu.append($menuFooter);
     // --- Layer Searcher Integration ---
     // 1. Flatten base layers into window.layers
     window.layers = [];
@@ -131,8 +111,29 @@ $(function () {
     window.renderOverlayList = function(filtered, query) {
         var $list = $('#overlay-list');
         $list.empty();
-        // (No clear button here - it will be in the menu footer)
-
+        // Ensure Clear Overlay button is always at the bottom of the menu, not inside the overlay list
+        if (!$('#clear-overlay-container').length) {
+            var $clearContainer = $('<div id="clear-overlay-container"></div>');
+            $('.menu').append($clearContainer);
+        }
+        var $clearBtn = $('<div>')
+            .addClass('clear-active-overlay-btn')
+            .text('✖ Clear Active Overlay')
+            .css({cursor:'pointer',padding:'6px 10px',background:'#ffeaea',color:'#b00',fontWeight:'bold',margin:'12px 8px'})
+            .attr('tabindex', 0)
+            .on('click', function() {
+                // Hide all overlays
+                $.each(config.layers, function(indexLayer, layerGroup) {
+                    if (layerGroup.get && layerGroup.get('type') === 'overlay') {
+                        $.each(layerGroup.getLayers().getArray(), function(idx, olayer) {
+                            if (olayer.setVisible) olayer.setVisible(false);
+                        });
+                    }
+                });
+                if (window.renderOverlayList) window.renderOverlayList([], '');
+                $('#overlay-search').val('');
+            });
+        $('#clear-overlay-container').empty().append($clearBtn);
         var $list = $('#overlay-list');
         $list.empty();
         if (!query || !filtered || !filtered.length) {
