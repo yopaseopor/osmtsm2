@@ -27,31 +27,7 @@
                 });
             }
         });
-        // Always add a 'Clear Active Overlay' button
-        var clearBtn = document.createElement('div');
-        clearBtn.textContent = '✖ Clear Active Overlay';
-        clearBtn.style.cursor = 'pointer';
-        clearBtn.style.padding = '6px 10px';
-        clearBtn.style.background = '#ffeaea';
-        clearBtn.style.color = '#b00';
-        clearBtn.style.fontWeight = 'bold';
-        clearBtn.id = 'clear-active-overlay-btn';
-        clearBtn.tabIndex = 0;
-        clearBtn.addEventListener('mousedown', function(e) {
-            e.preventDefault();
-            // Hide all overlays
-            $.each(config.layers, function(indexLayer, layerGroup) {
-                if (layerGroup.get && layerGroup.get('type') === 'overlay') {
-                    $.each(layerGroup.getLayers().getArray(), function(idx, olayer) {
-                        if (olayer.setVisible) olayer.setVisible(false);
-                    });
-                }
-            });
-            if (window.renderOverlayList) window.renderOverlayList([], '');
-            dropdown.style.display = 'none';
-            searchInput.value = '';
-        });
-        dropdown.appendChild(clearBtn);
+
         if (!searchInput.value || !results.length) {
             dropdown.style.display = 'none';
             return;

@@ -1026,6 +1026,24 @@ a:hover {
     r: 6;  /* Make active dot slightly larger */
 }
 
+.clear-active-overlay-btn {
+  cursor: pointer;
+  padding: 6px 10px;
+  background: #ffeaea;
+  color: #b00;
+  font-weight: bold;
+  margin-bottom: 6px;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  text-align: left;
+  transition: background 0.2s;
+}
+.clear-active-overlay-btn:hover, .clear-active-overlay-btn:focus {
+  background: #ffcccc;
+  outline: none;
+}
+
 /* Overlay search bar styles */
 #overlay-search-container, #layer-search-container {
   position: relative;

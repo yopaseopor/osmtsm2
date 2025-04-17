@@ -111,6 +111,27 @@ $(function () {
     window.renderOverlayList = function(filtered, query) {
         var $list = $('#overlay-list');
         $list.empty();
+        // Always show Clear Active Overlay button at the top
+        var $clearBtn = $('<div>')
+            .addClass('clear-active-overlay-btn')
+            .text('✖ Clear Active Overlay')
+            .css({cursor:'pointer',padding:'6px 10px',background:'#ffeaea',color:'#b00',fontWeight:'bold',marginBottom:'6px'})
+            .attr('tabindex', 0)
+            .on('click', function() {
+                // Hide all overlays
+                $.each(config.layers, function(indexLayer, layerGroup) {
+                    if (layerGroup.get && layerGroup.get('type') === 'overlay') {
+                        $.each(layerGroup.getLayers().getArray(), function(idx, olayer) {
+                            if (olayer.setVisible) olayer.setVisible(false);
+                        });
+                    }
+                });
+                if (window.renderOverlayList) window.renderOverlayList([], '');
+                $('#overlay-search').val('');
+            });
+        $list.append($clearBtn);
+        var $list = $('#overlay-list');
+        $list.empty();
         if (!query || !filtered || !filtered.length) {
             if (query && (!filtered || !filtered.length)) {
                 $list.append('<div style="padding:8px;color:#888;">No overlays found.</div>');
@@ -118,29 +139,33 @@ $(function () {
             return;
         }
         var activeOverlay = null;
-        $.each(config.layers, function(indexLayer, layerGroup) {
-            if (layerGroup.get && layerGroup.get('type') === 'overlay') {
-                $.each(layerGroup.getLayers().getArray(), function(idx, olayer) {
-                    if (olayer.getVisible && olayer.getVisible()) {
-                        activeOverlay = olayer;
-                    }
-                });
+        // Group overlays by first letter only, show max 10 per letter
+        var letterMap = {};
+        filtered.forEach(function(overlay) {
+            var titleOrGroup = (overlay.title || overlay.group || '').trim();
+            var firstLetter = titleOrGroup.charAt(0) ? titleOrGroup.charAt(0).toUpperCase() : '_';
+            if (!letterMap[firstLetter]) letterMap[firstLetter] = [];
+            if (letterMap[firstLetter].length < 10) {
+                letterMap[firstLetter].push(overlay);
             }
         });
-        filtered.forEach(function(overlay, idx) {
-            var isActive = activeOverlay && ((overlay.id && activeOverlay.get('id') === overlay.id) || (activeOverlay.get('title') === overlay.title && activeOverlay.get('group') === overlay.group));
-            var $item = $('<div>').addClass('overlay-list-item').text((overlay.group ? overlay.group + ': ' : '') + overlay.title);
-            if (isActive) $item.addClass('active').attr('tabindex', 0);
-            $item.css({cursor:'pointer'}).on('click', function() {
-                window.activateOverlay(overlay);
+        // Render overlays (max 10 per letter)
+        Object.keys(letterMap).sort().forEach(function(letter) {
+            letterMap[letter].forEach(function(overlay) {
+                var isActive = activeOverlay && ((overlay.id && activeOverlay.get('id') === overlay.id) || (activeOverlay.get('title') === overlay.title && activeOverlay.get('group') === overlay.group));
+                var $item = $('<div>').addClass('overlay-list-item').text((overlay.group ? overlay.group + ': ' : '') + overlay.title);
+                if (isActive) $item.addClass('active').attr('tabindex', 0);
+                $item.css({cursor:'pointer'}).on('click', function() {
+                    window.activateOverlay(overlay);
+                });
+                $list.append($item);
+                if (isActive) {
+                    setTimeout(function(){
+                        $item[0].scrollIntoView({block:'nearest'});
+                        $item.focus();
+                    }, 10);
+                }
             });
-            $list.append($item);
-            if (isActive) {
-                setTimeout(function(){
-                    $item[0].scrollIntoView({block:'nearest'});
-                    $item.focus();
-                }, 10);
-            }
         });
     };
 
