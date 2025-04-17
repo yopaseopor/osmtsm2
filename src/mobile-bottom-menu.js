@@ -58,8 +58,11 @@
         dragging = false;
         document.body.style.userSelect = '';
         var vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-        var threshold = vh * 0.35;
-        var isOpen = menu.offsetHeight > threshold;
+        var snapCollapsed = vh * 0.13;
+        var snapExpanded = vh * 0.9;
+        var currentHeight = menu.offsetHeight;
+        // Snap logic: if closer to expanded, expand; else collapse
+        var isOpen = Math.abs(currentHeight - snapExpanded) < Math.abs(currentHeight - snapCollapsed);
         menu.classList.toggle('open', isOpen);
         menu.style.height = '';
         if (overlay) overlay.style.display = isOpen ? 'block' : 'none';
