@@ -19,21 +19,28 @@
 	<div class="flex-row">
 	<!--@@ Modificar comentario de Javascript -->
 		<div id="map" class="map">Loading... You need Javascript...Cargando necesitas Javascript...Carregant...necessites Javascript</div>
-		<div id="menu" class="menu">
-			<!-- Layer Searcher (at the top) -->
-			<div id="layer-search-container" style="margin: 10px 0;">
-			  <input type="text" id="layer-search" placeholder="Search layers..." style="width: 100%; padding: 5px;">
-			  <div id="layer-search-dropdown"></div>
+		<!-- Mobile Bottom Sheet Menu (visible only on mobile, CSS/JS will control) -->
+		<div class="mobile-bottom-menu">
+			<div class="slide-handle"></div>
+			<div class="menu-content">
+				<div id="menu" class="menu">
+					<!-- Layer Searcher (at the top) -->
+					<div id="layer-search-container" style="margin: 10px 0;">
+					  <input type="text" id="layer-search" placeholder="Search layers..." style="width: 100%; padding: 5px;">
+					  <div id="layer-search-dropdown"></div>
+					</div>
+					<!-- Layers section -->
+					<!-- Overlay Searcher (between Layers and Overlays) -->
+					<div id="overlay-search-container" style="margin: 10px 0;">
+					  <input type="text" id="overlay-search" placeholder="Search overlays..." style="width: 100%; padding: 5px;">
+					  <div id="overlay-search-dropdown"></div>
+					</div>
+					<!-- Overlays section -->
+					<div id="overlay-list"></div>
+				</div>
 			</div>
-			<!-- Layers section -->
-			<!-- Overlay Searcher (between Layers and Overlays) -->
-			<div id="overlay-search-container" style="margin: 10px 0;">
-			  <input type="text" id="overlay-search" placeholder="Search overlays..." style="width: 100%; padding: 5px;">
-			  <div id="overlay-search-dropdown"></div>
-			</div>
-			<!-- Overlays section -->
-			<div id="overlay-list"></div>
 		</div>
+		<div class="mobile-menu-overlay"></div>
 	</div>
 	<script src="src/api/jquery/3.4.1/jquery.min.js" defer=""></script>
 	<script src="src/api/jquery-ui-1.12.1.custom/jquery-ui.min.js" defer=""></script>
@@ -46,5 +53,6 @@
 	<script src="src/panoramax_viewer.js" defer=""></script>
 	<script src="src/mapillary_viewer.js" defer=""></script>
 	<script src="src/router.js" defer=""></script>
+<script src="src/mobile-bottom-menu.js"></script>
 </body>
 </html>
