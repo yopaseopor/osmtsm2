@@ -97,6 +97,19 @@ a:hover {
     padding: 0 0 2px 0;
     background: #f4f7fb;
     border-radius: 4px;
+    display: flex;
+    align-items: center;
+    min-height: 54px;
+}
+#active-overlay-icon {
+    max-width: 50px;
+    max-height: 50px;
+    width: auto;
+    height: auto;
+    display: block;
+    margin-right: 10px;
+    margin-bottom: 0;
+    flex-shrink: 0;
 }
 
 .clear-active-overlay-btn {
