@@ -1,24 +1,7 @@
 /* global config, ol */
 $(function () {
-    // --- Sliding Menu Toggle Button ---
-    var $menu = $('.menu');
-    if (!$menu.length) $menu = $('#menu');
-    var $toggleBtn = $('<div>')
-        .addClass('menu-slide-toggle')
-        .css({position:'fixed',top:'12px',left:'320px',zIndex:2101,background:'#fff',border:'1px solid #ddd',borderRadius:'0 4px 4px 0',padding:'4px 10px',cursor:'pointer',boxShadow:'2px 0 8px rgba(0,0,0,0.08)'} )
-        .html('&#9776;')
-        .on('click', function() {
-            var menuIsHidden = $menu.hasClass('menu-hidden');
-            if (menuIsHidden) {
-                $menu.removeClass('menu-hidden').addClass('menu-slide-right');
-                $toggleBtn.css('left','320px');
-            } else {
-                $menu.addClass('menu-hidden').removeClass('menu-slide-right');
-                $toggleBtn.css('left','0');
-            }
-        });
-    $('body').append($toggleBtn);
-
+    // Load draggable menu resizer
+    $.getScript('src/menu_resizer.js');
     // --- Persistent Clear Overlays Button in Footer ---
     var $menuFooter = $('<div class="menu-footer"></div>');
     var $clearBtn = $('<div>')
