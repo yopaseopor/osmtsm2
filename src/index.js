@@ -15,7 +15,16 @@ $(function () {
 
     function setMenuHeight(h) {
         h = Math.max(minMenuHeight, Math.min(h, maxMenuHeight));
-        $menu.css('height', h + 'px');
+        $menu.removeClass('expanded collapsed');
+        if (h >= maxMenuHeight - 10) {
+            $menu.addClass('expanded');
+            $menu.css('height', '');
+        } else if (h <= minMenuHeight + 10) {
+            $menu.addClass('collapsed');
+            $menu.css('height', '');
+        } else {
+            $menu.css('height', h + 'px');
+        }
         // Update icon direction
         if(h < (minMenuHeight + 30)) {
             $slider.find('.slider-icon').html('&#x25B2;');
