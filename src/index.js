@@ -647,31 +647,6 @@ $(function () {
 	var shouldUpdate = true;
 	// restore the view state when navigating through the history, see
 	// https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onpopstate
-	window.addEventListener('DOMContentLoaded', function() {
-    function moveMenuForMobile() {
-        var menu = document.getElementById('menu');
-        var menuContent = document.querySelector('.mobile-bottom-menu .menu-content');
-        var flexRow = document.querySelector('.flex-row');
-        var isMobile = window.matchMedia('(max-width: 599px)').matches;
-        if (!menu || !menuContent || !flexRow) return;
-        if (isMobile) {
-            if (!menuContent.contains(menu)) {
-                menuContent.appendChild(menu);
-            }
-        } else {
-            if (!flexRow.contains(menu)) {
-                flexRow.insertBefore(menu, flexRow.children[1]); // after map
-            }
-        }
-        // Always let CSS control menu display
-        menu.style.display = '';
-        // Rerender menu content after move
-        if (window.renderLayerList && window.layers) window.renderLayerList(window.layers);
-        if (window.renderOverlayList && window.overlays) window.renderOverlayList(window.overlays);
-    }
-    moveMenuForMobile();
-    window.addEventListener('resize', moveMenuForMobile);
-});
 	window.addEventListener('popstate', function(event) {
 		if (event.state === null) {
 			return;
