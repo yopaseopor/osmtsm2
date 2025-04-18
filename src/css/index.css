@@ -324,240 +324,167 @@ a:hover {
 /* Mobile/Responsive Mode (screens < 600px) */
 @media only screen and (max-width: 599px) {
     html, body {
-        font-size: 15px;
-        height: 100vh;
         width: 100vw;
-        overflow-x: hidden;
+        height: 100vh;
         margin: 0;
         padding: 0;
-        -webkit-touch-callout: none;
-        -webkit-tap-highlight-color: transparent;
+        overflow-x: hidden;
+        font-size: 16px;
     }
     .flex-row {
-        display: flex;
         flex-direction: column;
         height: 100vh;
         min-height: 100vh;
-        width: 100vw;
-        overflow: hidden;
-        margin: 0;
-        padding: 0;
-    }
-    .map {
-        height: 60vh !important;
-        min-height: 250px;
-        width: 100vw !important;
-        border: none;
-        position: relative;
-        margin: 0;
-        padding: 0;
-    }
-    .menu {
-        height: 40vh !important;
-        width: 100vw !important;
-        min-width: unset;
-        max-width: unset;
-        position: relative;
-        box-shadow: none;
-        border: none;
-        overflow-y: auto;
-        padding: 0 4px 8px 4px;
-        margin: 0;
-        font-size: 1em;
-    }
-    #menu, .osmcat-menu {
-        width: 100vw !important;
-        min-width: unset;
-        max-width: unset;
-        height: 100%;
-        overflow-y: auto;
-    }
-    #overlay-list {
-        margin-bottom: 40px;
-        padding-bottom: 8px;
-    }
-    #overlay-search-container, #layer-search-container {
-        margin: 6px 0;
-        padding: 0;
-        border-radius: 4px;
-    }
-    #overlay-search, #layer-search {
-        font-size: 1em;
-        padding: 8px;
-        width: 100%;
-        box-sizing: border-box;
-    }
-    .osmcat-button, .nominatim-search button, .osmcat-panoramax button {
-        min-width: 44px;
-        min-height: 44px;
-        font-size: 1.1em;
-        padding: 8px 10px;
-        border-radius: 6px;
-    }
-    .osmcat-geobutton, .osmcat-infobutton, .osmcat-sharebutton, .osmcat-panoramax, .osmcat-mapillary {
-        bottom: 18px !important;
-        left: 8px !important;
-        right: 8px !important;
-        z-index: 1001;
-    }
-    .nominatim-search input {
-        width: 90vw;
-        max-width: 95vw;
-        font-size: 1em;
-        padding: 8px;
-    }
-    .popup .popuptext {
-        width: 90vw;
-        left: 5vw;
-        margin-left: 0;
-        font-size: 1em;
-    }
-    /* Fix for overlay dropdowns */
-    .overlay-search-dropdown, #layer-search-dropdown {
-        max-height: 30vh;
-        font-size: 1em;
-        width: 100vw;
-        left: 0;
-        right: 0;
-    }
-    /* Ensure proper menu height in router mode */
-    .osmcat-menu.router-active {
-        height: 100%;
-    }
-    .osmcat-menu.router-active .osmcat-layer {
-        height: 100%;
-    }
-    .router-form {
-        flex: 1;
-        overflow-y: auto;
-        padding: 8px;
-        background: white;
-    }
-    /* Map viewer active adjustment */
-    .map.viewer-active {
-        height: 40vh !important;
-        min-height: 160px;
-    }
-    .map.viewer-active .ol-layers {
-        z-index: 2;
-    }
-    /* General touch target improvements */
-    button, input, select, textarea {
-        font-size: 1em;
-        min-height: 44px;
-    }
-    /* Prevent horizontal scroll */
-    body, html {
-        overflow-x: hidden !important;
-    }
-}
-    .flex-row {
-        flex-direction: column;
-        height: 100vh;
         position: relative;
         overflow: hidden;
+        width: 100vw;
+        max-width: 100vw;
     }
-
     .map {
+        width: 100vw;
+        max-width: 100vw;
         height: 70vh;
+        min-height: 60vh;
         border: none;
         position: relative;
+        touch-action: pan-x pan-y;
     }
-
     .menu {
         height: 30vh;
-        width: 100%;
+        min-height: 30vh;
+        max-height: 40vh;
+        width: 100vw;
+        min-width: 100vw;
         position: relative;
         z-index: 1;
-        background: white;
+        background: #fff;
         display: flex;
         flex-direction: column;
+        overflow: hidden;
+        box-shadow: 0 -2px 8px rgba(0,0,0,0.03);
     }
-
     .osmcat-menu {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        width: 300%;
+        width: 100vw;
         height: 100%;
         overflow-x: auto;
         overflow-y: hidden;
         -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
     }
-
+    .osmcat-menu::-webkit-scrollbar {
+        display: none;
+    }
     .osmcat-layer {
-        flex: 0 0 100%;
-        width: 100%;
+        flex: 0 0 100vw;
+        width: 100vw;
         min-width: 100vw;
         border: none;
         border-top: 1px solid #BBB;
         display: flex;
         flex-direction: column;
         overflow: hidden;
-        background: white;
+        background: #fff;
     }
-
     .osmcat-layer > div:first-child {
-        padding: 5px;
-        background: white;
+        padding: 8px 12px;
+        background: #fff;
         border-bottom: 1px solid #BBB;
         flex-shrink: 0;
+        font-size: 1.1em;
     }
-
     .osmcat-content {
         flex: 1;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
-        padding: 5px;
-        background: white;
+        padding: 8px 12px;
+        background: #fff;
+        font-size: 1em;
     }
-
+    .osmcat-button, .nominatim-search button, .osmcat-panoramax button {
+        min-width: 44px;
+        min-height: 44px;
+        font-size: 1em;
+        padding: 8px;
+        margin: 4px;
+        border-radius: 8px;
+    }
+    .nominatim-search input {
+        font-size: 1em;
+        padding: 8px;
+        min-width: 60vw;
+        max-width: 80vw;
+    }
+    .osmcat-map-pin {
+        font-size: 1.2em;
+    }
     /* Share button position fix for mobile */
     .osmcat-sharebutton {
-        bottom: 70px;
-        right: 44px;
+        bottom: 80px;
+        right: 16px;
     }
-
     /* Ensure proper menu height in router mode */
     .osmcat-menu.router-active {
         height: 100%;
     }
-
     .osmcat-menu.router-active .osmcat-layer {
         height: 100%;
     }
-
     .router-form {
         flex: 1;
         overflow-y: auto;
         padding: 10px;
         -webkit-overflow-scrolling: touch;
-        background: white;
+        background: #fff;
+        font-size: 1em;
     }
-
     .mapillary-viewer {
         height: 50vh;
     }
-    
     .mapillary-viewer iframe {
         height: calc(100% - 30px);
     }
-    
     /* Adjust Mapillary's internal share button position */
     .mapillary-viewer .mapillary-share-button {
         bottom: 100px !important;
         right: 10px !important;
         z-index: 1002 !important;
     }
-    
     /* Ensure the map shows active sequence clearly */
     .map.viewer-active {
         height: 50vh !important;
     }
-    
     .map.viewer-active .ol-layers {
         z-index: 2;
     }
+    /* Make sure overlays and popups fit on small screens */
+    .popup .popuptext {
+        width: 90vw;
+        left: 5vw;
+        margin-left: 0;
+        font-size: 1em;
+        padding: 8px 0;
+    }
+    /* Prevent horizontal scroll on overlays */
+    #overlay-list, #overlay-search-container, #layer-search-container {
+        max-width: 100vw;
+        overflow-x: auto;
+    }
+    /* Touch-friendly close buttons */
+    .close-button {
+        min-width: 44px;
+        min-height: 44px;
+        font-size: 1.2em;
+        border-radius: 8px;
+    }
+    /* Make sure credit/footer is visible and not too small */
+    .mapillary-viewer .credits {
+        font-size: 1em;
+        padding: 0 6px;
+    }
+
 }
 
 /* Mapillary dot styles - for both PC and mobile */
