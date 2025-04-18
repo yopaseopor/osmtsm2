@@ -209,94 +209,6 @@ a:hover {
 
 /* The actual popup */
 .popup .popuptext {
-
-/* --- MOBILE MENU STYLES --- */
-@media (max-width: 600px) {
-  body, html {
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-  }
-  .flex-row {
-    flex-direction: column;
-    height: 100vh;
-    width: 100vw;
-    position: relative;
-  }
-  #map {
-    flex: 1 1 auto;
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    z-index: 1;
-  }
-  #menu-drawer {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100vw;
-    z-index: 10;
-    pointer-events: none;
-  }
-  #menu {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100vw;
-    min-width: 0;
-    max-width: 100vw;
-    height: 60vh;
-    max-height: 90vh;
-    border-radius: 16px 16px 0 0;
-    border-right: none;
-    border-left: none;
-    border-bottom: none;
-    box-shadow: 0 -2px 12px rgba(0,0,0,0.14);
-    transform: translateY(100%);
-    transition: transform 0.3s cubic-bezier(.4,0,.2,1);
-    pointer-events: auto;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 32px;
-  }
-  #menu.open {
-    transform: translateY(0);
-  }
-  .menu-slider-handle {
-    width: 48px;
-    height: 6px;
-    background: #ccc;
-    border-radius: 3px;
-    margin: 8px auto 12px auto;
-    cursor: grab;
-    position: relative;
-    z-index: 11;
-  }
-  .menu-toggle {
-    position: fixed;
-    top: 12px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 20;
-    background: #fff;
-    border: 1px solid #ccc;
-    border-radius: 24px;
-    padding: 8px 18px;
-    font-size: 1.2rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .menu-toggle .fa {
-    font-size: 1.4rem;
-  }
-}
-
   visibility: hidden;
   width: 160px;
   background-color: #555;
@@ -411,6 +323,134 @@ a:hover {
 
 /* Mobile/Responsive Mode (screens < 600px) */
 @media only screen and (max-width: 599px) {
+    html, body {
+        font-size: 15px;
+        height: 100vh;
+        width: 100vw;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+        -webkit-touch-callout: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+    .flex-row {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        min-height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+    }
+    .map {
+        height: 60vh !important;
+        min-height: 250px;
+        width: 100vw !important;
+        border: none;
+        position: relative;
+        margin: 0;
+        padding: 0;
+    }
+    .menu {
+        height: 40vh !important;
+        width: 100vw !important;
+        min-width: unset;
+        max-width: unset;
+        position: relative;
+        box-shadow: none;
+        border: none;
+        overflow-y: auto;
+        padding: 0 4px 8px 4px;
+        margin: 0;
+        font-size: 1em;
+    }
+    #menu, .osmcat-menu {
+        width: 100vw !important;
+        min-width: unset;
+        max-width: unset;
+        height: 100%;
+        overflow-y: auto;
+    }
+    #overlay-list {
+        margin-bottom: 40px;
+        padding-bottom: 8px;
+    }
+    #overlay-search-container, #layer-search-container {
+        margin: 6px 0;
+        padding: 0;
+        border-radius: 4px;
+    }
+    #overlay-search, #layer-search {
+        font-size: 1em;
+        padding: 8px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .osmcat-button, .nominatim-search button, .osmcat-panoramax button {
+        min-width: 44px;
+        min-height: 44px;
+        font-size: 1.1em;
+        padding: 8px 10px;
+        border-radius: 6px;
+    }
+    .osmcat-geobutton, .osmcat-infobutton, .osmcat-sharebutton, .osmcat-panoramax, .osmcat-mapillary {
+        bottom: 18px !important;
+        left: 8px !important;
+        right: 8px !important;
+        z-index: 1001;
+    }
+    .nominatim-search input {
+        width: 90vw;
+        max-width: 95vw;
+        font-size: 1em;
+        padding: 8px;
+    }
+    .popup .popuptext {
+        width: 90vw;
+        left: 5vw;
+        margin-left: 0;
+        font-size: 1em;
+    }
+    /* Fix for overlay dropdowns */
+    .overlay-search-dropdown, #layer-search-dropdown {
+        max-height: 30vh;
+        font-size: 1em;
+        width: 100vw;
+        left: 0;
+        right: 0;
+    }
+    /* Ensure proper menu height in router mode */
+    .osmcat-menu.router-active {
+        height: 100%;
+    }
+    .osmcat-menu.router-active .osmcat-layer {
+        height: 100%;
+    }
+    .router-form {
+        flex: 1;
+        overflow-y: auto;
+        padding: 8px;
+        background: white;
+    }
+    /* Map viewer active adjustment */
+    .map.viewer-active {
+        height: 40vh !important;
+        min-height: 160px;
+    }
+    .map.viewer-active .ol-layers {
+        z-index: 2;
+    }
+    /* General touch target improvements */
+    button, input, select, textarea {
+        font-size: 1em;
+        min-height: 44px;
+    }
+    /* Prevent horizontal scroll */
+    body, html {
+        overflow-x: hidden !important;
+    }
+}
     .flex-row {
         flex-direction: column;
         height: 100vh;
