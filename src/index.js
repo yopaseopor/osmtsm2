@@ -1,87 +1,63 @@
 /* global config, ol */
 $(function () {
-    // --- Mobile menu slider logic ---
+    // --- MOBILE MENU SLIDER LOGIC ---
     function isMobile() {
-        return window.matchMedia('(max-width: 599px)').matches;
+        return window.innerWidth <= 600;
     }
-    var $menu = $('#menu');
-    var $slider = $('#menu-slider-handle');
-
-    var minMenuHeight = 48; // px
-    var maxMenuHeight = window.innerHeight * 0.9; // 90vh
-    var startY = null;
-    var startHeight = null;
-    var dragging = false;
-
-    function setMenuHeight(h) {
-        h = Math.max(minMenuHeight, Math.min(h, maxMenuHeight));
-        $menu.removeClass('expanded collapsed');
-        if (h >= maxMenuHeight - 10) {
-            $menu.addClass('expanded');
-            $menu.css('height', '');
-        } else if (h <= minMenuHeight + 10) {
-            $menu.addClass('collapsed');
-            $menu.css('height', '');
-        } else {
-            $menu.css('height', h + 'px');
-        }
-        // Update icon direction
-        if(h < (minMenuHeight + 30)) {
-            $slider.find('.slider-icon').html('&#x25B2;');
-        } else if(h > (maxMenuHeight - 30)) {
-            $slider.find('.slider-icon').html('&#x25BC;');
-        } else {
-            $slider.find('.slider-icon').html('&#x25BC;');
+    function openMenu() {
+        if (isMobile()) {
+            $('#menu').addClass('open');
+            document.body.style.overflow = 'hidden';
         }
     }
-    function showSliderIfMobile() {
-        if(isMobile()) {
-            $slider.show();
-            maxMenuHeight = window.innerHeight * 0.9;
-            // Set initial menu height if not set
-            if(!$menu.data('init')) {
-                setMenuHeight(window.innerHeight * 0.3);
-                $menu.data('init', true);
+    function closeMenu() {
+        if (isMobile()) {
+            $('#menu').removeClass('open');
+            document.body.style.overflow = '';
+        }
+    }
+    $('#menu-toggle').on('click', function(e) {
+        e.stopPropagation();
+        if ($('#menu').hasClass('open')) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+    });
+    // Close menu when clicking outside
+    $(document).on('click touchstart', function(e) {
+        if (isMobile() && $('#menu').hasClass('open')) {
+            if (!$(e.target).closest('#menu, #menu-toggle, .menu-slider-handle').length) {
+                closeMenu();
             }
-        } else {
-            $slider.hide();
-            $menu.css('height', '');
-            $menu.removeData('init');
         }
-    }
-    function onDragStart(e) {
-        if(!isMobile()) return;
+    });
+    // Drag handle to close
+    let startY = null, dragging = false;
+    $('#menu-slider-handle').on('touchstart mousedown', function(e) {
         dragging = true;
-        $('body').addClass('no-select');
+        startY = e.touches ? e.touches[0].clientY : e.clientY;
         e.preventDefault();
-    }
-    function onDragMove(e) {
-        if(!dragging) return;
-        var clientY = (e.touches ? e.touches[0].clientY : e.clientY);
-        var viewportHeight = window.innerHeight;
-        var pointerFromBottom = viewportHeight - clientY;
-        var newHeight = Math.max(minMenuHeight, Math.min(pointerFromBottom, maxMenuHeight));
-        setMenuHeight(newHeight);
-    }
-    function onDragEnd(e) {
-        if(!dragging) return;
-        dragging = false;
-        var menuHeight = $menu.height();
-        // Snap to min or max
-        if(menuHeight < (minMenuHeight + maxMenuHeight)/2) {
-            setMenuHeight(minMenuHeight);
-        } else {
-            setMenuHeight(maxMenuHeight);
+    });
+    $(window).on('touchmove mousemove', function(e) {
+        if (!dragging) return;
+        let y = e.touches ? e.touches[0].clientY : e.clientY;
+        if (y - startY > 40) { // drag down > 40px
+            closeMenu();
+            dragging = false;
         }
-        $('body').removeClass('no-select');
-    }
-    $slider.on('touchstart mousedown', onDragStart);
-    $(window).on('touchmove mousemove', onDragMove);
-    $(window).on('touchend mouseup', onDragEnd);
-    $(window).on('resize orientationchange', showSliderIfMobile);
-    showSliderIfMobile();
-    // End mobile menu slider logic
-
+    });
+    $(window).on('touchend mouseup', function() {
+        dragging = false;
+    });
+    // On resize, close menu if not mobile
+    $(window).on('resize', function() {
+        if (!isMobile()) {
+            $('#menu').removeClass('open');
+            document.body.style.overflow = '';
+        }
+    });
+    // --- END MOBILE MENU SLIDER LOGIC ---
 
     // --- Layer Searcher Integration ---
     // 1. Flatten base layers into window.layers

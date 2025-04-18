@@ -209,6 +209,94 @@ a:hover {
 
 /* The actual popup */
 .popup .popuptext {
+
+/* --- MOBILE MENU STYLES --- */
+@media (max-width: 600px) {
+  body, html {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  .flex-row {
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+  }
+  #map {
+    flex: 1 1 auto;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 1;
+  }
+  #menu-drawer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    z-index: 10;
+    pointer-events: none;
+  }
+  #menu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    min-width: 0;
+    max-width: 100vw;
+    height: 60vh;
+    max-height: 90vh;
+    border-radius: 16px 16px 0 0;
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+    box-shadow: 0 -2px 12px rgba(0,0,0,0.14);
+    transform: translateY(100%);
+    transition: transform 0.3s cubic-bezier(.4,0,.2,1);
+    pointer-events: auto;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 32px;
+  }
+  #menu.open {
+    transform: translateY(0);
+  }
+  .menu-slider-handle {
+    width: 48px;
+    height: 6px;
+    background: #ccc;
+    border-radius: 3px;
+    margin: 8px auto 12px auto;
+    cursor: grab;
+    position: relative;
+    z-index: 11;
+  }
+  .menu-toggle {
+    position: fixed;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 24px;
+    padding: 8px 18px;
+    font-size: 1.2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .menu-toggle .fa {
+    font-size: 1.4rem;
+  }
+}
+
   visibility: hidden;
   width: 160px;
   background-color: #555;
@@ -323,96 +411,6 @@ a:hover {
 
 /* Mobile/Responsive Mode (screens < 600px) */
 @media only screen and (max-width: 599px) {
-
-    /* Show the slider handle on mobile */
-    .menu-slider-handle {
-        display: flex !important;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 32px;
-        background: #f8f9fa;
-        border-top: 1px solid #ddd;
-        border-bottom: 1px solid #ddd;
-        position: sticky;
-        top: 0;
-        left: 0;
-        z-index: 2;
-        cursor: grab;
-        touch-action: none;
-        transition: background 0.2s;
-    }
-    .menu-slider-handle:active {
-        background: #e0e0e0;
-        cursor: grabbing;
-    }
-    .menu-content {
-        flex: 1 1 auto;
-        overflow-y: auto;
-        padding-bottom: 8px;
-        /* ensures content fills menu below handle */
-        min-height: 0;
-    }
-    .slider-icon {
-        font-size: 1.5em;
-        color: #444;
-        user-select: none;
-        pointer-events: none;
-    }
-
-    .menu {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100vw;
-        max-width: 100vw;
-        min-width: 0;
-        height: 30vh;
-        transition: height 0.25s cubic-bezier(.4,2,.6,1);
-        border-radius: 12px 12px 0 0;
-        box-shadow: 0 -2px 12px rgba(0,0,0,0.08);
-        overflow-y: auto;
-        z-index: 1050;
-        will-change: height;
-    }
-    .menu.expanded {
-        height: calc(100vh - 0px) !important;
-        min-height: 0 !important;
-        max-height: none !important;
-    }
-    .menu.collapsed {
-        height: 48px !important;
-        min-height: 0 !important;
-        max-height: none !important;
-    }
-    .menu > *:not(.menu-slider-handle) {
-        /* ensure content below handle always scrolls if needed */
-        overflow-y: auto;
-        max-height: calc(100vh - 48px - 16px);
-    }
-    .menu.menu-collapsed {
-        height: 0 !important;
-        min-height: 0 !important;
-        padding: 0 !important;
-        overflow: hidden !important;
-        box-shadow: none;
-        border: none;
-    }
-    .map {
-        height: 70vh;
-        transition: height 0.3s cubic-bezier(.4,2,.6,1);
-    }
-    .menu.menu-collapsed ~ .map {
-        height: 100vh !important;
-    }
-    /* Adjust the flex-row for stacking */
-    .flex-row {
-        flex-direction: column;
-        height: 100vh;
-        position: relative;
-        overflow: hidden;
-    }
-
     .flex-row {
         flex-direction: column;
         height: 100vh;
