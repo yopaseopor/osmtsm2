@@ -43,24 +43,23 @@ $(function () {
     function onDragStart(e) {
         if(!isMobile()) return;
         dragging = true;
-        startY = (e.touches ? e.touches[0].clientY : e.clientY);
-        startHeight = $menu.height();
         $('body').addClass('no-select');
         e.preventDefault();
     }
     function onDragMove(e) {
         if(!dragging) return;
         var clientY = (e.touches ? e.touches[0].clientY : e.clientY);
-        var delta = startY - clientY;
-        var newHeight = startHeight + delta;
+        var viewportHeight = window.innerHeight;
+        var pointerFromBottom = viewportHeight - clientY;
+        var newHeight = Math.max(minMenuHeight, Math.min(pointerFromBottom, maxMenuHeight));
         setMenuHeight(newHeight);
     }
     function onDragEnd(e) {
         if(!dragging) return;
         dragging = false;
-        var currentHeight = $menu.height();
+        var menuHeight = $menu.height();
         // Snap to min or max
-        if(currentHeight < (minMenuHeight + maxMenuHeight)/2) {
+        if(menuHeight < (minMenuHeight + maxMenuHeight)/2) {
             setMenuHeight(minMenuHeight);
         } else {
             setMenuHeight(maxMenuHeight);

@@ -334,15 +334,17 @@ a:hover {
         background: #f8f9fa;
         border-top: 1px solid #ddd;
         border-bottom: 1px solid #ddd;
-        position: fixed;
-        bottom: 30vh;
+        position: absolute;
+        top: 0;
         left: 0;
         z-index: 1100;
-        cursor: pointer;
-        transition: bottom 0.3s;
+        cursor: grab;
+        touch-action: none;
+        transition: background 0.2s;
     }
-    .menu-collapsed ~ .menu-slider-handle {
-        bottom: 0;
+    .menu-slider-handle:active {
+        background: #e0e0e0;
+        cursor: grabbing;
     }
     .slider-icon {
         font-size: 1.5em;
