@@ -653,13 +653,7 @@ $(function () {
         var menu = document.getElementById('menu');
         var menuContent = document.querySelector('.mobile-bottom-menu .menu-content');
         var flexRow = document.querySelector('.flex-row');
-        // Fallback: if menu is missing from both, restore to flexRow
-        if (!menu) {
-            menu = document.createElement('div');
-            menu.id = 'menu';
-            menu.className = 'menu';
-            flexRow.insertBefore(menu, flexRow.children[1]);
-        }
+
         if (window.matchMedia('(max-width: 599px)').matches) {
             if (menu && menuContent && !menuContent.contains(menu)) {
                 menuContent.appendChild(menu);
@@ -669,8 +663,9 @@ $(function () {
                 flexRow.insertBefore(menu, flexRow.children[1]); // after map
             }
         }
-        // Always show menu
-        if (menu) menu.style.display = 'flex';
+        // Always let CSS control menu display
+        if (menu) menu.style.display = '';
+
     }
     moveMenuForMobile();
     window.addEventListener('resize', moveMenuForMobile);
