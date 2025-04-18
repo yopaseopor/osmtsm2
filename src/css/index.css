@@ -339,23 +339,25 @@ a:hover {
         flex-direction: column;
         height: 100vh;
         min-height: 100vh;
+        position: relative;
+        overflow: hidden;
         width: 100vw;
         max-width: 100vw;
     }
     .map {
         width: 100vw;
         max-width: 100vw;
-        flex: 1 1 0%;
-        min-height: 0;
-        height: auto;
+        height: 50vh;
+        min-height: 50vh;
+        max-height: 50vh;
         border: none;
         position: relative;
         touch-action: pan-x pan-y;
     }
     .menu {
-        min-height: max(50vh, 1600px);
+        height: 50vh;
+        min-height: 50vh;
         max-height: 100vh;
-        height: auto;
         width: 100vw;
         min-width: 100vw;
         position: relative;
@@ -363,8 +365,32 @@ a:hover {
         background: #fff;
         display: flex;
         flex-direction: column;
-        overflow-y: auto;
+        overflow: hidden;
         box-shadow: 0 -2px 8px rgba(0,0,0,0.03);
+        transition: height 0.2s cubic-bezier(0.4,0,0.2,1);
+    }
+    .menu-drag-handle {
+        width: 100%;
+        height: 24px;
+        background: #eee;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: ns-resize;
+        touch-action: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+    }
+    .menu-drag-bar {
+        width: 40px;
+        height: 5px;
+        background: #ccc;
+        border-radius: 3px;
+        margin: 0 auto;
     }
     .osmcat-menu {
         display: flex;

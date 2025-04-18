@@ -1,5 +1,44 @@
 /* global config, ol */
 $(function () {
+    // Mobile sliding menu setup
+    function isMobileMenu() {
+        return window.matchMedia('(max-width: 599px)').matches;
+    }
+    function setupMobileMenuDrag() {
+        var $menu = $('#menu');
+        if (!$menu.length || $menu.find('.menu-drag-handle').length) return;
+        var $handle = $('<div class="menu-drag-handle"><div class="menu-drag-bar"></div></div>');
+        $menu.prepend($handle);
+        var startY, startHeight, dragging = false;
+        function onMove(e) {
+            if (!dragging) return;
+            var clientY = e.touches ? e.touches[0].clientY : e.clientY;
+            var delta = startY - clientY;
+            var vh = Math.max(50, Math.min(100, ((startHeight + delta) / window.innerHeight) * 100));
+            $menu.css('height', vh + 'vh');
+        }
+        function onUp() {
+            dragging = false;
+            $(window).off('mousemove touchmove', onMove);
+            $(window).off('mouseup touchend', onUp);
+        }
+        $handle.on('mousedown touchstart', function(e) {
+            if (!isMobileMenu()) return;
+            dragging = true;
+            startY = e.touches ? e.touches[0].clientY : e.clientY;
+            startHeight = $menu.height();
+            $(window).on('mousemove touchmove', onMove);
+            $(window).on('mouseup touchend', onUp);
+            e.preventDefault();
+        });
+    }
+    if (isMobileMenu()) {
+        setupMobileMenuDrag();
+        $(window).on('resize orientationchange', function() {
+            if (isMobileMenu()) setupMobileMenuDrag();
+        });
+    }
+
     // --- Layer Searcher Integration ---
     // 1. Flatten base layers into window.layers
     window.layers = [];
