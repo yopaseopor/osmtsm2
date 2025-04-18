@@ -1,5 +1,80 @@
 /* global config, ol */
 $(function () {
+    // --- Mobile menu slider logic ---
+    function isMobile() {
+        return window.matchMedia('(max-width: 599px)').matches;
+    }
+    var $menu = $('#menu');
+    var $slider = $('#menu-slider-handle');
+
+    var minMenuHeight = 48; // px
+    var maxMenuHeight = window.innerHeight * 0.9; // 90vh
+    var startY = null;
+    var startHeight = null;
+    var dragging = false;
+
+    function setMenuHeight(h) {
+        h = Math.max(minMenuHeight, Math.min(h, maxMenuHeight));
+        $menu.css('height', h + 'px');
+        // Update icon direction
+        if(h < (minMenuHeight + 30)) {
+            $slider.find('.slider-icon').html('&#x25B2;');
+        } else if(h > (maxMenuHeight - 30)) {
+            $slider.find('.slider-icon').html('&#x25BC;');
+        } else {
+            $slider.find('.slider-icon').html('&#x25BC;');
+        }
+    }
+    function showSliderIfMobile() {
+        if(isMobile()) {
+            $slider.show();
+            maxMenuHeight = window.innerHeight * 0.9;
+            // Set initial menu height if not set
+            if(!$menu.data('init')) {
+                setMenuHeight(window.innerHeight * 0.3);
+                $menu.data('init', true);
+            }
+        } else {
+            $slider.hide();
+            $menu.css('height', '');
+            $menu.removeData('init');
+        }
+    }
+    function onDragStart(e) {
+        if(!isMobile()) return;
+        dragging = true;
+        startY = (e.touches ? e.touches[0].clientY : e.clientY);
+        startHeight = $menu.height();
+        $('body').addClass('no-select');
+        e.preventDefault();
+    }
+    function onDragMove(e) {
+        if(!dragging) return;
+        var clientY = (e.touches ? e.touches[0].clientY : e.clientY);
+        var delta = startY - clientY;
+        var newHeight = startHeight + delta;
+        setMenuHeight(newHeight);
+    }
+    function onDragEnd(e) {
+        if(!dragging) return;
+        dragging = false;
+        var currentHeight = $menu.height();
+        // Snap to min or max
+        if(currentHeight < (minMenuHeight + maxMenuHeight)/2) {
+            setMenuHeight(minMenuHeight);
+        } else {
+            setMenuHeight(maxMenuHeight);
+        }
+        $('body').removeClass('no-select');
+    }
+    $slider.on('touchstart mousedown', onDragStart);
+    $(window).on('touchmove mousemove', onDragMove);
+    $(window).on('touchend mouseup', onDragEnd);
+    $(window).on('resize orientationchange', showSliderIfMobile);
+    showSliderIfMobile();
+    // End mobile menu slider logic
+
+
     // --- Layer Searcher Integration ---
     // 1. Flatten base layers into window.layers
     window.layers = [];
