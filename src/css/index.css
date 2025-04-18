@@ -362,7 +362,7 @@ a:hover {
         flex-direction: column;
         overflow: hidden;
         box-shadow: 0 -2px 8px rgba(0,0,0,0.03);
-        font-size: 0.85em;
+        font-size: 0.75em;
     }
     .osmcat-menu {
         display: flex;
@@ -407,14 +407,21 @@ a:hover {
     .osmcat-button, .nominatim-search button, .osmcat-panoramax button {
         min-width: 44px;
         min-height: 44px;
-        font-size: 0.95em;
-        padding: 8px 0;
-        margin: 6px 0;
+        font-size: 0.9em;
+        padding: 10px 0;
+        margin: 10px 0;
         border-radius: 8px;
         width: 100%;
         display: block;
         text-align: center;
         box-sizing: border-box;
+        background: #f7f7f7;
+    }
+    /* Add extra vertical spacing between menu buttons to avoid overlap */
+    .osmcat-menu .osmcat-button + .osmcat-button,
+    .osmcat-menu .nominatim-search button + .nominatim-search button,
+    .osmcat-menu .osmcat-panoramax button + .osmcat-panoramax button {
+        margin-top: 12px;
     }
     .nominatim-search input {
         font-size: 1em;
