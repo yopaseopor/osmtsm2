@@ -356,8 +356,7 @@ a:hover {
     }
     .menu {
         height: 50vh;
-        min-height: 50vh;
-        max-height: 50vh;
+        min-height: 1600px;
         width: 100vw;
         min-width: 100vw;
         position: relative;
