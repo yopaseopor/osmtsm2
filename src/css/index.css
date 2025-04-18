@@ -334,10 +334,10 @@ a:hover {
         background: #f8f9fa;
         border-top: 1px solid #ddd;
         border-bottom: 1px solid #ddd;
-        position: absolute;
+        position: sticky;
         top: 0;
         left: 0;
-        z-index: 1100;
+        z-index: 2;
         cursor: grab;
         touch-action: none;
         transition: background 0.2s;
@@ -345,6 +345,13 @@ a:hover {
     .menu-slider-handle:active {
         background: #e0e0e0;
         cursor: grabbing;
+    }
+    .menu-content {
+        flex: 1 1 auto;
+        overflow-y: auto;
+        padding-bottom: 8px;
+        /* ensures content fills menu below handle */
+        min-height: 0;
     }
     .slider-icon {
         font-size: 1.5em;
