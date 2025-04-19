@@ -408,40 +408,47 @@ a:hover {
         background: #fff;
         font-size: 1em;
     }
-    .osmcat-button, .nominatim-search button, .osmcat-panoramax button, .clear-active-overlay-btn, .close-button, button {
+    .osmcat-button, .osmcat-geobutton, .osmcat-infobutton, .osmcat-sharebutton, .osmcat-rotateleft, .osmcat-rotateright, .ol-control button, .nominatim-search button, .osmcat-panoramax button {
         width: 16px !important;
         height: 16px !important;
         min-width: 16px !important;
         min-height: 16px !important;
         max-width: 16px !important;
         max-height: 16px !important;
+        background: #1976d2 !important; /* consistent blue color */
+        color: #fff !important;
+        border: none !important;
+        border-radius: 4px !important;
         font-size: 10px !important;
         padding: 0 !important;
         margin: 2px !important;
-        border-radius: 4px !important;
-        background: #567CAC !important;
-        color: #fff !important;
-        border: none !important;
         box-shadow: none !important;
-        display: inline-flex !important;
-        align-items: center;
-        justify-content: center;
-        vertical-align: middle;
-        overflow: hidden;
+        display: block !important;
+        position: static !important;
     }
-    /* Font Awesome chosen/active icon color */
-    .osmcat-button.active i.fa,
-    .nominatim-search button.active i.fa,
-    .osmcat-panoramax button.active i.fa,
-    .clear-active-overlay-btn.active i.fa,
-    .close-button.active i.fa,
-    button.active i.fa {
-        color: #fff !important;
+    /* Align buttons in a vertical column at the top left, no overlap */
+    .osmcat-geobutton, .osmcat-infobutton, .osmcat-sharebutton, .osmcat-rotateleft, .osmcat-rotateright, .ol-control button {
+        float: none !important;
+        clear: both !important;
+        margin-left: 4px !important;
+        margin-right: 0 !important;
+        margin-top: 4px !important;
+        margin-bottom: 0 !important;
     }
-    /* Prevent button overlap and ensure spacing */
-    .osmcat-button, .nominatim-search button, .osmcat-panoramax button, .clear-active-overlay-btn, .close-button, button {
-        position: relative !important;
-        z-index: 1;
+    .ol-control {
+        left: 0 !important;
+        top: 0 !important;
+        right: auto !important;
+        bottom: auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 4px !important;
+        z-index: 1000 !important;
+    }
+    /* Prevent any overlap for custom buttons */
+    .osmcat-geobutton, .osmcat-infobutton, .osmcat-sharebutton, .osmcat-rotateleft, .osmcat-rotateright {
+        position: static !important;
     }
     .nominatim-search input {
         font-size: 1em;
