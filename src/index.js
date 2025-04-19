@@ -500,21 +500,33 @@ $(function () {
 	};
 
     // Rebuild the menu bar with clear separation for Layers, Overlays, and Router (if active)
-    // 1. Layers section
+    // 1. Layer classic selector (above searcher)
+    if (!$('#layer-classic-selector').length) {
+        $('#menu').append('<div class="menu-section"><h3>Base Layers</h3><div id="layer-classic-selector"></div></div>');
+    }
+    $('#layer-classic-selector').empty().append(layersControlBuild());
+
+    // 2. Layer searcher
     if (!$('#layer-list').length) {
-        $('#menu').append('<div class="menu-section"><h3>Layers</h3><div id="layer-list"></div></div>');
+        $('#menu').append('<div class="menu-section"><h3>Layer Searcher</h3><div id="layer-list"></div></div>');
     }
     $('#layer-list').empty();
     if (window.renderLayerList && window.layers) window.renderLayerList(window.layers);
 
-    // 2. Overlays section
+    // 3. Overlay classic selector (above searcher)
+    if (!$('#overlay-classic-selector').length) {
+        $('#menu').append('<div class="menu-section"><h3>Overlays</h3><div id="overlay-classic-selector"></div></div>');
+    }
+    $('#overlay-classic-selector').empty().append(overlaysControlBuild ? overlaysControlBuild() : '');
+
+    // 4. Overlay searcher
     if (!$('#overlay-list').length) {
-        $('#menu').append('<div class="menu-section"><h3>Overlays</h3><div id="overlay-list"></div></div>');
+        $('#menu').append('<div class="menu-section"><h3>Overlay Searcher</h3><div id="overlay-list"></div></div>');
     }
     $('#overlay-list').empty();
     if (window.renderOverlayList && window.overlays) window.renderOverlayList(window.overlays);
 
-    // 3. Router section (only if active)
+    // 5. Router section (only if active)
     if (window.routerIsActive && typeof window.renderRouter === 'function') {
         if (!$('#router-container').length) {
             $('#menu').append('<div class="menu-section" id="router-section"><h3>Router</h3><div id="router-container"></div></div>');
