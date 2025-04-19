@@ -262,45 +262,12 @@ function initRouter(map) {
     const displayAlternativeRoutes = function(routes) {
         const format = new ol.format.GeoJSON();
         const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00'];
-        
-        routes.forEach((route, index) => {
-            if (route) {
-                const features = format.readFeatures(route.geometry, {
-                    featureProjection: map.getView().getProjection(),
-                    dataProjection: 'EPSG:4326'
-                });
-                
-                const layer = new ol.layer.Vector({
-                    source: new ol.source.Vector(),
-                    style: new ol.style.Style({
-                        stroke: new ol.style.Stroke({
-                            color: colors[index],
-                            width: 4
-                        })
-                    })
-                });
-                
-                layer.getSource().addFeatures(features);
-                map.addLayer(layer);
-                
-                // Add click handler to select route
-                layer.on('click', function() {
-                    // Remove all alternative routes
-                    map.getLayers().forEach(l => {
-                        if (l !== routeLayer && l.get('type') === 'alternative') {
-                            map.removeLayer(l);
-                        }
-                    });
-                    
-                    // Update main route
-                    routeLayer.getSource().clear();
-                    routeLayer.getSource().addFeatures(features);
-                    
-                    // Update via point position
-                    const coordinates = route.geometry.coordinates;
                     const viaIndex = Math.floor(coordinates.length / 2);
                     const viaCoord = coordinates[viaIndex];
                     const viaPixel = ol.proj.fromLonLat([viaCoord[0], viaCoord[1]]);
+            }
+        });
+    }
                     viaMarker.setPosition(viaPixel);
                     viaPlace = { lon: viaCoord[0], lat: viaCoord[1] };
                 });
@@ -425,11 +392,20 @@ function initRouter(map) {
                 return $(this).find('.osmcat-select').text() === 'Router';
             });
 
-            if (existingRouter.length > 0) {
-                // Router is open, close it
-                if (clickHandler) {
-                    map.un('singleclick', clickHandler);
-                    clickHandler = null;
+// Function to calculate route
+const calculateRoute = function() {
+    if (!startPlace || !endPlace) {
+        alert('Please set start and end points');
+        return;
+    }
+
+    // Validate coordinates
+    if (Math.abs(startPlace.lon) > 180 || Math.abs(startPlace.lat) > 90 ||
+        Math.abs(endPlace.lon) > 180 || Math.abs(endPlace.lat) > 90 ||
+        (viaPlace && (Math.abs(viaPlace.lon) > 180 || Math.abs(viaPlace.lat) > 90))) {
+        alert('Invalid coordinates. Please try again.');
+        return;
+    }
 
     loading.show();
     
@@ -470,165 +446,230 @@ function initRouter(map) {
         .then(response => {
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
-                viaPlace = null;
             }
-        } else {
-            // Open router menu
-            routerButton.addClass('active');
-            $('.osmcat-menu').addClass('router-active');
-            // Move actual router menu node to the top of the menu bar
-            var $existingRouterMenu = $('.osmcat-menu .osmcat-layer').filter(function() {
-                return $(this).find('.osmcat-select').text() === 'Router';
-                                <div class="location-input">
-                                    <input type="text" class="start-place" placeholder="Search start location...">
-                                    <button class="search-button"><i class="fa fa-search"></i></button>
-                                </div>
-                                <div class="search-results start-results"></div>
-                            </div>
-                            <div class="router-input">
-                                <label>End:</label>
-                                <div class="location-input">
-                                    <input type="text" class="end-place" placeholder="Search end location...">
-                                    <button class="search-button"><i class="fa fa-search"></i></button>
-                                </div>
-                                <div class="search-results end-results"></div>
-                            </div>
-                            <div class="router-input">
-                                <label>Via (optional):</label>
-                                <div class="location-input">
-                                    <input type="text" class="via-place" placeholder="Search via location...">
-                                    <button class="search-button"><i class="fa fa-search"></i></button>
-                                </div>
-                                <div class="search-results via-results"></div>
-                            </div>
-                            <div class="router-input">
-                                <label>Profile:</label>
-                                <select class="profile-select">
-                                    <option value="car">Car</option>
-                                    <option value="bike">Bicycle</option>
-                                    <option value="foot">Walking</option>
-                                </select>
-                            </div>
-                            <div class="click-hint">
-                                <i class="fa fa-info-circle"></i> Click on the map to set locations
-                            </div>
-                            <button class="calculate-route">Calculate Route</button>
-                        </div>
-                    </div>
-                </div>
-            `);
-
-            // Handle map clicks
-            clickHandler = function(evt) {
-                const coordinate = evt.coordinate;
-                const lonlat = ol.proj.toLonLat(coordinate);
-                
-                if (!startPlace) {
-                    if (startMarker) map.removeOverlay(startMarker);
-                    startPlace = { lon: lonlat[0], lat: lonlat[1] };
-                    startMarker = createMarker(coordinate, 'start');
-                    routerContent.find('.start-place').val('Selected on map');
-                } else if (!endPlace) {
-                    if (endMarker) map.removeOverlay(endMarker);
-                    endPlace = { lon: lonlat[0], lat: lonlat[1] };
-                    endMarker = createMarker(coordinate, 'end');
-                    routerContent.find('.end-place').val('Selected on map');
-                } else if (!viaPlace) {
-                    if (viaMarker) map.removeOverlay(viaMarker);
-                    viaPlace = { lon: lonlat[0], lat: lonlat[1] };
-                    viaMarker = createMarker(coordinate, 'via');
-                    routerContent.find('.via-place').val('Selected on map');
-                }
-
-                // Calculate route automatically if we have start and end points
-                if (startPlace && endPlace) {
-                    calculateRoute();
-                }
-            };
-
-            map.on('singleclick', clickHandler);
-
-            // Handle place search
-            const searchPlace = function(input, resultsDiv) {
-                const query = input.val();
-                if (query.length < 3) return;
-
-                fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}`)
-                    .then(response => response.json())
-                    .then(data => {
-                        resultsDiv.empty().show();
-                        data.forEach(place => {
-                            const result = $('<div>')
-                                .addClass('search-result')
-                                .html(`${place.display_name}<br><small>${place.lat}, ${place.lon}</small>`)
-                                .on('click', function() {
-                                    input.val(place.display_name);
-                                    resultsDiv.hide();
-                                    const coordinate = ol.proj.fromLonLat([parseFloat(place.lon), parseFloat(place.lat)]);
-                                    if (input.hasClass('start-place')) {
-                                        if (startMarker) map.removeOverlay(startMarker);
-                                        startPlace = place;
-                                        startMarker = createMarker(coordinate, 'start');
-                                    } else if (input.hasClass('via-place')) {
-                                        if (viaMarker) map.removeOverlay(viaMarker);
-                                        viaPlace = place;
-                                        viaMarker = createMarker(coordinate, 'via');
-                                    } else {
-                                        if (endMarker) map.removeOverlay(endMarker);
-                                        endPlace = place;
-                                        endMarker = createMarker(coordinate, 'end');
-                                    }
-
-                                    // Calculate route automatically if we have start and end points
-                                    if (startPlace && endPlace) {
-                                        calculateRoute();
-                                    }
-                                });
-                            resultsDiv.append(result);
-                        });
-                    });
-            };
-
-            // Setup search handlers
-            routerContent.find('.search-button').on('click', function() {
-                const input = $(this).siblings('input');
-                const resultsDiv = input.closest('.router-input').find('.search-results');
-                searchPlace(input, resultsDiv);
+            return response.json();
+        })
+        .then(data => {
+            console.log('Route data received:', data);
+            
+            if (!data.routes || data.routes.length === 0) {
+                throw new Error('No route found');
+            }
+            
+            const route = data.routes[0];
+            const format = new ol.format.GeoJSON();
+            const features = format.readFeatures(route.geometry, {
+                featureProjection: map.getView().getProjection(),
+                dataProjection: 'EPSG:4326'
             });
-
-            // Calculate route
-            routerContent.find('.calculate-route').on('click', function(e) {
-                e.preventDefault();
-                calculateRoute();
-            });
-
-            // Add router content to menu
-            $('.osmcat-menu').append(routerContent);
-
-            // Remove any existing router content
-            $('.osmcat-menu .osmcat-layer').not(routerContent).each(function() {
-                if ($(this).find('.osmcat-select').text() === 'Router') {
-                    $(this).remove();
+            
+            // Remove alternative routes
+            map.getLayers().forEach(l => {
+                if (l !== routeLayer && l.get('type') === 'alternative') {
+                    map.removeLayer(l);
                 }
             });
-
-            // Clean up when router is closed
-            routerContent.find('.osmcat-select').on('click', function() {
-                if (clickHandler) {
-                    map.un('singleclick', clickHandler);
-                    clickHandler = null;
-                }
-                routerContent.remove();
-                routerButton.removeClass('active');
-                $('.osmcat-menu').removeClass('router-active');
+            
+            routeLayer.getSource().clear();
+            routeLayer.getSource().addFeatures(features);
+            
+            // Show route info
+            const distance = (route.distance / 1000).toFixed(1);
+            const duration = Math.round(route.duration / 60);
+            alert(`Route calculated!\nDistance: ${distance} km\nDuration: ${duration} minutes`);
+            
+            // Zoom to route
+            const extent = routeLayer.getSource().getExtent();
+            map.getView().fit(extent, {
+                padding: [50, 50, 50, 50],
+                duration: 1000
             });
+        })
+        .catch(error => {
+            console.error('Error calculating route:', error);
+            alert('Error calculating route: ' + error.message);
+        })
+        .finally(() => {
+            loading.hide();
+        });
+};
+
+// Add router button and dialog
+const routerButton = $('<button>')
+    .addClass('osmcat-button osmcat-router')
+    .attr('title', 'Route')
+    .html('<i class="fa fa-play-circle-o" aria-hidden="true"></i>')
+    .on('click', function() {
+        // Check if router is already open
+        const existingRouter = $('.osmcat-menu .osmcat-layer').filter(function() {
+            return $(this).find('.osmcat-select').text() === 'Router';
         });
 
-    // Create a control element for the router button
-    const routerControl = new ol.control.Control({
-        element: routerButton[0]
+        if (existingRouter.length > 0) {
+            // Router is open, close it
+            if (clickHandler) {
+                map.un('singleclick', clickHandler);
+                clickHandler = null;
+            }
+            // Restore router menu to original position if needed
+            if ($('#router-top-placeholder').length) {
+                $('#router-top-placeholder').after(existingRouter);
+                $('#router-top-placeholder').remove();
+            }
+            existingRouter.remove();
+            routerButton.removeClass('active');
+            $('.osmcat-menu').removeClass('router-active');
+
+            // Clear markers and route when closing
+            if (startMarker) map.removeOverlay(startMarker);
+            if (endMarker) map.removeOverlay(endMarker);
+            if (viaMarker) map.removeOverlay(viaMarker);
+            routeLayer.getSource().clear();
+            
+            startPlace = null;
+            endPlace = null;
+            viaPlace = null;
+            startMarker = null;
+            endMarker = null;
+            viaMarker = null;
+
+            return;
+        }
+        // Router is closed, open it
+        routerButton.addClass('active');
+        $('.osmcat-menu').addClass('router-active');
+
+        // Build router menu content
+        var $routerMenu = $('<div class="osmcat-layer router-active-menu"></div>');
+        $routerMenu.append('<div class="osmcat-select">Router</div>');
+        var $content = $('<div class="osmcat-content"></div>');
+        $content.append('<div class="router-form">'
+            + '<div class="router-input"><label>Start:</label><div class="location-input"><input type="text" class="start-place" placeholder="Search start location..."><button class="search-button"><i class="fa fa-search"></i></button></div><div class="search-results start-results"></div></div>'
+            + '<div class="router-input"><label>End:</label><div class="location-input"><input type="text" class="end-place" placeholder="Search end location..."><button class="search-button"><i class="fa fa-search"></i></button></div><div class="search-results end-results"></div></div>'
+            + '<div class="router-input"><label>Via (optional):</label><div class="location-input"><input type="text" class="via-place" placeholder="Search via location..."><button class="search-button"><i class="fa fa-search"></i></button></div><div class="search-results via-results"></div></div>'
+            + '<div class="router-input"><label>Profile:</label><select class="profile-select"><option value="car">Car</option><option value="bike">Bicycle</option><option value="foot">Walking</option></select></div>'
+            + '<div class="click-hint"><i class="fa fa-info-circle"></i> Click on the map to set locations</div>'
+            + '<button class="calculate-route">Calculate Route</button>'
+            + '</div>');
+        $routerMenu.append($content);
+
+        var $firstMenuItem = $('.osmcat-menu').children().first();
+        if ($firstMenuItem.length) {
+            $('<div id="router-top-placeholder" style="display:none"></div>').insertBefore($firstMenuItem);
+            $routerMenu.insertBefore($firstMenuItem);
+        } else {
+            $('.osmcat-menu').prepend($routerMenu);
+        }
+
+        // Setup all router menu event handlers here (search, calculate, map click, etc.)
+        // ... (reuse your previous logic for handlers) ...
+
+        // Handle map clicks
+        clickHandler = function(evt) {
+            const coordinate = evt.coordinate;
+            const lonlat = ol.proj.toLonLat(coordinate);
+            
+            if (!startPlace) {
+                if (startMarker) map.removeOverlay(startMarker);
+                startPlace = { lon: lonlat[0], lat: lonlat[1] };
+                startMarker = createMarker(coordinate, 'start');
+                $routerMenu.find('.start-place').val('Selected on map');
+            } else if (!endPlace) {
+                if (endMarker) map.removeOverlay(endMarker);
+                endPlace = { lon: lonlat[0], lat: lonlat[1] };
+                endMarker = createMarker(coordinate, 'end');
+                $routerMenu.find('.end-place').val('Selected on map');
+            } else if (!viaPlace) {
+                if (viaMarker) map.removeOverlay(viaMarker);
+                viaPlace = { lon: lonlat[0], lat: lonlat[1] };
+                viaMarker = createMarker(coordinate, 'via');
+                $routerMenu.find('.via-place').val('Selected on map');
+            }
+
+            // Calculate route automatically if we have start and end points
+            if (startPlace && endPlace) {
+                calculateRoute();
+            }
+        };
+
+        map.on('singleclick', clickHandler);
+
+        // Handle place search
+        const searchPlace = function(input, resultsDiv) {
+            const query = input.val();
+            if (query.length < 3) return;
+
+            fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}`)
+                .then(response => response.json())
+                .then(data => {
+                    resultsDiv.empty();
+                    data.forEach(result => {
+                        const $result = $('<div class="search-result"></div>');
+                        $result.text(result.display_name);
+                        $result.on('click', function() {
+                            const lonlat = [result.lon, result.lat];
+                            const coordinate = ol.proj.fromLonLat(lonlat);
+                            if (!startPlace) {
+                                startPlace = { lon: lonlat[0], lat: lonlat[1] };
+                                startMarker = createMarker(coordinate, 'start');
+                                input.val(result.display_name);
+                            } else if (!endPlace) {
+                                endPlace = { lon: lonlat[0], lat: lonlat[1] };
+                                endMarker = createMarker(coordinate, 'end');
+                                input.val(result.display_name);
+                            } else if (!viaPlace) {
+                                viaPlace = { lon: lonlat[0], lat: lonlat[1] };
+                                viaMarker = createMarker(coordinate, 'via');
+                                input.val(result.display_name);
+                            }
+                            resultsDiv.empty();
+                            calculateRoute();
+                        });
+                        resultsDiv.append($result);
+                    });
+                });
+        };
+
+        // Setup search handlers
+        $routerMenu.find('.search-button').on('click', function() {
+            const input = $(this).siblings('input');
+            const resultsDiv = input.closest('.router-input').find('.search-results');
+            searchPlace(input, resultsDiv);
+        });
+
+        // Calculate route
+        $routerMenu.find('.calculate-route').on('click', function(e) {
+            e.preventDefault();
+            calculateRoute();
+        });
+
+        // Add router content to menu
+        $('.osmcat-menu').append($routerMenu);
+
+        // Remove any existing router content
+        $('.osmcat-menu .osmcat-layer').not($routerMenu).each(function() {
+            if ($(this).find('.osmcat-select').text() === 'Router') {
+                $(this).remove();
+            }
+        });
+
+        // Clean up when router is closed
+        $routerMenu.find('.osmcat-select').on('click', function() {
+            if (clickHandler) {
+                map.un('singleclick', clickHandler);
+                clickHandler = null;
+            }
+            $routerMenu.remove();
+            routerButton.removeClass('active');
+            $('.osmcat-menu').removeClass('router-active');
+        });
     });
 
-    // Add the router control to the map
-    map.addControl(routerControl);
-}
+// Create a control element for the router button
+const routerControl = new ol.control.Control({
+    element: routerButton[0]
+});
+
+// Add the router control to the map
+map.addControl(routerControl);
+// End of initRouter
