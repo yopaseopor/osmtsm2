@@ -101,10 +101,12 @@ CLEAR ACTIVE OVERLAY BUTTON
 */
 .osmcat-clearoverlaybutton {
     position: absolute;
-    left: 40px;
-    top: 30px;
+    left: 38px;
+    bottom: 30px;
+    top: auto;
     z-index: 1002;
 }
+
 
 .clear-active-overlay-btn {
     width: 40px;
