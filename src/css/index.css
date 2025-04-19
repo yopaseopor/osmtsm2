@@ -419,7 +419,7 @@ a:hover {
         padding: 0 !important;
         margin: 2px !important;
         border-radius: 4px !important;
-        background: #1976d2 !important;
+        background: #567CAC !important;
         color: #fff !important;
         border: none !important;
         box-shadow: none !important;
@@ -428,6 +428,15 @@ a:hover {
         justify-content: center;
         vertical-align: middle;
         overflow: hidden;
+    }
+    /* Font Awesome chosen/active icon color */
+    .osmcat-button.active i.fa,
+    .nominatim-search button.active i.fa,
+    .osmcat-panoramax button.active i.fa,
+    .clear-active-overlay-btn.active i.fa,
+    .close-button.active i.fa,
+    button.active i.fa {
+        color: #fff !important;
     }
     /* Prevent button overlap and ensure spacing */
     .osmcat-button, .nominatim-search button, .osmcat-panoramax button, .clear-active-overlay-btn, .close-button, button {
