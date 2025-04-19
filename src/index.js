@@ -178,39 +178,8 @@ $(function () {
     // --- End Overlay Searcher Integration ---
 
     // --- Router Button Control ---
-    // Ensure initRouter is globally accessible
-    if (typeof window.initRouter !== 'function' && typeof initRouter === 'function') {
-        window.initRouter = initRouter;
-    }
-    var routerButtonControlBuild = function () {
-        var container = $('<div>').addClass('ol-control ol-unselectable osmcat-routerbutton').html(
-            $('<button type="button" class="router-btn" title="Router"><i class="fa fa-random"></i></button>').on('click', function () {
-                var btn = $(this);
-                btn.toggleClass('active');
-                if (btn.hasClass('active')) {
-                    // Open router menu (initRouter will handle UI)
-                    if (typeof window.initRouter === 'function') {
-                        window.initRouter(map);
-                    } else {
-                        alert('Router module is not loaded.');
-                    }
-                } else {
-                    // Close router menu if open
-                    $('.osmcat-menu .osmcat-layer').each(function() {
-                        if ($(this).find('.osmcat-select').text() === 'Router') {
-                            $(this).remove();
-                        }
-                    });
-                    $('.router-btn').removeClass('active');
-                    $('.osmcat-menu').removeClass('router-active');
-                }
-            })
-        );
-        return container[0];
-    };
-    map.addControl(new ol.control.Control({
-        element: routerButtonControlBuild()
-    }));
+    // Router button must be added only after map is initialized!
+    // So we move this block to after the map is created (below)
 
 	$('#map').empty(); // Remove Javascript required message
 	var baseLayerIndex = 0;
@@ -405,8 +374,40 @@ $(function () {
 	// Initialize Mapillary viewer
 	initMapillaryViewer(map);
 
-	// Initialize Router
-	initRouter(map);
+    // Initialize Router
+    if (typeof window.initRouter !== 'function' && typeof initRouter === 'function') {
+        window.initRouter = initRouter;
+    }
+    // Add Router Button Control after map is initialized
+    var routerButtonControlBuild = function () {
+        var container = $('<div>').addClass('ol-control ol-unselectable osmcat-routerbutton').html(
+            $('<button type="button" class="router-btn" title="Router"><i class="fa fa-random"></i></button>').on('click', function () {
+                var btn = $(this);
+                btn.toggleClass('active');
+                if (btn.hasClass('active')) {
+                    // Open router menu (initRouter will handle UI)
+                    if (typeof window.initRouter === 'function') {
+                        window.initRouter(map);
+                    } else {
+                        alert('Router module is not loaded.');
+                    }
+                } else {
+                    // Close router menu if open
+                    $('.osmcat-menu .osmcat-layer').each(function() {
+                        if ($(this).find('.osmcat-select').text() === 'Router') {
+                            $(this).remove();
+                        }
+                    });
+                    $('.router-btn').removeClass('active');
+                    $('.osmcat-menu').removeClass('router-active');
+                }
+            })
+        );
+        return container[0];
+    };
+    map.addControl(new ol.control.Control({
+        element: routerButtonControlBuild()
+    }));
 
 	var layersControlBuild = function () {
 		var visibleLayer,
