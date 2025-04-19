@@ -116,10 +116,10 @@ $(function () {
             var $clearContainer = $('<div id="clear-overlay-container"></div>');
             $('.menu').append($clearContainer);
         }
-        var $clearBtn = $('<div>')
+        var $clearBtn = $('<button>')
             .addClass('clear-active-overlay-btn')
-            .text('✖ Clear Active Overlay')
-            .css({cursor:'pointer',padding:'6px 10px',background:'#ffeaea',color:'#b00',fontWeight:'bold',margin:'12px 8px'})
+            .attr('title', 'Clear Active Overlay')
+            .html('<i class="fa fa-times"></i>')
             .attr('tabindex', 0)
             .on('click', function() {
                 // Hide all overlays
