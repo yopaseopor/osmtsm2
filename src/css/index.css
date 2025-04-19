@@ -114,8 +114,9 @@ CLEAR ACTIVE OVERLAY BUTTON
     cursor: pointer;
     transition: background 0.2s;
     padding: 0;
-    margin: 0 4px;
+    margin: 0;
 }
+
 
 .clear-active-overlay-btn i {
     color: #b00;
