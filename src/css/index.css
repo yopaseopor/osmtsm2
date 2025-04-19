@@ -871,7 +871,40 @@ CLEAR ACTIVE OVERLAY BUTTON
 .osmcat-button,
 .nominatim-search button,
 .osmcat-panoramax button,
-.router-input .search-button {
+.router-input .search-button,
+.osmcat-routerbutton button {
+    background-color: rgba(255,255,255,0.4);
+    border: none;
+    border-radius: 2px;
+    padding: 2px;
+    cursor: pointer;
+    width: 1.375em;
+    height: 1.375em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.osmcat-routerbutton {
+    display: inline-block;
+    margin-left: 4px;
+    vertical-align: middle;
+}
+
+.osmcat-routerbutton button:hover,
+.osmcat-routerbutton button.active {
+    background-color: #34587C;
+    color: #fff;
+}
+
+.osmcat-routerbutton button i {
+    color: #567CAC;
+}
+
+.osmcat-routerbutton button.active i {
+    color: #fff;
+}
+
     background-color: rgba(255,255,255,0.4);
     border: none;
     border-radius: 2px;

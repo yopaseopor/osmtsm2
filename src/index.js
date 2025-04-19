@@ -375,7 +375,7 @@ $(function () {
     if (typeof window.initRouter !== 'function' && typeof initRouter === 'function') {
         window.initRouter = initRouter;
     }
-    // Add Router Button Control (only once, after map is initialized)
+    // Add Router Button Control only once, and next to clear overlay button
     var routerButtonControlBuild = function () {
         var container = $('<div>').addClass('ol-control ol-unselectable osmcat-routerbutton').html(
             $('<button type="button" class="router-btn" title="Router"><i class="fa fa-random"></i></button>').on('click', function () {
@@ -402,9 +402,16 @@ $(function () {
         );
         return container[0];
     };
-    map.addControl(new ol.control.Control({
-        element: routerButtonControlBuild()
-    }));
+
+    setTimeout(function() {
+        var clearOverlayControl = $('.osmcat-clearoverlaybutton');
+        var routerControl = $(routerButtonControlBuild());
+        if (clearOverlayControl.length) {
+            clearOverlayControl.after(routerControl);
+        } else {
+            $('#map').append(routerControl);
+        }
+    }, 0);
 
 	var layersControlBuild = function () {
 		var visibleLayer,
