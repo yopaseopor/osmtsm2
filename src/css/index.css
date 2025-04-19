@@ -323,380 +323,113 @@ a:hover {
 
 /* Mobile/Responsive Mode (screens < 600px) */
 @media only screen and (max-width: 599px) {
-/* ===================== MOBILE BUTTON SECTIONS ===================== */
-
-/* Mapillary Button */
-.osmcat-mapillary button {
-    width: 16px;
-    height: 16px;
-    min-width: 16px;
-    min-height: 16px;
-    max-width: 16px;
-    max-height: 16px;
-    font-size: 10px;
-    padding: 0;
-    margin: 4px;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-/* Searcher Button */
-.nominatim-search button, .router-input .search-button {
-    width: 16px;
-    height: 16px;
-    min-width: 16px;
-    min-height: 16px;
-    max-width: 16px;
-    max-height: 16px;
-    font-size: 10px;
-    padding: 0;
-    margin: 4px;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-/* Active Router Menu Button */
-.router-input .calculate-route {
-    width: 100%;
-    min-height: 32px;
-    font-size: 12px;
-    padding: 4px;
-}
-
-/* Panoramax Button */
-.osmcat-panoramax button {
-    width: 16px;
-    height: 16px;
-    min-width: 16px;
-    min-height: 16px;
-    max-width: 16px;
-    max-height: 16px;
-    font-size: 10px;
-    padding: 0;
-    margin: 4px;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-/* Clear Active Overlay Button */
-.clear-active-overlay-btn {
-    font-size: 10px;
-    padding: 4px 8px;
-    min-height: 24px;
-}
-
-/* Geolocalization Button */
-.osmcat-geobutton {
-    width: 16px;
-    height: 16px;
-    min-width: 16px;
-    min-height: 16px;
-    max-width: 16px;
-    max-height: 16px;
-    font-size: 10px;
-    padding: 0;
-    margin: 4px;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-/* Zoom+ Button */
-.ol-zoom-in {
-    width: 16px;
-    height: 16px;
-    min-width: 16px;
-    min-height: 16px;
-    max-width: 16px;
-    max-height: 16px;
-    font-size: 10px;
-    padding: 0;
-    margin: 4px;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-/* Zoom- Button */
-.ol-zoom-out {
-    width: 16px;
-    height: 16px;
-    min-width: 16px;
-    min-height: 16px;
-    max-width: 16px;
-    max-height: 16px;
-    font-size: 10px;
-    padding: 0;
-    margin: 4px;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-/* Slider Zoom Button */
-.ol-zoomslider {
-    width: 16px;
-    min-width: 16px;
-    max-width: 16px;
-    height: 64px;
-    min-height: 64px;
-    max-height: 64px;
-    font-size: 10px;
-    padding: 0;
-    margin: 4px 0;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-/* Rotate Right Button */
-.osmcat-rotateright {
-    width: 16px;
-    height: 16px;
-    min-width: 16px;
-    min-height: 16px;
-    max-width: 16px;
-    max-height: 16px;
-    font-size: 10px;
-    padding: 0;
-    margin: 4px;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-/* Rotate Left Button */
-.osmcat-rotateleft {
-    width: 16px;
-    height: 16px;
-    min-width: 16px;
-    min-height: 16px;
-    max-width: 16px;
-    max-height: 16px;
-    font-size: 10px;
-    padding: 0;
-    margin: 4px;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-/* Recover Direction to North Button */
-.ol-rotate {
-    width: 16px;
-    height: 16px;
-    min-width: 16px;
-    min-height: 16px;
-    max-width: 16px;
-    max-height: 16px;
-    font-size: 10px;
-    padding: 0;
-    margin: 4px;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-/* Info Button */
-.osmcat-infobutton {
-    width: 16px;
-    height: 16px;
-    min-width: 16px;
-    min-height: 16px;
-    max-width: 16px;
-    max-height: 16px;
-    font-size: 10px;
-    padding: 0;
-    margin: 4px;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-/* Share Button */
-.osmcat-sharebutton {
-    width: 16px;
-    height: 16px;
-    min-width: 16px;
-    min-height: 16px;
-    max-width: 16px;
-    max-height: 16px;
-    font-size: 10px;
-    padding: 0;
-    margin: 4px;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-/* ===================== END MOBILE BUTTON SECTIONS ===================== */
-
-    html, body, body * {
-        font-family: Arial, sans-serif !important;
-        font-size: 10px !important;
-    }
-    html, body {
-        width: 100vw;
-        height: 100vh;
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
-        font-size: 16px;
-    }
     .flex-row {
         flex-direction: column;
         height: 100vh;
-        min-height: 100vh;
         position: relative;
         overflow: hidden;
-        width: 100vw;
-        max-width: 100vw;
     }
+
     .map {
-        width: 100vw;
-        max-width: 100vw;
-        height: 50vh;
-        min-height: 50vh;
-        max-height: 50vh;
+        height: 70vh;
         border: none;
         position: relative;
-        touch-action: pan-x pan-y;
     }
+
     .menu {
-        height: 50vh;
-        min-height: 50vh;
-        max-height: 50vh;
-        min-height: 50dvh;
-        height: 50dvh;
-        max-height: 50dvh;
-        width: 100vw;
-        min-width: 100vw;
+        height: 30vh;
+        width: 100%;
         position: relative;
         z-index: 1;
-        background: #fff;
+        background: white;
         display: flex;
         flex-direction: column;
-        overflow: hidden;
-        box-shadow: 0 -2px 8px rgba(0,0,0,0.03);
     }
+
     .osmcat-menu {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        width: 100vw;
+        width: 300%;
         height: 100%;
         overflow-x: auto;
         overflow-y: hidden;
         -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
     }
-    .osmcat-menu::-webkit-scrollbar {
-        display: none;
-    }
+
     .osmcat-layer {
-        flex: 0 0 100vw;
-        width: 100vw;
+        flex: 0 0 100%;
+        width: 100%;
         min-width: 100vw;
         border: none;
         border-top: 1px solid #BBB;
         display: flex;
         flex-direction: column;
         overflow: hidden;
-        background: #fff;
+        background: white;
     }
+
     .osmcat-layer > div:first-child {
-        padding: 8px 12px;
-        background: #fff;
+        padding: 5px;
+        background: white;
         border-bottom: 1px solid #BBB;
         flex-shrink: 0;
-        font-size: 1.1em;
     }
+
     .osmcat-content {
         flex: 1;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
-        padding: 8px 12px;
-        background: #fff;
-        font-size: 1em;
+        padding: 5px;
+        background: white;
     }
-    .osmcat-button, .nominatim-search button, .osmcat-panoramax button {
-        width: 16px;
-        height: 16px;
-        min-width: 16px;
-        min-height: 16px;
-        max-width: 16px;
-        max-height: 16px;
-        font-size: 10px;
-        padding: 0;
-        margin: 4px;
-        border-radius: 4px;
-        box-sizing: border-box;
-    }
-    .nominatim-search input {
-        font-size: 1em;
-        padding: 8px;
-        min-width: 60vw;
-        max-width: 80vw;
-    }
-    .osmcat-map-pin {
-        font-size: 1.2em;
-    }
+
     /* Share button position fix for mobile */
     .osmcat-sharebutton {
-        bottom: 80px;
-        right: 16px;
+        bottom: 70px;
+        right: 44px;
     }
+
     /* Ensure proper menu height in router mode */
     .osmcat-menu.router-active {
         height: 100%;
     }
+
     .osmcat-menu.router-active .osmcat-layer {
         height: 100%;
     }
+
     .router-form {
         flex: 1;
         overflow-y: auto;
         padding: 10px;
         -webkit-overflow-scrolling: touch;
-        background: #fff;
-        font-size: 1em;
+        background: white;
     }
+
     .mapillary-viewer {
         height: 50vh;
     }
+    
     .mapillary-viewer iframe {
         height: calc(100% - 30px);
     }
+    
     /* Adjust Mapillary's internal share button position */
     .mapillary-viewer .mapillary-share-button {
         bottom: 100px !important;
         right: 10px !important;
         z-index: 1002 !important;
     }
+    
     /* Ensure the map shows active sequence clearly */
     .map.viewer-active {
         height: 50vh !important;
     }
+    
     .map.viewer-active .ol-layers {
         z-index: 2;
     }
-    /* Make sure overlays and popups fit on small screens */
-    .popup .popuptext {
-        width: 90vw;
-        left: 5vw;
-        margin-left: 0;
-        font-size: 1em;
-        padding: 8px 0;
-    }
-    /* Prevent horizontal scroll on overlays */
-    #overlay-list, #overlay-search-container, #layer-search-container {
-        max-width: 100vw;
-        overflow-x: auto;
-    }
-    /* Touch-friendly close buttons */
-    .close-button {
-        min-width: 44px;
-        min-height: 44px;
-        font-size: 1.2em;
-        border-radius: 8px;
-    }
-    /* Make sure credit/footer is visible and not too small */
-    .mapillary-viewer .credits {
-        font-size: 1em;
-        padding: 0 6px;
-    }
-
 }
 
 /* Mapillary dot styles - for both PC and mobile */
@@ -1118,289 +851,6 @@ a:hover {
     color: white;
 }
 
-/* ===================== Mapillary Button ===================== */
-.osmcat-mapillary button {
-    background-color: rgba(255, 255, 255, 0.8);
-    border: none;
-    border-radius: 2px;
-    padding: 5px 10px;
-    cursor: pointer;
-    margin: 2px;
-    font-size: 1em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.osmcat-mapillary button:hover {
-    background: rgba(255, 255, 255, 1);
-}
-.osmcat-mapillary button.active {
-    background: #00447B;
-    color: white;
-}
-
-/* ===================== Searcher Button ===================== */
-.nominatim-search button, .router-input .search-button {
-    background-color: rgba(255,255,255,0.4);
-    border: none;
-    border-radius: 2px;
-    padding: 2px;
-    cursor: pointer;
-    width: 1.375em;
-    height: 1.375em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1em;
-}
-.nominatim-search button:hover, .router-input .search-button:hover {
-    background-color: rgba(255,255,255,0.6);
-}
-
-/* ===================== Active Router Menu Button ===================== */
-.osmcat-router {
-    top: .5em;
-    right: 8em;
-    /* If used as a button, add button styles below */
-}
-.router-input .calculate-route {
-    width: 100%;
-    padding: 8px;
-    background-color: rgba(0,60,136,.7);
-    color: white;
-    border: none;
-    border-radius: 2px;
-    cursor: pointer;
-    margin-top: 10px;
-    font-size: 1em;
-}
-.router-input .calculate-route:hover {
-    background-color: rgba(0,60,136,.9);
-}
-
-/* ===================== Panoramax Button ===================== */
-.osmcat-panoramax button {
-    background-color: rgba(255, 255, 255, 0.8);
-    border: none;
-    border-radius: 2px;
-    padding: 5px 10px;
-    cursor: pointer;
-    margin: 2px;
-    font-size: 1em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.osmcat-panoramax button:hover {
-    background: rgba(255, 255, 255, 1);
-}
-.osmcat-panoramax button.active {
-    background: #00447B;
-    color: white;
-}
-
-/* ===================== Clear Active Overlay Button ===================== */
-.clear-active-overlay-btn {
-    cursor: pointer;
-    padding: 6px 10px;
-    background: #ffeaea;
-    color: #b00;
-    font-weight: bold;
-    margin-bottom: 6px;
-    border-radius: 4px;
-    display: block;
-    width: 100%;
-    text-align: left;
-    transition: background 0.2s;
-    border: none;
-    font-size: 1em;
-}
-.clear-active-overlay-btn:hover, .clear-active-overlay-btn:focus {
-    background: #ffcccc;
-    outline: none;
-}
-
-/* ===================== Geolocalization Button ===================== */
-.osmcat-geobutton {
-    position: absolute;
-    bottom: 30px;
-    left: 8px;
-    background-color: rgba(255,255,255,0.4);
-    border: none;
-    border-radius: 2px;
-    padding: 2px;
-    cursor: pointer;
-    width: 1.375em;
-    height: 1.375em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1em;
-}
-.osmcat-geobutton:hover {
-    background-color: rgba(255,255,255,0.6);
-}
-
-/* ===================== Zoom+ Button ===================== */
-.ol-zoom-in {
-    background-color: rgba(255,255,255,0.4);
-    border: none;
-    border-radius: 2px;
-    padding: 2px;
-    cursor: pointer;
-    width: 1.375em;
-    height: 1.375em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1em;
-}
-.ol-zoom-in:hover {
-    background-color: rgba(255,255,255,0.6);
-}
-
-/* ===================== Zoom- Button ===================== */
-.ol-zoom-out {
-    background-color: rgba(255,255,255,0.4);
-    border: none;
-    border-radius: 2px;
-    padding: 2px;
-    cursor: pointer;
-    width: 1.375em;
-    height: 1.375em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1em;
-}
-.ol-zoom-out:hover {
-    background-color: rgba(255,255,255,0.6);
-}
-
-/* ===================== Slider Zoom Button ===================== */
-.ol-zoomslider {
-    background-color: rgba(255,255,255,0.4);
-    border: none;
-    border-radius: 2px;
-    padding: 2px;
-    cursor: pointer;
-    width: 1.375em;
-    height: 5em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.ol-zoomslider:hover {
-    background-color: rgba(255,255,255,0.6);
-}
-
-/* ===================== Rotate Right Button ===================== */
-.osmcat-rotateright {
-    position: absolute;
-    top: .5em;
-    right: 3em;
-    background-color: rgba(255,255,255,0.4);
-    border: none;
-    border-radius: 2px;
-    padding: 2px;
-    cursor: pointer;
-    width: 1.375em;
-    height: 1.375em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1em;
-}
-.osmcat-rotateright:hover {
-    background-color: rgba(255,255,255,0.6);
-}
-
-/* ===================== Rotate Left Button ===================== */
-.osmcat-rotateleft {
-    position: absolute;
-    top: .5em;
-    right: .5em;
-    background-color: rgba(255,255,255,0.4);
-    border: none;
-    border-radius: 2px;
-    padding: 2px;
-    cursor: pointer;
-    width: 1.375em;
-    height: 1.375em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1em;
-}
-.osmcat-rotateleft:hover {
-    background-color: rgba(255,255,255,0.6);
-}
-
-/* ===================== Recover Direction to North Button ===================== */
-.ol-rotate {
-    position: absolute;
-    right: 5.5em;
-    background-color: rgba(255,255,255,0.4);
-    border: none;
-    border-radius: 2px;
-    padding: 2px;
-    cursor: pointer;
-    width: 1.375em;
-    height: 1.375em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1em;
-}
-.ol-rotate:hover {
-    background-color: rgba(255,255,255,0.6);
-}
-
-/* ===================== Info Button ===================== */
-.osmcat-infobutton {
-    position: absolute;
-    bottom: 30px;
-    right: 8px;
-    background-color: rgba(255,255,255,0.4);
-    border: none;
-    border-radius: 2px;
-    padding: 2px;
-    cursor: pointer;
-    width: 1.375em;
-    height: 1.375em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1em;
-}
-.osmcat-infobutton:hover {
-    background-color: rgba(255,255,255,0.6);
-}
-
-/* ===================== Share Button ===================== */
-.osmcat-sharebutton {
-    position: absolute;
-    bottom: 30px;
-    right: 44px;
-    background-color: rgba(255,255,255,0.4);
-    border: none;
-    border-radius: 2px;
-    padding: 2px;
-    cursor: pointer;
-    width: 1.375em;
-    height: 1.375em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1em;
-}
-.osmcat-sharebutton:hover {
-    background-color: rgba(255,255,255,0.6);
-}
-
-/* ===================== END BUTTON SECTIONS ===================== */
-
-
 /* Router specific styles */
 .osmcat-router {
     top: .5em;
@@ -1673,19 +1123,6 @@ a:hover {
   cursor: pointer;
   font-size: 1em;
   color: #222;
-  display: flex;
-  align-items: center;
-}
-
-.overlay-search-option-icon {
-  max-width: 30px;
-  max-height: 30px;
-  width: auto;
-  height: auto;
-  margin-right: 10px;
-  flex-shrink: 0;
-  display: inline-block;
-  vertical-align: middle;
 }
 .overlay-search-option:hover, .overlay-search-option:focus,
 .layer-search-option:hover, .layer-search-option:focus {

@@ -90,23 +90,7 @@ $(function () {
 
     // Render all layers initially
     $(document).ready(function() {
-        // Insert the main menu (layer/overlay controls) if not present
-        if (!$('.osmcat-menu').length) {
-            var $menu = layersControlBuild();
-            $('#menu').prepend($menu);
-        }
         window.renderLayerList(window.layers);
-        window.renderOverlayList(window.overlays);
-
-        // Always add all main map controls (buttons)
-        if (!window._mainMapControlsAdded) {
-            map.addControl(new ol.control.Control({ element: geolocationControlBuild() }));
-            map.addControl(new ol.control.Control({ element: infoControlBuild() }));
-            map.addControl(new ol.control.Control({ element: permalinkControlBuild() }));
-            map.addControl(new ol.control.Control({ element: rotateleftControlBuild() }));
-            map.addControl(new ol.control.Control({ element: rotaterightControlBuild() }));
-            window._mainMapControlsAdded = true;
-        }
     });
     // --- End Layer Searcher Integration ---
 
@@ -127,19 +111,14 @@ $(function () {
     window.renderOverlayList = function(filtered, query) {
         var $list = $('#overlay-list');
         $list.empty();
-        // Ensure Clear Overlay button is above the Mapillary button
+        // Ensure Clear Overlay button is always at the bottom of the menu, not inside the overlay list
         if (!$('#clear-overlay-container').length) {
             var $clearContainer = $('<div id="clear-overlay-container"></div>');
-            // Place before Mapillary button if it exists, otherwise at end of menu
-            if ($('.osmcat-mapillary').length) {
-                $('.osmcat-mapillary').before($clearContainer);
-            } else {
-                $('.menu').append($clearContainer);
-            }
+            $('.menu').append($clearContainer);
         }
         var $clearBtn = $('<div>')
             .addClass('clear-active-overlay-btn')
-            .html('<i class="fa fa-times"></i>') // icon only, no text
+            .text('✖ Clear Active Overlay')
             .css({cursor:'pointer',padding:'6px 10px',background:'#ffeaea',color:'#b00',fontWeight:'bold',margin:'12px 8px'})
             .attr('tabindex', 0)
             .on('click', function() {
