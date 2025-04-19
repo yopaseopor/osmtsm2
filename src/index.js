@@ -111,10 +111,10 @@ $(function () {
     window.renderOverlayList = function(filtered, query) {
         var $list = $('#overlay-list');
         $list.empty();
-        // Move Clear Overlay button just below overlay searcher
+        // Ensure Clear Overlay button is always at the bottom of the menu, not inside the overlay list
         if (!$('#clear-overlay-container').length) {
             var $clearContainer = $('<div id="clear-overlay-container"></div>');
-            $('#overlay-search-container').after($clearContainer);
+            $('.menu').append($clearContainer);
         }
         var $clearBtn = $('<div>')
             .addClass('clear-active-overlay-btn')
