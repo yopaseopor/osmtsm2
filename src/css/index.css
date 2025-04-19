@@ -385,7 +385,6 @@ a:hover {
         overflow: hidden;
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
-        margin-top: -100px;
     }
     .osmcat-menu::-webkit-scrollbar {
         display: none;
