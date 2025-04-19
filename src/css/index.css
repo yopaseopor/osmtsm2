@@ -412,12 +412,17 @@ a:hover {
         font-size: 1em;
     }
     .osmcat-button, .nominatim-search button, .osmcat-panoramax button {
-        min-width: 44px;
-        min-height: 44px;
-        font-size: 1em;
-        padding: 8px;
+        width: 16px;
+        height: 16px;
+        min-width: 16px;
+        min-height: 16px;
+        max-width: 16px;
+        max-height: 16px;
+        font-size: 10px;
+        padding: 0;
         margin: 4px;
-        border-radius: 8px;
+        border-radius: 4px;
+        box-sizing: border-box;
     }
     .nominatim-search input {
         font-size: 1em;
