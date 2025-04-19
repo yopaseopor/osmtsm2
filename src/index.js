@@ -177,9 +177,6 @@ $(function () {
     });
     // --- End Overlay Searcher Integration ---
 
-    // --- Router Button Control ---
-    // Router button must be added only after map is initialized!
-    // So we move this block to after the map is created (below)
 
 	$('#map').empty(); // Remove Javascript required message
 	var baseLayerIndex = 0;
