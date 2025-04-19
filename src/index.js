@@ -97,6 +97,16 @@ $(function () {
         }
         window.renderLayerList(window.layers);
         window.renderOverlayList(window.overlays);
+
+        // Always add all main map controls (buttons)
+        if (!window._mainMapControlsAdded) {
+            map.addControl(new ol.control.Control({ element: geolocationControlBuild() }));
+            map.addControl(new ol.control.Control({ element: infoControlBuild() }));
+            map.addControl(new ol.control.Control({ element: permalinkControlBuild() }));
+            map.addControl(new ol.control.Control({ element: rotateleftControlBuild() }));
+            map.addControl(new ol.control.Control({ element: rotaterightControlBuild() }));
+            window._mainMapControlsAdded = true;
+        }
     });
     // --- End Layer Searcher Integration ---
 
