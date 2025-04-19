@@ -885,6 +885,14 @@ CLEAR ACTIVE OVERLAY BUTTON
     justify-content: center;
 }
 
+.osmcat-routerbutton .router-btn.blue {
+    background-color: #34587C;
+    color: #fff;
+}
+.osmcat-routerbutton .router-btn.blue i {
+    color: #fff;
+}
+
 .osmcat-routerbutton {
     display: inline-block;
     margin-left: 4px;

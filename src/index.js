@@ -376,34 +376,39 @@ $(function () {
         window.initRouter = initRouter;
     }
     // Add Router Button Control only once, and next to clear overlay button
+    // Restore blue router button and ensure only one instance
     var routerButtonControlBuild = function () {
         var container = $('<div>').addClass('ol-control ol-unselectable osmcat-routerbutton').html(
-            $('<button type="button" class="router-btn" title="Router"><i class="fa fa-random"></i></button>').on('click', function () {
-                var btn = $(this);
-                btn.toggleClass('active');
-                if (btn.hasClass('active')) {
-                    // Open router menu (initRouter will handle UI)
-                    if (typeof window.initRouter === 'function') {
-                        window.initRouter(map);
-                    } else {
-                        alert('Router module is not loaded.');
-                    }
-                } else {
-                    // Close router menu if open
-                    $('.osmcat-menu .osmcat-layer').each(function() {
-                        if ($(this).find('.osmcat-select').text() === 'Router') {
-                            $(this).remove();
+            $('<button type="button" class="router-btn" title="Router"><i class="fa fa-random"></i></button>')
+                .addClass('blue')
+                .on('click', function () {
+                    var btn = $(this);
+                    btn.toggleClass('active');
+                    if (btn.hasClass('active')) {
+                        // Open router menu (initRouter will handle UI)
+                        if (typeof window.initRouter === 'function') {
+                            window.initRouter(map);
+                        } else {
+                            alert('Router module is not loaded.');
                         }
-                    });
-                    $('.router-btn').removeClass('active');
-                    $('.osmcat-menu').removeClass('router-active');
-                }
-            })
+                    } else {
+                        // Close router menu if open
+                        $('.osmcat-menu .osmcat-layer').each(function() {
+                            if ($(this).find('.osmcat-select').text() === 'Router') {
+                                $(this).remove();
+                            }
+                        });
+                        $('.router-btn').removeClass('active');
+                        $('.osmcat-menu').removeClass('router-active');
+                    }
+                })
         );
         return container[0];
     };
 
     setTimeout(function() {
+        // Remove any duplicate router buttons before adding
+        $('.osmcat-routerbutton').remove();
         var clearOverlayControl = $('.osmcat-clearoverlaybutton');
         var routerControl = $(routerButtonControlBuild());
         if (clearOverlayControl.length) {
