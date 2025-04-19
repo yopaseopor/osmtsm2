@@ -90,7 +90,13 @@ $(function () {
 
     // Render all layers initially
     $(document).ready(function() {
+        // Insert the main menu (layer/overlay controls) if not present
+        if (!$('.osmcat-menu').length) {
+            var $menu = layersControlBuild();
+            $('#menu').prepend($menu);
+        }
         window.renderLayerList(window.layers);
+        window.renderOverlayList(window.overlays);
     });
     // --- End Layer Searcher Integration ---
 
