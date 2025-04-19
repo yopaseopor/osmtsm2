@@ -118,8 +118,8 @@ $(function () {
         }
         var $clearBtn = $('<div>')
             .addClass('clear-active-overlay-btn')
-            .text('✖ Clear Active Overlay')
-            .css({cursor:'pointer',padding:'6px 10px',background:'#ffeaea',color:'#b00',fontWeight:'bold',margin:'12px 8px'})
+            .text('✖')
+            .css({cursor:'pointer',padding:'1px 1px',background:'#ffeaea',color:'#b00',fontWeight:'bold',margin:'0px 0px'})
             .attr('tabindex', 0)
             .on('click', function() {
                 // Hide all overlays
