@@ -111,11 +111,6 @@ $(function () {
     window.renderOverlayList = function(filtered, query) {
         var $list = $('#overlay-list');
         $list.empty();
-        // Ensure Clear Overlay button is always at the bottom of the menu, not inside the overlay list
-        if (!$('#clear-overlay-container').length) {
-            var $clearContainer = $('<div id="clear-overlay-container"></div>');
-            $('.menu').append($clearContainer);
-        }
         var $clearBtn = $('<div>')
             .addClass('clear-active-overlay-btn')
             .text('✖ Clear Active Overlay')
@@ -134,7 +129,6 @@ $(function () {
                 $('#overlay-search').val('');
             });
         $('#clear-overlay-container').empty().append($clearBtn);
-        var $list = $('#overlay-list');
         $list.empty();
         if (!query || !filtered || !filtered.length) {
             if (query && (!filtered || !filtered.length)) {
