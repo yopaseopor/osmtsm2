@@ -375,48 +375,45 @@ $(function () {
     if (typeof window.initRouter !== 'function' && typeof initRouter === 'function') {
         window.initRouter = initRouter;
     }
-    // Add Router Button Control only once, and next to clear overlay button
-    // Restore blue router button and ensure only one instance
+    // Add Router Button as a true OpenLayers control next to clear overlay button
     var routerButtonControlBuild = function () {
-        var container = $('<div>').addClass('ol-control ol-unselectable osmcat-routerbutton').html(
-            $('<button type="button" class="router-btn" title="Router"><i class="fa fa-random"></i></button>')
-                .addClass('blue')
-                .on('click', function () {
-                    var btn = $(this);
-                    btn.toggleClass('active');
-                    if (btn.hasClass('active')) {
-                        // Open router menu (initRouter will handle UI)
-                        if (typeof window.initRouter === 'function') {
-                            window.initRouter(map);
-                        } else {
-                            alert('Router module is not loaded.');
-                        }
-                    } else {
-                        // Close router menu if open
-                        $('.osmcat-menu .osmcat-layer').each(function() {
-                            if ($(this).find('.osmcat-select').text() === 'Router') {
-                                $(this).remove();
-                            }
-                        });
-                        $('.router-btn').removeClass('active');
-                        $('.osmcat-menu').removeClass('router-active');
+        var container = document.createElement('div');
+        container.className = 'ol-control ol-unselectable osmcat-routerbutton';
+        var button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'router-btn blue';
+        button.title = 'Router';
+        button.innerHTML = '<i class="fa fa-random"></i>';
+        button.onclick = function () {
+            button.classList.toggle('active');
+            if (button.classList.contains('active')) {
+                if (typeof window.initRouter === 'function') {
+                    window.initRouter(map);
+                } else {
+                    alert('Router module is not loaded.');
+                }
+            } else {
+                // Close router menu if open
+                $('.osmcat-menu .osmcat-layer').each(function() {
+                    if ($(this).find('.osmcat-select').text() === 'Router') {
+                        $(this).remove();
                     }
-                })
-        );
-        return container[0];
+                });
+                $('.router-btn').removeClass('active');
+                $('.osmcat-menu').removeClass('router-active');
+            }
+        };
+        container.appendChild(button);
+        return container;
     };
 
-    setTimeout(function() {
-        // Remove any duplicate router buttons before adding
-        $('.osmcat-routerbutton').remove();
-        var clearOverlayControl = $('.osmcat-clearoverlaybutton');
-        var routerControl = $(routerButtonControlBuild());
-        if (clearOverlayControl.length) {
-            clearOverlayControl.after(routerControl);
-        } else {
-            $('#map').append(routerControl);
-        }
-    }, 0);
+    // Remove any previous router controls
+    $(".osmcat-routerbutton").remove();
+    // Add as OpenLayers control
+    var routerControl = new ol.control.Control({
+        element: routerButtonControlBuild()
+    });
+    map.addControl(routerControl);
 
 	var layersControlBuild = function () {
 		var visibleLayer,
