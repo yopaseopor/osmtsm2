@@ -111,33 +111,8 @@ $(function () {
     window.renderOverlayList = function(filtered, query) {
         var $list = $('#overlay-list');
         $list.empty();
-        // Place Clear Overlay button next to geolocalization button on the map controls
-        if (!$('.clear-active-overlay-btn').length) {
-            var $clearBtn = $('<button>')
-                .addClass('clear-active-overlay-btn')
-                .attr('title', 'Clear Active Overlay')
-                .html('<i class="fa fa-times"></i>')
-                .attr('tabindex', 0)
-                .on('click', function() {
-                    // Hide all overlays
-                    $.each(config.layers, function(indexLayer, layerGroup) {
-                        if (layerGroup.get && layerGroup.get('type') === 'overlay') {
-                            $.each(layerGroup.getLayers().getArray(), function(idx, olayer) {
-                                if (olayer.setVisible) olayer.setVisible(false);
-                            });
-                        }
-                    });
-                    if (window.renderOverlayList) window.renderOverlayList([], '');
-                    $('#overlay-search').val('');
-                });
-            var $geoBtn = $('.osmcat-geobutton');
-            if ($geoBtn.length) {
-                // Insert as a sibling inside the same .ol-control container
-                $geoBtn.parent().append($clearBtn);
-            } else {
-                $('#map').append($clearBtn);
-            }
-        }
+        // (Removed: clear overlay button is now a map control, not injected here)
+
         var $list = $('#overlay-list');
         $list.empty();
         if (!query || !filtered || !filtered.length) {
@@ -551,9 +526,32 @@ $(function () {
 		}));
 		return container[0];
 	};
+
+	// Clear Overlay Control
+	var clearOverlayControlBuild = function () {
+		var container = $('<div>').addClass('ol-control ol-unselectable osmcat-clearoverlaybutton').html(
+			$('<button type="button" class="clear-active-overlay-btn" title="Clear Active Overlay"><i class="fa fa-times"></i></button>').on('click', function () {
+				// Hide all overlays
+				$.each(config.layers, function(indexLayer, layerGroup) {
+					if (layerGroup.get && layerGroup.get('type') === 'overlay') {
+						$.each(layerGroup.getLayers().getArray(), function(idx, olayer) {
+							if (olayer.setVisible) olayer.setVisible(false);
+						});
+					}
+				});
+				if (window.renderOverlayList) window.renderOverlayList([], '');
+				$('#overlay-search').val('');
+			})
+		);
+		return container[0];
+	};
+
 	map.addControl(new ol.control.Control({
-		element: geolocationControlBuild()
-	}));
+        element: geolocationControlBuild()
+    }));
+    map.addControl(new ol.control.Control({
+        element: clearOverlayControlBuild()
+    }));
 	
 	
 	// Como crear un control
