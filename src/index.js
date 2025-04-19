@@ -129,9 +129,9 @@ $(function () {
                 if (window.renderOverlayList) window.renderOverlayList([], '');
                 $('#overlay-search').val('');
             });
-        $('#clear-overlay-container').empty().append($clearBtn);
         var $list = $('#overlay-list');
         $list.empty();
+        $list.prepend($clearBtn);
         if (!query || !filtered || !filtered.length) {
             if (query && (!filtered || !filtered.length)) {
                 $list.append('<div style="padding:8px;color:#888;">No overlays found.</div>');
