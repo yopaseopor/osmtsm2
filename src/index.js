@@ -499,11 +499,23 @@ $(function () {
 		return container;
 	};
 
-    $('#menu').append(layersControlBuild());
-    // Optionally, re-render layers after layersControl if needed
+    // Rebuild the menu bar with clear separation for Layers, Overlays, and Router (if active)
+    var $menu = $('#menu');
+    $menu.empty();
+
+    // 1. Layers section
+    $menu.append('<div class="menu-section"><h3>Layers</h3><div id="layer-list"></div></div>');
     if (window.renderLayerList && window.layers) window.renderLayerList(window.layers);
-    // Optionally, re-render overlays after overlaysControl if needed
+
+    // 2. Overlays section
+    $menu.append('<div class="menu-section"><h3>Overlays</h3><div id="overlay-list"></div></div>');
     if (window.renderOverlayList && window.overlays) window.renderOverlayList(window.overlays);
+
+    // 3. Router section (only if active)
+    if (window.routerIsActive && typeof window.renderRouter === 'function') {
+        $menu.append('<div class="menu-section" id="router-section"><h3>Router</h3><div id="router-container"></div></div>');
+        window.renderRouter(); // This should populate #router-container
+    }
 
 	map.addControl(new ol.control.MousePosition({
 		coordinateFormat: function (coordinate) {
