@@ -504,7 +504,10 @@ $(function () {
     if (!$('#layer-classic-selector').length) {
         $('#menu').append('<div class="menu-section"><h3>Base Layers</h3><div id="layer-classic-selector"></div></div>');
     }
-    $('#layer-classic-selector').empty().append(layersControlBuild());
+    $('#layer-classic-selector').empty();
+    if (typeof layersControlBuild === 'function') {
+        $('#layer-classic-selector').append(layersControlBuild());
+    }
 
     // 2. Layer searcher
     if (!$('#layer-list').length) {
@@ -517,7 +520,10 @@ $(function () {
     if (!$('#overlay-classic-selector').length) {
         $('#menu').append('<div class="menu-section"><h3>Overlays</h3><div id="overlay-classic-selector"></div></div>');
     }
-    $('#overlay-classic-selector').empty().append(overlaysControlBuild ? overlaysControlBuild() : '');
+    $('#overlay-classic-selector').empty();
+    if (typeof overlaysControlBuild === 'function') {
+        $('#overlay-classic-selector').append(overlaysControlBuild());
+    }
 
     // 4. Overlay searcher
     if (!$('#overlay-list').length) {
