@@ -163,11 +163,13 @@ CLEAR ACTIVE OVERLAY BUTTON
 	right: 44px;
 }
 
-.osmcat-menu{
-	display: flex;
-	flex-wrap: wrap;
-	height: 100%;
+.osmcat-menu {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 0;
 }
+
 
 .osmcat-select {
 	background: none;
@@ -177,26 +179,15 @@ CLEAR ACTIVE OVERLAY BUTTON
 }
 
 .osmcat-layer {
-	border: 1px solid #BBB;
-	padding-left: 5px;
-	width: 100%;
-	height: 100%;  /* Default height when router is not active */
-	overflow-y: auto;
+    border: 1px solid #BBB;
+    padding-left: 5px;
+    width: 100%;
+    flex: 1 1 0;
+    min-height: 0;
+    max-height: 100%;
+    overflow-y: auto;
 }
 
-/* Height adjustments when router is active */
-.osmcat-menu.router-active .osmcat-layer {
-	height: 33.33%;
-}
-
-/* Specific height adjustments for layers when router is not active */
-.osmcat-menu:not(.router-active) .osmcat-layer:first-child {
-	height: 50%;
-}
-
-.osmcat-menu:not(.router-active) .osmcat-layer:nth-child(2) {
-	height: 50%;
-}
 
 .osmcat-layer > div {
 	width: 100%;
