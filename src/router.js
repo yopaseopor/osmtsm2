@@ -599,8 +599,13 @@ function initRouter(map) {
                 calculateRoute();
             });
 
-            // Add router content to menu
-            $('.osmcat-menu').append(routerContent);
+            // Insert router content right after overlay searcher
+            var $overlaySearchContainer = $('#overlay-search-container');
+            if ($overlaySearchContainer.length) {
+                routerContent.insertAfter($overlaySearchContainer);
+            } else {
+                $('.osmcat-menu').append(routerContent);
+            }
 
             // Remove any existing router content
             $('.osmcat-menu .osmcat-layer').not(routerContent).each(function() {
