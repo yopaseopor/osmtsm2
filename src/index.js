@@ -371,11 +371,11 @@ $(function () {
 	// Initialize Mapillary viewer
 	initMapillaryViewer(map);
 
-    // Initialize Router
+    // Ensure window.initRouter is set after router.js loads
     if (typeof window.initRouter !== 'function' && typeof initRouter === 'function') {
         window.initRouter = initRouter;
     }
-    // Add Router Button Control after map is initialized
+    // Add Router Button Control (only once, after map is initialized)
     var routerButtonControlBuild = function () {
         var container = $('<div>').addClass('ol-control ol-unselectable osmcat-routerbutton').html(
             $('<button type="button" class="router-btn" title="Router"><i class="fa fa-random"></i></button>').on('click', function () {
