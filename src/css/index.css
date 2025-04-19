@@ -81,8 +81,8 @@ a:hover {
 #overlay-list {
     background: #fff;
     border-radius: 6px;
-    margin: 0 8px 0 8px;
-    padding: 0;
+    margin: 0 8px 8px 8px;
+    padding: 8px 0;
     box-shadow: 0 2px 8px rgba(0,0,0,0.04);
     min-height: 40px;
     flex: 1 1 0%;
@@ -93,8 +93,8 @@ a:hover {
 }
 
 #overlay-search-container {
-    margin: 0 8px 0 8px;
-    padding: 0;
+    margin: 8px 8px 4px 8px;
+    padding: 0 0 2px 0;
     background: #f4f7fb;
     border-radius: 4px;
 }
@@ -323,14 +323,6 @@ a:hover {
 
 /* Mobile/Responsive Mode (screens < 600px) */
 @media only screen and (max-width: 599px) {
-    #overlay-search-container, #layer-search-container {
-        margin-bottom: 0;
-        padding-bottom: 0;
-    }
-    #overlay-list {
-        margin-top: 0;
-    }
-
     html, body, body * {
         font-family: Arial, sans-serif !important;
         font-size: 10px !important;
