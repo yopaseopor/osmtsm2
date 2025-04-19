@@ -549,9 +549,19 @@ $(function () {
 	map.addControl(new ol.control.Control({
         element: geolocationControlBuild()
     }));
-    map.addControl(new ol.control.Control({
-        element: clearOverlayControlBuild()
-    }));
+    // Add Clear Overlay control just after Rotate control (if present)
+    // Try to find the rotate control element and insert after it
+    setTimeout(function() {
+        var rotateControl = $('.ol-rotate');
+        var clearOverlayControl = $(clearOverlayControlBuild());
+        if (rotateControl.length) {
+            rotateControl.after(clearOverlayControl);
+        } else {
+            // fallback: add to map as usual
+            $('#map').append(clearOverlayControl);
+        }
+    }, 0);
+
 	
 	
 	// Como crear un control
