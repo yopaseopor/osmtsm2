@@ -430,52 +430,55 @@ function initRouter(map) {
                 if (clickHandler) {
                     map.un('singleclick', clickHandler);
                     clickHandler = null;
-                }
-                existingRouter.remove();
-                routerButton.removeClass('active');
-                $('.osmcat-menu').removeClass('router-active');
 
-                // Clear markers and route when closing
-                if (startMarker) map.removeOverlay(startMarker);
-                if (endMarker) map.removeOverlay(endMarker);
-                if (viaMarker) map.removeOverlay(viaMarker);
-                routeLayer.getSource().clear();
-                
-                startPlace = null;
-                endPlace = null;
+    loading.show();
+    
+    const profile = $('.profile-select').val();
+    
+    // Format coordinates with proper precision
+    const formatCoord = (coord) => coord.toFixed(6);
+    let waypoints = `${formatCoord(startPlace.lon)},${formatCoord(startPlace.lat)}`;
+    
+    if (viaPlace) {
+        waypoints += `;${formatCoord(viaPlace.lon)},${formatCoord(viaPlace.lat)}`;
+    }
+    
+    waypoints += `;${formatCoord(endPlace.lon)},${formatCoord(endPlace.lat)}`;
+    
+    // Map profile values to OSRM API base URLs and profiles
+    const profileMap = {
+        'car': {
+            baseUrl: 'https://router.project-osrm.org/route/v1',
+            profile: 'driving'
+        },
+        'bike': {
+            baseUrl: 'https://routing.openstreetmap.de/routed-bike/route/v1',
+            profile: 'bicycle'
+        },
+        'foot': {
+            baseUrl: 'https://routing.openstreetmap.de/routed-foot/route/v1',
+            profile: 'foot'
+        }
+    };
+    
+    const routingConfig = profileMap[profile] || profileMap.car;
+    const url = `${routingConfig.baseUrl}/${routingConfig.profile}/${waypoints}?overview=full&geometries=geojson`;
+    
+    console.log('Calculating route with URL:', url);
+    
+    fetch(url)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
                 viaPlace = null;
-                startMarker = null;
-                endMarker = null;
-                viaMarker = null;
-
-                return;
             }
-
-            // Router is closed, open it
+        } else {
+            // Open router menu
             routerButton.addClass('active');
             $('.osmcat-menu').addClass('router-active');
-
-            // Clear any existing markers and route
-            if (startMarker) map.removeOverlay(startMarker);
-            if (endMarker) map.removeOverlay(endMarker);
-            if (viaMarker) map.removeOverlay(viaMarker);
-            routeLayer.getSource().clear();
-            
-            startPlace = null;
-            endPlace = null;
-            viaPlace = null;
-            startMarker = null;
-            endMarker = null;
-            viaMarker = null;
-
-            // Create router content
-            const routerContent = $(`
-                <div class="osmcat-layer">
-                    <div class="osmcat-select">Router</div>
-                    <div class="osmcat-content">
-                        <div class="router-form">
-                            <div class="router-input">
-                                <label>Start:</label>
+            // Move actual router menu node to the top of the menu bar
+            var $existingRouterMenu = $('.osmcat-menu .osmcat-layer').filter(function() {
+                return $(this).find('.osmcat-select').text() === 'Router';
                                 <div class="location-input">
                                     <input type="text" class="start-place" placeholder="Search start location...">
                                     <button class="search-button"><i class="fa fa-search"></i></button>

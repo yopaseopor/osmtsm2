@@ -111,15 +111,20 @@ $(function () {
     window.renderOverlayList = function(filtered, query) {
         var $list = $('#overlay-list');
         $list.empty();
-        // Ensure Clear Overlay button is always at the bottom of the menu, not inside the overlay list
+        // Ensure Clear Overlay button is above the Mapillary button
         if (!$('#clear-overlay-container').length) {
             var $clearContainer = $('<div id="clear-overlay-container"></div>');
-            $('.menu').append($clearContainer);
+            // Place before Mapillary button if it exists, otherwise at end of menu
+            if ($('.osmcat-mapillary').length) {
+                $('.osmcat-mapillary').before($clearContainer);
+            } else {
+                $('.menu').append($clearContainer);
+            }
         }
         var $clearBtn = $('<div>')
             .addClass('clear-active-overlay-btn')
-            .text('✖')
-            .css({cursor:'pointer',padding:'1px 1px',background:'#ffeaea',color:'#b00',fontWeight:'bold',margin:'0px 0px'})
+            .html('<i class="fa fa-times"></i>') // icon only, no text
+            .css({cursor:'pointer',padding:'6px 10px',background:'#ffeaea',color:'#b00',fontWeight:'bold',margin:'12px 8px'})
             .attr('tabindex', 0)
             .on('click', function() {
                 // Hide all overlays
