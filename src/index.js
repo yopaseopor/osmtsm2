@@ -178,6 +178,10 @@ $(function () {
     // --- End Overlay Searcher Integration ---
 
     // --- Router Button Control ---
+    // Ensure initRouter is globally accessible
+    if (typeof window.initRouter !== 'function' && typeof initRouter === 'function') {
+        window.initRouter = initRouter;
+    }
     var routerButtonControlBuild = function () {
         var container = $('<div>').addClass('ol-control ol-unselectable osmcat-routerbutton').html(
             $('<button type="button" class="router-btn" title="Router"><i class="fa fa-random"></i></button>').on('click', function () {
@@ -185,8 +189,10 @@ $(function () {
                 btn.toggleClass('active');
                 if (btn.hasClass('active')) {
                     // Open router menu (initRouter will handle UI)
-                    if (typeof initRouter === 'function') {
-                        initRouter(map);
+                    if (typeof window.initRouter === 'function') {
+                        window.initRouter(map);
+                    } else {
+                        alert('Router module is not loaded.');
                     }
                 } else {
                     // Close router menu if open
