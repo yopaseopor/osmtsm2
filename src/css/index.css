@@ -1111,20 +1111,24 @@ Desktop:
     right: 8px;
 }
 .osmcat-mapillary button {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: #567CAC;
     border: none;
     border-radius: 2px;
     padding: 5px 10px;
     cursor: pointer;
     margin: 2px;
 }
+.osmcat-mapillary button i {
+    color: #FFFFFF;
+}
 .osmcat-mapillary button:hover {
-    background: rgba(255, 255, 255, 1);
+    background: #34587C;
 }
 .osmcat-mapillary button.active {
-    background: #00447B;
-    color: white;
+    background: #34587C;
+    color: #FFFFFF;
 }
+
 /* Mobile */
 @media only screen and (max-width: 599px) {
     .osmcat-mapillary {
@@ -1145,14 +1149,21 @@ Desktop:
     left: 44px;
 }
 .nominatim-search button {
-    background-color: rgba(255,255,255,0.4);
+    background-color: #567CAC;
     border: none;
     border-radius: 2px;
     padding: 2px;
     cursor: pointer;
 }
+.nominatim-search button i {
+    color: #FFFFFF;
+}
 .nominatim-search button:hover {
-    background-color: rgba(255,255,255,0.6);
+    background-color: #34587C;
+}
+.nominatim-search button.active {
+    background-color: #34587C;
+    color: #FFFFFF;
 }
 .nominatim-search input {
     position: absolute;
@@ -1177,6 +1188,23 @@ Desktop:
     top: .5em;
     right: 8em;
 }
+.osmcat-router button {
+    background-color: #567CAC;
+    border: none;
+    border-radius: 2px;
+    padding: 2px;
+    cursor: pointer;
+}
+.osmcat-router button i {
+    color: #FFFFFF;
+}
+.osmcat-router button:hover {
+    background-color: #34587C;
+}
+.osmcat-router button.active {
+    background-color: #34587C;
+    color: #FFFFFF;
+}
 /* Mobile */
 @media only screen and (max-width: 599px) {
     .osmcat-router {
@@ -1197,19 +1225,22 @@ Desktop:
     right: 8px;
 }
 .osmcat-panoramax button {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: #567CAC;
     border: none;
     border-radius: 2px;
     padding: 5px 10px;
     cursor: pointer;
     margin: 2px;
 }
+.osmcat-panoramax button i {
+    color: #FFFFFF;
+}
 .osmcat-panoramax button:hover {
-    background: rgba(255, 255, 255, 1);
+    background: #34587C;
 }
 .osmcat-panoramax button.active {
-    background: #00447B;
-    color: white;
+    background: #34587C;
+    color: #FFFFFF;
 }
 /* Mobile */
 @media only screen and (max-width: 599px) {
