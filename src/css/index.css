@@ -99,6 +99,13 @@ a:hover {
 CLEAR ACTIVE OVERLAY BUTTON
 ====================================
 */
+.osmcat-clearoverlaybutton {
+    position: absolute;
+    left: 40px;
+    top: 30px;
+    z-index: 1002;
+}
+
 .clear-active-overlay-btn {
     width: 40px;
     height: 40px;
