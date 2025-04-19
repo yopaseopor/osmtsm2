@@ -132,7 +132,8 @@ $(function () {
                 });
             var $geoBtn = $('.osmcat-geobutton');
             if ($geoBtn.length) {
-                $geoBtn.after($clearBtn);
+                // Insert as a sibling inside the same .ol-control container
+                $geoBtn.parent().append($clearBtn);
             } else {
                 $('#map').append($clearBtn);
             }
