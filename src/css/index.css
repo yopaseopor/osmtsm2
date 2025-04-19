@@ -370,11 +370,12 @@ a:hover {
     }
     .osmcat-menu {
         display: flex;
-        flex-direction: column;
-        flex: 1 1 0;
+        flex-direction: row;
+        flex-wrap: nowrap;
         width: 100vw;
         height: 100%;
-        overflow: hidden;
+        overflow-x: auto;
+        overflow-y: hidden;
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
     }
@@ -382,7 +383,7 @@ a:hover {
         display: none;
     }
     .osmcat-layer {
-        flex: 1 1 0;
+        flex: 0 0 100vw;
         width: 100vw;
         min-width: 100vw;
         border: none;
@@ -391,7 +392,6 @@ a:hover {
         flex-direction: column;
         overflow: hidden;
         background: #fff;
-        min-height: 0;
     }
     .osmcat-layer > div:first-child {
         padding: 8px 12px;
@@ -401,13 +401,12 @@ a:hover {
         font-size: 1.1em;
     }
     .osmcat-content {
-        flex: 1 1 0;
+        flex: 1;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
-        padding: 8px 12px 0 12px;
+        padding: 8px 12px;
         background: #fff;
         font-size: 1em;
-        min-height: 0;
     }
     .osmcat-button, .nominatim-search button, .osmcat-panoramax button {
         min-width: 44px;
