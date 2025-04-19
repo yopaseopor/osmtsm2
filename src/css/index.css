@@ -1095,35 +1095,121 @@ a:hover {
     }
 }
 
-.osmcat-mapillary button {
-    background-color: rgba(255, 255, 255, 0.8);
-    border: none;
-    border-radius: 2px;
-    padding: 5px 10px;
+/* Unified square icon button style for map controls */
+.square-icon-btn, .osmcat-mapillary button, .osmcat-panoramax button, .nominatim-search button, .osmcat-router button, .clear-active-overlay-btn {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    min-height: 32px;
+    max-width: 32px;
+    max-height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.07);
+    color: #00447B;
     cursor: pointer;
-    margin: 2px;
+    font-size: 18px;
+    margin: 4px;
+    transition: background 0.2s, color 0.2s;
+    padding: 0;
+    outline: none;
 }
-
-.osmcat-mapillary button:hover {
-    background: rgba(255, 255, 255, 1);
+.square-icon-btn:hover, .osmcat-mapillary button:hover, .osmcat-panoramax button:hover, .nominatim-search button:hover, .osmcat-router button:hover, .clear-active-overlay-btn:hover {
+    background: #e6f0fa;
+    color: #002b4d;
 }
-
-.osmcat-mapillary button.active {
+.square-icon-btn.active, .osmcat-mapillary button.active, .osmcat-panoramax button.active, .nominatim-search button.active, .osmcat-router button.active, .clear-active-overlay-btn.active {
     background: #00447B;
-    color: white;
+    color: #fff;
+    border-color: #00447B;
 }
 
-/* PanoraMax viewer button position */
-.osmcat-panoramax {
-    bottom: 70px;
-    right: 8px;
+/* For Font Awesome icon inside the button */
+.square-icon-btn i, .clear-active-overlay-btn i {
+    font-size: 18px;
+    line-height: 1;
+    pointer-events: none;
 }
 
-/* Mapillary viewer button position */
+/* Positioning for Mapillary, Panoramax, and Searcher button containers */
 .osmcat-mapillary {
     bottom: 110px;
     right: 8px;
+    position: absolute;
+    z-index: 10;
 }
+.osmcat-panoramax {
+    bottom: 70px;
+    right: 8px;
+    position: absolute;
+    z-index: 10;
+}
+.nominatim-search {
+    top: 30px;
+    left: 44px;
+    position: absolute;
+    z-index: 10;
+}
+.osmcat-router {
+    top: .5em;
+    right: 8em;
+    position: absolute;
+    z-index: 10;
+}
+
+/* For router menu active state */
+.osmcat-menu.router-active {
+    box-shadow: 0 0 0 2px #00447B;
+}
+
+/* Clear active overlay button as square Font Awesome button */
+.clear-active-overlay-btn {
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    min-height: 32px !important;
+    max-width: 32px !important;
+    max-height: 32px !important;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    background: #ffeaea;
+    color: #b00;
+    border: 1px solid #b00;
+    border-radius: 6px;
+    font-size: 20px !important;
+    margin: 4px;
+    padding: 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,.07);
+    transition: background 0.2s, color 0.2s;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+}
+.clear-active-overlay-btn:hover, .clear-active-overlay-btn:focus {
+    background: #ffcccc;
+    color: #fff;
+    border-color: #b00;
+}
+.clear-active-overlay-btn i {
+    font-family: 'FontAwesome';
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    font-size: 20px;
+    line-height: 1;
+    pointer-events: none;
+}
+
+/* Hide text in clear button, only show icon */
+.clear-active-overlay-btn span {
+    display: none;
+}
+
 
 /* Mapillary dot styles */
 .map .ol-layer canvas {
@@ -1145,23 +1231,7 @@ a:hover {
     r: 6;  /* Make active dot slightly larger */
 }
 
-.clear-active-overlay-btn {
-  cursor: pointer;
-  padding: 6px 10px;
-  background: #ffeaea;
-  color: #b00;
-  font-weight: bold;
-  margin-bottom: 6px;
-  border-radius: 4px;
-  display: block;
-  width: 100%;
-  text-align: left;
-  transition: background 0.2s;
-}
-.clear-active-overlay-btn:hover, .clear-active-overlay-btn:focus {
-  background: #ffcccc;
-  outline: none;
-}
+
 
 /* Overlay search bar styles */
 #overlay-search-container, #layer-search-container {
