@@ -1,5 +1,8 @@
 /* global config, ol */
 $(function () {
+    // TEMP: Force router menu to appear for testing
+    window.routerIsActive = true;
+
     // Expose renderRouter for menu system
     window.renderRouter = function() {
         // If router.js exposes a builder, use it. Otherwise, just show a placeholder.
