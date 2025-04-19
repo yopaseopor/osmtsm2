@@ -1,20 +1,5 @@
 /* global config, ol */
 $(function () {
-    // TEMP: Force router menu to appear for testing
-    window.routerIsActive = true;
-
-    // Expose renderRouter for menu system
-    window.renderRouter = function() {
-        // If router.js exposes a builder, use it. Otherwise, just show a placeholder.
-        if (typeof window.buildRouterMenu === 'function') {
-            // buildRouterMenu should populate #router-container as needed
-            window.buildRouterMenu($('#router-container'));
-        } else {
-            // Fallback: show a placeholder if no builder exists
-            $('#router-container').html('<div style="padding:8px; color:#888;">Router UI not implemented. Please check router.js.</div>');
-        }
-    };
-
     // --- Layer Searcher Integration ---
     // 1. Flatten base layers into window.layers
     window.layers = [];
@@ -126,7 +111,11 @@ $(function () {
     window.renderOverlayList = function(filtered, query) {
         var $list = $('#overlay-list');
         $list.empty();
-        // Ensure Clear Overlay button is always at the TOP of the overlay list
+        // Ensure Clear Overlay button is always at the bottom of the menu, not inside the overlay list
+        if (!$('#clear-overlay-container').length) {
+            var $clearContainer = $('<div id="clear-overlay-container"></div>');
+            $('.menu').append($clearContainer);
+        }
         var $clearBtn = $('<div>')
             .addClass('clear-active-overlay-btn')
             .text('✖ Clear Active Overlay')
@@ -144,9 +133,9 @@ $(function () {
                 if (window.renderOverlayList) window.renderOverlayList([], '');
                 $('#overlay-search').val('');
             });
+        $('#clear-overlay-container').empty().append($clearBtn);
         var $list = $('#overlay-list');
         $list.empty();
-        $list.prepend($clearBtn);
         if (!query || !filtered || !filtered.length) {
             if (query && (!filtered || !filtered.length)) {
                 $list.append('<div style="padding:8px;color:#888;">No overlays found.</div>');
@@ -405,14 +394,6 @@ $(function () {
 	// Initialize Router
 	initRouter(map);
 
-    // Optionally expose a builder for renderRouter if not present
-    if (typeof window.buildRouterMenu !== 'function' && typeof initRouter === 'function') {
-        window.buildRouterMenu = function($container) {
-            // This is a placeholder. You should implement the real UI builder in router.js
-            $container.html('<div style="padding:8px; color:#888;">Router controls will appear here.</div>');
-        };
-    }
-
 	var layersControlBuild = function () {
 		var visibleLayer,
 			previousLayer,
@@ -522,47 +503,11 @@ $(function () {
 		return container;
 	};
 
-    // Rebuild the menu bar with clear separation for Layers, Overlays, and Router (if active)
-    // 1. Layer classic selector (above searcher)
-    if (!$('#layer-classic-selector').length) {
-        $('#menu').append('<div class="menu-section"><h3>Base Layers</h3><div id="layer-classic-selector"></div></div>');
-    }
-    $('#layer-classic-selector').empty();
-    if (typeof layersControlBuild === 'function') {
-        $('#layer-classic-selector').append(layersControlBuild());
-    }
-
-    // 2. Layer searcher
-    if (!$('#layer-list').length) {
-        $('#menu').append('<div class="menu-section"><h3>Layer Searcher</h3><div id="layer-list"></div></div>');
-    }
-    $('#layer-list').empty();
+    $('#menu').append(layersControlBuild());
+    // Optionally, re-render layers after layersControl if needed
     if (window.renderLayerList && window.layers) window.renderLayerList(window.layers);
-
-    // 3. Overlay classic selector (above searcher)
-    if (!$('#overlay-classic-selector').length) {
-        $('#menu').append('<div class="menu-section"><h3>Overlays</h3><div id="overlay-classic-selector"></div></div>');
-    }
-    $('#overlay-classic-selector').empty();
-    if (typeof overlaysControlBuild === 'function') {
-        $('#overlay-classic-selector').append(overlaysControlBuild());
-    }
-
-    // 4. Overlay searcher
-    if (!$('#overlay-list').length) {
-        $('#menu').append('<div class="menu-section"><h3>Overlay Searcher</h3><div id="overlay-list"></div></div>');
-    }
-    $('#overlay-list').empty();
+    // Optionally, re-render overlays after overlaysControl if needed
     if (window.renderOverlayList && window.overlays) window.renderOverlayList(window.overlays);
-
-    // 5. Router section (only if active)
-    if (window.routerIsActive && typeof window.renderRouter === 'function') {
-        if (!$('#router-container').length) {
-            $('#menu').append('<div class="menu-section" id="router-section"><h3>Router</h3><div id="router-container"></div></div>');
-        }
-        $('#router-container').empty();
-        window.renderRouter();
-    }
 
 	map.addControl(new ol.control.MousePosition({
 		coordinateFormat: function (coordinate) {
