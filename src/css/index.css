@@ -728,8 +728,8 @@ CLEAR ACTIVE OVERLAY BUTTON
     margin: 2px;
     border: none;
     cursor: pointer;
-    width: 1.375em;
-    height: 1.375em;
+    width: 20px;
+    height: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
