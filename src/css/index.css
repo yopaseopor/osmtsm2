@@ -323,56 +323,6 @@ a:hover {
 
 /* Mobile/Responsive Mode (screens < 600px) */
 @media only screen and (max-width: 599px) {
-    /* Map control bar for mobile */
-    .osmcat-mobile-control-bar {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 40px;
-        background: rgba(255,255,255,0.85);
-        z-index: 1001;
-        padding: 0 2px;
-        gap: 6px;
-    }
-    .osmcat-geobutton,
-    .osmcat-infobutton,
-    .osmcat-sharebutton,
-    .osmcat-panoramax,
-    .osmcat-mapillary,
-    .ol-control button {
-        width: 32px !important;
-        height: 32px !important;
-        min-width: 32px !important;
-        min-height: 32px !important;
-        max-width: 32px !important;
-        max-height: 32px !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        border-radius: 6px !important;
-        font-size: 16px !important;
-        box-shadow: none !important;
-        position: static !important;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    /* Remove any absolute positioning for buttons on mobile */
-    .osmcat-geobutton,
-    .osmcat-infobutton,
-    .osmcat-sharebutton,
-    .osmcat-panoramax,
-    .osmcat-mapillary {
-        bottom: unset !important;
-        left: unset !important;
-        right: unset !important;
-        top: unset !important;
-    }
-
     html, body, body * {
         font-family: Arial, sans-serif !important;
         font-size: 10px !important;
@@ -458,13 +408,31 @@ a:hover {
         background: #fff;
         font-size: 1em;
     }
-    .osmcat-button, .nominatim-search button, .osmcat-panoramax button {
-        min-width: 44px;
-        min-height: 44px;
-        font-size: 1em;
-        padding: 8px;
-        margin: 4px;
-        border-radius: 8px;
+    .osmcat-button, .nominatim-search button, .osmcat-panoramax button, .clear-active-overlay-btn, .close-button, button {
+        width: 16px !important;
+        height: 16px !important;
+        min-width: 16px !important;
+        min-height: 16px !important;
+        max-width: 16px !important;
+        max-height: 16px !important;
+        font-size: 10px !important;
+        padding: 0 !important;
+        margin: 2px !important;
+        border-radius: 4px !important;
+        background: #1976d2 !important;
+        color: #fff !important;
+        border: none !important;
+        box-shadow: none !important;
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        vertical-align: middle;
+        overflow: hidden;
+    }
+    /* Prevent button overlap and ensure spacing */
+    .osmcat-button, .nominatim-search button, .osmcat-panoramax button, .clear-active-overlay-btn, .close-button, button {
+        position: relative !important;
+        z-index: 1;
     }
     .nominatim-search input {
         font-size: 1em;
