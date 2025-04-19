@@ -101,7 +101,7 @@ CLEAR ACTIVE OVERLAY BUTTON
 */
 .clear-active-overlay-btn {
     position: absolute;
-    left: 12px;
+    left: 60px; /* right of geolocalization button (which is left: 8px; width: 40px) */
     bottom: 30px;
     width: 40px;
     height: 40px;
@@ -122,6 +122,17 @@ CLEAR ACTIVE OVERLAY BUTTON
 .clear-active-overlay-btn i {
     color: #b00;
     font-size: 1.2em;
+    line-height: 1;
+    width: 1em;
+    height: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clear-active-overlay-btn i {
+    color: #b00;
+    font-size: 1.2em;
 }
 .clear-active-overlay-btn:hover, .clear-active-overlay-btn:focus {
     background: #ffcccc;
@@ -129,7 +140,7 @@ CLEAR ACTIVE OVERLAY BUTTON
 }
 @media only screen and (max-width: 599px) {
     .clear-active-overlay-btn {
-        left: 12px;
+        left: 60px;
         bottom: 30px;
         width: 40px;
         height: 40px;
