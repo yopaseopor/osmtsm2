@@ -1,5 +1,17 @@
 /* global config, ol */
 $(function () {
+    // Expose renderRouter for menu system
+    window.renderRouter = function() {
+        // If router.js exposes a builder, use it. Otherwise, just show a placeholder.
+        if (typeof window.buildRouterMenu === 'function') {
+            // buildRouterMenu should populate #router-container as needed
+            window.buildRouterMenu($('#router-container'));
+        } else {
+            // Fallback: show a placeholder if no builder exists
+            $('#router-container').html('<div style="padding:8px; color:#888;">Router UI not implemented. Please check router.js.</div>');
+        }
+    };
+
     // --- Layer Searcher Integration ---
     // 1. Flatten base layers into window.layers
     window.layers = [];
@@ -389,6 +401,14 @@ $(function () {
 
 	// Initialize Router
 	initRouter(map);
+
+    // Optionally expose a builder for renderRouter if not present
+    if (typeof window.buildRouterMenu !== 'function' && typeof initRouter === 'function') {
+        window.buildRouterMenu = function($container) {
+            // This is a placeholder. You should implement the real UI builder in router.js
+            $container.html('<div style="padding:8px; color:#888;">Router controls will appear here.</div>');
+        };
+    }
 
 	var layersControlBuild = function () {
 		var visibleLayer,
