@@ -177,6 +177,35 @@ $(function () {
     });
     // --- End Overlay Searcher Integration ---
 
+    // --- Router Button Control ---
+    var routerButtonControlBuild = function () {
+        var container = $('<div>').addClass('ol-control ol-unselectable osmcat-routerbutton').html(
+            $('<button type="button" class="router-btn" title="Router"><i class="fa fa-random"></i></button>').on('click', function () {
+                var btn = $(this);
+                btn.toggleClass('active');
+                if (btn.hasClass('active')) {
+                    // Open router menu (initRouter will handle UI)
+                    if (typeof initRouter === 'function') {
+                        initRouter(map);
+                    }
+                } else {
+                    // Close router menu if open
+                    $('.osmcat-menu .osmcat-layer').each(function() {
+                        if ($(this).find('.osmcat-select').text() === 'Router') {
+                            $(this).remove();
+                        }
+                    });
+                    $('.router-btn').removeClass('active');
+                    $('.osmcat-menu').removeClass('router-active');
+                }
+            })
+        );
+        return container[0];
+    };
+    map.addControl(new ol.control.Control({
+        element: routerButtonControlBuild()
+    }));
+
 	$('#map').empty(); // Remove Javascript required message
 	var baseLayerIndex = 0;
 	
