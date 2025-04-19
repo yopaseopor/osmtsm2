@@ -599,12 +599,17 @@ function initRouter(map) {
                 calculateRoute();
             });
 
-            // Insert router content right after overlay searcher
-            var $overlaySearchContainer = $('#overlay-search-container');
-            if ($overlaySearchContainer.length) {
-                routerContent.insertAfter($overlaySearchContainer);
+            // Insert router content above the Layers list in the menu
+            var $layerList = $('#layer-list');
+            if ($layerList.length) {
+                routerContent.insertBefore($layerList);
             } else {
-                $('.osmcat-menu').append(routerContent);
+                var $layerSearchContainer = $('#layer-search-container');
+                if ($layerSearchContainer.length) {
+                    routerContent.insertBefore($layerSearchContainer);
+                } else {
+                    $('.osmcat-menu').prepend(routerContent);
+                }
             }
 
             // Remove any existing router content
