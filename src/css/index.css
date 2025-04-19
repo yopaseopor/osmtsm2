@@ -63,9 +63,7 @@ a:hover {
     position: relative;
 }
 
-#overlay-list {
-    margin-bottom: 56px;
-}
+
 
 #overlay-list {
     background: #fff;
@@ -75,11 +73,12 @@ a:hover {
     box-shadow: 0 2px 8px rgba(0,0,0,0.04);
     min-height: 40px;
     flex: 1 1 0%;
-    max-height: none;
+    max-height: calc(100% - 16px);
     overflow-y: auto;
     display: flex;
     flex-direction: column;
 }
+
 
 #overlay-search-container {
     margin: 8px 8px 4px 8px;
