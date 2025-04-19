@@ -323,6 +323,205 @@ a:hover {
 
 /* Mobile/Responsive Mode (screens < 600px) */
 @media only screen and (max-width: 599px) {
+/* ===================== MOBILE BUTTON SECTIONS ===================== */
+
+/* Mapillary Button */
+.osmcat-mapillary button {
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    min-height: 16px;
+    max-width: 16px;
+    max-height: 16px;
+    font-size: 10px;
+    padding: 0;
+    margin: 4px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Searcher Button */
+.nominatim-search button, .router-input .search-button {
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    min-height: 16px;
+    max-width: 16px;
+    max-height: 16px;
+    font-size: 10px;
+    padding: 0;
+    margin: 4px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Active Router Menu Button */
+.router-input .calculate-route {
+    width: 100%;
+    min-height: 32px;
+    font-size: 12px;
+    padding: 4px;
+}
+
+/* Panoramax Button */
+.osmcat-panoramax button {
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    min-height: 16px;
+    max-width: 16px;
+    max-height: 16px;
+    font-size: 10px;
+    padding: 0;
+    margin: 4px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Clear Active Overlay Button */
+.clear-active-overlay-btn {
+    font-size: 10px;
+    padding: 4px 8px;
+    min-height: 24px;
+}
+
+/* Geolocalization Button */
+.osmcat-geobutton {
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    min-height: 16px;
+    max-width: 16px;
+    max-height: 16px;
+    font-size: 10px;
+    padding: 0;
+    margin: 4px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Zoom+ Button */
+.ol-zoom-in {
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    min-height: 16px;
+    max-width: 16px;
+    max-height: 16px;
+    font-size: 10px;
+    padding: 0;
+    margin: 4px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Zoom- Button */
+.ol-zoom-out {
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    min-height: 16px;
+    max-width: 16px;
+    max-height: 16px;
+    font-size: 10px;
+    padding: 0;
+    margin: 4px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Slider Zoom Button */
+.ol-zoomslider {
+    width: 16px;
+    min-width: 16px;
+    max-width: 16px;
+    height: 64px;
+    min-height: 64px;
+    max-height: 64px;
+    font-size: 10px;
+    padding: 0;
+    margin: 4px 0;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Rotate Right Button */
+.osmcat-rotateright {
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    min-height: 16px;
+    max-width: 16px;
+    max-height: 16px;
+    font-size: 10px;
+    padding: 0;
+    margin: 4px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Rotate Left Button */
+.osmcat-rotateleft {
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    min-height: 16px;
+    max-width: 16px;
+    max-height: 16px;
+    font-size: 10px;
+    padding: 0;
+    margin: 4px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Recover Direction to North Button */
+.ol-rotate {
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    min-height: 16px;
+    max-width: 16px;
+    max-height: 16px;
+    font-size: 10px;
+    padding: 0;
+    margin: 4px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Info Button */
+.osmcat-infobutton {
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    min-height: 16px;
+    max-width: 16px;
+    max-height: 16px;
+    font-size: 10px;
+    padding: 0;
+    margin: 4px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Share Button */
+.osmcat-sharebutton {
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    min-height: 16px;
+    max-width: 16px;
+    max-height: 16px;
+    font-size: 10px;
+    padding: 0;
+    margin: 4px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* ===================== END MOBILE BUTTON SECTIONS ===================== */
+
     html, body, body * {
         font-family: Arial, sans-serif !important;
         font-size: 10px !important;
@@ -919,6 +1118,289 @@ a:hover {
     color: white;
 }
 
+/* ===================== Mapillary Button ===================== */
+.osmcat-mapillary button {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 2px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin: 2px;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.osmcat-mapillary button:hover {
+    background: rgba(255, 255, 255, 1);
+}
+.osmcat-mapillary button.active {
+    background: #00447B;
+    color: white;
+}
+
+/* ===================== Searcher Button ===================== */
+.nominatim-search button, .router-input .search-button {
+    background-color: rgba(255,255,255,0.4);
+    border: none;
+    border-radius: 2px;
+    padding: 2px;
+    cursor: pointer;
+    width: 1.375em;
+    height: 1.375em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+}
+.nominatim-search button:hover, .router-input .search-button:hover {
+    background-color: rgba(255,255,255,0.6);
+}
+
+/* ===================== Active Router Menu Button ===================== */
+.osmcat-router {
+    top: .5em;
+    right: 8em;
+    /* If used as a button, add button styles below */
+}
+.router-input .calculate-route {
+    width: 100%;
+    padding: 8px;
+    background-color: rgba(0,60,136,.7);
+    color: white;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 1em;
+}
+.router-input .calculate-route:hover {
+    background-color: rgba(0,60,136,.9);
+}
+
+/* ===================== Panoramax Button ===================== */
+.osmcat-panoramax button {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 2px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin: 2px;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.osmcat-panoramax button:hover {
+    background: rgba(255, 255, 255, 1);
+}
+.osmcat-panoramax button.active {
+    background: #00447B;
+    color: white;
+}
+
+/* ===================== Clear Active Overlay Button ===================== */
+.clear-active-overlay-btn {
+    cursor: pointer;
+    padding: 6px 10px;
+    background: #ffeaea;
+    color: #b00;
+    font-weight: bold;
+    margin-bottom: 6px;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    text-align: left;
+    transition: background 0.2s;
+    border: none;
+    font-size: 1em;
+}
+.clear-active-overlay-btn:hover, .clear-active-overlay-btn:focus {
+    background: #ffcccc;
+    outline: none;
+}
+
+/* ===================== Geolocalization Button ===================== */
+.osmcat-geobutton {
+    position: absolute;
+    bottom: 30px;
+    left: 8px;
+    background-color: rgba(255,255,255,0.4);
+    border: none;
+    border-radius: 2px;
+    padding: 2px;
+    cursor: pointer;
+    width: 1.375em;
+    height: 1.375em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+}
+.osmcat-geobutton:hover {
+    background-color: rgba(255,255,255,0.6);
+}
+
+/* ===================== Zoom+ Button ===================== */
+.ol-zoom-in {
+    background-color: rgba(255,255,255,0.4);
+    border: none;
+    border-radius: 2px;
+    padding: 2px;
+    cursor: pointer;
+    width: 1.375em;
+    height: 1.375em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+}
+.ol-zoom-in:hover {
+    background-color: rgba(255,255,255,0.6);
+}
+
+/* ===================== Zoom- Button ===================== */
+.ol-zoom-out {
+    background-color: rgba(255,255,255,0.4);
+    border: none;
+    border-radius: 2px;
+    padding: 2px;
+    cursor: pointer;
+    width: 1.375em;
+    height: 1.375em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+}
+.ol-zoom-out:hover {
+    background-color: rgba(255,255,255,0.6);
+}
+
+/* ===================== Slider Zoom Button ===================== */
+.ol-zoomslider {
+    background-color: rgba(255,255,255,0.4);
+    border: none;
+    border-radius: 2px;
+    padding: 2px;
+    cursor: pointer;
+    width: 1.375em;
+    height: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ol-zoomslider:hover {
+    background-color: rgba(255,255,255,0.6);
+}
+
+/* ===================== Rotate Right Button ===================== */
+.osmcat-rotateright {
+    position: absolute;
+    top: .5em;
+    right: 3em;
+    background-color: rgba(255,255,255,0.4);
+    border: none;
+    border-radius: 2px;
+    padding: 2px;
+    cursor: pointer;
+    width: 1.375em;
+    height: 1.375em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+}
+.osmcat-rotateright:hover {
+    background-color: rgba(255,255,255,0.6);
+}
+
+/* ===================== Rotate Left Button ===================== */
+.osmcat-rotateleft {
+    position: absolute;
+    top: .5em;
+    right: .5em;
+    background-color: rgba(255,255,255,0.4);
+    border: none;
+    border-radius: 2px;
+    padding: 2px;
+    cursor: pointer;
+    width: 1.375em;
+    height: 1.375em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+}
+.osmcat-rotateleft:hover {
+    background-color: rgba(255,255,255,0.6);
+}
+
+/* ===================== Recover Direction to North Button ===================== */
+.ol-rotate {
+    position: absolute;
+    right: 5.5em;
+    background-color: rgba(255,255,255,0.4);
+    border: none;
+    border-radius: 2px;
+    padding: 2px;
+    cursor: pointer;
+    width: 1.375em;
+    height: 1.375em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+}
+.ol-rotate:hover {
+    background-color: rgba(255,255,255,0.6);
+}
+
+/* ===================== Info Button ===================== */
+.osmcat-infobutton {
+    position: absolute;
+    bottom: 30px;
+    right: 8px;
+    background-color: rgba(255,255,255,0.4);
+    border: none;
+    border-radius: 2px;
+    padding: 2px;
+    cursor: pointer;
+    width: 1.375em;
+    height: 1.375em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+}
+.osmcat-infobutton:hover {
+    background-color: rgba(255,255,255,0.6);
+}
+
+/* ===================== Share Button ===================== */
+.osmcat-sharebutton {
+    position: absolute;
+    bottom: 30px;
+    right: 44px;
+    background-color: rgba(255,255,255,0.4);
+    border: none;
+    border-radius: 2px;
+    padding: 2px;
+    cursor: pointer;
+    width: 1.375em;
+    height: 1.375em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+}
+.osmcat-sharebutton:hover {
+    background-color: rgba(255,255,255,0.6);
+}
+
+/* ===================== END BUTTON SECTIONS ===================== */
+
+
 /* Router specific styles */
 .osmcat-router {
     top: .5em;
@@ -1095,121 +1577,35 @@ a:hover {
     }
 }
 
-/* Unified square icon button style for map controls */
-.square-icon-btn, .osmcat-mapillary button, .osmcat-panoramax button, .nominatim-search button, .osmcat-router button, .clear-active-overlay-btn {
-    width: 32px;
-    height: 32px;
-    min-width: 32px;
-    min-height: 32px;
-    max-width: 32px;
-    max-height: 32px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: #fff;
-    border: 1px solid #bbb;
-    border-radius: 6px;
-    box-shadow: 0 1px 3px rgba(0,0,0,.07);
-    color: #00447B;
+.osmcat-mapillary button {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 2px;
+    padding: 5px 10px;
     cursor: pointer;
-    font-size: 18px;
-    margin: 4px;
-    transition: background 0.2s, color 0.2s;
-    padding: 0;
-    outline: none;
+    margin: 2px;
 }
-.square-icon-btn:hover, .osmcat-mapillary button:hover, .osmcat-panoramax button:hover, .nominatim-search button:hover, .osmcat-router button:hover, .clear-active-overlay-btn:hover {
-    background: #e6f0fa;
-    color: #002b4d;
+
+.osmcat-mapillary button:hover {
+    background: rgba(255, 255, 255, 1);
 }
-.square-icon-btn.active, .osmcat-mapillary button.active, .osmcat-panoramax button.active, .nominatim-search button.active, .osmcat-router button.active, .clear-active-overlay-btn.active {
+
+.osmcat-mapillary button.active {
     background: #00447B;
-    color: #fff;
-    border-color: #00447B;
+    color: white;
 }
 
-/* For Font Awesome icon inside the button */
-.square-icon-btn i, .clear-active-overlay-btn i {
-    font-size: 18px;
-    line-height: 1;
-    pointer-events: none;
-}
-
-/* Positioning for Mapillary, Panoramax, and Searcher button containers */
-.osmcat-mapillary {
-    bottom: 110px;
-    right: 8px;
-    position: absolute;
-    z-index: 10;
-}
+/* PanoraMax viewer button position */
 .osmcat-panoramax {
     bottom: 70px;
     right: 8px;
-    position: absolute;
-    z-index: 10;
-}
-.nominatim-search {
-    top: 30px;
-    left: 44px;
-    position: absolute;
-    z-index: 10;
-}
-.osmcat-router {
-    top: .5em;
-    right: 8em;
-    position: absolute;
-    z-index: 10;
 }
 
-/* For router menu active state */
-.osmcat-menu.router-active {
-    box-shadow: 0 0 0 2px #00447B;
+/* Mapillary viewer button position */
+.osmcat-mapillary {
+    bottom: 110px;
+    right: 8px;
 }
-
-/* Clear active overlay button as square Font Awesome button */
-.clear-active-overlay-btn {
-    width: 32px !important;
-    height: 32px !important;
-    min-width: 32px !important;
-    min-height: 32px !important;
-    max-width: 32px !important;
-    max-height: 32px !important;
-    display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
-    background: #ffeaea;
-    color: #b00;
-    border: 1px solid #b00;
-    border-radius: 6px;
-    font-size: 20px !important;
-    margin: 4px;
-    padding: 0;
-    box-shadow: 0 1px 3px rgba(0,0,0,.07);
-    transition: background 0.2s, color 0.2s;
-    cursor: pointer;
-    outline: none;
-    text-align: center;
-}
-.clear-active-overlay-btn:hover, .clear-active-overlay-btn:focus {
-    background: #ffcccc;
-    color: #fff;
-    border-color: #b00;
-}
-.clear-active-overlay-btn i {
-    font-family: 'FontAwesome';
-    font-style: normal;
-    font-weight: normal;
-    text-decoration: inherit;
-    font-size: 20px;
-    line-height: 1;
-    pointer-events: none;
-}
-
-/* Hide text in clear button, only show icon */
-.clear-active-overlay-btn span {
-    display: none;
-}
-
 
 /* Mapillary dot styles */
 .map .ol-layer canvas {
@@ -1231,7 +1627,23 @@ a:hover {
     r: 6;  /* Make active dot slightly larger */
 }
 
-
+.clear-active-overlay-btn {
+  cursor: pointer;
+  padding: 6px 10px;
+  background: #ffeaea;
+  color: #b00;
+  font-weight: bold;
+  margin-bottom: 6px;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  text-align: left;
+  transition: background 0.2s;
+}
+.clear-active-overlay-btn:hover, .clear-active-overlay-btn:focus {
+  background: #ffcccc;
+  outline: none;
+}
 
 /* Overlay search bar styles */
 #overlay-search-container, #layer-search-container {
