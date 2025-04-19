@@ -90,7 +90,6 @@ a:hover {
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    border-top: none;
 }
 
 #overlay-search-container {
@@ -386,6 +385,7 @@ a:hover {
         overflow: hidden;
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
+        margin-top: -100px;
     }
     .osmcat-menu::-webkit-scrollbar {
         display: none;
@@ -401,8 +401,6 @@ a:hover {
         overflow: hidden;
         background: #fff;
         min-height: 0;
-        margin-top: 0 !important;
-        padding-top: 0 !important;
     }
     .osmcat-layer > div:first-child {
         padding: 8px 12px;
@@ -415,11 +413,10 @@ a:hover {
         flex: 1 1 0;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
-        padding: 0 12px 0 12px;
+        padding: 8px 12px 0 12px;
         background: #fff;
         font-size: 1em;
         min-height: 0;
-        margin-top: 0 !important;
     }
     .osmcat-button, .nominatim-search button, .osmcat-panoramax button {
         min-width: 44px;
