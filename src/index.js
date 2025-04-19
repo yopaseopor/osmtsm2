@@ -111,29 +111,32 @@ $(function () {
     window.renderOverlayList = function(filtered, query) {
         var $list = $('#overlay-list');
         $list.empty();
-        // Ensure Clear Overlay button is always at the bottom of the menu, not inside the overlay list
-        if (!$('#clear-overlay-container').length) {
-            var $clearContainer = $('<div id="clear-overlay-container"></div>');
-            $('.menu').append($clearContainer);
-        }
-        var $clearBtn = $('<button>')
-            .addClass('clear-active-overlay-btn')
-            .attr('title', 'Clear Active Overlay')
-            .html('<i class="fa fa-times"></i>')
-            .attr('tabindex', 0)
-            .on('click', function() {
-                // Hide all overlays
-                $.each(config.layers, function(indexLayer, layerGroup) {
-                    if (layerGroup.get && layerGroup.get('type') === 'overlay') {
-                        $.each(layerGroup.getLayers().getArray(), function(idx, olayer) {
-                            if (olayer.setVisible) olayer.setVisible(false);
-                        });
-                    }
+        // Place Clear Overlay button next to geolocalization button on the map controls
+        if (!$('.clear-active-overlay-btn').length) {
+            var $clearBtn = $('<button>')
+                .addClass('clear-active-overlay-btn')
+                .attr('title', 'Clear Active Overlay')
+                .html('<i class="fa fa-times"></i>')
+                .attr('tabindex', 0)
+                .on('click', function() {
+                    // Hide all overlays
+                    $.each(config.layers, function(indexLayer, layerGroup) {
+                        if (layerGroup.get && layerGroup.get('type') === 'overlay') {
+                            $.each(layerGroup.getLayers().getArray(), function(idx, olayer) {
+                                if (olayer.setVisible) olayer.setVisible(false);
+                            });
+                        }
+                    });
+                    if (window.renderOverlayList) window.renderOverlayList([], '');
+                    $('#overlay-search').val('');
                 });
-                if (window.renderOverlayList) window.renderOverlayList([], '');
-                $('#overlay-search').val('');
-            });
-        $('#clear-overlay-container').empty().append($clearBtn);
+            var $geoBtn = $('.osmcat-geobutton');
+            if ($geoBtn.length) {
+                $geoBtn.after($clearBtn);
+            } else {
+                $('#map').append($clearBtn);
+            }
+        }
         var $list = $('#overlay-list');
         $list.empty();
         if (!query || !filtered || !filtered.length) {
