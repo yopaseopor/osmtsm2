@@ -599,17 +599,24 @@ function initRouter(map) {
                 calculateRoute();
             });
 
-            // Insert router content between Layer and Overlay menus
-            var $layerList = $('#layer-list');
-            var $overlayList = $('#overlay-list');
-            if ($layerList.length && $overlayList.length) {
-                routerContent.insertAfter($layerList);
-            } else if ($layerList.length) {
-                routerContent.insertAfter($layerList);
-            } else if ($overlayList.length) {
-                routerContent.insertBefore($overlayList);
+            // Insert router content between classic layer and overlay selectors
+            var $menu = $('.osmcat-menu');
+            var $layers = $menu.find('.osmcat-layer .osmcat-select').filter(function(){
+                // Not overlay selector
+                return !$(this).find('option').filter(function(){ return $(this).val().toLowerCase().indexOf('overlay') !== -1; }).length;
+            }).closest('.osmcat-layer').first();
+            var $overlays = $menu.find('.osmcat-layer .osmcat-select').filter(function(){
+                // Is overlay selector
+                return $(this).find('option').filter(function(){ return $(this).val().toLowerCase().indexOf('overlay') !== -1; }).length;
+            }).closest('.osmcat-layer').first();
+            if ($layers.length && $overlays.length) {
+                routerContent.insertAfter($layers);
+            } else if ($layers.length) {
+                routerContent.insertAfter($layers);
+            } else if ($overlays.length) {
+                routerContent.insertBefore($overlays);
             } else {
-                $('.osmcat-menu').prepend(routerContent);
+                $menu.prepend(routerContent);
             }
 
             // Remove any existing router content
