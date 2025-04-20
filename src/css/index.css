@@ -397,6 +397,22 @@ CLEAR ACTIVE OVERLAY BUTTON
         -webkit-overflow-scrolling: touch;
     }
 
+    /* CSS-only: Layer menu width (not active) */
+    .osmcat-menu .osmcat-layer {
+        width: 260px;
+        max-width: 100vw;
+        min-width: 0;
+        flex: 0 0 260px;
+    }
+
+    /* CSS-only: Overlay menu width (not active) */
+    .osmcat-menu .osmcat-overlay {
+        width: 220px;
+        max-width: 100vw;
+        min-width: 0;
+        flex: 0 0 220px;
+    }
+
     .osmcat-layer {
         flex: 0 0 100%;
         width: 100%;
@@ -432,13 +448,16 @@ CLEAR ACTIVE OVERLAY BUTTON
 
     /* Set specific widths for each menu type on mobile */
     .osmcat-menu.layer-active {
-        width: 100px !important;
+        width: 320px !important;
+        max-width: 100vw;
     }
     .osmcat-menu.overlay-active {
-        width: 100px !important;
+        width: 280px !important;
+        max-width: 100vw;
     }
     .osmcat-menu.router-active {
-        width: 100px !important;
+        width: 360px !important;
+        max-width: 100vw;
         height: 100%;
     }
 
