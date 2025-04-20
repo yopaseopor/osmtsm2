@@ -626,14 +626,15 @@ function initRouter(map) {
                 }
             });
 
-            // Clean up when router is closed
+            // Clean up when router is closed (unified with router-btn)
             routerContent.find('.osmcat-select').on('click', function() {
                 if (clickHandler) {
                     map.un('singleclick', clickHandler);
                     clickHandler = null;
                 }
                 routerContent.remove();
-                routerButton.removeClass('active');
+                // Deactivate the router button if present
+                $('.router-btn').removeClass('active');
                 $('.osmcat-menu').removeClass('router-active');
             });
         });
