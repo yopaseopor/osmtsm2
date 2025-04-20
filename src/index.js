@@ -377,24 +377,16 @@ $(function () {
     }
 
     // Add Router Button as a true OpenLayers control next to clear overlay button
-    var routerButton = $('<button type="button" class="router-btn blue" title="Router"><i class="fa fa-random"></i></button>');
-    var routerInfoBtn = $('<button type="button" class="router-info-btn" title="Router info"><i class="fa fa-info-circle"></i></button>');
-    routerInfoBtn.on('click', function(e) {
-        e.stopPropagation();
-        alert('Router: Calculate routes between points on the map. Click the random icon to activate the router menu.');
-    });
-    var routerControl = $('<div>').addClass('ol-control ol-unselectable osmcat-routerbutton').append(routerButton).append(routerInfoBtn);
-    map.addControl(new ol.control.Control({
-        element: routerControl[0]
-    }));
-
-    routerButton.on('click', function () {
-        routerButton.toggleClass('active');
-        if (routerButton.hasClass('active')) {
-            // Remove any existing router menus before creating a new one
-            $('.osmcat-menu .osmcat-layer').each(function() {
-                if ($(this).find('.osmcat-select').text() === 'Router') {
-                    $(this).remove();
+    var routerButtonControlBuild = function () {
+        var container = document.createElement('div');
+        container.className = 'ol-control ol-unselectable osmcat-routerbutton';
+        var button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'router-btn blue';
+        button.title = 'Router';
+        button.innerHTML = '<i class="fa fa-random"></i>';
+        button.onclick = function () {
+            button.classList.toggle('active');
             if (button.classList.contains('active')) {
                 // Remove any existing router menus before creating a new one
                 $('.osmcat-menu .osmcat-layer').each(function() {

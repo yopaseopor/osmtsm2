@@ -1149,7 +1149,7 @@ CLEAR ACTIVE OVERLAY BUTTON
 /* ====================================
    ROUTER RANDOM BUTTON (router-btn)
    ====================================
-   This section styles the router random button (router-btn) and its info button.
+   This section styles the router random button (router-btn) that toggles the router menu.
    It matches the appearance and UX of other OpenLayers/map control buttons.
 */
 .router-btn {
@@ -1165,7 +1165,7 @@ CLEAR ACTIVE OVERLAY BUTTON
     justify-content: center;
     cursor: pointer;
     box-shadow: 0 2px 6px rgba(0,0,0,0.07);
-    margin: 2px 2px 2px 0;
+    margin: 2px;
     transition: background 0.2s, color 0.2s;
 }
 .router-btn i {
@@ -1179,34 +1179,6 @@ CLEAR ACTIVE OVERLAY BUTTON
 }
 .router-btn.active {
     background-color: #34587C;
-    color: #fff;
-}
-
-.router-info-btn {
-    background-color: rgba(255,255,255,0.4);
-    color: #34587C;
-    border: none;
-    border-radius: 2px;
-    padding: 2px;
-    width: 1.8em;
-    height: 1.8em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    margin: 2px 0 2px 2px;
-    transition: background 0.2s, color 0.2s;
-}
-.router-info-btn i {
-    color: #34587C;
-    font-size: 1.2em;
-}
-.router-info-btn:hover, .router-info-btn:focus {
-    background-color: #34587C;
-    color: #fff;
-    outline: none;
-}
-.router-info-btn:hover i, .router-info-btn:focus i {
     color: #fff;
 }
 
