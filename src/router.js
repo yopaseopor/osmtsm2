@@ -97,7 +97,89 @@ function initRouter(map) {
                 marker.setPosition(coordinate);
             }
             
-            // No automatic route calculation here. Route will be calculated only when 'Calculate Route' button is clicked.
+            // Only calculate route if we have both start and end points
+            if (startPlace && endPlace) {
+                // Get the current profile
+                const profile = $('.profile-select').val();
+                
+                // Map profile values to OSRM API base URLs and profiles
+                const profileMap = {
+                    'car': {
+                        baseUrl: 'https://router.project-osrm.org/route/v1',
+                        profile: 'driving'
+                    },
+                    'bike': {
+                        baseUrl: 'https://routing.openstreetmap.de/routed-bike/route/v1',
+                        profile: 'bicycle'
+                    },
+                    'foot': {
+                        baseUrl: 'https://routing.openstreetmap.de/routed-foot/route/v1',
+                        profile: 'foot'
+                    }
+                };
+                
+                const routingConfig = profileMap[profile] || profileMap.car;
+                
+                // Format coordinates with proper precision
+                const formatCoord = (coord) => coord.toFixed(6);
+                let waypoints = `${formatCoord(startPlace.lon)},${formatCoord(startPlace.lat)}`;
+                
+                if (viaPlace) {
+                    waypoints += `;${formatCoord(viaPlace.lon)},${formatCoord(viaPlace.lat)}`;
+                }
+                
+                waypoints += `;${formatCoord(endPlace.lon)},${formatCoord(endPlace.lat)}`;
+                
+                const url = `${routingConfig.baseUrl}/${routingConfig.profile}/${waypoints}?overview=full&geometries=geojson`;
+                
+                console.log('Calculating route with URL:', url);
+                
+                loading.show();
+                
+                fetch(url)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        console.log('Route data received:', data);
+                        
+                        if (!data.routes || data.routes.length === 0) {
+                            throw new Error('No route found');
+                        }
+                        
+                        const route = data.routes[0];
+                        const format = new ol.format.GeoJSON();
+                        const features = format.readFeatures(route.geometry, {
+                            featureProjection: map.getView().getProjection(),
+                            dataProjection: 'EPSG:4326'
+                        });
+                        
+                        // Remove alternative routes
+                        map.getLayers().forEach(l => {
+                            if (l !== routeLayer && l.get('type') === 'alternative') {
+                                map.removeLayer(l);
+                            }
+                        });
+                        
+                        routeLayer.getSource().clear();
+                        routeLayer.getSource().addFeatures(features);
+                        
+                        // Show route info
+                        const distance = (route.distance / 1000).toFixed(1);
+                        const duration = Math.round(route.duration / 60);
+                        alert(`Route calculated!\nDistance: ${distance} km\nDuration: ${duration} minutes`);
+                    })
+                    .catch(error => {
+                        console.error('Error calculating route:', error);
+                        alert('Error calculating route: ' + error.message);
+                    })
+                    .finally(() => {
+                        loading.hide();
+                    });
+            }
         });
         
         // Add click handler for all points
@@ -448,21 +530,19 @@ function initRouter(map) {
                     endPlace = { lon: lonlat[0], lat: lonlat[1] };
                     endMarker = createMarker(coordinate, 'end');
                     routerContent.find('.end-place').val('Selected on map');
-                } else if (!viaPlace) {
-                    if (viaMarker) map.removeOverlay(viaMarker);
-                    viaPlace = { lon: lonlat[0], lat: lonlat[1] };
-                    viaMarker = createMarker(coordinate, 'via');
-                    routerContent.find('.via-place').val('Selected on map');
-                }
 
-                // Do not calculate route automatically here. Route will be calculated only on button click.
-            };
+            // Do NOT calculate route automatically. User must click 'Calculate Route' button.
+            // if (startPlace && endPlace) {
+            //     calculateRoute();
+            // }
+        };
 
-            map.on('singleclick', clickHandler);
+        map.on('singleclick', clickHandler);
 
-            // Handle place search
-            const searchPlace = function(input, resultsDiv) {
-                const query = input.val();
+        // Handle place search
+        const searchPlace = function(input, resultsDiv) {
+            const query = input.val();
+            if (query.length < 3) return;
                 if (query.length < 3) return;
 
                 fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}`)
@@ -486,19 +566,21 @@ function initRouter(map) {
                                         viaPlace = place;
                                         viaMarker = createMarker(coordinate, 'via');
                                     } else {
+                                        if (endMarker) map.removeOverlay(endMarker);
+                                        endPlace = place;
+                                        endMarker = createMarker(coordinate, 'end');
+                                    }
 
-                                // Do not calculate route automatically here. Route will be calculated only on button click.
-                            });
-                        resultsDiv.append(result);
+                                    // Calculate route automatically if we have start and end points
+                                    if (startPlace && endPlace) {
+                                        calculateRoute();
+                                    }
+                                });
+                            resultsDiv.append(result);
+                        });
                     });
-                });
-        };
+            };
 
-        // Setup search handlers
-        routerContent.find('.search-button').on('click', function() {
-            const input = $(this).siblings('input');
-            const resultsDiv = input.closest('.router-input').find('.search-results');
-            searchPlace(input, resultsDiv);
             // Setup search handlers
             routerContent.find('.search-button').on('click', function() {
                 const input = $(this).siblings('input');
