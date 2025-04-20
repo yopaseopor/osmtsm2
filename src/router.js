@@ -530,19 +530,24 @@ function initRouter(map) {
                     endPlace = { lon: lonlat[0], lat: lonlat[1] };
                     endMarker = createMarker(coordinate, 'end');
                     routerContent.find('.end-place').val('Selected on map');
+                } else if (!viaPlace) {
+                    if (viaMarker) map.removeOverlay(viaMarker);
+                    viaPlace = { lon: lonlat[0], lat: lonlat[1] };
+                    viaMarker = createMarker(coordinate, 'via');
+                    routerContent.find('.via-place').val('Selected on map');
+                }
 
-            // Do NOT calculate route automatically. User must click 'Calculate Route' button.
-            // if (startPlace && endPlace) {
-            //     calculateRoute();
-            // }
-        };
+                // Calculate route automatically if we have start and end points
+                if (startPlace && endPlace) {
+                    calculateRoute();
+                }
+            };
 
-        map.on('singleclick', clickHandler);
+            map.on('singleclick', clickHandler);
 
-        // Handle place search
-        const searchPlace = function(input, resultsDiv) {
-            const query = input.val();
-            if (query.length < 3) return;
+            // Handle place search
+            const searchPlace = function(input, resultsDiv) {
+                const query = input.val();
                 if (query.length < 3) return;
 
                 fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}`)

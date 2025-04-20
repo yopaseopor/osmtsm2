@@ -398,23 +398,7 @@ $(function () {
                 if (typeof window.initRouter === 'function') {
                     window.initRouter(map);
                 } else {
-                    // Dynamically load router.js if not loaded, then activate router menu
-                    var script = document.createElement('script');
-                    script.src = 'src/router.js';
-                    script.onload = function() {
-                        // router.js should always set window.initRouter globally
-                        setTimeout(function() {
-                            if (typeof window.initRouter === 'function') {
-                                window.initRouter(map);
-                            } else {
-                                alert('Router module failed to load.');
-                            }
-                        }, 0);
-                    };
-                    script.onerror = function() {
-                        alert('Router module could not be loaded.');
-                    };
-                    document.body.appendChild(script);
+                    alert('Router module is not loaded.');
                 }
             } else {
                 // Close router menu if open
