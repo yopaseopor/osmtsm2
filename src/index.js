@@ -398,15 +398,18 @@ $(function () {
                 if (typeof window.initRouter === 'function') {
                     window.initRouter(map);
                 } else {
-                    // Try to dynamically load router.js if not already loaded
+                    // Dynamically load router.js if not loaded, then activate router menu
                     var script = document.createElement('script');
                     script.src = 'src/router.js';
                     script.onload = function() {
-                        if (typeof window.initRouter === 'function') {
-                            window.initRouter(map);
-                        } else {
-                            alert('Router module failed to load.');
-                        }
+                        // router.js should always set window.initRouter globally
+                        setTimeout(function() {
+                            if (typeof window.initRouter === 'function') {
+                                window.initRouter(map);
+                            } else {
+                                alert('Router module failed to load.');
+                            }
+                        }, 0);
                     };
                     script.onerror = function() {
                         alert('Router module could not be loaded.');
