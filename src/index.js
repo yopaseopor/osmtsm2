@@ -398,7 +398,20 @@ $(function () {
                 if (typeof window.initRouter === 'function') {
                     window.initRouter(map);
                 } else {
-                    alert('Router module is not loaded.');
+                    // Try to dynamically load router.js if not already loaded
+                    var script = document.createElement('script');
+                    script.src = 'src/router.js';
+                    script.onload = function() {
+                        if (typeof window.initRouter === 'function') {
+                            window.initRouter(map);
+                        } else {
+                            alert('Router module failed to load.');
+                        }
+                    };
+                    script.onerror = function() {
+                        alert('Router module could not be loaded.');
+                    };
+                    document.body.appendChild(script);
                 }
             } else {
                 // Close router menu if open
