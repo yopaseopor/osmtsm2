@@ -1161,21 +1161,21 @@ CLEAR ACTIVE OVERLAY BUTTON
 }
 
 /* ====================================
-   ROUTER RANDOM BUTTON (router-btn)
+   ROUTER BUTTON (osmcat-router)
    ====================================
-   This section styles the router random button (router-btn) that toggles the router menu.
+   This section styles the .osmcat-router button, which is always visible and active.
    It matches the appearance and UX of other OpenLayers/map control buttons.
 */
-.router-btn {
-    background-color: #567CAC;
+.osmcat-router {
+    top: 80px;
+    left: 40px;
+    background-color: #34587C;
     color: #fff;
     border: none;
     border-radius: 2px;
     padding: 2px;
-    width: 1.8em;
-    height: 1.8em;
-	top: 40px;
-    left: 28px;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1183,19 +1183,19 @@ CLEAR ACTIVE OVERLAY BUTTON
     box-shadow: 0 2px 6px rgba(0,0,0,0.07);
     margin: 2px;
     transition: background 0.2s, color 0.2s;
+    position: absolute;
+    z-index: 1001;
 }
-.router-btn i {
-    color: #fff;
-    font-size: 1.2em;
-}
-.router-btn:hover, .router-btn:focus {
+.osmcat-router.active,
+.osmcat-router:focus,
+.osmcat-router:hover {
     background-color: #34587C;
     color: #fff;
     outline: none;
 }
-.router-btn.active {
-    background-color: #34587C;
+.osmcat-router i {
     color: #fff;
+    font-size: 1.2em;
 }
 
 /* PanoraMax viewer button position */

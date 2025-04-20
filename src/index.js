@@ -376,52 +376,16 @@ $(function () {
         window.initRouter = initRouter;
     }
 
-    // Add Router Button as a true OpenLayers control next to clear overlay button
-    var routerButtonControlBuild = function () {
-        var container = document.createElement('div');
-        container.className = 'ol-control ol-unselectable osmcat-routerbutton';
-        var button = document.createElement('button');
-        button.type = 'button';
-        button.className = 'router-btn blue';
-        button.title = 'Router';
-        button.innerHTML = '<i class="fa fa-random"></i>';
-        button.onclick = function () {
-            button.classList.toggle('active');
-            if (button.classList.contains('active')) {
-                // Remove any existing router menus before creating a new one
-                $('.osmcat-menu .osmcat-layer').each(function() {
-                    if ($(this).find('.osmcat-select').text() === 'Router') {
-                        $(this).remove();
-                    }
-                });
-                $('.osmcat-menu').removeClass('router-active');
-                if (typeof window.initRouter === 'function') {
-                    window.initRouter(map);
-                } else {
-                    alert('Router module is not loaded.');
-                }
-            } else {
-                // Close router menu if open
-                $('.osmcat-menu .osmcat-layer').each(function() {
-                    if ($(this).find('.osmcat-select').text() === 'Router') {
-                        $(this).remove();
-                    }
-                });
-                $('.router-btn').removeClass('active');
-                $('.osmcat-menu').removeClass('router-active');
-            }
-        };
-        container.appendChild(button);
-        return container;
-    };
-
-    // Remove any previous router controls
-    $(".osmcat-routerbutton").remove();
-    // Add as OpenLayers control
-    var routerControl = new ol.control.Control({
-        element: routerButtonControlBuild()
-    });
-    map.addControl(routerControl);
+    // Always show and activate the .osmcat-router button (no random button)
+    $(".osmcat-routerbutton").remove(); // Remove any previous router controls
+    // Ensure the router menu is always shown and active
+    if (typeof window.initRouter === 'function') {
+        window.initRouter(map);
+    } else {
+        alert('Router module is not loaded.');
+    }
+    $('.osmcat-menu').addClass('router-active');
+    $('.osmcat-router').addClass('active');
 
 
 	var layersControlBuild = function () {
