@@ -371,13 +371,13 @@ CLEAR ACTIVE OVERLAY BUTTON
     }
 
     .map {
-        height: 70vh;
+        height: 50vh;
         border: none;
         position: relative;
     }
 
     .menu {
-        height: 30vh;
+        height: 50vh;
         width: 100%;
         position: relative;
         z-index: 1;
