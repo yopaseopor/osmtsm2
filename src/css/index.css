@@ -714,11 +714,6 @@ CLEAR ACTIVE OVERLAY BUTTON
     }
 }
 
-/* Adjust map when viewer is active */
-.map.viewer-active {
-    height: 100% !important;
-}
-
 .osmcat-panoramax button {
     background-color: #567CAC;
     border: none;
@@ -1242,4 +1237,35 @@ CLEAR ACTIVE OVERLAY BUTTON
     .map.viewer-active {
         width: 50% !important;
     }
+}
+
+/* Overlay container styles */
+.osmcat-overlay-container {
+    max-height: 70vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+
+.osmcat-overlay-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.osmcat-overlay-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.osmcat-overlay-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.osmcat-overlay-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Remove individual overlay scrolling */
+.osmcat-overlay {
+    overflow-y: visible;
+    max-height: none;
 }
