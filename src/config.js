@@ -8,6 +8,8 @@
 var imgSrc = 'src/img/';
 
 //@@Coordenadas LONgitud LATitud Rotación Zoom, Zoom de la geolocalización, unidades
+import { overlays } from './overlays';
+
 var config = {
 	initialConfig: {
 		lon: 1.59647,

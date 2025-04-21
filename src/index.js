@@ -1,21 +1,4 @@
-/* global ol */
-import { config } from './config-base.js';
-import { layers } from './layers.js';
-import { overlays } from './overlays.js';
-
-// Preserve OpenLayers prototypes when combining config
-config.layers = layers.map(layer => {
-  if (layer instanceof ol.layer.Base) {
-    return layer;
-  }
-  return Object.assign(new ol.layer.Base(), layer);
-});
-
-config.overlays = overlays;
-
-// Make config available globally for legacy compatibility
-window.config = config;
-
+/* global config, ol */
 $(function () {
     // --- Layer Searcher Integration ---
     // 1. Flatten base layers into window.layers
@@ -504,7 +487,7 @@ $(function () {
 							layerButton.removeClass('active');
 						}
 					});
-			layerIndex++;
+				layerIndex++;
 			}
 		});
 		layerDiv.append(label, content);
