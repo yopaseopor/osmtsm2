@@ -145,7 +145,7 @@ var config = {
 		}),
 				new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
 			title: 'Vector Tile4',
-			iconSrc: imgSrc + 'osmfr_logo-layer.png',
+			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
 			source: new ol.source.VectorTile({
         tilePixelRatio: 1, // oversampling when > 1
         tileGrid: ol.tilegrid.createXYZ({maxZoom: 19}),
@@ -159,7 +159,7 @@ var config = {
 		
 		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
 			title: 'Vector Tile3',
-			iconSrc: imgSrc + 'osmfr_logo-layer.png',
+			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
 			source: new ol.source.VectorTile({
         tilePixelRatio: 1, // oversampling when > 1
         tileGrid: ol.tilegrid.createXYZ({maxZoom: 19}),
@@ -173,7 +173,7 @@ var config = {
 		
 		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
 			title: 'Vector Tile',
-			iconSrc: imgSrc + 'osmfr_logo-layer.png',
+			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
 			source: new ol.source.VectorTile({
         tilePixelRatio: 1, // oversampling when > 1
         tileGrid: ol.tilegrid.createXYZ({maxZoom: 19}),
@@ -186,7 +186,7 @@ var config = {
 		
 		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
 			title: 'Vector Tilekiln2',
-			iconSrc: imgSrc + 'osmfr_logo-layer.png',
+			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
 			source: new ol.source.TileJSON({
         tileSize: 512,
         crossOrigin: 'anonymous',
@@ -197,7 +197,7 @@ var config = {
 		
 		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
 			title: 'Vector OSM',
-			iconSrc: imgSrc + 'osmfr_logo-layer.png',
+			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
 			source: new ol.source.TileJSON({
         tileSize: 512,
         crossOrigin: 'anonymous',
