@@ -1,35 +1,21 @@
 /* global config, ol */
 $(function () {
     // --- Layer Searcher Integration ---
-    // 1. Initialize layers and overlays
+    // 1. Flatten base layers into window.layers
     window.layers = [];
-    window.overlays = [];
-    
-    // 2. Set up base layers
     if (config && Array.isArray(config.layers)) {
-        window.layers = config.layers.map(function(layer) {
+        window.layers = config.layers.filter(function(layerGroup) {
+            return layerGroup.get && layerGroup.get('type') !== 'overlay';
+        }).map(function(layerGroup) {
             return {
-                title: layer.title || '',
-                group: layer.group || '',
-                id: layer.id || '',
-                layer: layer
+                title: layerGroup.get('title') || '',
+                group: layerGroup.get('group') || '',
+                id: layerGroup.get('id') || '',
+                _olLayerGroup: layerGroup
             };
         });
     }
-    
-    // 3. Set up overlays
-    if (config && Array.isArray(config.overlays)) {
-        window.overlays = config.overlays.map(function(overlay) {
-            return {
-                title: overlay.title || '',
-                group: overlay.group || '',
-                id: overlay.id || '',
-                overlay: overlay
-            };
-        });
-    }
-    
-    // 4. Define window.renderLayerList
+    // 2. Define window.renderLayerList
     window.renderLayerList = function(filtered, query) {
         var $list = $('#layer-list');
         if (!$list.length) {
@@ -85,56 +71,19 @@ $(function () {
                 } else {
                     layerGroup.setVisible(false);
                 }
+            } else if (layerGroup.get && layerGroup.get('type') === 'overlay') {
+                // Hide all overlays
+                $.each(layerGroup.getLayers().getArray(), function(idx, olayer) {
+                    olayer.setVisible(false);
+                });
             }
         });
-        
         // If not found by id/title/group, try to activate by index fallback (for robustness)
         if (!activated && typeof layer._olLayerGroup !== 'undefined') {
             layer._olLayerGroup.setVisible(true);
         }
         // Optionally, update the layer list to show only this layer
         window.renderLayerList([layer], layer.title);
-    };
-
-    // Initialize overlays when map is ready
-    window.initializeOverlays = function() {
-        if (config.overlays && Array.isArray(config.overlays)) {
-            config.overlays.forEach(function(overlay) {
-                var overlayLayer = new ol.layer.Vector({
-                    title: overlay.title,
-                    group: overlay.group,
-                    source: new ol.source.Vector({
-                        loader: function(extent, resolution, projection) {
-                            var url = config.overpassApi() + '?data=' + overlay.query;
-                            $.ajax({
-                                url: url,
-                                dataType: 'json',
-                                success: function(data) {
-                                    var geojsonFormat = new ol.format.GeoJSON();
-                                    var features = geojsonFormat.readFeatures(data, {
-                                        featureProjection: 'EPSG:3857'
-                                    });
-                                    this.getSource().addFeatures(features);
-                                },
-                                error: function() {
-                                    console.error('Error loading overlay data for: ' + overlay.title);
-                                }
-                            });
-                        },
-                        strategy: ol.loadingstrategy.bbox
-                    }),
-                    style: overlay.style
-                });
-                map.addLayer(overlayLayer);
-            });
-        }
-    };
-
-    // Call initializeOverlays when the map is ready
-    $(document).ready(function() {
-        window.renderLayerList(window.layers);
-        window.initializeOverlays();
-    });
     };
 
 
