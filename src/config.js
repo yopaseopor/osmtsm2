@@ -8,55 +8,147 @@
 var imgSrc = 'src/img/';
 
 //@@Coordenadas LONgitud LATitud Rotación Zoom, Zoom de la geolocalización, unidades
-import { overlays } from './overlays';
+var overlays = require('./overlays');
 
 var config = {
-	initialConfig: {
-		lon: 1.59647,
-		lat: 41.69689,
-		rotation: 0, //in radians (positive rotation clockwise, 0 means North)
-		zoom: 8,
-		zoomGeolocation: 17,
-		units: 'metric'
-	},
-	i18n: {
-		//@@ Textos entre comillas.
-		layersLabel: 'Capas',
-		completeWith: 'Completar con:',
-		editWith: 'Editar con:',
-		openWith: 'Abrir con:',
-		showWith: 'Mostrar con:',
-		show2With: 'Mostrar también con:',
-		checkTools: 'Validar con:',
-		copyDialog: 'S\'ha copiat l\'enllaç al porta-retalls.Enlace copiado. Link has been copied',
-		nodeLabel: 'Nodo:',
-		noNodesFound: 'No se ha encontrado información.',
-		wayLabel: 'Vía:'
-	},
-	overpassApi: function(){
-		//@@posibilidad de cambiar el servidor de overpass https://overpass-turbo.eu/
-		var proxyOverpassApi = true;
-		var overpassApi = 'https://overpass-api.de/api/interpreter';
-		if (proxyOverpassApi)
-		{
-			overpassApi = 'https://overpass.kumi.systems/api/interpreter';
-		}
-		return overpassApi;
-	},
-	//@@ Mapas de fondo
-	layers: [
-		new ol.layer.Tile({
-			title: 'OpenStreetMap',
-			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
-			source: new ol.source.OSM()
-/*@@ inicio de copia */			}),
-								new ol.layer.Tile({
-/*@@ título */					title: 'OpenStreetMap DE',
-/*@@ icono */					iconSrc: imgSrc + 'icones_web/osmbw_logo-layer.png',
-/*@@ zoom máximo */				maxZoom: 18,
-								source: new ol.source.XYZ({
-/*@@ atribución */				attributions: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-/*@@ url */						url: 'https://{a-c}.tile.openstreetmap.de/{z}/{x}/{y}.png'
+  initialConfig: {
+    lon: 1.59647,
+    lat: 41.69689,
+    rotation: 0, //in radians (positive rotation clockwise, 0 means North)
+    zoom: 8,
+    zoomGeolocation: 17,
+    units: 'metric'
+  },
+  i18n: {
+    //@@ Textos entre comillas.
+    layersLabel: 'Capas',
+    completeWith: 'Completar con:',
+    editWith: 'Editar con:',
+    openWith: 'Abrir con:',
+    showWith: 'Mostrar con:',
+    show2With: 'Mostrar también con:',
+    checkTools: 'Validar con:',
+    copyDialog: 'S\'ha copiat l\'enllaç al porta-retalls.Enlace copiado. Link has been copied',
+    nodeLabel: 'Nodo:',
+    noNodesFound: 'No se ha encontrado información.',
+    wayLabel: 'Vía:'
+  },
+  overpassApi: function(){
+    //@@posibilidad de cambiar el servidor de overpass https://overpass-turbo.eu/
+    var proxyOverpassApi = true;
+    var overpassApi = 'https://overpass-api.de/api/interpreter';
+    if (proxyOverpassApi)
+    {
+      overpassApi = 'https://overpass.kumi.systems/api/interpreter';
+    }
+    return overpassApi;
+  },
+  //@@ Mapas de fondo
+  layers: [
+    new ol.layer.Tile({
+      title: 'OpenStreetMap',
+      iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
+      source: new ol.source.OSM()
+    }),
+    new ol.layer.Tile({
+      title: 'OpenStreetMap DE',
+      iconSrc: imgSrc + 'icones_web/osmbw_logo-layer.png',
+      maxZoom: 18,
+      source: new ol.source.XYZ({
+        attributions: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        url: 'https://{a-c}.tile.openstreetmap.de/{z}/{x}/{y}.png'
+      }),
+      visible: false
+    }),
+    new ol.layer.Tile({
+      title: 'OpenStreetMap FR',
+      iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
+      source: new ol.source.OSM({
+        attributions: '&copy; <a href="https://www.openstreetmap.fr/" target="_blank">OpenStreetMap France</a>',
+        url: 'https://{a-c}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png'
+      }),
+      visible: false
+    }),
+    new ol.layer.Tile({
+      title: 'OpenCycleMap',
+      iconSrc: imgSrc + 'icones_web/opencycle_logo_layer.png',
+      source: new ol.source.XYZ({
+        attributions: 'Map data &copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>, powered by &copy; <a href="http://www.thunderforest.com/" target="_blank">Thunderforest</a>',
+        url: 'https://{a-c}.tile.thunderforest.com/cycle/{z}/{x}/{y}.png?apikey=a5dd6a2f1c934394bce6b0fb077203eb'
+      }),
+      visible: false
+    }),
+    new ol.layer.Tile({
+      title: 'Topotresc',
+      iconSrc: imgSrc + 'icones_web/topotresc_layer.png',
+      source: new ol.source.XYZ({
+        attributions: 'Map data <a href="https://www.topotresc.com/" target="_blank">TopoTresk</a> by <a href="https://github.com/aresta/topotresc" target="_blank">aresta</a>',
+        url: 'https://api.topotresc.com/tiles/{z}/{x}/{y}'
+      }),
+      visible: false
+    }),
+    new ol.layer.Tile({
+      title: 'ArcGIS World Topo',
+      iconSrc: imgSrc + 'icones_web/worldtopomap_logo_layer.png',
+      source: new ol.source.XYZ({
+        attributions: 'Map data &copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> contributors, &copy; <a href="https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer" target="_blank">ArcGIS</a>',
+        url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}'
+      }),
+      visible: false
+    }),
+    new ol.layer.Tile({
+      title: 'Positron (CartoDB)',
+      iconSrc: imgSrc + 'icones_web/cartodb_logo_layer.png',
+      source: new ol.source.XYZ({
+        attributions: 'Map data &copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> contributors, &copy; <a href="https://cartodb.com/attributions" target="_blank">CartoDB</a>',
+        url: 'https://s.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png'
+      }),
+      visible: false
+    }),
+    new ol.layer.Tile({
+      title: 'Dark Matter (CartoDB)',
+      iconSrc: imgSrc + 'icones_web/cartodb_logo_layer.png',
+      source: new ol.source.XYZ({
+        attributions: 'Map data &copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> contributors, &copy; <a href="https://cartodb.com/attributions" target="_blank">CartoDB</a>',
+        url: 'https://s.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png'
+      }),
+      visible: false
+    }),
+    new ol.layer.Tile({
+      title: 'Esri Sat',
+      iconSrc: imgSrc + 'icones_web/esri_logo_layer.png',
+      source: new ol.source.XYZ({
+        attributions: 'Map data &copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap Contributors</a>,Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community',
+        url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
+      }),
+      visible: false
+    }),
+    new ol.layer.Tile({
+      title: 'ES_IGN - PNOA - Actual',
+      iconSrc: imgSrc + 'icones_web/logo_ign.png',
+      source: new ol.source.TileWMS({
+        attributions: 'Map data &copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap Contributors</a>,Tiles &copy; IGN &mdash; Source: IGN',
+        url: 'http://www.ign.es/wms-inspire/pnoa-ma?',
+        params: {'LAYERS': 'OI.OrthoimageCoverage', 'VERSION': '1.3.0'}
+      }),
+      visible: false
+    }),
+    new ol.layer.Tile({
+      title: 'ES_CAT_ICGC - Actual',
+      iconSrc: imgSrc + 'icones_web/logo_icgc.png',
+      source: new ol.source.TileWMS({
+        attributions: 'Map data &copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap Contributors</a>,Tiles &copy; ICGC &mdash; Source: ICGC',
+        url: 'https://geoserveis.icgc.cat/servei/catalunya/orto-territorial/wms?',
+        params: {'LAYERS': 'ortofoto_color_vigent', 'VERSION': '1.3.0'}
+      }),
+      visible: false
+    }),
+    new ol.layer.VectorTile({
+      title: 'Vector Tile',
+      iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
+      source: new ol.source.VectorTile({
+        attributions: 'Map data &copy; <a href="https://www.openstreetmap.fr/" target="_blank">OpenStreetMap France</a>',
+        url: 'https://{a-c}.tile.openstreetmap.fr/vectortiles/{z}/{x}/{y}.pbf'
 								}),
 /*@@ visible de inicio */		visible: false
 /*@@ final de copia */			}),

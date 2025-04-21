@@ -1,21 +1,35 @@
 /* global config, ol */
 $(function () {
     // --- Layer Searcher Integration ---
-    // 1. Flatten base layers into window.layers
+    // 1. Initialize layers and overlays
     window.layers = [];
+    window.overlays = [];
+    
+    // 2. Set up base layers
     if (config && Array.isArray(config.layers)) {
-        window.layers = config.layers.filter(function(layerGroup) {
-            return layerGroup.get && layerGroup.get('type') !== 'overlay';
-        }).map(function(layerGroup) {
+        window.layers = config.layers.map(function(layer) {
             return {
-                title: layerGroup.get('title') || '',
-                group: layerGroup.get('group') || '',
-                id: layerGroup.get('id') || '',
-                _olLayerGroup: layerGroup
+                title: layer.title || '',
+                group: layer.group || '',
+                id: layer.id || '',
+                layer: layer
             };
         });
     }
-    // 2. Define window.renderLayerList
+    
+    // 3. Set up overlays
+    if (config && Array.isArray(config.overlays)) {
+        window.overlays = config.overlays.map(function(overlay) {
+            return {
+                title: overlay.title || '',
+                group: overlay.group || '',
+                id: overlay.id || '',
+                overlay: overlay
+            };
+        });
+    }
+    
+    // 4. Define window.renderLayerList
     window.renderLayerList = function(filtered, query) {
         var $list = $('#layer-list');
         if (!$list.length) {
