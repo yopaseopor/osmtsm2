@@ -179,7 +179,7 @@ CLEAR ACTIVE OVERLAY BUTTON
 
 .osmcat-layer {
     border: 1px solid #BBB;
-    padding: 5px;
+    padding-left: 5px;
     width: 100%;
     flex: 1 1 auto;
     min-height: 0;
@@ -190,26 +190,16 @@ CLEAR ACTIVE OVERLAY BUTTON
 }
 
 .osmcat-layer > div {
-    width: 100%;
+	width: 100%;
 }
-
 .osmcat-content {
-    border-top: 1px solid #BBB;
+	border-top: 1px solid;
 }
-
 .osmcat-content > div {
-    margin-top: 3px;
-    padding: 5px;
+	margin-top: 3px;
 }
-
 .osmcat-content > div.active {
-    background-color: rgba(0,60,136,0.3);
-}
-
-.osmcat-overlay {
-    flex: 1 1 auto;
-    min-height: 0;
-    overflow-y: auto;
+	background-color: rgba(0,60,136,.3);
 }
 
 .osmcat-map-pin {
