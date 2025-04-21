@@ -19,6 +19,10 @@ var config = {
     zoomGeolocation: 17,
     units: 'metric'
   },
+  overlays: overlays,
+  getOverlays: function() {
+    return overlays;
+  },
   i18n: {
     //@@ Textos entre comillas.
     layersLabel: 'Capas',

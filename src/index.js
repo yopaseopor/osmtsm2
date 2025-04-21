@@ -85,13 +85,34 @@ $(function () {
                 } else {
                     layerGroup.setVisible(false);
                 }
-            } else if (layerGroup.get && layerGroup.get('type') === 'overlay') {
-                // Hide all overlays
-                $.each(layerGroup.getLayers().getArray(), function(idx, olayer) {
-                    olayer.setVisible(false);
-                });
             }
         });
+        
+        // Handle overlays
+        if (config.overlays && Array.isArray(config.overlays)) {
+            config.overlays.forEach(function(overlay) {
+                if (layer.overlay && layer.overlay.title === overlay.title) {
+                    // Create or update the overlay layer
+                    var overlayLayer = new ol.layer.Vector({
+                        title: overlay.title,
+                        source: new ol.source.Vector({
+                            url: config.overpassApi() + '?data=' + overlay.query,
+                            format: new ol.format.GeoJSON()
+                        }),
+                        style: overlay.style
+                    });
+                    map.addLayer(overlayLayer);
+                } else {
+                    // Hide other overlays
+                    map.getLayers().forEach(function(layer) {
+                        if (layer.get('type') === 'overlay' && layer.get('title') !== overlay.title) {
+                            layer.setVisible(false);
+                        }
+                    });
+                }
+            });
+        }
+        
         // If not found by id/title/group, try to activate by index fallback (for robustness)
         if (!activated && typeof layer._olLayerGroup !== 'undefined') {
             layer._olLayerGroup.setVisible(true);
