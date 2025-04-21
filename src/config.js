@@ -1,6 +1,6 @@
-import { Alimentacion } from './overlays/Alimentacion.js';
-import { Comercio } from './overlays/Comercio.js';
-import { Exterior } from './overlays/Exterior.js';
+import Alimentacion from './overlays/alimentacion.js';
+import Comercio from './overlays/comercio.js';
+import Exterior from './overlays/exterior.js';
 
 var config = {
     initialConfig: {
