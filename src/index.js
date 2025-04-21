@@ -1,4 +1,15 @@
-/* global config, ol */
+/* global ol */
+import { config as baseConfig } from './config-base.js';
+import { layers } from './layers.js';
+import { overlays } from './overlays.js';
+
+// Combine all config parts
+const config = {
+  ...baseConfig,
+  layers,
+  overlays
+};
+
 $(function () {
     // --- Layer Searcher Integration ---
     // 1. Flatten base layers into window.layers
@@ -487,7 +498,7 @@ $(function () {
 							layerButton.removeClass('active');
 						}
 					});
-				layerIndex++;
+			layerIndex++;
 			}
 		});
 		layerDiv.append(label, content);
