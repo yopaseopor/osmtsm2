@@ -77,38 +77,8 @@ var config = {
 				crossOrigin: 'anonymous',
 				attributions: '&copy; <a href="[https://www.openstreetmap.org/"](https://www.openstreetmap.org/") target="_blank">OpenStreetMap</a>',
 				url: '[https://vector.openstreetmap.org/shortbread_v1/{z}/{x}/{y}.mvt'](https://vector.openstreetmap.org/shortbread_v1/{z}/{x}/{y}.mvt')
-			 }),
-    style: function(feature) {
-        // Basic styling based on OpenMapTiles schema
-        const layer = feature.get('layer');
-        const style = new ol.style.Style();
-        
-        switch(layer) {
-            case 'water':
-                style.setFill(new ol.style.Fill({
-                    color: '#a0c8f0'
-                }));
-                break;
-            case 'road':
-                style.setStroke(new ol.style.Stroke({
-                    color: '#ffffff',
-                    width: 2
-                }));
-                break;
-            case 'building':
-                style.setFill(new ol.style.Fill({
-                    color: '#d9d9d9'
-                }));
-                break;
-            default:
-                // Default style for other layers
-                style.setFill(new ol.style.Fill({
-                    color: 'rgba(200, 200, 200, 0.5)'
-                }));
-        }
-        return style;
-    },
-visible: false
+			}),
+			visible: false
 		}),
 		new ol.layer.Tile({
 			title: 'OpenCycleMap',
