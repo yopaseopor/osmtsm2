@@ -3,11 +3,15 @@ import { config } from './config-base.js';
 import { layers } from './layers.js';
 import { overlays } from './overlays.js';
 
-// Combine all config parts
-Object.assign(config, {
-  layers,
-  overlays
+// Preserve OpenLayers prototypes when combining config
+config.layers = layers.map(layer => {
+  if (layer instanceof ol.layer.Base) {
+    return layer;
+  }
+  return Object.assign(new ol.layer.Base(), layer);
 });
+
+config.overlays = overlays;
 
 // Make config available globally for legacy compatibility
 window.config = config;
