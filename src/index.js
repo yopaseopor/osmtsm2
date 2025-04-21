@@ -1,14 +1,16 @@
 /* global ol */
-import { config as baseConfig } from './config-base.js';
+import { config } from './config-base.js';
 import { layers } from './layers.js';
 import { overlays } from './overlays.js';
 
 // Combine all config parts
-const config = {
-  ...baseConfig,
+Object.assign(config, {
   layers,
   overlays
-};
+});
+
+// Make config available globally for legacy compatibility
+window.config = config;
 
 $(function () {
     // --- Layer Searcher Integration ---
