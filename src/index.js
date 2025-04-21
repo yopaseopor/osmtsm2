@@ -88,37 +88,53 @@ $(function () {
             }
         });
         
-        // Handle overlays
-        if (config.overlays && Array.isArray(config.overlays)) {
-            config.overlays.forEach(function(overlay) {
-                if (layer.overlay && layer.overlay.title === overlay.title) {
-                    // Create or update the overlay layer
-                    var overlayLayer = new ol.layer.Vector({
-                        title: overlay.title,
-                        source: new ol.source.Vector({
-                            url: config.overpassApi() + '?data=' + overlay.query,
-                            format: new ol.format.GeoJSON()
-                        }),
-                        style: overlay.style
-                    });
-                    map.addLayer(overlayLayer);
-                } else {
-                    // Hide other overlays
-                    map.getLayers().forEach(function(layer) {
-                        if (layer.get('type') === 'overlay' && layer.get('title') !== overlay.title) {
-                            layer.setVisible(false);
-                        }
-                    });
-                }
-            });
-        }
-        
         // If not found by id/title/group, try to activate by index fallback (for robustness)
         if (!activated && typeof layer._olLayerGroup !== 'undefined') {
             layer._olLayerGroup.setVisible(true);
         }
         // Optionally, update the layer list to show only this layer
         window.renderLayerList([layer], layer.title);
+    };
+
+    // Initialize overlays when map is ready
+    window.initializeOverlays = function() {
+        if (config.overlays && Array.isArray(config.overlays)) {
+            config.overlays.forEach(function(overlay) {
+                var overlayLayer = new ol.layer.Vector({
+                    title: overlay.title,
+                    group: overlay.group,
+                    source: new ol.source.Vector({
+                        loader: function(extent, resolution, projection) {
+                            var url = config.overpassApi() + '?data=' + overlay.query;
+                            $.ajax({
+                                url: url,
+                                dataType: 'json',
+                                success: function(data) {
+                                    var geojsonFormat = new ol.format.GeoJSON();
+                                    var features = geojsonFormat.readFeatures(data, {
+                                        featureProjection: 'EPSG:3857'
+                                    });
+                                    this.getSource().addFeatures(features);
+                                },
+                                error: function() {
+                                    console.error('Error loading overlay data for: ' + overlay.title);
+                                }
+                            });
+                        },
+                        strategy: ol.loadingstrategy.bbox
+                    }),
+                    style: overlay.style
+                });
+                map.addLayer(overlayLayer);
+            });
+        }
+    };
+
+    // Call initializeOverlays when the map is ready
+    $(document).ready(function() {
+        window.renderLayerList(window.layers);
+        window.initializeOverlays();
+    });
     };
 
 
