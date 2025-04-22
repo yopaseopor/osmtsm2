@@ -5,7 +5,6 @@
     // Create predictive dropdown
     const searchInput = document.getElementById('overlay-search');
     searchInput.setAttribute('data-i18n', 'searchOverlays');
-    searchInput.placeholder = window.config.i18n.getTranslation('searchOverlays');
     
     const dropdown = document.createElement('div');
     dropdown.id = 'overlay-search-dropdown';
@@ -14,6 +13,19 @@
 
     let lastResults = [];
     let lastQuery = '';
+
+    function getTranslation(key) {
+        return window.config?.i18n?.getTranslation?.(key) || key;
+    }
+
+    function updatePlaceholder() {
+        searchInput.placeholder = getTranslation('searchOverlays');
+    }
+
+    // Update placeholder when language changes
+    document.addEventListener('languageChanged', updatePlaceholder);
+    // Initial placeholder update
+    updatePlaceholder();
 
     function renderDropdown(results) {
         dropdown.innerHTML = '';

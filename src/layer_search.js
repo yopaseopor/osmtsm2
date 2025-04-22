@@ -7,6 +7,10 @@
     let lastResults = [];
     let lastQuery = '';
 
+    function getTranslation(key) {
+        return window.config?.i18n?.getTranslation?.(key) || key;
+    }
+
     function renderDropdown(results) {
         dropdown.innerHTML = '';
         // Check for active base layer
@@ -25,7 +29,7 @@
         if (hasActiveLayer) {
             var clearBtn = document.createElement('div');
             clearBtn.setAttribute('data-i18n', 'clearActiveLayer');
-            clearBtn.textContent = window.config.i18n.getTranslation('clearActiveLayer');
+            clearBtn.textContent = getTranslation('clearActiveLayer');
             clearBtn.style.cursor = 'pointer';
             clearBtn.style.padding = '6px 10px';
             clearBtn.style.background = '#ffeaea';
@@ -66,7 +70,7 @@
             slider.style.marginLeft = '10px';
             slider.style.verticalAlign = 'middle';
             slider.setAttribute('data-i18n', 'opacity');
-            slider.title = window.config.i18n.getTranslation('opacity');
+            slider.title = getTranslation('opacity');
             slider.addEventListener('input', function(e) {
                 var val = parseInt(e.target.value, 10) / 100;
                 if (layer._olLayerGroup && layer._olLayerGroup.setOpacity) {
@@ -81,7 +85,7 @@
             const upBtn = document.createElement('button');
             upBtn.textContent = '↑';
             upBtn.setAttribute('data-i18n', 'moveLayerUp');
-            upBtn.title = window.config.i18n.getTranslation('moveLayerUp');
+            upBtn.title = getTranslation('moveLayerUp');
             upBtn.style.marginLeft = '10px';
             upBtn.style.cursor = 'pointer';
             upBtn.addEventListener('mousedown', function(e) {
@@ -104,7 +108,7 @@
             const downBtn = document.createElement('button');
             downBtn.textContent = '↓';
             downBtn.setAttribute('data-i18n', 'moveLayerDown');
-            downBtn.title = window.config.i18n.getTranslation('moveLayerDown');
+            downBtn.title = getTranslation('moveLayerDown');
             downBtn.style.marginLeft = '5px';
             downBtn.style.cursor = 'pointer';
             downBtn.addEventListener('mousedown', function(e) {
