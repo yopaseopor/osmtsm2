@@ -5,6 +5,9 @@
 //@@ Ruta de imágenes
 var imgSrc = 'src/img/';
 
+// Import OpenLayers
+const ol = require('ol');
+
 // Import overlays from the new structure
 const { allOverlays } = require('./overlays/index.js');
 
@@ -44,7 +47,11 @@ var config = {
     },
     //@@ Mapas de fondo
     layers: [
-        // ... existing layers ...
+        new ol.layer.Tile({
+            title: 'OpenStreetMap',
+            iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
+            source: new ol.source.OSM()
+        })
     ],
     overlays: allOverlays
 };
