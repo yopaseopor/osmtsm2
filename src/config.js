@@ -15561,7 +15561,7 @@ style: function (feature) {
 
 	},
 		{
-			group: getTranslation('leisure'),
+			group: 'Ocio',
 			title: 'McDonald`s',
 			query: '(nwr["brand:wikidata"="Q38076"]({{bbox}});node(w););out meta;',
 			iconSrc: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/McDonald%27s_Golden_Arches.svg/220px-McDonald%27s_Golden_Arches.svg.png',
