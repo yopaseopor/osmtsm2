@@ -1,6 +1,52 @@
 // Layer Searcher: interactive with predictive dropdown
 // Assumes layers are available globally as window.layers (array of {title, id, group, ...})
 (function() {
+    // Add styles for the layer search components
+    const style = document.createElement('style');
+    style.textContent = `
+        .layer-search-option {
+            display: flex;
+            align-items: center;
+            padding: 8px 12px;
+            cursor: pointer;
+            border-bottom: 1px solid #eee;
+        }
+        .layer-search-option:hover {
+            background-color: #f5f5f5;
+        }
+        .layer-search-option-icon {
+            max-width: 30px;
+            max-height: 30px;
+            margin-right: 10px;
+        }
+        .layer-search-option input[type="range"] {
+            width: 80px;
+            margin: 0 10px;
+            vertical-align: middle;
+        }
+        .layer-search-option button {
+            background: none;
+            border: none;
+            padding: 2px 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .layer-search-option button:hover {
+            background-color: #e0e0e0;
+        }
+        #layer-search-dropdown {
+            position: absolute;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-height: 300px;
+            overflow-y: auto;
+            z-index: 1000;
+        }
+    `;
+    document.head.appendChild(style);
+
     const searchInput = document.getElementById('layer-search');
     const dropdown = document.getElementById('layer-search-dropdown');
 
