@@ -16,5 +16,16 @@ export const ca = {
     moveLayerUp: 'Moure capa amunt',
     moveLayerDown: 'Moure capa avall',
     searchLayers: 'Cercar capes...',
-    searchOverlays: 'Cercar superposicions...'
+    searchOverlays: 'Cercar superposicions...',
+    // Overlay groups
+    leisure: 'Oci',
+    food: 'Menjar i Beguda',
+    shopping: 'Compres',
+    transport: 'Transport',
+    health: 'Salut',
+    education: 'Educació',
+    culture: 'Cultura',
+    services: 'Serveis',
+    accommodation: 'Allotjament',
+    religion: 'Religió'
 }; 

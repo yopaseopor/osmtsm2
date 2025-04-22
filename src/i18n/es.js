@@ -16,5 +16,16 @@ export const es = {
     moveLayerUp: 'Mover capa arriba',
     moveLayerDown: 'Mover capa abajo',
     searchLayers: 'Buscar capas...',
-    searchOverlays: 'Buscar superposiciones...'
+    searchOverlays: 'Buscar superposiciones...',
+    // Overlay groups
+    leisure: 'Ocio',
+    food: 'Comida y Bebida',
+    shopping: 'Compras',
+    transport: 'Transporte',
+    health: 'Salud',
+    education: 'Educación',
+    culture: 'Cultura',
+    services: 'Servicios',
+    accommodation: 'Alojamiento',
+    religion: 'Religión'
 }; 

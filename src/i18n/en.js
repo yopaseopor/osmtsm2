@@ -16,5 +16,16 @@ export const en = {
     moveLayerUp: 'Move layer up',
     moveLayerDown: 'Move layer down',
     searchLayers: 'Search layers...',
-    searchOverlays: 'Search overlays...'
+    searchOverlays: 'Search overlays...',
+    // Overlay groups
+    leisure: 'Leisure',
+    food: 'Food & Drink',
+    shopping: 'Shopping',
+    transport: 'Transport',
+    health: 'Health',
+    education: 'Education',
+    culture: 'Culture',
+    services: 'Services',
+    accommodation: 'Accommodation',
+    religion: 'Religion'
 }; 
