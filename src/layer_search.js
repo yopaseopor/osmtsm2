@@ -53,7 +53,26 @@
         results.slice(0, 10).forEach((layer, idx) => {
             const opt = document.createElement('div');
             opt.className = 'layer-search-option';
-            opt.textContent = (layer.group ? layer.group + ': ' : '') + layer.title;
+            
+            // Add icon if available
+            if (layer.iconSrc) {
+                const iconImg = document.createElement('img');
+                iconImg.src = layer.iconSrc;
+                iconImg.alt = '';
+                iconImg.className = 'layer-search-option-icon';
+                iconImg.style.maxWidth = '30px';
+                iconImg.style.maxHeight = '30px';
+                iconImg.style.width = 'auto';
+                iconImg.style.height = 'auto';
+                iconImg.style.marginRight = '10px';
+                iconImg.style.verticalAlign = 'middle';
+                opt.appendChild(iconImg);
+            }
+            
+            // Add layer title
+            const textSpan = document.createElement('span');
+            textSpan.textContent = (layer.group ? layer.group + ': ' : '') + layer.title;
+            opt.appendChild(textSpan);
             opt.tabIndex = 0;
 
             // Opacity slider
@@ -121,6 +140,8 @@
             opt.appendChild(downBtn);
 
             opt.addEventListener('mousedown', function(e) {
+                // Prevent slider or orderer from triggering layer activation
+                if (e.target === slider || e.target === upBtn || e.target === downBtn) return;
                 e.preventDefault();
                 searchInput.value = layer.title;
                 dropdown.style.display = 'none';
