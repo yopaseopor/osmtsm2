@@ -68,6 +68,7 @@
             slider.setAttribute('data-i18n', 'opacity');
             slider.title = window.config.i18n.getTranslation('opacity');
             slider.addEventListener('input', function(e) {
+                e.stopPropagation(); // Prevent layer activation
                 var val = parseInt(e.target.value, 10) / 100;
                 if (layer._olLayerGroup && layer._olLayerGroup.setOpacity) {
                     layer._olLayerGroup.setOpacity(val);
