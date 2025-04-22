@@ -49,4 +49,7 @@ var config = {
     overlays: allOverlays
 };
 
+// Expose config to global scope
+window.config = config;
+
 module.exports = config; 

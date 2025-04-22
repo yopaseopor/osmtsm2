@@ -2,6 +2,9 @@
  * Base overlay configuration
  */
 
+// Import OpenLayers
+const ol = require('ol');
+
 // Common overlay structure
 const overlayStructure = {
     group: '', // string: group name
@@ -26,5 +29,6 @@ const imgSrc = 'src/img/';
 module.exports = {
     overlayStructure,
     createOverlay,
-    imgSrc
+    imgSrc,
+    ol
 }; 

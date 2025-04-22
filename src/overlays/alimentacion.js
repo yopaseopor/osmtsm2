@@ -1,4 +1,4 @@
-const { createOverlay, imgSrc } = require('./base.js');
+const { createOverlay, imgSrc, ol } = require('./base.js');
 
 const alimentacionOverlays = [
     createOverlay({
