@@ -12,13 +12,10 @@
         // Check for active base layer
         var hasActiveLayer = false;
         var activeLayer = null;
-        $.each(window.layers, function(indexLayer, layerObj) {
-            if (layerObj._olLayerGroup && layerObj._olLayerGroup.getVisible && layerObj._olLayerGroup.getVisible()) {
+        $.each(config.layers, function(indexLayer, layer) {
+            if (layer.getVisible && layer.getVisible()) {
                 hasActiveLayer = true;
-                activeLayer = layerObj;
-            } else if (layerObj.getVisible && layerObj.getVisible()) {
-                hasActiveLayer = true;
-                activeLayer = layerObj;
+                activeLayer = layer;
             }
         });
         // Add a 'Clear Active Layer' button if a layer is active
@@ -34,9 +31,7 @@
             clearBtn.tabIndex = 0;
             clearBtn.addEventListener('mousedown', function(e) {
                 e.preventDefault();
-                if (activeLayer && activeLayer._olLayerGroup && activeLayer._olLayerGroup.setVisible) {
-                    activeLayer._olLayerGroup.setVisible(false);
-                } else if (activeLayer && activeLayer.setVisible) {
+                if (activeLayer && activeLayer.setVisible) {
                     activeLayer.setVisible(false);
                 }
                 if (window.renderLayerList) window.renderLayerList([], '');
@@ -53,7 +48,7 @@
         results.slice(0, 10).forEach((layer, idx) => {
             const opt = document.createElement('div');
             opt.className = 'layer-search-option';
-            opt.textContent = (layer.group ? layer.group + ': ' : '') + layer.title;
+            opt.textContent = layer.title;
             opt.tabIndex = 0;
 
             // Opacity slider
@@ -61,15 +56,13 @@
             slider.type = 'range';
             slider.min = 0;
             slider.max = 100;
-            slider.value = (layer._olLayerGroup && layer._olLayerGroup.getOpacity) ? Math.round(layer._olLayerGroup.getOpacity() * 100) : (layer.getOpacity ? Math.round(layer.getOpacity() * 100) : 100);
+            slider.value = layer.getOpacity ? Math.round(layer.getOpacity() * 100) : 100;
             slider.style.marginLeft = '10px';
             slider.style.verticalAlign = 'middle';
             slider.title = window.config.i18n.getTranslation('opacity');
             slider.addEventListener('input', function(e) {
                 var val = parseInt(e.target.value, 10) / 100;
-                if (layer._olLayerGroup && layer._olLayerGroup.setOpacity) {
-                    layer._olLayerGroup.setOpacity(val);
-                } else if (layer.setOpacity) {
+                if (layer.setOpacity) {
                     layer.setOpacity(val);
                 }
             });
@@ -84,16 +77,12 @@
             upBtn.addEventListener('mousedown', function(e) {
                 e.preventDefault();
                 e.stopPropagation();
-                const idx = window.layers.indexOf(layer);
+                const idx = config.layers.indexOf(layer);
                 if (idx > 0) {
                     // Swap in array
-                    [window.layers[idx-1], window.layers[idx]] = [window.layers[idx], window.layers[idx-1]];
-                    // Also swap in config.layers if present
-                    if (window.config && Array.isArray(window.config.layers)) {
-                        [window.config.layers[idx-1], window.config.layers[idx]] = [window.config.layers[idx], window.config.layers[idx-1]];
-                    }
-                    if (window.renderLayerList) window.renderLayerList(window.layers, searchInput.value);
-                    renderDropdown(window.layers.filter(l => l.title.toLowerCase().includes(searchInput.value.toLowerCase()) || (l.group && l.group.toLowerCase().includes(searchInput.value.toLowerCase()))));
+                    [config.layers[idx-1], config.layers[idx]] = [config.layers[idx], config.layers[idx-1]];
+                    if (window.renderLayerList) window.renderLayerList(config.layers, searchInput.value);
+                    renderDropdown(config.layers.filter(l => l.title.toLowerCase().includes(searchInput.value.toLowerCase())));
                 }
             });
             opt.appendChild(upBtn);
@@ -106,16 +95,12 @@
             downBtn.addEventListener('mousedown', function(e) {
                 e.preventDefault();
                 e.stopPropagation();
-                const idx = window.layers.indexOf(layer);
-                if (idx < window.layers.length - 1) {
+                const idx = config.layers.indexOf(layer);
+                if (idx < config.layers.length - 1) {
                     // Swap in array
-                    [window.layers[idx], window.layers[idx+1]] = [window.layers[idx+1], window.layers[idx]];
-                    // Also swap in config.layers if present
-                    if (window.config && Array.isArray(window.config.layers)) {
-                        [window.config.layers[idx], window.config.layers[idx+1]] = [window.config.layers[idx+1], window.config.layers[idx]];
-                    }
-                    if (window.renderLayerList) window.renderLayerList(window.layers, searchInput.value);
-                    renderDropdown(window.layers.filter(l => l.title.toLowerCase().includes(searchInput.value.toLowerCase()) || (l.group && l.group.toLowerCase().includes(searchInput.value.toLowerCase()))));
+                    [config.layers[idx], config.layers[idx+1]] = [config.layers[idx+1], config.layers[idx]];
+                    if (window.renderLayerList) window.renderLayerList(config.layers, searchInput.value);
+                    renderDropdown(config.layers.filter(l => l.title.toLowerCase().includes(searchInput.value.toLowerCase())));
                 }
             });
             opt.appendChild(downBtn);
@@ -126,13 +111,11 @@
                 e.preventDefault();
                 searchInput.value = layer.title;
                 dropdown.style.display = 'none';
-                // Toggle layer visibility (allow multiple active)
-                if (layer._olLayerGroup && layer._olLayerGroup.setVisible) {
-                    layer._olLayerGroup.setVisible(!layer._olLayerGroup.getVisible());
-                } else if (layer.setVisible) {
+                // Toggle layer visibility
+                if (layer.setVisible) {
                     layer.setVisible(!layer.getVisible());
                 }
-                if (window.renderLayerList) window.renderLayerList(window.layers, searchInput.value);
+                if (window.renderLayerList) window.renderLayerList(config.layers, searchInput.value);
             });
             dropdown.appendChild(opt);
         });
@@ -152,9 +135,8 @@
             filterAndRender([], '');
             return;
         }
-        const filtered = window.layers.filter(layer =>
-            (layer.title && layer.title.toLowerCase().includes(query)) ||
-            (layer.group && layer.group.toLowerCase().includes(query))
+        const filtered = config.layers.filter(layer =>
+            layer.title && layer.title.toLowerCase().includes(query)
         );
         lastResults = filtered;
         lastQuery = query;
