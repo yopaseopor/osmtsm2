@@ -1,5 +1,6 @@
 export const ca = {
     layersLabel: 'Capes',
+    overlaysLabel: 'Superposicions',
     completeWith: 'Completar amb:',
     editWith: 'Editar amb:',
     openWith: 'Obrir amb:',
@@ -10,11 +11,10 @@ export const ca = {
     nodeLabel: 'Node:',
     noNodesFound: 'No s\'ha trobat informació.',
     wayLabel: 'Via:',
-    clearActiveLayer: '✖ Netejar Capa Activa',
+    clearActiveLayer: '✖ Netejar capa activa',
     opacity: 'Opacitat',
     moveLayerUp: 'Moure capa amunt',
     moveLayerDown: 'Moure capa avall',
     searchLayers: 'Cercar capes...',
-    searchOverlays: 'Cercar superposicions...',
-    overlaysLabel: 'Superposicions'
+    searchOverlays: 'Cercar superposicions...'
 }; 

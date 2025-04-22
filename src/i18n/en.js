@@ -1,5 +1,6 @@
 export const en = {
     layersLabel: 'Layers',
+    overlaysLabel: 'Overlays',
     completeWith: 'Complete with:',
     editWith: 'Edit with:',
     openWith: 'Open with:',
@@ -15,6 +16,5 @@ export const en = {
     moveLayerUp: 'Move layer up',
     moveLayerDown: 'Move layer down',
     searchLayers: 'Search layers...',
-    searchOverlays: 'Search overlays...',
-    overlaysLabel: 'Overlays'
+    searchOverlays: 'Search overlays...'
 }; 

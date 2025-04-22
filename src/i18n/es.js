@@ -1,5 +1,6 @@
 export const es = {
     layersLabel: 'Capas',
+    overlaysLabel: 'Superposiciones',
     completeWith: 'Completar con:',
     editWith: 'Editar con:',
     openWith: 'Abrir con:',
@@ -10,11 +11,10 @@ export const es = {
     nodeLabel: 'Nodo:',
     noNodesFound: 'No se ha encontrado información.',
     wayLabel: 'Vía:',
-    clearActiveLayer: '✖ Limpiar Capa Activa',
+    clearActiveLayer: '✖ Limpiar capa activa',
     opacity: 'Opacidad',
     moveLayerUp: 'Mover capa arriba',
     moveLayerDown: 'Mover capa abajo',
     searchLayers: 'Buscar capas...',
-    searchOverlays: 'Buscar superposiciones...',
-    overlaysLabel: 'Superposiciones'
+    searchOverlays: 'Buscar superposiciones...'
 }; 
