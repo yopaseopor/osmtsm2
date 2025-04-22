@@ -3,12 +3,15 @@ import { setLanguage, getCurrentLanguage } from './i18n/index.js';
 
 // Initialize the language selector
 document.addEventListener('DOMContentLoaded', () => {
-    const languageSelectorContainer = document.getElementById('language-selector-container');
-    new LanguageSelector(languageSelectorContainer);
-
-    // Set initial language based on browser language
-    const browserLang = navigator.language.split('-')[0];
-    const supportedLangs = ['en', 'es', 'ca'];
-    const initialLang = supportedLangs.includes(browserLang) ? browserLang : 'en';
-    setLanguage(initialLang);
+    try {
+        const languageSelectorContainer = document.getElementById('language-selector-container');
+        if (!languageSelectorContainer) {
+            console.error('Language selector container not found');
+            return;
+        }
+        new LanguageSelector(languageSelectorContainer);
+        console.log('Language selector initialized');
+    } catch (error) {
+        console.error('Error initializing language selector:', error);
+    }
 }); 
