@@ -4,6 +4,9 @@
 (function() {
     // Create predictive dropdown
     const searchInput = document.getElementById('overlay-search');
+    searchInput.setAttribute('data-i18n', 'searchOverlays');
+    searchInput.placeholder = window.config.i18n.getTranslation('searchOverlays');
+    
     const dropdown = document.createElement('div');
     dropdown.id = 'overlay-search-dropdown';
     dropdown.className = 'overlay-search-dropdown';

@@ -9,5 +9,12 @@ export const ca = {
     copyDialog: "S'ha copiat l'enllaç al porta-retalls",
     nodeLabel: 'Node:',
     noNodesFound: 'No s\'ha trobat informació.',
-    wayLabel: 'Via:'
+    wayLabel: 'Via:',
+    clearActiveLayer: '✖ Netejar Capa Activa',
+    opacity: 'Opacitat',
+    moveLayerUp: 'Moure capa amunt',
+    moveLayerDown: 'Moure capa avall',
+    searchLayers: 'Cercar capes...',
+    searchOverlays: 'Cercar superposicions...',
+    overlaysLabel: 'Superposicions'
 }; 

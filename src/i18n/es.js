@@ -9,5 +9,12 @@ export const es = {
     copyDialog: 'Enlace copiado al portapapeles',
     nodeLabel: 'Nodo:',
     noNodesFound: 'No se ha encontrado información.',
-    wayLabel: 'Vía:'
+    wayLabel: 'Vía:',
+    clearActiveLayer: '✖ Limpiar Capa Activa',
+    opacity: 'Opacidad',
+    moveLayerUp: 'Mover capa arriba',
+    moveLayerDown: 'Mover capa abajo',
+    searchLayers: 'Buscar capas...',
+    searchOverlays: 'Buscar superposiciones...',
+    overlaysLabel: 'Superposiciones'
 }; 

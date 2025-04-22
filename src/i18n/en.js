@@ -9,5 +9,12 @@ export const en = {
     copyDialog: 'Link has been copied to clipboard',
     nodeLabel: 'Node:',
     noNodesFound: 'No information found.',
-    wayLabel: 'Way:'
+    wayLabel: 'Way:',
+    clearActiveLayer: '✖ Clear Active Layer',
+    opacity: 'Opacity',
+    moveLayerUp: 'Move layer up',
+    moveLayerDown: 'Move layer down',
+    searchLayers: 'Search layers...',
+    searchOverlays: 'Search overlays...',
+    overlaysLabel: 'Overlays'
 }; 

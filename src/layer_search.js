@@ -24,7 +24,8 @@
         // Add a 'Clear Active Layer' button if a layer is active
         if (hasActiveLayer) {
             var clearBtn = document.createElement('div');
-            clearBtn.textContent = '✖ Clear Active Layer';
+            clearBtn.setAttribute('data-i18n', 'clearActiveLayer');
+            clearBtn.textContent = window.config.i18n.getTranslation('clearActiveLayer');
             clearBtn.style.cursor = 'pointer';
             clearBtn.style.padding = '6px 10px';
             clearBtn.style.background = '#ffeaea';
@@ -64,7 +65,8 @@
             slider.value = (layer._olLayerGroup && layer._olLayerGroup.getOpacity) ? Math.round(layer._olLayerGroup.getOpacity() * 100) : (layer.getOpacity ? Math.round(layer.getOpacity() * 100) : 100);
             slider.style.marginLeft = '10px';
             slider.style.verticalAlign = 'middle';
-            slider.title = 'Opacity';
+            slider.setAttribute('data-i18n', 'opacity');
+            slider.title = window.config.i18n.getTranslation('opacity');
             slider.addEventListener('input', function(e) {
                 var val = parseInt(e.target.value, 10) / 100;
                 if (layer._olLayerGroup && layer._olLayerGroup.setOpacity) {
@@ -78,7 +80,8 @@
             // Layer orderer buttons
             const upBtn = document.createElement('button');
             upBtn.textContent = '↑';
-            upBtn.title = 'Move layer up';
+            upBtn.setAttribute('data-i18n', 'moveLayerUp');
+            upBtn.title = window.config.i18n.getTranslation('moveLayerUp');
             upBtn.style.marginLeft = '10px';
             upBtn.style.cursor = 'pointer';
             upBtn.addEventListener('mousedown', function(e) {
@@ -100,15 +103,18 @@
 
             const downBtn = document.createElement('button');
             downBtn.textContent = '↓';
-            downBtn.title = 'Move layer down';
-            downBtn.style.marginLeft = '2px';
+            downBtn.setAttribute('data-i18n', 'moveLayerDown');
+            downBtn.title = window.config.i18n.getTranslation('moveLayerDown');
+            downBtn.style.marginLeft = '5px';
             downBtn.style.cursor = 'pointer';
             downBtn.addEventListener('mousedown', function(e) {
                 e.preventDefault();
                 e.stopPropagation();
                 const idx = window.layers.indexOf(layer);
                 if (idx < window.layers.length - 1) {
+                    // Swap in array
                     [window.layers[idx], window.layers[idx+1]] = [window.layers[idx+1], window.layers[idx]];
+                    // Also swap in config.layers if present
                     if (window.config && Array.isArray(window.config.layers)) {
                         [window.config.layers[idx], window.config.layers[idx+1]] = [window.config.layers[idx+1], window.config.layers[idx]];
                     }
