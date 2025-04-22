@@ -12,16 +12,19 @@
         // Check for active base layer
         var hasActiveLayer = false;
         var activeLayer = null;
-        $.each(config.layers, function(indexLayer, layer) {
-            if (layer.getVisible && layer.getVisible()) {
+        $.each(window.layers, function(indexLayer, layerObj) {
+            if (layerObj._olLayerGroup && layerObj._olLayerGroup.getVisible && layerObj._olLayerGroup.getVisible()) {
                 hasActiveLayer = true;
-                activeLayer = layer;
+                activeLayer = layerObj;
+            } else if (layerObj.getVisible && layerObj.getVisible()) {
+                hasActiveLayer = true;
+                activeLayer = layerObj;
             }
         });
         // Add a 'Clear Active Layer' button if a layer is active
         if (hasActiveLayer) {
             var clearBtn = document.createElement('div');
-            clearBtn.textContent = '✖ ' + window.config.i18n.getTranslation('clearActiveLayer');
+            clearBtn.textContent = '✖ Clear Active Layer';
             clearBtn.style.cursor = 'pointer';
             clearBtn.style.padding = '6px 10px';
             clearBtn.style.background = '#ffeaea';
@@ -31,7 +34,9 @@
             clearBtn.tabIndex = 0;
             clearBtn.addEventListener('mousedown', function(e) {
                 e.preventDefault();
-                if (activeLayer && activeLayer.setVisible) {
+                if (activeLayer && activeLayer._olLayerGroup && activeLayer._olLayerGroup.setVisible) {
+                    activeLayer._olLayerGroup.setVisible(false);
+                } else if (activeLayer && activeLayer.setVisible) {
                     activeLayer.setVisible(false);
                 }
                 if (window.renderLayerList) window.renderLayerList([], '');
@@ -48,7 +53,7 @@
         results.slice(0, 10).forEach((layer, idx) => {
             const opt = document.createElement('div');
             opt.className = 'layer-search-option';
-            opt.textContent = layer.title;
+            opt.textContent = (layer.group ? layer.group + ': ' : '') + layer.title;
             opt.tabIndex = 0;
 
             // Opacity slider
@@ -56,13 +61,15 @@
             slider.type = 'range';
             slider.min = 0;
             slider.max = 100;
-            slider.value = layer.getOpacity ? Math.round(layer.getOpacity() * 100) : 100;
+            slider.value = (layer._olLayerGroup && layer._olLayerGroup.getOpacity) ? Math.round(layer._olLayerGroup.getOpacity() * 100) : (layer.getOpacity ? Math.round(layer.getOpacity() * 100) : 100);
             slider.style.marginLeft = '10px';
             slider.style.verticalAlign = 'middle';
-            slider.title = window.config.i18n.getTranslation('opacity');
+            slider.title = 'Opacity';
             slider.addEventListener('input', function(e) {
                 var val = parseInt(e.target.value, 10) / 100;
-                if (layer.setOpacity) {
+                if (layer._olLayerGroup && layer._olLayerGroup.setOpacity) {
+                    layer._olLayerGroup.setOpacity(val);
+                } else if (layer.setOpacity) {
                     layer.setOpacity(val);
                 }
             });
@@ -71,36 +78,42 @@
             // Layer orderer buttons
             const upBtn = document.createElement('button');
             upBtn.textContent = '↑';
-            upBtn.title = window.config.i18n.getTranslation('moveLayerUp');
+            upBtn.title = 'Move layer up';
             upBtn.style.marginLeft = '10px';
             upBtn.style.cursor = 'pointer';
             upBtn.addEventListener('mousedown', function(e) {
                 e.preventDefault();
                 e.stopPropagation();
-                const idx = config.layers.indexOf(layer);
+                const idx = window.layers.indexOf(layer);
                 if (idx > 0) {
                     // Swap in array
-                    [config.layers[idx-1], config.layers[idx]] = [config.layers[idx], config.layers[idx-1]];
-                    if (window.renderLayerList) window.renderLayerList(config.layers, searchInput.value);
-                    renderDropdown(config.layers.filter(l => l.title.toLowerCase().includes(searchInput.value.toLowerCase())));
+                    [window.layers[idx-1], window.layers[idx]] = [window.layers[idx], window.layers[idx-1]];
+                    // Also swap in config.layers if present
+                    if (window.config && Array.isArray(window.config.layers)) {
+                        [window.config.layers[idx-1], window.config.layers[idx]] = [window.config.layers[idx], window.config.layers[idx-1]];
+                    }
+                    if (window.renderLayerList) window.renderLayerList(window.layers, searchInput.value);
+                    renderDropdown(window.layers.filter(l => l.title.toLowerCase().includes(searchInput.value.toLowerCase()) || (l.group && l.group.toLowerCase().includes(searchInput.value.toLowerCase()))));
                 }
             });
             opt.appendChild(upBtn);
 
             const downBtn = document.createElement('button');
             downBtn.textContent = '↓';
-            downBtn.title = window.config.i18n.getTranslation('moveLayerDown');
-            downBtn.style.marginLeft = '5px';
+            downBtn.title = 'Move layer down';
+            downBtn.style.marginLeft = '2px';
             downBtn.style.cursor = 'pointer';
             downBtn.addEventListener('mousedown', function(e) {
                 e.preventDefault();
                 e.stopPropagation();
-                const idx = config.layers.indexOf(layer);
-                if (idx < config.layers.length - 1) {
-                    // Swap in array
-                    [config.layers[idx], config.layers[idx+1]] = [config.layers[idx+1], config.layers[idx]];
-                    if (window.renderLayerList) window.renderLayerList(config.layers, searchInput.value);
-                    renderDropdown(config.layers.filter(l => l.title.toLowerCase().includes(searchInput.value.toLowerCase())));
+                const idx = window.layers.indexOf(layer);
+                if (idx < window.layers.length - 1) {
+                    [window.layers[idx], window.layers[idx+1]] = [window.layers[idx+1], window.layers[idx]];
+                    if (window.config && Array.isArray(window.config.layers)) {
+                        [window.config.layers[idx], window.config.layers[idx+1]] = [window.config.layers[idx+1], window.config.layers[idx]];
+                    }
+                    if (window.renderLayerList) window.renderLayerList(window.layers, searchInput.value);
+                    renderDropdown(window.layers.filter(l => l.title.toLowerCase().includes(searchInput.value.toLowerCase()) || (l.group && l.group.toLowerCase().includes(searchInput.value.toLowerCase()))));
                 }
             });
             opt.appendChild(downBtn);
@@ -111,11 +124,13 @@
                 e.preventDefault();
                 searchInput.value = layer.title;
                 dropdown.style.display = 'none';
-                // Toggle layer visibility
-                if (layer.setVisible) {
+                // Toggle layer visibility (allow multiple active)
+                if (layer._olLayerGroup && layer._olLayerGroup.setVisible) {
+                    layer._olLayerGroup.setVisible(!layer._olLayerGroup.getVisible());
+                } else if (layer.setVisible) {
                     layer.setVisible(!layer.getVisible());
                 }
-                if (window.renderLayerList) window.renderLayerList(config.layers, searchInput.value);
+                if (window.renderLayerList) window.renderLayerList(window.layers, searchInput.value);
             });
             dropdown.appendChild(opt);
         });
@@ -135,8 +150,9 @@
             filterAndRender([], '');
             return;
         }
-        const filtered = config.layers.filter(layer =>
-            layer.title && layer.title.toLowerCase().includes(query)
+        const filtered = window.layers.filter(layer =>
+            (layer.title && layer.title.toLowerCase().includes(query)) ||
+            (layer.group && layer.group.toLowerCase().includes(query))
         );
         lastResults = filtered;
         lastQuery = query;
