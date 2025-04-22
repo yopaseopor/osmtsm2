@@ -24,7 +24,7 @@
         // Add a 'Clear Active Layer' button if a layer is active
         if (hasActiveLayer) {
             var clearBtn = document.createElement('div');
-            clearBtn.textContent = '✖ Clear Active Layer';
+            clearBtn.textContent = config.i18n.getTranslation('clearActiveLayer');
             clearBtn.style.cursor = 'pointer';
             clearBtn.style.padding = '6px 10px';
             clearBtn.style.background = '#ffeaea';
@@ -64,7 +64,7 @@
             slider.value = (layer._olLayerGroup && layer._olLayerGroup.getOpacity) ? Math.round(layer._olLayerGroup.getOpacity() * 100) : (layer.getOpacity ? Math.round(layer.getOpacity() * 100) : 100);
             slider.style.marginLeft = '10px';
             slider.style.verticalAlign = 'middle';
-            slider.title = 'Opacity';
+            slider.title = config.i18n.getTranslation('opacity');
             slider.addEventListener('input', function(e) {
                 var val = parseInt(e.target.value, 10) / 100;
                 if (layer._olLayerGroup && layer._olLayerGroup.setOpacity) {
@@ -78,7 +78,7 @@
             // Layer orderer buttons
             const upBtn = document.createElement('button');
             upBtn.textContent = '↑';
-            upBtn.title = 'Move layer up';
+            upBtn.title = config.i18n.getTranslation('moveLayerUp');
             upBtn.style.marginLeft = '10px';
             upBtn.style.cursor = 'pointer';
             upBtn.addEventListener('mousedown', function(e) {
@@ -100,15 +100,17 @@
 
             const downBtn = document.createElement('button');
             downBtn.textContent = '↓';
-            downBtn.title = 'Move layer down';
-            downBtn.style.marginLeft = '2px';
+            downBtn.title = config.i18n.getTranslation('moveLayerDown');
+            downBtn.style.marginLeft = '5px';
             downBtn.style.cursor = 'pointer';
             downBtn.addEventListener('mousedown', function(e) {
                 e.preventDefault();
                 e.stopPropagation();
                 const idx = window.layers.indexOf(layer);
                 if (idx < window.layers.length - 1) {
+                    // Swap in array
                     [window.layers[idx], window.layers[idx+1]] = [window.layers[idx+1], window.layers[idx]];
+                    // Also swap in config.layers if present
                     if (window.config && Array.isArray(window.config.layers)) {
                         [window.config.layers[idx], window.config.layers[idx+1]] = [window.config.layers[idx+1], window.config.layers[idx]];
                     }
@@ -119,18 +121,16 @@
             opt.appendChild(downBtn);
 
             opt.addEventListener('mousedown', function(e) {
-                // Prevent slider or orderer from triggering layer activation
-                if (e.target === slider || e.target === upBtn || e.target === downBtn) return;
                 e.preventDefault();
                 searchInput.value = layer.title;
                 dropdown.style.display = 'none';
-                // Toggle layer visibility (allow multiple active)
+                // Toggle layer visibility
                 if (layer._olLayerGroup && layer._olLayerGroup.setVisible) {
                     layer._olLayerGroup.setVisible(!layer._olLayerGroup.getVisible());
                 } else if (layer.setVisible) {
                     layer.setVisible(!layer.getVisible());
                 }
-                if (window.renderLayerList) window.renderLayerList(window.layers, searchInput.value);
+                if (window.renderLayerList) window.renderLayerList([], '');
             });
             dropdown.appendChild(opt);
         });
@@ -141,52 +141,49 @@
         if (window.renderLayerList) {
             window.renderLayerList(filtered, query);
         }
-    }
-
-    searchInput.addEventListener('input', function() {
-        const query = this.value.trim().toLowerCase();
-        if (!query) {
-            dropdown.style.display = 'none';
-            filterAndRender([], '');
-            return;
-        }
-        const filtered = window.layers.filter(layer =>
-            (layer.title && layer.title.toLowerCase().includes(query)) ||
-            (layer.group && layer.group.toLowerCase().includes(query))
-        );
+        renderDropdown(filtered);
         lastResults = filtered;
         lastQuery = query;
-        renderDropdown(filtered);
+    }
+
+    searchInput.addEventListener('input', function(e) {
+        const query = e.target.value.toLowerCase();
+        if (query === lastQuery) return;
+        const filtered = window.layers.filter(l => 
+            l.title.toLowerCase().includes(query) || 
+            (l.group && l.group.toLowerCase().includes(query))
+        );
         filterAndRender(filtered, query);
     });
 
-    // Keyboard navigation for dropdown
+    // Handle keyboard navigation
     searchInput.addEventListener('keydown', function(e) {
-        if (!['ArrowDown','ArrowUp','Enter','Escape'].includes(e.key)) return;
-        const opts = dropdown.querySelectorAll('.layer-search-option');
-        if (!opts.length) return;
-        let idx = Array.from(opts).findIndex(opt => document.activeElement === opt);
-        if (e.key === 'ArrowDown') {
+        if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
             e.preventDefault();
-            opts[Math.min(idx+1, opts.length-1)].focus();
-        } else if (e.key === 'ArrowUp') {
-            e.preventDefault();
-            opts[Math.max(idx-1, 0)].focus();
-        } else if (e.key === 'Enter' && idx >= 0) {
-            opts[idx].dispatchEvent(new MouseEvent('mousedown'));
-        } else if (e.key === 'Escape') {
-            dropdown.style.display = 'none';
+            const options = dropdown.querySelectorAll('.layer-search-option, #clear-active-layer-btn');
+            if (!options.length) return;
+
+            let currentIndex = Array.from(options).findIndex(opt => opt === document.activeElement);
+            if (currentIndex === -1) {
+                currentIndex = e.key === 'ArrowDown' ? 0 : options.length - 1;
+            } else {
+                currentIndex += e.key === 'ArrowDown' ? 1 : -1;
+                if (currentIndex < 0) currentIndex = options.length - 1;
+                if (currentIndex >= options.length) currentIndex = 0;
+            }
+            options[currentIndex].focus();
+        } else if (e.key === 'Enter') {
+            const focused = document.activeElement;
+            if (focused && (focused.classList.contains('layer-search-option') || focused.id === 'clear-active-layer-btn')) {
+                focused.click();
+            }
         }
     });
 
-    // Hide dropdown on blur, but keep it open if the clear button is being clicked
-    searchInput.addEventListener('blur', function() {
-        setTimeout(function() {
-            var clearBtn = document.getElementById('clear-active-layer-btn');
-            if (clearBtn && document.activeElement === clearBtn) {
-                return;
-            }
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!searchInput.contains(e.target) && !dropdown.contains(e.target)) {
             dropdown.style.display = 'none';
-        }, 100);
+        }
     });
 })();

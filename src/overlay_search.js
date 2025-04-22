@@ -65,6 +65,7 @@
             textSpan.textContent = overlay.group + ': ' + overlay.title;
             opt.appendChild(textSpan);
             opt.tabIndex = 0;
+            opt.title = config.i18n.getTranslation('toggleOverlay');
             opt.addEventListener('mousedown', function(e) {
                 e.preventDefault();
                 searchInput.value = overlay.title;
@@ -99,54 +100,49 @@
         if (window.renderOverlayList) {
             window.renderOverlayList(filtered, query);
         }
-    }
-
-    searchInput.addEventListener('input', function() {
-        const query = this.value.trim().toLowerCase();
-        if (!query) {
-            dropdown.style.display = 'none';
-            filterAndRender([], '');
-            return;
-        }
-        const filtered = window.overlays.filter(overlay =>
-            (overlay.title && overlay.title.toLowerCase().includes(query)) ||
-            (overlay.group && overlay.group.toLowerCase().includes(query))
-        );
+        renderDropdown(filtered);
         lastResults = filtered;
         lastQuery = query;
-        renderDropdown(filtered);
+    }
+
+    searchInput.addEventListener('input', function(e) {
+        const query = e.target.value.toLowerCase();
+        if (query === lastQuery) return;
+        const filtered = window.overlays.filter(o => 
+            o.title.toLowerCase().includes(query) || 
+            (o.group && o.group.toLowerCase().includes(query))
+        );
         filterAndRender(filtered, query);
     });
 
-    // Keyboard navigation for dropdown
+    // Handle keyboard navigation
     searchInput.addEventListener('keydown', function(e) {
-        if (!['ArrowDown','ArrowUp','Enter','Escape'].includes(e.key)) return;
-        const opts = dropdown.querySelectorAll('.overlay-search-option');
-        if (!opts.length) return;
-        let idx = Array.from(opts).findIndex(opt => document.activeElement === opt);
-        if (e.key === 'ArrowDown') {
+        if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
             e.preventDefault();
-            opts[Math.min(idx+1, opts.length-1)].focus();
-        } else if (e.key === 'ArrowUp') {
-            e.preventDefault();
-            opts[Math.max(idx-1, 0)].focus();
-        } else if (e.key === 'Enter' && idx >= 0) {
-            opts[idx].dispatchEvent(new MouseEvent('mousedown'));
-        } else if (e.key === 'Escape') {
-            dropdown.style.display = 'none';
+            const options = dropdown.querySelectorAll('.overlay-search-option');
+            if (!options.length) return;
+
+            let currentIndex = Array.from(options).findIndex(opt => opt === document.activeElement);
+            if (currentIndex === -1) {
+                currentIndex = e.key === 'ArrowDown' ? 0 : options.length - 1;
+            } else {
+                currentIndex += e.key === 'ArrowDown' ? 1 : -1;
+                if (currentIndex < 0) currentIndex = options.length - 1;
+                if (currentIndex >= options.length) currentIndex = 0;
+            }
+            options[currentIndex].focus();
+        } else if (e.key === 'Enter') {
+            const focused = document.activeElement;
+            if (focused && focused.classList.contains('overlay-search-option')) {
+                focused.click();
+            }
         }
     });
 
-    // Hide dropdown on blur, but keep it open if the clear button is being clicked
-    searchInput.addEventListener('blur', function() {
-        setTimeout(function() {
-            // Check if the active element is the clear button
-            var clearBtn = document.getElementById('clear-active-overlay-btn');
-            if (clearBtn && document.activeElement === clearBtn) {
-                // Do not hide dropdown
-                return;
-            }
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!searchInput.contains(e.target) && !dropdown.contains(e.target)) {
             dropdown.style.display = 'none';
-        }, 100);
+        }
     });
 })();
