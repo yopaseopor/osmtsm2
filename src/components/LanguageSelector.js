@@ -26,6 +26,10 @@ export class LanguageSelector {
         const select = this.container.querySelector('#language-select');
         select.addEventListener('change', (e) => {
             setLanguage(e.target.value);
+            // Dispatch languageChanged event
+            window.dispatchEvent(new CustomEvent('languageChanged', {
+                detail: { language: e.target.value }
+            }));
         });
     }
 } 
