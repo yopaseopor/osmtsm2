@@ -24,8 +24,7 @@
         // Add a 'Clear Active Layer' button if a layer is active
         if (hasActiveLayer) {
             var clearBtn = document.createElement('div');
-            clearBtn.setAttribute('data-i18n', 'clearActiveLayer');
-            clearBtn.textContent = window.config.i18n.getTranslation('clearActiveLayer');
+            clearBtn.textContent = '✖ ' + window.config.i18n.getTranslation('clearActiveLayer');
             clearBtn.style.cursor = 'pointer';
             clearBtn.style.padding = '6px 10px';
             clearBtn.style.background = '#ffeaea';
@@ -65,10 +64,8 @@
             slider.value = (layer._olLayerGroup && layer._olLayerGroup.getOpacity) ? Math.round(layer._olLayerGroup.getOpacity() * 100) : (layer.getOpacity ? Math.round(layer.getOpacity() * 100) : 100);
             slider.style.marginLeft = '10px';
             slider.style.verticalAlign = 'middle';
-            slider.setAttribute('data-i18n', 'opacity');
             slider.title = window.config.i18n.getTranslation('opacity');
             slider.addEventListener('input', function(e) {
-                e.stopPropagation(); // Prevent layer activation
                 var val = parseInt(e.target.value, 10) / 100;
                 if (layer._olLayerGroup && layer._olLayerGroup.setOpacity) {
                     layer._olLayerGroup.setOpacity(val);
@@ -81,7 +78,6 @@
             // Layer orderer buttons
             const upBtn = document.createElement('button');
             upBtn.textContent = '↑';
-            upBtn.setAttribute('data-i18n', 'moveLayerUp');
             upBtn.title = window.config.i18n.getTranslation('moveLayerUp');
             upBtn.style.marginLeft = '10px';
             upBtn.style.cursor = 'pointer';
@@ -104,7 +100,6 @@
 
             const downBtn = document.createElement('button');
             downBtn.textContent = '↓';
-            downBtn.setAttribute('data-i18n', 'moveLayerDown');
             downBtn.title = window.config.i18n.getTranslation('moveLayerDown');
             downBtn.style.marginLeft = '5px';
             downBtn.style.cursor = 'pointer';
