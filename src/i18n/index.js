@@ -17,6 +17,12 @@ export function setLanguage(lang) {
         document.documentElement.lang = lang;
         // Update all text elements with the new translations
         updateTranslations();
+        // Update config i18n if it exists
+        if (window.config && window.config.i18n) {
+            Object.keys(window.config.i18n).forEach(key => {
+                window.config.i18n[key] = getTranslation(key);
+            });
+        }
     }
 }
 
@@ -25,7 +31,17 @@ export function getCurrentLanguage() {
 }
 
 export function getTranslation(key) {
-    return languages[currentLanguage].translations[key] || key;
+    // First try to get translation from the module system
+    const moduleTranslation = languages[currentLanguage].translations[key];
+    if (moduleTranslation) return moduleTranslation;
+    
+    // Then try to get it from config if available
+    if (window.config && window.config.i18n && window.config.i18n[key]) {
+        return window.config.i18n[key];
+    }
+    
+    // Finally return the key itself if no translation found
+    return key;
 }
 
 function updateTranslations() {
