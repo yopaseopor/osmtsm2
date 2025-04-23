@@ -2,17 +2,7 @@ import { getTranslation } from '../i18n/index.js';
 
 export const translatedOverlays = [
     {
-        group: 'Ocio',
-        translations: {
-            ca: { group: 'Oci' },
-            es: { group: 'Ocio' },
-            en: { group: 'Leisure' },
-            fr: { group: 'Loisirs' },
-            de: { group: 'Freizeit' },
-            it: { group: 'Tempo libero' },
-            pt: { group: 'Lazer' },
-            ru: { group: 'Досуг' }
-        },
+        group: getTranslation('leisure'),
         title: 'McDonald`s',
         query: '(nwr["brand:wikidata"="Q38076"]({{bbox}});node(w););out meta;',
         iconSrc: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/McDonald%27s_Golden_Arches.svg/220px-McDonald%27s_Golden_Arches.svg.png',

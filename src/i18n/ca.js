@@ -11,6 +11,7 @@ export const ca = {
     nodeLabel: 'Node:',
     noNodesFound: 'No s\'ha trobat informació.',
     wayLabel: 'Via:',
+    languageSelect: 'Seleccionar idioma',
     clearActiveLayer: '✖ Netejar capa activa',
     opacity: 'Opacitat',
     moveLayerUp: 'Moure capa amunt',

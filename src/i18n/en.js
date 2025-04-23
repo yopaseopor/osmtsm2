@@ -11,6 +11,7 @@ export const en = {
     nodeLabel: 'Node:',
     noNodesFound: 'No information found.',
     wayLabel: 'Way:',
+    languageSelect: 'Select language',
     clearActiveLayer: '✖ Clear Active Layer',
     opacity: 'Opacity',
     moveLayerUp: 'Move layer up',
