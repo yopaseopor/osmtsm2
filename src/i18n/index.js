@@ -1,7 +1,6 @@
 import { en } from './en.js';
 import { es } from './es.js';
 import { ca } from './ca.js';
-import { updateOverlayTranslations } from '../overlays/translated_overlays.js';
 
 export const languages = {
     en: { name: 'English', translations: en },
@@ -23,12 +22,6 @@ export function setLanguage(lang) {
             Object.keys(window.config.i18n).forEach(key => {
                 window.config.i18n[key] = getTranslation(key);
             });
-        }
-        // Update overlay translations
-        updateOverlayTranslations();
-        // Trigger overlay list update if the function exists
-        if (window.renderOverlayList) {
-            window.renderOverlayList([], '');
         }
     }
 }

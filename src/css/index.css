@@ -56,16 +56,14 @@ a:hover {
     background: #f8f9fa;
     border-right: 1px solid #ddd;
     box-shadow: 2px 0 8px rgba(0,0,0,0.03);
-    padding: 10px;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    overflow-y: auto;
+    overflow: hidden;
     position: relative;
 }
 
-#language-selector-container {
-    margin-bottom: 10px;
-}
+
 
 #overlay-list {
     background: #fff;
