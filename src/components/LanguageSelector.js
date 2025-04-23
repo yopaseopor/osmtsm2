@@ -5,6 +5,7 @@ export class LanguageSelector {
         this.container = container;
         this.render();
         this.setupEventListeners();
+        this.updateDocumentLang();
     }
 
     render() {
@@ -14,11 +15,14 @@ export class LanguageSelector {
         
         const select = document.createElement('select');
         select.id = 'language-select';
+        select.setAttribute('aria-label', 'Select language');
+        select.title = 'Change language';
         
         Object.entries(languages).forEach(([code, lang]) => {
             const option = document.createElement('option');
             option.value = code;
             option.textContent = lang.name;
+            option.setAttribute('lang', code);
             if (code === currentLang) {
                 option.selected = true;
             }
@@ -33,7 +37,30 @@ export class LanguageSelector {
     setupEventListeners() {
         const select = this.container.querySelector('#language-select');
         select.addEventListener('change', (e) => {
-            setLanguage(e.target.value);
+            const newLang = e.target.value;
+            setLanguage(newLang);
+            this.updateDocumentLang();
+            this.triggerLanguageChangeEvent(newLang);
         });
+
+        // Handle keyboard navigation
+        select.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                select.click();
+            }
+        });
+    }
+
+    updateDocumentLang() {
+        document.documentElement.lang = getCurrentLanguage();
+    }
+
+    triggerLanguageChangeEvent(newLang) {
+        const event = new CustomEvent('languageChanged', {
+            detail: { language: newLang },
+            bubbles: true
+        });
+        this.container.dispatchEvent(event);
     }
 } 
