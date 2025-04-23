@@ -1,8 +1,21 @@
 import { getTranslation } from '../i18n/index.js';
 
+// Function to update translations for all overlays
+export function updateOverlayTranslations() {
+    translatedOverlays.forEach(overlay => {
+        if (overlay.originalGroup) {
+            overlay.group = getTranslation(overlay.originalGroup);
+        } else {
+            overlay.originalGroup = overlay.group.toLowerCase().replace(/\s+/g, '_');
+            overlay.group = getTranslation(overlay.originalGroup);
+        }
+    });
+}
+
 export const translatedOverlays = [
     {
         group: getTranslation('leisure'),
+        originalGroup: 'leisure',
         title: 'McDonald`s',
         query: '(nwr["brand:wikidata"="Q38076"]({{bbox}});node(w););out meta;',
         iconSrc: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/McDonald%27s_Golden_Arches.svg/220px-McDonald%27s_Golden_Arches.svg.png',
@@ -39,6 +52,7 @@ export const translatedOverlays = [
     },
     {
         group: getTranslation('food'),
+        originalGroup: 'food',
         title: 'Starbucks',
         query: '(nwr["brand:wikidata"="Q37158"]({{bbox}});node(w););out meta;',
         iconSrc: 'https://upload.wikimedia.org/wikipedia/en/thumb/3/35/Starbucks_Coffee_Logo.svg/1200px-Starbucks_Coffee_Logo.svg.png',
