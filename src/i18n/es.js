@@ -27,5 +27,7 @@ export const es = {
     culture: 'Cultura',
     services: 'Servicios',
     accommodation: 'Alojamiento',
-    religion: 'Religión'
+    religion: 'Religión',
+    // Overlay titles
+    supermarkets: 'Supermercados'
 }; 
