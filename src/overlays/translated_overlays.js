@@ -39,24 +39,24 @@ export const translatedOverlays = [
     },
     {
         group: getTranslation('food'),
-        title: getTranslation('supermarkets'),
-        query: '(nwr["shop"="supermarket"]({{bbox}});node(w););out meta;',
-        iconSrc: 'src/img/icones/maxspeed_empty.svg',
+        title: 'Starbucks',
+        query: '(nwr["brand:wikidata"="Q37158"]({{bbox}});node(w););out meta;',
+        iconSrc: 'https://upload.wikimedia.org/wikipedia/en/thumb/3/35/Starbucks_Coffee_Logo.svg/1200px-Starbucks_Coffee_Logo.svg.png',
         iconStyle: 'background-color:rgba(255,255,255,0.4)',
         style: function (feature) {
             var key_regex = /^name$/;
             var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name";
             var name = feature.get(name_key) || '';
             var fill = new ol.style.Fill({
-                color: 'rgba(0,255,0,0.4)'
+                color: 'rgba(0,112,74,0.4)'
             });
             var stroke = new ol.style.Stroke({
-                color: 'rgba(0,255,0,1)',
+                color: 'rgba(0,112,74,1)',
                 width: 1
             });
             var style = new ol.style.Style({
                 image: new ol.style.Icon({
-                    src: 'src/img/icones/maxspeed_empty.svg',
+                    src: 'https://upload.wikimedia.org/wikipedia/en/thumb/3/35/Starbucks_Coffee_Logo.svg/1200px-Starbucks_Coffee_Logo.svg.png',
                     scale: 0.10
                 }),
                 text: new ol.style.Text({
