@@ -2,39 +2,47 @@ import { getTranslation } from '../../i18n/index.js';
 
 export const foodOverlays = [
     {
-        group: getTranslation('food'),
-        title: 'McDonald\'s',
-        query: '(nwr["brand:wikidata"="Q38076"]({{bbox}});node(w););out meta;',
-        iconSrc: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/McDonald%27s_Golden_Arches.svg/220px-McDonald%27s_Golden_Arches.svg.png',
-        iconStyle: 'background-color:rgba(255,255,255,0.4)',
-        style: function (feature) {
-            var key_regex = /^name$/;
-            var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name";
-            var name = feature.get(name_key) || '';
-            var fill = new ol.style.Fill({
-                color: 'rgba(255,0,0,0.4)'
-            });
-            var stroke = new ol.style.Stroke({
-                color: 'rgba(255,0,0,1)',
-                width: 1
-            });
-            var style = new ol.style.Style({
-                image: new ol.style.Icon({
-                    src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/McDonald%27s_Golden_Arches.svg/220px-McDonald%27s_Golden_Arches.svg.png',
-                    scale: 0.10
-                }),
-                text: new ol.style.Text({
-                    text: name,
-                    offsetX: 7,
-                    offsetY: -12,
-                    fill: new ol.style.Fill({
-                        color: 'rgba(0,0,0,1)'
-                    }),
-                }),
-                fill: fill,
-                stroke: stroke
-            });
-            return style;
-        }
+        group: 'food',
+        title: () => getTranslation('restaurants'),
+        query: `
+            [out:json][timeout:25];
+            (
+              node["amenity"="restaurant"]({{bbox}});
+              way["amenity"="restaurant"]({{bbox}});
+              relation["amenity"="restaurant"]({{bbox}});
+            );
+            out body;
+            >;
+            out skel qt;
+        `,
+        iconSrc: './icons/restaurant.svg',
+        style: (feature) => ({
+            color: '#FF4136',
+            weight: 2,
+            opacity: 0.8,
+            fillOpacity: 0.3
+        })
+    },
+    {
+        group: 'food',
+        title: () => getTranslation('cafes'),
+        query: `
+            [out:json][timeout:25];
+            (
+              node["amenity"="cafe"]({{bbox}});
+              way["amenity"="cafe"]({{bbox}});
+              relation["amenity"="cafe"]({{bbox}});
+            );
+            out body;
+            >;
+            out skel qt;
+        `,
+        iconSrc: './icons/cafe.svg',
+        style: (feature) => ({
+            color: '#B10DC9',
+            weight: 2,
+            opacity: 0.8,
+            fillOpacity: 0.3
+        })
     }
 ]; 

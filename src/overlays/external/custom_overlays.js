@@ -2,39 +2,47 @@ import { getTranslation } from '../../i18n/index.js';
 
 export const customOverlays = [
     {
-        group: getTranslation('food'),
-        title: 'Starbucks',
-        query: '(nwr["brand:wikidata"="Q37158"]({{bbox}});node(w););out meta;',
-        iconSrc: 'https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Starbucks_Corporation_Logo_2011.svg/220px-Starbucks_Corporation_Logo_2011.svg.png',
-        iconStyle: 'background-color:rgba(255,255,255,0.4)',
-        style: function (feature) {
-            var key_regex = /^name$/;
-            var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name";
-            var name = feature.get(name_key) || '';
-            var fill = new ol.style.Fill({
-                color: 'rgba(0,100,0,0.4)'
-            });
-            var stroke = new ol.style.Stroke({
-                color: 'rgba(0,100,0,1)',
-                width: 1
-            });
-            var style = new ol.style.Style({
-                image: new ol.style.Icon({
-                    src: 'https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Starbucks_Corporation_Logo_2011.svg/220px-Starbucks_Corporation_Logo_2011.svg.png',
-                    scale: 0.10
-                }),
-                text: new ol.style.Text({
-                    text: name,
-                    offsetX: 7,
-                    offsetY: -12,
-                    fill: new ol.style.Fill({
-                        color: 'rgba(0,0,0,1)'
-                    }),
-                }),
-                fill: fill,
-                stroke: stroke
-            });
-            return style;
-        }
+        group: 'custom',
+        title: () => getTranslation('bike_parking'),
+        query: `
+            [out:json][timeout:25];
+            (
+              node["amenity"="bicycle_parking"]({{bbox}});
+              way["amenity"="bicycle_parking"]({{bbox}});
+              relation["amenity"="bicycle_parking"]({{bbox}});
+            );
+            out body;
+            >;
+            out skel qt;
+        `,
+        iconSrc: './icons/bicycle_parking.svg',
+        style: (feature) => ({
+            color: '#01FF70',
+            weight: 2,
+            opacity: 0.8,
+            fillOpacity: 0.3
+        })
+    },
+    {
+        group: 'custom',
+        title: () => getTranslation('drinking_water'),
+        query: `
+            [out:json][timeout:25];
+            (
+              node["amenity"="drinking_water"]({{bbox}});
+              way["amenity"="drinking_water"]({{bbox}});
+              relation["amenity"="drinking_water"]({{bbox}});
+            );
+            out body;
+            >;
+            out skel qt;
+        `,
+        iconSrc: './icons/drinking_water.svg',
+        style: (feature) => ({
+            color: '#7FDBFF',
+            weight: 2,
+            opacity: 0.8,
+            fillOpacity: 0.3
+        })
     }
 ]; 

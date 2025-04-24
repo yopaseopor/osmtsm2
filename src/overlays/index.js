@@ -1,11 +1,17 @@
 import { translatedOverlays } from './translated_overlays.js';
+import { customOverlays } from './external/custom_overlays.js';
+import { foodOverlays } from './external/food.js';
 import { loadExternalOverlays } from './external/loader.js';
 
 console.log('Initializing overlays system...');
 console.log('Base overlays loaded:', translatedOverlays.length);
 
 // Initialize empty allOverlays array
-export let allOverlays = [...translatedOverlays];
+export const allOverlays = [
+    ...translatedOverlays,
+    ...customOverlays,
+    ...foodOverlays
+];
 
 // Make overlays available globally
 window.allOverlays = allOverlays;
