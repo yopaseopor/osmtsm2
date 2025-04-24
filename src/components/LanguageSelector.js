@@ -33,7 +33,16 @@ export class LanguageSelector {
     setupEventListeners() {
         const select = this.container.querySelector('#language-select');
         select.addEventListener('change', (e) => {
-            setLanguage(e.target.value);
+            setLanguage(e.target.value, true);
+        });
+
+        // Update selector when URL changes
+        window.addEventListener('popstate', () => {
+            const currentLang = getCurrentLanguage();
+            const select = this.container.querySelector('#language-select');
+            if (select && select.value !== currentLang) {
+                select.value = currentLang;
+            }
         });
     }
 } 

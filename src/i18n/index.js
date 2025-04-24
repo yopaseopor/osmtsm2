@@ -10,7 +10,7 @@ export const languages = {
 
 let currentLanguage = 'en';
 
-export function setLanguage(lang) {
+export function setLanguage(lang, updateURL = true) {
     if (languages[lang]) {
         currentLanguage = lang;
         // Update the HTML lang attribute
@@ -22,6 +22,10 @@ export function setLanguage(lang) {
             Object.keys(window.config.i18n).forEach(key => {
                 window.config.i18n[key] = getTranslation(key);
             });
+        }
+        // Update URL if requested
+        if (updateURL) {
+            updateLanguageInURL(lang);
         }
     }
 }
@@ -58,11 +62,38 @@ function updateTranslations() {
     });
 }
 
+function getLanguageFromURL() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const langParam = urlParams.get('lang');
+    return languages[langParam] ? langParam : null;
+}
+
+function updateLanguageInURL(lang) {
+    const url = new URL(window.location.href);
+    url.searchParams.set('lang', lang);
+    window.history.replaceState({}, '', url);
+}
+
+// Handle URL changes
+window.addEventListener('popstate', () => {
+    const urlLang = getLanguageFromURL();
+    if (urlLang) {
+        setLanguage(urlLang, false);
+    }
+});
+
 // Initialize translations when the DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    // Set initial language based on browser language
+    // First check URL for language parameter
+    const urlLang = getLanguageFromURL();
+    if (urlLang) {
+        setLanguage(urlLang, false);
+        return;
+    }
+
+    // If no URL parameter, use browser language
     const browserLang = navigator.language.split('-')[0];
     const supportedLangs = ['en', 'es', 'ca'];
     const initialLang = supportedLangs.includes(browserLang) ? browserLang : 'en';
-    setLanguage(initialLang);
+    setLanguage(initialLang, true);
 }); 

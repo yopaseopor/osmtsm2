@@ -28,14 +28,5 @@ export const es = {
     culture: 'Cultura',
     services: 'Servicios',
     accommodation: 'Alojamiento',
-    religion: 'Religión',
-    // Router translations
-    routeCalculated: '¡Ruta calculada!',
-    routeDistance: 'Distancia',
-    routeDuration: 'Duración',
-    routeKilometers: 'km',
-    routeMinutes: 'minutos',
-    routeError: 'Error al calcular la ruta:',
-    routeInvalidCoords: 'Coordenadas inválidas. Por favor, inténtelo de nuevo.',
-    routeNoRoute: 'No se encontró ninguna ruta'
+    religion: 'Religión'
 }; 
