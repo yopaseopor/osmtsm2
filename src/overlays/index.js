@@ -1,13 +1,22 @@
 import { translatedOverlays } from './translated_overlays.js';
-import { externalOverlays } from './external/index.js';
+import { loadExternalOverlays } from './external/loader.js';
 
-// Export all overlays
-export const allOverlays = [
-    ...translatedOverlays,
-    ...externalOverlays
-];
+// Initialize empty allOverlays array
+export let allOverlays = [...translatedOverlays];
 
-// Make overlays available globally for non-module scripts
+// Make overlays available globally
 window.allOverlays = allOverlays;
+
+// Load external overlays
+loadExternalOverlays().then(externalOverlays => {
+    // Add external overlays to the array
+    allOverlays = [...translatedOverlays, ...externalOverlays];
+    // Update global reference
+    window.allOverlays = allOverlays;
+    // Dispatch event to notify that overlays have been updated
+    window.dispatchEvent(new CustomEvent('overlaysUpdated', { detail: allOverlays }));
+}).catch(error => {
+    console.error('Error loading external overlays:', error);
+});
 
 export default allOverlays; 
