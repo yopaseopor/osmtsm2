@@ -9,12 +9,13 @@ function createOlLayer(overlay) {
             const epsg4326Extent = ol.proj.transformExtent(extent, projection, 'EPSG:4326');
             const bbox = [epsg4326Extent[1], epsg4326Extent[0], epsg4326Extent[3], epsg4326Extent[2]].join(',');
             
-            // Handle both function and string queries
-            const queryStr = typeof overlay.query === 'function' ? 
-                overlay.query(bbox) : 
-                overlay.query.replace('{{bbox}}', bbox);
+            // Handle dynamic title if it's a function
+            const title = typeof overlay.title === 'function' ? overlay.title() : overlay.title;
             
-            const url = window.config.overpassApi() + '?data=' + encodeURIComponent(queryStr);
+            // Clean and prepare the query
+            const query = overlay.query.trim().replace(/\s+/g, ' ').replace('{{bbox}}', bbox);
+            
+            const url = window.config.overpassApi() + '?data=' + encodeURIComponent(query);
             console.log('Loading overlay data from:', url);
             
             fetch(url)
@@ -25,63 +26,48 @@ function createOlLayer(overlay) {
                     return response.json();
                 })
                 .then(data => {
-                    // Handle both function and string titles
-                    const title = typeof overlay.title === 'function' ? overlay.title() : overlay.title;
                     console.log('Received data for ' + title);
-                    
                     if (!data || !data.elements) {
                         console.warn('No elements found in response for ' + title);
                         return;
                     }
+                    
+                    // Convert OSM data to GeoJSON
                     const geojson = osmtogeojson(data);
+                    
+                    // Clear existing features
+                    vectorSource.clear();
+                    
+                    // Add new features
                     const features = new ol.format.GeoJSON().readFeatures(geojson, {
                         featureProjection: projection
                     });
+                    
                     console.log('Added ' + features.length + ' features for ' + title);
                     vectorSource.addFeatures(features);
                 })
-                .catch(error => console.error('Error loading overlay data for ' + 
-                    (typeof overlay.title === 'function' ? overlay.title() : overlay.title) + 
-                    ':', error));
+                .catch(error => {
+                    console.error('Error loading overlay data for ' + title + ':', error);
+                    // Optionally retry on failure
+                    setTimeout(() => {
+                        console.log('Retrying overlay data load for ' + title);
+                        vectorSource.refresh();
+                    }, 5000);
+                });
         },
         strategy: ol.loadingstrategy.bbox
     });
 
-    // Handle both function and string titles
-    const title = typeof overlay.title === 'function' ? overlay.title() : overlay.title;
-    
     const layer = new ol.layer.Vector({
-        title: title,
+        title: typeof overlay.title === 'function' ? overlay.title() : overlay.title,
         group: overlay.group,
         type: 'overlay',
         source: vectorSource,
         style: function(feature) {
             if (typeof overlay.style === 'function') {
-                const style = overlay.style(feature);
-                
-                // If style returns an ol.style.Style object, use it directly
-                if (style instanceof ol.style.Style) {
-                    return style;
-                }
-                
-                // If style returns a style configuration object, create an ol.style.Style
-                return new ol.style.Style({
-                    image: new ol.style.Icon({
-                        src: overlay.iconSrc,
-                        scale: 0.5
-                    }),
-                    stroke: new ol.style.Stroke({
-                        color: style.color || '#000000',
-                        width: style.weight || 1,
-                        opacity: style.opacity || 1
-                    }),
-                    fill: new ol.style.Fill({
-                        color: style.color ? style.color.replace(/[\d.]+\)$/g, (style.fillOpacity || 0.2) + ')') : 'rgba(0,0,0,0.2)'
-                    })
-                });
+                return overlay.style(feature);
             }
-            
-            // Default style if no style function is provided
+            // Default style if none provided
             return new ol.style.Style({
                 image: new ol.style.Icon({
                     src: overlay.iconSrc,
