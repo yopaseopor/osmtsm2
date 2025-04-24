@@ -1,6 +1,7 @@
 import { foodOverlays } from './categories/food.js';
 import { amenityOverlays } from './categories/amenities.js';
 import { shoppingOverlays } from './categories/shopping.js';
+import { loadExternalOverlays } from './external/loader.js';
 
 console.log('Initializing overlays system...');
 
@@ -24,5 +25,13 @@ window.dispatchEvent(new CustomEvent('overlaysUpdated', {
         all: allOverlays
     }
 }));
+
+export const externalOverlays = async () => {
+    const externalOverlays = await loadExternalOverlays();
+    return externalOverlays;
+};
+
+// Export a synchronous initial empty array for immediate use
+export const initialOverlays = [];
 
 export default overlayCategories; 
