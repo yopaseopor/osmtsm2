@@ -23,19 +23,19 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch (error) {
         console.error('Error initializing language selector:', error);
     }
+
+    // Dispatch config loaded event after DOM is ready
+    window.dispatchEvent(new CustomEvent('configLoaded', {
+        detail: window.config
+    }));
+
+    // Notify overlay searcher that initial overlays are ready
+    window.dispatchEvent(new CustomEvent('overlaySearchUpdate', {
+        detail: {
+            overlays: window.config.overlays
+        }
+    }));
 });
-
-// Dispatch config loaded event after everything is initialized
-window.dispatchEvent(new CustomEvent('configLoaded', {
-    detail: window.config
-}));
-
-// Notify overlay searcher that overlays are ready
-window.dispatchEvent(new CustomEvent('overlaySearchUpdate', {
-    detail: {
-        overlays: window.config.overlays
-    }
-}));
 
 // Initialize map when document is ready
 $(document).ready(function() {
