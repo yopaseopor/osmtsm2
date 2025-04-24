@@ -28,5 +28,18 @@ export const ca = {
     culture: 'Cultura',
     services: 'Serveis',
     accommodation: 'Allotjament',
-    religion: 'Religió'
+    religion: 'Religió',
+    // Router translations
+    routeCalculated: 'Ruta calculada!',
+    routeDistance: 'Distància',
+    routeDuration: 'Durada',
+    routeKilometers: 'km',
+    routeMinutes: 'minuts',
+    routeError: 'Error al calcular la ruta',
+    routeInvalidCoords: 'Coordenades invàlides. Si us plau, torneu-ho a provar.',
+    routeNoRoute: 'No s\'ha trobat cap ruta',
+    // Transport profiles
+    profileCar: 'Cotxe',
+    profileBike: 'Bicicleta',
+    profileFoot: 'A peu'
 }; 

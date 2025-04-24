@@ -28,5 +28,18 @@ export const en = {
     culture: 'Culture',
     services: 'Services',
     accommodation: 'Accommodation',
-    religion: 'Religion'
+    religion: 'Religion',
+    // Router translations
+    routeCalculated: 'Route calculated!',
+    routeDistance: 'Distance',
+    routeDuration: 'Duration',
+    routeKilometers: 'km',
+    routeMinutes: 'minutes',
+    routeError: 'Error calculating route',
+    routeInvalidCoords: 'Invalid coordinates. Please try again.',
+    routeNoRoute: 'No route found',
+    // Transport profiles
+    profileCar: 'Car',
+    profileBike: 'Bicycle',
+    profileFoot: 'Walking'
 }; 

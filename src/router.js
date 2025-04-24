@@ -1,4 +1,6 @@
 /* global config, ol */
+import { getTranslation } from './i18n/index.js';
+
 function initRouter(map) {
     // Add route layer
     const routeLayer = new ol.layer.Vector({
@@ -81,7 +83,7 @@ function initRouter(map) {
             
             // Validate coordinates
             if (Math.abs(lonlat[0]) > 180 || Math.abs(lonlat[1]) > 90) {
-                alert('Invalid coordinates. Please try again.');
+                alert(getTranslation('routeInvalidCoords'));
                 return;
             }
             
@@ -147,7 +149,7 @@ function initRouter(map) {
                         console.log('Route data received:', data);
                         
                         if (!data.routes || data.routes.length === 0) {
-                            throw new Error('No route found');
+                            throw new Error(getTranslation('routeNoRoute'));
                         }
                         
                         const route = data.routes[0];
@@ -170,11 +172,11 @@ function initRouter(map) {
                         // Show route info
                         const distance = (route.distance / 1000).toFixed(1);
                         const duration = Math.round(route.duration / 60);
-                        alert(`Route calculated!\nDistance: ${distance} km\nDuration: ${duration} minutes`);
+                        alert(`${getTranslation('routeCalculated')}\n${getTranslation('routeDistance')}: ${distance} ${getTranslation('routeKilometers')}\n${getTranslation('routeDuration')}: ${duration} ${getTranslation('routeMinutes')}`);
                     })
                     .catch(error => {
                         console.error('Error calculating route:', error);
-                        alert('Error calculating route: ' + error.message);
+                        alert(`${getTranslation('routeError')}: ${error.message}`);
                     })
                     .finally(() => {
                         loading.hide();
