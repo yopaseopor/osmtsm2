@@ -1,33 +1,28 @@
-import { translatedOverlays } from './translated_overlays.js';
-import { loadExternalOverlays } from './external/loader.js';
+import { foodOverlays } from './categories/food.js';
+import { amenityOverlays } from './categories/amenities.js';
+import { shoppingOverlays } from './categories/shopping.js';
 
 console.log('Initializing overlays system...');
 
-// Initialize with base overlays
-let allOverlays = [...translatedOverlays];
-console.log('Base overlays loaded:', allOverlays.length);
-
-// Make overlays available globally but organized by group
-window.allOverlays = {
-    translated: translatedOverlays,
-    external: []
+// Organize overlays by category
+const overlayCategories = {
+    food: foodOverlays,
+    amenities: amenityOverlays,
+    shopping: shoppingOverlays
 };
 
-// Load and combine all overlays
-loadExternalOverlays().then(externalOverlays => {
-    console.log('External overlays loaded:', externalOverlays.length);
-    window.allOverlays.external = externalOverlays;
-    
-    // Dispatch event to notify that overlays are ready
-    window.dispatchEvent(new CustomEvent('overlaysUpdated', { 
-        detail: { 
-            translated: window.allOverlays.translated,
-            external: window.allOverlays.external
-        }
-    }));
-}).catch(error => {
-    console.error('Error loading external overlays:', error);
-});
+// Make overlays available globally
+window.allOverlays = overlayCategories;
 
-export { allOverlays };
-export default allOverlays; 
+// Create a flattened array of all overlays for compatibility
+export const allOverlays = Object.values(overlayCategories).flat();
+
+// Dispatch event to notify that overlays are ready
+window.dispatchEvent(new CustomEvent('overlaysUpdated', { 
+    detail: { 
+        categories: overlayCategories,
+        all: allOverlays
+    }
+}));
+
+export default overlayCategories; 
