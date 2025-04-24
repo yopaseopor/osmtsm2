@@ -1,6 +1,4 @@
 /* global config, ol */
-import { initializeFoodOverlays } from './overlays/food_overlay_handler.js';
-
 $(function () {
     // --- Layer Searcher Integration ---
     // 1. Flatten base layers into window.layers

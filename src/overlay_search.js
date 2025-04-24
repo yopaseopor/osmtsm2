@@ -12,14 +12,16 @@
     let lastResults = [];
     let lastQuery = '';
 
-    // Helper function to get all overlays from the new structure
+    // Helper function to get all overlays
     function getAllOverlays() {
-        if (!window.allOverlays) return [];
-        // Get overlays from all sources including food overlays
-        return Object.values(window.allOverlays)
-            .filter(Array.isArray)
-            .flat()
-            .concat(window.foodOverlays || []);
+        var allOverlays = [];
+        
+        // Get overlays from config
+        if (config && config.overlays) {
+            allOverlays = allOverlays.concat(config.overlays);
+        }
+        
+        return allOverlays;
     }
 
     // Helper function to find an overlay in layers
