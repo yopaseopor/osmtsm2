@@ -83,7 +83,7 @@ function initRouter(map) {
             
             // Validate coordinates
             if (Math.abs(lonlat[0]) > 180 || Math.abs(lonlat[1]) > 90) {
-                alert(getTranslation('routeInvalidCoords'));
+                alert(config.i18n.routeInvalidCoords || 'Invalid coordinates. Please try again.');
                 return;
             }
             
@@ -101,86 +101,7 @@ function initRouter(map) {
             
             // Only calculate route if we have both start and end points
             if (startPlace && endPlace) {
-                // Get the current profile
-                const profile = $('.profile-select').val();
-                
-                // Map profile values to OSRM API base URLs and profiles
-                const profileMap = {
-                    'car': {
-                        baseUrl: 'https://router.project-osrm.org/route/v1',
-                        profile: 'driving'
-                    },
-                    'bike': {
-                        baseUrl: 'https://routing.openstreetmap.de/routed-bike/route/v1',
-                        profile: 'bicycle'
-                    },
-                    'foot': {
-                        baseUrl: 'https://routing.openstreetmap.de/routed-foot/route/v1',
-                        profile: 'foot'
-                    }
-                };
-                
-                const routingConfig = profileMap[profile] || profileMap.car;
-                
-                // Format coordinates with proper precision
-                const formatCoord = (coord) => coord.toFixed(6);
-                let waypoints = `${formatCoord(startPlace.lon)},${formatCoord(startPlace.lat)}`;
-                
-                if (viaPlace) {
-                    waypoints += `;${formatCoord(viaPlace.lon)},${formatCoord(viaPlace.lat)}`;
-                }
-                
-                waypoints += `;${formatCoord(endPlace.lon)},${formatCoord(endPlace.lat)}`;
-                
-                const url = `${routingConfig.baseUrl}/${routingConfig.profile}/${waypoints}?overview=full&geometries=geojson`;
-                
-                console.log('Calculating route with URL:', url);
-                
-                loading.show();
-                
-                fetch(url)
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error(`HTTP error! status: ${response.status}`);
-                        }
-                        return response.json();
-                    })
-                    .then(data => {
-                        console.log('Route data received:', data);
-                        
-                        if (!data.routes || data.routes.length === 0) {
-                            throw new Error(getTranslation('routeNoRoute'));
-                        }
-                        
-                        const route = data.routes[0];
-                        const format = new ol.format.GeoJSON();
-                        const features = format.readFeatures(route.geometry, {
-                            featureProjection: map.getView().getProjection(),
-                            dataProjection: 'EPSG:4326'
-                        });
-                        
-                        // Remove alternative routes
-                        map.getLayers().forEach(l => {
-                            if (l !== routeLayer && l.get('type') === 'alternative') {
-                                map.removeLayer(l);
-                            }
-                        });
-                        
-                        routeLayer.getSource().clear();
-                        routeLayer.getSource().addFeatures(features);
-                        
-                        // Show route info
-                        const distance = (route.distance / 1000).toFixed(1);
-                        const duration = Math.round(route.duration / 60);
-                        alert(`${getTranslation('routeCalculated')}\n${getTranslation('routeDistance')}: ${distance} ${getTranslation('routeKilometers')}\n${getTranslation('routeDuration')}: ${duration} ${getTranslation('routeMinutes')}`);
-                    })
-                    .catch(error => {
-                        console.error('Error calculating route:', error);
-                        alert(`${getTranslation('routeError')} ${error.message}`);
-                    })
-                    .finally(() => {
-                        loading.hide();
-                    });
+                calculateRoute();
             }
         });
         
@@ -317,7 +238,7 @@ function initRouter(map) {
     // Function to calculate route
     const calculateRoute = function() {
         if (!startPlace || !endPlace) {
-            alert('Please set start and end points');
+            alert(config.i18n.routeSetPoints || 'Please set start and end points');
             return;
         }
 
@@ -325,7 +246,7 @@ function initRouter(map) {
         if (Math.abs(startPlace.lon) > 180 || Math.abs(startPlace.lat) > 90 ||
             Math.abs(endPlace.lon) > 180 || Math.abs(endPlace.lat) > 90 ||
             (viaPlace && (Math.abs(viaPlace.lon) > 180 || Math.abs(viaPlace.lat) > 90))) {
-            alert('Invalid coordinates. Please try again.');
+            alert(config.i18n.routeInvalidCoords || 'Invalid coordinates. Please try again.');
             return;
         }
 
@@ -375,7 +296,7 @@ function initRouter(map) {
                 console.log('Route data received:', data);
                 
                 if (!data.routes || data.routes.length === 0) {
-                    throw new Error('No route found');
+                    throw new Error(config.i18n.routeNoRoute || 'No route found');
                 }
                 
                 const route = data.routes[0];
@@ -398,7 +319,7 @@ function initRouter(map) {
                 // Show route info
                 const distance = (route.distance / 1000).toFixed(1);
                 const duration = Math.round(route.duration / 60);
-                alert(`Route calculated!\nDistance: ${distance} km\nDuration: ${duration} minutes`);
+                alert(`${config.i18n.routeCalculated || 'Route calculated!'}\n${config.i18n.routeDistance || 'Distance'}: ${distance} ${config.i18n.routeKilometers || 'km'}\n${config.i18n.routeDuration || 'Duration'}: ${duration} ${config.i18n.routeMinutes || 'minutes'}`);
                 
                 // Zoom to route
                 const extent = routeLayer.getSource().getExtent();
@@ -409,7 +330,7 @@ function initRouter(map) {
             })
             .catch(error => {
                 console.error('Error calculating route:', error);
-                alert('Error calculating route: ' + error.message);
+                alert(`${config.i18n.routeError || 'Error calculating route:'} ${error.message}`);
             })
             .finally(() => {
                 loading.hide();
@@ -419,12 +340,12 @@ function initRouter(map) {
     // Add router button and dialog
     const routerButton = $('<button>')
         .addClass('osmcat-button osmcat-router')
-        .attr('title', 'Route')
+        .attr('title', config.i18n.routerTitle || 'Route')
         .html('<i class="fa fa-play-circle-o" aria-hidden="true"></i>')
         .on('click', function() {
             // Check if router is already open
             const existingRouter = $('.osmcat-menu .osmcat-layer').filter(function() {
-                return $(this).find('.osmcat-select').text() === 'Router';
+                return $(this).find('.osmcat-select').text() === (config.i18n.router || 'Router');
             });
 
             if (existingRouter.length > 0) {
@@ -473,45 +394,45 @@ function initRouter(map) {
             // Create router content
             const routerContent = $(`
                 <div class="osmcat-layer">
-                    <div class="osmcat-select">Router</div>
+                    <div class="osmcat-select">${config.i18n.router || 'Router'}</div>
                     <div class="osmcat-content">
                         <div class="router-form">
                             <div class="router-input">
-                                <label>Start:</label>
+                                <label>${config.i18n.routeStart || 'Start'}:</label>
                                 <div class="location-input">
-                                    <input type="text" class="start-place" placeholder="Search start location...">
+                                    <input type="text" class="start-place" placeholder="${config.i18n.routeSearchStart || 'Search start location...'}">
                                     <button class="search-button"><i class="fa fa-search"></i></button>
                                 </div>
                                 <div class="search-results start-results"></div>
                             </div>
                             <div class="router-input">
-                                <label>End:</label>
+                                <label>${config.i18n.routeEnd || 'End'}:</label>
                                 <div class="location-input">
-                                    <input type="text" class="end-place" placeholder="Search end location...">
+                                    <input type="text" class="end-place" placeholder="${config.i18n.routeSearchEnd || 'Search end location...'}">
                                     <button class="search-button"><i class="fa fa-search"></i></button>
                                 </div>
                                 <div class="search-results end-results"></div>
                             </div>
                             <div class="router-input">
-                                <label>Via (optional):</label>
+                                <label>${config.i18n.routeVia || 'Via'} (${config.i18n.routeOptional || 'optional'}):</label>
                                 <div class="location-input">
-                                    <input type="text" class="via-place" placeholder="Search via location...">
+                                    <input type="text" class="via-place" placeholder="${config.i18n.routeSearchVia || 'Search via location...'}">
                                     <button class="search-button"><i class="fa fa-search"></i></button>
                                 </div>
                                 <div class="search-results via-results"></div>
                             </div>
                             <div class="router-input">
-                                <label>Profile:</label>
+                                <label>${config.i18n.routeProfile || 'Profile'}:</label>
                                 <select class="profile-select">
-                                    <option value="car">Car</option>
-                                    <option value="bike">Bicycle</option>
-                                    <option value="foot">Walking</option>
+                                    <option value="car">${config.i18n.routeCar || 'Car'}</option>
+                                    <option value="bike">${config.i18n.routeBike || 'Bicycle'}</option>
+                                    <option value="foot">${config.i18n.routeFoot || 'Walking'}</option>
                                 </select>
                             </div>
                             <div class="click-hint">
-                                <i class="fa fa-info-circle"></i> Click on the map to set locations
+                                <i class="fa fa-info-circle"></i> ${config.i18n.routeClickHint || 'Click on the map to set locations'}
                             </div>
-                            <button class="calculate-route">Calculate Route</button>
+                            <button class="calculate-route">${config.i18n.routeCalculate || 'Calculate Route'}</button>
                         </div>
                     </div>
                 </div>
@@ -526,17 +447,17 @@ function initRouter(map) {
                     if (startMarker) map.removeOverlay(startMarker);
                     startPlace = { lon: lonlat[0], lat: lonlat[1] };
                     startMarker = createMarker(coordinate, 'start');
-                    routerContent.find('.start-place').val('Selected on map');
+                    routerContent.find('.start-place').val(config.i18n.routeSelectedOnMap || 'Selected on map');
                 } else if (!endPlace) {
                     if (endMarker) map.removeOverlay(endMarker);
                     endPlace = { lon: lonlat[0], lat: lonlat[1] };
                     endMarker = createMarker(coordinate, 'end');
-                    routerContent.find('.end-place').val('Selected on map');
+                    routerContent.find('.end-place').val(config.i18n.routeSelectedOnMap || 'Selected on map');
                 } else if (!viaPlace) {
                     if (viaMarker) map.removeOverlay(viaMarker);
                     viaPlace = { lon: lonlat[0], lat: lonlat[1] };
                     viaMarker = createMarker(coordinate, 'via');
-                    routerContent.find('.via-place').val('Selected on map');
+                    routerContent.find('.via-place').val(config.i18n.routeSelectedOnMap || 'Selected on map');
                 }
 
                 // Calculate route automatically if we have start and end points
@@ -623,7 +544,7 @@ function initRouter(map) {
 
             // Remove any existing router content
             $('.osmcat-menu .osmcat-layer').not(routerContent).each(function() {
-                if ($(this).find('.osmcat-select').text() === 'Router') {
+                if ($(this).find('.osmcat-select').text() === (config.i18n.router || 'Router')) {
                     $(this).remove();
                 }
             });
