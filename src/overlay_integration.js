@@ -11,13 +11,27 @@ function createOlLayer(overlay) {
             const query = overlay.query.replace('{{bbox}}', bbox);
             
             const url = window.config.overpassApi() + '?data=' + encodeURIComponent(query);
+            console.log('Loading overlay data from:', url);
             
             fetch(url)
-                .then(response => response.json())
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
                 .then(data => {
-                    const features = new ol.format.GeoJSON().readFeatures(osmtogeojson(data), {
+                    console.log('Received data:', data);
+                    if (!data || !data.elements) {
+                        console.warn('No elements found in response');
+                        return;
+                    }
+                    const geojson = osmtogeojson(data);
+                    console.log('Converted to GeoJSON:', geojson);
+                    const features = new ol.format.GeoJSON().readFeatures(geojson, {
                         featureProjection: projection
                     });
+                    console.log('Created features:', features);
                     vectorSource.addFeatures(features);
                 })
                 .catch(error => console.error('Error loading overlay data:', error));
@@ -30,7 +44,7 @@ function createOlLayer(overlay) {
         group: overlay.group,
         type: 'overlay',
         source: vectorSource,
-        style: overlay.style,
+        style: typeof overlay.style === 'function' ? overlay.style : undefined,
         visible: false
     });
 
@@ -40,45 +54,46 @@ function createOlLayer(overlay) {
     return layer;
 }
 
+// Function to create overlay group
+function createOverlayGroup(title, layers) {
+    return new ol.layer.Group({
+        title: title,
+        type: 'overlay',
+        layers: new ol.Collection(layers),
+        visible: true
+    });
+}
+
 // Function to integrate overlays
 function integrateOverlays() {
     if (window.config && window.config.layers) {
         console.log('Integrating overlays...');
         
-        // Find or create the overlay group
-        let overlayGroup = window.config.layers.find(layer => 
-            layer.get && layer.get('type') === 'overlay'
-        );
-
-        if (!overlayGroup) {
-            console.log('Creating new overlay group...');
-            overlayGroup = new ol.layer.Group({
-                title: 'External Overlays',
-                type: 'overlay',
-                layers: new ol.Collection()
-            });
-            window.config.layers.push(overlayGroup);
-        }
-
-        // Convert our overlays to OpenLayers layers
-        console.log('Creating overlay layers...');
-        const olLayers = allOverlays.map(createOlLayer);
+        // Create layers for each group
+        const translatedLayers = window.allOverlays.translated.map(overlay => createOlLayer(overlay));
+        const externalLayers = window.allOverlays.external.map(overlay => createOlLayer(overlay));
         
-        // Add layers to the overlay group
-        console.log('Adding layers to overlay group...');
-        const collection = overlayGroup.getLayers();
-        olLayers.forEach(layer => {
-            collection.push(layer);
-        });
+        // Create groups
+        const translatedGroup = createOverlayGroup('Translated Overlays', translatedLayers);
+        const externalGroup = createOverlayGroup('External Overlays', externalLayers);
+        
+        // Add groups to config layers
+        window.config.layers.push(translatedGroup);
+        window.config.layers.push(externalGroup);
 
         // Update window.overlays for the search functionality
         console.log('Updating window.overlays...');
-        const existingOverlays = window.overlays || [];
         window.overlays = [
-            ...existingOverlays,
-            ...olLayers.map(layer => ({
+            ...translatedLayers.map(layer => ({
                 title: layer.get('title'),
-                group: layer.get('group'),
+                group: 'Translated',
+                id: layer.get('id') || '',
+                _olLayer: layer,
+                ...layer.overlay
+            })),
+            ...externalLayers.map(layer => ({
+                title: layer.get('title'),
+                group: 'External',
                 id: layer.get('id') || '',
                 _olLayer: layer,
                 ...layer.overlay
@@ -88,7 +103,13 @@ function integrateOverlays() {
         // Dispatch event to notify that overlays are ready
         console.log('Dispatching overlaysReady event...');
         window.dispatchEvent(new CustomEvent('overlaysReady', {
-            detail: { overlays: window.overlays }
+            detail: { 
+                overlays: window.overlays,
+                groups: {
+                    translated: translatedGroup,
+                    external: externalGroup
+                }
+            }
         }));
 
         // Trigger overlay list update
@@ -118,7 +139,7 @@ if (window.config) {
 
 // Re-integrate when new overlays are loaded
 window.addEventListener('overlaysUpdated', function(event) {
-    console.log('Overlays updated, re-integrating...');
+    console.log('Overlays updated, re-integrating...', event.detail);
     if (window.config) {
         integrateOverlays();
     }

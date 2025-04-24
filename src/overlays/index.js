@@ -1,6 +1,4 @@
 import { translatedOverlays } from './translated_overlays.js';
-import { customOverlays } from './external/custom_overlays.js';
-import { foodOverlays } from './external/food.js';
 import { loadExternalOverlays } from './external/loader.js';
 
 console.log('Initializing overlays system...');
@@ -9,40 +7,26 @@ console.log('Initializing overlays system...');
 let allOverlays = [...translatedOverlays];
 console.log('Base overlays loaded:', allOverlays.length);
 
-// Make overlays available globally
-window.allOverlays = allOverlays;
-
-// Function to update overlays
-function updateOverlays(newOverlays) {
-    console.log('Updating overlays:', newOverlays.length);
-    allOverlays = newOverlays;
-    window.allOverlays = allOverlays;
-    window.dispatchEvent(new CustomEvent('overlaysUpdated', { 
-        detail: { 
-            overlays: allOverlays,
-            count: allOverlays.length
-        }
-    }));
-}
+// Make overlays available globally but organized by group
+window.allOverlays = {
+    translated: translatedOverlays,
+    external: []
+};
 
 // Load and combine all overlays
-Promise.all([
-    Promise.resolve(translatedOverlays),
-    loadExternalOverlays()
-]).then(([baseOverlays, externalOverlays]) => {
-    console.log('All overlays loaded:');
-    console.log('- Base overlays:', baseOverlays.length);
-    console.log('- External overlays:', externalOverlays.length);
+loadExternalOverlays().then(externalOverlays => {
+    console.log('External overlays loaded:', externalOverlays.length);
+    window.allOverlays.external = externalOverlays;
     
-    const combinedOverlays = [...baseOverlays, ...externalOverlays];
-    updateOverlays(combinedOverlays);
+    // Dispatch event to notify that overlays are ready
+    window.dispatchEvent(new CustomEvent('overlaysUpdated', { 
+        detail: { 
+            translated: window.allOverlays.translated,
+            external: window.allOverlays.external
+        }
+    }));
 }).catch(error => {
-    console.error('Error loading overlays:', error);
-});
-
-// Listen for overlay updates
-window.addEventListener('overlaysUpdated', (event) => {
-    console.log('Overlays updated:', event.detail);
+    console.error('Error loading external overlays:', error);
 });
 
 export { allOverlays };
