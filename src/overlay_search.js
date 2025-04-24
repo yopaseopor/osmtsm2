@@ -12,16 +12,13 @@
     let lastResults = [];
     let lastQuery = '';
 
-    // Helper function to get all overlays
+    // Helper function to get all overlays from the new structure
     function getAllOverlays() {
-        var allOverlays = [];
-        
-        // Get overlays from config
-        if (config && config.overlays) {
-            allOverlays = allOverlays.concat(config.overlays);
-        }
-        
-        return allOverlays;
+        if (!window.allOverlays) return [];
+        // Flatten all overlay arrays from window.allOverlays
+        return Object.values(window.allOverlays)
+            .filter(Array.isArray)
+            .flat();
     }
 
     // Helper function to find an overlay in layers

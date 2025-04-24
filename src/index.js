@@ -1,5 +1,10 @@
 /* global config, ol */
+import { initializeOverlays } from './overlays/loader.js';
+
 $(function () {
+    // Initialize overlays before creating the map
+    config = initializeOverlays(config);
+
     // --- Layer Searcher Integration ---
     // 1. Flatten base layers into window.layers
     window.layers = [];
@@ -388,9 +393,6 @@ $(function () {
 
 	// Initialize Mapillary viewer
 	initMapillaryViewer(map);
-
-    // Initialize food overlays
-    initializeFoodOverlays(map, config);
 
     // Ensure window.initRouter is set after router.js loads
     if (typeof window.initRouter !== 'function' && typeof initRouter === 'function') {
