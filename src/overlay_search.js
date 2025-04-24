@@ -15,10 +15,11 @@
     // Helper function to get all overlays from the new structure
     function getAllOverlays() {
         if (!window.allOverlays) return [];
-        // Flatten all overlay arrays from window.allOverlays
+        // Get overlays from all sources including food overlays
         return Object.values(window.allOverlays)
             .filter(Array.isArray)
-            .flat();
+            .flat()
+            .concat(window.foodOverlays || []);
     }
 
     // Helper function to find an overlay in layers
