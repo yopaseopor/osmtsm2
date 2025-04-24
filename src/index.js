@@ -106,85 +106,12 @@ $(function () {
                         title: overlay.title || '',
                         group: overlay.group || '',
                         id: overlay.id || '',
-                        iconSrc: overlay.iconSrc || '',
-                        query: overlay.query || '',
-                        style: overlay.style,
-                        visible: overlay.visible || false
+                        ...overlay
                     })));
                 }
                 return acc;
             }, []);
-
-            // Create vector layers for each overlay if they don't exist
-            window.overlays.forEach(overlay => {
-                if (!findOverlayLayer(overlay)) {
-                    createOverlayLayer(overlay);
-                }
-            });
         }
-    }
-
-    // Helper function to create a new overlay layer
-    function createOverlayLayer(overlay) {
-        var vectorSource = new ol.source.Vector({
-            format: new ol.format.OSMXML2(),
-            loader: function(extent, resolution, projection) {
-                loading.show();
-                var me = this;
-                var epsg4326Extent = ol.proj.transformExtent(extent, projection, 'EPSG:4326');
-                var query = '[maxsize:536870912];' + overlay.query;
-                query = query.replace(/{{bbox}}/g, epsg4326Extent[1] + ',' + epsg4326Extent[0] + ',' + epsg4326Extent[3] + ',' + epsg4326Extent[2]);
-
-                var client = new XMLHttpRequest();
-                client.open('POST', config.overpassApi());
-                client.onloadend = function() {
-                    loading.hide();
-                };
-                client.onerror = function() {
-                    console.error('[' + client.status + '] Error loading data.');
-                    me.removeLoadedExtent(extent);
-                };
-                client.onload = function() {
-                    if (client.status === 200) {
-                        var xmlDoc = $.parseXML(client.responseText);
-                        var features = new ol.format.OSMXML2().readFeatures(xmlDoc, {
-                            featureProjection: map.getView().getProjection()
-                        });
-                        me.addFeatures(features);
-                    } else {
-                        client.onerror.call(this);
-                    }
-                };
-                client.send(query);
-            },
-            strategy: ol.loadingstrategy.bbox
-        });
-
-        var vector = new ol.layer.Vector({
-            source: vectorSource,
-            style: overlay.style,
-            visible: overlay.visible,
-            title: overlay.title,
-            group: overlay.group,
-            id: overlay.id
-        });
-
-        // Find or create the overlay group
-        var overlayGroup = config.layers.find(layer => 
-            layer.get('type') === 'overlay' && 
-            layer.get('title') === overlay.group
-        );
-
-        if (!overlayGroup) {
-            overlayGroup = new ol.layer.Group({
-                title: overlay.group,
-                type: 'overlay',
-                layers: []
-            });
-            config.layers.push(overlayGroup);
-        }
-
-        overlayGroup.getLayers().push(vector);
     }
 
     // Update overlays when they change
