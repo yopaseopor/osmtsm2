@@ -95,18 +95,36 @@ $(function () {
     // --- End Layer Searcher Integration ---
 
     // --- Overlay Searcher Integration ---
-    // 1. Flatten overlays into window.overlays
+    // 1. Initialize window.overlays from window.allOverlays
     window.overlays = [];
-    if (config && Array.isArray(config.overlays)) {
-        window.overlays = config.overlays.map(function(overlay) {
-            return {
-                title: overlay.title || '',
-                group: overlay.group || '',
-                id: overlay.id || '',
-                ...overlay
-            };
-        });
+    function updateWindowOverlays() {
+        if (window.allOverlays) {
+            // Combine all overlay groups into a flat array
+            window.overlays = Object.entries(window.allOverlays).reduce((acc, [groupName, overlays]) => {
+                if (Array.isArray(overlays)) {
+                    return acc.concat(overlays.map(overlay => ({
+                        title: overlay.title || '',
+                        group: overlay.group || '',
+                        id: overlay.id || '',
+                        ...overlay
+                    })));
+                }
+                return acc;
+            }, []);
+        }
     }
+
+    // Update overlays when they change
+    window.addEventListener('overlaysUpdated', function(event) {
+        updateWindowOverlays();
+        if (window.renderOverlayList) {
+            window.renderOverlayList(window.overlays);
+        }
+    });
+
+    // Initial update
+    updateWindowOverlays();
+
     // 2. Define window.renderOverlayList
     window.renderOverlayList = function(filtered, query) {
         var $list = $('#overlay-list');

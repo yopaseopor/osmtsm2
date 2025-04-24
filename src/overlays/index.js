@@ -4,6 +4,7 @@ import { transportOverlays } from './groups/transport.js';
 import { healthOverlays } from './groups/health.js';
 import { educationOverlays } from './groups/education.js';
 import { loadExternalOverlays } from './external/loader.js';
+import { translatedOverlays } from './translated_overlays.js';
 
 console.log('Initializing overlays system...');
 
@@ -14,7 +15,8 @@ window.allOverlays = {
     transport: transportOverlays,
     health: healthOverlays,
     education: educationOverlays,
-    external: []
+    translated: translatedOverlays || [], // Preserve translated overlays
+    external: [] // Will be populated later
 };
 
 // Load external overlays
