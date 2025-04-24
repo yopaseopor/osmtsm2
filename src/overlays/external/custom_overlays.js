@@ -1,7 +1,5 @@
 import { getTranslation } from '../../i18n/index.js';
 
-const imgSrc = 'src/img/';
-
 export const customOverlays = [
     {
         group: 'custom',
@@ -46,38 +44,5 @@ export const customOverlays = [
             opacity: 0.8,
             fillOpacity: 0.3
         })
-    },
-    {
-        group: 'Comercio',
-        title: 'Supermercados',
-        query: '(nwr["shop"="supermarket"]({{bbox}});node(w););out meta;',
-        iconSrc: imgSrc + 'icones/supermarket.svg',
-        iconStyle: 'background-color:rgba(255,255,255,0.4)',
-        style: function (feature) {
-            const name = feature.get('name') || '';
-            const fill = new ol.style.Fill({
-                color: 'rgba(0,255,0,0.4)'
-            });
-            const stroke = new ol.style.Stroke({
-                color: 'rgba(0,255,0,1)',
-                width: 1
-            });
-            return new ol.style.Style({
-                image: new ol.style.Icon({
-                    src: imgSrc + 'icones/supermarket.svg',
-                    scale: 0.03
-                }),
-                text: new ol.style.Text({
-                    text: name,
-                    offsetX: 7,
-                    offsetY: -12,
-                    fill: new ol.style.Fill({
-                        color: 'rgba(0,0,0,1)'
-                    })
-                }),
-                fill: fill,
-                stroke: stroke
-            });
-        }
     }
 ]; 

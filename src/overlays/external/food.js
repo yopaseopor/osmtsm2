@@ -1,72 +1,48 @@
 import { getTranslation } from '../../i18n/index.js';
 
-const imgSrc = 'src/img/';
-
 export const foodOverlays = [
     {
-        group: 'Alimentación',
-        title: 'Restaurantes',
-        query: '(nwr["amenity"="restaurant"]({{bbox}});node(w););out meta;',
-        iconSrc: imgSrc + 'icones/restaurant.svg',
-        iconStyle: 'background-color:rgba(255,255,255,0.4)',
-        style: function (feature) {
-            const name = feature.get('name') || '';
-            const fill = new ol.style.Fill({
-                color: 'rgba(255,0,0,0.4)'
-            });
-            const stroke = new ol.style.Stroke({
-                color: 'rgba(255,0,0,1)',
-                width: 1
-            });
-            return new ol.style.Style({
-                image: new ol.style.Icon({
-                    src: imgSrc + 'icones/restaurant.svg',
-                    scale: 0.03
-                }),
-                text: new ol.style.Text({
-                    text: name,
-                    offsetX: 7,
-                    offsetY: -12,
-                    fill: new ol.style.Fill({
-                        color: 'rgba(0,0,0,1)'
-                    })
-                }),
-                fill: fill,
-                stroke: stroke
-            });
-        }
+        group: 'food',
+        title: () => getTranslation('restaurants'),
+        query: `
+            [out:json][timeout:25];
+            (
+              node["amenity"="restaurant"]({{bbox}});
+              way["amenity"="restaurant"]({{bbox}});
+              relation["amenity"="restaurant"]({{bbox}});
+            );
+            out body;
+            >;
+            out skel qt;
+        `,
+        iconSrc: './icons/restaurant.svg',
+        style: (feature) => ({
+            color: '#FF4136',
+            weight: 2,
+            opacity: 0.8,
+            fillOpacity: 0.3
+        })
     },
     {
-        group: 'Alimentación',
-        title: 'Cafeterías',
-        query: '(nwr["amenity"="cafe"]({{bbox}});node(w););out meta;',
-        iconSrc: imgSrc + 'icones/cafe.svg',
-        iconStyle: 'background-color:rgba(255,255,255,0.4)',
-        style: function (feature) {
-            const name = feature.get('name') || '';
-            const fill = new ol.style.Fill({
-                color: 'rgba(255,0,0,0.4)'
-            });
-            const stroke = new ol.style.Stroke({
-                color: 'rgba(255,0,0,1)',
-                width: 1
-            });
-            return new ol.style.Style({
-                image: new ol.style.Icon({
-                    src: imgSrc + 'icones/cafe.svg',
-                    scale: 0.03
-                }),
-                text: new ol.style.Text({
-                    text: name,
-                    offsetX: 7,
-                    offsetY: -12,
-                    fill: new ol.style.Fill({
-                        color: 'rgba(0,0,0,1)'
-                    })
-                }),
-                fill: fill,
-                stroke: stroke
-            });
-        }
+        group: 'food',
+        title: () => getTranslation('cafes'),
+        query: `
+            [out:json][timeout:25];
+            (
+              node["amenity"="cafe"]({{bbox}});
+              way["amenity"="cafe"]({{bbox}});
+              relation["amenity"="cafe"]({{bbox}});
+            );
+            out body;
+            >;
+            out skel qt;
+        `,
+        iconSrc: './icons/cafe.svg',
+        style: (feature) => ({
+            color: '#B10DC9',
+            weight: 2,
+            opacity: 0.8,
+            fillOpacity: 0.3
+        })
     }
 ]; 

@@ -1,5 +1,5 @@
 // Import the overlays
-import overlayCategories, { allOverlays } from './overlays/index.js';
+import { allOverlays } from './overlays/index.js';
 
 // Function to convert overlay to OpenLayers layer
 function createOlLayer(overlay) {
@@ -21,20 +21,19 @@ function createOlLayer(overlay) {
                     return response.json();
                 })
                 .then(data => {
-                    console.log('Received data for ' + overlay.title + ':', data);
+                    console.log('Received data for ' + overlay.title);
                     if (!data || !data.elements) {
-                        console.warn('No elements found in response');
+                        console.warn('No elements found in response for ' + overlay.title);
                         return;
                     }
                     const geojson = osmtogeojson(data);
-                    console.log('Converted to GeoJSON:', geojson);
                     const features = new ol.format.GeoJSON().readFeatures(geojson, {
                         featureProjection: projection
                     });
-                    console.log('Created features:', features);
+                    console.log('Added ' + features.length + ' features for ' + overlay.title);
                     vectorSource.addFeatures(features);
                 })
-                .catch(error => console.error('Error loading overlay data:', error));
+                .catch(error => console.error('Error loading overlay data for ' + overlay.title + ':', error));
         },
         strategy: ol.loadingstrategy.bbox
     });
@@ -42,27 +41,9 @@ function createOlLayer(overlay) {
     const layer = new ol.layer.Vector({
         title: overlay.title,
         group: overlay.group,
-        category: overlay.category,
         type: 'overlay',
         source: vectorSource,
-        style: function(feature) {
-            if (typeof overlay.style === 'function') {
-                return overlay.style.call(overlay, feature);
-            }
-            // Default style if none provided
-            return new ol.style.Style({
-                image: new ol.style.Circle({
-                    radius: 6,
-                    fill: new ol.style.Fill({
-                        color: 'rgba(0, 0, 255, 0.4)'
-                    }),
-                    stroke: new ol.style.Stroke({
-                        color: 'blue',
-                        width: 1
-                    })
-                })
-            });
-        },
+        style: typeof overlay.style === 'function' ? overlay.style : undefined,
         visible: false
     });
 
@@ -87,47 +68,46 @@ function integrateOverlays() {
     if (window.config && window.config.layers) {
         console.log('Integrating overlays...');
         
-        // Create layers for each category
-        const categoryGroups = {};
-        Object.entries(overlayCategories).forEach(([category, overlays]) => {
-            console.log(`Creating layers for category ${category}...`);
-            const layers = overlays.map(overlay => {
-                overlay.category = category; // Add category to overlay
-                return createOlLayer(overlay);
-            });
-            categoryGroups[category] = createOverlayGroup(
-                getTranslation(category) || category,
-                layers
-            );
-        });
+        // Create layers for each group
+        const overlayGroups = {};
+        for (const [groupName, groupOverlays] of Object.entries(window.allOverlays)) {
+            if (Array.isArray(groupOverlays) && groupOverlays.length > 0) {
+                console.log(`Creating layers for ${groupName} group...`);
+                const layers = groupOverlays.map(overlay => createOlLayer(overlay));
+                overlayGroups[groupName] = createOverlayGroup(
+                    groupName.charAt(0).toUpperCase() + groupName.slice(1),
+                    layers
+                );
+            }
+        }
         
-        // Add category groups to config layers
-        Object.values(categoryGroups).forEach(group => {
+        // Add groups to config layers
+        Object.values(overlayGroups).forEach(group => {
             window.config.layers.push(group);
         });
 
         // Update window.overlays for the search functionality
         console.log('Updating window.overlays...');
-        window.overlays = allOverlays.map(overlay => ({
-            title: overlay.title,
-            group: overlay.group,
-            category: overlay.category,
-            id: overlay.id || '',
-            query: overlay.query,
-            iconSrc: overlay.iconSrc,
-            style: overlay.style
-        }));
+        window.overlays = Object.entries(overlayGroups).flatMap(([groupName, group]) => 
+            group.getLayers().getArray().map(layer => ({
+                title: layer.get('title'),
+                group: groupName.charAt(0).toUpperCase() + groupName.slice(1),
+                id: layer.get('id') || '',
+                _olLayer: layer,
+                ...layer.overlay
+            }))
+        );
 
         // Dispatch event to notify that overlays are ready
         console.log('Dispatching overlaysReady event...');
         window.dispatchEvent(new CustomEvent('overlaysReady', {
             detail: { 
                 overlays: window.overlays,
-                categories: categoryGroups
+                groups: overlayGroups
             }
         }));
 
-        // Update overlay list
+        // Trigger overlay list update
         if (window.renderOverlayList) {
             console.log('Updating overlay list...');
             window.renderOverlayList(window.overlays);
