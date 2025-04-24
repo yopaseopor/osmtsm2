@@ -30,28 +30,12 @@ export const en = {
     accommodation: 'Accommodation',
     religion: 'Religion',
     // Router translations
-    routerTitle: 'Router',
-    routerStart: 'Start',
-    routerEnd: 'End',
-    routerVia: 'Via (optional)',
-    routerProfile: 'Profile',
-    routerCalculate: 'Calculate Route',
-    routerSearchStart: 'Search start location...',
-    routerSearchEnd: 'Search end location...',
-    routerSearchVia: 'Search via location...',
-    routerSelectedOnMap: 'Selected on map',
-    routerClickHint: 'Click on the map to set locations',
     routeCalculated: 'Route calculated!',
     routeDistance: 'Distance',
     routeDuration: 'Duration',
     routeKilometers: 'km',
     routeMinutes: 'minutes',
-    routeError: 'Error calculating route',
+    routeError: 'Error calculating route:',
     routeInvalidCoords: 'Invalid coordinates. Please try again.',
-    routeNoRoute: 'No route found',
-    routeSetPoints: 'Please set start and end points',
-    // Transport profiles
-    profileCar: 'Car',
-    profileBike: 'Bicycle',
-    profileFoot: 'Walking'
+    routeNoRoute: 'No route found'
 }; 

@@ -55,33 +55,39 @@ function initRouter(map) {
             position: coordinate,
             element: $('<div>')
                 .addClass('route-marker')
-                .html(`<i class="fas fa-${icon}"></i>`)[0],
+                .html(`<i class="fa fa-${icon}"></i>`)[0],
             positioning: 'center-center',
-            stopEvent: false
+            stopEvent: false // Allow events to pass through
         });
         
+        // Make marker draggable
         const element = marker.getElement();
         element.draggable = true;
         
+        // Add drag handlers
         element.addEventListener('dragstart', function(evt) {
             evt.dataTransfer.setData('text/plain', type);
         });
         
         element.addEventListener('dragend', function(evt) {
+            // Get the pixel position relative to the map
             const mapRect = map.getTargetElement().getBoundingClientRect();
             const pixel = [
                 evt.clientX - mapRect.left,
                 evt.clientY - mapRect.top
             ];
             
+            // Convert to map coordinates
             const coordinate = map.getCoordinateFromPixel(pixel);
             const lonlat = ol.proj.toLonLat(coordinate);
             
+            // Validate coordinates
             if (Math.abs(lonlat[0]) > 180 || Math.abs(lonlat[1]) > 90) {
                 alert(getTranslation('routeInvalidCoords'));
                 return;
             }
             
+            // Update the appropriate point
             if (type === 'start') {
                 startPlace = { lon: lonlat[0], lat: lonlat[1] };
                 marker.setPosition(coordinate);
@@ -93,14 +99,99 @@ function initRouter(map) {
                 marker.setPosition(coordinate);
             }
             
+            // Only calculate route if we have both start and end points
             if (startPlace && endPlace) {
-                calculateRoute();
+                // Get the current profile
+                const profile = $('.profile-select').val();
+                
+                // Map profile values to OSRM API base URLs and profiles
+                const profileMap = {
+                    'car': {
+                        baseUrl: 'https://router.project-osrm.org/route/v1',
+                        profile: 'driving'
+                    },
+                    'bike': {
+                        baseUrl: 'https://routing.openstreetmap.de/routed-bike/route/v1',
+                        profile: 'bicycle'
+                    },
+                    'foot': {
+                        baseUrl: 'https://routing.openstreetmap.de/routed-foot/route/v1',
+                        profile: 'foot'
+                    }
+                };
+                
+                const routingConfig = profileMap[profile] || profileMap.car;
+                
+                // Format coordinates with proper precision
+                const formatCoord = (coord) => coord.toFixed(6);
+                let waypoints = `${formatCoord(startPlace.lon)},${formatCoord(startPlace.lat)}`;
+                
+                if (viaPlace) {
+                    waypoints += `;${formatCoord(viaPlace.lon)},${formatCoord(viaPlace.lat)}`;
+                }
+                
+                waypoints += `;${formatCoord(endPlace.lon)},${formatCoord(endPlace.lat)}`;
+                
+                const url = `${routingConfig.baseUrl}/${routingConfig.profile}/${waypoints}?overview=full&geometries=geojson`;
+                
+                console.log('Calculating route with URL:', url);
+                
+                loading.show();
+                
+                fetch(url)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        console.log('Route data received:', data);
+                        
+                        if (!data.routes || data.routes.length === 0) {
+                            throw new Error(getTranslation('routeNoRoute'));
+                        }
+                        
+                        const route = data.routes[0];
+                        const format = new ol.format.GeoJSON();
+                        const features = format.readFeatures(route.geometry, {
+                            featureProjection: map.getView().getProjection(),
+                            dataProjection: 'EPSG:4326'
+                        });
+                        
+                        // Remove alternative routes
+                        map.getLayers().forEach(l => {
+                            if (l !== routeLayer && l.get('type') === 'alternative') {
+                                map.removeLayer(l);
+                            }
+                        });
+                        
+                        routeLayer.getSource().clear();
+                        routeLayer.getSource().addFeatures(features);
+                        
+                        // Show route info
+                        const distance = (route.distance / 1000).toFixed(1);
+                        const duration = Math.round(route.duration / 60);
+                        alert(`${getTranslation('routeCalculated')}\n${getTranslation('routeDistance')}: ${distance} ${getTranslation('routeKilometers')}\n${getTranslation('routeDuration')}: ${duration} ${getTranslation('routeMinutes')}`);
+                    })
+                    .catch(error => {
+                        console.error('Error calculating route:', error);
+                        alert(`${getTranslation('routeError')} ${error.message}`);
+                    })
+                    .finally(() => {
+                        loading.hide();
+                    });
             }
         });
         
+        // Add click handler for all points
         element.addEventListener('click', function() {
             if (type === 'via' && viaPlace) {
                 showAlternativeRoutes();
+            } else {
+                // For start and end points, allow setting new position
+                const evt = { coordinate: coordinate };
+                clickHandler(evt);
             }
         });
         
@@ -115,16 +206,18 @@ function initRouter(map) {
         const profile = $('.profile-select').val();
         loading.show();
         
+        // Get alternative routes by slightly offsetting the via point
         const offsets = [
-            [0.001, 0.001],
-            [0.001, -0.001],
-            [-0.001, -0.001],
-            [-0.001, 0.001]
+            [0.001, 0.001],   // NE
+            [0.001, -0.001],  // SE
+            [-0.001, -0.001], // SW
+            [-0.001, 0.001]   // NW
         ];
         
         const routes = [];
         let completed = 0;
         
+        // Map profile values to OSRM API base URLs and profiles
         const profileMap = {
             'car': {
                 baseUrl: 'https://router.project-osrm.org/route/v1',
@@ -192,16 +285,20 @@ function initRouter(map) {
                 layer.getSource().addFeatures(features);
                 map.addLayer(layer);
                 
+                // Add click handler to select route
                 layer.on('click', function() {
+                    // Remove all alternative routes
                     map.getLayers().forEach(l => {
                         if (l !== routeLayer && l.get('type') === 'alternative') {
                             map.removeLayer(l);
                         }
                     });
                     
+                    // Update main route
                     routeLayer.getSource().clear();
                     routeLayer.getSource().addFeatures(features);
                     
+                    // Update via point position
                     const coordinates = route.geometry.coordinates;
                     const viaIndex = Math.floor(coordinates.length / 2);
                     const viaCoord = coordinates[viaIndex];
@@ -220,14 +317,15 @@ function initRouter(map) {
     // Function to calculate route
     const calculateRoute = function() {
         if (!startPlace || !endPlace) {
-            alert(getTranslation('routeSetPoints'));
+            alert('Please set start and end points');
             return;
         }
 
+        // Validate coordinates
         if (Math.abs(startPlace.lon) > 180 || Math.abs(startPlace.lat) > 90 ||
             Math.abs(endPlace.lon) > 180 || Math.abs(endPlace.lat) > 90 ||
             (viaPlace && (Math.abs(viaPlace.lon) > 180 || Math.abs(viaPlace.lat) > 90))) {
-            alert(getTranslation('routeInvalidCoords'));
+            alert('Invalid coordinates. Please try again.');
             return;
         }
 
@@ -235,6 +333,7 @@ function initRouter(map) {
         
         const profile = $('.profile-select').val();
         
+        // Format coordinates with proper precision
         const formatCoord = (coord) => coord.toFixed(6);
         let waypoints = `${formatCoord(startPlace.lon)},${formatCoord(startPlace.lat)}`;
         
@@ -244,6 +343,7 @@ function initRouter(map) {
         
         waypoints += `;${formatCoord(endPlace.lon)},${formatCoord(endPlace.lat)}`;
         
+        // Map profile values to OSRM API base URLs and profiles
         const profileMap = {
             'car': {
                 baseUrl: 'https://router.project-osrm.org/route/v1',
@@ -275,7 +375,7 @@ function initRouter(map) {
                 console.log('Route data received:', data);
                 
                 if (!data.routes || data.routes.length === 0) {
-                    throw new Error(getTranslation('routeNoRoute'));
+                    throw new Error('No route found');
                 }
                 
                 const route = data.routes[0];
@@ -285,6 +385,7 @@ function initRouter(map) {
                     dataProjection: 'EPSG:4326'
                 });
                 
+                // Remove alternative routes
                 map.getLayers().forEach(l => {
                     if (l !== routeLayer && l.get('type') === 'alternative') {
                         map.removeLayer(l);
@@ -294,10 +395,12 @@ function initRouter(map) {
                 routeLayer.getSource().clear();
                 routeLayer.getSource().addFeatures(features);
                 
+                // Show route info
                 const distance = (route.distance / 1000).toFixed(1);
                 const duration = Math.round(route.duration / 60);
-                alert(`${getTranslation('routeCalculated')}\n${getTranslation('routeDistance')}: ${distance} ${getTranslation('routeKilometers')}\n${getTranslation('routeDuration')}: ${duration} ${getTranslation('routeMinutes')}`);
+                alert(`Route calculated!\nDistance: ${distance} km\nDuration: ${duration} minutes`);
                 
+                // Zoom to route
                 const extent = routeLayer.getSource().getExtent();
                 map.getView().fit(extent, {
                     padding: [50, 50, 50, 50],
@@ -306,7 +409,7 @@ function initRouter(map) {
             })
             .catch(error => {
                 console.error('Error calculating route:', error);
-                alert(`${getTranslation('routeError')}: ${error.message}`);
+                alert('Error calculating route: ' + error.message);
             })
             .finally(() => {
                 loading.hide();
@@ -316,14 +419,16 @@ function initRouter(map) {
     // Add router button and dialog
     const routerButton = $('<button>')
         .addClass('osmcat-button osmcat-router')
-        .attr('title', getTranslation('routerTitle'))
-        .html('<i class="fas fa-route" aria-hidden="true"></i>')
+        .attr('title', 'Route')
+        .html('<i class="fa fa-play-circle-o" aria-hidden="true"></i>')
         .on('click', function() {
+            // Check if router is already open
             const existingRouter = $('.osmcat-menu .osmcat-layer').filter(function() {
-                return $(this).find('.osmcat-select').text() === getTranslation('routerTitle');
+                return $(this).find('.osmcat-select').text() === 'Router';
             });
 
             if (existingRouter.length > 0) {
+                // Router is open, close it
                 if (clickHandler) {
                     map.un('singleclick', clickHandler);
                     clickHandler = null;
@@ -332,6 +437,7 @@ function initRouter(map) {
                 routerButton.removeClass('active');
                 $('.osmcat-menu').removeClass('router-active');
 
+                // Clear markers and route when closing
                 if (startMarker) map.removeOverlay(startMarker);
                 if (endMarker) map.removeOverlay(endMarker);
                 if (viaMarker) map.removeOverlay(viaMarker);
@@ -347,9 +453,11 @@ function initRouter(map) {
                 return;
             }
 
+            // Router is closed, open it
             routerButton.addClass('active');
             $('.osmcat-menu').addClass('router-active');
 
+            // Clear any existing markers and route
             if (startMarker) map.removeOverlay(startMarker);
             if (endMarker) map.removeOverlay(endMarker);
             if (viaMarker) map.removeOverlay(viaMarker);
@@ -362,52 +470,54 @@ function initRouter(map) {
             endMarker = null;
             viaMarker = null;
 
+            // Create router content
             const routerContent = $(`
                 <div class="osmcat-layer">
-                    <div class="osmcat-select">${getTranslation('routerTitle')}</div>
+                    <div class="osmcat-select">Router</div>
                     <div class="osmcat-content">
                         <div class="router-form">
                             <div class="router-input">
-                                <label>${getTranslation('routerStart')}:</label>
+                                <label>Start:</label>
                                 <div class="location-input">
-                                    <input type="text" class="start-place" placeholder="${getTranslation('routerSearchStart')}">
-                                    <button class="search-button"><i class="fas fa-search"></i></button>
+                                    <input type="text" class="start-place" placeholder="Search start location...">
+                                    <button class="search-button"><i class="fa fa-search"></i></button>
                                 </div>
                                 <div class="search-results start-results"></div>
                             </div>
                             <div class="router-input">
-                                <label>${getTranslation('routerEnd')}:</label>
+                                <label>End:</label>
                                 <div class="location-input">
-                                    <input type="text" class="end-place" placeholder="${getTranslation('routerSearchEnd')}">
-                                    <button class="search-button"><i class="fas fa-search"></i></button>
+                                    <input type="text" class="end-place" placeholder="Search end location...">
+                                    <button class="search-button"><i class="fa fa-search"></i></button>
                                 </div>
                                 <div class="search-results end-results"></div>
                             </div>
                             <div class="router-input">
-                                <label>${getTranslation('routerVia')}:</label>
+                                <label>Via (optional):</label>
                                 <div class="location-input">
-                                    <input type="text" class="via-place" placeholder="${getTranslation('routerSearchVia')}">
-                                    <button class="search-button"><i class="fas fa-search"></i></button>
+                                    <input type="text" class="via-place" placeholder="Search via location...">
+                                    <button class="search-button"><i class="fa fa-search"></i></button>
                                 </div>
                                 <div class="search-results via-results"></div>
                             </div>
                             <div class="router-input">
-                                <label>${getTranslation('routerProfile')}:</label>
+                                <label>Profile:</label>
                                 <select class="profile-select">
-                                    <option value="car">${getTranslation('profileCar')}</option>
-                                    <option value="bike">${getTranslation('profileBike')}</option>
-                                    <option value="foot">${getTranslation('profileFoot')}</option>
+                                    <option value="car">Car</option>
+                                    <option value="bike">Bicycle</option>
+                                    <option value="foot">Walking</option>
                                 </select>
                             </div>
                             <div class="click-hint">
-                                <i class="fas fa-info-circle"></i> ${getTranslation('routerClickHint')}
+                                <i class="fa fa-info-circle"></i> Click on the map to set locations
                             </div>
-                            <button class="calculate-route">${getTranslation('routerCalculate')}</button>
+                            <button class="calculate-route">Calculate Route</button>
                         </div>
                     </div>
                 </div>
             `);
 
+            // Handle map clicks
             clickHandler = function(evt) {
                 const coordinate = evt.coordinate;
                 const lonlat = ol.proj.toLonLat(coordinate);
@@ -416,19 +526,20 @@ function initRouter(map) {
                     if (startMarker) map.removeOverlay(startMarker);
                     startPlace = { lon: lonlat[0], lat: lonlat[1] };
                     startMarker = createMarker(coordinate, 'start');
-                    routerContent.find('.start-place').val(getTranslation('routerSelectedOnMap'));
+                    routerContent.find('.start-place').val('Selected on map');
                 } else if (!endPlace) {
                     if (endMarker) map.removeOverlay(endMarker);
                     endPlace = { lon: lonlat[0], lat: lonlat[1] };
                     endMarker = createMarker(coordinate, 'end');
-                    routerContent.find('.end-place').val(getTranslation('routerSelectedOnMap'));
+                    routerContent.find('.end-place').val('Selected on map');
                 } else if (!viaPlace) {
                     if (viaMarker) map.removeOverlay(viaMarker);
                     viaPlace = { lon: lonlat[0], lat: lonlat[1] };
                     viaMarker = createMarker(coordinate, 'via');
-                    routerContent.find('.via-place').val(getTranslation('routerSelectedOnMap'));
+                    routerContent.find('.via-place').val('Selected on map');
                 }
 
+                // Calculate route automatically if we have start and end points
                 if (startPlace && endPlace) {
                     calculateRoute();
                 }
@@ -436,11 +547,11 @@ function initRouter(map) {
 
             map.on('singleclick', clickHandler);
 
+            // Handle place search
             const searchPlace = function(input, resultsDiv) {
                 const query = input.val();
                 if (query.length < 3) return;
 
-                loading.show();
                 fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}`)
                     .then(response => response.json())
                     .then(data => {
@@ -455,75 +566,86 @@ function initRouter(map) {
                                     const coordinate = ol.proj.fromLonLat([parseFloat(place.lon), parseFloat(place.lat)]);
                                     if (input.hasClass('start-place')) {
                                         if (startMarker) map.removeOverlay(startMarker);
-                                        startPlace = { lon: parseFloat(place.lon), lat: parseFloat(place.lat) };
+                                        startPlace = place;
                                         startMarker = createMarker(coordinate, 'start');
                                     } else if (input.hasClass('via-place')) {
                                         if (viaMarker) map.removeOverlay(viaMarker);
-                                        viaPlace = { lon: parseFloat(place.lon), lat: parseFloat(place.lat) };
+                                        viaPlace = place;
                                         viaMarker = createMarker(coordinate, 'via');
                                     } else {
                                         if (endMarker) map.removeOverlay(endMarker);
-                                        endPlace = { lon: parseFloat(place.lon), lat: parseFloat(place.lat) };
+                                        endPlace = place;
                                         endMarker = createMarker(coordinate, 'end');
                                     }
 
+                                    // Calculate route automatically if we have start and end points
                                     if (startPlace && endPlace) {
                                         calculateRoute();
                                     }
                                 });
                             resultsDiv.append(result);
                         });
-                    })
-                    .catch(error => {
-                        console.error('Error searching for place:', error);
-                        alert(getTranslation('routeError'));
-                    })
-                    .finally(() => {
-                        loading.hide();
                     });
             };
 
+            // Setup search handlers
             routerContent.find('.search-button').on('click', function() {
                 const input = $(this).siblings('input');
                 const resultsDiv = input.closest('.router-input').find('.search-results');
                 searchPlace(input, resultsDiv);
             });
 
-            routerContent.find('input').on('keypress', function(e) {
-                if (e.which === 13) {
-                    const resultsDiv = $(this).closest('.router-input').find('.search-results');
-                    searchPlace($(this), resultsDiv);
-                }
-            });
-
+            // Calculate route
             routerContent.find('.calculate-route').on('click', function(e) {
                 e.preventDefault();
                 calculateRoute();
             });
 
-            $('.osmcat-menu').prepend(routerContent);
+            // Insert router content between classic layer and overlay selectors
+            var $menu = $('.osmcat-menu');
+            var $layers = $menu.find('.osmcat-layer .osmcat-select').filter(function(){
+                // Not overlay selector
+                return !$(this).find('option').filter(function(){ return $(this).val().toLowerCase().indexOf('overlay') !== -1; }).length;
+            }).closest('.osmcat-layer').first();
+            var $overlays = $menu.find('.osmcat-layer .osmcat-select').filter(function(){
+                // Is overlay selector
+                return $(this).find('option').filter(function(){ return $(this).val().toLowerCase().indexOf('overlay') !== -1; }).length;
+            }).closest('.osmcat-layer').first();
+            if ($layers.length && $overlays.length) {
+                routerContent.insertAfter($layers);
+            } else if ($layers.length) {
+                routerContent.insertAfter($layers);
+            } else if ($overlays.length) {
+                routerContent.insertBefore($overlays);
+            } else {
+                $menu.prepend(routerContent);
+            }
 
+            // Remove any existing router content
+            $('.osmcat-menu .osmcat-layer').not(routerContent).each(function() {
+                if ($(this).find('.osmcat-select').text() === 'Router') {
+                    $(this).remove();
+                }
+            });
+
+            // Clean up when router is closed (unified with router-btn)
             routerContent.find('.osmcat-select').on('click', function() {
                 if (clickHandler) {
                     map.un('singleclick', clickHandler);
                     clickHandler = null;
                 }
                 routerContent.remove();
-                routerButton.removeClass('active');
+                // Deactivate the router button if present
+                $('.router-btn').removeClass('active');
                 $('.osmcat-menu').removeClass('router-active');
-
-                if (startMarker) map.removeOverlay(startMarker);
-                if (endMarker) map.removeOverlay(endMarker);
-                if (viaMarker) map.removeOverlay(viaMarker);
-                routeLayer.getSource().clear();
             });
         });
 
+    // Create a control element for the router button
     const routerControl = new ol.control.Control({
         element: routerButton[0]
     });
 
+    // Add the router control to the map
     map.addControl(routerControl);
 }
-
-export { initRouter };
