@@ -4,14 +4,10 @@ import { foodOverlays } from './external/food.js';
 import { loadExternalOverlays } from './external/loader.js';
 
 console.log('Initializing overlays system...');
-console.log('Base overlays loaded:', translatedOverlays.length);
 
-// Initialize empty allOverlays array
-export const allOverlays = [
-    ...translatedOverlays,
-    ...customOverlays,
-    ...foodOverlays
-];
+// Initialize with base overlays
+let allOverlays = [...translatedOverlays];
+console.log('Base overlays loaded:', allOverlays.length);
 
 // Make overlays available globally
 window.allOverlays = allOverlays;
@@ -29,14 +25,19 @@ function updateOverlays(newOverlays) {
     }));
 }
 
-// Load external overlays
-console.log('Loading external overlays...');
-loadExternalOverlays().then(externalOverlays => {
-    console.log('External overlays loaded:', externalOverlays.length);
-    const combinedOverlays = [...translatedOverlays, ...externalOverlays];
+// Load and combine all overlays
+Promise.all([
+    Promise.resolve(translatedOverlays),
+    loadExternalOverlays()
+]).then(([baseOverlays, externalOverlays]) => {
+    console.log('All overlays loaded:');
+    console.log('- Base overlays:', baseOverlays.length);
+    console.log('- External overlays:', externalOverlays.length);
+    
+    const combinedOverlays = [...baseOverlays, ...externalOverlays];
     updateOverlays(combinedOverlays);
 }).catch(error => {
-    console.error('Error loading external overlays:', error);
+    console.error('Error loading overlays:', error);
 });
 
 // Listen for overlay updates
@@ -44,4 +45,5 @@ window.addEventListener('overlaysUpdated', (event) => {
     console.log('Overlays updated:', event.detail);
 });
 
+export { allOverlays };
 export default allOverlays; 
