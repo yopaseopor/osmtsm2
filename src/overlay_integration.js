@@ -3,20 +3,33 @@ import { allOverlays } from './overlays/index.js';
 
 // Function to convert overlay to OpenLayers layer
 function createOlLayer(overlay) {
+    const vectorSource = new ol.source.Vector({
+        format: new ol.format.GeoJSON(),
+        loader: function(extent, resolution, projection) {
+            const epsg4326Extent = ol.proj.transformExtent(extent, projection, 'EPSG:4326');
+            const bbox = [epsg4326Extent[1], epsg4326Extent[0], epsg4326Extent[3], epsg4326Extent[2]].join(',');
+            const query = overlay.query.replace('{{bbox}}', bbox);
+            
+            const url = config.overpassApi() + '?data=' + encodeURIComponent(query);
+            
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    const features = new ol.format.GeoJSON().readFeatures(osmtogeojson(data), {
+                        featureProjection: projection
+                    });
+                    vectorSource.addFeatures(features);
+                })
+                .catch(error => console.error('Error loading overlay data:', error));
+        },
+        strategy: ol.loadingstrategy.bbox
+    });
+
     return new ol.layer.Vector({
         title: overlay.title,
         group: overlay.group,
         type: 'overlay',
-        source: new ol.source.Vector({
-            format: new ol.format.GeoJSON(),
-            url: function(extent) {
-                return config.overpassApi() + '?data=' + encodeURIComponent(
-                    overlay.query.replace('{{bbox}}', 
-                    [extent[1], extent[0], extent[3], extent[2]].join(','))
-                );
-            },
-            strategy: ol.loadingstrategy.bbox
-        }),
+        source: vectorSource,
         style: overlay.style,
         visible: false
     });
@@ -24,30 +37,41 @@ function createOlLayer(overlay) {
 
 // Function to integrate overlays
 function integrateOverlays() {
-    if (window.config) {
-        // Create overlay layer group if it doesn't exist
-        let overlayGroup = config.layers.find(layer => layer.get && layer.get('type') === 'overlay');
+    if (window.config && window.config.layers) {
+        // Find or create the overlay group
+        let overlayGroup = window.config.layers.find(layer => 
+            layer.get && layer.get('type') === 'overlay'
+        );
+
         if (!overlayGroup) {
             overlayGroup = new ol.layer.Group({
-                title: 'Overlays',
-                type: 'overlay'
+                title: 'External Overlays',
+                type: 'overlay',
+                layers: []
             });
-            config.layers.push(overlayGroup);
+            window.config.layers.push(overlayGroup);
         }
 
         // Convert our overlays to OpenLayers layers
         const olLayers = allOverlays.map(createOlLayer);
         
         // Add layers to the overlay group
-        overlayGroup.getLayers().extend(olLayers);
+        const collection = overlayGroup.getLayers();
+        olLayers.forEach(layer => {
+            collection.push(layer);
+        });
 
         // Update window.overlays for the search functionality
-        window.overlays = allOverlays.map(overlay => ({
-            title: overlay.title,
-            group: overlay.group,
-            id: overlay.id || '',
-            ...overlay
-        }));
+        const existingOverlays = window.overlays || [];
+        window.overlays = [
+            ...existingOverlays,
+            ...allOverlays.map(overlay => ({
+                title: overlay.title,
+                group: overlay.group,
+                id: overlay.id || '',
+                ...overlay
+            }))
+        ];
 
         // Dispatch event to notify that overlays are ready
         window.dispatchEvent(new CustomEvent('overlaysReady', {
