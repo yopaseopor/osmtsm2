@@ -14,11 +14,8 @@
 
     // Helper function to get all overlays from the new structure
     function getAllOverlays() {
-        if (!window.allOverlays) return [];
-        // Flatten all overlay arrays from window.allOverlays
-        return Object.values(window.allOverlays)
-            .filter(Array.isArray)
-            .flat();
+        if (!window.config || !window.config.overlays) return [];
+        return window.config.overlays;
     }
 
     // Helper function to find an overlay in layers
@@ -196,11 +193,10 @@
         }, 100);
     });
 
-    // Listen for overlay updates
-    window.addEventListener('overlaysUpdated', function() {
+    // Update overlays when config changes
+    window.addEventListener('overlaySearchUpdate', function(event) {
         if (lastQuery) {
-            const allOverlays = getAllOverlays();
-            const filtered = allOverlays.filter(overlay =>
+            const filtered = getAllOverlays().filter(overlay =>
                 (overlay.title && overlay.title.toLowerCase().includes(lastQuery)) ||
                 (overlay.group && overlay.group.toLowerCase().includes(lastQuery))
             );
