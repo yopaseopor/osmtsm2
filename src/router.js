@@ -55,7 +55,7 @@ function initRouter(map) {
             position: coordinate,
             element: $('<div>')
                 .addClass('route-marker')
-                .html(`<i class="fa fa-${icon}"></i>`)[0],
+                .html(`<i class="fas fa-${icon}"></i>`)[0],
             positioning: 'center-center',
             stopEvent: false
         });
@@ -101,9 +101,6 @@ function initRouter(map) {
         element.addEventListener('click', function() {
             if (type === 'via' && viaPlace) {
                 showAlternativeRoutes();
-            } else {
-                const evt = { coordinate: coordinate };
-                clickHandler(evt);
             }
         });
         
@@ -320,7 +317,7 @@ function initRouter(map) {
     const routerButton = $('<button>')
         .addClass('osmcat-button osmcat-router')
         .attr('title', getTranslation('routerTitle'))
-        .html('<i class="fa fa-play-circle-o" aria-hidden="true"></i>')
+        .html('<i class="fas fa-route" aria-hidden="true"></i>')
         .on('click', function() {
             const existingRouter = $('.osmcat-menu .osmcat-layer').filter(function() {
                 return $(this).find('.osmcat-select').text() === getTranslation('routerTitle');
@@ -374,7 +371,7 @@ function initRouter(map) {
                                 <label>${getTranslation('routerStart')}:</label>
                                 <div class="location-input">
                                     <input type="text" class="start-place" placeholder="${getTranslation('routerSearchStart')}">
-                                    <button class="search-button"><i class="fa fa-search"></i></button>
+                                    <button class="search-button"><i class="fas fa-search"></i></button>
                                 </div>
                                 <div class="search-results start-results"></div>
                             </div>
@@ -382,7 +379,7 @@ function initRouter(map) {
                                 <label>${getTranslation('routerEnd')}:</label>
                                 <div class="location-input">
                                     <input type="text" class="end-place" placeholder="${getTranslation('routerSearchEnd')}">
-                                    <button class="search-button"><i class="fa fa-search"></i></button>
+                                    <button class="search-button"><i class="fas fa-search"></i></button>
                                 </div>
                                 <div class="search-results end-results"></div>
                             </div>
@@ -390,7 +387,7 @@ function initRouter(map) {
                                 <label>${getTranslation('routerVia')}:</label>
                                 <div class="location-input">
                                     <input type="text" class="via-place" placeholder="${getTranslation('routerSearchVia')}">
-                                    <button class="search-button"><i class="fa fa-search"></i></button>
+                                    <button class="search-button"><i class="fas fa-search"></i></button>
                                 </div>
                                 <div class="search-results via-results"></div>
                             </div>
@@ -403,7 +400,7 @@ function initRouter(map) {
                                 </select>
                             </div>
                             <div class="click-hint">
-                                <i class="fa fa-info-circle"></i> ${getTranslation('routerClickHint')}
+                                <i class="fas fa-info-circle"></i> ${getTranslation('routerClickHint')}
                             </div>
                             <button class="calculate-route">${getTranslation('routerCalculate')}</button>
                         </div>
@@ -443,6 +440,7 @@ function initRouter(map) {
                 const query = input.val();
                 if (query.length < 3) return;
 
+                loading.show();
                 fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}`)
                     .then(response => response.json())
                     .then(data => {
@@ -457,15 +455,15 @@ function initRouter(map) {
                                     const coordinate = ol.proj.fromLonLat([parseFloat(place.lon), parseFloat(place.lat)]);
                                     if (input.hasClass('start-place')) {
                                         if (startMarker) map.removeOverlay(startMarker);
-                                        startPlace = place;
+                                        startPlace = { lon: parseFloat(place.lon), lat: parseFloat(place.lat) };
                                         startMarker = createMarker(coordinate, 'start');
                                     } else if (input.hasClass('via-place')) {
                                         if (viaMarker) map.removeOverlay(viaMarker);
-                                        viaPlace = place;
+                                        viaPlace = { lon: parseFloat(place.lon), lat: parseFloat(place.lat) };
                                         viaMarker = createMarker(coordinate, 'via');
                                     } else {
                                         if (endMarker) map.removeOverlay(endMarker);
-                                        endPlace = place;
+                                        endPlace = { lon: parseFloat(place.lon), lat: parseFloat(place.lat) };
                                         endMarker = createMarker(coordinate, 'end');
                                     }
 
@@ -475,6 +473,13 @@ function initRouter(map) {
                                 });
                             resultsDiv.append(result);
                         });
+                    })
+                    .catch(error => {
+                        console.error('Error searching for place:', error);
+                        alert(getTranslation('routeError'));
+                    })
+                    .finally(() => {
+                        loading.hide();
                     });
             };
 
@@ -484,33 +489,19 @@ function initRouter(map) {
                 searchPlace(input, resultsDiv);
             });
 
+            routerContent.find('input').on('keypress', function(e) {
+                if (e.which === 13) {
+                    const resultsDiv = $(this).closest('.router-input').find('.search-results');
+                    searchPlace($(this), resultsDiv);
+                }
+            });
+
             routerContent.find('.calculate-route').on('click', function(e) {
                 e.preventDefault();
                 calculateRoute();
             });
 
-            var $menu = $('.osmcat-menu');
-            var $layers = $menu.find('.osmcat-layer .osmcat-select').filter(function(){
-                return !$(this).find('option').filter(function(){ return $(this).val().toLowerCase().indexOf('overlay') !== -1; }).length;
-            }).closest('.osmcat-layer').first();
-            var $overlays = $menu.find('.osmcat-layer .osmcat-select').filter(function(){
-                return $(this).find('option').filter(function(){ return $(this).val().toLowerCase().indexOf('overlay') !== -1; }).length;
-            }).closest('.osmcat-layer').first();
-            if ($layers.length && $overlays.length) {
-                routerContent.insertAfter($layers);
-            } else if ($layers.length) {
-                routerContent.insertAfter($layers);
-            } else if ($overlays.length) {
-                routerContent.insertBefore($overlays);
-            } else {
-                $menu.prepend(routerContent);
-            }
-
-            $('.osmcat-menu .osmcat-layer').not(routerContent).each(function() {
-                if ($(this).find('.osmcat-select').text() === getTranslation('routerTitle')) {
-                    $(this).remove();
-                }
-            });
+            $('.osmcat-menu').prepend(routerContent);
 
             routerContent.find('.osmcat-select').on('click', function() {
                 if (clickHandler) {
@@ -518,8 +509,13 @@ function initRouter(map) {
                     clickHandler = null;
                 }
                 routerContent.remove();
-                $('.router-btn').removeClass('active');
+                routerButton.removeClass('active');
                 $('.osmcat-menu').removeClass('router-active');
+
+                if (startMarker) map.removeOverlay(startMarker);
+                if (endMarker) map.removeOverlay(endMarker);
+                if (viaMarker) map.removeOverlay(viaMarker);
+                routeLayer.getSource().clear();
             });
         });
 
