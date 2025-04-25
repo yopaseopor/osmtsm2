@@ -29,6 +29,21 @@ export const en = {
     services: 'Services',
     accommodation: 'Accommodation',
     religion: 'Religion',
+    // Food & Drink
+    restaurants: 'Restaurants',
+    cafes: 'Cafes',
+    // Leisure
+    parks: 'Parks',
+    sports_centers: 'Sports Centers',
+    cinemas: 'Cinemas',
+    // Shopping
+    supermarkets: 'Supermarkets',
+    malls: 'Shopping Malls',
+    convenience: 'Convenience Stores',
+    // Transport
+    bus_stops: 'Bus Stops',
+    train_stations: 'Train Stations',
+    parking: 'Parking',
     // Specific POIs
     mcdonalds: 'McDonald\'s',
     starbucks: 'Starbucks'
