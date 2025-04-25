@@ -31,5 +31,5 @@ export const ca = {
     religion: 'Religió',
     // Specific POIs
     mcdonalds: 'McDonald\'s',
-    starbucks: 'Starbuckes'
+    starbucks: 'Starbucks'
 }; 
