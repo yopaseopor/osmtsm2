@@ -5,7 +5,7 @@ export const shoppingOverlays = [
         group: 'shopping',
         title: () => getTranslation('supermarkets'),
         query: '[out:json][timeout:25];(nwr["shop"="supermarket"]({{bbox}}););out body;>;out skel qt;',
-        iconSrc: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Shop-grocery.svg/32px-Shop-grocery.svg.png',
+        iconSrc: 'https://commons.wikimedia.org/wiki/Category:Shopping_cart_icons#/media/File:Carrito.png',
         style: (feature) => ({
             color: '#2ECC40',
             weight: 2,
