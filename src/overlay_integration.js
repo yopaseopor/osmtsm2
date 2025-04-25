@@ -21,29 +21,29 @@ function createOlLayer(overlay) {
                     return response.json();
                 })
                 .then(data => {
-                    console.log('Received data for ' + (typeof overlay.title === 'function' ? overlay.title() : overlay.title));
+                    console.log('Received data for ' + overlay.title);
                     if (!data || !data.elements) {
-                        console.warn('No elements found in response for ' + (typeof overlay.title === 'function' ? overlay.title() : overlay.title));
+                        console.warn('No elements found in response for ' + overlay.title);
                         return;
                     }
                     const geojson = osmtogeojson(data);
                     const features = new ol.format.GeoJSON().readFeatures(geojson, {
                         featureProjection: projection
                     });
-                    console.log('Added ' + features.length + ' features for ' + (typeof overlay.title === 'function' ? overlay.title() : overlay.title));
+                    console.log('Added ' + features.length + ' features for ' + overlay.title);
                     vectorSource.addFeatures(features);
                 })
-                .catch(error => console.error('Error loading overlay data:', error));
+                .catch(error => console.error('Error loading overlay data for ' + overlay.title + ':', error));
         },
         strategy: ol.loadingstrategy.bbox
     });
 
     const layer = new ol.layer.Vector({
-        title: typeof overlay.title === 'function' ? overlay.title() : overlay.title,
+        title: overlay.title,
         group: overlay.group,
         type: 'overlay',
         source: vectorSource,
-        style: overlay.style,
+        style: typeof overlay.style === 'function' ? overlay.style : undefined,
         visible: false
     });
 
@@ -70,17 +70,15 @@ function integrateOverlays() {
         
         // Create layers for each group
         const overlayGroups = {};
-        
-        // Process external overlays
-        if (window.allOverlays.external && window.allOverlays.external.length > 0) {
-            const externalLayers = window.allOverlays.external.map(overlay => createOlLayer(overlay));
-            overlayGroups.external = createOverlayGroup('External', externalLayers);
-        }
-        
-        // Process translated overlays
-        if (window.allOverlays.translated && window.allOverlays.translated.length > 0) {
-            const translatedLayers = window.allOverlays.translated.map(overlay => createOlLayer(overlay));
-            overlayGroups.translated = createOverlayGroup('Translated', translatedLayers);
+        for (const [groupName, groupOverlays] of Object.entries(window.allOverlays)) {
+            if (Array.isArray(groupOverlays) && groupOverlays.length > 0) {
+                console.log(`Creating layers for ${groupName} group...`);
+                const layers = groupOverlays.map(overlay => createOlLayer(overlay));
+                overlayGroups[groupName] = createOverlayGroup(
+                    groupName.charAt(0).toUpperCase() + groupName.slice(1),
+                    layers
+                );
+            }
         }
         
         // Add groups to config layers
