@@ -1,12 +1,12 @@
 .language-selector {
-    padding: 10px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #eee;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
 }
 
 .language-selector select {
-    width: 100%;
-    padding: 8px;
+    padding: 5px 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     background-color: white;
@@ -22,22 +22,4 @@
     outline: none;
     border-color: #0066cc;
     box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.2);
-}
-
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-    .language-selector select {
-        background-color: #333;
-        color: #fff;
-        border-color: #555;
-    }
-    
-    .language-selector select:hover {
-        border-color: #777;
-    }
-    
-    .language-selector select:focus {
-        border-color: #0066cc;
-        box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.2);
-    }
 } 

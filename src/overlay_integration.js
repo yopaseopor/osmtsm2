@@ -8,12 +8,7 @@ function createOlLayer(overlay) {
         loader: function(extent, resolution, projection) {
             const epsg4326Extent = ol.proj.transformExtent(extent, projection, 'EPSG:4326');
             const bbox = [epsg4326Extent[1], epsg4326Extent[0], epsg4326Extent[3], epsg4326Extent[2]].join(',');
-            
-            // Handle dynamic title if it's a function
-            const title = typeof overlay.title === 'function' ? overlay.title() : overlay.title;
-            
-            // Clean and prepare the query
-            const query = overlay.query.trim().replace(/\s+/g, ' ').replace('{{bbox}}', bbox);
+            const query = overlay.query.replace('{{bbox}}', bbox);
             
             const url = window.config.overpassApi() + '?data=' + encodeURIComponent(query);
             console.log('Loading overlay data from:', url);
@@ -26,55 +21,29 @@ function createOlLayer(overlay) {
                     return response.json();
                 })
                 .then(data => {
-                    console.log('Received data for ' + title);
+                    console.log('Received data for ' + overlay.title);
                     if (!data || !data.elements) {
-                        console.warn('No elements found in response for ' + title);
+                        console.warn('No elements found in response for ' + overlay.title);
                         return;
                     }
-                    
-                    // Convert OSM data to GeoJSON
                     const geojson = osmtogeojson(data);
-                    
-                    // Clear existing features
-                    vectorSource.clear();
-                    
-                    // Add new features
                     const features = new ol.format.GeoJSON().readFeatures(geojson, {
                         featureProjection: projection
                     });
-                    
-                    console.log('Added ' + features.length + ' features for ' + title);
+                    console.log('Added ' + features.length + ' features for ' + overlay.title);
                     vectorSource.addFeatures(features);
                 })
-                .catch(error => {
-                    console.error('Error loading overlay data for ' + title + ':', error);
-                    // Optionally retry on failure
-                    setTimeout(() => {
-                        console.log('Retrying overlay data load for ' + title);
-                        vectorSource.refresh();
-                    }, 5000);
-                });
+                .catch(error => console.error('Error loading overlay data for ' + overlay.title + ':', error));
         },
         strategy: ol.loadingstrategy.bbox
     });
 
     const layer = new ol.layer.Vector({
-        title: typeof overlay.title === 'function' ? overlay.title() : overlay.title,
+        title: overlay.title,
         group: overlay.group,
         type: 'overlay',
         source: vectorSource,
-        style: function(feature) {
-            if (typeof overlay.style === 'function') {
-                return overlay.style(feature);
-            }
-            // Default style if none provided
-            return new ol.style.Style({
-                image: new ol.style.Icon({
-                    src: overlay.iconSrc,
-                    scale: 0.5
-                })
-            });
-        },
+        style: typeof overlay.style === 'function' ? overlay.style : undefined,
         visible: false
     });
 
