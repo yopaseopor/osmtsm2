@@ -17,20 +17,7 @@ var config = {
 		zoomGeolocation: 17,
 		units: 'metric'
 	},
-	i18n: {
-		//@@ Textos entre comillas.
-		layersLabel: 'Capas',
-		completeWith: 'Completar con:',
-		editWith: 'Editar con:',
-		openWith: 'Abrir con:',
-		showWith: 'Mostrar con:',
-		show2With: 'Mostrar también con:',
-		checkTools: 'Validar con:',
-		copyDialog: 'S\'ha copiat l\'enllaç al porta-retalls.Enlace copiado. Link has been copied',
-		nodeLabel: 'Nodo:',
-		noNodesFound: 'No se ha encontrado información.',
-		wayLabel: 'Vía:'
-	},
+
 	overpassApi: function(){
 		//@@posibilidad de cambiar el servidor de overpass https://overpass-turbo.eu/
 		var proxyOverpassApi = false;
