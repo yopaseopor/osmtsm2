@@ -33,7 +33,7 @@ var config = {
 	},
 	overpassApi: function(){
 		//@@posibilidad de cambiar el servidor de overpass https://overpass-turbo.eu/
-		var proxyOverpassApi = true;
+		var proxyOverpassApi = false;
 		var overpassApi = 'https://overpass-api.de/api/interpreter';
 		if (proxyOverpassApi)
 		{
