@@ -18,32 +18,28 @@ export const en = {
     moveLayerDown: 'Move layer down',
     searchLayers: 'Search layers...',
     searchOverlays: 'Search overlays...',
-    // Overlay groups
+    // Categories
     leisure: 'Leisure',
     food: 'Food & Drink',
     shopping: 'Shopping',
     transport: 'Transport',
     health: 'Health',
     education: 'Education',
-    culture: 'Culture',
-    services: 'Services',
-    accommodation: 'Accommodation',
-    religion: 'Religion',
     // Food & Drink
     restaurants: 'Restaurants',
     cafes: 'Cafes',
-    // Leisure
-    parks: 'Parks',
-    sports_centers: 'Sports Centers',
-    cinemas: 'Cinemas',
+    bars: 'Bars',
     // Shopping
+    clothing_stores: 'Clothing Stores',
     supermarkets: 'Supermarkets',
-    malls: 'Shopping Malls',
-    convenience: 'Convenience Stores',
     // Transport
+    metro_stations: 'Metro Stations',
     bus_stops: 'Bus Stops',
     train_stations: 'Train Stations',
-    parking: 'Parking',
+    // Health
+    pharmacies: 'Pharmacies',
+    hospitals: 'Hospitals',
+    clinics: 'Medical Clinics',
     // Specific POIs
     mcdonalds: 'McDonald\'s',
     starbucks: 'Starbucks'

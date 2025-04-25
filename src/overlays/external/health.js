@@ -1,42 +1,44 @@
 import { getTranslation } from '../../i18n/index.js';
 
-export const transportOverlays = [
+export const healthOverlays = [
     {
-        group: 'transport',
-        title: () => getTranslation('metro_stations'),
+        group: 'health',
+        title: () => getTranslation('pharmacies'),
         query: `
             [out:json][timeout:25];
             (
-              node["railway"="station"]["station"="subway"]({{bbox}});
-              way["railway"="station"]["station"="subway"]({{bbox}});
+              node["amenity"="pharmacy"]({{bbox}});
+              way["amenity"="pharmacy"]({{bbox}});
             );
             out body;
             >;
             out skel qt;
         `,
-        iconSrc: './icons/metro.svg',
+        iconSrc: './icons/pharmacy.svg',
         style: (feature) => ({
-            color: '#0074D9',
+            color: '#2ECC40',
             weight: 2,
             opacity: 0.8,
             fillOpacity: 0.3
         })
     },
     {
-        group: 'transport',
-        title: () => getTranslation('bus_stops'),
+        group: 'health',
+        title: () => getTranslation('hospitals'),
         query: `
             [out:json][timeout:25];
             (
-              node["highway"="bus_stop"]({{bbox}});
+              node["amenity"="hospital"]({{bbox}});
+              way["amenity"="hospital"]({{bbox}});
+              relation["amenity"="hospital"]({{bbox}});
             );
             out body;
             >;
             out skel qt;
         `,
-        iconSrc: './icons/bus.svg',
+        iconSrc: './icons/hospital.svg',
         style: (feature) => ({
-            color: '#3D9970',
+            color: '#FF4136',
             weight: 2,
             opacity: 0.8,
             fillOpacity: 0.3
