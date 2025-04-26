@@ -11,8 +11,8 @@ function mergeGroupOverlays(baseOverlays, allOverlays) {
                 // Avoid duplicates by title+group
                 if (!overlays.some(ov => ov.title === overlay.title && ov.group === (overlay.group || groupName))) {
                     overlays.push({
-                        group: overlay.group || groupName,
-                        title: overlay.title,
+                        group: typeof overlay.group === 'function' ? overlay.group() : overlay.group || groupName,
+                        title: typeof overlay.title === 'function' ? overlay.title() : overlay.title,
                         query: overlay.query,
                         iconSrc: overlay.iconSrc,
                         iconStyle: overlay.iconStyle,
@@ -38,8 +38,8 @@ export const overlayConfig = {
         Object.entries(allOverlays).flatMap(([groupName, groupOverlays]) => {
             if (!Array.isArray(groupOverlays)) return [];
             return groupOverlays.map(overlay => ({
-                group: overlay.group || groupName,
-                title: overlay.title,
+                group: typeof overlay.group === 'function' ? overlay.group() : overlay.group || groupName,
+                title: typeof overlay.title === 'function' ? overlay.title() : overlay.title,
                 query: overlay.query,
                 iconSrc: overlay.iconSrc,
                 iconStyle: overlay.iconStyle,
@@ -65,8 +65,8 @@ window.addEventListener('overlaysUpdated', function(event) {
             Object.entries(window.allOverlays).flatMap(([groupName, groupOverlays]) => {
                 if (!Array.isArray(groupOverlays)) return [];
                 return groupOverlays.map(overlay => ({
-                    group: overlay.group || groupName,
-                    title: overlay.title,
+                    group: typeof overlay.group === 'function' ? overlay.group() : overlay.group || groupName,
+                    title: typeof overlay.title === 'function' ? overlay.title() : overlay.title,
                     query: overlay.query,
                     iconSrc: overlay.iconSrc,
                     iconStyle: overlay.iconStyle,
