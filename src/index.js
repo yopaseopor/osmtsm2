@@ -1,26 +1,7 @@
 /* global config, ol */
 $(function () {
     // --- Layer Searcher Integration ---
-    // Add overlay groups (including translated) to config.layers for classic selector
-    if (window.allOverlays && window.allOverlays.translated && Array.isArray(window.allOverlays.translated)) {
-        if (!config.layers.some(l => l.title === 'Translated' && l.type === 'overlay')) {
-            config.layers.push({
-                'title': 'Translated',
-                'type': 'overlay',
-                'layers': new ol.layer.Group({
-                    layers: window.allOverlays.translated.map(function(overlay) {
-                        return new ol.layer.Vector({
-                            title: overlay.title,
-                            source: new ol.source.Vector({
-                                format: new ol.format.GeoJSON(),
-                                url: overlay.geojson
-                            })
-                        });
-                    })
-                })
-            });
-        }
-    }
+    // Remove early addition of 'Translated' overlay group here. It will be added after all overlays are loaded.
 
     // 1. Flatten base layers into window.layers
     window.layers = [];
@@ -119,19 +100,7 @@ $(function () {
     // 1. Initialize window.overlays from window.allOverlays
     window.overlays = [];
     function updateWindowOverlays() {
-        var translatedOverlays = window.allOverlays.translated || [];
-        // Add the translated overlays as a separate group for classic selector
-        // This will ensure they are treated as a group like food, shopping, etc.
-        config.layers.push({
-            'title': 'Translated',
-            'type': 'overlay',
-            'layers': new ol.layer.Group({
-                layers: translatedOverlays.map(function(overlay) {
-                    return new ol.layer.Vector({
-                        title: overlay.title,
-                        source: new ol.source.Vector({
-                            format: new ol.format.GeoJSON(),
-                            url: overlay.geojson
+        // Only flatten overlays for the overlay searcher
         window.overlays = Object.entries(window.allOverlays).reduce((acc, [groupName, overlays]) => {
             if (Array.isArray(overlays)) {
                 return acc.concat(overlays.map(overlay => ({
@@ -143,8 +112,6 @@ $(function () {
             }
             return acc;
         }, []);
-            }, []);
-        }
     }
 
     // Update overlays when they change
