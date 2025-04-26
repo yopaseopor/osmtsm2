@@ -96,30 +96,7 @@ window.addEventListener('overlaysUpdated', function(event) {
                 }
             });
         }
-        window.config.overlays = mergeGroupOverlays(
-            Object.entries(window.allOverlays).flatMap(([groupName, groupOverlays]) => {
-                if (!Array.isArray(groupOverlays)) return [];
-                return groupOverlays.map(overlay => ({
-                    group: (typeof window.getTranslation === 'function' && ['food','shopping','health','transport','education','leisure','culture','services','accommodation','religion'].includes((overlay.group || groupName)))
-    ? window.getTranslation(overlay.group || groupName)
-    : (overlay.group || groupName),
-                    title: overlay.title,
-                    query: overlay.query,
-                    iconSrc: overlay.iconSrc,
-                    iconStyle: overlay.iconStyle,
-                    style: overlay.style || function(feature) {
-                        return new ol.style.Style({
-                            image: new ol.style.Icon({
-                                src: overlay.iconSrc,
-                                scale: 0.5
-                            })
-                        });
-                    },
-                    visible: false
-                }));
-            }),
-            window.allOverlays
-        );
+
         // Dispatch event to notify overlay searcher
         window.dispatchEvent(new CustomEvent('overlaySearchUpdate', {
             detail: {
