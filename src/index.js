@@ -456,10 +456,11 @@ $(function () {
 			if (layer.get('type') === 'overlay') {
                 // Use translated group title if available
                 var groupTitle = layer.get('title');
-                if (overlaysByGroup[groupTitle] && overlaysByGroup[groupTitle][0]) {
-                    groupTitle = overlaysByGroup[groupTitle][0].group;
-                }
-                var layerButton = $('<h3>').html(groupTitle),
+                // Always use the overlaysByGroup key (translated group) for group title
+                var translatedGroupTitle = Object.keys(overlaysByGroup).find(key => overlaysByGroup[key] && overlaysByGroup[key][0] && layer.getLayers().getArray().some(ol => ol.get('group') === key));
+                if (!translatedGroupTitle && overlaysByGroup[groupTitle]) translatedGroupTitle = overlaysByGroup[groupTitle][0].group;
+                if (!translatedGroupTitle) translatedGroupTitle = groupTitle;
+                var layerButton = $('<h3>').html(translatedGroupTitle),
                     overlayDivContent = $('<div>').addClass('osmcat-content osmcat-overlay overlay' + overlayIndex);
 
 				overlaySelect.append($('<option>').val('overlay' + overlayIndex).text(title));
