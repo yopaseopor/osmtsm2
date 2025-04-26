@@ -15,7 +15,7 @@ window.allOverlays = {
     transport: transportOverlays,
     health: healthOverlays,
     education: educationOverlays,
-    translated: translatedOverlays || [], // Ensure translated overlays group is present
+    translated: translatedOverlays || [], // Preserve translated overlays
     external: [] // Will be populated later
 };
 
@@ -33,5 +33,5 @@ loadExternalOverlays().then(externalOverlays => {
 });
 
 // Export all overlays for module usage
-export const allOverlays = window.allOverlays;
+export const allOverlays = Object.values(window.allOverlays).flat();
 export default allOverlays; 

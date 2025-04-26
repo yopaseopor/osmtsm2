@@ -9,12 +9,10 @@ function mergeGroupOverlays(baseOverlays, allOverlays) {
         if (Array.isArray(allOverlays[groupName])) {
             allOverlays[groupName].forEach(overlay => {
                 // Avoid duplicates by title+group
-                // For translated overlays, force group to 'Translated' for clarity
-                let groupValue = groupName === 'translated' ? 'Translated' : (typeof overlay.group === 'function' ? overlay.group() : (overlay.group || groupName));
-                if (!overlays.some(ov => ov.title === overlay.title && ov.group === groupValue)) {
+                if (!overlays.some(ov => ov.title === overlay.title && ov.group === (overlay.group || groupName))) {
                     overlays.push({
-                        group: groupValue,
-                        title: typeof overlay.title === 'function' ? overlay.title() : overlay.title,
+                        group: overlay.group || groupName,
+                        title: overlay.title,
                         query: overlay.query,
                         iconSrc: overlay.iconSrc,
                         iconStyle: overlay.iconStyle,
@@ -40,8 +38,8 @@ export const overlayConfig = {
         Object.entries(allOverlays).flatMap(([groupName, groupOverlays]) => {
             if (!Array.isArray(groupOverlays)) return [];
             return groupOverlays.map(overlay => ({
-                group: typeof overlay.group === 'function' ? overlay.group() : (overlay.group || groupName),
-                title: typeof overlay.title === 'function' ? overlay.title() : overlay.title,
+                group: overlay.group || groupName,
+                title: overlay.title,
                 query: overlay.query,
                 iconSrc: overlay.iconSrc,
                 iconStyle: overlay.iconStyle,
@@ -61,51 +59,14 @@ export const overlayConfig = {
 };
 
 // Update overlays when they change
-window.addEventListener('languageChanged', function() {
-    if (window.allOverlays && window.config) {
-        window.config.overlays = mergeGroupOverlays(
-            Object.entries(window.allOverlays).flatMap(([groupName, groupOverlays]) => {
-                if (!Array.isArray(groupOverlays)) return [];
-                return groupOverlays.map(overlay => ({
-                    group: typeof overlay.group === 'function' ? overlay.group() : (overlay.group || groupName),
-                    title: typeof overlay.title === 'function' ? overlay.title() : overlay.title,
-                    query: overlay.query,
-                    iconSrc: overlay.iconSrc,
-                    iconStyle: overlay.iconStyle,
-                    style: overlay.style || function(feature) {
-                        return new ol.style.Style({
-                            image: new ol.style.Icon({
-                                src: overlay.iconSrc,
-                                scale: 0.5
-                            })
-                        });
-                    },
-                    visible: false
-                }));
-            }),
-            window.allOverlays
-        );
-        // Dispatch event to notify overlay searcher
-        window.dispatchEvent(new CustomEvent('overlaySearchUpdate', {
-            detail: {
-                overlays: window.config.overlays
-            }
-        }));
-        // Re-render overlays in UI if function exists
-        if (window.renderOverlayList && window.config.overlays) {
-            window.renderOverlayList(window.config.overlays);
-        }
-    }
-});
-
 window.addEventListener('overlaysUpdated', function(event) {
     if (window.allOverlays && window.config) {
         window.config.overlays = mergeGroupOverlays(
             Object.entries(window.allOverlays).flatMap(([groupName, groupOverlays]) => {
                 if (!Array.isArray(groupOverlays)) return [];
                 return groupOverlays.map(overlay => ({
-                    group: typeof overlay.group === 'function' ? overlay.group() : (overlay.group || groupName),
-                    title: typeof overlay.title === 'function' ? overlay.title() : overlay.title,
+                    group: overlay.group || groupName,
+                    title: overlay.title,
                     query: overlay.query,
                     iconSrc: overlay.iconSrc,
                     iconStyle: overlay.iconStyle,

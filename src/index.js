@@ -1,6 +1,27 @@
 /* global config, ol */
 $(function () {
     // --- Layer Searcher Integration ---
+    // Add overlay groups (including translated) to config.layers for classic selector
+    if (window.allOverlays && window.allOverlays.translated && Array.isArray(window.allOverlays.translated)) {
+        if (!config.layers.some(l => l.title === 'Translated' && l.type === 'overlay')) {
+            config.layers.push({
+                'title': 'Translated',
+                'type': 'overlay',
+                'layers': new ol.layer.Group({
+                    layers: window.allOverlays.translated.map(function(overlay) {
+                        return new ol.layer.Vector({
+                            title: overlay.title,
+                            source: new ol.source.Vector({
+                                format: new ol.format.GeoJSON(),
+                                url: overlay.geojson
+                            })
+                        });
+                    })
+                })
+            });
+        }
+    }
+
     // 1. Flatten base layers into window.layers
     window.layers = [];
     if (config && Array.isArray(config.layers)) {
@@ -98,18 +119,30 @@ $(function () {
     // 1. Initialize window.overlays from window.allOverlays
     window.overlays = [];
     function updateWindowOverlays() {
-        if (window.allOverlays) {
-            // Combine all overlay groups into a flat array
-            window.overlays = Object.entries(window.allOverlays).reduce((acc, [groupName, overlays]) => {
-                if (Array.isArray(overlays)) {
-                    return acc.concat(overlays.map(overlay => ({
-                        title: overlay.title || '',
-                        group: overlay.group || '',
-                        id: overlay.id || '',
-                        ...overlay
-                    })));
-                }
-                return acc;
+        var translatedOverlays = window.allOverlays.translated || [];
+        // Add the translated overlays as a separate group for classic selector
+        // This will ensure they are treated as a group like food, shopping, etc.
+        config.layers.push({
+            'title': 'Translated',
+            'type': 'overlay',
+            'layers': new ol.layer.Group({
+                layers: translatedOverlays.map(function(overlay) {
+                    return new ol.layer.Vector({
+                        title: overlay.title,
+                        source: new ol.source.Vector({
+                            format: new ol.format.GeoJSON(),
+                            url: overlay.geojson
+        window.overlays = Object.entries(window.allOverlays).reduce((acc, [groupName, overlays]) => {
+            if (Array.isArray(overlays)) {
+                return acc.concat(overlays.map(overlay => ({
+                    title: overlay.title || '',
+                    group: overlay.group || '',
+                    id: overlay.id || '',
+                    ...overlay
+                })));
+            }
+            return acc;
+        }, []);
             }, []);
         }
     }
@@ -143,9 +176,7 @@ $(function () {
         // Group overlays by first letter only, show max 10 per letter
         var letterMap = {};
         filtered.forEach(function(overlay) {
-            var group = typeof overlay.group === 'function' ? overlay.group() : overlay.group || '';
-            var title = typeof overlay.title === 'function' ? overlay.title() : overlay.title || '';
-            var titleOrGroup = (title || group).trim();
+            var titleOrGroup = (overlay.title || overlay.group || '').trim();
             var firstLetter = titleOrGroup.charAt(0) ? titleOrGroup.charAt(0).toUpperCase() : '_';
             if (!letterMap[firstLetter]) letterMap[firstLetter] = [];
             if (letterMap[firstLetter].length < 10) {
@@ -156,7 +187,7 @@ $(function () {
         Object.keys(letterMap).sort().forEach(function(letter) {
             letterMap[letter].forEach(function(overlay) {
                 var isActive = activeOverlay && ((overlay.id && activeOverlay.get('id') === overlay.id) || (activeOverlay.get('title') === overlay.title && activeOverlay.get('group') === overlay.group));
-                var $item = $('<div>').addClass('overlay-list-item').text((group ? group + ': ' : '') + title);
+                var $item = $('<div>').addClass('overlay-list-item').text((overlay.group ? overlay.group + ': ' : '') + overlay.title);
                 if (isActive) $item.addClass('active').attr('tabindex', 0);
                 $item.css({cursor:'pointer'}).on('click', function() {
                     window.activateOverlay(overlay);
