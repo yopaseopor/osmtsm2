@@ -547,11 +547,19 @@ $(function () {
 		return container;
 	};
 
+    // Remove previous selector if it exists
+    $('#menu .osmcat-menu').remove();
     $('#menu').append(layersControlBuild());
     // Optionally, re-render layers after layersControl if needed
     if (window.renderLayerList && window.layers) window.renderLayerList(window.layers);
     // Optionally, re-render overlays after overlaysControl if needed
     if (window.renderOverlayList && window.overlays) window.renderOverlayList(window.overlays);
+
+    // Re-render classic selector after overlays are updated
+    window.addEventListener('overlaysUpdated', function() {
+        $('#menu .osmcat-menu').remove();
+        $('#menu').append(layersControlBuild());
+    });
 
 	map.addControl(new ol.control.MousePosition({
 		coordinateFormat: function (coordinate) {
