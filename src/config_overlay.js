@@ -9,9 +9,11 @@ function mergeGroupOverlays(baseOverlays, allOverlays) {
         if (Array.isArray(allOverlays[groupName])) {
             allOverlays[groupName].forEach(overlay => {
                 // Avoid duplicates by title+group
-                if (!overlays.some(ov => ov.title === overlay.title && ov.group === (overlay.group || groupName))) {
+                // For translated overlays, force group to 'Translated' for clarity
+                let groupValue = groupName === 'translated' ? 'Translated' : (overlay.group || groupName);
+                if (!overlays.some(ov => ov.title === overlay.title && ov.group === groupValue)) {
                     overlays.push({
-                        group: overlay.group || groupName,
+                        group: groupValue,
                         title: overlay.title,
                         query: overlay.query,
                         iconSrc: overlay.iconSrc,
