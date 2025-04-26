@@ -516,11 +516,17 @@ $(function () {
 			layerIndex++;
 			}
 		});
-		// Use the translation from the overlay searcher for the group title
-		if (layer.get('type') === 'overlay' && window.config && Array.isArray(window.config.overlays)) {
+		// Use the translation from the overlay searcher for the group title, but be robust
+		if (
+			layer.get('type') === 'overlay' &&
+			window.config &&
+			Array.isArray(window.config.overlays) &&
+			Array.isArray(layer.getLayers().getArray()) &&
+			layer.getLayers().getArray().length > 0 &&
+			window.config.overlays.length > 0
+		) {
 			var groupOverlays = layer.getLayers().getArray();
 			var translatedGroup = null;
-			// Find the first overlay in this group that matches by title
 			for (var i = 0; i < groupOverlays.length; i++) {
 				var overlayTitle = groupOverlays[i].get('title');
 				var match = window.config.overlays.find(function(o) { return o.title === overlayTitle; });
@@ -529,7 +535,10 @@ $(function () {
 					break;
 				}
 			}
-			if (translatedGroup) label.text(translatedGroup);
+			if (translatedGroup) {
+				label.text(translatedGroup);
+			}
+			// else: leave label as is
 		}
 		layerDiv.append(label, content);
 		container.append(layerDiv, overlayDiv);
