@@ -2,7 +2,7 @@ import { getTranslation } from '../../i18n/index.js';
 
 export const educationOverlays = [
     {
-        group: getTranslation('education'),
+        group: getTranslation(getTranslation('education')),
         title: 'Schools',
         query: '[out:json][timeout:25];(node["amenity"="school"]({{bbox}}););out body;>;out skel qt;',
         iconSrc: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/School_icon.svg/1200px-School_icon.svg.png',
