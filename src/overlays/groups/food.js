@@ -1,7 +1,6 @@
 import { getTranslation } from '../../i18n/index.js';
 
-export function foodOverlays() {
-    return [
+export const foodOverlays = [
         {
             group: getTranslation('food'),
             title: getTranslation('mcdonalds'),
@@ -75,4 +74,3 @@ export function foodOverlays() {
             }
         }
     ];
-}
