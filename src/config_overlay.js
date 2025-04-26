@@ -11,7 +11,9 @@ function mergeGroupOverlays(baseOverlays, allOverlays) {
                 // Avoid duplicates by title+group
                 if (!overlays.some(ov => ov.title === overlay.title && ov.group === (overlay.group || groupName))) {
                     overlays.push({
-                        group: overlay.group || groupName,
+                        group: (typeof window.getTranslation === 'function' && ['food','shopping','health','transport','education','leisure','culture','services','accommodation','religion'].includes((overlay.group || groupName)))
+    ? window.getTranslation(overlay.group || groupName)
+    : (overlay.group || groupName),
                         title: overlay.title,
                         query: overlay.query,
                         iconSrc: overlay.iconSrc,
@@ -38,7 +40,9 @@ export const overlayConfig = {
         Object.entries(allOverlays).flatMap(([groupName, groupOverlays]) => {
             if (!Array.isArray(groupOverlays)) return [];
             return groupOverlays.map(overlay => ({
-                group: overlay.group || groupName,
+                group: (typeof window.getTranslation === 'function' && ['food','shopping','health','transport','education','leisure','culture','services','accommodation','religion'].includes((overlay.group || groupName)))
+    ? window.getTranslation(overlay.group || groupName)
+    : (overlay.group || groupName),
                 title: overlay.title,
                 query: overlay.query,
                 iconSrc: overlay.iconSrc,
@@ -65,7 +69,9 @@ window.addEventListener('overlaysUpdated', function(event) {
             Object.entries(window.allOverlays).flatMap(([groupName, groupOverlays]) => {
                 if (!Array.isArray(groupOverlays)) return [];
                 return groupOverlays.map(overlay => ({
-                    group: overlay.group || groupName,
+                    group: (typeof window.getTranslation === 'function' && ['food','shopping','health','transport','education','leisure','culture','services','accommodation','religion'].includes((overlay.group || groupName)))
+    ? window.getTranslation(overlay.group || groupName)
+    : (overlay.group || groupName),
                     title: overlay.title,
                     query: overlay.query,
                     iconSrc: overlay.iconSrc,

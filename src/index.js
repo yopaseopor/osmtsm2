@@ -513,33 +513,9 @@ $(function () {
 							layerButton.removeClass('active');
 						}
 					});
-			layerIndex++;
+				layerIndex++;
 			}
 		});
-		// Use the translation from the overlay searcher for the group title, but be robust
-		if (
-			layer.get('type') === 'overlay' &&
-			window.config &&
-			Array.isArray(window.config.overlays) &&
-			Array.isArray(layer.getLayers().getArray()) &&
-			layer.getLayers().getArray().length > 0 &&
-			window.config.overlays.length > 0
-		) {
-			var groupOverlays = layer.getLayers().getArray();
-			var translatedGroup = null;
-			for (var i = 0; i < groupOverlays.length; i++) {
-				var overlayTitle = groupOverlays[i].get('title');
-				var match = window.config.overlays.find(function(o) { return o.title === overlayTitle; });
-				if (match && match.group) {
-					translatedGroup = match.group;
-					break;
-				}
-			}
-			if (translatedGroup) {
-				label.text(translatedGroup);
-			}
-			// else: leave label as is
-		}
 		layerDiv.append(label, content);
 		container.append(layerDiv, overlayDiv);
 		overlaySelect.trigger('change');
@@ -547,19 +523,11 @@ $(function () {
 		return container;
 	};
 
-    // Remove previous selector if it exists
-    $('#menu .osmcat-menu').remove();
     $('#menu').append(layersControlBuild());
     // Optionally, re-render layers after layersControl if needed
     if (window.renderLayerList && window.layers) window.renderLayerList(window.layers);
     // Optionally, re-render overlays after overlaysControl if needed
     if (window.renderOverlayList && window.overlays) window.renderOverlayList(window.overlays);
-
-    // Re-render classic selector after overlays are updated
-    window.addEventListener('overlaysUpdated', function() {
-        $('#menu .osmcat-menu').remove();
-        $('#menu').append(layersControlBuild());
-    });
 
 	map.addControl(new ol.control.MousePosition({
 		coordinateFormat: function (coordinate) {
