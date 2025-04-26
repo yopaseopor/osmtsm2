@@ -65,6 +65,20 @@ export const overlayConfig = {
 // Update overlays when they change
 window.addEventListener('overlaysUpdated', function(event) {
     if (window.allOverlays && window.config) {
+        // Patch: update group titles for overlay groups in config.layers
+        if (Array.isArray(window.config.layers) && Array.isArray(window.config.overlays)) {
+            window.config.layers.forEach(layer => {
+                if (layer.get && layer.get('type') === 'overlay') {
+                    // Find a matching overlay group by comparing overlays in group
+                    let groupOverlay = window.config.overlays.find(ov => {
+                        return layer.getLayers().getArray().some(ol => ol.get('title') === ov.title);
+                    });
+                    if (groupOverlay) {
+                        layer.set('title', groupOverlay.group);
+                    }
+                }
+            });
+        }
         window.config.overlays = mergeGroupOverlays(
             Object.entries(window.allOverlays).flatMap(([groupName, groupOverlays]) => {
                 if (!Array.isArray(groupOverlays)) return [];
