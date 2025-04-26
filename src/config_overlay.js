@@ -65,18 +65,36 @@ export const overlayConfig = {
 // Update overlays when they change
 window.addEventListener('overlaysUpdated', function(event) {
     if (window.allOverlays && window.config) {
-        // Patch: update group titles for overlay groups in config.layers
+        // Patch: rebuild overlay groups in config.layers to match overlays, ensuring titles are present
         if (Array.isArray(window.config.layers) && Array.isArray(window.config.overlays)) {
-            window.config.layers.forEach(layer => {
-                if (layer.get && layer.get('type') === 'overlay') {
-                    // Find a matching overlay group by comparing overlays in group
-                    let groupOverlay = window.config.overlays.find(ov => {
-                        return layer.getLayers().getArray().some(ol => ol.get('title') === ov.title);
+            // Remove all overlay groups from config.layers
+            window.config.layers = window.config.layers.filter(layer => !(layer.get && layer.get('type') === 'overlay'));
+            // Group overlays by group name
+            const overlaysByGroup = {};
+            window.config.overlays.forEach(overlay => {
+                if (!overlaysByGroup[overlay.group]) overlaysByGroup[overlay.group] = [];
+                overlaysByGroup[overlay.group].push(overlay);
+            });
+            // Recreate overlay groups with translated group titles
+            Object.entries(overlaysByGroup).forEach(([groupName, overlays]) => {
+                const olLayers = overlays.map(ov => {
+                    // Create a new OpenLayers Vector layer for each overlay
+                    return new ol.layer.Vector({
+                        title: ov.title,
+                        group: ov.group,
+                        source: ov.source || new ol.source.Vector(),
+                        visible: ov.visible || false,
+                        iconSrc: ov.iconSrc,
+                        iconStyle: ov.iconStyle,
+                        style: ov.style
                     });
-                    if (groupOverlay) {
-                        layer.set('title', groupOverlay.group);
-                    }
-                }
+                });
+                const groupLayer = new ol.layer.Group({
+                    title: groupName,
+                    type: 'overlay',
+                    layers: olLayers
+                });
+                window.config.layers.push(groupLayer);
             });
         }
         window.config.overlays = mergeGroupOverlays(
