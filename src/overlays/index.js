@@ -20,6 +20,8 @@ export function getAllOverlays() {
         external: []
     };
 }
+// Make available globally for language change
+window.getAllOverlays = getAllOverlays;
 
 window.allOverlays = getAllOverlays();
 
