@@ -513,9 +513,13 @@ $(function () {
 							layerButton.removeClass('active');
 						}
 					});
-				layerIndex++;
+			layerIndex++;
 			}
 		});
+		var groupName = label.text();
+		if (window.config && window.config.i18n && window.config.i18n[groupName]) {
+			label.text(window.config.i18n[groupName]);
+		}
 		layerDiv.append(label, content);
 		container.append(layerDiv, overlayDiv);
 		overlaySelect.trigger('change');

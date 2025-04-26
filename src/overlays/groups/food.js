@@ -3,8 +3,7 @@ import { getTranslation } from '../../i18n/index.js';
 export function foodOverlays() {
     return [
         {
-            group: 'food', // for grouping logic
-            groupTitle: getTranslation('food'), // for display (translated)
+            group: getTranslation('food'),
             title: getTranslation('mcdonalds'),
             query: '[out:json][timeout:25];(nwr["amenity"="fast_food"]["brand"="McDonald\'s"]({{bbox}}););out body;>;out skel qt;',
             iconSrc: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/McDonald%27s_Golden_Arches.svg/220px-McDonald%27s_Golden_Arches.svg.png',
