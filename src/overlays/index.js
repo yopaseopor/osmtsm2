@@ -9,15 +9,19 @@ import { translatedOverlays } from './translated_overlays.js';
 console.log('Initializing overlays system...');
 
 // Initialize overlays by group
-window.allOverlays = {
-    food: foodOverlays,
-    shopping: shoppingOverlays,
-    transport: transportOverlays,
-    health: healthOverlays,
-    education: educationOverlays,
-    translated: translatedOverlays || [], // Preserve translated overlays
-    external: [] // Will be populated later
-};
+function getAllOverlays() {
+    return {
+        food: foodOverlays(), // always re-evaluate for translations
+        shopping: shoppingOverlays, // static for this example
+        transport: transportOverlays,
+        health: healthOverlays,
+        education: educationOverlays,
+        translated: translatedOverlays || [],
+        external: []
+    };
+}
+
+window.allOverlays = getAllOverlays();
 
 // Load external overlays
 loadExternalOverlays().then(externalOverlays => {
