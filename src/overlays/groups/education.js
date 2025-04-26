@@ -4,7 +4,7 @@ export const educationOverlays = [
     {
         group: getTranslation('education'),
         title: 'Schools',
-        query: '(node["amenity"="school"]({{bbox}}););out meta;',
+        query: '[out:json][timeout:25];(node["amenity"="school"]({{bbox}}););out body;>;out skel qt;',
         iconSrc: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/School_icon.svg/1200px-School_icon.svg.png',
         iconStyle: 'background-color:rgba(255,255,255,0.4)',
         style: function (feature) {

@@ -4,7 +4,7 @@ export const transportOverlays = [
     {
         group: getTranslation('transport'),
         title: 'Metro Stations',
-        query: '(node["railway"="station"]["station"="subway"]({{bbox}}););out meta;',
+        query: '[out:json][timeout:25];(node["railway"="station"]["station"="subway"]({{bbox}}););out body;>;out skel qt;',
         iconSrc: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Metro_Logo.svg/1200px-Metro_Logo.svg.png',
         iconStyle: 'background-color:rgba(255,255,255,0.4)',
         style: function (feature) {
