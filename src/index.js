@@ -455,15 +455,15 @@ $(function () {
     layers.forEach(layer => {
 			if (layer.get('type') === 'overlay') {
                 // Use translated group title if available, matching overlay searcher logic
-                var groupTitle = layer.get('title');
-                // Try to find group by matching either the untranslated or translated group name
+                // Always display a group title: prefer translated, fallback to layer title or group
+                var groupTitle = null;
                 var foundOverlayGroup = null;
                 Object.keys(overlaysByGroup).forEach(function(translatedGroup) {
                     if (
                         overlaysByGroup[translatedGroup][0] &&
-                        (overlaysByGroup[translatedGroup][0].group === groupTitle ||
+                        (overlaysByGroup[translatedGroup][0].group === layer.get('title') ||
                          overlaysByGroup[translatedGroup][0].group === layer.get('group') ||
-                         groupTitle === translatedGroup ||
+                         layer.get('title') === translatedGroup ||
                          layer.get('group') === translatedGroup)
                     ) {
                         foundOverlayGroup = translatedGroup;
@@ -471,11 +471,17 @@ $(function () {
                 });
                 if (foundOverlayGroup) {
                     groupTitle = foundOverlayGroup;
+                } else if (layer.get('title')) {
+                    groupTitle = layer.get('title');
+                } else if (layer.get('group')) {
+                    groupTitle = layer.get('group');
+                } else {
+                    groupTitle = 'Overlay';
                 }
                 var layerButton = $('<h3>').html(groupTitle),
                     overlayDivContent = $('<div>').addClass('osmcat-content osmcat-overlay overlay' + overlayIndex);
 
-				overlaySelect.append($('<option>').val('overlay' + overlayIndex).text(title));
+				overlaySelect.append($('<option>').val('overlay' + overlayIndex).text(groupTitle));
 
 				layer.getLayers().forEach(overlay => {
 					var overlaySrc = overlay.get('iconSrc'),
