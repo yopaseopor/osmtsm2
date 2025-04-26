@@ -40,6 +40,7 @@ export function foodOverlays() {
         },
         {
             group: getTranslation('food'),
+            groupKey: 'food',
             title: getTranslation('starbucks'),
             query: '[out:json][timeout:25];(nwr["amenity"="cafe"]["brand"="Starbucks"]({{bbox}}););out body;>;out skel qt;',
             iconSrc: 'https://upload.wikimedia.org/wikipedia/en/thumb/3/35/Starbucks_Coffee_Logo.svg/1200px-Starbucks_Coffee_Logo.svg.png',
