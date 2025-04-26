@@ -14,8 +14,26 @@
 
     // Helper function to get all overlays from the new structure
     function getAllOverlays() {
-        if (!window.config || !window.config.overlays) return [];
-        return window.config.overlays;
+        // Always include overlays from group folders (food, shopping, health, transport, education)
+        let overlays = [];
+        if (window.config && window.config.overlays) {
+            overlays = window.config.overlays.slice();
+        }
+        // Fallback: Directly add overlays from window.allOverlays if not already present
+        if (window.allOverlays) {
+            const groupKeys = ['food', 'shopping', 'health', 'transport', 'education'];
+            groupKeys.forEach(group => {
+                if (Array.isArray(window.allOverlays[group])) {
+                    window.allOverlays[group].forEach(o => {
+                        // Avoid duplicates by title+group
+                        if (!overlays.some(ov => ov.title === o.title && ov.group === o.group)) {
+                            overlays.push(o);
+                        }
+                    });
+                }
+            });
+        }
+        return overlays;
     }
 
     // Helper function to find an overlay in layers
