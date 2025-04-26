@@ -40,9 +40,7 @@ $(function () {
         });
         filtered.forEach(function(layer, idx) {
             var isActive = activeLayer && ((layer.id && activeLayer.get('id') === layer.id) || (activeLayer.get('title') === layer.title && activeLayer.get('group') === layer.group));
-            var groupLabel = typeof layer.group === 'function' ? layer.group() : layer.group;
-            var titleLabel = typeof layer.title === 'function' ? layer.title() : layer.title;
-            var $item = $('<div>').addClass('layer-list-item').text((groupLabel ? groupLabel + ': ' : '') + titleLabel);
+            var $item = $('<div>').addClass('layer-list-item').text((layer.group ? layer.group + ': ' : '') + layer.title);
             if (isActive) $item.addClass('active').attr('tabindex', 0);
             $item.css({cursor:'pointer'}).on('click', function() {
                 window.activateLayer(layer);
@@ -106,8 +104,9 @@ $(function () {
         window.overlays = Object.entries(window.allOverlays).reduce((acc, [groupName, overlays]) => {
             if (Array.isArray(overlays)) {
                 return acc.concat(overlays.map(overlay => ({
-                    title: typeof overlay.title === 'function' ? overlay.title() : overlay.title,
-                    group: typeof overlay.group === 'function' ? overlay.group() : overlay.group || '',
+                    // Use already translated values
+                    title: overlay.title || '',
+                    group: overlay.group || '',
                     id: overlay.id || '',
                     ...overlay
                 })));
