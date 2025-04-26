@@ -61,6 +61,43 @@ export const overlayConfig = {
 };
 
 // Update overlays when they change
+window.addEventListener('languageChanged', function() {
+    if (window.allOverlays && window.config) {
+        window.config.overlays = mergeGroupOverlays(
+            Object.entries(window.allOverlays).flatMap(([groupName, groupOverlays]) => {
+                if (!Array.isArray(groupOverlays)) return [];
+                return groupOverlays.map(overlay => ({
+                    group: typeof overlay.group === 'function' ? overlay.group() : (overlay.group || groupName),
+                    title: typeof overlay.title === 'function' ? overlay.title() : overlay.title,
+                    query: overlay.query,
+                    iconSrc: overlay.iconSrc,
+                    iconStyle: overlay.iconStyle,
+                    style: overlay.style || function(feature) {
+                        return new ol.style.Style({
+                            image: new ol.style.Icon({
+                                src: overlay.iconSrc,
+                                scale: 0.5
+                            })
+                        });
+                    },
+                    visible: false
+                }));
+            }),
+            window.allOverlays
+        );
+        // Dispatch event to notify overlay searcher
+        window.dispatchEvent(new CustomEvent('overlaySearchUpdate', {
+            detail: {
+                overlays: window.config.overlays
+            }
+        }));
+        // Re-render overlays in UI if function exists
+        if (window.renderOverlayList && window.config.overlays) {
+            window.renderOverlayList(window.config.overlays);
+        }
+    }
+});
+
 window.addEventListener('overlaysUpdated', function(event) {
     if (window.allOverlays && window.config) {
         window.config.overlays = mergeGroupOverlays(
