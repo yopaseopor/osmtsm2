@@ -510,18 +510,51 @@ $(function () {
         overlayDiv.show();
     });
     // Skip the old overlays rendering in layers.forEach
+    // Only render base layers (non-overlay) in the classic selector below
     var layers = (window.config && window.config.layers) ? window.config.layers : config.layers;
     layers.forEach(layer => {
-			if (layer.get('type') === 'overlay') {
-                // Use translated group title if available
-                var groupTitle = layer.get('title');
-                if (overlaysByGroup[groupTitle] && overlaysByGroup[groupTitle][0]) {
-                    groupTitle = overlaysByGroup[groupTitle][0].group;
-                }
-                var layerButton = $('<h3>').html(groupTitle),
-                    overlayDivContent = $('<div>').addClass('osmcat-content osmcat-overlay overlay' + overlayIndex);
+        if (layer.get('type') !== 'overlay') {
+            var layerSrc = layer.get('iconSrc'),
+                title = (layerSrc ? '<img src="' + layerSrc + '" height="16"/> ' : '') + layer.get('title'),
+                layerButton = $('<div>').html(title).on('click', function () {
+                    var visible = layer.getVisible();
+                    if (visible) {
+                        if (previousLayer) {
+                            baseLayerIndex = previousLayer.get('layerIndex');
+                            layer.setVisible(!visible);
+                            previousLayer.setVisible(visible);
+                            visibleLayer = previousLayer;
+                            previousLayer = layer;
+                        }
+                    } else {
+                        baseLayerIndex = layer.get('layerIndex');
+                        layer.setVisible(!visible);
+                        visibleLayer.setVisible(visible);
+                        previousLayer = visibleLayer;
+                        visibleLayer = layer;
+                    }
+                    updatePermalink();
+                });
 
-				overlaySelect.append($('<option>').val('overlay' + overlayIndex).text(title));
+            layer.set('layerIndex', layerIndex);
+            var checkbox = $('<input type="checkbox">').css({marginRight:'6px'});
+            checkbox.prop('checked', layer.getVisible());
+            checkbox.on('change', function() {
+                layer.setVisible(this.checked);
+            });
+            layerButton.prepend(checkbox);
+            content.append(layerButton);
+            layer.on('change:visible', function () {
+                checkbox.prop('checked', layer.getVisible());
+                if (layer.getVisible()) {
+                    layerButton.addClass('active');
+                } else {
+                    layerButton.removeClass('active');
+                }
+            });
+            layerIndex++;
+        }
+    });
 
 				layer.getLayers().forEach(overlay => {
 					var overlaySrc = overlay.get('iconSrc'),
