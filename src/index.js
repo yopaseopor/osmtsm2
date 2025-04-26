@@ -104,9 +104,8 @@ $(function () {
         window.overlays = Object.entries(window.allOverlays).reduce((acc, [groupName, overlays]) => {
             if (Array.isArray(overlays)) {
                 return acc.concat(overlays.map(overlay => ({
-                    // Use already translated values
-                    title: overlay.title || '',
-                    group: overlay.group || '',
+                    title: typeof overlay.title === 'function' ? overlay.title() : overlay.title,
+                    group: typeof overlay.group === 'function' ? overlay.group() : overlay.group || '',
                     id: overlay.id || '',
                     ...overlay
                 })));
