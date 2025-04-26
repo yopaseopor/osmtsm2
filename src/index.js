@@ -516,9 +516,17 @@ $(function () {
 			layerIndex++;
 			}
 		});
-		// Use overlay group key to get translation from config.i18n
-		if (window.config && window.config.i18n && typeof groupKey !== 'undefined' && window.config.i18n[groupKey]) {
-			label.text(window.config.i18n[groupKey]);
+		// Use the translation visible in the overlay searcher for the group title
+		if (window.config && Array.isArray(window.config.overlays)) {
+			// Find the first overlay in this group and use its group property (which is translated)
+			var translatedGroup = null;
+			for (var i = 0; i < window.config.overlays.length; i++) {
+				if (window.config.overlays[i].group === groupKey || window.config.overlays[i].group === label.text() || window.config.overlays[i].group.toLowerCase() === groupKey.toLowerCase()) {
+					translatedGroup = window.config.overlays[i].group;
+					break;
+				}
+			}
+			if (translatedGroup) label.text(translatedGroup);
 		}
 		layerDiv.append(label, content);
 		container.append(layerDiv, overlayDiv);
