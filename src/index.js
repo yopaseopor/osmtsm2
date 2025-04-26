@@ -40,7 +40,9 @@ $(function () {
         });
         filtered.forEach(function(layer, idx) {
             var isActive = activeLayer && ((layer.id && activeLayer.get('id') === layer.id) || (activeLayer.get('title') === layer.title && activeLayer.get('group') === layer.group));
-            var $item = $('<div>').addClass('layer-list-item').text((layer.group ? layer.group + ': ' : '') + layer.title);
+            var groupLabel = typeof layer.group === 'function' ? layer.group() : layer.group;
+            var titleLabel = typeof layer.title === 'function' ? layer.title() : layer.title;
+            var $item = $('<div>').addClass('layer-list-item').text((groupLabel ? groupLabel + ': ' : '') + titleLabel);
             if (isActive) $item.addClass('active').attr('tabindex', 0);
             $item.css({cursor:'pointer'}).on('click', function() {
                 window.activateLayer(layer);
