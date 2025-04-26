@@ -490,31 +490,37 @@ $(function () {
 				overlaySelect.append($('<option>').val('overlay' + overlayIndex).text(groupTitle));
 
 				layer.getLayers().forEach(overlay => {
-					var overlaySrc = overlay.get('iconSrc'),
-						overlayIconStyle = overlay.get('iconStyle') || '',
-						title = (overlaySrc ? '<img src="' + overlaySrc + '" height="16" style="' + overlayIconStyle + '"/> ' : '') + overlay.get('title'),
-						overlayButton = $('<div>').html(title).on('click', function () {
-							var visible = overlay.getVisible();
-							overlay.setVisible(!visible);
-							updatePermalink();
-						}),
-						checkbox = $('<input type="checkbox">').css({marginRight:'6px'});
-					checkbox.prop('checked', overlay.getVisible());
-					checkbox.on('change', function() {
-						overlay.setVisible(this.checked);
-						updatePermalink();
-					});
-					overlayButton.prepend(checkbox);
-					overlay.on('change:visible', function () {
-						checkbox.prop('checked', overlay.getVisible());
-						if (overlay.getVisible()) {
-							overlayButton.addClass('active');
-						} else {
-							overlayButton.removeClass('active');
-						}
-					});
-					overlayDivContent.append(overlayButton);
-				});
+    var overlaySrc = overlay.get('iconSrc'),
+        overlayIconStyle = overlay.get('iconStyle') || '',
+        // Try to use a translation key (_titleKey or titleKey) if present
+        overlayTitleKey = overlay._titleKey || overlay.titleKey,
+        translatedTitle = null;
+    if (typeof window.getTranslation === 'function' && overlayTitleKey) {
+        translatedTitle = window.getTranslation(overlayTitleKey);
+    }
+    var title = (overlaySrc ? '<img src="' + overlaySrc + '" height="16" style="' + overlayIconStyle + '"/> ' : '') + (translatedTitle || overlay.get('title')),
+        overlayButton = $('<div>').html(title).on('click', function () {
+            var visible = overlay.getVisible();
+            overlay.setVisible(!visible);
+            updatePermalink();
+        }),
+        checkbox = $('<input type="checkbox">').css({marginRight:'6px'});
+    checkbox.prop('checked', overlay.getVisible());
+    checkbox.on('change', function() {
+        overlay.setVisible(this.checked);
+        updatePermalink();
+    });
+    overlayButton.prepend(checkbox);
+    overlay.on('change:visible', function () {
+        checkbox.prop('checked', overlay.getVisible());
+        if (overlay.getVisible()) {
+            overlayButton.addClass('active');
+        } else {
+            overlayButton.removeClass('active');
+        }
+    });
+    overlayDivContent.append(overlayButton);
+});
 				overlayDiv.append(overlayDivContent);
 				overlayDiv.show();
 				overlayIndex++;
