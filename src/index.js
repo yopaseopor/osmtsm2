@@ -455,22 +455,28 @@ $(function () {
     layers.forEach(layer => {
 			if (layer.get('type') === 'overlay') {
                 // Use translated group title if available, matching overlay searcher logic
-                // Always display a group title: prefer translated, fallback to layer title or group
-                var groupTitle = null;
+                // Always display a TRANSLATED group title: use getTranslation on the group key from overlaysByGroup if possible
+                // Use the original group key for translation (not the possibly already-translated string)
+                var groupKey = null;
                 var foundOverlayGroup = null;
                 Object.keys(overlaysByGroup).forEach(function(translatedGroup) {
                     if (
                         overlaysByGroup[translatedGroup][0] &&
+                        overlaysByGroup[translatedGroup][0]._groupKey &&
                         (overlaysByGroup[translatedGroup][0].group === layer.get('title') ||
                          overlaysByGroup[translatedGroup][0].group === layer.get('group') ||
                          layer.get('title') === translatedGroup ||
                          layer.get('group') === translatedGroup)
                     ) {
                         foundOverlayGroup = translatedGroup;
+                        groupKey = overlaysByGroup[translatedGroup][0]._groupKey;
                     }
                 });
-                if (foundOverlayGroup) {
-                    groupTitle = foundOverlayGroup;
+                var groupTitle = null;
+                if (foundOverlayGroup && typeof window.getTranslation === 'function') {
+                    groupTitle = window.getTranslation(groupKey || foundOverlayGroup);
+                } else if (layer.get('group') && typeof window.getTranslation === 'function') {
+                    groupTitle = window.getTranslation(layer.get('group'));
                 } else if (layer.get('title')) {
                     groupTitle = layer.get('title');
                 } else if (layer.get('group')) {
