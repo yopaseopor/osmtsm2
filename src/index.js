@@ -516,13 +516,16 @@ $(function () {
 			layerIndex++;
 			}
 		});
-		// Use the translation visible in the overlay searcher for the group title
-		if (window.config && Array.isArray(window.config.overlays)) {
-			// Find the first overlay in this group and use its group property (which is translated)
+		// Use the translation from the overlay searcher for the group title
+		if (layer.get('type') === 'overlay' && window.config && Array.isArray(window.config.overlays)) {
+			var groupOverlays = layer.getLayers().getArray();
 			var translatedGroup = null;
-			for (var i = 0; i < window.config.overlays.length; i++) {
-				if (window.config.overlays[i].group === groupKey || window.config.overlays[i].group === label.text() || window.config.overlays[i].group.toLowerCase() === groupKey.toLowerCase()) {
-					translatedGroup = window.config.overlays[i].group;
+			// Find the first overlay in this group that matches by title
+			for (var i = 0; i < groupOverlays.length; i++) {
+				var overlayTitle = groupOverlays[i].get('title');
+				var match = window.config.overlays.find(function(o) { return o.title === overlayTitle; });
+				if (match && match.group) {
+					translatedGroup = match.group;
 					break;
 				}
 			}
