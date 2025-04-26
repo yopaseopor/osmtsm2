@@ -2,8 +2,8 @@ import { getTranslation } from '../../i18n/index.js';
 
 export const shoppingOverlays = [
     {
-        group: getTranslation('shopping'),
-        title: getTranslation('Zara'),
+        group: () => getTranslation('shopping'),
+        title: () => getTranslation('Zara'),
         query: '[out:json][timeout:25];(nwr["brand:wikidata"="Q147662"]({{bbox}}););out body;>;out skel qt;',
         iconSrc: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Zara_Logo.svg/1200px-Zara_Logo.svg.png',
         iconStyle: 'background-color:rgba(255,255,255,0.4)',

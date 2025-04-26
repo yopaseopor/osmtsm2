@@ -143,7 +143,9 @@ $(function () {
         // Group overlays by first letter only, show max 10 per letter
         var letterMap = {};
         filtered.forEach(function(overlay) {
-            var titleOrGroup = (overlay.title || overlay.group || '').trim();
+            var group = typeof overlay.group === 'function' ? overlay.group() : overlay.group || '';
+            var title = typeof overlay.title === 'function' ? overlay.title() : overlay.title || '';
+            var titleOrGroup = (title || group).trim();
             var firstLetter = titleOrGroup.charAt(0) ? titleOrGroup.charAt(0).toUpperCase() : '_';
             if (!letterMap[firstLetter]) letterMap[firstLetter] = [];
             if (letterMap[firstLetter].length < 10) {
@@ -154,7 +156,7 @@ $(function () {
         Object.keys(letterMap).sort().forEach(function(letter) {
             letterMap[letter].forEach(function(overlay) {
                 var isActive = activeOverlay && ((overlay.id && activeOverlay.get('id') === overlay.id) || (activeOverlay.get('title') === overlay.title && activeOverlay.get('group') === overlay.group));
-                var $item = $('<div>').addClass('overlay-list-item').text((overlay.group ? overlay.group + ': ' : '') + overlay.title);
+                var $item = $('<div>').addClass('overlay-list-item').text((group ? group + ': ' : '') + title);
                 if (isActive) $item.addClass('active').attr('tabindex', 0);
                 $item.css({cursor:'pointer'}).on('click', function() {
                     window.activateOverlay(overlay);
