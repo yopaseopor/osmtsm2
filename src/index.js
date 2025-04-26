@@ -97,7 +97,16 @@ $(function () {
     // --- End Layer Searcher Integration ---
 
     // --- Overlay Searcher Integration ---
-    // 1. Initialize window.overlays from window.allOverlays
+    // 1. Initialize window.allOverlays
+    window.allOverlays = {
+        food: foodOverlays(),
+        shopping: shoppingOverlays,
+        transport: transportOverlays,
+        health: healthOverlays,
+        education: educationOverlays,
+        translated: translatedOverlays || [], // Preserve translated overlays
+        external: [] // Will be populated later
+    };
     window.overlays = [];
     function updateWindowOverlays() {
         // Only flatten overlays for the overlay searcher
@@ -116,11 +125,13 @@ $(function () {
     }
 
     // Update overlays when they change
-    window.addEventListener('overlaysUpdated', function(event) {
-        updateWindowOverlays();
-        if (window.renderOverlayList) {
-            window.renderOverlayList(window.overlays);
-        }
+    window.addEventListener('overlaysUpdated', function() {
+        // Always refresh food overlays for current language
+        window.allOverlays.food = foodOverlays();
+        updateTranslatedOverlayGroup();
+        if (window.updateTranslations) window.updateTranslations();
+        updateWindowOverlays(); // Refresh overlays for searcher
+        if (window.renderOverlayList && window.overlays) window.renderOverlayList(window.overlays);
     });
 
     // Initial update
