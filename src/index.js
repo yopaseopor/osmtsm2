@@ -444,121 +444,93 @@ $(function () {
 
 		// Use latest overlays from config, which have translated group titles
     // Use overlays from window.overlays (translated group names) for classic selector
-    var overlaysByGroup = {};
-    if (window.overlays && Array.isArray(window.overlays)) {
-        window.overlays.forEach(function(overlay) {
-            if (!overlaysByGroup[overlay.group]) overlaysByGroup[overlay.group] = [];
-            overlaysByGroup[overlay.group].push(overlay);
-        });
-    }
-    Object.keys(overlaysByGroup).forEach(function(group, idx) {
-        var groupTitle = group;
-        if (window.overlays && Array.isArray(window.overlays)) {
-            var found = window.overlays.find(o => o.group === group);
-            if (found) groupTitle = found.group;
+    // Classic selector: overlays section
+var layers = (window.config && window.config.layers) ? window.config.layers : config.layers;
+layers.forEach(function(layer, overlayIndex) {
+    if (layer.get && layer.get('type') === 'overlay') {
+        // Use translated group title if available
+        var groupTitle = layer.get('title');
+        if (typeof window.getTranslation === 'function') {
+            var translated = window.getTranslation(groupTitle);
+            if (translated && translated !== groupTitle) groupTitle = translated;
         }
         var layerButton = $('<h3>').html(groupTitle),
-            overlayDivContent = $('<div>').addClass('osmcat-content osmcat-overlay overlay' + idx);
-        overlaysByGroup[group].forEach(function(overlay) {
-            var overlaySrc = overlay.iconSrc,
-                overlayIconStyle = overlay.iconStyle || '',
-                title = (overlaySrc ? '<img src="' + overlaySrc + '" height="16" style="' + overlayIconStyle + '"/> ' : '') + overlay.title,
+            overlayDivContent = $('<div>').addClass('osmcat-content osmcat-overlay overlay' + overlayIndex);
+        layer.getLayers().forEach(function(overlay) {
+            var overlaySrc = overlay.get('iconSrc'),
+                overlayIconStyle = overlay.get('iconStyle') || '',
+                title = (overlaySrc ? '<img src="' + overlaySrc + '" height="16" style="' + overlayIconStyle + '"/> ' : '') + overlay.get('title'),
                 overlayButton = $('<div>').html(title).on('click', function () {
-                    // Find the matching ol.layer.Vector and toggle visibility
-                    var found = false;
-                    $.each(config.layers, function(i, layerGroup) {
-                        if (layerGroup.get && layerGroup.get('type') === 'overlay') {
-                            $.each(layerGroup.getLayers().getArray(), function(j, olayer) {
-                                if (olayer.get('title') === overlay.title && olayer.get('group') === overlay.group) {
-                                    var visible = olayer.getVisible();
-                                    olayer.setVisible(!visible);
-                                    updatePermalink();
-                                    found = true;
-                                    return false;
-                                }
-                            });
-                        }
-                        if (found) return false;
-                    });
+                    var visible = overlay.getVisible();
+                    overlay.setVisible(!visible);
+                    updatePermalink();
                 }),
                 checkbox = $('<input type="checkbox">').css({marginRight:'6px'});
-            // Find the matching ol.layer.Vector for checked state
-            var isChecked = false;
-            $.each(config.layers, function(i, layerGroup) {
-                if (layerGroup.get && layerGroup.get('type') === 'overlay') {
-                    $.each(layerGroup.getLayers().getArray(), function(j, olayer) {
-                        if (olayer.get('title') === overlay.title && olayer.get('group') === overlay.group) {
-                            isChecked = olayer.getVisible();
-                        }
-                    });
-                }
-            });
-            checkbox.prop('checked', isChecked);
+            checkbox.prop('checked', overlay.getVisible());
             checkbox.on('change', function() {
-                $.each(config.layers, function(i, layerGroup) {
-                    if (layerGroup.get && layerGroup.get('type') === 'overlay') {
-                        $.each(layerGroup.getLayers().getArray(), function(j, olayer) {
-                            if (olayer.get('title') === overlay.title && olayer.get('group') === overlay.group) {
-                                olayer.setVisible(this.checked);
-                                updatePermalink();
-                            }
-                        }.bind(this));
-                    }
-                });
+                overlay.setVisible(this.checked);
+                updatePermalink();
             });
             overlayButton.prepend(checkbox);
             overlayDivContent.append(overlayButton);
-        });
-        overlayDiv.append(layerButton);
-        overlayDiv.append(overlayDivContent);
-        overlayDiv.show();
-    });
-    // Skip the old overlays rendering in layers.forEach
-    // Only render base layers (non-overlay) in the classic selector below
-    var layers = (window.config && window.config.layers) ? window.config.layers : config.layers;
-    layers.forEach(layer => {
-        if (layer.get('type') !== 'overlay') {
-            var layerSrc = layer.get('iconSrc'),
-                title = (layerSrc ? '<img src="' + layerSrc + '" height="16"/> ' : '') + layer.get('title'),
-                layerButton = $('<div>').html(title).on('click', function () {
-                    var visible = layer.getVisible();
-                    if (visible) {
-                        if (previousLayer) {
-                            baseLayerIndex = previousLayer.get('layerIndex');
-                            layer.setVisible(!visible);
-                            previousLayer.setVisible(visible);
-                            visibleLayer = previousLayer;
-                            previousLayer = layer;
-                        }
-                    } else {
-                        baseLayerIndex = layer.get('layerIndex');
-                        layer.setVisible(!visible);
-                        visibleLayer.setVisible(visible);
-                        previousLayer = visibleLayer;
-                        visibleLayer = layer;
-                    }
-                    updatePermalink();
-                });
-
-            layer.set('layerIndex', layerIndex);
-            var checkbox = $('<input type="checkbox">').css({marginRight:'6px'});
-            checkbox.prop('checked', layer.getVisible());
-            checkbox.on('change', function() {
-                layer.setVisible(this.checked);
-            });
-            layerButton.prepend(checkbox);
-            content.append(layerButton);
-            layer.on('change:visible', function () {
-                checkbox.prop('checked', layer.getVisible());
-                if (layer.getVisible()) {
-                    layerButton.addClass('active');
+            overlay.on('change:visible', function () {
+                checkbox.prop('checked', overlay.getVisible());
+                if (overlay.getVisible()) {
+                    overlayButton.addClass('active');
                 } else {
-                    layerButton.removeClass('active');
+                    overlayButton.removeClass('active');
                 }
             });
-            layerIndex++;
-        }
-    });
+        });
+        container.append(layerButton);
+        container.append(overlayDivContent);
+    }
+});
+// Only render base layers (non-overlay) in the classic selector below
+var layers = (window.config && window.config.layers) ? window.config.layers : config.layers;
+layers.forEach(layer => {
+    if (layer.get('type') !== 'overlay') {
+        var layerSrc = layer.get('iconSrc'),
+            title = (layerSrc ? '<img src="' + layerSrc + '" height="16"/> ' : '') + layer.get('title'),
+            layerButton = $('<div>').html(title).on('click', function () {
+                var visible = layer.getVisible();
+                if (visible) {
+                    if (previousLayer) {
+                        baseLayerIndex = previousLayer.get('layerIndex');
+                        layer.setVisible(!visible);
+                        previousLayer.setVisible(visible);
+                        visibleLayer = previousLayer;
+                        previousLayer = layer;
+                    }
+                } else {
+                    baseLayerIndex = layer.get('layerIndex');
+                    layer.setVisible(!visible);
+                    visibleLayer.setVisible(visible);
+                    previousLayer = visibleLayer;
+                    visibleLayer = layer;
+                }
+                updatePermalink();
+            });
+
+        layer.set('layerIndex', layerIndex);
+        var checkbox = $('<input type="checkbox">').css({marginRight:'6px'});
+        checkbox.prop('checked', layer.getVisible());
+        checkbox.on('change', function() {
+            layer.setVisible(this.checked);
+        });
+        layerButton.prepend(checkbox);
+        content.append(layerButton);
+        layer.on('change:visible', function () {
+            checkbox.prop('checked', layer.getVisible());
+            if (layer.getVisible()) {
+                layerButton.addClass('active');
+            } else {
+                layerButton.removeClass('active');
+            }
+        });
+        layerIndex++;
+    }
+});
 
 				layer.getLayers().forEach(overlay => {
 					var overlaySrc = overlay.get('iconSrc'),
