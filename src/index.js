@@ -1,4 +1,6 @@
 /* global config, ol */
+import { patchOverlayGroupsWithGroupKey } from './config_overlay.js';
+window.patchOverlayGroupsWithGroupKey = patchOverlayGroupsWithGroupKey;
 $(function () {
     // --- Layer Searcher Integration ---
     // Remove early addition of 'Translated' overlay group here. It will be added after all overlays are loaded.
@@ -93,6 +95,12 @@ $(function () {
     // Render all layers initially
     $(document).ready(function() {
         window.renderLayerList(window.layers);
+        // Patch overlay groups with groupKey for translation
+        if (window.config && window.config.layers && window.allOverlays) {
+            if (typeof window.patchOverlayGroupsWithGroupKey === 'function') {
+                window.patchOverlayGroupsWithGroupKey(window.config.layers, window.allOverlays);
+            }
+        }
     });
     // --- End Layer Searcher Integration ---
 

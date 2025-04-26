@@ -35,6 +35,25 @@ function mergeGroupOverlays(baseOverlays, allOverlays) {
     return overlays;
 }
 
+// Patch: When creating overlay groups, store the original group key for translation
+function patchOverlayGroupsWithGroupKey(layers, allOverlays) {
+    const groupKeys = ['food', 'shopping', 'health', 'transport', 'education', 'leisure', 'culture', 'services', 'accommodation', 'religion', 'translated'];
+    layers.forEach(layer => {
+        if (layer.get && layer.get('type') === 'overlay') {
+            // Try to match by group title
+            for (const groupKey of groupKeys) {
+                if (Array.isArray(allOverlays[groupKey])) {
+                    const match = allOverlays[groupKey].some(overlay => layer.getLayers().getArray().some(ol => ol.get('title') === overlay.title));
+                    if (match) {
+                        layer.set('groupKey', groupKey);
+                        break;
+                    }
+                }
+            }
+        }
+    });
+}
+
 export const overlayConfig = {
     overlays: mergeGroupOverlays(
         Object.entries(allOverlays).flatMap(([groupName, groupOverlays]) => {
@@ -65,36 +84,16 @@ export const overlayConfig = {
 // Update overlays when they change
 window.addEventListener('overlaysUpdated', function(event) {
     if (window.allOverlays && window.config) {
-        // Patch: rebuild overlay groups in config.layers to match overlays, ensuring titles are present
-        if (Array.isArray(window.config.layers) && Array.isArray(window.config.overlays)) {
-            // Remove all overlay groups from config.layers
-            window.config.layers = window.config.layers.filter(layer => !(layer.get && layer.get('type') === 'overlay'));
-            // Group overlays by group name
-            const overlaysByGroup = {};
-            window.config.overlays.forEach(overlay => {
-                if (!overlaysByGroup[overlay.group]) overlaysByGroup[overlay.group] = [];
-                overlaysByGroup[overlay.group].push(overlay);
-            });
-            // Recreate overlay groups with translated group titles
-            Object.entries(overlaysByGroup).forEach(([groupName, overlays]) => {
-                const olLayers = overlays.map(ov => {
-                    // Create a new OpenLayers Vector layer for each overlay
-                    return new ol.layer.Vector({
-                        title: ov.title,
-                        group: ov.group,
-                        source: ov.source || new ol.source.Vector(),
-                        visible: ov.visible || false,
-                        iconSrc: ov.iconSrc,
-                        iconStyle: ov.iconStyle,
-                        style: ov.style
-                    });
-                });
-                const groupLayer = new ol.layer.Group({
-                    title: groupName,
-                    type: 'overlay',
-                    layers: olLayers
-                });
-                window.config.layers.push(groupLayer);
+        // Patch: only update group titles for overlay groups in config.layers
+        if (Array.isArray(window.config.layers)) {
+            window.config.layers.forEach(layer => {
+                if (layer.get && layer.get('type') === 'overlay') {
+                    // Use a stored groupKey if available, otherwise fallback to current title
+                    const groupKey = layer.get('groupKey') || layer.get('title');
+                    if (typeof window.getTranslation === 'function') {
+                        layer.set('title', window.getTranslation(groupKey));
+                    }
+                }
             });
         }
         window.config.overlays = mergeGroupOverlays(
