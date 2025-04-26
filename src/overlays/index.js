@@ -9,7 +9,7 @@ import { translatedOverlays } from './translated_overlays.js';
 console.log('Initializing overlays system...');
 
 // Initialize overlays by group
-function getAllOverlays() {
+export function getAllOverlays() {
     return {
         food: foodOverlays(), // always re-evaluate for translations
         shopping: shoppingOverlays, // static for this example

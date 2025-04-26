@@ -17,6 +17,11 @@ export function setLanguage(lang, updateURL = true) {
         document.documentElement.lang = lang;
         // Update all text elements with the new translations
         updateTranslations();
+        // Re-initialize overlays with translations for the new language
+        if (window.getAllOverlays) {
+            window.allOverlays = window.getAllOverlays();
+            window.dispatchEvent(new CustomEvent('overlaysUpdated', { detail: window.allOverlays }));
+        }
         // Update config i18n if it exists
         if (window.config && window.config.i18n) {
             Object.keys(window.config.i18n).forEach(key => {
