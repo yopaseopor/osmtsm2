@@ -2,7 +2,7 @@ import { getTranslation } from '../../i18n/index.js';
 
 export const transportOverlays = [
     {
-        group: getTranslation('transport'),
+        group: 'transport',
         title: 'Metro Stations',
         query: '[out:json][timeout:25];(node["railway"="station"]["station"="subway"]({{bbox}}););out body;>;out skel qt;',
         iconSrc: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Metro_Logo.svg/1200px-Metro_Logo.svg.png',

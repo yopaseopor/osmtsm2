@@ -447,14 +447,9 @@ $(function () {
     var overlaysByGroup = {};
     if (window.overlays && Array.isArray(window.overlays)) {
         window.overlays.forEach(function(overlay) {
-            // Patch: store both translation key and translated label for group
-            var groupKey = overlay._groupKey || overlay.groupKey || overlay.group_key || overlay.rawGroupKey || overlay.raw_group || overlay.rawKey || overlay.key || overlay.group;
-            var translatedGroup = typeof window.getTranslation === 'function' ? window.getTranslation(groupKey) : overlay.group;
-            if (!overlaysByGroup[groupKey]) overlaysByGroup[groupKey] = [];
-            // Attach both keys to the overlay for use later
-            overlay._groupKey = groupKey;
-            overlay._translatedGroup = translatedGroup;
-            overlaysByGroup[groupKey].push(overlay);
+            // Group overlays by the translation key (overlay.group)
+            if (!overlaysByGroup[overlay.group]) overlaysByGroup[overlay.group] = [];
+            overlaysByGroup[overlay.group].push(overlay);
         });
     }
     var layers = (window.config && window.config.layers) ? window.config.layers : config.layers;
@@ -463,19 +458,19 @@ $(function () {
                 // Use translated group title if available, matching overlay searcher logic
                 // Always display a TRANSLATED group title: use getTranslation on the group key from overlaysByGroup if possible
                 // Use the original group key for translation (not the possibly already-translated string)
+                // Use overlay.group as the translation key for group titles
                 var groupKey = null;
                 var foundOverlayGroup = null;
                 Object.keys(overlaysByGroup).forEach(function(key) {
                     if (
                         overlaysByGroup[key][0] &&
-                        overlaysByGroup[key][0]._groupKey &&
                         (overlaysByGroup[key][0].group === layer.get('title') ||
                          overlaysByGroup[key][0].group === layer.get('group') ||
                          layer.get('title') === key ||
                          layer.get('group') === key)
                     ) {
                         foundOverlayGroup = key;
-                        groupKey = overlaysByGroup[key][0]._groupKey;
+                        groupKey = overlaysByGroup[key][0].group;
                     }
                 });
                 var groupTitle = null;

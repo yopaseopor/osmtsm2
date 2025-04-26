@@ -3,7 +3,7 @@ import { getTranslation } from '../../i18n/index.js';
 export function foodOverlays() {
     return [
         {
-            group: getTranslation('food'),
+            group: 'food',
             title: getTranslation('mcdonalds'),
             query: '[out:json][timeout:25];(nwr["amenity"="fast_food"]["brand"="McDonald\'s"]({{bbox}}););out body;>;out skel qt;',
             iconSrc: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/McDonald%27s_Golden_Arches.svg/220px-McDonald%27s_Golden_Arches.svg.png',
@@ -39,8 +39,7 @@ export function foodOverlays() {
             }
         },
         {
-            group: getTranslation('food'),
-            groupKey: 'food',
+            group: 'food',
             title: getTranslation('starbucks'),
             query: '[out:json][timeout:25];(nwr["amenity"="cafe"]["brand"="Starbucks"]({{bbox}}););out body;>;out skel qt;',
             iconSrc: 'https://upload.wikimedia.org/wikipedia/en/thumb/3/35/Starbucks_Coffee_Logo.svg/1200px-Starbucks_Coffee_Logo.svg.png',
