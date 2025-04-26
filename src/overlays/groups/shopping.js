@@ -4,7 +4,7 @@ export const shoppingOverlays = [
     {
         group: getTranslation('shopping'),
         title: 'Zara',
-        query: '[out:json][timeout:25];(nwr["brand:wikidata"="Q147662"]({{bbox}}););out body;>;out skel qt;',
+        query: '(nwr["brand:wikidata"="Q147662"]({{bbox}});node(w););out meta;',
         iconSrc: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Zara_Logo.svg/1200px-Zara_Logo.svg.png',
         iconStyle: 'background-color:rgba(255,255,255,0.4)',
         style: function (feature) {

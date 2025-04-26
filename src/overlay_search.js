@@ -42,7 +42,6 @@
         if (layer) {
             const isVisible = layer.getVisible();
             layer.setVisible(!isVisible);
-            
             // Dispatch custom event for overlay toggle
             const event = new CustomEvent('overlayToggled', {
                 detail: {
@@ -51,7 +50,61 @@
                 }
             });
             window.dispatchEvent(event);
-            
+            return true;
+        }
+        // If not found, dynamically create a new vector layer for overlays with a query (such as food overlays)
+        if (overlay.query && typeof ol !== 'undefined' && window.map && window.config) {
+            // Build the vector source with Overpass query
+            var vectorSource = new ol.source.Vector({
+                format: new ol.format.OSMXML2(),
+                loader: function (extent, resolution, projection) {
+                    var epsg4326Extent = ol.proj.transformExtent(extent, projection, 'EPSG:4326');
+                    var query = '[maxsize:536870912];' + overlay.query;
+                    query = query.replace(/{{bbox}}/g, epsg4326Extent[1] + ',' + epsg4326Extent[0] + ',' + epsg4326Extent[3] + ',' + epsg4326Extent[2]);
+                    var client = new XMLHttpRequest();
+                    client.open('POST', window.config.overpassApi ? window.config.overpassApi() : 'https://overpass-api.de/api/interpreter');
+                    client.onload = function () {
+                        if (client.status === 200) {
+                            var xmlDoc = $.parseXML(client.responseText);
+                            var features = new ol.format.OSMXML2().readFeatures(xmlDoc, {
+                                featureProjection: window.map.getView().getProjection()
+                            });
+                            vectorSource.addFeatures(features);
+                        }
+                    };
+                    client.send(query);
+                },
+                strategy: ol.loadingstrategy.bbox
+            });
+            // Build the vector layer
+            var vectorLayer = new ol.layer.Vector({
+                source: vectorSource,
+                title: overlay.title,
+                group: overlay.group,
+                iconSrc: overlay.iconSrc,
+                style: overlay.style || function(feature) {
+                    return new ol.style.Style({
+                        image: new ol.style.Icon({
+                            src: overlay.iconSrc,
+                            scale: 0.10
+                        })
+                    });
+                },
+                visible: true
+            });
+            window.map.addLayer(vectorLayer);
+            // Optionally add to config.layers for future toggling
+            if (Array.isArray(window.config.layers)) {
+                window.config.layers.push(vectorLayer);
+            }
+            // Dispatch custom event for overlay toggle
+            const event = new CustomEvent('overlayToggled', {
+                detail: {
+                    overlay: overlay,
+                    visible: true
+                }
+            });
+            window.dispatchEvent(event);
             return true;
         }
         return false;
