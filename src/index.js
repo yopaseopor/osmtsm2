@@ -415,6 +415,13 @@ $(function () {
 
 
 	var layersControlBuild = function () {
+    // Listen for overlaysUpdated event to re-render overlays
+    window.addEventListener('overlaysUpdated', function() {
+        // Remove and re-insert the overlays control to update group titles
+        var $menu = $('#menu');
+        $menu.find('.osmcat-menu').remove();
+        $menu.append(layersControlBuild());
+    });
 		var visibleLayer,
 			previousLayer,
 			layerIndex = 0,
@@ -433,7 +440,9 @@ $(function () {
 			}),
 			content = $('<div>').addClass('osmcat-content');
 
-		config.layers.forEach(layer => {
+		// Use latest overlays from config, which have translated group titles
+    var layers = (window.config && window.config.layers) ? window.config.layers : config.layers;
+    layers.forEach(layer => {
 			if (layer.get('type') === 'overlay') {
 				var title = layer.get('title'),
 					layerButton = $('<h3>').html(title),
