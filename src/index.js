@@ -453,6 +453,10 @@ $(function () {
     }
     Object.keys(overlaysByGroup).forEach(function(group, idx) {
         var groupTitle = group;
+        if (window.overlays && Array.isArray(window.overlays)) {
+            var found = window.overlays.find(o => o.group === group);
+            if (found) groupTitle = found.group;
+        }
         var layerButton = $('<h3>').html(groupTitle),
             overlayDivContent = $('<div>').addClass('osmcat-content osmcat-overlay overlay' + idx);
         overlaysByGroup[group].forEach(function(overlay) {
