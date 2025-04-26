@@ -415,13 +415,15 @@ $(function () {
 
 
 	var layersControlBuild = function () {
-    // Listen for overlaysUpdated event to re-render overlays
-    window.addEventListener('overlaysUpdated', function() {
-        // Remove and re-insert the overlays control to update group titles
-        var $menu = $('#menu');
-        $menu.find('.osmcat-menu').remove();
-        $menu.append(layersControlBuild());
-    });
+    // Only register overlaysUpdated handler once
+    if (!window._classicSelectorPatched) {
+        window._classicSelectorPatched = true;
+        window.addEventListener('overlaysUpdated', function() {
+            var $menu = $('#menu');
+            $menu.find('.osmcat-menu').remove();
+            $menu.append(layersControlBuild());
+        });
+    }
 		var visibleLayer,
 			previousLayer,
 			layerIndex = 0,
@@ -441,12 +443,24 @@ $(function () {
 			content = $('<div>').addClass('osmcat-content');
 
 		// Use latest overlays from config, which have translated group titles
+    // Use overlays from window.config.overlays for translated group titles in overlays
+    var overlaysByGroup = {};
+    if (window.config && Array.isArray(window.config.overlays)) {
+        window.config.overlays.forEach(function(overlay) {
+            if (!overlaysByGroup[overlay.group]) overlaysByGroup[overlay.group] = [];
+            overlaysByGroup[overlay.group].push(overlay);
+        });
+    }
     var layers = (window.config && window.config.layers) ? window.config.layers : config.layers;
     layers.forEach(layer => {
 			if (layer.get('type') === 'overlay') {
-				var title = layer.get('title'),
-					layerButton = $('<h3>').html(title),
-					overlayDivContent = $('<div>').addClass('osmcat-content osmcat-overlay overlay' + overlayIndex);
+                // Use translated group title if available
+                var groupTitle = layer.get('title');
+                if (overlaysByGroup[groupTitle] && overlaysByGroup[groupTitle][0]) {
+                    groupTitle = overlaysByGroup[groupTitle][0].group;
+                }
+                var layerButton = $('<h3>').html(groupTitle),
+                    overlayDivContent = $('<div>').addClass('osmcat-content osmcat-overlay overlay' + overlayIndex);
 
 				overlaySelect.append($('<option>').val('overlay' + overlayIndex).text(title));
 
