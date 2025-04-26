@@ -98,15 +98,12 @@ $(function () {
 
     // --- Overlay Searcher Integration ---
     // 1. Initialize window.allOverlays
-    window.allOverlays = {
-        food: foodOverlays(),
-        shopping: shoppingOverlays,
-        transport: transportOverlays,
-        health: healthOverlays,
-        education: educationOverlays,
-        translated: translatedOverlays || [], // Preserve translated overlays
-        external: [] // Will be populated later
-    };
+    // window.allOverlays is initialized in overlays/index.js and overlays are imported as arrays, not functions.
+    // Do not re-initialize overlays here. Use window.allOverlays as the source of truth.
+    if (!window.allOverlays) {
+        console.error('window.allOverlays is not defined. Make sure overlays/index.js is loaded before index.js.');
+        window.allOverlays = {};
+    }
     window.overlays = [];
     function updateWindowOverlays() {
         // Only flatten overlays for the overlay searcher
@@ -126,8 +123,7 @@ $(function () {
 
     // Update overlays when they change
     window.addEventListener('overlaysUpdated', function() {
-        // Always refresh food overlays for current language
-        window.allOverlays.food = foodOverlays();
+        // Overlays are updated by overlays/index.js
         updateTranslatedOverlayGroup();
         if (window.updateTranslations) window.updateTranslations();
         updateWindowOverlays(); // Refresh overlays for searcher
