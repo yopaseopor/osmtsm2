@@ -1,6 +1,4 @@
 /* global config, ol */
-import { patchOverlayGroupsWithGroupKey } from './config_overlay.js';
-window.patchOverlayGroupsWithGroupKey = patchOverlayGroupsWithGroupKey;
 $(function () {
     // --- Layer Searcher Integration ---
     // Remove early addition of 'Translated' overlay group here. It will be added after all overlays are loaded.
@@ -95,12 +93,6 @@ $(function () {
     // Render all layers initially
     $(document).ready(function() {
         window.renderLayerList(window.layers);
-        // Patch overlay groups with groupKey for translation
-        if (window.config && window.config.layers && window.allOverlays) {
-            if (typeof window.patchOverlayGroupsWithGroupKey === 'function') {
-                window.patchOverlayGroupsWithGroupKey(window.config.layers, window.allOverlays);
-            }
-        }
     });
     // --- End Layer Searcher Integration ---
 
@@ -451,18 +443,81 @@ $(function () {
 			content = $('<div>').addClass('osmcat-content');
 
 		// Use latest overlays from config, which have translated group titles
-    // Use overlays from window.config.overlays for translated group titles in overlays
+    // Use overlays from window.overlays (translated group names) for classic selector
     var overlaysByGroup = {};
-    if (window.config && Array.isArray(window.config.overlays)) {
-        window.config.overlays.forEach(function(overlay) {
+    if (window.overlays && Array.isArray(window.overlays)) {
+        window.overlays.forEach(function(overlay) {
             if (!overlaysByGroup[overlay.group]) overlaysByGroup[overlay.group] = [];
             overlaysByGroup[overlay.group].push(overlay);
         });
     }
+    Object.keys(overlaysByGroup).forEach(function(group, idx) {
+        var groupTitle = group;
+        var layerButton = $('<h3>').html(groupTitle),
+            overlayDivContent = $('<div>').addClass('osmcat-content osmcat-overlay overlay' + idx);
+        overlaysByGroup[group].forEach(function(overlay) {
+            var overlaySrc = overlay.iconSrc,
+                overlayIconStyle = overlay.iconStyle || '',
+                title = (overlaySrc ? '<img src="' + overlaySrc + '" height="16" style="' + overlayIconStyle + '"/> ' : '') + overlay.title,
+                overlayButton = $('<div>').html(title).on('click', function () {
+                    // Find the matching ol.layer.Vector and toggle visibility
+                    var found = false;
+                    $.each(config.layers, function(i, layerGroup) {
+                        if (layerGroup.get && layerGroup.get('type') === 'overlay') {
+                            $.each(layerGroup.getLayers().getArray(), function(j, olayer) {
+                                if (olayer.get('title') === overlay.title && olayer.get('group') === overlay.group) {
+                                    var visible = olayer.getVisible();
+                                    olayer.setVisible(!visible);
+                                    updatePermalink();
+                                    found = true;
+                                    return false;
+                                }
+                            });
+                        }
+                        if (found) return false;
+                    });
+                }),
+                checkbox = $('<input type="checkbox">').css({marginRight:'6px'});
+            // Find the matching ol.layer.Vector for checked state
+            var isChecked = false;
+            $.each(config.layers, function(i, layerGroup) {
+                if (layerGroup.get && layerGroup.get('type') === 'overlay') {
+                    $.each(layerGroup.getLayers().getArray(), function(j, olayer) {
+                        if (olayer.get('title') === overlay.title && olayer.get('group') === overlay.group) {
+                            isChecked = olayer.getVisible();
+                        }
+                    });
+                }
+            });
+            checkbox.prop('checked', isChecked);
+            checkbox.on('change', function() {
+                $.each(config.layers, function(i, layerGroup) {
+                    if (layerGroup.get && layerGroup.get('type') === 'overlay') {
+                        $.each(layerGroup.getLayers().getArray(), function(j, olayer) {
+                            if (olayer.get('title') === overlay.title && olayer.get('group') === overlay.group) {
+                                olayer.setVisible(this.checked);
+                                updatePermalink();
+                            }
+                        }.bind(this));
+                    }
+                });
+            });
+            overlayButton.prepend(checkbox);
+            overlayDivContent.append(overlayButton);
+        });
+        overlayDiv.append(layerButton);
+        overlayDiv.append(overlayDivContent);
+        overlayDiv.show();
+    });
+    // Skip the old overlays rendering in layers.forEach
     var layers = (window.config && window.config.layers) ? window.config.layers : config.layers;
     layers.forEach(layer => {
 			if (layer.get('type') === 'overlay') {
+                // Use translated group title if available
                 var groupTitle = layer.get('title');
+                if (overlaysByGroup[groupTitle] && overlaysByGroup[groupTitle][0]) {
+                    groupTitle = overlaysByGroup[groupTitle][0].group;
+                }
                 var layerButton = $('<h3>').html(groupTitle),
                     overlayDivContent = $('<div>').addClass('osmcat-content osmcat-overlay overlay' + overlayIndex);
 
