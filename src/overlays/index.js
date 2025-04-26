@@ -20,6 +20,8 @@ window.allOverlays = {
 };
 
 // Load external overlays
+import { integrateOverlays } from '../overlay_integration.js';
+
 loadExternalOverlays().then(externalOverlays => {
     console.log('External overlays loaded:', externalOverlays.length);
     window.allOverlays.external = externalOverlays;
@@ -28,6 +30,13 @@ loadExternalOverlays().then(externalOverlays => {
     window.dispatchEvent(new CustomEvent('overlaysUpdated', { 
         detail: window.allOverlays
     }));
+
+    // Integrate overlays into map layers (ensure shopping overlays are visible)
+    if (typeof integrateOverlays === 'function') {
+        integrateOverlays();
+    } else {
+        console.warn('integrateOverlays function not found!');
+    }
 }).catch(error => {
     console.error('Error loading external overlays:', error);
 });
