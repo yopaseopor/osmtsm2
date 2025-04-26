@@ -447,8 +447,14 @@ $(function () {
     var overlaysByGroup = {};
     if (window.overlays && Array.isArray(window.overlays)) {
         window.overlays.forEach(function(overlay) {
-            if (!overlaysByGroup[overlay.group]) overlaysByGroup[overlay.group] = [];
-            overlaysByGroup[overlay.group].push(overlay);
+            // Patch: store both translation key and translated label for group
+            var groupKey = overlay._groupKey || overlay.groupKey || overlay.group_key || overlay.rawGroupKey || overlay.raw_group || overlay.rawKey || overlay.key || overlay.group;
+            var translatedGroup = typeof window.getTranslation === 'function' ? window.getTranslation(groupKey) : overlay.group;
+            if (!overlaysByGroup[groupKey]) overlaysByGroup[groupKey] = [];
+            // Attach both keys to the overlay for use later
+            overlay._groupKey = groupKey;
+            overlay._translatedGroup = translatedGroup;
+            overlaysByGroup[groupKey].push(overlay);
         });
     }
     var layers = (window.config && window.config.layers) ? window.config.layers : config.layers;
@@ -459,22 +465,22 @@ $(function () {
                 // Use the original group key for translation (not the possibly already-translated string)
                 var groupKey = null;
                 var foundOverlayGroup = null;
-                Object.keys(overlaysByGroup).forEach(function(translatedGroup) {
+                Object.keys(overlaysByGroup).forEach(function(key) {
                     if (
-                        overlaysByGroup[translatedGroup][0] &&
-                        overlaysByGroup[translatedGroup][0]._groupKey &&
-                        (overlaysByGroup[translatedGroup][0].group === layer.get('title') ||
-                         overlaysByGroup[translatedGroup][0].group === layer.get('group') ||
-                         layer.get('title') === translatedGroup ||
-                         layer.get('group') === translatedGroup)
+                        overlaysByGroup[key][0] &&
+                        overlaysByGroup[key][0]._groupKey &&
+                        (overlaysByGroup[key][0].group === layer.get('title') ||
+                         overlaysByGroup[key][0].group === layer.get('group') ||
+                         layer.get('title') === key ||
+                         layer.get('group') === key)
                     ) {
-                        foundOverlayGroup = translatedGroup;
-                        groupKey = overlaysByGroup[translatedGroup][0]._groupKey;
+                        foundOverlayGroup = key;
+                        groupKey = overlaysByGroup[key][0]._groupKey;
                     }
                 });
                 var groupTitle = null;
-                if (foundOverlayGroup && typeof window.getTranslation === 'function') {
-                    groupTitle = window.getTranslation(groupKey || foundOverlayGroup);
+                if (groupKey && typeof window.getTranslation === 'function') {
+                    groupTitle = window.getTranslation(groupKey);
                 } else if (layer.get('group') && typeof window.getTranslation === 'function') {
                     groupTitle = window.getTranslation(layer.get('group'));
                 } else if (layer.get('title')) {
@@ -490,37 +496,31 @@ $(function () {
 				overlaySelect.append($('<option>').val('overlay' + overlayIndex).text(groupTitle));
 
 				layer.getLayers().forEach(overlay => {
-    var overlaySrc = overlay.get('iconSrc'),
-        overlayIconStyle = overlay.get('iconStyle') || '',
-        // Try to use a translation key (_titleKey or titleKey) if present
-        overlayTitleKey = overlay._titleKey || overlay.titleKey,
-        translatedTitle = null;
-    if (typeof window.getTranslation === 'function' && overlayTitleKey) {
-        translatedTitle = window.getTranslation(overlayTitleKey);
-    }
-    var title = (overlaySrc ? '<img src="' + overlaySrc + '" height="16" style="' + overlayIconStyle + '"/> ' : '') + (translatedTitle || overlay.get('title')),
-        overlayButton = $('<div>').html(title).on('click', function () {
-            var visible = overlay.getVisible();
-            overlay.setVisible(!visible);
-            updatePermalink();
-        }),
-        checkbox = $('<input type="checkbox">').css({marginRight:'6px'});
-    checkbox.prop('checked', overlay.getVisible());
-    checkbox.on('change', function() {
-        overlay.setVisible(this.checked);
-        updatePermalink();
-    });
-    overlayButton.prepend(checkbox);
-    overlay.on('change:visible', function () {
-        checkbox.prop('checked', overlay.getVisible());
-        if (overlay.getVisible()) {
-            overlayButton.addClass('active');
-        } else {
-            overlayButton.removeClass('active');
-        }
-    });
-    overlayDivContent.append(overlayButton);
-});
+					var overlaySrc = overlay.get('iconSrc'),
+						overlayIconStyle = overlay.get('iconStyle') || '',
+						title = (overlaySrc ? '<img src="' + overlaySrc + '" height="16" style="' + overlayIconStyle + '"/> ' : '') + overlay.get('title'),
+						overlayButton = $('<div>').html(title).on('click', function () {
+							var visible = overlay.getVisible();
+							overlay.setVisible(!visible);
+							updatePermalink();
+						}),
+						checkbox = $('<input type="checkbox">').css({marginRight:'6px'});
+					checkbox.prop('checked', overlay.getVisible());
+					checkbox.on('change', function() {
+						overlay.setVisible(this.checked);
+						updatePermalink();
+					});
+					overlayButton.prepend(checkbox);
+					overlay.on('change:visible', function () {
+						checkbox.prop('checked', overlay.getVisible());
+						if (overlay.getVisible()) {
+							overlayButton.addClass('active');
+						} else {
+							overlayButton.removeClass('active');
+						}
+					});
+					overlayDivContent.append(overlayButton);
+				});
 				overlayDiv.append(overlayDivContent);
 				overlayDiv.show();
 				overlayIndex++;
