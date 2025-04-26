@@ -443,10 +443,10 @@ $(function () {
 			content = $('<div>').addClass('osmcat-content');
 
 		// Use latest overlays from config, which have translated group titles
-    // Use overlays from window.config.overlays for translated group titles in overlays
+    // Use overlays from window.overlays for translated group titles (same as overlay searcher)
     var overlaysByGroup = {};
-    if (window.config && Array.isArray(window.config.overlays)) {
-        window.config.overlays.forEach(function(overlay) {
+    if (window.overlays && Array.isArray(window.overlays)) {
+        window.overlays.forEach(function(overlay) {
             if (!overlaysByGroup[overlay.group]) overlaysByGroup[overlay.group] = [];
             overlaysByGroup[overlay.group].push(overlay);
         });
@@ -454,13 +454,23 @@ $(function () {
     var layers = (window.config && window.config.layers) ? window.config.layers : config.layers;
     layers.forEach(layer => {
 			if (layer.get('type') === 'overlay') {
-                // Use translated group title for classic selector, matching overlay searcher
+                // Use translated group title if available, matching overlay searcher logic
                 var groupTitle = layer.get('title');
-                if (overlaysByGroup[groupTitle] && overlaysByGroup[groupTitle][0]) {
-                    groupTitle = overlaysByGroup[groupTitle][0].group;
-                }
-                if (typeof window.getTranslation === 'function') {
-                    groupTitle = window.getTranslation(groupTitle);
+                // Try to find group by matching either the untranslated or translated group name
+                var foundOverlayGroup = null;
+                Object.keys(overlaysByGroup).forEach(function(translatedGroup) {
+                    if (
+                        overlaysByGroup[translatedGroup][0] &&
+                        (overlaysByGroup[translatedGroup][0].group === groupTitle ||
+                         overlaysByGroup[translatedGroup][0].group === layer.get('group') ||
+                         groupTitle === translatedGroup ||
+                         layer.get('group') === translatedGroup)
+                    ) {
+                        foundOverlayGroup = translatedGroup;
+                    }
+                });
+                if (foundOverlayGroup) {
+                    groupTitle = foundOverlayGroup;
                 }
                 var layerButton = $('<h3>').html(groupTitle),
                     overlayDivContent = $('<div>').addClass('osmcat-content osmcat-overlay overlay' + overlayIndex);
