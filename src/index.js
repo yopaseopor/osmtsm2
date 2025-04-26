@@ -516,9 +516,9 @@ $(function () {
 			layerIndex++;
 			}
 		});
-		var groupName = label.text();
-		if (window.config && window.config.i18n && window.config.i18n[groupName]) {
-			label.text(window.config.i18n[groupName]);
+		// Use overlay group key to get translation from config.i18n
+		if (window.config && window.config.i18n && typeof groupKey !== 'undefined' && window.config.i18n[groupKey]) {
+			label.text(window.config.i18n[groupKey]);
 		}
 		layerDiv.append(label, content);
 		container.append(layerDiv, overlayDiv);
