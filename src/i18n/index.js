@@ -48,7 +48,7 @@ export function getTranslation(key) {
     return key;
 }
 
-function updateTranslations() {
+export function updateTranslations() {
     // Find all elements with data-i18n attribute
     const elements = document.querySelectorAll('[data-i18n]');
     elements.forEach(element => {
@@ -81,6 +81,9 @@ window.addEventListener('popstate', () => {
         setLanguage(urlLang, false);
     }
 });
+
+// Expose updateTranslations globally for overlays/layers re-render
+window.updateTranslations = updateTranslations;
 
 // Initialize translations when the DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
