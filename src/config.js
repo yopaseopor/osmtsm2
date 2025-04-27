@@ -219,6 +219,14 @@ var config = {
       }),
 			visible: false
 		}),
+        // Vector Tile OSM Demo with Shortbread style (olms)
+        {
+            title: 'Vector Tile OSM Demo',
+            iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
+            isOlms: true,
+            styleUrl: 'https://vector.openstreetmap.org/shortbread_v1/shortbread.json',
+            visible: false
+        },
 
 		new ol.layer.Tile({
 			title: 'Google Maps',
