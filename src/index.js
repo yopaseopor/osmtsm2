@@ -445,9 +445,9 @@ $(function () {
 		// Use latest overlays from config, which have translated group titles
     // Use overlays from window.overlays for translated group titles (same as overlay searcher)
     var overlaysByGroup = {};
-    if (config && Array.isArray(config.overlays)) {
-        config.overlays.forEach(function(overlay) {
-            // Group overlays by the ALREADY TRANSLATED group property
+    if (window.overlays && Array.isArray(window.overlays)) {
+        window.overlays.forEach(function(overlay) {
+            // Group overlays by the translation key (overlay.group)
             if (!overlaysByGroup[overlay.group]) overlaysByGroup[overlay.group] = [];
             overlaysByGroup[overlay.group].push(overlay);
         });
