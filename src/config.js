@@ -166,7 +166,8 @@ var config = {
         format: new ol.format.MVT(),
 		crossOrigin: 'anonymous',
 		attributions: '&copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>',
-        url: 'https://vector.openstreetmap.org/shortbread_v1/{z}/{x}/{y}.mvt'
+        url: 'https://vector.openstreetmap.org/shortbread_v1/{z}/{x}/{y}.mvt',
+		styleUrl: 'https://americanamap.org/style.json'
       }),
 			visible: false
 		}),
@@ -236,7 +237,7 @@ var config = {
 				crossOrigin: 'anonymous'
 			}),
 			visible: false,
-			styleUrl: 'https://americanamap.org/style.json', // Link to the style.json
+			styleUrl: 'https://americanamap.org/style.json' // Link to the style.json
 		}),
 	],
 	/**
