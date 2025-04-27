@@ -201,7 +201,7 @@ var config = {
 			source: new ol.source.TileJSON({
         tileSize: 512,
         crossOrigin: 'anonymous',
-        url: 'https://vector.openstreetmap.org/shortbread_v1/tilejson.json'
+        url: 'https://americanamap.org/style.json'
       }),
 			visible: false
 		}),
