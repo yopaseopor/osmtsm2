@@ -473,8 +473,18 @@ $(function () {
                         groupKey = overlaysByGroup[key][0].group;
                     }
                 });
-                // Use the group property from config.overlays (already translated)
-                var groupTitle = groupKey || layer.get('group') || layer.get('title') || 'Overlay';
+                var groupTitle = null;
+                if (groupKey && typeof window.getTranslation === 'function') {
+                    groupTitle = window.getTranslation(groupKey);
+                } else if (layer.get('group') && typeof window.getTranslation === 'function') {
+                    groupTitle = window.getTranslation(layer.get('group'));
+                } else if (layer.get('title')) {
+                    groupTitle = layer.get('title');
+                } else if (layer.get('group')) {
+                    groupTitle = layer.get('group');
+                } else {
+                    groupTitle = 'Overlay';
+                }
                 var layerButton = $('<h3>').html(groupTitle),
                     overlayDivContent = $('<div>').addClass('osmcat-content osmcat-overlay overlay' + overlayIndex);
 
