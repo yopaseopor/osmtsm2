@@ -144,7 +144,7 @@ var config = {
 
 		}),
 				new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
-			title: 'Vector Tile4',
+			title: 'Vector Tile5',
 			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
 			source: new ol.source.VectorTile({
         tilePixelRatio: 1, // oversampling when > 1
@@ -169,7 +169,22 @@ var config = {
         url: 'https://vector.openstreetmap.org/shortbread_v1/{z}/{x}/{y}.mvt'
       }),
 			visible: false,
-						styleUrl: 'https://americanamap.org/style.json', // Link to the style.json
+						styleJson: 'https://americanamap.org/style.json', // Link to the style.json
+				}),
+		
+		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
+			title: 'Vector Tile4',
+			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
+			source: new ol.source.VectorTile({
+        tilePixelRatio: 1, // oversampling when > 1
+        tileGrid: ol.tilegrid.createXYZ({maxZoom: 19}),
+        format: new ol.format.MVT(),
+		crossOrigin: 'anonymous',
+		attributions: '&copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>',
+        url: 'https://api.maptiler.com/tiles/v3-openmaptiles/{z}/{x}/{y}.pbf?key=zPfUiHM0YgsZAlrKRPNg'
+      }),
+			visible: false,
+						styleJson: 'https://americanamap.org/style.json', // Link to the style.json
 		}),
 		
 		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
@@ -191,7 +206,7 @@ var config = {
 			source: new ol.source.TileJSON({
         tileSize: 512,
         crossOrigin: 'anonymous',
-        url: 'https://pnorman.github.io/tilekiln-shortbread-demo/colorful.json'
+        url: 'https://api.maptiler.com/tiles/v3-openmaptiles/tiles.json?key=zPfUiHM0YgsZAlrKRPNg'
       }),
 			visible: false
 		}),
