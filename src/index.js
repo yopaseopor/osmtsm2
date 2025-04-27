@@ -79,12 +79,19 @@ $(function () {
             });
             // Create and add olms layer
             var group = new ol.layer.Group();
-            olms.apply(group, olmsConfig.styleUrl);
+            // Allow for custom style injection (Mapbox/MapLibre style JSON)
+            if (olmsConfig.styleObject) {
+                olms.apply(group, olmsConfig.styleObject);
+            } else {
+                olms.apply(group, olmsConfig.styleUrl);
+            }
             group.set('title', olmsConfig.title || '');
             group.setVisible(true);
             map.getLayers().insertAt(0, group);
             window._olmsBaseLayer = group;
             activated = true;
+            // To customize style: add a 'styleObject' property to the olmsConfig in config.js with your Mapbox style JSON.
+        }
         } else {
             // Hide all base layers and overlays, show only selected base layer
             $.each(config.layers, function(indexLayer, layerGroup) {

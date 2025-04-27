@@ -225,6 +225,35 @@ var config = {
             iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
             isOlms: true,
             styleUrl: 'https://vector.openstreetmap.org/shortbread_v1/shortbread.json',
+            // Example: override with a simple custom Mapbox style JSON
+            styleObject: {
+                "version": 8,
+                "sources": {
+                    "openmaptiles": {
+                        "type": "vector",
+                        "url": "https://vector.openstreetmap.org/tiles.json"
+                    }
+                },
+                "glyphs": "https://vector.openstreetmap.org/fonts/{fontstack}/{range}.pbf",
+                "layers": [
+                    {
+                        "id": "water",
+                        "type": "fill",
+                        "source": "openmaptiles",
+                        "source-layer": "water",
+                        "paint": {
+                            "fill-color": "#a0c8f0"
+                        }
+                    },
+                    {
+                        "id": "land",
+                        "type": "background",
+                        "paint": {
+                            "background-color": "#eaeaea"
+                        }
+                    }
+                ]
+            },
             visible: false
         },
 
