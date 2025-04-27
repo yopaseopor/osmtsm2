@@ -447,14 +447,8 @@ $(function () {
     var overlaysByGroup = {};
     if (window.overlays && Array.isArray(window.overlays)) {
         window.overlays.forEach(function(overlay) {
-            // Patch: store both translation key and translated label for group
-            var groupKey = overlay._groupKey || overlay.groupKey || overlay.group_key || overlay.rawGroupKey || overlay.raw_group || overlay.rawKey || overlay.key || overlay.group;
-            var translatedGroup = typeof window.getTranslation === 'function' ? window.getTranslation(groupKey) : overlay.group;
-            if (!overlaysByGroup[groupKey]) overlaysByGroup[groupKey] = [];
-            // Attach both keys to the overlay for use later
-            overlay._groupKey = groupKey;
-            overlay._translatedGroup = translatedGroup;
-            overlaysByGroup[groupKey].push(overlay);
+            if (!overlaysByGroup[overlay.group]) overlaysByGroup[overlay.group] = [];
+            overlaysByGroup[overlay.group].push(overlay);
         });
     }
     var layers = (window.config && window.config.layers) ? window.config.layers : config.layers;
@@ -465,22 +459,22 @@ $(function () {
                 // Use the original group key for translation (not the possibly already-translated string)
                 var groupKey = null;
                 var foundOverlayGroup = null;
-                Object.keys(overlaysByGroup).forEach(function(key) {
+                Object.keys(overlaysByGroup).forEach(function(translatedGroup) {
                     if (
-                        overlaysByGroup[key][0] &&
-                        overlaysByGroup[key][0]._groupKey &&
-                        (overlaysByGroup[key][0].group === layer.get('title') ||
-                         overlaysByGroup[key][0].group === layer.get('group') ||
-                         layer.get('title') === key ||
-                         layer.get('group') === key)
+                        overlaysByGroup[translatedGroup][0] &&
+                        overlaysByGroup[translatedGroup][0]._groupKey &&
+                        (overlaysByGroup[translatedGroup][0].group === layer.get('title') ||
+                         overlaysByGroup[translatedGroup][0].group === layer.get('group') ||
+                         layer.get('title') === translatedGroup ||
+                         layer.get('group') === translatedGroup)
                     ) {
-                        foundOverlayGroup = key;
-                        groupKey = overlaysByGroup[key][0]._groupKey;
+                        foundOverlayGroup = translatedGroup;
+                        groupKey = overlaysByGroup[translatedGroup][0]._groupKey;
                     }
                 });
                 var groupTitle = null;
-                if (groupKey && typeof window.getTranslation === 'function') {
-                    groupTitle = window.getTranslation(groupKey);
+                if (foundOverlayGroup && typeof window.getTranslation === 'function') {
+                    groupTitle = window.getTranslation(groupKey || foundOverlayGroup);
                 } else if (layer.get('group') && typeof window.getTranslation === 'function') {
                     groupTitle = window.getTranslation(layer.get('group'));
                 } else if (layer.get('title')) {
