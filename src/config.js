@@ -236,7 +236,7 @@ var config = {
 				crossOrigin: 'anonymous'
 			}),
 			visible: false,
-			// Style can be loaded dynamically from https://americanamap.org/style.json if required
+			styleUrl: 'https://americanamap.org/style.json', // Link to the style.json
 		}),
 	],
 	/**
