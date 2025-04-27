@@ -43,14 +43,6 @@ var config = {
 	},
 	//@@ Mapas de fondo
 	layers: [
-		// OLMS/Mapbox-style Vector Tile Layer (OpenFreemap Liberty)
-		{
-			title: 'OpenFreemap Liberty (Vector)',
-			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
-			type: 'olms', // Custom type to identify OLMS layers
-			styleUrl: 'https://tiles.openfreemap.org/styles/liberty',
-			visible: false
-		},
 		new ol.layer.Tile({
 			title: 'OpenStreetMap',
 			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
