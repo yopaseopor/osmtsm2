@@ -233,7 +233,7 @@ var config = {
 				tileGrid: ol.tilegrid.createXYZ({ maxZoom: 14 }),
 				format: new ol.format.MVT(),
 				attributions: '&copy; <a href="https://americanamap.org" target="_blank">AmericanaMap</a>',
-				url: 'https://tiles.americanamap.org/tiles/{z}/{x}/{y}.mvt',
+				url: 'https://tile.ourmap.us/tiles/{z}/{x}/{y}.mvt',
 				crossOrigin: 'anonymous'
 			}),
 			visible: false,
