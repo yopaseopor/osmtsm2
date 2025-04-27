@@ -73,6 +73,18 @@ $(function () {
                 } else {
                     layerGroup.setVisible(false);
                 }
+
+                // --- AmericanaMap dynamic style integration ---
+                if ((layerGroup.get('title') === 'AmericanaMap' || (layer.title && layer.title === 'AmericanaMap')) && layerGroup instanceof ol.layer.VectorTile) {
+                    var styleUrl = layerGroup.styleUrl || (layerGroup.get('styleUrl') ? layerGroup.get('styleUrl') : null);
+                    if (styleUrl) {
+                        import('./americana_style_loader.js').then(mod => {
+                            mod.applyAmericanaMapStyle(layerGroup, styleUrl);
+                        });
+                    }
+                }
+                // --- End AmericanaMap dynamic style integration ---
+
             } else if (layerGroup.get && layerGroup.get('type') === 'overlay') {
                 // Hide all overlays
                 $.each(layerGroup.getLayers().getArray(), function(idx, olayer) {
