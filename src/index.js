@@ -6,29 +6,18 @@ $(function () {
     // 1. Flatten base layers into window.layers
     window.layers = [];
     if (config && Array.isArray(config.layers)) {
-        window.layers = [];
-        config.layers.forEach(function(layerConfig) {
-            if (layerConfig.isOlms && typeof olms !== 'undefined') {
-                // Create a group for olms layer
-                var group = new ol.layer.Group();
-                olms.apply(group, layerConfig.styleUrl);
-                group.set('title', layerConfig.title || '');
-                group.setVisible(!!layerConfig.visible);
-                window.layers.push({
-                    title: layerConfig.title || '',
-                    group: layerConfig.group || '',
-                    id: layerConfig.id || '',
-                    _olLayerGroup: group
-                });
-            } else if (layerConfig.get && layerConfig.get('type') !== 'overlay') {
-                window.layers.push({
-                    title: layerConfig.get('title') || '',
-                    group: layerConfig.get('group') || '',
-                    id: layerConfig.get('id') || '',
-                    _olLayerGroup: layerConfig
-                });
-            }
+        // Only use real OpenLayers layers for window.layers UI, don't instantiate olms layers yet
+        window.layers = config.layers.filter(function(layerGroup) {
+            return layerGroup.get && layerGroup.get('type') !== 'overlay';
+        }).map(function(layerGroup) {
+            return {
+                title: layerGroup.get('title') || '',
+                group: layerGroup.get('group') || '',
+                id: layerGroup.get('id') || '',
+                _olLayerGroup: layerGroup
+            };
         });
+        // NOTE: olms layers should be handled on activation, not here!
     }
     // 2. Define window.renderLayerList
     window.renderLayerList = function(filtered, query) {
@@ -72,30 +61,56 @@ $(function () {
     // 3. Define window.activateLayer
     window.activateLayer = function(layer) {
         var activated = false;
-        // Hide all base layers and overlays, show only selected base layer
-        $.each(config.layers, function(indexLayer, layerGroup) {
-            if (layerGroup.get && layerGroup.get('type') !== 'overlay') {
-                // If _olLayerGroup exists and matches, activate directly
-                if (!activated && layer._olLayerGroup && layerGroup === layer._olLayerGroup) {
-                    layerGroup.setVisible(true);
-                    activated = true;
-                } else if (!activated && ((layer.id && layerGroup.get('id') === layer.id) ||
-                    (layerGroup.get('title') === layer.title && layerGroup.get('group') === layer.group))) {
-                    layerGroup.setVisible(true);
-                    activated = true;
-                } else {
+        // Remove any previously added olms base layer
+        if (window._olmsBaseLayer) {
+            map.removeLayer(window._olmsBaseLayer);
+            window._olmsBaseLayer = null;
+        }
+        // Check if this is an olms layer config
+        var olmsConfig = config.layers.find(function(l) {
+            return l.title === layer.title && l.isOlms;
+        });
+        if (olmsConfig && typeof olms !== 'undefined') {
+            // Hide all base layers
+            $.each(config.layers, function(indexLayer, layerGroup) {
+                if (layerGroup.get && layerGroup.get('type') !== 'overlay') {
                     layerGroup.setVisible(false);
                 }
-            } else if (layerGroup.get && layerGroup.get('type') === 'overlay') {
-                // Hide all overlays
-                $.each(layerGroup.getLayers().getArray(), function(idx, olayer) {
-                    olayer.setVisible(false);
-                });
+            });
+            // Create and add olms layer
+            var group = new ol.layer.Group();
+            olms.apply(group, olmsConfig.styleUrl);
+            group.set('title', olmsConfig.title || '');
+            group.setVisible(true);
+            map.getLayers().insertAt(0, group);
+            window._olmsBaseLayer = group;
+            activated = true;
+        } else {
+            // Hide all base layers and overlays, show only selected base layer
+            $.each(config.layers, function(indexLayer, layerGroup) {
+                if (layerGroup.get && layerGroup.get('type') !== 'overlay') {
+                    // If _olLayerGroup exists and matches, activate directly
+                    if (!activated && layer._olLayerGroup && layerGroup === layer._olLayerGroup) {
+                        layerGroup.setVisible(true);
+                        activated = true;
+                    } else if (!activated && ((layer.id && layerGroup.get('id') === layer.id) ||
+                        (layerGroup.get('title') === layer.title && layerGroup.get('group') === layer.group))) {
+                        layerGroup.setVisible(true);
+                        activated = true;
+                    } else {
+                        layerGroup.setVisible(false);
+                    }
+                } else if (layerGroup.get && layerGroup.get('type') === 'overlay') {
+                    // Hide all overlays
+                    $.each(layerGroup.getLayers().getArray(), function(idx, olayer) {
+                        olayer.setVisible(false);
+                    });
+                }
+            });
+            // If not found by id/title/group, try to activate by index fallback (for robustness)
+            if (!activated && typeof layer._olLayerGroup !== 'undefined') {
+                layer._olLayerGroup.setVisible(true);
             }
-        });
-        // If not found by id/title/group, try to activate by index fallback (for robustness)
-        if (!activated && typeof layer._olLayerGroup !== 'undefined') {
-            layer._olLayerGroup.setVisible(true);
         }
         // Optionally, update the layer list to show only this layer
         window.renderLayerList([layer], layer.title);
