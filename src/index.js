@@ -6,15 +6,28 @@ $(function () {
     // 1. Flatten base layers into window.layers
     window.layers = [];
     if (config && Array.isArray(config.layers)) {
-        window.layers = config.layers.filter(function(layerGroup) {
-            return layerGroup.get && layerGroup.get('type') !== 'overlay';
-        }).map(function(layerGroup) {
-            return {
-                title: layerGroup.get('title') || '',
-                group: layerGroup.get('group') || '',
-                id: layerGroup.get('id') || '',
-                _olLayerGroup: layerGroup
-            };
+        window.layers = [];
+        config.layers.forEach(function(layerConfig) {
+            if (layerConfig.isOlms && typeof olms !== 'undefined') {
+                // Create a group for olms layer
+                var group = new ol.layer.Group();
+                olms.apply(group, layerConfig.styleUrl);
+                group.set('title', layerConfig.title || '');
+                group.setVisible(!!layerConfig.visible);
+                window.layers.push({
+                    title: layerConfig.title || '',
+                    group: layerConfig.group || '',
+                    id: layerConfig.id || '',
+                    _olLayerGroup: group
+                });
+            } else if (layerConfig.get && layerConfig.get('type') !== 'overlay') {
+                window.layers.push({
+                    title: layerConfig.get('title') || '',
+                    group: layerConfig.get('group') || '',
+                    id: layerConfig.get('id') || '',
+                    _olLayerGroup: layerConfig
+                });
+            }
         });
     }
     // 2. Define window.renderLayerList
