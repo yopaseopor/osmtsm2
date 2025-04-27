@@ -151,25 +151,6 @@ var config = {
         tileGrid: ol.tilegrid.createXYZ({maxZoom: 19}),
         format: new ol.format.MVT(),
 		attributions: '&copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>',
-        url: 'https://{a-c}.tile.custom-osm-tiles.org/{z}/{x}/{y}.mvt',
-				crossOrigin: 'anonymous'
-      }),
-			visible: false
-		}),
-		
-		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
-			title: 'Vector TileA',
-			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
-			source: new ol.source.VectorTile({
-        tilePixelRatio: 1, // oversampling when > 1
-        tileGrid: ol.tilegrid.createXYZ({maxZoom: 19}),
-        format: new ol.format.MVT(),
-		crossOrigin: 'anonymous',
-		attributions: '&copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>',
-        url: 'https://vector.openstreetmap.org/shortbread_v1/{z}/{x}/{y}.mvt'
-      }),
-			visible: false
-		}),
 		
 		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
 			title: 'Vector TileB',
@@ -219,43 +200,6 @@ var config = {
       }),
 			visible: false
 		}),
-        // Vector Tile OSM Demo with Shortbread style (olms)
-        {
-            title: 'Vector Tile OSM Demo',
-            iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
-            isOlms: true,
-            styleUrl: 'https://vector.openstreetmap.org/shortbread_v1/shortbread.json',
-            // Example: override with a simple custom Mapbox style JSON
-            styleObject: {
-                "version": 8,
-                "sources": {
-                    "openmaptiles": {
-                        "type": "vector",
-                        "url": "https://vector.openstreetmap.org/tiles.json"
-                    }
-                },
-                "glyphs": "https://vector.openstreetmap.org/fonts/{fontstack}/{range}.pbf",
-                "layers": [
-                    {
-                        "id": "water",
-                        "type": "fill",
-                        "source": "openmaptiles",
-                        "source-layer": "water",
-                        "paint": {
-                            "fill-color": "#a0c8f0"
-                        }
-                    },
-                    {
-                        "id": "land",
-                        "type": "background",
-                        "paint": {
-                            "background-color": "#eaeaea"
-                        }
-                    }
-                ]
-            },
-            visible: false
-        },
 
 		new ol.layer.Tile({
 			title: 'Google Maps',

@@ -6,7 +6,6 @@ $(function () {
     // 1. Flatten base layers into window.layers
     window.layers = [];
     if (config && Array.isArray(config.layers)) {
-        // Only use real OpenLayers layers for window.layers UI, don't instantiate olms layers yet
         window.layers = config.layers.filter(function(layerGroup) {
             return layerGroup.get && layerGroup.get('type') !== 'overlay';
         }).map(function(layerGroup) {
@@ -17,7 +16,6 @@ $(function () {
                 _olLayerGroup: layerGroup
             };
         });
-        // NOTE: olms layers should be handled on activation, not here!
     }
     // 2. Define window.renderLayerList
     window.renderLayerList = function(filtered, query) {
@@ -60,64 +58,59 @@ $(function () {
 
     // 3. Define window.activateLayer
     window.activateLayer = function(layer) {
-        var activated = false;
-        // Remove any previously added olms base layer
-        if (window._olmsBaseLayer) {
-            map.removeLayer(window._olmsBaseLayer);
-            window._olmsBaseLayer = null;
+        // Handle olms (Mapbox/MapLibre style) layers
+        if (layer.isOlms && layer.styleUrl) {
+            // Remove existing OLMS group if present
+            if (window._olmsLayerGroup) {
+                map.removeLayer(window._olmsLayerGroup);
+            }
+            // Dynamically load olms if not loaded
+            function addOlmsLayer() {
+                const group = new ol.layer.Group();
+                window._olmsLayerGroup = group;
+                map.getLayers().insertAt(0, group);
+                olms.apply(group, layer.styleUrl);
+            }
+            if (typeof window.olms === 'undefined') {
+                const script = document.createElement('script');
+                script.src = 'https://unpkg.com/ol-mapbox-style/dist/olms.js';
+                script.onload = addOlmsLayer;
+                document.head.appendChild(script);
+            } else {
+                addOlmsLayer();
+            }
+            // Optionally hide other base layers
+            config.layers.forEach(function(l) {
+                if (l.get && l.getVisible) l.setVisible(false);
+            });
+            return;
         }
-        // Check if this is an olms layer config
-        var olmsConfig = config.layers.find(function(l) {
-            return l.title === layer.title && l.isOlms;
-        });
-        if (olmsConfig && typeof olms !== 'undefined') {
-            // Hide all base layers
-            $.each(config.layers, function(indexLayer, layerGroup) {
-                if (layerGroup.get && layerGroup.get('type') !== 'overlay') {
+
+        var activated = false;
+        // Hide all base layers and overlays, show only selected base layer
+        $.each(config.layers, function(indexLayer, layerGroup) {
+            if (layerGroup.get && layerGroup.get('type') !== 'overlay') {
+                // If _olLayerGroup exists and matches, activate directly
+                if (!activated && layer._olLayerGroup && layerGroup === layer._olLayerGroup) {
+                    layerGroup.setVisible(true);
+                    activated = true;
+                } else if (!activated && ((layer.id && layerGroup.get('id') === layer.id) ||
+                    (layerGroup.get('title') === layer.title && layerGroup.get('group') === layer.group))) {
+                    layerGroup.setVisible(true);
+                    activated = true;
+                } else {
                     layerGroup.setVisible(false);
                 }
-            });
-            // Create and add olms layer
-            var group = new ol.layer.Group();
-            // Allow for custom style injection (Mapbox/MapLibre style JSON)
-            if (olmsConfig.styleObject) {
-                olms.apply(group, olmsConfig.styleObject);
-            } else {
-                olms.apply(group, olmsConfig.styleUrl);
+            } else if (layerGroup.get && layerGroup.get('type') === 'overlay') {
+                // Hide all overlays
+                $.each(layerGroup.getLayers().getArray(), function(idx, olayer) {
+                    olayer.setVisible(false);
+                });
             }
-            group.set('title', olmsConfig.title || '');
-            group.setVisible(true);
-            map.getLayers().insertAt(0, group);
-            window._olmsBaseLayer = group;
-            activated = true;
-            // To customize style: add a 'styleObject' property to the olmsConfig in config.js with your Mapbox style JSON.
-        }
-        } else {
-            // Hide all base layers and overlays, show only selected base layer
-            $.each(config.layers, function(indexLayer, layerGroup) {
-                if (layerGroup.get && layerGroup.get('type') !== 'overlay') {
-                    // If _olLayerGroup exists and matches, activate directly
-                    if (!activated && layer._olLayerGroup && layerGroup === layer._olLayerGroup) {
-                        layerGroup.setVisible(true);
-                        activated = true;
-                    } else if (!activated && ((layer.id && layerGroup.get('id') === layer.id) ||
-                        (layerGroup.get('title') === layer.title && layerGroup.get('group') === layer.group))) {
-                        layerGroup.setVisible(true);
-                        activated = true;
-                    } else {
-                        layerGroup.setVisible(false);
-                    }
-                } else if (layerGroup.get && layerGroup.get('type') === 'overlay') {
-                    // Hide all overlays
-                    $.each(layerGroup.getLayers().getArray(), function(idx, olayer) {
-                        olayer.setVisible(false);
-                    });
-                }
-            });
-            // If not found by id/title/group, try to activate by index fallback (for robustness)
-            if (!activated && typeof layer._olLayerGroup !== 'undefined') {
-                layer._olLayerGroup.setVisible(true);
-            }
+        });
+        // If not found by id/title/group, try to activate by index fallback (for robustness)
+        if (!activated && typeof layer._olLayerGroup !== 'undefined') {
+            layer._olLayerGroup.setVisible(true);
         }
         // Optionally, update the layer list to show only this layer
         window.renderLayerList([layer], layer.title);
