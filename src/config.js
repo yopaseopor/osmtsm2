@@ -167,10 +167,9 @@ var config = {
 		crossOrigin: 'anonymous',
 		attributions: '&copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>',
         url: 'https://vector.openstreetmap.org/shortbread_v1/{z}/{x}/{y}.mvt'
-		
       }),
 			visible: false,
-			styleUrl: 'https://americanamap.org/style.json'
+						styleUrl: 'https://americanamap.org/style.json', // Link to the style.json
 		}),
 		
 		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
@@ -238,7 +237,7 @@ var config = {
 				crossOrigin: 'anonymous'
 			}),
 			visible: false,
-			styleUrl: 'https://americanamap.org/style.json' // Link to the style.json
+			styleUrl: 'https://americanamap.org/style.json', // Link to the style.json
 		}),
 	],
 	/**
