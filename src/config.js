@@ -166,10 +166,11 @@ var config = {
         format: new ol.format.MVT(),
 		crossOrigin: 'anonymous',
 		attributions: '&copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>',
-        url: 'https://vector.openstreetmap.org/shortbread_v1/{z}/{x}/{y}.mvt',
-		styleUrl: 'https://americanamap.org/style.json'
+        url: 'https://vector.openstreetmap.org/shortbread_v1/{z}/{x}/{y}.mvt'
+		
       }),
-			visible: false
+			visible: false,
+			styleUrl: 'https://americanamap.org/style.json'
 		}),
 		
 		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
