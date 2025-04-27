@@ -58,34 +58,6 @@ $(function () {
 
     // 3. Define window.activateLayer
     window.activateLayer = function(layer) {
-        // Handle olms (Mapbox/MapLibre style) layers
-        if (layer.isOlms && layer.styleUrl) {
-            // Remove existing OLMS group if present
-            if (window._olmsLayerGroup) {
-                map.removeLayer(window._olmsLayerGroup);
-            }
-            // Dynamically load olms if not loaded
-            function addOlmsLayer() {
-                const group = new ol.layer.Group();
-                window._olmsLayerGroup = group;
-                map.getLayers().insertAt(0, group);
-                olms.apply(group, layer.styleUrl);
-            }
-            if (typeof window.olms === 'undefined') {
-                const script = document.createElement('script');
-                script.src = 'https://unpkg.com/ol-mapbox-style/dist/olms.js';
-                script.onload = addOlmsLayer;
-                document.head.appendChild(script);
-            } else {
-                addOlmsLayer();
-            }
-            // Optionally hide other base layers
-            config.layers.forEach(function(l) {
-                if (l.get && l.getVisible) l.setVisible(false);
-            });
-            return;
-        }
-
         var activated = false;
         // Hide all base layers and overlays, show only selected base layer
         $.each(config.layers, function(indexLayer, layerGroup) {
