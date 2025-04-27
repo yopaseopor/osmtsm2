@@ -223,7 +223,21 @@ var config = {
 				url: 'https://mt{0-3}.google.com/vt/lyrs=s&z={z}&x={x}&y={y}'
 			}),
 			visible: false
-		})
+		}),
+		new ol.layer.VectorTile({
+			title: 'AmericanaMap',
+			iconSrc: imgSrc + 'icones_web/americanamap_logo_layer.png', // Placeholder icon
+			source: new ol.source.VectorTile({
+				tilePixelRatio: 1,
+				tileGrid: ol.tilegrid.createXYZ({ maxZoom: 14 }),
+				format: new ol.format.MVT(),
+				attributions: '&copy; <a href="https://americanamap.org" target="_blank">AmericanaMap</a>',
+				url: 'https://tiles.americanamap.org/tiles/{z}/{x}/{y}.mvt',
+				crossOrigin: 'anonymous'
+			}),
+			visible: false,
+			// Style can be loaded dynamically from https://americanamap.org/style.json if required
+		}),
 	],
 	/**
 	* @type Array
