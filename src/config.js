@@ -6,7 +6,6 @@
 
 //@@ Ruta de imágenes
 var imgSrc = 'src/img/';
-import { vectorTileStyle } from './vector_tile_style.js';
 
 //@@Coordenadas LONgitud LATitud Rotación Zoom, Zoom de la geolocalización, unidades
 var config = {
@@ -44,21 +43,6 @@ var config = {
 	},
 	//@@ Mapas de fondo
 	layers: [
-		// Shortbread Vector Tile Layer
-		new ol.layer.VectorTile({
-			title: 'Shortbread Vector',
-			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
-			style: vectorTileStyle, // Imported style function
-			source: new ol.source.VectorTile({
-				tilePixelRatio: 1,
-				tileGrid: ol.tilegrid.createXYZ({ maxZoom: 14 }),
-				format: new ol.format.MVT(),
-				crossOrigin: 'anonymous',
-				attributions: '&copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>',
-				url: 'https://vector.openstreetmap.org/shortbread_v1/{z}/{x}/{y}.mvt'
-			}),
-			visible: false
-		}),
 		new ol.layer.Tile({
 			title: 'OpenStreetMap',
 			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
