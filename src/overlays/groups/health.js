@@ -2,7 +2,7 @@ import { getTranslation } from '../../i18n/index.js';
 
 export const healthOverlays = [
     {
-        group: 'health',
+        group: getTranslation('health'),
         title: 'Pharmacies',
         query: '[out:json][timeout:25];(node["amenity"="pharmacy"]({{bbox}}););out body;>;out skel qt;',
         iconSrc: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Pharmacy_symbol.svg/1200px-Pharmacy_symbol.svg.png',
