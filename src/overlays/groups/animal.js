@@ -2,7 +2,7 @@ import { getTranslation } from '../../i18n/index.js';
 
 export const animalOverlays = [
     {
-        group: getTranslation('animal'),
+        group: getTranslation('animal_boarding'),
 		title: "Dogtopia",
     query: "(nwr[\"amenity\"=\"animal_boarding\"][\"animal_boarding\"=\"dog\"][\"brand\"=\"Dogtopia\"][\"brand:wikidata\"=\"Q112037444\"][\"name\"=\"Dogtopia\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -38,7 +38,7 @@ export const animalOverlays = [
     }
 },
 {
-    group: "animal_boarding",
+group: getTranslation('animal_boarding'),
     title: "PetsHotel",
     query: "(nwr[\"amenity\"=\"animal_boarding\"][\"animal_boarding\"=\"dog;cat\"][\"brand\"=\"PetsHotel\"][\"brand:wikidata\"=\"Q67141961\"][\"name\"=\"PetsHotel\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -74,7 +74,7 @@ export const animalOverlays = [
     }
 },
 {
-    group: "animal_boarding",
+group: getTranslation('animal_boarding'),
     title: "PetSuites",
     query: "(nwr[\"amenity\"=\"animal_boarding\"][\"animal_boarding\"=\"dog;cat\"][\"brand\"=\"PetSuites\"][\"brand:wikidata\"=\"Q112037454\"][\"name\"=\"PetSuites\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -110,7 +110,7 @@ export const animalOverlays = [
     }
 },
 {
-    group: "animal_shelter",
+group: getTranslation('animal_shelter'),
     title: "Blue Cross Rehoming Centre",
     query: "(nwr[\"amenity\"=\"animal_shelter\"][\"brand\"=\"Blue Cross\"][\"brand:wikidata\"=\"Q3520039\"][\"name\"=\"Blue Cross Rehoming Centre\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Blue_cross_logo.png",
@@ -146,7 +146,7 @@ export const animalOverlays = [
     }
 },
 {
-    group: "animal_shelter",
+group: getTranslation('animal_shelter'),
     title: "Soci\u00e9t\u00e9 Protectrice des Animaux (SPA)",
     query: "(nwr[\"amenity\"=\"animal_shelter\"][\"brand\"=\"SPA\"][\"brand:wikidata\"=\"Q47391644\"][\"name\"=\"SPA\"][\"official_name\"=\"Soci\u00e9t\u00e9 protectrice des animaux\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
