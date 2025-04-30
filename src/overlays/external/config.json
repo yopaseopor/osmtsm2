@@ -1,6 +1,7 @@
 {
     "externalOverlayFiles": [
         "food.js",
+		"animal.js",
         "custom_overlays.js"
     ]
 } 
