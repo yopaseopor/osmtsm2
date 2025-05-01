@@ -13394,9 +13394,9 @@ export const bankOverlays = [
     }
 },
 {
-   group: getTranslation('bank'),
+    group: "bank",
     title: "Caixabank (Espa\u00f1a)",
-    query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Caixabank\"][\"brand:wikidata\"=\"Q847225\"][\"name\"=\"Caixabank\"]({{bbox}}););out body;>;out skel qt;",
+    query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Caixabank\"][\"brand:wikidata\"=\"Q847225\"][\"name\"=\"Caixabank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_CaixaBank.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
