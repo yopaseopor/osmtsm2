@@ -30,7 +30,7 @@ export const ca = {
     accommodation: 'Allotjament',
     religion: 'Religió',
 	animal_boarding: 'Cuida d\'animals',
-		animal_boarding: 'Refugi d\'animals',
+		animal_shelter: 'Refugi d\'animals',
     // Specific POIs
     mcdonalds: 'McDonald\'s',
     starbucks: 'Starbucks'
