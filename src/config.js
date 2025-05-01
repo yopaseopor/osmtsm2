@@ -168,7 +168,23 @@ var config = {
 		attributions: '&copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>',
         url: 'https://vector.openstreetmap.org/shortbread_v1/{z}/{x}/{y}.mvt'
       }),
-			visible: false
+			visible: false,
+			style: null
+		}),
+		
+		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
+			title: 'Vector Tile4',
+			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
+			source: new ol.source.VectorTile({
+        tilePixelRatio: 1, // oversampling when > 1
+        tileGrid: ol.tilegrid.createXYZ({maxZoom: 19}),
+        format: new ol.format.MVT(),
+		crossOrigin: 'anonymous',
+		attributions: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
+        url: 'https://api.maptiler.com/tiles/v3-openmaptiles/{z}/{x}/{y}.pbf?key=zPfUiHM0YgsZAlrKRPNg'
+      }),
+			visible: false,
+			style: null
 		}),
 		
 		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
@@ -190,9 +206,11 @@ var config = {
 			source: new ol.source.TileJSON({
         tileSize: 512,
         crossOrigin: 'anonymous',
-        url: 'https://pnorman.github.io/tilekiln-shortbread-demo/colorful.json'
+        url: 'https://api.maptiler.com/tiles/v3-openmaptiles/tiles.json?key=zPfUiHM0YgsZAlrKRPNg',
+		attributions: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
       }),
-			visible: false
+			visible: false,
+			style: null
 		}),
 		
 		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
@@ -223,7 +241,22 @@ var config = {
 				url: 'https://mt{0-3}.google.com/vt/lyrs=s&z={z}&x={x}&y={y}'
 			}),
 			visible: false
-		})
+		}),
+		new ol.layer.VectorTile({
+			title: 'AmericanaMap',
+			iconSrc: imgSrc + 'icones_web/americanamap_logo_layer.png', // Placeholder icon
+			source: new ol.source.VectorTile({
+				tilePixelRatio: 1,
+				tileGrid: ol.tilegrid.createXYZ({ maxZoom: 14 }),
+				format: new ol.format.MVT(),
+				attributions: '&copy; <a href="https://americanamap.org" target="_blank">AmericanaMap</a>',
+				url: 'https://tile.ourmap.us/tiles/{z}/{x}/{y}.mvt',
+				crossOrigin: 'anonymous'
+			}),
+			visible: false,
+			style: null,
+			styleUrl: 'https://americanamap.org/style.json' // Link to the style.json
+		}),
 	],
 	/**
 	* @type Array
