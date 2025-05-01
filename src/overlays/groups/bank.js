@@ -2,7 +2,7 @@ import { getTranslation } from '../../i18n/index.js';
 
 export const bankOverlays = [
     {
-    group: "atm",
+   group: getTranslation('atm'),
     title: "",
     query: "(nwr({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -38,7 +38,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "atm",
+   group: getTranslation('atm'),
     title: "Allpoint",
     query: "(nwr[\"amenity\"=\"atm\"][\"brand\"=\"Allpoint\"][\"brand:wikidata\"=\"Q4733264\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -74,7 +74,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "atm",
+   group: getTranslation('atm'),
     title: "American Crypto",
     query: "(nwr[\"amenity\"=\"atm\"][\"brand\"=\"American Crypto\"][\"brand:wikidata\"=\"Q127753246\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -110,7 +110,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "atm",
+   group: getTranslation('atm'),
     title: "atmx by Armaguard",
     query: "(nwr[\"amenity\"=\"atm\"][\"brand\"=\"Armaguard\"][\"brand:wikidata\"=\"Q118898974\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -146,7 +146,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "atm",
+   group: getTranslation('atm'),
     title: "Auro Domus",
     query: "(nwr[\"amenity\"=\"atm\"][\"brand\"=\"Auro Domus\"][\"brand:wikidata\"=\"Q125811872\"][\"operator\"=\"Auro Domus\"][\"operator:wikidata\"=\"Q125811872\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Auro_Domus_logo.png",
@@ -182,7 +182,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "atm",
+   group: getTranslation('atm'),
     title: "Banco24Horas",
     query: "(nwr[\"amenity\"=\"atm\"][\"brand\"=\"Banco24Horas\"][\"brand:wikidata\"=\"Q4854069\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco24Horas_logo.jpg",
@@ -218,7 +218,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "atm",
+   group: getTranslation('atm'),
     title: "Bancontact CASH",
     query: "(nwr[\"amenity\"=\"atm\"][\"brand\"=\"Bancontact CASH\"][\"brand:wikidata\"=\"Q112875867\"][\"operator\"=\"Batopin\"][\"operator:wikidata\"=\"Q97142699\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -254,7 +254,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "atm",
+   group: getTranslation('atm'),
     title: "Bitcoin Depot",
     query: "(nwr[\"amenity\"=\"atm\"][\"brand\"=\"Bitcoin Depot\"][\"brand:wikidata\"=\"Q109824499\"][\"currency:XBT\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -290,7 +290,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "atm",
+   group: getTranslation('atm'),
     title: "Cardtronics",
     query: "(nwr[\"amenity\"=\"atm\"][\"brand\"=\"Cardtronics\"][\"brand:wikidata\"=\"Q50239180\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -326,7 +326,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "atm",
+   group: getTranslation('atm'),
     title: "Cash Express",
     query: "(nwr[\"amenity\"=\"atm\"][\"brand\"=\"Cash Express\"][\"brand:wikidata\"=\"Q130262361\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -362,7 +362,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "atm",
+   group: getTranslation('atm'),
     title: "Cashzone",
     query: "(nwr[\"amenity\"=\"atm\"][\"brand\"=\"Cashzone\"][\"brand:wikidata\"=\"Q110738461\"][\"network\"=\"Allpoint\"][\"network:wikidata\"=\"Q4733264\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -398,7 +398,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "atm",
+   group: getTranslation('atm'),
     title: "Chime",
     query: "(nwr[\"amenity\"=\"atm\"][\"brand\"=\"Chime\"][\"brand:wikidata\"=\"Q85752013\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Chime_company_logo.svg",
@@ -434,7 +434,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "atm",
+   group: getTranslation('atm'),
     title: "China UnionPay",
     query: "(nwr[\"amenity\"=\"atm\"][\"brand\"=\"China UnionPay\"][\"brand:wikidata\"=\"Q719625\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/UnionPay_logo.svg",
@@ -470,7 +470,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "atm",
+   group: getTranslation('atm'),
     title: "CO-OP Financial Services",
     query: "(nwr[\"amenity\"=\"atm\"][\"brand\"=\"CO-OP Financial Services\"][\"brand:wikidata\"=\"Q5013238\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -506,7 +506,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "atm",
+   group: getTranslation('atm'),
     title: "CoinFlip",
     query: "(nwr[\"amenity\"=\"atm\"][\"brand\"=\"CoinFlip\"][\"brand:wikidata\"=\"Q109850256\"][\"currency:XBT\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -542,7 +542,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "atm",
+   group: getTranslation('atm'),
     title: "Coinhub",
     query: "(nwr[\"amenity\"=\"atm\"][\"brand\"=\"Coinhub\"][\"brand:wikidata\"=\"Q126195855\"][\"currency:XBT\"=\"yes\"][\"name\"=\"Coinhub\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -578,7 +578,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "atm",
+   group: getTranslation('atm'),
     title: "Coinsource",
     query: "(nwr[\"amenity\"=\"atm\"][\"brand\"=\"Coinsource\"][\"brand:wikidata\"=\"Q109850339\"][\"currency:XBT\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -614,7 +614,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "atm",
+   group: getTranslation('atm'),
     title: "Cryptobase",
     query: "(nwr[\"amenity\"=\"atm\"][\"brand\"=\"Cryptobase\"][\"brand:wikidata\"=\"Q122453754\"][\"currency:XBT\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -650,7 +650,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "atm",
+   group: getTranslation('atm'),
     title: "Deutsche Post",
     query: "(nwr[\"amenity\"=\"atm\"][\"brand\"=\"Deutsche Post\"][\"brand:wikidata\"=\"Q157645\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Deutsche_Post_DHL.svg",
@@ -686,7 +686,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "atm",
+   group: getTranslation('atm'),
     title: "EasyPay",
     query: "(nwr[\"amenity\"=\"atm\"][\"brand\"=\"EasyPay\"][\"brand:wikidata\"=\"Q110583289\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -722,7 +722,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "atm",
+   group: getTranslation('atm'),
     title: "Euronet",
     query: "(nwr[\"amenity\"=\"atm\"][\"brand\"=\"Euronet\"][\"brand:wikidata\"=\"Q5412010\"][\"operator\"=\"Euronet\"][\"operator:wikidata\"=\"Q5412010\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Euronet_Worldwide_logo.svg",
@@ -758,7 +758,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "atm",
+   group: getTranslation('atm'),
     title: "Geldmaat",
     query: "(nwr[\"amenity\"=\"atm\"][\"brand\"=\"Geldmaat\"][\"brand:wikidata\"=\"Q74051230\"][\"operator\"=\"Geldmaat\"][\"operator:wikidata\"=\"Q74051230\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Geldmaat_logo.png",
@@ -794,7 +794,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "atm",
+   group: getTranslation('atm'),
     title: "Hitachi Money Spot ATM",
     query: "(nwr[\"amenity\"=\"atm\"][\"brand\"=\"Hitachi\"][\"brand:wikidata\"=\"Q53238\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Hitachi_2025_logo.svg",
@@ -830,7 +830,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "atm",
+   group: getTranslation('atm'),
     title: "Instacoin",
     query: "(nwr[\"amenity\"=\"atm\"][\"brand\"=\"Instacoin\"][\"brand:wikidata\"=\"Q133247271\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -866,7 +866,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "atm",
+   group: getTranslation('atm'),
     title: "LibertyX",
     query: "(nwr[\"amenity\"=\"atm\"][\"brand\"=\"LibertyX\"][\"brand:wikidata\"=\"Q109287417\"][\"currency:XBT\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -902,7 +902,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "atm",
+   group: getTranslation('atm'),
     title: "MEPS",
     query: "(nwr[\"amenity\"=\"atm\"][\"brand\"=\"MEPS\"][\"brand:wikidata\"=\"Q6741957\"][\"operator\"=\"MEPS\"][\"operator:wikidata\"=\"Q6741957\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/MEPS_New_Logo.png",
@@ -938,7 +938,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "atm",
+   group: getTranslation('atm'),
     title: "MoneyGet",
     query: "(nwr[\"amenity\"=\"atm\"][\"brand\"=\"MoneyGet\"][\"brand:wikidata\"=\"Q125808866\"][\"operator\"=\"Payten\"][\"operator:wikidata\"=\"Q125808773\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Moneyget_logo.svg",
@@ -974,7 +974,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "atm",
+   group: getTranslation('atm'),
     title: "MoneyPass",
     query: "(nwr[\"amenity\"=\"atm\"][\"brand\"=\"MoneyPass\"][\"brand:wikidata\"=\"Q28447513\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -1010,7 +1010,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "atm",
+   group: getTranslation('atm'),
     title: "NoteMachine",
     query: "(nwr[\"amenity\"=\"atm\"][\"brand\"=\"NoteMachine\"][\"brand:wikidata\"=\"Q104368525\"][\"operator\"=\"NoteMachine\"][\"operator:short\"=\"NMATM\"][\"operator:wikidata\"=\"Q104368525\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -1046,7 +1046,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "atm",
+   group: getTranslation('atm'),
     title: "Old Mutual",
     query: "(nwr[\"amenity\"=\"atm\"][\"brand\"=\"Old Mutual\"][\"brand:wikidata\"=\"Q289704\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/1_Mutual_Place.jpg",
@@ -1082,7 +1082,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "atm",
+   group: getTranslation('atm'),
     title: "Pathward (MetaBank)",
     query: "(nwr[\"amenity\"=\"atm\"][\"brand\"=\"Pathward\"][\"brand:wikidata\"=\"Q6822267\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -1118,7 +1118,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "atm",
+   group: getTranslation('atm'),
     title: "Planet Cash",
     query: "(nwr[\"amenity\"=\"atm\"][\"brand\"=\"Planet Cash\"][\"brand:wikidata\"=\"Q117744569\"][\"operator\"=\"ITCARD S.A.\"][\"operator:wikidata\"=\"Q97183761\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -1154,7 +1154,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "atm",
+   group: getTranslation('atm'),
     title: "Post Office",
     query: "(nwr[\"amenity\"=\"atm\"][\"brand\"=\"Post Office\"][\"brand:wikidata\"=\"Q1783168\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Post_Office_Logo_RGB.png",
@@ -1190,7 +1190,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "atm",
+   group: getTranslation('atm'),
     title: "Postamat",
     query: "(nwr[\"amenity\"=\"atm\"][\"brand\"=\"Postamat\"][\"brand:wikidata\"=\"Q3909447\"][\"operator\"=\"Poste Italiane\"][\"operator:wikidata\"=\"Q495026\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Postamat.jpg",
@@ -1226,7 +1226,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "atm",
+   group: getTranslation('atm'),
     title: "Postomat",
     query: "(nwr[\"amenity\"=\"atm\"][\"brand\"=\"Postomat\"][\"brand:wikidata\"=\"Q449233\"][\"operator\"=\"PostFinance\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/PostFinance_Logo.svg",
@@ -1262,7 +1262,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "atm",
+   group: getTranslation('atm'),
     title: "RockItCoin",
     query: "(nwr[\"amenity\"=\"atm\"][\"brand\"=\"RockItCoin\"][\"brand:wikidata\"=\"Q125924689\"][\"currency:XBT\"=\"yes\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -1298,7 +1298,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "atm",
+   group: getTranslation('atm'),
     title: "Sainsbury's Bank",
     query: "(nwr[\"amenity\"=\"atm\"][\"brand\"=\"Sainsbury's Bank\"][\"brand:wikidata\"=\"Q7400525\"][\"operator\"=\"Sainsbury's Bank\"][\"operator:wikidata\"=\"Q7400525\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -1334,7 +1334,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "atm",
+   group: getTranslation('atm'),
     title: "Tesco Bank",
     query: "(nwr[\"amenity\"=\"atm\"][\"brand\"=\"Tesco Bank\"][\"brand:wikidata\"=\"Q487494\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Tesco_logo.png",
@@ -1370,7 +1370,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "atm",
+   group: getTranslation('atm'),
     title: "\u0422\u0438\u043d\u044c\u043a\u043e\u0444\u0444 \u0411\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"atm\"][\"brand\"=\"\u0422\u0438\u043d\u044c\u043a\u043e\u0444\u0444 \u0411\u0430\u043d\u043a\"][\"brand:en\"=\"Tinkoff Bank\"][\"brand:fa\"=\"\u0628\u0627\u0646\u06a9 \u062a\u06cc\u0646\u06a9\u0648\u0641\"][\"brand:he\"=\"\u05d1\u05e0\u05e7 \u05d8\u05d9\u05e0\u05e7\u05d5\u05e3\"][\"brand:ru\"=\"\u0422\u0438\u043d\u044c\u043a\u043e\u0444\u0444 \u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q4457878\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/T-Bank_RU_logo.svg",
@@ -1406,7 +1406,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "atm",
+   group: getTranslation('atm'),
     title: "\u4e2d\u83ef\u90f5\u653f",
     query: "(nwr[\"alt_name\"=\"\u4e2d\u83ef\u90f5\u653f;\u90f5\u5c40\"][\"amenity\"=\"atm\"][\"brand\"=\"\u4e2d\u83ef\u90f5\u653f\"][\"brand:en\"=\"Chunghwa Post\"][\"brand:nan\"=\"Tiong-h\u00f4a I\u00fb-ch\u00e8ng\"][\"brand:nan-Hant\"=\"\u4e2d\u83ef\u90f5\u653f\"][\"brand:nan-Latn-pehoeji\"=\"Tiong-h\u00f4a I\u00fb-ch\u00e8ng\"][\"brand:nan-Latn-tailo\"=\"Tiong-hu\u00e2 I\u00fb-ts\u00ecng\"][\"brand:wikidata\"=\"Q709259\"][\"brand:zh\"=\"\u4e2d\u83ef\u90f5\u653f\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Chunghwa_Post_Logo.svg",
@@ -1442,7 +1442,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "1st Security Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"1st Security Bank\"][\"brand:wikidata\"=\"Q116890483\"][\"name\"=\"1st Security Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -1478,7 +1478,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "3 Banka",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"3 \u0411\u0430\u043d\u043a\u0430\"][\"brand:sr\"=\"3 \u0411\u0430\u043d\u043a\u0430\"][\"brand:sr-Latn\"=\"3 Banka\"][\"brand:wikidata\"=\"Q114345230\"][\"name\"=\"3 \u0411\u0430\u043d\u043a\u0430\"][\"name:en\"=\"3 Bank\"][\"name:sr\"=\"3 \u0411\u0430\u043d\u043a\u0430\"][\"name:sr-Latn\"=\"3 Banka\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/3_Bank_logo.svg",
@@ -1514,7 +1514,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "365.bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"365.bank\"][\"brand:wikidata\"=\"Q7237158\"][\"name\"=\"365.bank\"][\"official_name\"=\"365.bank, a.s.\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/365.bank.png",
@@ -1550,7 +1550,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Aargauische Kantonalbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Aargauische Kantonalbank\"][\"brand:wikidata\"=\"Q301269\"][\"name\"=\"Aargauische Kantonalbank\"][\"short_name\"=\"AKB\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Aargauische_Kantonalbank_logo.svg",
@@ -1586,7 +1586,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Abanca",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Abanca\"][\"brand:wikidata\"=\"Q9598744\"][\"name\"=\"Abanca\"][\"official_name\"=\"ABANCA Corporaci\u00f3n Bancaria\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Abanca_logo.svg",
@@ -1622,7 +1622,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "ABN AMRO",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"ABN AMRO\"][\"brand:wikidata\"=\"Q287471\"][\"name\"=\"ABN AMRO\"][\"official_name\"=\"ABN AMRO Bank N.V.\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/ABN-AMRO_Logo_new_colors.svg",
@@ -1658,7 +1658,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "ABN AMRO MeesPierson",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"ABN AMRO MeesPierson\"][\"brand:wikidata\"=\"Q2348251\"][\"name\"=\"ABN AMRO MeesPierson\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Kneuterfijk,_kantoor_Mees_&_Hope.JPG",
@@ -1694,7 +1694,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Abound Credit Union",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Abound Credit Union\"][\"brand:wikidata\"=\"Q110677059\"][\"name\"=\"Abound Credit Union\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -1730,7 +1730,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Absa (Ghana)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Absa\"][\"brand:wikidata\"=\"Q58641733\"][\"name\"=\"Absa\"][\"operator\"=\"Absa Bank Ghana Limited\"][\"operator:type\"=\"public\"][\"operator:wikidata\"=\"Q96371413\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Absa_Logo.svg",
@@ -1766,7 +1766,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "ABSA (South Africa)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"ABSA\"][\"brand:wikidata\"=\"Q58641733\"][\"name\"=\"ABSA\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Absa_Logo.svg",
@@ -1802,7 +1802,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Abu Dhabi Commercial Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Abu Dhabi Commercial Bank\"][\"brand:en\"=\"Abu Dhabi Commercial Bank\"][\"brand:wikidata\"=\"Q4670123\"][\"name\"=\"Abu Dhabi Commercial Bank\"][\"name:en\"=\"Abu Dhabi Commercial Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Abu_Dhabi_Commercial_Bank_logo.svg",
@@ -1838,7 +1838,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Abu Dhabi Islamic Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Abu Dhabi Islamic Bank\"][\"brand:ar\"=\"\u0645\u0635\u0631\u0641 \u0627\u0628\u0648\u0638\u0628\u064a \u0627\u0644\u0627\u0633\u0644\u0627\u0645\u064a\"][\"brand:en\"=\"Abu Dhabi Islamic Bank\"][\"brand:wikidata\"=\"Q4670141\"][\"name\"=\"Abu Dhabi Islamic Bank\"][\"name:ar\"=\"\u0645\u0635\u0631\u0641 \u0627\u0628\u0648\u0638\u0628\u064a \u0627\u0644\u0627\u0633\u0644\u0627\u0645\u064a\"][\"name:en\"=\"Abu Dhabi Islamic Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -1874,7 +1874,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "ACBA",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0531\u053f\u0532\u0531\"][\"brand:en\"=\"ACBA\"][\"brand:hy\"=\"\u0531\u053f\u0532\u0531\"][\"brand:ru\"=\"\u0410\u041a\u0411\u0410\"][\"brand:wikidata\"=\"Q55602923\"][\"name\"=\"\u0531\u053f\u0532\u0531\"][\"name:en\"=\"ACBA\"][\"name:hy\"=\"\u0531\u053f\u0532\u0531\"][\"name:ru\"=\"\u0410\u041a\u0411\u0410\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Acba-bank-logo.jpg",
@@ -1910,7 +1910,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Access Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Access Bank\"][\"brand:wikidata\"=\"Q4672418\"][\"name\"=\"Access Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Accessbank1.png",
@@ -1946,7 +1946,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "ActivoBank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"ActivoBank\"][\"brand:wikidata\"=\"Q9581725\"][\"name\"=\"ActivoBank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/ActivoBank_Logo.png",
@@ -1982,7 +1982,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "ADB (Ghana)",
     query: "(nwr[\"alt_name\"=\"Agricultural Development Bank\"][\"amenity\"=\"bank\"][\"brand\"=\"ADB\"][\"brand:wikidata\"=\"Q4693885\"][\"name\"=\"ADB\"][\"operator\"=\"Agricultural Development Bank of Ghana\"][\"operator:type\"=\"parastatal\"][\"operator:wikidata\"=\"Q4693885\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -2018,7 +2018,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Addiko Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Addiko Bank\"][\"brand:wikidata\"=\"Q27926559\"][\"name\"=\"Addiko Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Addiko_Bank_Logo.svg",
@@ -2054,7 +2054,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Affin Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Affin Bank\"][\"brand:wikidata\"=\"Q4688929\"][\"name\"=\"Affin Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Affin_Bank_logo.svg",
@@ -2090,7 +2090,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Affinity Credit Union",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Affinity Credit Union\"][\"brand:wikidata\"=\"Q4688969\"][\"name\"=\"Affinity Credit Union\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Affinity_Credit_Union_logo.svg",
@@ -2126,7 +2126,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "African Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"African Bank\"][\"brand:wikidata\"=\"Q4689703\"][\"name\"=\"African Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -2162,7 +2162,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Agibank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Agibank\"][\"brand:wikidata\"=\"Q51882324\"][\"name\"=\"Agibank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_do_Agibank.svg",
@@ -2198,7 +2198,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Agram banka",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Agram banka\"][\"brand:wikidata\"=\"Q125756504\"][\"name\"=\"Agram banka\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Agram_banka_-_logo.png",
@@ -2234,7 +2234,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Agribank (USA)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Agribank\"][\"brand:wikidata\"=\"Q4693829\"][\"name\"=\"Agribank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/AgriBank-logo.png",
@@ -2270,7 +2270,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Agribank (Vi\u1ec7t Nam)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Agribank\"][\"brand:wikidata\"=\"Q1924723\"][\"name\"=\"Agribank\"][\"official_name\"=\"Ng\u00e2n h\u00e0ng N\u00f4ng nghi\u1ec7p v\u00e0 Ph\u00e1t tri\u1ec3n N\u00f4ng th\u00f4n Vi\u1ec7t Nam\"][\"official_name:en\"=\"Vietnam Bank for Agriculture and Rural Development\"][\"official_name:vi\"=\"Ng\u00e2n h\u00e0ng N\u00f4ng nghi\u1ec7p v\u00e0 Ph\u00e1t tri\u1ec3n N\u00f4ng th\u00f4n Vi\u1ec7t Nam\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -2306,7 +2306,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Agribank (Zimbabwe)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Agribank\"][\"brand:wikidata\"=\"Q4693887\"][\"name\"=\"Agribank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -2342,7 +2342,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Agrobank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Agrobank\"][\"brand:wikidata\"=\"Q4694216\"][\"name\"=\"Agrobank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Agrobank_Malaysia_Logo.svg",
@@ -2378,7 +2378,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "AIB",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"AIB\"][\"brand:wikidata\"=\"Q1642179\"][\"name\"=\"AIB\"][\"official_name\"=\"Allied Irish Banks\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/AIB_Bank_Centre.JPG",
@@ -2414,7 +2414,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "AIK banka",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"AIK banka\"][\"brand:wikidata\"=\"Q293650\"][\"name\"=\"AIK banka\"][\"name:en\"=\"AIK bank\"][\"name:sr\"=\"\u0410\u0418\u041a \u0431\u0430\u043d\u043a\u0430\"][\"name:sr-Latn\"=\"AIK banka\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -2450,7 +2450,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Air Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Air Bank\"][\"brand:wikidata\"=\"Q10723691\"][\"name\"=\"Air Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/AB_Logo_200percent_PPF_RGB.png",
@@ -2486,7 +2486,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Akbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Akbank\"][\"brand:wikidata\"=\"Q416624\"][\"name\"=\"Akbank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Akbank_logo.svg",
@@ -2522,7 +2522,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Akfinans Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Akfinans Bank\"][\"brand:wikidata\"=\"Q31188674\"][\"name\"=\"Akfinans Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -2558,7 +2558,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Aktia",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Aktia\"][\"brand:wikidata\"=\"Q4353753\"][\"name\"=\"Aktia\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Aktia-logo.png",
@@ -2594,7 +2594,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Al Ahli Bank of Kuwait",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Al Ahli Bank of Kuwait\"][\"brand:ar\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0623\u0647\u0644\u064a \u0627\u0644\u0643\u0648\u064a\u062a\u064a\"][\"brand:en\"=\"Al Ahli Bank of Kuwait\"][\"brand:wikidata\"=\"Q12184633\"][\"name\"=\"Al Ahli Bank of Kuwait\"][\"name:ar\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0623\u0647\u0644\u064a \u0627\u0644\u0643\u0648\u064a\u062a\u064a\"][\"name:en\"=\"Al Ahli Bank of Kuwait\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/ABK_Logo.svg",
@@ -2630,7 +2630,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u00c5landsbanken",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u00c5landsbanken\"][\"brand:wikidata\"=\"Q4349236\"][\"name\"=\"\u00c5landsbanken\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/\u00c5landsbanken-logotype.svg",
@@ -2666,7 +2666,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Alexbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Alexbank\"][\"brand:ar\"=\"\u0628\u0646\u0643 \u0627\u0644\u0627\u0633\u0643\u0646\u062f\u0631\u064a\u0647\"][\"brand:en\"=\"Alexbank\"][\"brand:wikidata\"=\"Q4856020\"][\"name\"=\"Alexbank\"][\"name:ar\"=\"\u0628\u0646\u0643 \u0627\u0644\u0627\u0633\u0643\u0646\u062f\u0631\u064a\u0647\"][\"name:en\"=\"Alexbank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Alex_Bank_Logo.svg",
@@ -2702,7 +2702,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Alior Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Alior Bank\"][\"brand:wikidata\"=\"Q9148395\"][\"name\"=\"Alior Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Poznanska_street_warsaw,_alior_bank_MG_2932.JPG",
@@ -2738,7 +2738,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Allahabad Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Allahabad Bank\"][\"brand:wikidata\"=\"Q2018840\"][\"name\"=\"Allahabad Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -2774,7 +2774,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Alliance Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Alliance Bank\"][\"brand:wikidata\"=\"Q16827441\"][\"name\"=\"Alliance Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Alliance_Bank_(Taman_Nusa_Bestari).jpg",
@@ -2810,7 +2810,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Allianz",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Allianz\"][\"brand:wikidata\"=\"Q487292\"][\"name\"=\"Allianz\"][\"name:bg\"=\"\u0410\u043b\u0438\u0430\u043d\u0446\"][\"name:en\"=\"Allianz\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Allianz.svg",
@@ -2846,7 +2846,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Allied Bank (Pakistan)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Allied Bank Limited\"][\"brand:en\"=\"Allied Bank Limited\"][\"brand:ur\"=\"\u0627\u0644\u0627\u0626\u06cc\u0688 \u0628\u06cc\u0646\u06a9 \u0644\u0645\u06cc\u0679\u0688\"][\"brand:wikidata\"=\"Q4732553\"][\"name\"=\"Allied Bank\"][\"name:en\"=\"Allied Bank\"][\"name:ur\"=\"\u0627\u0644\u0627\u0626\u06cc\u0688 \u0628\u06cc\u0646\u06a9\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Allied_Bank_of_Pakistan_(ABL_Tehsil_Road,_Okara_Branch)_-_panoramio.jpg",
@@ -2882,7 +2882,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Allied Bank (Philippines)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Allied Bank\"][\"brand:wikidata\"=\"Q4732555\"][\"name\"=\"Allied Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Allied_Bank_logo.svg",
@@ -2918,7 +2918,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Almora Urban Cooperative Bank Limited",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Almora Urban Cooperative Bank Limited\"][\"brand:wikidata\"=\"Q74121721\"][\"name\"=\"Almora Urban Cooperative Bank Limited\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -2954,7 +2954,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Alpha Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Alpha Bank\"][\"brand:wikidata\"=\"Q747394\"][\"name\"=\"Alpha Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Alpha_Bank_logo.svg",
@@ -2990,7 +2990,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Alterna Savings",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Alterna Savings\"][\"brand:wikidata\"=\"Q4736322\"][\"name\"=\"Alterna Savings\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Alterna_Savings_logo.svg",
@@ -3026,7 +3026,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Alternatif Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Alternatif Bank\"][\"brand:wikidata\"=\"Q4736403\"][\"name\"=\"Alternatif Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Alternatif_Bank_logo.png",
@@ -3062,7 +3062,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "AmBank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"AmBank\"][\"brand:wikidata\"=\"Q4132947\"][\"name\"=\"AmBank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/AmBank_group.svg",
@@ -3098,7 +3098,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Amegy Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Amegy Bank of Texas\"][\"brand:wikidata\"=\"Q4742155\"][\"name\"=\"Amegy Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Amegy_Bank_logo.jpg",
@@ -3134,7 +3134,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "AMEN",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"AMEN\"][\"brand:wikidata\"=\"Q2842699\"][\"name\"=\"AMEN\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Tunisie_Amen_Banque.JPG",
@@ -3170,7 +3170,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Ameriabank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0531\u0574\u0565\u0580\u056b\u0561\u0562\u0561\u0576\u056f\"][\"brand:en\"=\"Ameriabank\"][\"brand:hy\"=\"\u0531\u0574\u0565\u0580\u056b\u0561\u0562\u0561\u0576\u056f\"][\"brand:ru\"=\"\u0410\u043c\u0435\u0440\u0438\u0430\u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q4742492\"][\"name\"=\"\u0531\u0574\u0565\u0580\u056b\u0561\u0562\u0561\u0576\u056f\"][\"name:en\"=\"Ameriabank\"][\"name:hy\"=\"\u0531\u0574\u0565\u0580\u056b\u0561\u0562\u0561\u0576\u056f\"][\"name:ru\"=\"\u0410\u043c\u0435\u0440\u0438\u0430\u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -3206,7 +3206,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "America First Credit Union",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"America First Credit Union\"][\"brand:wikidata\"=\"Q4742758\"][\"name\"=\"America First Credit Union\"][\"short_name\"=\"AFCU\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -3242,7 +3242,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Ameris Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Ameris Bank\"][\"brand:wikidata\"=\"Q124102372\"][\"name\"=\"Ameris Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -3278,7 +3278,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "AMP",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"AMP\"][\"brand:wikidata\"=\"Q295261\"][\"name\"=\"AMP\"][\"official_name\"=\"AMP Limited\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/AMP_Logo.svg",
@@ -3314,7 +3314,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Anadolubank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Anadolubank\"][\"brand:wikidata\"=\"Q4750773\"][\"name\"=\"Anadolubank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Anadolubank_logo.svg",
@@ -3350,7 +3350,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Andhra Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Andhra Bank\"][\"brand:wikidata\"=\"Q2003476\"][\"name\"=\"Andhra Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Andhra_bank.svg",
@@ -3386,7 +3386,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Andhra Pradesh Grameena Vikas Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Andhra Pradesh Grameena Vikas Bank\"][\"brand:en\"=\"Andhra Pradesh Grameena Vikas Bank\"][\"brand:te\"=\"\u0c06\u0c02\u0c27\u0c4d\u0c30\u200c\u0c2a\u0c4d\u0c30\u200c\u0c26\u0c47\u0c36\u0c4d \u0c17\u0c4d\u0c30\u0c3e\u0c2e\u0c40\u0c23 \u0c35\u0c3f\u0c15\u0c3e\u0c38\u0c4d \u0c2c\u0c4d\u0c2f\u0c3e\u0c02\u0c15\u0c4d\"][\"brand:wikidata\"=\"Q18109664\"][\"name\"=\"Andhra Pradesh Grameena Vikas Bank\"][\"name:en\"=\"Andhra Pradesh Grameena Vikas Bank\"][\"name:te\"=\"\u0c06\u0c02\u0c27\u0c4d\u0c30\u200c\u0c2a\u0c4d\u0c30\u200c\u0c26\u0c47\u0c36\u0c4d \u0c17\u0c4d\u0c30\u0c3e\u0c2e\u0c40\u0c23 \u0c35\u0c3f\u0c15\u0c3e\u0c38\u0c4d \u0c2c\u0c4d\u0c2f\u0c3e\u0c02\u0c15\u0c4d\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/AP_Grameena_Vikas_Bank.jpg",
@@ -3422,7 +3422,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Androscoggin Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Androscoggin Bank\"][\"brand:wikidata\"=\"Q104865424\"][\"name\"=\"Androscoggin Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Androscoggin_Bank.svg",
@@ -3458,7 +3458,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "ANZ",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"ANZ\"][\"brand:wikidata\"=\"Q714641\"][\"name\"=\"ANZ\"][\"official_name\"=\"Australia and New Zealand Banking Group Limited\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/ANZ-Logo-2009.svg",
@@ -3494,7 +3494,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Appenzeller Kantonalbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Appenzeller Kantonalbank\"][\"brand:wikidata\"=\"Q620963\"][\"name\"=\"Appenzeller Kantonalbank\"][\"short_name\"=\"APPKB\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Appenzeller_Kantonalbank.svg",
@@ -3530,7 +3530,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Apple Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Apple Bank\"][\"brand:wikidata\"=\"Q4781125\"][\"name\"=\"Apple Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Central_Savings_Bank_Amst_Av_jeh.JPG",
@@ -3566,7 +3566,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Arab African International Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Arab African International Bank\"][\"brand:ar\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0639\u0631\u0628\u064a \u0627\u0644\u0625\u0641\u0631\u064a\u0642\u064a \u0627\u0644\u062f\u0648\u0644\u064a\"][\"brand:en\"=\"Arab African International Bank\"][\"brand:wikidata\"=\"Q126391861\"][\"name\"=\"Arab African International Bank\"][\"name:ar\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0639\u0631\u0628\u064a \u0627\u0644\u0625\u0641\u0631\u064a\u0642\u064a \u0627\u0644\u062f\u0648\u0644\u064a\"][\"name:en\"=\"Arab African International Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -3602,7 +3602,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Araratbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0531\u0580\u0561\u0580\u0561\u057f\u0562\u0561\u0576\u056f\"][\"brand:en\"=\"Araratbank\"][\"brand:hy\"=\"\u0531\u0580\u0561\u0580\u0561\u057f\u0562\u0561\u0576\u056f\"][\"brand:ru\"=\"\u0410\u0440\u0430\u0440\u0430\u0442\u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q56000968\"][\"name\"=\"\u0531\u0580\u0561\u0580\u0561\u057f\u0562\u0561\u0576\u056f\"][\"name:en\"=\"Araratbank\"][\"name:hy\"=\"\u0531\u0580\u0561\u0580\u0561\u057f\u0562\u0561\u0576\u056f\"][\"name:ru\"=\"\u0410\u0440\u0430\u0440\u0430\u0442\u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/\u0533\u056c\u056d\u0561\u0574\u0561\u057d,_\u0584.\u0535\u0580\u0587\u0561\u0576,_\u054a\u0578\u0582\u0577\u056f\u056b\u0576\u056b_19.jpg",
@@ -3638,7 +3638,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Ardshinbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0531\u0580\u0564\u0577\u056b\u0576\u0562\u0561\u0576\u056f\"][\"brand:en\"=\"Ardshinbank\"][\"brand:hy\"=\"\u0531\u0580\u0564\u0577\u056b\u0576\u0562\u0561\u0576\u056f\"][\"brand:ru\"=\"\u0410\u0440\u0434\u0448\u0438\u043d\u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q4787755\"][\"name\"=\"\u0531\u0580\u0564\u0577\u056b\u0576\u0562\u0561\u0576\u056f\"][\"name:en\"=\"Ardshinbank\"][\"name:hy\"=\"\u0531\u0580\u0564\u0577\u056b\u0576\u0562\u0561\u0576\u056f\"][\"name:ru\"=\"\u0410\u0440\u0434\u0448\u0438\u043d\u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Ardshinbank_Logo.png",
@@ -3674,7 +3674,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Argenta",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Argenta\"][\"brand:wikidata\"=\"Q932856\"][\"name\"=\"Argenta\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/20190922_204_waremme_(cropped).jpg",
@@ -3710,7 +3710,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Armbusinessbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0540\u0561\u0575\u0562\u056b\u0566\u0576\u0565\u057d\u0562\u0561\u0576\u056f\"][\"brand:en\"=\"Armbusinessbank\"][\"brand:hy\"=\"\u0540\u0561\u0575\u0562\u056b\u0566\u0576\u0565\u057d\u0562\u0561\u0576\u056f\"][\"brand:ru\"=\"\u0410\u0440\u043c\u0431\u0438\u0437\u043d\u0435\u0441\u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q111109064\"][\"name\"=\"\u0540\u0561\u0575\u0562\u056b\u0566\u0576\u0565\u057d\u0562\u0561\u0576\u056f\"][\"name:en\"=\"Armbusinessbank\"][\"name:hy\"=\"\u0540\u0561\u0575\u0562\u056b\u0566\u0576\u0565\u057d\u0562\u0561\u0576\u056f\"][\"name:ru\"=\"\u0410\u0440\u043c\u0431\u0438\u0437\u043d\u0435\u0441\u0431\u0430\u043d\u043a\"][\"short_name\"=\"\u0540\u0532\u0532\"][\"short_name:en\"=\"ABB\"][\"short_name:hy\"=\"\u0540\u0532\u0532\"][\"short_name:ru\"=\"\u0410\u0411\u0411\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Internacia_Flughaveno_Zvartnoc_06.jpg",
@@ -3746,7 +3746,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Armeconombank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0540\u0561\u0575\u0567\u056f\u0578\u0576\u0578\u0574\u0562\u0561\u0576\u056f\"][\"brand:en\"=\"Armeconombank\"][\"brand:hy\"=\"\u0540\u0561\u0575\u0567\u056f\u0578\u0576\u0578\u0574\u0562\u0561\u0576\u056f\"][\"brand:ru\"=\"\u0410\u0440\u043c\u044d\u043a\u043e\u043d\u043e\u043c\u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q60609529\"][\"name\"=\"\u0540\u0561\u0575\u0567\u056f\u0578\u0576\u0578\u0574\u0562\u0561\u0576\u056f\"][\"name:en\"=\"Armeconombank\"][\"name:hy\"=\"\u0540\u0561\u0575\u0567\u056f\u0578\u0576\u0578\u0574\u0562\u0561\u0576\u056f\"][\"name:ru\"=\"\u0410\u0440\u043c\u044d\u043a\u043e\u043d\u043e\u043c\u0431\u0430\u043d\u043a\"][\"short_name\"=\"\u0540\u0537\u0532\"][\"short_name:en\"=\"AEB\"][\"short_name:hy\"=\"\u0540\u0537\u0532\"][\"short_name:ru\"=\"\u0410\u042d\u0411\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Armeconombank.jpg",
@@ -3782,7 +3782,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "ArmSwissBank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0531\u0580\u0574\u057d\u057e\u056b\u057d\u0562\u0561\u0576\u056f\"][\"brand:en\"=\"ArmSwissBank\"][\"brand:hy\"=\"\u0531\u0580\u0574\u057d\u057e\u056b\u057d\u0562\u0561\u0576\u056f\"][\"brand:ru\"=\"\u0410\u0440\u043c\u0441\u0432\u0438\u0441\u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q4792453\"][\"name\"=\"\u0531\u0580\u0574\u057d\u057e\u056b\u057d\u0562\u0561\u0576\u056f\"][\"name:en\"=\"ArmSwissBank\"][\"name:hy\"=\"\u0531\u0580\u0574\u057d\u057e\u056b\u057d\u0562\u0561\u0576\u056f\"][\"name:ru\"=\"\u0410\u0440\u043c\u0441\u0432\u0438\u0441\u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Armswiss.png",
@@ -3818,7 +3818,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Artsakhbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0531\u0580\u0581\u0561\u056d\u0562\u0561\u0576\u056f\"][\"brand:en\"=\"Artsakhbank\"][\"brand:hy\"=\"\u0531\u0580\u0581\u0561\u056d\u0562\u0561\u0576\u056f\"][\"brand:ru\"=\"\u0410\u0440\u0446\u0430\u0445\u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q4070920\"][\"name\"=\"\u0531\u0580\u0581\u0561\u056d\u0562\u0561\u0576\u056f\"][\"name:en\"=\"Artsakhbank\"][\"name:hy\"=\"\u0531\u0580\u0581\u0561\u056d\u0562\u0561\u0576\u056f\"][\"name:ru\"=\"\u0410\u0440\u0446\u0430\u0445\u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Yerevan_-_Artsakhbank,_Arshakunyats_Avenue_(2018).jpg",
@@ -3854,7 +3854,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Arvest Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Arvest Bank\"][\"brand:wikidata\"=\"Q4802393\"][\"name\"=\"Arvest Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Arvest_Bank_Logo.png",
@@ -3890,7 +3890,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "ASB Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"ASB Bank\"][\"brand:wikidata\"=\"Q297214\"][\"name\"=\"ASB Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/ASB_Bank_Logo.svg",
@@ -3926,7 +3926,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Asbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Asbank\"][\"brand:wikidata\"=\"Q31188675\"][\"name\"=\"Asbank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -3962,7 +3962,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Asia United Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Asia United Bank\"][\"brand:wikidata\"=\"Q4806482\"][\"name\"=\"Asia United Bank\"][\"short_name\"=\"AUB\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Asia_United_Bank_logo.svg",
@@ -3998,7 +3998,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Askari Bank (\u0639\u0633\u06a9\u0631\u06cc \u0628\u06cc\u0646\u06a9)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Askari Bank\"][\"brand:en\"=\"Askari Bank\"][\"brand:ur\"=\"\u0639\u0633\u06a9\u0631\u06cc \u0628\u06cc\u0646\u06a9\"][\"brand:wikidata\"=\"Q4807137\"][\"name\"=\"Askari Bank\"][\"name:en\"=\"Askari Bank\"][\"name:ur\"=\"\u0639\u0633\u06a9\u0631\u06cc \u0628\u06cc\u0646\u06a9\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -4034,7 +4034,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Assam Gramin Vikash Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Assam Gramin Vikash Bank\"][\"brand:wikidata\"=\"Q24041756\"][\"name\"=\"Assam Gramin Vikash Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -4070,7 +4070,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Associated Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Associated Bank\"][\"brand:wikidata\"=\"Q4809155\"][\"name\"=\"Associated Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -4106,7 +4106,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "ATB Financial",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"ATB Financial\"][\"brand:wikidata\"=\"Q298762\"][\"name\"=\"ATB Financial\"][\"official_name\"=\"Alberta Treasury Branches\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/ATB_Financial_logo.svg",
@@ -4142,7 +4142,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Atlantic Union Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Atlantic Union Bank\"][\"brand:wikidata\"=\"Q5453249\"][\"name\"=\"Atlantic Union Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -4178,7 +4178,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Attijariwafa Bank (\u0627\u0644\u062a\u062c\u0627\u0631\u064a \u0648\u0641\u0627 \u0628\u0646\u0643)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Attijariwafa Bank\"][\"brand:ar\"=\"\u0627\u0644\u062a\u062c\u0627\u0631\u064a \u0648\u0641\u0627 \u0628\u0646\u0643\"][\"brand:en\"=\"Attijariwafa Bank\"][\"brand:wikidata\"=\"Q758052\"][\"name:ar\"=\"\u0627\u0644\u062a\u062c\u0627\u0631\u064a \u0648\u0641\u0627 \u0628\u0646\u0643\"][\"name:en\"=\"Attijariwafa Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/LogoNew.png",
@@ -4214,7 +4214,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "AU Small Finance Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"AU Small Finance Bank\"][\"brand:wikidata\"=\"Q48729722\"][\"name\"=\"AU Small Finance Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Aubank.jpg",
@@ -4250,7 +4250,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "AXA",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"AXA\"][\"brand:wikidata\"=\"Q160054\"][\"name\"=\"AXA\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/AXA_Logo.svg",
@@ -4286,7 +4286,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Axis Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Axis Bank\"][\"brand:wikidata\"=\"Q2003549\"][\"name\"=\"Axis Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/AXISBank_Logo.svg",
@@ -4322,7 +4322,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BAC Credomatic",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BAC Credomatic\"][\"brand:wikidata\"=\"Q5715556\"][\"name\"=\"BAC Credomatic\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BAC_Credomatic_logo.svg",
@@ -4358,7 +4358,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BADR Banque",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BADR Banque\"][\"brand:wikidata\"=\"Q2883031\"][\"name\"=\"BADR Banque\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -4394,7 +4394,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BAI",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BAI\"][\"brand:wikidata\"=\"Q806172\"][\"name\"=\"BAI\"][\"official_name\"=\"Banco Angolano de Investimentos\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -4430,7 +4430,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bam",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bam\"][\"brand:wikidata\"=\"Q129652114\"][\"name\"=\"Bam\"][\"official_name\"=\"Banco Agromercantil de Guatemala\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -4466,7 +4466,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banamex",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banamex\"][\"brand:wikidata\"=\"Q749474\"][\"name\"=\"Banamex\"][\"official_name\"=\"Grupo Financiero Banamex\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banamex.svg",
@@ -4502,7 +4502,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banca 360 FVG",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banca 360 FVG\"][\"brand:wikidata\"=\"Q128608417\"][\"name\"=\"Banca 360 FVG\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -4538,7 +4538,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banca Afirme",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banca Afirme\"][\"brand:wikidata\"=\"Q60825526\"][\"name\"=\"Banca Afirme\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -4574,7 +4574,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banca Agricola Popolare di Ragusa",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banca Agricola Popolare di Ragusa\"][\"brand:wikidata\"=\"Q3633687\"][\"name\"=\"Banca Agricola Popolare di Ragusa\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Baprragusasedecentrale.jpg",
@@ -4610,7 +4610,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banca Agricola Popolare di Sicilia",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banca Agricola Popolare di Sicilia\"][\"name\"=\"Banca Agricola Popolare di Sicilia\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -4646,7 +4646,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banca di Asti",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banca di Asti\"][\"brand:wikidata\"=\"Q3661919\"][\"name\"=\"Banca di Asti\"][\"official_name\"=\"Cassa di Risparmio di Asti\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Cassa_di_Risparmio_di_Asti_\u2013_Sede.jpg",
@@ -4682,7 +4682,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banca Generali",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banca Generali\"][\"brand:wikidata\"=\"Q3633705\"][\"name\"=\"Banca Generali\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Torre_Hadid.png",
@@ -4718,7 +4718,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banca March",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banca March\"][\"brand:wikidata\"=\"Q578252\"][\"name\"=\"Banca March\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banca_March_Madrid_HQ_(2_of_2).jpg",
@@ -4754,7 +4754,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banca Mediolanum",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banca Mediolanum\"][\"brand:wikidata\"=\"Q3633712\"][\"name\"=\"Banca Mediolanum\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banca_Mediolanum.jpg",
@@ -4790,7 +4790,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banca Popolare di Puglia e Basilicata",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banca Popolare di Puglia e Basilicata\"][\"brand:wikidata\"=\"Q3633741\"][\"name\"=\"Banca Popolare di Puglia e Basilicata\"][\"short_name\"=\"BPPB\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -4826,7 +4826,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banca Popolare di Sondrio",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banca Popolare di Sondrio\"][\"brand:wikidata\"=\"Q686176\"][\"name\"=\"Banca Popolare di Sondrio\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banca_Popolare_di_Sondrio_Logo.svg",
@@ -4862,7 +4862,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banca Popolare Pugliese",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banca Popolare Pugliese\"][\"brand:wikidata\"=\"Q3127162\"][\"name\"=\"Banca Popolare Pugliese\"][\"short_name\"=\"BPP\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banca_Popolare_Pugliese_(logo).png",
@@ -4898,7 +4898,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banca Sella",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banca Sella\"][\"brand:wikidata\"=\"Q3633749\"][\"name\"=\"Banca Sella\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banca_Sella_Logo.png",
@@ -4934,7 +4934,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banca Transilvania",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banca Transilvania\"][\"brand:wikidata\"=\"Q806161\"][\"name\"=\"Banca Transilvania\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banca_Transilvania_Logo.png",
@@ -4970,7 +4970,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bancaribe",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bancaribe\"][\"brand:wikidata\"=\"Q5717827\"][\"name\"=\"Bancaribe\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bancaribe-logo.png",
@@ -5006,7 +5006,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BancaStato",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BancaStato\"][\"brand:wikidata\"=\"Q806158\"][\"name\"=\"BancaStato\"][\"official_name\"=\"Banca dello Stato del Cantone Ticino\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_der_Tessiner_Kantonalbank.svg",
@@ -5042,7 +5042,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco Agrario",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco Agrario\"][\"brand:wikidata\"=\"Q20013358\"][\"name\"=\"Banco Agrario\"][\"official_name\"=\"Banco Agrario de Colombia\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Agrario_de_Colombia_logo.svg",
@@ -5078,7 +5078,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco AV Villas",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco AV Villas\"][\"brand:wikidata\"=\"Q4854068\"][\"name\"=\"Banco AV Villas\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_AV_Villas_C\u00facuta_nov_2022.jpg",
@@ -5114,7 +5114,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco Azteca",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco Azteca\"][\"brand:wikidata\"=\"Q4854076\"][\"name\"=\"Banco Azteca\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_de_Banco_Azteca.svg",
@@ -5150,7 +5150,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco Bicentenario",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco Bicentenario\"][\"brand:wikidata\"=\"Q5728123\"][\"name\"=\"Banco Bicentenario\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -5186,7 +5186,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco BISA",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco BISA\"][\"brand:wikidata\"=\"Q21044225\"][\"name\"=\"Banco BISA\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Banco_BISA.svg",
@@ -5222,7 +5222,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco BMG",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco BMG\"][\"brand:wikidata\"=\"Q16496437\"][\"name\"=\"Banco BMG\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_do_Banco_Bmg.svg",
@@ -5258,7 +5258,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco BPI (Portugal)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco BPI\"][\"brand:wikidata\"=\"Q537886\"][\"name\"=\"Banco BPI\"][\"official_name\"=\"Banco Portugu\u00eas de Investimento\"][\"short_name\"=\"BPI\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -5294,7 +5294,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco BPM",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco BPM\"][\"brand:wikidata\"=\"Q27331643\"][\"name\"=\"Banco BPM\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Veduta_di_tre_quarti_del_Palazzo_della_Banca_Popolare_di_Milano.jpg",
@@ -5330,7 +5330,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco Caja Social",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco Caja Social\"][\"brand:wikidata\"=\"Q5717869\"][\"name\"=\"Banco Caja Social\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Caja_Social_logo.svg",
@@ -5366,7 +5366,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco Ciudad",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco Ciudad\"][\"brand:wikidata\"=\"Q4856204\"][\"name\"=\"Banco Ciudad\"][\"official_name\"=\"Banco Ciudad de Buenos Aires\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Banco_Ciudad.svg",
@@ -5402,7 +5402,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco Continental (Paraguay)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco Continental\"][\"brand:wikidata\"=\"Q62054564\"][\"name\"=\"Banco Continental\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -5438,7 +5438,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco CTT",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco CTT\"][\"brand:wikidata\"=\"Q65161642\"][\"name\"=\"Banco CTT\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_CTT_Logo.png",
@@ -5474,7 +5474,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco da Amaz\u00f4nia",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco da Amaz\u00f4nia\"][\"brand:wikidata\"=\"Q16496429\"][\"name\"=\"Banco da Amaz\u00f4nia\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_da_Amazonia.svg",
@@ -5510,7 +5510,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco de Bogot\u00e1",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco de Bogot\u00e1\"][\"brand:wikidata\"=\"Q4854122\"][\"name\"=\"Banco de Bogot\u00e1\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_de_Bogot\u00e1_logo.svg",
@@ -5546,7 +5546,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco de Bras\u00edlia",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BRB\"][\"brand:wikidata\"=\"Q4854119\"][\"name\"=\"Banco de Bras\u00edlia\"][\"short_name\"=\"BRB\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BRB_Logo.png",
@@ -5582,7 +5582,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco de Chile",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco de Chile\"][\"brand:wikidata\"=\"Q2882085\"][\"name\"=\"Banco de Chile\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_de_Chile_Logotipo.svg",
@@ -5618,7 +5618,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco de C\u00f3rdoba",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco de C\u00f3rdoba\"][\"brand:wikidata\"=\"Q5718071\"][\"name\"=\"Banco de C\u00f3rdoba\"][\"official_name\"=\"Banco de la Provincia de C\u00f3rdoba S.A.\"][\"short_name\"=\"Bancor\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_cordoba_logo.png",
@@ -5654,7 +5654,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco de Cr\u00e9dito y Comercio",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco de Cr\u00e9dito y Comercio\"][\"brand:wikidata\"=\"Q113137945\"][\"name\"=\"Banco de Cr\u00e9dito y Comercio\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Bandec.jpg",
@@ -5690,7 +5690,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco de Fomento Angola",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco de Fomento Angola\"][\"brand:short\"=\"BFA\"][\"brand:wikidata\"=\"Q806197\"][\"name\"=\"Banco de Fomento Angola\"][\"short_name\"=\"BFA\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -5726,7 +5726,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco de la Naci\u00f3n (Per\u00fa)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco de la Naci\u00f3n\"][\"brand:wikidata\"=\"Q4856206\"][\"name\"=\"Banco de la Naci\u00f3n\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logobn.gif",
@@ -5762,7 +5762,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco de La Pampa",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco de La Pampa\"][\"brand:wikidata\"=\"Q131844530\"][\"name\"=\"Banco de La Pampa\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -5798,7 +5798,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco de Occidente (Colombia)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco de Occidente\"][\"brand:wikidata\"=\"Q4854127\"][\"name\"=\"Banco de Occidente\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_de_Occidente_logo.svg",
@@ -5834,7 +5834,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco de Occidente (Honduras)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco de Occidente\"][\"brand:wikidata\"=\"Q5718117\"][\"name\"=\"Banco de Occidente\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/San_Pedro_Sula_BO.jpg",
@@ -5870,7 +5870,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco de Venezuela",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco de Venezuela\"][\"brand:wikidata\"=\"Q517093\"][\"name\"=\"Banco de Venezuela\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_de_Venezuela_logo.svg",
@@ -5906,7 +5906,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco del Austro",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco del Austro\"][\"brand:wikidata\"=\"Q62122344\"][\"name\"=\"Banco del Austro\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -5942,7 +5942,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco del Bienestar",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco del Bienestar\"][\"brand:wikidata\"=\"Q5719137\"][\"name\"=\"Banco del Bienestar\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Sucursal_del_Banco_del_Bienestar.jpg",
@@ -5978,7 +5978,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco Desio",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco Desio\"][\"brand:wikidata\"=\"Q3633825\"][\"name\"=\"Banco Desio\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Desio_e_della_Brianza.png",
@@ -6014,7 +6014,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco di Sardegna",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco di Sardegna\"][\"brand:wikidata\"=\"Q806205\"][\"name\"=\"Banco di Sardegna\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_di_Sardegna.svg",
@@ -6050,7 +6050,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco do Brasil",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco do Brasil\"][\"brand:wikidata\"=\"Q610817\"][\"name\"=\"Banco do Brasil\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_do_Brasil_logo.svg",
@@ -6086,7 +6086,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco do Nordeste",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco do Nordeste\"][\"brand:wikidata\"=\"Q4854137\"][\"name\"=\"Banco do Nordeste\"][\"short_name\"=\"BNB\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo-bnb.svg",
@@ -6122,7 +6122,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco Econ\u00f3mico",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco Econ\u00f3mico\"][\"brand:wikidata\"=\"Q4854087\"][\"name\"=\"Banco Econ\u00f3mico\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -6158,7 +6158,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco Estado",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco Estado\"][\"brand:wikidata\"=\"Q5718188\"][\"name\"=\"Banco Estado\"][\"official_name\"=\"Banco del Estado de Chile\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_BancoEstado.svg",
@@ -6194,7 +6194,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco Falabella",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco Falabella\"][\"brand:wikidata\"=\"Q4854088\"][\"name\"=\"Banco Falabella\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Falabella_Logo.svg",
@@ -6230,7 +6230,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco Fassil",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco Fassil\"][\"brand:wikidata\"=\"Q62118592\"][\"name\"=\"Banco Fassil\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -6266,7 +6266,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco Fie",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco Fie\"][\"brand:wikidata\"=\"Q81782924\"][\"name\"=\"Banco Fie\"][\"official_name\"=\"Banco para el Fomento a Iniciativas Econ\u00f3micas\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -6302,7 +6302,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco Fondo Com\u00fan",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco Fondo Com\u00fan\"][\"brand:wikidata\"=\"Q5465007\"][\"name\"=\"Banco Fondo Com\u00fan\"][\"short_name\"=\"BFC\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -6338,7 +6338,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco Fortaleza",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco Fortaleza\"][\"brand:wikidata\"=\"Q81787643\"][\"name\"=\"Banco Fortaleza\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -6374,7 +6374,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco G&T Continental",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco G&T Continental\"][\"brand:wikidata\"=\"Q5717949\"][\"name\"=\"Banco G&T Continental\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_GYT_Continental.png",
@@ -6410,7 +6410,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco Ganadero",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco Ganadero\"][\"brand:wikidata\"=\"Q81788241\"][\"name\"=\"Banco Ganadero\"][\"short_name\"=\"BG\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -6446,7 +6446,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco General",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BW-Bank\"][\"brand:wikidata\"=\"Q27618271\"][\"name\"=\"Banco General\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -6482,7 +6482,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco Industrial",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco Industrial\"][\"brand:wikidata\"=\"Q16489444\"][\"name\"=\"Banco Industrial\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo-banco-industrial-arg.png",
@@ -6518,7 +6518,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco Internacional (Chile)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco Internacional\"][\"brand:wikidata\"=\"Q56605586\"][\"name\"=\"Banco Internacional\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_internacional.jpg",
@@ -6554,7 +6554,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco Internacional (Ecuador)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco Internacional\"][\"brand:wikidata\"=\"Q806187\"][\"name\"=\"Banco Internacional\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Internacional.png",
@@ -6590,7 +6590,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco Mercantil",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco Mercantil Santa Cruz\"][\"brand:wikidata\"=\"Q26250269\"][\"name\"=\"Banco Mercantil Santa Cruz\"][\"short_name\"=\"BMSC\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Mercantil_Santa_Cruz_Logo.svg",
@@ -6626,7 +6626,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco Mercantil do Brasil",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco Mercantil do Brasil\"][\"brand:wikidata\"=\"Q9645252\"][\"name\"=\"Banco Mercantil do Brasil\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -6662,7 +6662,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco Metropolitano",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco Metropolitano\"][\"brand:wikidata\"=\"Q62118612\"][\"name\"=\"Banco Metropolitano\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Banco_Metropolitano.jpg",
@@ -6698,7 +6698,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco Montepio",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco Montepio\"][\"name\"=\"Banco Montepio\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -6734,7 +6734,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco Naci\u00f3n",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco Naci\u00f3n\"][\"brand:wikidata\"=\"Q2883376\"][\"name\"=\"Banco Naci\u00f3n\"][\"official_name\"=\"Banco de la Naci\u00f3n Argentina\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Naci\u00f3n.svg",
@@ -6770,7 +6770,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco Nacional",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco Nacional de Costa Rica\"][\"brand:wikidata\"=\"Q2917708\"][\"name\"=\"Banco Nacional\"][\"official_name\"=\"Banco Nacional de Costa Rica\"][\"short_name\"=\"BNCR\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Nacional_de_Costa_Rica.png",
@@ -6806,7 +6806,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco Nacional de Bolivia",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco Nacional de Bolivia\"][\"brand:wikidata\"=\"Q21044226\"][\"name\"=\"Banco Nacional de Bolivia\"][\"short_name\"=\"BNB\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bnb.svg",
@@ -6842,7 +6842,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco Nacional de Cr\u00e9dito",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco Nacional de Cr\u00e9dito\"][\"brand:wikidata\"=\"Q4854103\"][\"name\"=\"Banco Nacional de Cr\u00e9dito\"][\"short_name\"=\"BNC\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Sede_BNC.jpg",
@@ -6878,7 +6878,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco Pastor",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco Pastor\"][\"brand:wikidata\"=\"Q806193\"][\"name\"=\"Banco Pastor\"][\"official_name\"=\"Banco Popular Pastor\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_pastor168x78.gif;pv91c0cc0e0080a771.gif",
@@ -6914,7 +6914,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco Patagonia",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco Patagonia\"][\"brand:wikidata\"=\"Q2882078\"][\"name\"=\"Banco Patagonia\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -6950,7 +6950,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco Pichincha",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco Pichincha\"][\"brand:wikidata\"=\"Q4854135\"][\"name\"=\"Banco Pichincha\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Pichincha_logo.svg",
@@ -6986,7 +6986,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco Popular (Colombia)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco Popular\"][\"brand:wikidata\"=\"Q16489453\"][\"name\"=\"Banco Popular\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Popular_(Colombia)_2015_logo.png",
@@ -7022,7 +7022,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco Popular de Ahorro",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco Popular de Ahorro\"][\"brand:wikidata\"=\"Q62118626\"][\"name\"=\"Banco Popular de Ahorro\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo-bpa.jpg",
@@ -7058,7 +7058,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco Provincia",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco Provincia\"][\"brand:wikidata\"=\"Q4856209\"][\"name\"=\"Banco Provincia\"][\"official_name\"=\"Banco de la Provincia de Buenos Aires\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Provincia_(Bs.As.,_2021).svg",
@@ -7094,7 +7094,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco Provincia de Neuqu\u00e9n",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco Provincia de Neuqu\u00e9n\"][\"brand:wikidata\"=\"Q100233006\"][\"name\"=\"Banco Provincia de Neuqu\u00e9n\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -7130,7 +7130,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco Sabadell",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco Sabadell\"][\"brand:ca\"=\"Banc Sabadell\"][\"brand:es\"=\"Banco Sabadell\"][\"brand:wikidata\"=\"Q762330\"][\"name\"=\"Banco Sabadell\"][\"name:ca\"=\"Banc Sabadell\"][\"name:es\"=\"Banco Sabadell\"][\"official_name\"=\"Banco de Sabadell, S.A.\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BSabadell_Logo.svg",
@@ -7166,7 +7166,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco Safra",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco Safra\"][\"brand:wikidata\"=\"Q4116096\"][\"name\"=\"Banco Safra\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Safra.jpg",
@@ -7202,7 +7202,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco Santa Fe",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco Santa Fe\"][\"brand:wikidata\"=\"Q6046871\"][\"name\"=\"Banco Santa Fe\"][\"official_name\"=\"Nuevo Banco de Santa Fe\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -7238,7 +7238,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco Santander",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco Santander\"][\"brand:wikidata\"=\"Q6496310\"][\"name\"=\"Banco Santander\"][\"official_name\"=\"Santander Group\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Santander_Logotipo.svg",
@@ -7274,7 +7274,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco Sol (Angola)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco Sol\"][\"brand:wikidata\"=\"Q62118744\"][\"name\"=\"Banco Sol\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -7310,7 +7310,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco Sol (Bolivia)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco Sol\"][\"brand:wikidata\"=\"Q62118746\"][\"name\"=\"Banco Sol\"][\"official_name\"=\"Banco Solidario\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -7346,7 +7346,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco Uni\u00f3n",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco Uni\u00f3n\"][\"brand:wikidata\"=\"Q72315494\"][\"name\"=\"Banco Uni\u00f3n\"][\"official_name\"=\"Banco de la Uni\u00f3n\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -7382,7 +7382,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banco W",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banco W\"][\"name\"=\"Banco W\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -7418,7 +7418,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bancolombia",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bancolombia\"][\"brand:wikidata\"=\"Q806206\"][\"name\"=\"Bancolombia\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bancolombia_S.A._logo.svg",
@@ -7454,7 +7454,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bancomeeva",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bancomeeva\"][\"brand:wikidata\"=\"Q6171916\"][\"name\"=\"Bancomeeva\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -7490,7 +7490,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bancpost",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bancpost\"][\"brand:wikidata\"=\"Q4854143\"][\"name\"=\"Bancpost\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -7526,7 +7526,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bandhan Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bandhan Bank\"][\"brand:wikidata\"=\"Q19882235\"][\"name\"=\"Bandhan Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bandhan_Bank_Svg_Logo.svg",
@@ -7562,7 +7562,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banesco",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banesco\"][\"brand:wikidata\"=\"Q4854841\"][\"name\"=\"Banesco\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banesco_logo.svg",
@@ -7598,7 +7598,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banese",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banese\"][\"brand:wikidata\"=\"Q16496452\"][\"name\"=\"Banese\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -7634,7 +7634,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banestes",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banestes\"][\"brand:wikidata\"=\"Q4854848\"][\"name\"=\"Banestes\"][\"official_name\"=\"Banco do Estado do Esp\u00edrito Santo\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_do_Banestes.svg",
@@ -7670,7 +7670,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bangkok Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bangkok Bank\"][\"brand:wikidata\"=\"Q806483\"][\"name\"=\"Bangkok Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Bangkok_Bank_Public_Company_Limited.svg",
@@ -7706,7 +7706,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bangor Savings Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bangor Savings Bank\"][\"brand:wikidata\"=\"Q24060927\"][\"name\"=\"Bangor Savings Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bangor_Savings_Bank_logo.png",
@@ -7742,7 +7742,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bank 1 Saar",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bank 1 Saar\"][\"brand:wikidata\"=\"Q806608\"][\"name\"=\"Bank 1 Saar\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_1_Saar_Logo.png",
@@ -7778,7 +7778,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bank Al Habib (\u0628\u064a\u0646\u06a9 \u0627\u0644\u062d\u0628\u064a\u0628)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bank Al Habib\"][\"brand:en\"=\"Bank Al Habib\"][\"brand:ur\"=\"\u0628\u064a\u0646\u06a9 \u0627\u0644\u062d\u0628\u064a\u0628\"][\"brand:wikidata\"=\"Q4034833\"][\"name\"=\"Bank Al Habib\"][\"name:en\"=\"Bank Al Habib\"][\"name:ur\"=\"\u0628\u064a\u0646\u06a9 \u0627\u0644\u062d\u0628\u064a\u0628\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_Al_Habib,_Karsaz,_Karachi.jpg",
@@ -7814,7 +7814,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bank Al-Maghrib (\u0628\u0646\u0643 \u0627\u0644\u0645\u063a\u0631\u0628)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bank Al-Maghrib \u0628\u0646\u0643 \u0627\u0644\u0645\u063a\u0631\u0628\"][\"brand:ar\"=\"\u0628\u0646\u0643 \u0627\u0644\u0645\u063a\u0631\u0628\"][\"brand:fr\"=\"Bank Al-Maghrib\"][\"brand:wikidata\"=\"Q328198\"][\"name\"=\"Bank Al-Maghrib \u0628\u0646\u0643 \u0627\u0644\u0645\u063a\u0631\u0628\"][\"name:ar\"=\"\u0628\u0646\u0643 \u0627\u0644\u0645\u063a\u0631\u0628\"][\"name:fr\"=\"Bank Al-Maghrib\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_Al-Maghrib_Logo.png",
@@ -7850,7 +7850,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bank Alfalah (\u0628\u06cc\u0646\u06a9 \u0627\u0644\u0641\u0644\u0627\u062d)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bank Alfalah\"][\"brand:en\"=\"Bank Alfalah\"][\"brand:ur\"=\"\u0628\u06cc\u0646\u06a9 \u0627\u0644\u0641\u0644\u0627\u062d\"][\"brand:wikidata\"=\"Q4855895\"][\"name:en\"=\"Bank Alfalah\"][\"name:ur\"=\"\u0628\u06cc\u0646\u06a9 \u0627\u0644\u0641\u0644\u0627\u062d\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_alfalah_logo.png",
@@ -7886,7 +7886,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bank Austria",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bank Austria\"][\"brand:wikidata\"=\"Q697619\"][\"name\"=\"Bank Austria\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Wien_02_Austria_Campus_i.jpg",
@@ -7922,7 +7922,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bank BJB",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bank BJB\"][\"brand:wikidata\"=\"Q12474472\"][\"name\"=\"Bank BJB\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -7958,7 +7958,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bank BPS",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bank Polskiej Sp\u00f3\u0142dzielczo\u015bci\"][\"brand:wikidata\"=\"Q9165001\"][\"name\"=\"Bank BPS\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_Polskiej_Sp\u00f3\u0142dzielczo\u015bci_S.A..jpg",
@@ -7994,7 +7994,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bank Bukopin",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bank Bukopin\"][\"brand:wikidata\"=\"Q806620\"][\"name\"=\"Bank Bukopin\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/KB_Bukopin.svg",
@@ -8030,7 +8030,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bank Central Asia",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bank Central Asia\"][\"brand:wikidata\"=\"Q806626\"][\"name\"=\"Bank Central Asia\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_Central_Asia.svg",
@@ -8066,7 +8066,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bank Danamon",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bank Danamon\"][\"brand:wikidata\"=\"Q4855913\"][\"name\"=\"Bank Danamon\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Danamon_(2024).svg",
@@ -8102,7 +8102,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bank Islam",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bank Islam\"][\"brand:wikidata\"=\"Q4115279\"][\"name\"=\"Bank Islam\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BANK_ISLAM_LOGO.jpg",
@@ -8138,7 +8138,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bank Jago",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bank Jago\"][\"brand:wikidata\"=\"Q12474471\"][\"name\"=\"Bank Jago\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo-jago.svg",
@@ -8174,7 +8174,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bank Mandiri",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bank Mandiri\"][\"brand:wikidata\"=\"Q806639\"][\"name\"=\"Bank Mandiri\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_Mandiri_logo_2016.svg",
@@ -8210,7 +8210,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bank Mega",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bank Mega\"][\"brand:wikidata\"=\"Q12474504\"][\"name\"=\"Bank Mega\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -8246,7 +8246,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bank Muamalat",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bank Muamalat\"][\"brand:wikidata\"=\"Q4855949\"][\"name\"=\"Bank Muamalat\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -8282,7 +8282,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bank Ochrony \u015arodowiska",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bank Ochrony \u015arodowiska\"][\"brand:wikidata\"=\"Q4855958\"][\"name\"=\"Bank Ochrony \u015arodowiska\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -8318,7 +8318,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bank of Africa",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bank of Africa\"][\"brand:wikidata\"=\"Q2882627\"][\"name\"=\"Bank of Africa\"][\"short_name\"=\"BOA\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_of_Africa_Logo.png",
@@ -8354,7 +8354,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bank of Africa (Ghana)",
     query: "(nwr[\"alt_name\"=\"BOA Ghana\"][\"amenity\"=\"bank\"][\"brand\"=\"Bank of Africa\"][\"brand:wikidata\"=\"Q2882627\"][\"name\"=\"Bank of Africa\"][\"operator\"=\"Bank of Africa Ghana Limited\"][\"operator:type\"=\"private\"][\"operator:wikidata\"=\"Q4856014\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_of_Africa_Logo.png",
@@ -8390,7 +8390,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bank of America",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bank of America\"][\"brand:wikidata\"=\"Q487907\"][\"name\"=\"Bank of America\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_of_America_logo.svg",
@@ -8426,7 +8426,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bank of Baroda",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bank of Baroda\"][\"brand:wikidata\"=\"Q2003797\"][\"name\"=\"Bank of Baroda\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -8462,7 +8462,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bank of Ceylon",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bank of Ceylon\"][\"brand:wikidata\"=\"Q2882652\"][\"name\"=\"Bank of Ceylon\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -8498,7 +8498,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bank of Commerce",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bank of Commerce\"][\"brand:wikidata\"=\"Q4856092\"][\"name\"=\"Bank of Commerce\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -8534,7 +8534,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bank of Cyprus",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bank of Cyprus\"][\"brand:wikidata\"=\"Q806678\"][\"name\"=\"Bank of Cyprus\"][\"name:el\"=\"\u03a4\u03c1\u03ac\u03c0\u03b5\u03b6\u03b1 \u039a\u03cd\u03c0\u03c1\u03bf\u03c5\"][\"name:en\"=\"Bank of Cyprus\"][\"name:tr\"=\"K\u0131br\u0131s Bankas\u0131\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_of_Cyprus_huge_offices_in_Aglandjia_suberb_area_of_Nicosia_Republic_of_Cyprus.jpg",
@@ -8570,7 +8570,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bank of Hawaii",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bank of Hawaii\"][\"brand:wikidata\"=\"Q4856124\"][\"name\"=\"Bank of Hawaii\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -8606,7 +8606,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bank of India",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bank of India\"][\"brand:wikidata\"=\"Q2004439\"][\"name\"=\"Bank of India\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -8642,7 +8642,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bank of Ireland",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bank of Ireland\"][\"brand:wikidata\"=\"Q806689\"][\"name\"=\"Bank of Ireland\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_of_Ireland_Logo_2020.svg",
@@ -8678,7 +8678,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bank of Maharashtra",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bank of Maharashtra\"][\"brand:wikidata\"=\"Q2004304\"][\"name\"=\"Bank of Maharashtra\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -8714,7 +8714,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bank of New Hampshire",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bank of New Hampshire\"][\"brand:wikidata\"=\"Q106499982\"][\"name\"=\"Bank of New Hampshire\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_of_New_Hampshire_2023_Logo.svg",
@@ -8750,7 +8750,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bank of New Zealand",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bank of New Zealand\"][\"brand:wikidata\"=\"Q806687\"][\"name\"=\"Bank of New Zealand\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_of_New_Zealand_2008_new_logo.svg",
@@ -8786,7 +8786,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bank of Scotland",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bank of Scotland\"][\"brand:wikidata\"=\"Q627381\"][\"name\"=\"Bank of Scotland\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_of_Scotland_logo.svg",
@@ -8822,7 +8822,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bank of the Sierra",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bank of the Sierra\"][\"brand:wikidata\"=\"Q117187407\"][\"name\"=\"Bank of the Sierra\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -8858,7 +8858,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bank OZK",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bank OZK\"][\"brand:wikidata\"=\"Q20708654\"][\"name\"=\"Bank OZK\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_OZK_Logo.svg",
@@ -8894,7 +8894,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bank Pekao",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bank Pekao\"][\"brand:wikidata\"=\"Q806642\"][\"name\"=\"Bank Pekao\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_Pekao_SA_Logo_(2017).svg",
@@ -8930,7 +8930,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bank Permata",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bank Permata\"][\"brand:wikidata\"=\"Q4855963\"][\"name\"=\"Bank Permata\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -8966,7 +8966,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bank Pocztowy",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bank Pocztowy\"][\"brand:wikidata\"=\"Q4034834\"][\"name\"=\"Bank Pocztowy\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Lodz-Bank-Pocztowy-Piotrkowska-170619.jpg",
@@ -9002,7 +9002,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bank QNB Indonesia",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bank QNB Indonesia\"][\"brand:wikidata\"=\"Q12474517\"][\"name\"=\"Bank QNB Indonesia\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -9038,7 +9038,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bank Rakyat",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bank Rakyat\"][\"brand:wikidata\"=\"Q4855964\"][\"name\"=\"Bank Rakyat\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -9074,7 +9074,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bank RBK",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bank RBK\"][\"brand:wikidata\"=\"Q21843640\"][\"name\"=\"Bank RBK\"][\"name:en\"=\"Bank RBK\"][\"name:kk\"=\"\u0420\u0411\u041a \u0411\u0430\u043d\u043a\u0456\"][\"name:ru\"=\"\u0411\u0430\u043d\u043a \u0420\u0411\u041a\"][\"official_name:kk\"=\"\u00abBank RBK\u00bb \u0410\u049a\"][\"official_name:ru\"=\"\u0410\u041e \u00abBank RBK\u00bb\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -9110,7 +9110,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bank Simpanan Nasional",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bank Simpanan Nasional\"][\"brand:wikidata\"=\"Q4855972\"][\"name\"=\"Bank Simpanan Nasional\"][\"short_name\"=\"BSN\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BSN_Johor.jpg",
@@ -9146,7 +9146,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bank Syariah Indonesia",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bank Syariah Indonesia\"][\"brand:wikidata\"=\"Q105574200\"][\"name\"=\"Bank Syariah Indonesia\"][\"short_name\"=\"BSI\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_Syariah_Indonesia.svg",
@@ -9182,7 +9182,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "bank99",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"bank99\"][\"brand:wikidata\"=\"Q91200481\"][\"name\"=\"bank99\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -9218,7 +9218,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banka Komb\u00ebtare Tregtare",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banka Komb\u00ebtare Tregtare\"][\"brand:wikidata\"=\"Q806702\"][\"name\"=\"Banka Komb\u00ebtare Tregtare\"][\"short_name\"=\"BKT\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -9254,7 +9254,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banka Kovanica",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banka Kovanica\"][\"brand:wikidata\"=\"Q25382167\"][\"name\"=\"Banka Kovanica\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banka_Kovanica_logo.png",
@@ -9290,7 +9290,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BankFinancial",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BankFinancial\"][\"brand:wikidata\"=\"Q4855880\"][\"name\"=\"BankFinancial\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -9326,7 +9326,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bankia",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bankia\"][\"brand:wikidata\"=\"Q806807\"][\"name\"=\"Bankia\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bankia_logo.svg",
@@ -9362,7 +9362,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banking Hub",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banking Hub\"][\"brand:wikidata\"=\"Q131824197\"][\"name\"=\"Banking Hub\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Post_Office_Logo_RGB.png",
@@ -9398,7 +9398,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bankinter",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bankinter\"][\"brand:wikidata\"=\"Q806808\"][\"name\"=\"Bankinter\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bankinter.svg",
@@ -9434,7 +9434,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bankwest (Australia)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bankwest\"][\"brand:wikidata\"=\"Q4856817\"][\"name\"=\"Bankwest\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bankwest_new_logo.png",
@@ -9470,7 +9470,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BankWest (USA)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BankWest\"][\"brand:wikidata\"=\"Q90386673\"][\"name\"=\"BankWest\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -9506,7 +9506,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banner Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banner Bank\"][\"brand:wikidata\"=\"Q4856910\"][\"name\"=\"Banner Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -9542,7 +9542,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banorte",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banorte\"][\"brand:wikidata\"=\"Q806914\"][\"name\"=\"Banorte\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banorte.png",
@@ -9578,7 +9578,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banpais",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banpais\"][\"brand:wikidata\"=\"Q99196579\"][\"name\"=\"Banpais\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -9614,7 +9614,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banpar\u00e1",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banpar\u00e1\"][\"brand:wikidata\"=\"Q16496450\"][\"name\"=\"Banpar\u00e1\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banpar\u00e1_-_panoramio_(1).jpg",
@@ -9650,7 +9650,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banque Atlantique",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banque Atlantique\"][\"brand:wikidata\"=\"Q2882890\"][\"name\"=\"Banque Atlantique\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo-banque-atlantique.png",
@@ -9686,7 +9686,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banque Cantonale de Fribourg",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banque Cantonale de Fribourg\"][\"brand:de\"=\"Freiburger Kantonalbank\"][\"brand:fr\"=\"Banque Cantonale de Fribourg\"][\"brand:wikidata\"=\"Q1453871\"][\"name\"=\"Banque Cantonale de Fribourg\"][\"name:de\"=\"Freiburger Kantonalbank\"][\"name:fr\"=\"Banque Cantonale de Fribourg\"][\"short_name\"=\"BCF\"][\"short_name:de\"=\"FKB\"][\"short_name:fr\"=\"BCF\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_der_Freiburger_Kantonalbank.svg",
@@ -9722,7 +9722,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banque Cantonale de Gen\u00e8ve",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banque Cantonale de Gen\u00e8ve\"][\"brand:wikidata\"=\"Q650629\"][\"name\"=\"Banque Cantonale de Gen\u00e8ve\"][\"short_name\"=\"BCGE\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_der_Genfer_Kantonalbank.svg",
@@ -9758,7 +9758,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banque Cantonale du Jura",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banque Cantonale du Jura\"][\"brand:wikidata\"=\"Q806923\"][\"name\"=\"Banque Cantonale du Jura\"][\"short_name\"=\"BCJ\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Banque_Cantonale_du_Jura.svg",
@@ -9794,7 +9794,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banque Cantonale du Valais",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banque Cantonale du Valais\"][\"brand:de\"=\"Walliser Kantonalbank\"][\"brand:fr\"=\"Banque Cantonale du Valais\"][\"brand:wikidata\"=\"Q2543025\"][\"name\"=\"Banque Cantonale du Valais\"][\"name:de\"=\"Walliser Kantonalbank\"][\"name:fr\"=\"Banque Cantonale du Valais\"][\"short_name\"=\"BCVS\"][\"short_name:de\"=\"WKB\"][\"short_name:fr\"=\"BCVS\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_BCVS.png",
@@ -9830,7 +9830,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banque Cantonale Neuch\u00e2teloise",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banque Cantonale Neuch\u00e2teloise\"][\"brand:wikidata\"=\"Q688391\"][\"name\"=\"Banque Cantonale Neuch\u00e2teloise\"][\"short_name\"=\"BCN\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banque_Cantonale_Neuch\u00e2teloise.svg",
@@ -9866,7 +9866,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banque Cantonale Vaudoise",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banque Cantonale Vaudoise\"][\"brand:wikidata\"=\"Q685533\"][\"name\"=\"Banque Cantonale Vaudoise\"][\"short_name\"=\"BCV\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banque_Cantonale_Vaudoise_logo.svg",
@@ -9902,7 +9902,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banque de France",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banque de France\"][\"brand:wikidata\"=\"Q806950\"][\"name\"=\"Banque de France\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banque_de_France_2022_logo.svg",
@@ -9938,7 +9938,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banque de l'Habitat du Mali",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banque de l'Habitat du Mali\"][\"brand:wikidata\"=\"Q4857076\"][\"name\"=\"Banque de l'Habitat du Mali\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -9974,7 +9974,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banque du Caire",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banque du Caire\"][\"brand:ar\"=\"\u0628\u0646\u0643 \u0627\u0644\u0642\u0627\u0647\u0631\u0629\"][\"brand:en\"=\"Banque du Caire\"][\"brand:wikidata\"=\"Q4857077\"][\"name\"=\"Banque du Caire\"][\"name:ar\"=\"\u0628\u0646\u0643 \u0627\u0644\u0642\u0627\u0647\u0631\u0629\"][\"name:en\"=\"Banque du Caire\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banque_du_caire_Logo.svg",
@@ -10010,7 +10010,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banque Dupuy de Parseval",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banque Dupuy de Parseval\"][\"brand:wikidata\"=\"Q2882897\"][\"name\"=\"Banque Dupuy de Parseval\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -10046,7 +10046,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banque Laurentienne",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banque Laurentienne\"][\"brand:wikidata\"=\"Q1360087\"][\"name\"=\"Banque Laurentienne\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -10082,7 +10082,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banque Misr",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banque Misr\"][\"brand:wikidata\"=\"Q2060638\"][\"name\"=\"Banque Misr\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banque_Misr.svg",
@@ -10118,7 +10118,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banque National de Cr\u00e9dit",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banque National de Cr\u00e9dit\"][\"name\"=\"Banque National de Cr\u00e9dit\"][\"short_name\"=\"BNC\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -10154,7 +10154,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banque Nationale",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banque Nationale\"][\"brand:en\"=\"National Bank\"][\"brand:fr\"=\"Banque Nationale\"][\"brand:wikidata\"=\"Q634298\"][\"name\"=\"Banque Nationale\"][\"name:en\"=\"National Bank\"][\"name:fr\"=\"Banque Nationale\"][\"official_name\"=\"Banque Nationale du Canada\"][\"official_name:en\"=\"National Bank of Canada\"][\"official_name:fr\"=\"Banque Nationale du Canada\"][\"short_name:en\"=\"NBC\"][\"short_name:fr\"=\"BNC\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/National_Bank_Of_Canada.svg",
@@ -10190,7 +10190,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banque Palatine",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banque Palatine\"][\"brand:wikidata\"=\"Q2883429\"][\"name\"=\"Banque Palatine\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Palatine_Noirok.png",
@@ -10226,7 +10226,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banque Populaire (France)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banque Populaire\"][\"brand:wikidata\"=\"Q846647\"][\"name\"=\"Banque Populaire\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banque_Populaire_2018_logo.svg",
@@ -10262,7 +10262,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banque Populaire (\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0634\u0639\u0628\u064a)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banque Populaire\"][\"brand:ar\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0634\u0639\u0628\u064a\"][\"brand:en\"=\"Banque Populaire\"][\"brand:wikidata\"=\"Q2883441\"][\"name:ar\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0634\u0639\u0628\u064a\"][\"name:en\"=\"Banque Populaire\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_BCP.svg",
@@ -10298,7 +10298,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banque populaire Grand Ouest",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banque populaire Grand Ouest\"][\"brand:wikidata\"=\"Q56653727\"][\"name\"=\"Banque populaire Grand Ouest\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -10334,7 +10334,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banregio",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banregio\"][\"brand:wikidata\"=\"Q4853573\"][\"name\"=\"Banregio\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banregio.png",
@@ -10370,7 +10370,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banrisul",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banrisul\"][\"brand:wikidata\"=\"Q4857098\"][\"name\"=\"Banrisul\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banrisul_logo_2022.png",
@@ -10406,7 +10406,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Banrural",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banrural\"][\"brand:wikidata\"=\"Q5719130\"][\"name\"=\"Banrural\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Nuevo_Logo_Banrural.png",
@@ -10442,7 +10442,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Barclays",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Barclays\"][\"brand:wikidata\"=\"Q245343\"][\"name\"=\"Barclays\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Barclays_logo.jpeg",
@@ -10478,7 +10478,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Basellandschaftliche Kantonalbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Basellandschaftliche Kantonalbank\"][\"brand:wikidata\"=\"Q809931\"][\"name\"=\"Basellandschaftliche Kantonalbank\"][\"short_name\"=\"BLKB\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_der_BLKB.svg",
@@ -10514,7 +10514,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Basler Kantonalbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Basler Kantonalbank\"][\"brand:wikidata\"=\"Q810408\"][\"name\"=\"Basler Kantonalbank\"][\"short_name\"=\"BKB\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Basler_Kantonalbank.svg",
@@ -10550,7 +10550,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BAWAG PSK",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BAWAG PSK\"][\"brand:wikidata\"=\"Q379938\"][\"name\"=\"BAWAG PSK\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BAWAG_P.S.K._logo.svg",
@@ -10586,7 +10586,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BB&T",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BB&T\"][\"brand:wikidata\"=\"Q95984154\"][\"name\"=\"BB&T\"][\"official_name\"=\"Branch Banking and Trust Company\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BB&T_Logo.svg",
@@ -10622,7 +10622,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BBBank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BBBank\"][\"brand:wikidata\"=\"Q795504\"][\"name\"=\"BBBank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BBBank_201X_logo.svg",
@@ -10658,7 +10658,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BBVA",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BBVA\"][\"brand:wikidata\"=\"Q806189\"][\"name\"=\"BBVA\"][\"official_name\"=\"Banco Bilbao Vizcaya Argentaria\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BBVA_2019.svg",
@@ -10694,7 +10694,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BBVA (USA)",
     query: "(nwr[\"alt_name\"=\"BBVA Compass\"][\"amenity\"=\"bank\"][\"brand\"=\"BBVA\"][\"brand:wikidata\"=\"Q4835088\"][\"name\"=\"BBVA\"][\"official_name\"=\"BBVA USA\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BBVA_2019.svg",
@@ -10730,7 +10730,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BBVA Argentina",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BBVA Argentina\"][\"brand:wikidata\"=\"Q2876788\"][\"name\"=\"BBVA Argentina\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BBVA_2019.svg",
@@ -10766,7 +10766,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BBVA M\u00e9xico",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BBVA M\u00e9xico\"][\"brand:wikidata\"=\"Q2876794\"][\"name\"=\"BBVA M\u00e9xico\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BBVA_2019.svg",
@@ -10802,7 +10802,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BBVA Per\u00fa",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BBVA Per\u00fa\"][\"brand:wikidata\"=\"Q4835089\"][\"name\"=\"BBVA Per\u00fa\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BBVA_2019.svg",
@@ -10838,7 +10838,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BBVA Provincial",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BBVA Provincial\"][\"brand:wikidata\"=\"Q4835087\"][\"name\"=\"BBVA Provincial\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BBVA_2019.svg",
@@ -10874,7 +10874,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BCC Roma",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BCC Roma\"][\"brand:wikidata\"=\"Q25060394\"][\"name\"=\"BCC Roma\"][\"official_name\"=\"Banca di Credito Cooperativo di Roma\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BCC_Roma.jpg",
@@ -10910,7 +10910,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BCEE",
     query: "(nwr[\"alt_name\"=\"S-Bank\"][\"alt_name:en\"=\"S-Bank\"][\"alt_name:lb\"=\"Spuerkeess\"][\"amenity\"=\"bank\"][\"brand\"=\"BCEE\"][\"brand:wikidata\"=\"Q668996\"][\"name\"=\"BCEE\"][\"official_name\"=\"Banque et Caisse d'\u00c9pargne de l'\u00c9tat\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/QG_Banque_et_Caisse_d'\u00c9pargne_de_l'\u00c9tat_(Luxembourg).jpg",
@@ -10946,7 +10946,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BCI (Chile)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BCI\"][\"brand:wikidata\"=\"Q2882083\"][\"name\"=\"BCI\"][\"official_name\"=\"Banco de Cr\u00e9dito e Inversiones\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bci_Logotype.svg",
@@ -10982,7 +10982,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BCI (Mozambique)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BCI\"][\"brand:wikidata\"=\"Q9645132\"][\"name\"=\"BCI\"][\"official_name\"=\"Banco Comercial e de Investimentos\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -11018,7 +11018,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BCP (Bolivia)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BCP\"][\"brand:wikidata\"=\"Q16826675\"][\"name\"=\"BCP\"][\"official_name\"=\"Banco de Cr\u00e9dito de Bolivia\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logobcp.png",
@@ -11054,7 +11054,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BCP (France)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BCP\"][\"brand:wikidata\"=\"Q118581\"][\"name\"=\"BCP\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Comercial_Portugu\u00eas_logo_(Millenium_BCP).svg",
@@ -11090,7 +11090,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BCP (Luxembourg)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BCP\"][\"brand:wikidata\"=\"Q118581\"][\"name\"=\"BCP\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Comercial_Portugu\u00eas_logo_(Millenium_BCP).svg",
@@ -11126,7 +11126,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BCP (Per\u00fa)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BCP\"][\"brand:wikidata\"=\"Q4854124\"][\"name\"=\"BCP\"][\"official_name\"=\"Banco de Cr\u00e9dito del Per\u00fa\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logobcp.png",
@@ -11162,7 +11162,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BCR (Banca Comercial\u0103 Rom\u00e2n\u0103)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BCR\"][\"brand:wikidata\"=\"Q806149\"][\"name\"=\"BCR\"][\"official_name\"=\"Banca Comercial\u0103 Rom\u00e2n\u0103\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BCR_logo.svg",
@@ -11198,7 +11198,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BCR (Costa Rica)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BCR\"][\"brand:wikidata\"=\"Q6951632\"][\"name\"=\"BCR\"][\"official_name\"=\"Banco de Costa Rica\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_de_Costa_Rica.png",
@@ -11234,7 +11234,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BDC",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BDC\"][\"brand:wikidata\"=\"Q2883027\"][\"name\"=\"BDC\"][\"official_name\"=\"Business Development Bank of Canada\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -11270,7 +11270,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BDL, \u0628\u0646\u0643 \u0627\u0644\u062a\u0646\u0645\u064a\u0629 \u0627\u0644\u0645\u062d\u0644\u064a\u0629",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0628\u0646\u0643 \u0627\u0644\u062a\u0646\u0645\u064a\u0629 \u0627\u0644\u0645\u062d\u0644\u064a\u0629\"][\"brand:ar\"=\"\u0628\u0646\u0643 \u0627\u0644\u062a\u0646\u0645\u064a\u0629 \u0627\u0644\u0645\u062d\u0644\u064a\u0629\"][\"brand:fr\"=\"Banque de D\u00e9veloppement Local\"][\"brand:wikidata\"=\"Q64410371\"][\"name\"=\"BDL\"][\"official_name\"=\"\u0628\u0646\u0643 \u0627\u0644\u062a\u0646\u0645\u064a\u0629 \u0627\u0644\u0645\u062d\u0644\u064a\u0629\"][\"official_name:ar\"=\"\u0628\u0646\u0643 \u0627\u0644\u062a\u0646\u0645\u064a\u0629 \u0627\u0644\u0645\u062d\u0644\u064a\u0629\"][\"official_name:fr\"=\"Banque de D\u00e9veloppement Local\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_BDL_.png",
@@ -11306,7 +11306,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BDM",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BDM\"][\"brand:wikidata\"=\"Q2883022\"][\"name\"=\"BDM\"][\"official_name\"=\"Banque du D\u00e9veloppement du Mali\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -11342,7 +11342,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BdM Banca",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BdM Banca\"][\"brand:wikidata\"=\"Q3633730\"][\"name\"=\"BdM Banca\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -11378,7 +11378,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BDO",
     query: "(nwr[\"alt_name\"=\"Banco de Oro\"][\"amenity\"=\"bank\"][\"brand\"=\"BDO\"][\"brand:wikidata\"=\"Q4854129\"][\"name\"=\"BDO\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BDO_Unibank_(logo).svg",
@@ -11414,7 +11414,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BDO Network Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BDO Network Bank\"][\"brand:wikidata\"=\"Q7093019\"][\"name\"=\"BDO Network Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -11450,7 +11450,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BEA (\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u062c\u0632\u0627\u0626\u0631\u064a \u0627\u0644\u062e\u0627\u0631\u062c\u064a)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BEA\"][\"brand:ar\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u062c\u0632\u0627\u0626\u0631\u064a \u0627\u0644\u062e\u0627\u0631\u062c\u064a\"][\"brand:en\"=\"BEA\"][\"brand:wikidata\"=\"Q86660761\"][\"name:ar\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u062c\u0632\u0627\u0626\u0631\u064a \u0627\u0644\u062e\u0627\u0631\u062c\u064a\"][\"name:en\"=\"BEA\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -11486,7 +11486,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BECU",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BECU\"][\"brand:wikidata\"=\"Q4835409\"][\"name\"=\"BECU\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Becu-logo.png",
@@ -11522,7 +11522,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Belfius",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Belfius\"][\"brand:wikidata\"=\"Q1956014\"][\"name\"=\"Belfius\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Belfius.svg",
@@ -11558,7 +11558,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bendigo Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bendigo Bank\"][\"brand:wikidata\"=\"Q4887077\"][\"name\"=\"Bendigo Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -11594,7 +11594,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Beobank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Beobank\"][\"brand:wikidata\"=\"Q14911971\"][\"name\"=\"Beobank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Beobank-logo.png",
@@ -11630,7 +11630,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bereke Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bereke Bank\"][\"brand:wikidata\"=\"Q4153367\"][\"name\"=\"Bereke Bank\"][\"name:en\"=\"Bereke Bank\"][\"name:ru\"=\"\u0411\u0435\u0440\u0435\u043a\u0435 \u0411\u0430\u043d\u043a\"][\"official_name\"=\"Bereke Bank JSC\"][\"official_name:en\"=\"Bereke Bank JSC\"][\"official_name:kk\"=\"\u00abBereke Bank\u00bb \u0410\u049a\"][\"official_name:ru\"=\"\u0410\u041e \u00abBereke Bank\u00bb\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -11666,7 +11666,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Berliner Volksbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Berliner Volksbank\"][\"brand:wikidata\"=\"Q821855\"][\"name\"=\"Berliner Volksbank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Volksbank_Logo.svg",
@@ -11702,7 +11702,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Berner Kantonalbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Berner Kantonalbank\"][\"brand:de\"=\"Berner Kantonalbank\"][\"brand:fr\"=\"Banque Cantonale Bernoise\"][\"brand:wikidata\"=\"Q824579\"][\"name\"=\"Berner Kantonalbank\"][\"name:de\"=\"Berner Kantonalbank\"][\"name:fr\"=\"Banque Cantonale Bernoise\"][\"short_name\"=\"BEKB\"][\"short_name:de\"=\"BEKB\"][\"short_name:fr\"=\"BCBE\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Kantonalbankgeb\u00e4ude.jpg",
@@ -11738,7 +11738,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BGL BNP Paribas",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BGL BNP Paribas\"][\"brand:wikidata\"=\"Q795898\"][\"name\"=\"BGL BNP Paribas\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Sidejo_de_la_banko_BGL_BNP_Paribas_en_bulvardo_Royal,_Luksemburgo.jpg",
@@ -11774,7 +11774,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bicici",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bicici\"][\"brand:wikidata\"=\"Q1667302\"][\"name\"=\"Bicici\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -11810,7 +11810,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BIDV",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BIDV\"][\"brand:wikidata\"=\"Q1003180\"][\"name\"=\"BIDV\"][\"official_name\"=\"Ng\u00e2n h\u00e0ng \u0110\u1ea7u t\u01b0 v\u00e0 Ph\u00e1t tri\u1ec3n Vi\u1ec7t Nam\"][\"official_name:en\"=\"Bank for Investment and Development of Vietnam\"][\"official_name:vi\"=\"Ng\u00e2n h\u00e0ng \u0110\u1ea7u t\u01b0 v\u00e0 Ph\u00e1t tri\u1ec3n Vi\u1ec7t Nam\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_BIDV.svg",
@@ -11846,7 +11846,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bidvest Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bidvest Bank\"][\"brand:wikidata\"=\"Q4904284\"][\"name\"=\"Bidvest Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -11882,7 +11882,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BIL",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BIL\"][\"brand:wikidata\"=\"Q2883404\"][\"name\"=\"BIL\"][\"official_name\"=\"Banque Internationale \u00e0 Luxembourg\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BIL_logo.svg",
@@ -11918,7 +11918,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BKS Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BKS Bank\"][\"brand:wikidata\"=\"Q796136\"][\"name\"=\"BKS Bank\"][\"official_name\"=\"Bank f\u00fcr K\u00e4rnten und Steiermark\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BKS-Bank-Logo.svg",
@@ -11954,7 +11954,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Blue Federal Credit Union",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Blue Federal Credit Union\"][\"brand:wikidata\"=\"Q113495617\"][\"name\"=\"Blue Federal Credit Union\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Blue_Federal_Credit_Union_Icon.svg",
@@ -11990,7 +11990,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BMCE Bank (\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0645\u063a\u0631\u0628\u064a \u0644\u0644\u062a\u062c\u0627\u0631\u0629 \u0627\u0644\u062e\u0627\u0631\u062c\u064a\u0629)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BMCE Bank\"][\"brand:ar\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0645\u063a\u0631\u0628\u064a \u0644\u0644\u062a\u062c\u0627\u0631\u0629 \u0627\u0644\u062e\u0627\u0631\u062c\u064a\u0629\"][\"brand:en\"=\"BMCE Bank\"][\"brand:wikidata\"=\"Q2300433\"][\"name:ar\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0645\u063a\u0631\u0628\u064a \u0644\u0644\u062a\u062c\u0627\u0631\u0629 \u0627\u0644\u062e\u0627\u0631\u062c\u064a\u0629\"][\"name:en\"=\"BMCE Bank\"][\"official_name\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0645\u063a\u0631\u0628\u064a \u0644\u0644\u062a\u062c\u0627\u0631\u0629 \u0627\u0644\u062e\u0627\u0631\u062c\u064a\u0629\"][\"official_name:ar\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0645\u063a\u0631\u0628\u064a \u0644\u0644\u062a\u062c\u0627\u0631\u0629 \u0627\u0644\u062e\u0627\u0631\u062c\u064a\u0629\"][\"official_name:en\"=\"Moroccan Bank of Foreign Commerce\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Tour_Mohammed_VI_de_Sal\u00e9.jpg",
@@ -12026,7 +12026,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BMCI (\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0645\u063a\u0631\u0628\u064a \u0644\u0644\u062a\u062c\u0627\u0631\u0629 \u0648\u0627\u0644\u0635\u0646\u0627\u0639\u0629)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BMCI\"][\"brand:ar\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0645\u063a\u0631\u0628\u064a \u0644\u0644\u062a\u062c\u0627\u0631\u0629 \u0648\u0627\u0644\u0635\u0646\u0627\u0639\u0629\"][\"brand:en\"=\"BMCI\"][\"brand:wikidata\"=\"Q2883409\"][\"name:ar\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0645\u063a\u0631\u0628\u064a \u0644\u0644\u062a\u062c\u0627\u0631\u0629 \u0648\u0627\u0644\u0635\u0646\u0627\u0639\u0629\"][\"name:en\"=\"BMCI\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -12062,7 +12062,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BMN",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BMN\"][\"brand:wikidata\"=\"Q3754900\"][\"name\"=\"BMN\"][\"official_name\"=\"Banco Mare Nostrum\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BMN_nuevo_logo.jpg",
@@ -12098,7 +12098,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BMO (Canada)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BMO\"][\"brand:wikidata\"=\"Q806693\"][\"name\"=\"BMO\"][\"official_name\"=\"Bank of Montreal\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_of_Montreal_Logo.svg",
@@ -12134,7 +12134,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BMO (USA)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BMO\"][\"brand:wikidata\"=\"Q4835981\"][\"name\"=\"BMO\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BMO_Harris_Logo.png",
@@ -12170,7 +12170,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BNA (Algeria)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BNA\"][\"brand:ar\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0648\u0637\u0646\u064a \u0627\u0644\u062c\u0632\u0627\u0626\u0631\u064a\"][\"brand:en\"=\"National Bank of Algeria\"][\"brand:fr\"=\"Banque nationale d'Alg\u00e9rie\"][\"brand:wikidata\"=\"Q2883410\"][\"name\"=\"BNA\"][\"name:ar\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0648\u0637\u0646\u064a \u0627\u0644\u062c\u0632\u0627\u0626\u0631\u064a\"][\"name:en\"=\"National Bank of Algeria\"][\"name:fr\"=\"Banque nationale d'Alg\u00e9rie\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bna-logo-full.svg",
@@ -12206,7 +12206,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BNA (Tunisia)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BNA\"][\"brand:wikidata\"=\"Q2883413\"][\"name\"=\"BNA\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Tunisie_Banque_Nationale_Agricole.JPG",
@@ -12242,7 +12242,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BNDA",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BNDA\"][\"brand:wikidata\"=\"Q30594734\"][\"name\"=\"BNDA\"][\"official_name\"=\"Banque Nationale de D\u00e9veloppement Agricole\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -12278,7 +12278,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BNI",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BNI\"][\"brand:wikidata\"=\"Q2882611\"][\"name\"=\"BNI\"][\"official_name\"=\"Bank Negara Indonesia\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -12314,7 +12314,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BNL",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BNL\"][\"brand:wikidata\"=\"Q2201225\"][\"name\"=\"BNL\"][\"official_name\"=\"Banca Nazionale del Lavoro\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banca_Nazionale_del_Lavoro_logo.svg",
@@ -12350,7 +12350,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BNP Paribas",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BNP Paribas\"][\"brand:wikidata\"=\"Q499707\"][\"name\"=\"BNP Paribas\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BNP_Paribas.svg",
@@ -12386,7 +12386,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BNP Paribas Bank Polska",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BNP Paribas Bank Polska\"][\"brand:wikidata\"=\"Q20744004\"][\"name\"=\"BNP Paribas Polska\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BNP_Paribas.png",
@@ -12422,7 +12422,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BNP Paribas El Djaza\u00efr",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BNP Paribas El Djaza\u00efr\"][\"name\"=\"BNP Paribas El Djaza\u00efr\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -12458,7 +12458,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BNP Paribas Fortis",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BNP Paribas Fortis\"][\"brand:wikidata\"=\"Q796827\"][\"name\"=\"BNP Paribas Fortis\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BNP_Paribas_Fortis.png",
@@ -12494,7 +12494,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BOC",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BOC\"][\"brand:wikidata\"=\"Q790068\"][\"name\"=\"BOC\"][\"official_name\"=\"Bank of China\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BOC_Headquarters_at_Xidan_(20171123140827).jpg",
@@ -12530,7 +12530,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BOM",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BOM\"][\"brand:wikidata\"=\"Q4856151\"][\"name\"=\"BOM\"][\"official_name\"=\"Bank of Melbourne\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -12566,7 +12566,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BOQ",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BOQ\"][\"brand:wikidata\"=\"Q4856173\"][\"name\"=\"BOQ\"][\"official_name\"=\"Bank of Queensland\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -12602,7 +12602,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BPC",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BPC\"][\"brand:wikidata\"=\"Q4854132\"][\"name\"=\"BPC\"][\"official_name\"=\"Banco de Poupan\u00e7a e Cr\u00e9dito\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -12638,7 +12638,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BPER Banca",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BPER Banca\"][\"brand:wikidata\"=\"Q806167\"][\"name\"=\"BPER Banca\"][\"official_name\"=\"Banca Popolare dell'Emilia Romagna\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BPER_Banca_Logo.svg",
@@ -12674,7 +12674,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BPI",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BPI\"][\"brand:wikidata\"=\"Q2501256\"][\"name\"=\"BPI\"][\"official_name\"=\"Bank of the Philippine Islands\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -12710,7 +12710,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Bradesco",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bradesco\"][\"brand:wikidata\"=\"Q806181\"][\"name\"=\"Bradesco\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Bradesco_logo.svg",
@@ -12746,7 +12746,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BRD",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BRD\"][\"brand:wikidata\"=\"Q796927\"][\"name\"=\"BRD\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BRD_logo.svg",
@@ -12782,7 +12782,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BRED",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BRED\"][\"brand:wikidata\"=\"Q2877455\"][\"name\"=\"BRED\"][\"official_name\"=\"Banque r\u00e9gionale d'escompte et de d\u00e9p\u00f4ts\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -12818,7 +12818,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BRI",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BRI\"][\"brand:wikidata\"=\"Q623042\"][\"name\"=\"BRI\"][\"official_name\"=\"Bank Rakyat Indonesia\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BRI_2020_(Alternative).svg",
@@ -12854,7 +12854,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BTN",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BTN\"][\"brand:en\"=\"BTN\"][\"brand:id\"=\"BTN\"][\"brand:wikidata\"=\"Q12474534\"][\"name\"=\"BTN\"][\"official_name\"=\"Bank Tabungan Negara\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_BTN_logo.svg",
@@ -12890,7 +12890,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BTPN",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BTPN\"][\"brand:en\"=\"BTPN\"][\"brand:id\"=\"BTPN\"][\"brand:wikidata\"=\"Q12474535\"][\"name\"=\"BTPN\"][\"official_name\"=\"Bank BTPN\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_of_Bank_BTPN.svg",
@@ -12926,7 +12926,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BTV",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BTV\"][\"brand:wikidata\"=\"Q806665\"][\"name\"=\"BTV\"][\"official_name\"=\"Bank f\u00fcr Tirol und Vorarlberg\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_BTV_VIER_LAENDER_BANK.png",
@@ -12962,7 +12962,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Budapest Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Budapest Bank\"][\"brand:wikidata\"=\"Q27493463\"][\"name\"=\"Budapest Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Budapest_Bank_logo.svg",
@@ -12998,7 +12998,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Busey Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Busey Bank\"][\"brand:wikidata\"=\"Q5001347\"][\"name\"=\"Busey Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -13034,7 +13034,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "BW-Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"BW-Bank\"][\"brand:wikidata\"=\"Q798891\"][\"name\"=\"BW-Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Baden-W\u00fcrttembergische_Bank_logo.svg",
@@ -13070,7 +13070,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Byblos Bank Armenia",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0532\u056b\u0562\u056c\u0578\u057d \u0532\u0561\u0576\u056f \u0531\u0580\u0574\u0565\u0576\u056b\u0561\"][\"brand:en\"=\"Byblos Bank Armenia\"][\"brand:hy\"=\"\u0532\u056b\u0562\u056c\u0578\u057d \u0532\u0561\u0576\u056f \u0531\u0580\u0574\u0565\u0576\u056b\u0561\"][\"brand:ru\"=\"\u0411\u0438\u0431\u043b\u043e\u0441 \u0411\u0430\u043d\u043a \u0410\u0440\u043c\u0435\u043d\u0438\u044f\"][\"brand:wikidata\"=\"Q117622807\"][\"name\"=\"\u0532\u056b\u0562\u056c\u0578\u057d \u0532\u0561\u0576\u056f \u0531\u0580\u0574\u0565\u0576\u056b\u0561\"][\"name:en\"=\"Byblos Bank Armenia\"][\"name:hy\"=\"\u0532\u056b\u0562\u056c\u0578\u057d \u0532\u0561\u0576\u056f \u0531\u0580\u0574\u0565\u0576\u056b\u0561\"][\"name:ru\"=\"\u0411\u0438\u0431\u043b\u043e\u0441 \u0411\u0430\u043d\u043a \u0410\u0440\u043c\u0435\u043d\u0438\u044f\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -13106,7 +13106,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Byline Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Byline Bank\"][\"brand:wikidata\"=\"Q6824994\"][\"name\"=\"Byline Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -13142,7 +13142,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Cadence Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Cadence Bank\"][\"brand:wikidata\"=\"Q4854138\"][\"name\"=\"Cadence Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Cadence-Bank-logo-2022.svg",
@@ -13178,7 +13178,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Caisse d'\u00c9pargne",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Caisse d'\u00c9pargne\"][\"brand:wikidata\"=\"Q1547738\"][\"name\"=\"Caisse d'\u00c9pargne\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Team_Caisse_d\u2019Epargne.svg",
@@ -13214,7 +13214,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Caixa Altea",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Caixa Altea\"][\"brand:wikidata\"=\"Q115774046\"][\"name\"=\"Caixa Altea\"][\"name:ca\"=\"Caixa Altea\"][\"official_name\"=\"Caixa Rural d'Altea\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -13250,7 +13250,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Caixa Callosa",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Caixa Callosa\"][\"brand:wikidata\"=\"Q115774219\"][\"name\"=\"Caixa Callosa\"][\"name:ca\"=\"Caixa Callosa\"][\"official_name\"=\"Caixa Rural de Callosa d'en Sarri\u00e0\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -13286,7 +13286,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Caixa Econ\u00f4mica Federal (Brasil)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Caixa Econ\u00f4mica Federal\"][\"brand:wikidata\"=\"Q835283\"][\"name\"=\"Caixa Econ\u00f4mica Federal\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Caixa_Econ\u00f4mica_Federal_logo.svg",
@@ -13322,7 +13322,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Caixa Geral de Dep\u00f3sitos",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Caixa Geral de Dep\u00f3sitos\"][\"brand:wikidata\"=\"Q1026044\"][\"name\"=\"Caixa Geral de Dep\u00f3sitos\"][\"short_name\"=\"CGD\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/TriquetraCaixaGeral.svg",
@@ -13358,7 +13358,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Caixa Ontinyent",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Caixa Ontinyent\"][\"brand:wikidata\"=\"Q8254941\"][\"name\"=\"Caixa Ontinyent\"][\"name:ca\"=\"Caixa Ontinyent\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -13394,7 +13394,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Caixa Popular",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Caixa Popular\"][\"brand:wikidata\"=\"Q8254944\"][\"name\"=\"Caixa Popular\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -13430,7 +13430,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Caixabank (Espa\u00f1a)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Caixabank\"][\"brand:wikidata\"=\"Q847225\"][\"name\"=\"Caixabank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_CaixaBank.svg",
@@ -13466,7 +13466,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Caja Arequipa",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Caja Arequipa\"][\"brand:wikidata\"=\"Q131297428\"][\"name\"=\"Caja Arequipa\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -13502,7 +13502,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Caja Duero",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Caja Duero\"][\"brand:wikidata\"=\"Q3821055\"][\"name\"=\"Caja Duero\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -13538,7 +13538,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Caja Espa\u00f1a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Caja Espa\u00f1a\"][\"brand:wikidata\"=\"Q966985\"][\"name\"=\"Caja Espa\u00f1a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo-vector-caja-espana.jpg",
@@ -13574,7 +13574,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Caja Rural",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Caja Rural\"][\"brand:wikidata\"=\"Q3649971\"][\"name\"=\"Caja Rural\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Caja_Rural.svg",
@@ -13610,7 +13610,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Caja Rural de Arag\u00f3n",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Caja Rural de Arag\u00f3n\"][\"brand:wikidata\"=\"Q5719155\"][\"name\"=\"Caja Rural de Arag\u00f3n\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Bantierra_4ts.jpg",
@@ -13646,7 +13646,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Caja Rural de Ja\u00e9n",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Caja Rural de Ja\u00e9n\"][\"brand:wikidata\"=\"Q18720350\"][\"name\"=\"Caja Rural de Ja\u00e9n\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Cerro_de_Tall\u00e1n_24J_01.jpg",
@@ -13682,7 +13682,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Cajamar",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Cajamar\"][\"brand:wikidata\"=\"Q8254971\"][\"name\"=\"Cajamar\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Sede_Central_Cajamar_01.jpg",
@@ -13718,7 +13718,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "CajaSur",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"CajaSur\"][\"brand:wikidata\"=\"Q20013689\"][\"name\"=\"CajaSur\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo-CajaSur-Banco.png",
@@ -13754,7 +13754,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "CalBank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"CalBank\"][\"brand:wikidata\"=\"Q4035559\"][\"name\"=\"CalBank\"][\"operator\"=\"CalBank PLC\"][\"operator:type\"=\"public\"][\"operator:wikidata\"=\"Q4035559\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_png-01.png",
@@ -13790,7 +13790,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "California Coast Credit Union",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"California Coast Credit Union\"][\"brand:wikidata\"=\"Q25025281\"][\"name\"=\"California Coast Credit Union\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -13826,7 +13826,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Camden National Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Camden National Bank\"][\"brand:wikidata\"=\"Q27963479\"][\"name\"=\"Camden National Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -13862,7 +13862,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Canadian Western Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Canadian Western Bank\"][\"brand:wikidata\"=\"Q1032408\"][\"name\"=\"Canadian Western Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -13898,7 +13898,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Canandaigua National Bank & Trust",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Canandaigua National Bank & Trust\"][\"brand:wikidata\"=\"Q113587210\"][\"name\"=\"Canandaigua National Bank & Trust\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -13934,7 +13934,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Canara Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Canara Bank\"][\"brand:en\"=\"Canara Bank\"][\"brand:hi\"=\"\u0915\u0947\u0928\u0930\u093e \u092c\u0948\u0902\u0915\"][\"brand:kn\"=\"\u0c95\u0cc6\u0ca8\u0cb0\u0cbe \u0cac\u0ccd\u0caf\u0cbe\u0c82\u0c95\u0ccd\"][\"brand:pa\"=\"\u0a15\u0a47\u0a28\u0a30\u0a3e \u0a2c\u0a48\u0a02\u0a15\"][\"brand:pnb\"=\"\u06a9\u06cc\u0646\u0631\u0627 \u0628\u06cc\u0646\u06a9\"][\"brand:ur\"=\"\u06a9\u06cc\u0646\u0631\u0627 \u0628\u06cc\u0646\u06a9\"][\"brand:wikidata\"=\"Q2003777\"][\"name\"=\"Canara Bank\"][\"name:en\"=\"Canara Bank\"][\"name:hi\"=\"\u0915\u0947\u0928\u0930\u093e \u092c\u0948\u0902\u0915\"][\"name:kn\"=\"\u0c95\u0cc6\u0ca8\u0cb0\u0cbe \u0cac\u0ccd\u0caf\u0cbe\u0c82\u0c95\u0ccd\"][\"name:pa\"=\"\u0a15\u0a47\u0a28\u0a30\u0a3e \u0a2c\u0a48\u0a02\u0a15\"][\"name:pnb\"=\"\u06a9\u06cc\u0646\u0631\u0627 \u0628\u06cc\u0646\u06a9\"][\"name:ur\"=\"\u06a9\u06cc\u0646\u0631\u0627 \u0628\u06cc\u0646\u06a9\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Canara_Bank_Logo.svg",
@@ -13970,7 +13970,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Capital Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Capital Bank\"][\"brand:wikidata\"=\"Q5035481\"][\"name\"=\"Capital Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Capital_Bank_Financial_Corp_Logo.png",
@@ -14006,7 +14006,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Capital One",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Capital One\"][\"brand:wikidata\"=\"Q1034654\"][\"name\"=\"Capital One\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Capital_One_logo.svg",
@@ -14042,7 +14042,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Capital Ria",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Capital Ria\"][\"name\"=\"Capital Ria\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -14078,7 +14078,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Capital Small Finance Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Capital Small Finance Bank\"][\"brand:wikidata\"=\"Q76383664\"][\"name\"=\"Capital Small Finance Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -14114,7 +14114,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "CapitalBank (TRNC)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"CapitalBank\"][\"brand:wikidata\"=\"Q31188679\"][\"name\"=\"CapitalBank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -14150,7 +14150,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Capitec Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Capitec Bank\"][\"brand:wikidata\"=\"Q5035822\"][\"name\"=\"Capitec Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Capitec_Bank_logo.svg",
@@ -14186,7 +14186,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Carisbo",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Carisbo\"][\"brand:wikidata\"=\"Q3661937\"][\"name\"=\"Carisbo\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -14222,7 +14222,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Casden",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Casden\"][\"brand:wikidata\"=\"Q2930976\"][\"name\"=\"Casden\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -14258,7 +14258,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "CatalunyaCaixa",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"CatalunyaCaixa\"][\"brand:wikidata\"=\"Q3750952\"][\"name\"=\"CatalunyaCaixa\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_cx_original.svg",
@@ -14294,7 +14294,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Cathay Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Cathay Bank\"][\"brand:wikidata\"=\"Q4189507\"][\"name\"=\"Cathay Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Cathay_Bank,_Chinatown,_Los_Angeles,_CA,_USA.jpg",
@@ -14330,7 +14330,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "CBAO",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"CBAO\"][\"brand:wikidata\"=\"Q532104\"][\"name\"=\"CBAO\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -14366,7 +14366,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "CCF",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"CCF\"][\"brand:wikidata\"=\"Q3006195\"][\"name\"=\"CCF\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -14402,7 +14402,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "CEC Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"CEC Bank\"][\"brand:wikidata\"=\"Q1023306\"][\"name\"=\"CEC Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Romanian_Post_Savings_-_panoramio.jpg",
@@ -14438,7 +14438,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Centennial Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Centennial Bank\"][\"brand:wikidata\"=\"Q92384230\"][\"name\"=\"Centennial Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -14474,7 +14474,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "CenterCredit",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Bank CenterCredit\"][\"brand:wikidata\"=\"Q806624\"][\"name\"=\"Bank CenterCredit\"][\"name:en\"=\"Bank CenterCredit\"][\"name:kk\"=\"\u0411\u0430\u043d\u043a \u0426\u0435\u043d\u0442\u0440\u041a\u0440\u0435\u0434\u0438\u0442\"][\"name:ru\"=\"\u0411\u0430\u043d\u043a \u0426\u0435\u043d\u0442\u0440\u041a\u0440\u0435\u0434\u0438\u0442\"][\"official_name\"=\"Bank CenterCredit JSC\"][\"official_name:en\"=\"Bank CenterCredit JSC\"][\"official_name:kk\"=\"\u00ab\u0411\u0430\u043d\u043a \u0426\u0435\u043d\u0442\u0440\u041a\u0440\u0435\u0434\u0438\u0442\u00bb \u0410\u049a\"][\"official_name:ru\"=\"\u0410\u041e \u00ab\u0411\u0430\u043d\u043a \u0426\u0435\u043d\u0442\u0440\u041a\u0440\u0435\u0434\u0438\u0442\u00bb\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -14510,7 +14510,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Central Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Central Bank\"][\"brand:wikidata\"=\"Q113482320\"][\"name\"=\"Central Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -14546,7 +14546,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Central Bank of India",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Central Bank of India\"][\"brand:wikidata\"=\"Q2007090\"][\"name\"=\"Central Bank of India\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Central_Bank_of_India,_Mumbai.JPG",
@@ -14582,7 +14582,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u010cesk\u00e1 spo\u0159itelna",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u010cesk\u00e1 spo\u0159itelna\"][\"brand:wikidata\"=\"Q341100\"][\"name\"=\"\u010cesk\u00e1 spo\u0159itelna\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Ceska_Sporitelna.svg",
@@ -14618,7 +14618,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Chase",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Chase\"][\"brand:wikidata\"=\"Q524629\"][\"name\"=\"Chase\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Chase_logo_2007.svg",
@@ -14654,7 +14654,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Chemical Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Chemical Bank\"][\"brand:wikidata\"=\"Q86815846\"][\"name\"=\"Chemical Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -14690,7 +14690,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "China Bank Savings",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"China Bank Savings\"][\"brand:wikidata\"=\"Q18387359\"][\"name\"=\"China Bank Savings\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -14726,7 +14726,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "China Construction Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"China Construction Bank\"][\"brand:wikidata\"=\"Q26299\"][\"name\"=\"China Construction Bank\"][\"short_name\"=\"CCB\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/China_Construction_Bank_logo.svg",
@@ -14762,7 +14762,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Chinabank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Chinabank\"][\"brand:wikidata\"=\"Q5100080\"][\"name\"=\"Chinabank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Chinabank_logo.svg",
@@ -14798,7 +14798,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "CIB Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"CIB Bank\"][\"brand:wikidata\"=\"Q839566\"][\"name\"=\"CIB Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -14834,7 +14834,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "CIBC",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"CIBC\"][\"brand:wikidata\"=\"Q666694\"][\"name\"=\"CIBC\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Toronto_-_ON_-_Commerce_Court_West.jpg",
@@ -14870,7 +14870,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "CIC",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"CIC\"][\"brand:wikidata\"=\"Q746525\"][\"name\"=\"CIC\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Cr\u00e9dit_Industriel_et_Commercial_Logo.svg",
@@ -14906,7 +14906,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "CIH Bank (\u0627\u0644\u0642\u0631\u0636 \u0627\u0644\u0639\u0642\u0627\u0631\u064a \u0648\u0627\u0644\u0633\u064a\u0627\u062d\u064a)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"CIH Bank\"][\"brand:ar\"=\"\u0627\u0644\u0642\u0631\u0636 \u0627\u0644\u0639\u0642\u0627\u0631\u064a \u0648\u0627\u0644\u0633\u064a\u0627\u062d\u064a\"][\"brand:en\"=\"CIH Bank\"][\"brand:wikidata\"=\"Q3006220\"][\"name:ar\"=\"\u0627\u0644\u0642\u0631\u0636 \u0627\u0644\u0639\u0642\u0627\u0631\u064a \u0648\u0627\u0644\u0633\u064a\u0627\u062d\u064a\"][\"name:en\"=\"CIH Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -14942,7 +14942,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "CIMB Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"CIMB Bank\"][\"brand:wikidata\"=\"Q3045976\"][\"name\"=\"CIMB Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/CIMB_Group_Logo.svg",
@@ -14978,7 +14978,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "CIMB Niaga",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"CIMB Niaga\"][\"brand:wikidata\"=\"Q5011747\"][\"name\"=\"CIMB Niaga\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_cimbniaga.gif",
@@ -15014,7 +15014,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Citadele",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Citadele bank\"][\"brand:en\"=\"Citadele bank\"][\"brand:lv\"=\"Citadele banka\"][\"brand:ru\"=\"Citadele bank\"][\"brand:wikidata\"=\"Q14239556\"][\"name\"=\"Citadele\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -15050,7 +15050,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Citibank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Citibank\"][\"brand:wikidata\"=\"Q857063\"][\"name\"=\"Citibank\"][\"short_name\"=\"Citi\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Citibank.svg",
@@ -15086,7 +15086,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Citizens Bank (Eastern USA)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Citizens Bank\"][\"brand:wikidata\"=\"Q5122694\"][\"name\"=\"Citizens Bank\"][\"short_name\"=\"Citizens\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Citizens_Financial_Group_logo.svg",
@@ -15122,7 +15122,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Citizens Bank (Kentucky)",
     query: "(nwr[\"alt_name\"=\"Citizens Bank of Kentucky\"][\"amenity\"=\"bank\"][\"brand\"=\"Citizens Bank\"][\"brand:wikidata\"=\"Q5122711\"][\"name\"=\"Citizens Bank\"][\"official_name\"=\"Citizens National Bank\"][\"short_name\"=\"Citizens\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -15158,7 +15158,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Citizens Bank (Nepal)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Citizens Bank International\"][\"brand:wikidata\"=\"Q13186934\"][\"name\"=\"Citizens Bank\"][\"official_name\"=\"Citizens Bank International Ltd.\"][\"short_name\"=\"Citizens\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -15194,7 +15194,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Citizens Bank (Tennessee)",
     query: "(nwr[\"alt_name\"=\"Citizens Bank\"][\"amenity\"=\"bank\"][\"brand\"=\"Citizens Bank\"][\"name\"=\"Citizens Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -15230,7 +15230,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "City National Bank (California-based)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"City National Bank\"][\"brand:wikidata\"=\"Q5123314\"][\"name\"=\"City National Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/City_National_Plaza_Twin_Towers.JPG",
@@ -15266,7 +15266,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "City National Bank (Florida)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"City National Bank\"][\"brand:wikidata\"=\"Q16958644\"][\"name\"=\"City National Bank\"][\"official_name\"=\"City National Bank of Florida\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/CNBFL_Miami_Tower_and_Orlando_Building.jpg",
@@ -15302,7 +15302,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "City National Bank (West Virginia)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"City National Bank\"][\"brand:wikidata\"=\"Q90937436\"][\"name\"=\"City National Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -15338,7 +15338,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "City Union Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"City Union Bank\"][\"brand:en\"=\"City Union Bank\"][\"brand:hi\"=\"\u0938\u093f\u091f\u0940 \u092f\u0942\u0928\u093f\u092f\u0928 \u092c\u0948\u0902\u0915\"][\"brand:ta\"=\"\u0b9a\u0bbf\u0b9f\u0bcd\u0b9f\u0bbf \u0baf\u0bc2\u0ba9\u0bbf\u0baf\u0ba9\u0bcd \u0bb5\u0b99\u0bcd\u0b95\u0bbf\"][\"brand:wikidata\"=\"Q2040264\"][\"name\"=\"City Union Bank\"][\"name:en\"=\"City Union Bank\"][\"name:hi\"=\"\u0938\u093f\u091f\u0940 \u092f\u0942\u0928\u093f\u092f\u0928 \u092c\u0948\u0902\u0915\"][\"name:ta\"=\"\u0b9a\u0bbf\u0b9f\u0bcd\u0b9f\u0bbf \u0baf\u0bc2\u0ba9\u0bbf\u0baf\u0ba9\u0bcd \u0bb5\u0b99\u0bcd\u0b95\u0bbf\"][\"short_name\"=\"CUB\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -15374,7 +15374,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "CiviBank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"CiviBank\"][\"brand:wikidata\"=\"Q15639942\"][\"name\"=\"CiviBank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -15410,7 +15410,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "CNEP (\u0627\u0644\u0635\u0646\u062f\u0648\u0642 \u0627\u0644\u0648\u0637\u0646\u064a \u0644\u0644\u062a\u0648\u0641\u064a\u0631 \u0648\u0627\u0644\u0627\u062d\u062a\u064a\u0627\u0637)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"CNEP\"][\"brand:ar\"=\"\u0627\u0644\u0635\u0646\u062f\u0648\u0642 \u0627\u0644\u0648\u0637\u0646\u064a \u0644\u0644\u062a\u0648\u0641\u064a\u0631 \u0648\u0627\u0644\u0627\u062d\u062a\u064a\u0627\u0637\"][\"brand:en\"=\"CNEP\"][\"brand:fr\"=\"Caisse nationale d'\u00e9pargne et de pr\u00e9voyance\"][\"brand:wikidata\"=\"Q2931752\"][\"name\"=\"CNEP\"][\"name:ar\"=\"\u0627\u0644\u0635\u0646\u062f\u0648\u0642 \u0627\u0644\u0648\u0637\u0646\u064a \u0644\u0644\u062a\u0648\u0641\u064a\u0631 \u0648\u0627\u0644\u0627\u062d\u062a\u064a\u0627\u0637\"][\"name:en\"=\"CNEP\"][\"name:fr\"=\"Caisse nationale d'\u00e9pargne et de pr\u00e9voyance\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_CNEP_banque_DZ.svg",
@@ -15446,7 +15446,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Coast Capital Savings",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Coast Capital Savings\"][\"brand:wikidata\"=\"Q5138088\"][\"name\"=\"Coast Capital Savings\"][\"official_name\"=\"Coast Capital Savings Federal Credit Union\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Coast_Capital_Savings_logo.svg",
@@ -15482,7 +15482,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Columbia Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Columbia Bank\"][\"brand:wikidata\"=\"Q62084096\"][\"name\"=\"Columbia Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -15518,7 +15518,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Comerica Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Comerica Bank\"][\"brand:wikidata\"=\"Q1114148\"][\"name\"=\"Comerica Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Comerica_Inc._logo.svg",
@@ -15554,7 +15554,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "ComInBank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"ComInBank\"][\"brand:en\"=\"ComInBank\"][\"brand:uk\"=\"\u041a\u043e\u043c\u0456\u043d\u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q116871124\"][\"name\"=\"ComInBank\"][\"name:en\"=\"ComInBank\"][\"name:uk\"=\"\u041a\u043e\u043c\u0456\u043d\u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -15590,7 +15590,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Commerce Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Commerce Bank\"][\"brand:wikidata\"=\"Q5152411\"][\"name\"=\"Commerce Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Commerce_2014-10-6.svg",
@@ -15626,7 +15626,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Commercial Bank of Ceylon",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Commercial Bank of Ceylon\"][\"brand:wikidata\"=\"Q5152468\"][\"name\"=\"Commercial Bank of Ceylon\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -15662,7 +15662,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Commercial Bank of Ethiopia",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Commercial Bank of Ethiopia\"][\"brand:wikidata\"=\"Q495172\"][\"name\"=\"Commercial Bank of Ethiopia\"][\"name:am\"=\"\u12e8\u12a2\u1275\u12ee\u1335\u12eb \u1295\u130d\u12f5 \u1263\u1295\u12ad\"][\"name:en\"=\"Commercial Bank of Ethiopia\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Ethiopian_Commercial_Bank_Addis_Abeba.jpg",
@@ -15698,7 +15698,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Commercial International Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Commercial International Bank\"][\"brand:ar\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u062a\u062c\u0627\u0631\u064a \u0627\u0644\u062f\u0648\u0644\u064a\"][\"brand:en\"=\"Commercial International Bank\"][\"brand:wikidata\"=\"Q5152506\"][\"name\"=\"Commercial International Bank\"][\"name:ar\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u062a\u062c\u0627\u0631\u064a \u0627\u0644\u062f\u0648\u0644\u064a\"][\"name:en\"=\"Commercial International Bank\"][\"short_name:en\"=\"CIB\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Cib_Logo.svg",
@@ -15734,7 +15734,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Commerzbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Commerzbank\"][\"brand:wikidata\"=\"Q157617\"][\"name\"=\"Commerzbank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Commerzbank_(2009).svg",
@@ -15770,7 +15770,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Commonwealth Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Commonwealth Bank\"][\"brand:wikidata\"=\"Q285328\"][\"name\"=\"Commonwealth Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Commonwealth_Bank_Logo.svg",
@@ -15806,7 +15806,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Community Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Community Bank\"][\"brand:wikidata\"=\"Q5154635\"][\"name\"=\"Community Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -15842,7 +15842,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Community Bank of the Chesapeake",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Community Bank of the Chesapeake\"][\"brand:wikidata\"=\"Q110588647\"][\"name\"=\"Community Bank of the Chesapeake\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -15878,7 +15878,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Community First Credit Union (Florida)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Community First Credit Union\"][\"brand:wikidata\"=\"Q110718704\"][\"name\"=\"Community First Credit Union\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -15914,7 +15914,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Community First Credit Union (Wisconsin)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Community First Credit Union\"][\"brand:wikidata\"=\"Q84458352\"][\"name\"=\"Community First Credit Union\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -15950,7 +15950,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Compass",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Compass\"][\"brand:wikidata\"=\"Q127513540\"][\"name\"=\"Compass\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -15986,7 +15986,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Consolidated Bank Ghana",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Consolidated Bank Ghana\"][\"brand:wikidata\"=\"Q56277912\"][\"name\"=\"Consolidated Bank Ghana\"][\"operator\"=\"Consolidated Bank Ghana Limited\"][\"operator:type\"=\"parastatal\"][\"operator:wikidata\"=\"Q56277912\"][\"short_name\"=\"CBG\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -16022,7 +16022,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Consumers Credit Union (Illinois)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Consumers Credit Union\"][\"brand:wikidata\"=\"Q111381516\"][\"name\"=\"Consumers Credit Union\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -16058,7 +16058,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Consumers Credit Union (Michigan)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Consumers Credit Union\"][\"brand:wikidata\"=\"Q56279579\"][\"name\"=\"Consumers Credit Union\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -16094,7 +16094,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Converse Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u053f\u0578\u0576\u057e\u0565\u0580\u057d \u0532\u0561\u0576\u056f\"][\"brand:en\"=\"Converse Bank\"][\"brand:hy\"=\"\u053f\u0578\u0576\u057e\u0565\u0580\u057d \u0532\u0561\u0576\u056f\"][\"brand:ru\"=\"\u041a\u043e\u043d\u0432\u0435\u0440\u0441 \u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q116032580\"][\"name\"=\"\u053f\u0578\u0576\u057e\u0565\u0580\u057d \u0532\u0561\u0576\u056f\"][\"name:en\"=\"Converse Bank\"][\"name:hy\"=\"\u053f\u0578\u0576\u057e\u0565\u0580\u057d \u0532\u0561\u0576\u056f\"][\"name:ru\"=\"\u041a\u043e\u043d\u0432\u0435\u0440\u0441 \u0411\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Yerevan_Converse_Bank_hammer_and_sickle.jpg",
@@ -16130,7 +16130,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Corporation Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Corporation Bank\"][\"brand:wikidata\"=\"Q2003387\"][\"name\"=\"Corporation Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Corporation_Bank_Head_Office_in_Mangalore.jpg",
@@ -16166,7 +16166,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "CPA (\u0627\u0644\u0642\u0631\u0636 \u0627\u0644\u0634\u0639\u0628\u064a \u0627\u0644\u062c\u0632\u0627\u0626\u0631\u064a)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"CPA \u0627\u0644\u0642\u0631\u0636 \u0627\u0644\u0634\u0639\u0628\u064a \u0627\u0644\u062c\u0632\u0627\u0626\u0631\u064a\"][\"brand:ar\"=\"\u0627\u0644\u0642\u0631\u0636 \u0627\u0644\u0634\u0639\u0628\u064a \u0627\u0644\u062c\u0632\u0627\u0626\u0631\u064a\"][\"brand:en\"=\"CPA\"][\"brand:wikidata\"=\"Q3006243\"][\"name\"=\"CPA \u0627\u0644\u0642\u0631\u0636 \u0627\u0644\u0634\u0639\u0628\u064a \u0627\u0644\u062c\u0632\u0627\u0626\u0631\u064a\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -16202,7 +16202,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "CRDB Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"CRDB Bank\"][\"brand:wikidata\"=\"Q5013848\"][\"name\"=\"CRDB Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -16238,7 +16238,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Credem",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Credem\"][\"brand:wikidata\"=\"Q3696881\"][\"name\"=\"Credem\"][\"official_name\"=\"Credito Emiliano\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Credito_Emiliano_Logo.svg",
@@ -16274,7 +16274,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Credicoop",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Credicoop\"][\"brand:wikidata\"=\"Q4854086\"][\"name\"=\"Credicoop\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Banco_Credicoop.svg",
@@ -16310,7 +16310,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Cr\u00e9dit Agricole",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Cr\u00e9dit Agricole\"][\"brand:wikidata\"=\"Q590952\"][\"name\"=\"Cr\u00e9dit Agricole\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Cr\u00e9dit_Agricole_2020_logo.svg",
@@ -16346,7 +16346,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Cr\u00e9dit agricole du Maroc (\u0627\u0644\u0642\u0631\u0636 \u0627\u0644\u0641\u0644\u0627\u062d\u064a)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Cr\u00e9dit agricole du Maroc \u0627\u0644\u0642\u0631\u0636 \u0627\u0644\u0641\u0644\u0627\u062d\u064a\"][\"brand:ar\"=\"\u0627\u0644\u0642\u0631\u0636 \u0627\u0644\u0641\u0644\u0627\u062d\u064a \u0627\u0644\u0645\u063a\u0631\u0628\u064a\"][\"brand:fr\"=\"Cr\u00e9dit agricole du Maroc\"][\"brand:wikidata\"=\"Q3006193\"][\"name\"=\"Cr\u00e9dit agricole du Maroc \u0627\u0644\u0642\u0631\u0636 \u0627\u0644\u0641\u0644\u0627\u062d\u064a\"][\"name:ar\"=\"\u0627\u0644\u0642\u0631\u0636 \u0627\u0644\u0641\u0644\u0627\u062d\u064a\"][\"name:fr\"=\"Cr\u00e9dit agricole du Maroc\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -16382,7 +16382,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Cr\u00e9dit Agricole Italia",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Cr\u00e9dit Agricole\"][\"brand:wikidata\"=\"Q2938832\"][\"name\"=\"Cr\u00e9dit Agricole\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_de_Cariparma.png",
@@ -16418,7 +16418,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Cr\u00e9dit Coop\u00e9ratif",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Cr\u00e9dit Coop\u00e9ratif\"][\"brand:wikidata\"=\"Q3006190\"][\"name\"=\"Cr\u00e9dit Coop\u00e9ratif\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -16454,7 +16454,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Cr\u00e9dit du Maroc (\u0645\u0635\u0631\u0641 \u0627\u0644\u0645\u063a\u0631\u0628)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Cr\u00e9dit du Maroc \u0645\u0635\u0631\u0641 \u0627\u0644\u0645\u063a\u0631\u0628\"][\"brand:ar\"=\"\u0645\u0635\u0631\u0641 \u0627\u0644\u0645\u063a\u0631\u0628\"][\"brand:fr\"=\"Cr\u00e9dit du Maroc\"][\"brand:wikidata\"=\"Q3006205\"][\"name\"=\"Cr\u00e9dit du Maroc \u0645\u0635\u0631\u0641 \u0627\u0644\u0645\u063a\u0631\u0628\"][\"name:ar\"=\"\u0645\u0635\u0631\u0641 \u0627\u0644\u0645\u063a\u0631\u0628\"][\"name:fr\"=\"Cr\u00e9dit du Maroc\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/NewLogo_CDM.svg",
@@ -16490,7 +16490,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Cr\u00e9dit Maritime",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Cr\u00e9dit Maritime\"][\"brand:wikidata\"=\"Q17176866\"][\"name\"=\"Cr\u00e9dit Maritime\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -16526,7 +16526,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Cr\u00e9dit Mutuel",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Cr\u00e9dit Mutuel\"][\"brand:wikidata\"=\"Q642627\"][\"name\"=\"Cr\u00e9dit Mutuel\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Cr\u00e9dit_Mutuel.svg",
@@ -16562,7 +16562,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Cr\u00e9dit Mutuel de Bretagne",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Cr\u00e9dit Mutuel de Bretagne\"][\"brand:wikidata\"=\"Q3006236\"][\"name\"=\"Cr\u00e9dit Mutuel de Bretagne\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -16598,7 +16598,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Credit Suisse",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Credit Suisse\"][\"brand:wikidata\"=\"Q372657\"][\"name\"=\"Credit Suisse\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Credit_Suisse_Logo_2022.svg",
@@ -16634,7 +16634,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Cr\u00e9dito Agr\u00edcola",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Cr\u00e9dito Agr\u00edcola\"][\"brand:wikidata\"=\"Q10262017\"][\"name\"=\"Cr\u00e9dito Agr\u00edcola\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -16670,7 +16670,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Creditwest Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Creditwest Bank\"][\"brand:wikidata\"=\"Q31188678\"][\"name\"=\"Creditwest Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -16706,7 +16706,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Crelan",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Crelan\"][\"brand:wikidata\"=\"Q389872\"][\"name\"=\"Crelan\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Crelan_Kantoor_in_Belgi\u00eb.jpg",
@@ -16742,7 +16742,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Cresol",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Cresol\"][\"name\"=\"Cresol\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -16778,7 +16778,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Crnogorska Komercijalna Banka",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Crnogorska Komercijalna Banka\"][\"brand:wikidata\"=\"Q869855\"][\"name\"=\"Crnogorska Komercijalna Banka\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -16814,7 +16814,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Croatia banka",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Croatia banka\"][\"brand:wikidata\"=\"Q25495576\"][\"name\"=\"Croatia banka\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -16850,7 +16850,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "CSB Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"CSB Bank\"][\"brand:wikidata\"=\"Q5053244\"][\"name\"=\"CSB Bank\"][\"official_name\"=\"Catholic Syrian Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/CSB_Bank_New_Logo-02.svg",
@@ -16886,7 +16886,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u010cSOB",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u010cSOB\"][\"brand:wikidata\"=\"Q340135\"][\"name\"=\"\u010cSOB\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/CSOB_logo.jpg",
@@ -16922,7 +16922,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Danske Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Danske Bank\"][\"brand:wikidata\"=\"Q1636974\"][\"name\"=\"Danske Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Danske_Bank_logo.svg",
@@ -16958,7 +16958,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Davivienda",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Davivienda\"][\"brand:wikidata\"=\"Q5242054\"][\"name\"=\"Davivienda\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -16994,7 +16994,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Dayspring Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Dayspring Bank\"][\"brand:wikidata\"=\"Q5453817\"][\"name\"=\"Dayspring Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -17030,7 +17030,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "DBank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"DBank\"][\"brand:wikidata\"=\"Q126365149\"][\"name\"=\"DBank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -17066,7 +17066,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "DBP",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"DBP\"][\"brand:wikidata\"=\"Q5266680\"][\"name\"=\"DBP\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/DBP_Building.jpg",
@@ -17102,7 +17102,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "DBS Bank India",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"DBS Bank India\"][\"brand:wikidata\"=\"Q76514597\"][\"name\"=\"DBS Bank India\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -17138,7 +17138,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Degussa Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Degussa Bank\"][\"brand:wikidata\"=\"Q1182932\"][\"name\"=\"Degussa Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Degussa_bank_logo.svg",
@@ -17174,7 +17174,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Denizbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Denizbank\"][\"brand:wikidata\"=\"Q1115064\"][\"name\"=\"Denizbank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/DenizBank_logo.svg",
@@ -17210,7 +17210,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Desjardins",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Desjardins\"][\"brand:wikidata\"=\"Q2933350\"][\"name\"=\"Desjardins\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Desjardins_Group_logo.svg",
@@ -17246,7 +17246,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Deutsche Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Deutsche Bank\"][\"brand:wikidata\"=\"Q66048\"][\"name\"=\"Deutsche Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Deutsche_Bank_logo_without_wordmark.svg",
@@ -17282,7 +17282,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Dhanlaxmi Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Dhanlaxmi Bank\"][\"brand:wikidata\"=\"Q2040440\"][\"name\"=\"Dhanlaxmi Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Dhana_lakshmi_bank.jpg",
@@ -17318,7 +17318,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Diamond Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Diamond Bank\"][\"name\"=\"Diamond Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -17354,7 +17354,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Digital Federal Credit Union",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Digital Federal Credit Union\"][\"brand:wikidata\"=\"Q5275860\"][\"name\"=\"Digital Federal Credit Union\"][\"short_name\"=\"DCU\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_DCU_Green.svg",
@@ -17390,7 +17390,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "DNB",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"DNB\"][\"brand:wikidata\"=\"Q80788\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/DNB_Logo.svg",
@@ -17426,7 +17426,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Dollar Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Dollar Bank\"][\"brand:wikidata\"=\"Q5289205\"][\"name\"=\"Dollar Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Dollar_Bank_logo.jpeg",
@@ -17462,7 +17462,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Dubai Islamic Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Dubai Islamic Bank\"][\"brand:ar\"=\"\u0628\u0646\u0643 \u062f\u0628\u064a \u0627\u0644\u0625\u0633\u0644\u0627\u0645\u064a\"][\"brand:en\"=\"Dubai Islamic Bank\"][\"brand:ur\"=\"\u062f\u0628\u0626\u06cc \u0627\u0633\u0644\u0627\u0645\u06cc \u0628\u06cc\u0646\u06a9\"][\"brand:wikidata\"=\"Q5310570\"][\"name\"=\"Dubai Islamic Bank\"][\"name:ar\"=\"\u0628\u0646\u0643 \u062f\u0628\u064a \u0627\u0644\u0625\u0633\u0644\u0627\u0645\u064a\"][\"name:en\"=\"Dubai Islamic Bank\"][\"name:ur\"=\"\u062f\u0628\u0626\u06cc \u0627\u0633\u0644\u0627\u0645\u06cc \u0628\u06cc\u0646\u06a9\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -17498,7 +17498,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "East West Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"East West Bank\"][\"brand:wikidata\"=\"Q3046549\"][\"name\"=\"East West Bank\"][\"name:en\"=\"East West Bank\"][\"name:zh\"=\"\u83ef\u7f8e\u9280\u884c\"][\"name:zh-Hans\"=\"\u534e\u7f8e\u94f6\u884c\"][\"name:zh-Hant\"=\"\u83ef\u7f8e\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/East_West_Bank_logo.svg",
@@ -17534,7 +17534,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Eastern Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Eastern Bank\"][\"brand:wikidata\"=\"Q5330003\"][\"name\"=\"Eastern Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -17570,7 +17570,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "EastWest Unibank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"EastWest Unibank\"][\"brand:wikidata\"=\"Q5327595\"][\"name\"=\"EastWest Unibank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/EastWest_Bank_2011_h-pos_logo.svg",
@@ -17606,7 +17606,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Ecobank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Ecobank\"][\"brand:wikidata\"=\"Q930225\"][\"name\"=\"Ecobank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Ecobank_Logo.svg",
@@ -17642,7 +17642,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Ecobank (Ghana)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Ecobank\"][\"brand:wikidata\"=\"Q930225\"][\"name\"=\"Ecobank\"][\"operator\"=\"Ecobank Ghana PLC\"][\"operator:type\"=\"public\"][\"operator:wikidata\"=\"Q5333155\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Ecobank_Logo.svg",
@@ -17678,7 +17678,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Educators Credit Union (Wisconsin)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Educators Credit Union\"][\"brand:wikidata\"=\"Q126912969\"][\"name\"=\"Educators Credit Union\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -17714,7 +17714,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Emirates NBD",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Emirates NBD\"][\"brand:wikidata\"=\"Q5372575\"][\"name\"=\"Emirates NBD\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -17750,7 +17750,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Equitas Small Finance Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Equitas Small Finance Bank\"][\"brand:wikidata\"=\"Q29467249\"][\"name\"=\"Equitas Small Finance Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Equitas-logo.png",
@@ -17786,7 +17786,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Equity Bank (Congo)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Equity Bank\"][\"brand:wikidata\"=\"Q21178738\"][\"name\"=\"Equity Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Equity_BCDC_headquarter_in_Kinshasa.jpg",
@@ -17822,7 +17822,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Equity Bank (Kenya)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Equity Bank\"][\"brand:wikidata\"=\"Q5384664\"][\"name\"=\"Equity Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -17858,7 +17858,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Equity Bank (Rwanda)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Equity Bank\"][\"brand:wikidata\"=\"Q5384665\"][\"name\"=\"Equity Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -17894,7 +17894,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Equity Bank (South Sudan)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Equity Bank\"][\"brand:wikidata\"=\"Q5384666\"][\"name\"=\"Equity Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Equity_Group_Logo.png",
@@ -17930,7 +17930,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Equity Bank (Tanzania)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Equity Bank\"][\"brand:wikidata\"=\"Q5384667\"][\"name\"=\"Equity Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -17966,7 +17966,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Equity Bank (Uganda)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Equity Bank\"][\"brand:wikidata\"=\"Q5384668\"][\"name\"=\"Equity Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/The_Church_House,_Kampala_Road,_Kampala,_Uganda.jpg",
@@ -18002,7 +18002,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Equity Bank (USA)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Equity Bank\"][\"brand:wikidata\"=\"Q62260414\"][\"name\"=\"Equity Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -18038,7 +18038,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Erste Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Erste Bank\"][\"brand:wikidata\"=\"Q696867\"][\"name\"=\"Erste Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Erste_Bank_Logo.svg",
@@ -18074,7 +18074,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "ESAF Small Finance Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"ESAF Small Finance Bank\"][\"brand:wikidata\"=\"Q28173964\"][\"name\"=\"ESAF Small Finance Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/ESAF_Bank_Logo.svg",
@@ -18110,7 +18110,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "ESL Federal Credit Union",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"ESL Federal Credit Union\"][\"brand:wikidata\"=\"Q5324174\"][\"name\"=\"ESL Federal Credit Union\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/ESL_Federal_Credit_Union_headquarters.JPG",
@@ -18146,7 +18146,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Eurasian Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Eurasian Bank\"][\"brand:wikidata\"=\"Q143852\"][\"name\"=\"Eurasian Bank\"][\"name:en\"=\"Eurasian Bank\"][\"name:kk\"=\"\u0415\u0443\u0440\u0430\u0437\u0438\u044f\u043b\u044b\u049b \u0431\u0430\u043d\u043a\"][\"name:ru\"=\"\u0415\u0432\u0440\u0430\u0437\u0438\u0439\u0441\u043a\u0438\u0439 \u0431\u0430\u043d\u043a\"][\"official_name\"=\"Eurasian Bank JSC\"][\"official_name:en\"=\"Eurasian Bank JSC\"][\"official_name:kk\"=\"\u00ab\u0415\u0443\u0440\u0430\u0437\u0438\u044f\u043b\u044b\u049b \u0431\u0430\u043d\u043a\u00bb \u0410\u049a\"][\"official_name:ru\"=\"\u0410\u041e \u00ab\u0415\u0432\u0440\u0430\u0437\u0438\u0439\u0441\u043a\u0438\u0439 \u0411\u0430\u043d\u043a\u00bb\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -18182,7 +18182,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Eurobank (\u0421\u0440\u0431\u0438\u0458\u0430)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Eurobank\"][\"brand:wikidata\"=\"Q5411684\"][\"name\"=\"Eurobank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -18218,7 +18218,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Eurobank Ergasias",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Eurobank\"][\"brand:wikidata\"=\"Q951850\"][\"name\"=\"Eurobank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Eurobank_logo_2021.svg",
@@ -18254,7 +18254,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "EuroBic",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"EuroBic\"][\"brand:wikidata\"=\"Q806175\"][\"name\"=\"EuroBic\"][\"official_name\"=\"Banco BIC Portugu\u00eas\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BancoBIC.JPG",
@@ -18290,7 +18290,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Europabank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Europabank\"][\"brand:wikidata\"=\"Q2134017\"][\"name\"=\"Europabank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Europabank_Brugge.jpg",
@@ -18326,7 +18326,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Evocabank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0537\u057e\u0578\u056f\u0561\u0562\u0561\u0576\u056f\"][\"brand:en\"=\"Evocabank\"][\"brand:hy\"=\"\u0537\u057e\u0578\u056f\u0561\u0562\u0561\u0576\u056f\"][\"brand:ru\"=\"\u042d\u0432\u043e\u043a\u0430\u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q17765349\"][\"name\"=\"\u0537\u057e\u0578\u056f\u0561\u0562\u0561\u0576\u056f\"][\"name:en\"=\"Evocabank\"][\"name:hy\"=\"\u0537\u057e\u0578\u056f\u0561\u0562\u0561\u0576\u056f\"][\"name:ru\"=\"\u042d\u0432\u043e\u043a\u0430\u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Evocabank_Head_office.jpg",
@@ -18362,7 +18362,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Exim Banca Rom\u00e2neasc\u0103",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Exim Banca Rom\u00e2neasc\u0103\"][\"brand:wikidata\"=\"Q5421544\"][\"name\"=\"Exim Banca Rom\u00e2neasc\u0103\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -18398,7 +18398,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Farmers National Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Farmers National Bank\"][\"brand:wikidata\"=\"Q104126232\"][\"name\"=\"Farmers National Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -18434,7 +18434,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Fast Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0556\u0561\u057d\u0569 \u0532\u0561\u0576\u056f\"][\"brand:en\"=\"Fast Bank\"][\"brand:hy\"=\"\u0556\u0561\u057d\u0569 \u0532\u0561\u0576\u056f\"][\"brand:ru\"=\"\u0424\u0430\u0441\u0442 \u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q117804528\"][\"name\"=\"\u0556\u0561\u057d\u0569 \u0532\u0561\u0576\u056f\"][\"name:en\"=\"Fast Bank\"][\"name:hy\"=\"\u0556\u0561\u057d\u0569 \u0532\u0561\u0576\u056f\"][\"name:ru\"=\"\u0424\u0430\u0441\u0442 \u0411\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -18470,7 +18470,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Faysal Bank (\u0641\u06cc\u0635\u0644 \u0628\u06cc\u0646\u06a9)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Faysal Bank\"][\"brand:ar\"=\"\u0628\u0646\u0643 \u0641\u064a\u0635\u0644 \u0627\u0644\u0628\u0627\u0643\u0633\u062a\u0627\u0646\u064a \u0627\u0644\u0645\u062d\u062f\u0648\u062f\"][\"brand:en\"=\"Faysal Bank\"][\"brand:ur\"=\"\u0641\u06cc\u0635\u0644 \u0628\u06cc\u0646\u06a9\"][\"brand:wikidata\"=\"Q5439099\"][\"name\"=\"Faysal Bank\"][\"name:ar\"=\"\u0628\u0646\u0643 \u0641\u064a\u0635\u0644 \u0627\u0644\u0628\u0627\u0643\u0633\u062a\u0627\u0646\u064a \u0627\u0644\u0645\u062d\u062f\u0648\u062f\"][\"name:en\"=\"Faysal Bank\"][\"name:ur\"=\"\u0641\u06cc\u0635\u0644 \u0628\u06cc\u0646\u06a9\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Faysal_Bank,_Shahrah-e-Faisal,_Karachi.jpg",
@@ -18506,7 +18506,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Federal Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Federal Bank\"][\"brand:wikidata\"=\"Q2044983\"][\"name\"=\"Federal Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Federal_Bank.jpg",
@@ -18542,7 +18542,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Fibabanka",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Fibabanka\"][\"brand:wikidata\"=\"Q5446343\"][\"name\"=\"Fibabanka\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -18578,7 +18578,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Fibank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Fibank\"][\"brand:bg\"=\"\u041f\u044a\u0440\u0432\u0430 \u0438\u043d\u0432\u0435\u0441\u0442\u0438\u0446\u0438\u043e\u043d\u043d\u0430 \u0431\u0430\u043d\u043a\u0430\"][\"brand:en\"=\"Fibank\"][\"brand:wikidata\"=\"Q3367065\"][\"name\"=\"Fibank\"][\"name:bg\"=\"\u041f\u044a\u0440\u0432\u0430 \u0438\u043d\u0432\u0435\u0441\u0442\u0438\u0446\u0438\u043e\u043d\u043d\u0430 \u0431\u0430\u043d\u043a\u0430\"][\"name:en\"=\"Fibank\"][\"short_name:bg\"=\"\u041f\u0418\u0411\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Fibanklogo.png",
@@ -18614,7 +18614,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Ficohsa",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Ficohsa\"][\"brand:wikidata\"=\"Q5886178\"][\"name\"=\"Ficohsa\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Ficohsa_logo.png",
@@ -18650,7 +18650,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Fidelity Bank (Ghana)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Fidelity Bank\"][\"brand:wikidata\"=\"Q5446778\"][\"name\"=\"Fidelity Bank\"][\"operator\"=\"Fidelity Bank Ghana Limited\"][\"operator:type\"=\"public\"][\"operator:wikidata\"=\"Q5446778\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -18686,7 +18686,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Fidelity Bank (Kansas)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Fidelity Bank\"][\"brand:wikidata\"=\"Q27883293\"][\"name\"=\"Fidelity Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Fidelity_Bank,_National_Association_logo.svg",
@@ -18722,7 +18722,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Fidelity Bank (Louisiana)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Fidelity Bank\"][\"brand:wikidata\"=\"Q124130169\"][\"name\"=\"Fidelity Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Fidelity_Bank_Louisiana_logo.webp",
@@ -18758,7 +18758,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Fidelity Bank (Massachusetts)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Fidelity Bank\"][\"brand:wikidata\"=\"Q124103644\"][\"name\"=\"Fidelity Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -18794,7 +18794,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Fidelity Bank (NC/SC/VA)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Fidelity Bank\"][\"brand:wikidata\"=\"Q124104925\"][\"name\"=\"Fidelity Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Fidelity_Bank_(North_Carolina)_logo.svg",
@@ -18830,7 +18830,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Fidelity Bank (Nigeria)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Fidelity Bank\"][\"brand:wikidata\"=\"Q5446777\"][\"name\"=\"Fidelity Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Fidelity-bank-nigeria.png",
@@ -18866,7 +18866,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Fidelity Bank (Pennsylvania)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Fidelity Bank\"][\"brand:wikidata\"=\"Q124129954\"][\"name\"=\"Fidelity Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Fidelity_d&d_bank_logo.svg",
@@ -18902,7 +18902,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Fidelity Bank & Trust",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Fidelity Bank & Trust\"][\"brand:wikidata\"=\"Q124130939\"][\"name\"=\"Fidelity Bank & Trust\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Fidelity_Bank_&_Trust_logo.png",
@@ -18938,7 +18938,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Fideuram",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Fideuram\"][\"brand:wikidata\"=\"Q806147\"][\"name\"=\"Fideuram\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -18974,7 +18974,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Fifth Third Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Fifth Third Bank\"][\"brand:wikidata\"=\"Q1411810\"][\"name\"=\"Fifth Third Bank\"][\"short_name\"=\"5/3 Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Fifth_Third_Bank.svg",
@@ -19010,7 +19010,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Fineco",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Fineco\"][\"brand:wikidata\"=\"Q3745690\"][\"name\"=\"Fineco\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/FinecoBank_Logo.svg",
@@ -19046,7 +19046,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Fintro",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Fintro\"][\"brand:wikidata\"=\"Q2457280\"][\"name\"=\"Fintro\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/NL_q_3D.JPG",
@@ -19082,7 +19082,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Fio banka",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Fio banka\"][\"brand:wikidata\"=\"Q12016657\"][\"name\"=\"Fio banka\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Fio_banka_logo.svg",
@@ -19118,7 +19118,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "First Abu Dhabi Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"First Abu Dhabi Bank\"][\"brand:ar\"=\"\u0628\u0646\u0643 \u0623\u0628\u0648 \u0638\u0628\u064a \u0627\u0644\u0623\u0648\u0644\"][\"brand:en\"=\"First Abu Dhabi Bank\"][\"brand:wikidata\"=\"Q29124183\"][\"name\"=\"First Abu Dhabi Bank\"][\"name:ar\"=\"\u0628\u0646\u0643 \u0623\u0628\u0648 \u0638\u0628\u064a \u0627\u0644\u0623\u0648\u0644\"][\"name:en\"=\"First Abu Dhabi Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/First_Abu_Dhabi_Bank_Logo.svg",
@@ -19154,7 +19154,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "First Atlantic Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"First Atlantic Bank\"][\"brand:wikidata\"=\"Q30688785\"][\"name\"=\"First Atlantic Bank\"][\"operator\"=\"First Atlantic Bank (Ghana) Limited\"][\"operator:type\"=\"private\"][\"operator:wikidata\"=\"Q30688785\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -19190,7 +19190,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "First Bank (North and South Carolina)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"First Bank\"][\"brand:wikidata\"=\"Q5452332\"][\"name\"=\"First Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/First_Bank_branch,_Landfall_neighborhood,_Wilmington,_North_Carolina.jpg",
@@ -19226,7 +19226,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "First Bank (Puerto Rico)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"First Bank\"][\"brand:wikidata\"=\"Q5452333\"][\"name\"=\"First Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/First_BanCorp_logo.png",
@@ -19262,7 +19262,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "First Bank (Western USA)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"First Bank\"][\"brand:wikidata\"=\"Q5452217\"][\"name\"=\"First Bank\"][\"short_name\"=\"1STBank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -19298,7 +19298,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "First Citizens Bank (Trinidad and Tobago)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"First Citizens Bank\"][\"brand:wikidata\"=\"Q5452734\"][\"name\"=\"First Citizens Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -19334,7 +19334,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "First Citizens Bank (USA)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"First Citizens Bank\"][\"brand:wikidata\"=\"Q117419474\"][\"name\"=\"First Citizens Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/First_Citizens_Bank_Beaufort.jpg",
@@ -19370,7 +19370,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "First Commonwealth Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"First Commonwealth Bank\"][\"brand:wikidata\"=\"Q5452773\"][\"name\"=\"First Commonwealth Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -19406,7 +19406,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "First Community Bank (Kenya)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"First Community Bank\"][\"brand:wikidata\"=\"Q5452774\"][\"name\"=\"First Community Bank\"][\"short_name\"=\"FCB\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -19442,7 +19442,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "First Community Credit Union",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"First Community Credit Union\"][\"brand:wikidata\"=\"Q111981593\"][\"name\"=\"First Community Credit Union\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -19478,7 +19478,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "First Convenience Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"First Convenience Bank\"][\"brand:wikidata\"=\"Q110622177\"][\"name\"=\"First Convenience Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -19514,7 +19514,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "First Fidelity Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"First Fidelity Bank\"][\"brand:wikidata\"=\"Q20708488\"][\"name\"=\"First Fidelity Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -19550,7 +19550,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "First Financial Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"First Financial Bank\"][\"brand:wikidata\"=\"Q5453009\"][\"name\"=\"First Financial Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/First_Financial_Bank_logo.svg",
@@ -19586,7 +19586,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "First Horizon Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"First Horizon Bank\"][\"brand:wikidata\"=\"Q5453875\"][\"name\"=\"First Horizon Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/First_Horizon_National_Corp_logo_(2020).png",
@@ -19622,7 +19622,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "First Interstate Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"First Interstate BancSystem\"][\"brand:wikidata\"=\"Q5453107\"][\"name\"=\"First Interstate Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -19658,7 +19658,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "First Midwest Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"First Midwest Bank\"][\"brand:wikidata\"=\"Q5453331\"][\"name\"=\"First Midwest Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -19694,7 +19694,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "First National Bank (Ghana)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"First National Bank\"][\"brand:short\"=\"FNB\"][\"brand:wikidata\"=\"Q3072956\"][\"name\"=\"First National Bank\"][\"operator\"=\"First National Bank Ghana\"][\"operator:type\"=\"public\"][\"operator:wikidata\"=\"Q96377981\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -19730,7 +19730,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "First National Bank (USA)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"First National Bank\"][\"brand:wikidata\"=\"Q5426765\"][\"name\"=\"First National Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -19766,7 +19766,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "First National Bank Alaska",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"First National Bank Alaska\"][\"brand:wikidata\"=\"Q1419496\"][\"name\"=\"First National Bank Alaska\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -19802,7 +19802,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "First National Bank of Long Island",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"First National Bank of Long Island\"][\"brand:wikidata\"=\"Q110265410\"][\"name\"=\"First National Bank of Long Island\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -19838,7 +19838,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "First National Bank of Scotia",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"First National Bank of Scotia\"][\"brand:wikidata\"=\"Q110268571\"][\"name\"=\"First National Bank of Scotia\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -19874,7 +19874,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "First National Bank Texas",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"First National Bank Texas\"][\"brand:wikidata\"=\"Q110622177\"][\"name\"=\"First National Bank Texas\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -19910,7 +19910,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "First Neighborhood Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"First Neighborhood Bank\"][\"brand:wikidata\"=\"Q130383275\"][\"name\"=\"First Neighborhood Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -19946,7 +19946,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "First Republic Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"First Republic Bank\"][\"brand:wikidata\"=\"Q5453752\"][\"name\"=\"First Republic Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -19982,7 +19982,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "First Security Bank (Arkansas)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"First Security Bank\"][\"brand:wikidata\"=\"Q5453784\"][\"name\"=\"First Security Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -20018,7 +20018,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "First Security Bank (Montana)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"First Security Bank\"][\"brand:wikidata\"=\"Q5453785\"][\"name\"=\"First Security Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -20054,7 +20054,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "First State Bank (East Nebraska)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"First State Bank\"][\"brand:wikidata\"=\"Q87646525\"][\"name\"=\"First State Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -20090,7 +20090,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "First State Bank (Florida)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"First State Bank\"][\"brand:wikidata\"=\"Q87647395\"][\"name\"=\"First State Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -20126,7 +20126,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "First State Bank (Illinois)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"First State Bank\"][\"brand:wikidata\"=\"Q87647340\"][\"name\"=\"First State Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -20162,7 +20162,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "First State Bank (Michigan)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"First State Bank\"][\"brand:wikidata\"=\"Q87647479\"][\"name\"=\"First State Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -20198,7 +20198,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "First State Bank (Mississippi)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"First State Bank\"][\"brand:wikidata\"=\"Q87647452\"][\"name\"=\"First State Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -20234,7 +20234,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "First State Bank (Ohio)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"First State Bank\"][\"brand:wikidata\"=\"Q87647374\"][\"name\"=\"First State Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -20270,7 +20270,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "First State Bank (Texas)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"First State Bank\"][\"brand:wikidata\"=\"Q87647065\"][\"name\"=\"First State Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -20306,7 +20306,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "First Tech Federal Credit Union",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"First Tech Federal Credit Union\"][\"brand:wikidata\"=\"Q5453865\"][\"name\"=\"First Tech Federal Credit Union\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/First_Tech_Credit_Union_-_Tanasbourne_branch.jpg",
@@ -20342,7 +20342,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "First United Bank",
     query: "(nwr[\"alt_name\"=\"First United Bank\"][\"amenity\"=\"bank\"][\"brand\"=\"First United Bank\"][\"brand:wikidata\"=\"Q5453964\"][\"name\"=\"First United Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -20378,7 +20378,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "First West Credit Union",
     query: "(nwr[\"alt_name\"=\"First West\"][\"amenity\"=\"bank\"][\"brand\"=\"First West Credit Union\"][\"brand:wikidata\"=\"Q5454073\"][\"name\"=\"First West Credit Union\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/First_West_Credit_Union_logo.svg",
@@ -20414,7 +20414,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "FirstBank Ghana",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"First Bank of Nigeria\"][\"brand:wikidata\"=\"Q5452342\"][\"name\"=\"FirstBank Ghana\"][\"old_name\"=\"FBNBank\"][\"operator\"=\"FBNBank Ghana Limited\"][\"operator:type\"=\"public\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/First_Bank_of_Ustick_(4).jpg",
@@ -20450,7 +20450,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "FirstOntario Credit Union",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"FirstOntario Credit Union\"][\"brand:wikidata\"=\"Q133208168\"][\"name\"=\"FirstOntario Credit Union\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -20486,7 +20486,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Flagstar Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Flagstar Bank\"][\"brand:wikidata\"=\"Q5457038\"][\"name\"=\"Flagstar Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Flagstar_Bank_logo.svg",
@@ -20522,7 +20522,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "FNB (South Africa)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"FNB\"][\"brand:wikidata\"=\"Q3072956\"][\"name\"=\"FNB\"][\"official_name\"=\"First National Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -20558,7 +20558,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "FNBO",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"FNBO\"][\"brand:wikidata\"=\"Q5453412\"][\"name\"=\"FNBO\"][\"official_name\"=\"First National Bank of Omaha\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -20594,7 +20594,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "ForteBank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"ForteBank\"][\"brand:wikidata\"=\"Q1336498\"][\"name\"=\"ForteBank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -20630,7 +20630,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Freedom Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Freedom Bank\"][\"brand:wikidata\"=\"Q21843099\"][\"name\"=\"Freedom Bank\"][\"name:en\"=\"Freedom Bank\"][\"name:ru\"=\"\u0424\u0440\u0438\u0434\u043e\u043c \u0411\u0430\u043d\u043a\"][\"official_name:kk\"=\"\u00ab\u0411\u0430\u043d\u043a \u0424\u0440\u0438\u0434\u043e\u043c \u0424\u0438\u043d\u0430\u043d\u0441 \u049a\u0430\u0437\u0430\u049b\u0441\u0442\u0430\u043d\u00bb \u0410\u049a\"][\"official_name:ru\"=\"\u0410\u041e \u00ab\u0411\u0430\u043d\u043a \u0424\u0440\u0438\u0434\u043e\u043c \u0424\u0438\u043d\u0430\u043d\u0441 \u041a\u0430\u0437\u0430\u0445\u0441\u0442\u0430\u043d\u00bb\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Freedom_Holding_logo.png",
@@ -20666,7 +20666,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Frost Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Frost Bank\"][\"brand:wikidata\"=\"Q5506152\"][\"name\"=\"Frost Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Frost_Tower_SA.jpg",
@@ -20702,7 +20702,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Fulton Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Fulton Bank\"][\"brand:wikidata\"=\"Q16976594\"][\"name\"=\"Fulton Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -20738,7 +20738,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Galicia",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Galicia\"][\"brand:wikidata\"=\"Q5717952\"][\"name\"=\"Galicia\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco-Galicia_Logo_2024.png",
@@ -20774,7 +20774,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Garanti BBVA",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Garanti Bankas\u0131\"][\"brand:wikidata\"=\"Q322962\"][\"name\"=\"Garanti Bankas\u0131\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Garanti_BBVA_2019.svg",
@@ -20810,7 +20810,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "GCB Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"GCB Bank\"][\"brand:wikidata\"=\"Q1521346\"][\"name\"=\"GCB Bank\"][\"old_name\"=\"Ghana Commercial Bank\"][\"operator\"=\"GCB Bank Limited\"][\"operator:type\"=\"public\"][\"operator:wikidata\"=\"Q1521346\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/GCBBANK.jpg",
@@ -20846,7 +20846,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "German American",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"German American\"][\"brand:wikidata\"=\"Q120753420\"][\"name\"=\"German American\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -20882,7 +20882,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Getin Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Getin Bank\"][\"brand:wikidata\"=\"Q9267646\"][\"name\"=\"Getin Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Getin_Bank_Logo.png",
@@ -20918,7 +20918,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Glarner Kantonalbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Glarner Kantonalbank\"][\"brand:wikidata\"=\"Q1529290\"][\"name\"=\"Glarner Kantonalbank\"][\"short_name\"=\"GLKB\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_der_Glarner_Kantonalbank.svg",
@@ -20954,7 +20954,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Global Credit Union",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Global Credit Union\"][\"brand:wikidata\"=\"Q4708627\"][\"name\"=\"Global Credit Union\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -20990,7 +20990,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "GNB Sudameris",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"GNB Sudameris\"][\"brand:wikidata\"=\"Q28064605\"][\"name\"=\"GNB Sudameris\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -21026,7 +21026,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Golden 1 Credit Union",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Golden 1 Credit Union\"][\"brand:wikidata\"=\"Q7736976\"][\"name\"=\"Golden 1 Credit Union\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Golden1CU_logo.png",
@@ -21062,7 +21062,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Graub\u00fcndner Kantonalbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Graub\u00fcndner Kantonalbank\"][\"brand:de\"=\"Graub\u00fcndner Kantonalbank\"][\"brand:it\"=\"Banca Cantonale Grigione\"][\"brand:wikidata\"=\"Q1543702\"][\"name\"=\"Graub\u00fcndner Kantonalbank\"][\"name:de\"=\"Graub\u00fcndner Kantonalbank\"][\"name:it\"=\"Banca Cantonale Grigione\"][\"short_name\"=\"GKB\"][\"short_name:de\"=\"GKB\"][\"short_name:it\"=\"BCG\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Graub\u00fcndner_Kantonalbank.svg",
@@ -21098,7 +21098,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Great Western Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Great Western Bank\"][\"brand:wikidata\"=\"Q5600185\"][\"name\"=\"Great Western Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -21134,7 +21134,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "GreenState Credit Union",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"GreenState Credit Union\"][\"brand:wikidata\"=\"Q111381336\"][\"name\"=\"GreenState Credit Union\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -21170,7 +21170,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Groupama",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Groupama\"][\"brand:wikidata\"=\"Q3083531\"][\"name\"=\"Groupama\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Groupama_logo.svg",
@@ -21206,7 +21206,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "GT Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"GT Bank\"][\"brand:wikidata\"=\"Q579747\"][\"name\"=\"GT Bank\"][\"official_name\"=\"Guaranty Trust Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_GuarantyTrustBank.svg",
@@ -21242,7 +21242,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Gulf Coast Bank & Trust",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Gulf Coast Bank & Trust\"][\"brand:wikidata\"=\"Q112357370\"][\"name\"=\"Gulf Coast Bank & Trust\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -21278,7 +21278,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Halifax",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Halifax\"][\"brand:wikidata\"=\"Q3310164\"][\"name\"=\"Halifax\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/HBOS_Halifax_310805.JPG",
@@ -21314,7 +21314,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Halkbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Halkbank\"][\"brand:wikidata\"=\"Q3593818\"][\"name\"=\"Halkbank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Halkbank_logo.svg",
@@ -21350,7 +21350,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Halkbank (\u0421\u0440\u0431\u0438\u0458\u0430)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Halkbank\"][\"brand:wikidata\"=\"Q3593818\"][\"name\"=\"Halkbank\"][\"name:en\"=\"Halkbank\"][\"name:mk\"=\"\u0425\u0430\u043b\u043a \u0411\u0430\u043d\u043a\u0430\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Halkbank_logo.svg",
@@ -21386,7 +21386,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Halyk Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Halyk Bank\"][\"brand:wikidata\"=\"Q1046186\"][\"name\"=\"Halyk Bank\"][\"name:en\"=\"Halyk Bank\"][\"name:kk\"=\"\u0425\u0430\u043b\u044b\u049b \u0411\u0430\u043d\u043a\u0456\"][\"name:ru\"=\"\u0425\u0430\u043b\u044b\u043a \u0431\u0430\u043d\u043a\"][\"official_name:kk\"=\"\u00ab\u049a\u0430\u0437\u0430\u049b\u0441\u0442\u0430\u043d \u0425\u0430\u043b\u044b\u049b \u0411\u0430\u043d\u043a\u0456\u00bb \u0410\u049a\"][\"official_name:ru\"=\"\u0410\u041e \u00ab\u041d\u0430\u0440\u043e\u0434\u043d\u044b\u0439 \u0411\u0430\u043d\u043a \u041a\u0430\u0437\u0430\u0445\u0441\u0442\u0430\u043d\u0430\u00bb\"][\"old_name\"=\"\u041d\u0430\u0440\u043e\u0434\u043d\u044b\u0439 \u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -21422,7 +21422,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Hamburger Sparkasse",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Hamburger Sparkasse\"][\"brand:wikidata\"=\"Q1573140\"][\"name\"=\"Hamburger Sparkasse\"][\"short_name\"=\"Haspa\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Hamburger_Sparkasse_Logo.svg",
@@ -21458,7 +21458,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Hamkorbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Hamkorbank\"][\"brand:wikidata\"=\"Q12166841\"][\"name\"=\"Hamkorbank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/\u0413\u043e\u043b\u043e\u0432\u043d\u043e\u0439_\u043e\u0444\u0438\u0441_Hamkorbank_\u0432_\u0433\u043e\u0440\u043e\u0434\u0435_\u0410\u043d\u0434\u0438\u0436\u0430\u043d.jpg",
@@ -21494,7 +21494,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Hancock Whitney",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Hancock Whitney\"][\"brand:wikidata\"=\"Q5647025\"][\"name\"=\"Hancock Whitney\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -21530,7 +21530,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Handelsbanken",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Handelsbanken\"][\"brand:wikidata\"=\"Q1421630\"][\"name\"=\"Handelsbanken\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Handelsbanken.svg",
@@ -21566,7 +21566,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Hanmi Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Hanmi Bank\"][\"brand:wikidata\"=\"Q5648633\"][\"name\"=\"Hanmi Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -21602,7 +21602,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Hatton National Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Hatton National Bank\"][\"brand:wikidata\"=\"Q3532080\"][\"name\"=\"Hatton National Bank\"][\"short_name\"=\"HNB\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -21638,7 +21638,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Hawaiian First Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Hawaiian First Bank\"][\"brand:wikidata\"=\"Q3072937\"][\"name\"=\"Hawaiian First Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -21674,7 +21674,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "HBL Bank (\u0627\u06cc\u0686 \u0628\u06cc \u0627\u06cc\u0644 \u067e\u0627\u06a9\u0633\u062a\u0627\u0646)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"HBL Bank\"][\"brand:en\"=\"HBL Bank\"][\"brand:ur\"=\"\u0627\u06cc\u0686 \u0628\u06cc \u0627\u06cc\u0644 \u067e\u0627\u06a9\u0633\u062a\u0627\u0646\"][\"brand:wikidata\"=\"Q1566843\"][\"name\"=\"HBL Bank\"][\"name:en\"=\"HBL Bank\"][\"name:ur\"=\"\u0627\u06cc\u0686 \u0628\u06cc \u0627\u06cc\u0644 \u067e\u0627\u06a9\u0633\u062a\u0627\u0646\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/HBL_Plaza.jpg",
@@ -21710,7 +21710,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "HDFC Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"HDFC Bank\"][\"brand:wikidata\"=\"Q631047\"][\"name\"=\"HDFC Bank\"][\"short_name\"=\"HDFC\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/HDFC-Bank-Logo.svg",
@@ -21746,7 +21746,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Heartland Bank (Illinois)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Heartland Bank\"][\"brand:wikidata\"=\"Q109870322\"][\"name\"=\"Heartland Bank\"][\"official_name\"=\"Heartland Bank and Trust Company\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -21782,7 +21782,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Hellenic Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Hellenic Bank\"][\"brand:wikidata\"=\"Q5707160\"][\"name\"=\"\u0395\u03bb\u03bb\u03b7\u03bd\u03b9\u03ba\u03ae \u03a4\u03c1\u03ac\u03c0\u03b5\u03b6\u03b1\"][\"name:el\"=\"\u0395\u03bb\u03bb\u03b7\u03bd\u03b9\u03ba\u03ae \u03a4\u03c1\u03ac\u03c0\u03b5\u03b6\u03b1\"][\"name:en\"=\"Hellenic Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banking_financial_quarter_of_Nicosia_as_you_enter_highway.JPG",
@@ -21818,7 +21818,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Heritage Bank (Australia)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Heritage Bank\"][\"brand:wikidata\"=\"Q5738690\"][\"name\"=\"Heritage Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -21854,7 +21854,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Heritage Bank (Belize)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Heritage Bank\"][\"name\"=\"Heritage Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -21890,7 +21890,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Heritage Bank (Kentucky)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Heritage Bank\"][\"brand:wikidata\"=\"Q73560500\"][\"name\"=\"Heritage Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -21926,7 +21926,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Heritage Bank (Nigeria)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Heritage Bank\"][\"brand:wikidata\"=\"Q17022606\"][\"name\"=\"Heritage Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/HB_Heritage_Bank,_Lagos_Island.jpg",
@@ -21962,7 +21962,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Heritage Bank (Northwest USA)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Heritage Bank\"][\"brand:wikidata\"=\"Q107803181\"][\"name\"=\"Heritage Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -21998,7 +21998,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Home Credit Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Home Credit Bank\"][\"brand:wikidata\"=\"Q115575403\"][\"name\"=\"Home Credit Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -22034,7 +22034,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "HomeStreet Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"HomeStreet Bank\"][\"brand:wikidata\"=\"Q60762481\"][\"name\"=\"HomeStreet Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -22070,7 +22070,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Hong Leong Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Hong Leong Bank\"][\"brand:en\"=\"Hong Leong Bank\"][\"brand:wikidata\"=\"Q4383943\"][\"brand:zh\"=\"\u4e30\u9686\u94f6\u884c\"][\"name\"=\"Hong Leong Bank\"][\"name:en\"=\"Hong Leong Bank\"][\"name:zh\"=\"\u4e30\u9686\u94f6\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Hong-Leong-Bank_Logo_July_2017.png",
@@ -22106,7 +22106,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Horizon Credit Union",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Horizon Credit Union\"][\"brand:wikidata\"=\"Q115677986\"][\"name\"=\"Horizon Credit Union\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -22142,7 +22142,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Housing and Development Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Housing and Development Bank\"][\"brand:ar\"=\"\u0628\u0646\u0643 \u0627\u0644\u062a\u0639\u0645\u064a\u0631 \u0648\u0627\u0644\u0625\u0633\u0643\u0627\u0646\"][\"brand:en\"=\"Housing and Development Bank\"][\"brand:wikidata\"=\"Q12199339\"][\"name\"=\"Housing and Development Bank\"][\"name:ar\"=\"\u0628\u0646\u0643 \u0627\u0644\u062a\u0639\u0645\u064a\u0631 \u0648\u0627\u0644\u0625\u0633\u0643\u0627\u0646\"][\"name:en\"=\"Housing and Development Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Housing_and_Development_Bank.jpg",
@@ -22178,7 +22178,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Hrvatska po\u0161tanska banka",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Hrvatska po\u0161tanska banka\"][\"brand:wikidata\"=\"Q5923981\"][\"name\"=\"Hrvatska po\u0161tanska banka\"][\"short_name\"=\"HPB\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Hpb-logo.svg",
@@ -22214,7 +22214,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "HSBC (Global)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"HSBC\"][\"brand:wikidata\"=\"Q190464\"][\"name\"=\"HSBC\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/HSBC_logo_(2018).svg",
@@ -22250,7 +22250,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "HSBC Armenia",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0537\u0575\u0579-\u0537\u057d-\u0532\u056b-\u054d\u056b\"][\"brand:en\"=\"HSBC\"][\"brand:hy\"=\"\u0537\u0575\u0579-\u0537\u057d-\u0532\u056b-\u054d\u056b\"][\"brand:ru\"=\"\u042d\u0439\u0434\u0436-\u042d\u0441-\u0411\u0438-\u0421\u0438\"][\"brand:wikidata\"=\"Q190464\"][\"name\"=\"\u0537\u0575\u0579-\u0537\u057d-\u0532\u056b-\u054d\u056b\"][\"name:en\"=\"HSBC\"][\"name:hy\"=\"\u0537\u0575\u0579-\u0537\u057d-\u0532\u056b-\u054d\u056b\"][\"name:ru\"=\"\u042d\u0439\u0434\u0436-\u042d\u0441-\u0411\u0438-\u0421\u0438\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/HSBC_logo_(2018).svg",
@@ -22286,7 +22286,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "HSBC UK",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"HSBC UK\"][\"brand:wikidata\"=\"Q64767453\"][\"name\"=\"HSBC UK\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/HSBC_UK_logo.svg",
@@ -22322,7 +22322,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Huntington Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Huntington Bank\"][\"brand:wikidata\"=\"Q798819\"][\"name\"=\"Huntington Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Huntington_Bancshares_Inc._logo.svg",
@@ -22358,7 +22358,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "HypoVereinsbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"HypoVereinsbank\"][\"brand:wikidata\"=\"Q220189\"][\"name\"=\"HypoVereinsbank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/HV-UCG-3D.png",
@@ -22394,7 +22394,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "IBC Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"IBC Bank\"][\"brand:wikidata\"=\"Q6048697\"][\"name\"=\"IBC Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -22430,7 +22430,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Ibercaja",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Ibercaja\"][\"brand:wikidata\"=\"Q5907815\"][\"name\"=\"Ibercaja\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Ibercajawordmark.svg",
@@ -22466,7 +22466,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "IBK\uae30\uc5c5\uc740\ud589",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"IBK\uae30\uc5c5\uc740\ud589\"][\"brand:en\"=\"Industrial Bank of Korea\"][\"brand:ko\"=\"IBK\uae30\uc5c5\uc740\ud589\"][\"brand:wikidata\"=\"Q483855\"][\"name\"=\"IBK\uae30\uc5c5\uc740\ud589\"][\"name:en\"=\"Industrial Bank of Korea\"][\"name:ko\"=\"IBK\uae30\uc5c5\uc740\ud589\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Industrial_Bank_of_Korea_Logo.svg",
@@ -22502,7 +22502,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "ICBC",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"ICBC\"][\"brand:wikidata\"=\"Q26463\"][\"name\"=\"ICBC\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/ICBC_ChanganAVe.jpg",
@@ -22538,7 +22538,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "ICICI Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"ICICI Bank\"][\"brand:wikidata\"=\"Q1653258\"][\"name\"=\"ICICI Bank\"][\"short_name\"=\"ICICI\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/ICICI_Bank_Logo.svg",
@@ -22574,7 +22574,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "ID Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0531\u0575\u0534\u056b \u0532\u0561\u0576\u056f\"][\"brand:wikidata\"=\"Q19604320\"][\"name\"=\"\u0531\u0575\u0534\u056b \u0532\u0561\u0576\u056f\"][\"name:en\"=\"ID Bank\"][\"name:hy\"=\"\u0531\u0575\u0534\u056b \u0532\u0561\u0576\u056f\"][\"name:ru\"=\"\u0410\u0439\u0414\u0438 \u0411\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -22610,7 +22610,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "IDBI Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"IDBI Bank\"][\"brand:wikidata\"=\"Q3633485\"][\"name\"=\"IDBI Bank\"][\"short_name\"=\"IDBI\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -22646,7 +22646,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Idea Bank (Rom\u00e2nia)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Idea Bank\"][\"brand:wikidata\"=\"Q7362554\"][\"name\"=\"Idea Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Blackjack_close-up.jpg",
@@ -22682,7 +22682,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Idea Bank (\u0423\u043a\u0440\u0430\u0457\u043d\u0430)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Idea Bank\"][\"brand:en\"=\"Idea Bank\"][\"brand:uk\"=\"\u0406\u0434\u0435\u044f \u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q47502068\"][\"name\"=\"Idea Bank\"][\"name:en\"=\"Idea Bank\"][\"name:uk\"=\"\u0406\u0434\u0435\u044f \u0411\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Idea_Bank_logo.svg",
@@ -22718,7 +22718,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "IDFC First Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"IDFC First Bank\"][\"brand:wikidata\"=\"Q22031467\"][\"name\"=\"IDFC First Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_of_IDFC_First_Bank.svg",
@@ -22754,7 +22754,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0130ktisatbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0130ktisatbank\"][\"brand:wikidata\"=\"Q21523788\"][\"name\"=\"\u0130ktisatbank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -22790,7 +22790,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Imex banka",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Imex banka\"][\"brand:wikidata\"=\"Q102338225\"][\"name\"=\"Imex banka\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Imex_banka_Logo.png",
@@ -22826,7 +22826,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Inbursa",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Inbursa\"][\"brand:wikidata\"=\"Q731123\"][\"name\"=\"Inbursa\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -22862,7 +22862,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "India Post Payments Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"India Post Payments Bank\"][\"brand:en\"=\"India Post Payments Bank\"][\"brand:hi\"=\"\u092d\u093e\u0930\u0924\u0940\u092f \u0921\u093e\u0915 \u092d\u0941\u0917\u0924\u093e\u0928 \u092c\u0948\u0902\u0915\"][\"brand:wikidata\"=\"Q19895346\"][\"name\"=\"India Post Payments Bank\"][\"name:en\"=\"India Post Payments Bank\"][\"name:hi\"=\"\u092d\u093e\u0930\u0924\u0940\u092f \u0921\u093e\u0915 \u092d\u0941\u0917\u0924\u093e\u0928 \u092c\u0948\u0902\u0915\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -22898,7 +22898,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Indian Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Indian Bank\"][\"brand:wikidata\"=\"Q2003789\"][\"name\"=\"Indian Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -22934,7 +22934,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Indian Overseas Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Indian Overseas Bank\"][\"brand:wikidata\"=\"Q2003611\"][\"name\"=\"Indian Overseas Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Indian_Overseas_Bank_Logo.svg",
@@ -22970,7 +22970,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "IndusInd Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"IndusInd Bank\"][\"brand:wikidata\"=\"Q2040323\"][\"name\"=\"IndusInd Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -23006,7 +23006,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Inecobank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u053b\u0576\u0565\u056f\u0578\u0562\u0561\u0576\u056f\"][\"brand:en\"=\"Inecobank\"][\"brand:hy\"=\"\u053b\u0576\u0565\u056f\u0578\u0562\u0561\u0576\u056f\"][\"brand:ru\"=\"\u0418\u043d\u0435\u043a\u043e\u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q55614443\"][\"name\"=\"\u053b\u0576\u0565\u056f\u0578\u0562\u0561\u0576\u056f\"][\"name:en\"=\"Inecobank\"][\"name:hy\"=\"\u053b\u0576\u0565\u056f\u0578\u0562\u0561\u0576\u056f\"][\"name:ru\"=\"\u0418\u043d\u0435\u043a\u043e\u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Inecobank_CJSC_Official_Logo.png",
@@ -23042,7 +23042,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "ING",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"ING\"][\"brand:wikidata\"=\"Q645708\"][\"name\"=\"ING\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/ING_Group_N.V._Logo.svg",
@@ -23078,7 +23078,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "ING Bank \u015al\u0105ski",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"ING Bank \u015al\u0105ski\"][\"brand:wikidata\"=\"Q1410383\"][\"name\"=\"ING Bank \u015al\u0105ski\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/ING_Group_N.V._Logo.svg",
@@ -23114,7 +23114,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Interbank (Per\u00fa)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Interbank\"][\"brand:wikidata\"=\"Q2835558\"][\"name\"=\"Interbank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Interbank_logo.svg",
@@ -23150,7 +23150,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "InterBank (USA)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"InterBank\"][\"brand:wikidata\"=\"Q124020656\"][\"name\"=\"InterBank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/InterBank_logo.svg",
@@ -23186,7 +23186,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "International Asset Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"International Asset Bank\"][\"brand:wikidata\"=\"Q93449648\"][\"name\"=\"International Asset Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -23222,7 +23222,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Intesa Sanpaolo",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Intesa Sanpaolo\"][\"brand:wikidata\"=\"Q1343118\"][\"name\"=\"Intesa Sanpaolo\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Intesa_Sanpaolo_-_logo_(Italy,_2007-).svg",
@@ -23258,7 +23258,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Investors Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Investors Bank\"][\"brand:wikidata\"=\"Q15109896\"][\"name\"=\"Investors Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -23294,7 +23294,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Ipak Yo\u02bbli banki",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Ipak Yo\u02bbli banki\"][\"brand:wikidata\"=\"Q25534044\"][\"name\"=\"Ipak Yo\u02bbli banki\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -23330,7 +23330,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Iran Zamin Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0628\u0627\u0646\u06a9 \u0627\u06cc\u0631\u0627\u0646 \u0632\u0645\u06cc\u0646\"][\"brand:en\"=\"Iran Zamin Bank\"][\"brand:fa\"=\"\u0628\u0627\u0646\u06a9 \u0627\u06cc\u0631\u0627\u0646 \u0632\u0645\u06cc\u0646\"][\"brand:wikidata\"=\"Q5934423\"][\"name\"=\"\u0628\u0627\u0646\u06a9 \u0627\u06cc\u0631\u0627\u0646 \u0632\u0645\u06cc\u0646\"][\"name:en\"=\"Iran Zamin Bank\"][\"name:fa\"=\"\u0628\u0627\u0646\u06a9 \u0627\u06cc\u0631\u0627\u0646 \u0632\u0645\u06cc\u0646\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -23366,7 +23366,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0130\u015fbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0130\u015fbank\"][\"brand:wikidata\"=\"Q2607251\"][\"name\"=\"\u0130\u015fbank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Isbank_logo.svg",
@@ -23402,7 +23402,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Istarska kreditna banka Umag",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Istarska kreditna banka Umag\"][\"brand:wikidata\"=\"Q125756614\"][\"name\"=\"Istarska kreditna banka Umag\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Istarska_Kreditna_Banka_Umag.svg",
@@ -23438,7 +23438,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Ita\u00fa",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Ita\u00fa Unibanco\"][\"brand:wikidata\"=\"Q1424293\"][\"name\"=\"Ita\u00fa\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Ita\u00fa_logo.svg",
@@ -23474,7 +23474,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Ita\u00fa Corpbanca",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Ita\u00fa Corpbanca\"][\"brand:wikidata\"=\"Q2423252\"][\"name\"=\"Ita\u00fa\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Ita\u00fa_Unibanco_logo_2023.svg",
@@ -23510,7 +23510,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "J&T Banka",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"J&T Banka\"][\"brand:wikidata\"=\"Q12022160\"][\"name\"=\"J&T Banka\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Praha_Karlin_Sokolovska_113a_b.jpg",
@@ -23546,7 +23546,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Jammu and Kashmir Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Jammu and Kashmir Bank\"][\"brand:wikidata\"=\"Q2040429\"][\"name\"=\"Jammu and Kashmir Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -23582,7 +23582,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Jana Small Finance Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Jana Small Finance Bank\"][\"brand:wikidata\"=\"Q65122274\"][\"name\"=\"Jana Small Finance Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -23618,7 +23618,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "JA\u30d0\u30f3\u30af",
     query: "(nwr[\"alt_name:en\"=\"Japan Agricultural Bank\"][\"amenity\"=\"bank\"][\"brand\"=\"JA\u30d0\u30f3\u30af\"][\"brand:en\"=\"JA Bank\"][\"brand:ja\"=\"JA\u30d0\u30f3\u30af\"][\"brand:wikidata\"=\"Q10854594\"][\"name\"=\"JA\u30d0\u30f3\u30af\"][\"name:en\"=\"JA Bank\"][\"name:ja\"=\"JA\u30d0\u30f3\u30af\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/JA_Bank_logo.svg",
@@ -23654,7 +23654,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Jusan",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Jusan\"][\"brand:wikidata\"=\"Q25485074\"][\"name\"=\"Jusan\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -23690,7 +23690,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Jyske Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Jyske Bank\"][\"brand:wikidata\"=\"Q136672\"][\"name\"=\"Jyske Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/JB-logo-RGB.jpg",
@@ -23726,7 +23726,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "K&H Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"K&H Bank\"][\"brand:wikidata\"=\"Q6393834\"][\"name\"=\"K&H Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -23762,7 +23762,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Karafarin Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0628\u0627\u0646\u06a9 \u06a9\u0627\u0631\u0622\u0641\u0631\u06cc\u0646\"][\"brand:en\"=\"Karafarin Bank\"][\"brand:fa\"=\"\u0628\u0627\u0646\u06a9 \u06a9\u0627\u0631\u0622\u0641\u0631\u06cc\u0646\"][\"brand:wikidata\"=\"Q6367875\"][\"name\"=\"\u0628\u0627\u0646\u06a9 \u06a9\u0627\u0631\u0622\u0641\u0631\u06cc\u0646\"][\"name:en\"=\"Karafarin Bank\"][\"name:fa\"=\"\u0628\u0627\u0646\u06a9 \u06a9\u0627\u0631\u0622\u0641\u0631\u06cc\u0646\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Karafarin_bank_logo.svg",
@@ -23798,7 +23798,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Karlova\u010dka banka",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Karlova\u010dka banka\"][\"brand:wikidata\"=\"Q102338238\"][\"name\"=\"Karlova\u010dka banka\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Karlova\u010dka_banka_logo.svg",
@@ -23834,7 +23834,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Karnataka Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Karnataka Bank\"][\"brand:wikidata\"=\"Q2042632\"][\"name\"=\"Karnataka Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -23870,7 +23870,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Karnataka Gramin Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Karnataka Gramin Bank\"][\"brand:wikidata\"=\"Q24936908\"][\"name\"=\"Karnataka Gramin Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -23906,7 +23906,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Karnataka Vikas Grameena Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Karnataka Vikas Grameena Bank\"][\"brand:wikidata\"=\"Q19892555\"][\"name\"=\"Karnataka Vikas Grameena Bank\"][\"short_name\"=\"KVG Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -23942,7 +23942,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Karur Vysya Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Karur Vysya Bank\"][\"brand:wikidata\"=\"Q6373724\"][\"name\"=\"Karur Vysya Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Karur_Vysya_Bank.svg",
@@ -23978,7 +23978,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Kasa Stefczyka",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Kasa Stefczyka\"][\"brand:wikidata\"=\"Q57624461\"][\"name\"=\"Kasa Stefczyka\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -24014,7 +24014,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Kaspi.kz",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Kaspi.kz\"][\"brand:wikidata\"=\"Q143833\"][\"name\"=\"Kaspi.kz\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Kaspi_Postomat,_Astana_(P1190696).jpg",
@@ -24050,7 +24050,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Kawartha Credit Union",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Kawartha Credit Union\"][\"brand:wikidata\"=\"Q133208367\"][\"name\"=\"Kawartha Credit Union\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -24086,7 +24086,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "KBC",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"KBC\"][\"brand:wikidata\"=\"Q941020\"][\"name\"=\"KBC\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/KBC-bankkantoor_in_Wakken.jpg",
@@ -24122,7 +24122,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "KBZ Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"KBZ Bank\"][\"brand:wikidata\"=\"Q6360949\"][\"name\"=\"KBZ Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Kanbawza_Bank.JPG",
@@ -24158,7 +24158,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "KB\uad6d\ubbfc\uc740\ud589",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"KB\uad6d\ubbfc\uc740\ud589\"][\"brand:en\"=\"KB Kookmin Bank\"][\"brand:ko\"=\"KB\uad6d\ubbfc\uc740\ud589\"][\"brand:wikidata\"=\"Q496606\"][\"name\"=\"KB\uad6d\ubbfc\uc740\ud589\"][\"name:en\"=\"KB Kookmin Bank\"][\"name:ko\"=\"KB\uad6d\ubbfc\uc740\ud589\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/KB_logo.svg",
@@ -24194,7 +24194,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "KentBank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"KentBank\"][\"brand:wikidata\"=\"Q25383439\"][\"name\"=\"KentBank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Kent_Bank_logo.png",
@@ -24230,7 +24230,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Kerala Gramin Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Kerala Gramin Bank\"][\"brand:wikidata\"=\"Q13674094\"][\"name\"=\"Kerala Gramin Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Kerala_Gramin_Bank_logo.jpg",
@@ -24266,7 +24266,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "KeyBank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"KeyBank\"][\"brand:wikidata\"=\"Q1740314\"][\"name\"=\"KeyBank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/KeyBank.png",
@@ -24302,7 +24302,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Kiwibank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Kiwibank\"][\"brand:wikidata\"=\"Q1516341\"][\"name\"=\"Kiwibank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Kiwibank_Logo.svg",
@@ -24338,7 +24338,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Komer\u010dn\u00ed banka",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Komer\u010dn\u00ed banka\"][\"brand:wikidata\"=\"Q1541079\"][\"name\"=\"Komer\u010dn\u00ed banka\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Komer\u010dn\u00ed_banka_logo.svg",
@@ -24374,7 +24374,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Koopbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Koopbank\"][\"brand:wikidata\"=\"Q31188681\"][\"name\"=\"Koopbank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -24410,7 +24410,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Kotak Mahindra Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Kotak Mahindra Bank\"][\"brand:wikidata\"=\"Q2040404\"][\"name\"=\"Kotak Mahindra Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -24446,7 +24446,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Krakowski Bank Sp\u00f3\u0142dzielczy",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Krakowski Bank Sp\u00f3\u0142dzielczy\"][\"brand:wikidata\"=\"Q11747876\"][\"name\"=\"Krakowski Bank Sp\u00f3\u0142dzielczy\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -24482,7 +24482,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "KredoBank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"KredoBank\"][\"brand:en\"=\"KredoBank\"][\"brand:uk\"=\"\u041a\u0440\u0435\u0434\u043e\u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q4239997\"][\"name\"=\"KredoBank\"][\"name:en\"=\"KredoBank\"][\"name:uk\"=\"\u041a\u0440\u0435\u0434\u043e\u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Kredobank_logo.jpg",
@@ -24518,7 +24518,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Kuda Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Kuda Bank\"][\"brand:wikidata\"=\"Q108919305\"][\"name\"=\"Kuda Microfinance Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -24554,7 +24554,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Kutxabank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Kutxabank\"][\"brand:wikidata\"=\"Q5139377\"][\"name\"=\"Kutxabank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Kutxabank.svg",
@@ -24590,7 +24590,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Kuveyt T\u00fcrk",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Kuveyt T\u00fcrk\"][\"brand:wikidata\"=\"Q6036058\"][\"name\"=\"Kuveyt T\u00fcrk\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -24626,7 +24626,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "La Banque Postale",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"La Banque Postale\"][\"brand:wikidata\"=\"Q3206431\"][\"name\"=\"La Banque Postale\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_La_Banque_postale_2022.svg",
@@ -24662,7 +24662,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "La Caixa",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"La Caixa\"][\"brand:wikidata\"=\"Q287753\"][\"name\"=\"La Caixa\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/La_Caixa_logo.svg",
@@ -24698,7 +24698,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Laboral Kutxa",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Laboral Kutxa\"][\"brand:wikidata\"=\"Q12052386\"][\"name\"=\"Laboral Kutxa\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Laboral_Kutxa.JPG",
@@ -24734,7 +24734,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Lake Michigan Credit Union",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Lake Michigan Credit Union\"][\"brand:wikidata\"=\"Q6476906\"][\"name\"=\"Lake Michigan Credit Union\"][\"short_name\"=\"LMCU\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -24770,7 +24770,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Landbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Landbank\"][\"brand:wikidata\"=\"Q6483872\"][\"name\"=\"Landbank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Landbank.svg",
@@ -24806,7 +24806,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Landmark Credit Union (Wisconsin)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Landmark Credit Union\"][\"brand:wikidata\"=\"Q16999087\"][\"name\"=\"Landmark Credit Union\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -24842,7 +24842,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "LBS",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"LBS\"][\"brand:wikidata\"=\"Q13604004\"][\"name\"=\"LBS\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Landesbausparkassen.svg",
@@ -24878,7 +24878,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "LCL",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"LCL\"][\"brand:wikidata\"=\"Q779722\"][\"name\"=\"LCL\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Cr\u00e9dit_Lyonnais_logo.svg",
@@ -24914,7 +24914,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "LCNB",
     query: "(nwr[\"alt_name\"=\"Lebanon Citizens National Bank\"][\"amenity\"=\"bank\"][\"brand\"=\"LCNB\"][\"brand:wikidata\"=\"Q65095575\"][\"name\"=\"LCNB\"][\"official_name\"=\"LCNB National Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -24950,7 +24950,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Leeds Building Society",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Leeds Building Society\"][\"brand:wikidata\"=\"Q6515848\"][\"name\"=\"Leeds Building Society\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Leeds_Building_Society,_Horsefair_Centre,_Wetherby_(18th_April_2014).JPG",
@@ -24986,7 +24986,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Liberbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Liberbank\"][\"brand:wikidata\"=\"Q2891018\"][\"name\"=\"Liberbank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Liberbank_logo.svg",
@@ -25022,7 +25022,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Liberty Bank (Connecticut)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Liberty Bank\"][\"brand:wikidata\"=\"Q6541584\"][\"name\"=\"Liberty Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -25058,7 +25058,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Lighthouse Credit Union",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Lighthouse Credit Union\"][\"brand:wikidata\"=\"Q123397041\"][\"name\"=\"Lighthouse Credit Union\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Northeast_Credit_Union_logo.png",
@@ -25094,7 +25094,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Limasol T\u00fcrk Kooperatif Bankas\u0131",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Limasol T\u00fcrk Kooperatif Bankas\u0131\"][\"brand:wikidata\"=\"Q31188702\"][\"name\"=\"Limasol T\u00fcrk Kooperatif Bankas\u0131\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -25130,7 +25130,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Lloyds Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Lloyds Bank\"][\"brand:wikidata\"=\"Q1152847\"][\"name\"=\"Lloyds Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Lloyds_bank_in_Halifax.jpg",
@@ -25166,7 +25166,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Luminor Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Luminor Bank\"][\"brand:wikidata\"=\"Q28966957\"][\"name\"=\"Luminor Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Luminor_logo.svg",
@@ -25202,7 +25202,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Luzerner Kantonalbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Luzerner Kantonalbank\"][\"brand:wikidata\"=\"Q1756878\"][\"name\"=\"Luzerner Kantonalbank\"][\"short_name\"=\"LUKB\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_der_Luzerner_Kantonalbank.svg",
@@ -25238,7 +25238,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "M&T Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"M&T Bank\"][\"brand:wikidata\"=\"Q3272257\"][\"name\"=\"M&T Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/M&T_Bank_wordmark.svg",
@@ -25274,7 +25274,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Macro",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Macro\"][\"brand:wikidata\"=\"Q2335199\"][\"name\"=\"Macro\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Banco_Macro.svg",
@@ -25310,7 +25310,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Madhyanchal Gramin Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Madhyanchal Gramin Bank\"][\"brand:en\"=\"Madhyanchal Gramin Bank\"][\"brand:hi\"=\"\u092e\u0927\u094d\u092f\u093e\u0902\u091a\u0932 \u0917\u094d\u0930\u093e\u092e\u0940\u0923 \u092c\u0948\u0902\u0915\"][\"brand:wikidata\"=\"Q6727651\"][\"name\"=\"Madhyanchal Gramin Bank\"][\"name:en\"=\"Madhyanchal Gramin Bank\"][\"name:hi\"=\"\u092e\u0927\u094d\u092f\u093e\u0902\u091a\u0932 \u0917\u094d\u0930\u093e\u092e\u0940\u0923 \u092c\u0948\u0902\u0915\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -25346,7 +25346,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Maharashtra Gramin Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Maharashtra Gramin Bank\"][\"brand:en\"=\"Maharashtra Gramin Bank\"][\"brand:hi\"=\"\u092e\u0939\u093e\u0930\u093e\u0937\u094d\u091f\u094d\u0930 \u0917\u094d\u0930\u093e\u092e\u0940\u0923 \u092c\u0948\u0902\u0915\"][\"brand:wikidata\"=\"Q16915974\"][\"name\"=\"Maharashtra Gramin Bank\"][\"name:en\"=\"Maharashtra Gramin Bank\"][\"name:hi\"=\"\u092e\u0939\u093e\u0930\u093e\u0937\u094d\u091f\u094d\u0930 \u0917\u094d\u0930\u093e\u092e\u0940\u0923 \u092c\u0948\u0902\u0915\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -25382,7 +25382,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Marine Credit Union (Wisconsin)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Marine Credit Union\"][\"brand:wikidata\"=\"Q19903440\"][\"name\"=\"Marine Credit Union\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -25418,7 +25418,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Mashreq",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Mashreq\"][\"brand:en\"=\"Mashreq\"][\"brand:wikidata\"=\"Q1538829\"][\"name\"=\"Mashreq\"][\"name:en\"=\"Mashreq\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Mashreq-new-logo.png",
@@ -25454,7 +25454,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Maybank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Maybank\"][\"brand:wikidata\"=\"Q1364018\"][\"name\"=\"Maybank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Maybank_Tower_Kuala_Lumpur.jpg",
@@ -25490,7 +25490,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "mBank (Europe)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"mBank\"][\"brand:wikidata\"=\"Q1160928\"][\"name\"=\"mBank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Mbank-logo.jpg",
@@ -25526,7 +25526,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "MBH Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"MBH Bank\"][\"brand:wikidata\"=\"Q124547528\"][\"name\"=\"MBH Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -25562,7 +25562,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "MCB (Caribbean)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"MCB\"][\"brand:wikidata\"=\"Q6728857\"][\"name\"=\"MCB\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Hoofdkantoor_Maduro_&_Curiel's_Bank,_Willemstad,_Cura\u00e7ao.jpg",
@@ -25598,7 +25598,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "MCB (Mauritius)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"MCB\"][\"name\"=\"MCB\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -25634,7 +25634,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "MCB (Pakistan)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"MCB\"][\"brand:en\"=\"MCB\"][\"brand:ur\"=\"\u0627\u06cc\u0645 \u0633\u06cc \u0628\u06cc \u0628\u06cc\u0646\u06a9\"][\"brand:wikidata\"=\"Q15982510\"][\"name\"=\"MCB\"][\"name:en\"=\"MCB\"][\"name:ur\"=\"\u0627\u06cc\u0645 \u0633\u06cc \u0628\u06cc \u0628\u06cc\u0646\u06a9\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/MCB-HQ.jpg",
@@ -25670,7 +25670,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Meezan Bank (\u0645\u06cc\u0632\u0627\u0646 \u0628\u06cc\u0646\u06a9)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Meezan Bank\"][\"brand:en\"=\"Meezan Bank\"][\"brand:ur\"=\"\u0645\u06cc\u0632\u0627\u0646 \u0628\u06cc\u0646\u06a9\"][\"brand:wikidata\"=\"Q6807934\"][\"name\"=\"Meezan Bank\"][\"name:en\"=\"Meezan Bank\"][\"name:ur\"=\"\u0645\u06cc\u0632\u0627\u0646 \u0628\u06cc\u0646\u06a9\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Meezan_Bank_Head_office,_Karachi.jpg",
@@ -25706,7 +25706,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Mellat Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0544\u0565\u056c\u056c\u0561\u0569 \u0532\u0561\u0576\u056f\"][\"brand:en\"=\"Mellat Bank\"][\"brand:hy\"=\"\u0544\u0565\u056c\u056c\u0561\u0569 \u0532\u0561\u0576\u056f\"][\"brand:ru\"=\"\u041c\u0435\u043b\u043b\u0430\u0442 \u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q116224526\"][\"name\"=\"\u0544\u0565\u056c\u056c\u0561\u0569 \u0532\u0561\u0576\u056f\"][\"name:en\"=\"Mellat Bank\"][\"name:hy\"=\"\u0544\u0565\u056c\u056c\u0561\u0569 \u0532\u0561\u0576\u056f\"][\"name:ru\"=\"\u041c\u0435\u043b\u043b\u0430\u0442 \u0411\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -25742,7 +25742,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Mercantil",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Mercantil\"][\"brand:wikidata\"=\"Q6818004\"][\"name\"=\"Mercantil\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -25778,7 +25778,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Meridian Credit Union",
     query: "(nwr[\"alt_name\"=\"Meridian\"][\"amenity\"=\"bank\"][\"brand\"=\"Meridian Credit Union\"][\"brand:wikidata\"=\"Q6819303\"][\"name\"=\"Meridian Credit Union\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Meridian_Credit_Union_logo.svg",
@@ -25814,7 +25814,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Metairie Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Metairie Bank\"][\"brand:wikidata\"=\"Q112358267\"][\"name\"=\"Metairie Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -25850,7 +25850,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Metro Bank (UK)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Metro Bank\"][\"brand:wikidata\"=\"Q6824499\"][\"name\"=\"Metro Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Metro_Bank,_Paradise_Street.jpg",
@@ -25886,7 +25886,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Metrobank (Philippines)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Metrobank\"][\"brand:wikidata\"=\"Q1925799\"][\"name\"=\"Metrobank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Metropolitan_Bank_and_Trust_Company.svg",
@@ -25922,7 +25922,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "MG\uc0c8\ub9c8\uc744\uae08\uace0",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"MG\uc0c8\ub9c8\uc744\uae08\uace0\"][\"brand:ko\"=\"MG\uc0c8\ub9c8\uc744\uae08\uace0\"][\"brand:wikidata\"=\"Q12600614\"][\"name\"=\"MG\uc0c8\ub9c8\uc744\uae08\uace0\"][\"name:ko\"=\"MG\uc0c8\ub9c8\uc744\uae08\uace0\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -25958,7 +25958,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Mibanco",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Mibanco\"][\"brand:wikidata\"=\"Q5558589\"][\"name\"=\"Mibanco\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -25994,7 +25994,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "MidFirst Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"MidFirst Bank\"][\"brand:wikidata\"=\"Q17081131\"][\"name\"=\"MidFirst Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -26030,7 +26030,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Migros Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Migros Bank\"][\"brand:de\"=\"Migros Bank\"][\"brand:fr\"=\"Banque Migros\"][\"brand:it\"=\"Banca Migros\"][\"brand:wikidata\"=\"Q1593349\"][\"name\"=\"Migros Bank\"][\"name:de\"=\"Migros Bank\"][\"name:fr\"=\"Banque Migros\"][\"name:it\"=\"Banca Migros\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Migros-Bank-Logo.svg",
@@ -26066,7 +26066,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Millennium Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Millennium Bank\"][\"brand:wikidata\"=\"Q4855947\"][\"name\"=\"Millennium Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_Millenium.svg",
@@ -26102,7 +26102,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Millennium bcp",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Millennium bcp\"][\"brand:wikidata\"=\"Q118581\"][\"name\"=\"Millennium bcp\"][\"official_name\"=\"Banco Comercial Portugu\u00eas\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Comercial_Portugu\u00eas_logo_(Millenium_BCP).svg",
@@ -26138,7 +26138,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Mission Federal Credit Union",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Mission Federal Credit Union\"][\"brand:wikidata\"=\"Q18345955\"][\"name\"=\"Mission Federal Credit Union\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -26174,7 +26174,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Mittelbrandenburgische Sparkasse",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Mittelbrandenburgische Sparkasse\"][\"brand:wikidata\"=\"Q1940058\"][\"name\"=\"Mittelbrandenburgische Sparkasse\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Mittelbrandenburgische_Sparkasse.svg",
@@ -26210,7 +26210,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Mizoram Rural Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Mizoram Rural Bank\"][\"brand:wikidata\"=\"Q60764014\"][\"name\"=\"Mizoram Rural Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -26246,7 +26246,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "MKB Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"MKB Bank\"][\"brand:wikidata\"=\"Q916185\"][\"name\"=\"MKB Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/MKB_Bank_logo.svg",
@@ -26282,7 +26282,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Moldindconbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Moldindconbank\"][\"brand:wikidata\"=\"Q20429441\"][\"name\"=\"Moldindconbank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Moldindconbank.png",
@@ -26318,7 +26318,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Moldova Agroindbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Moldova Agroindbank\"][\"brand:wikidata\"=\"Q4044440\"][\"name\"=\"Moldova Agroindbank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Maib_ID_new_artwork_colour.png",
@@ -26354,7 +26354,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "MONETA Money Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"MONETA Money Bank\"][\"brand:wikidata\"=\"Q24282966\"][\"name\"=\"MONETA Money Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Moneta_Money_Bank.svg",
@@ -26390,7 +26390,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Monobank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Monobank\"][\"brand:wikidata\"=\"Q44789053\"][\"name\"=\"Monobank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Monobank_logo.svg",
@@ -26426,7 +26426,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Monte dei Paschi di Siena",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Monte dei Paschi di Siena\"][\"brand:wikidata\"=\"Q46730\"][\"name\"=\"Monte dei Paschi di Siena\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Palazzo_Salimbeni,_Siena,_Headquarters_of_Monte_dei_Paschi_di_Siena,_the_worlds_oldest_surviving_bank.jpg",
@@ -26462,7 +26462,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Montepio",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Montepio\"][\"brand:wikidata\"=\"Q1946091\"][\"name\"=\"Montepio\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -26498,7 +26498,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Mountain America Credit Union",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Mountain America Credit Union\"][\"brand:wikidata\"=\"Q6924862\"][\"name\"=\"Mountain America Credit Union\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Mountian_America_Credit_Union_Logo.jpg",
@@ -26534,7 +26534,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "MTB Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"MTB Bank\"][\"brand:en\"=\"MTB Bank\"][\"brand:uk\"=\"\u041c\u0422\u0411 \u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q110223628\"][\"name\"=\"MTB Bank\"][\"name:en\"=\"MTB Bank\"][\"name:uk\"=\"\u041c\u0422\u0411 \u0411\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/MTB_Bank_logo.svg",
@@ -26570,7 +26570,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "NAB",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"NAB\"][\"brand:wikidata\"=\"Q1430985\"][\"name\"=\"NAB\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/NAB_building_in_Melbourne.jpg",
@@ -26606,7 +26606,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Nainital Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Nainital Bank\"][\"brand:wikidata\"=\"Q6959715\"][\"name\"=\"Nainital Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -26642,7 +26642,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "NASA Federal Credit Union",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"NASA Federal Credit Union\"][\"brand:wikidata\"=\"Q6952409\"][\"name\"=\"NASA Federal Credit Union\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -26678,7 +26678,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "National Bank (Canada)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"National Bank\"][\"brand:en\"=\"National Bank\"][\"brand:fr\"=\"Banque Nationale\"][\"brand:wikidata\"=\"Q634298\"][\"name\"=\"National Bank\"][\"name:en\"=\"National Bank\"][\"name:fr\"=\"Banque Nationale\"][\"official_name\"=\"National Bank of Canada\"][\"official_name:en\"=\"National Bank of Canada\"][\"official_name:fr\"=\"Banque Nationale du Canada\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/National_Bank_Of_Canada.svg",
@@ -26714,7 +26714,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "National Bank of Egypt",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"National Bank of Egypt\"][\"brand:ar\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0623\u0647\u0644\u064a \u0627\u0644\u0645\u0635\u0631\u064a\"][\"brand:en\"=\"National Bank of Egypt\"][\"brand:wikidata\"=\"Q4119563\"][\"name\"=\"National Bank of Egypt\"][\"name:ar\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0623\u0647\u0644\u064a \u0627\u0644\u0645\u0635\u0631\u064a\"][\"name:en\"=\"National Bank of Egypt\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/National_Bank_of_Egypt.svg",
@@ -26750,7 +26750,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "National Bank of Kuwait",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"National Bank of Kuwait\"][\"brand:ar\"=\"\u0628\u0646\u0643 \u0627\u0644\u0643\u0648\u064a\u062a \u0627\u0644\u0648\u0637\u0646\u064a\"][\"brand:en\"=\"National Bank of Kuwait\"][\"brand:wikidata\"=\"Q4045072\"][\"name\"=\"National Bank of Kuwait\"][\"name:ar\"=\"\u0628\u0646\u0643 \u0627\u0644\u0643\u0648\u064a\u062a \u0627\u0644\u0648\u0637\u0646\u064a\"][\"name:en\"=\"National Bank of Kuwait\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/NBK.svg",
@@ -26786,7 +26786,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "National Investment Bank (Ghana)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"National Investment Bank\"][\"brand:wikidata\"=\"Q6973844\"][\"name\"=\"National Investment Bank\"][\"operator\"=\"National Investment Bank Limited\"][\"operator:type\"=\"parastatal\"][\"operator:wikidata\"=\"Q6973844\"][\"short_name\"=\"NIB\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/National_Investment_Bank_logo.jpg",
@@ -26822,7 +26822,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Nationwide",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Nationwide\"][\"brand:wikidata\"=\"Q846735\"][\"name\"=\"Nationwide\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Nationwide_HQ_Swindon.jpg",
@@ -26858,7 +26858,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "NatWest",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"NatWest\"][\"brand:wikidata\"=\"Q2740021\"][\"name\"=\"NatWest\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Natwest-logo.jpg",
@@ -26894,7 +26894,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Navy Federal Credit Union",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Navy Federal Credit Union\"][\"brand:wikidata\"=\"Q6982632\"][\"name\"=\"Navy Federal Credit Union\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Navy_Federal_Credit_Union_Logo.svg",
@@ -26930,7 +26930,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "NBT Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"NBT Bank\"][\"brand:wikidata\"=\"Q6952868\"][\"name\"=\"NBT Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -26966,7 +26966,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "NBU",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"NBU\"][\"brand:wikidata\"=\"Q4314979\"][\"name\"=\"NBU\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/NBU_new_logo.jpg",
@@ -27002,7 +27002,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Near East Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Near East Bank\"][\"brand:wikidata\"=\"Q31188683\"][\"name\"=\"Near East Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -27038,7 +27038,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Nedbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Nedbank\"][\"brand:wikidata\"=\"Q2751701\"][\"name\"=\"Nedbank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Nedbank_regional_office_in_Cape_Town,_South_Africa.jpg",
@@ -27074,7 +27074,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Nest Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Nest Bank\"][\"brand:wikidata\"=\"Q48853121\"][\"name\"=\"Nest Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Nest_Bank_logo.png",
@@ -27110,7 +27110,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "NH\ub18d\ud611\uc740\ud589",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"NH\ub18d\ud611\uc740\ud589\"][\"brand:en\"=\"NH Bank\"][\"brand:ko\"=\"NH\ub18d\ud611\uc740\ud589\"][\"brand:wikidata\"=\"Q15283673\"][\"name\"=\"NH\ub18d\ud611\uc740\ud589\"][\"name:en\"=\"NH Bank\"][\"name:ko\"=\"NH\ub18d\ud611\uc740\ud589\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -27146,7 +27146,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Nicolet National Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Nicolet National Bank\"][\"brand:wikidata\"=\"Q124021408\"][\"name\"=\"Nicolet National Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/428_Nicolet-National-Bank-Logo.png",
@@ -27182,7 +27182,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Nidwaldner Kantonalbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Nidwaldner Kantonalbank\"][\"brand:wikidata\"=\"Q1987417\"][\"name\"=\"Nidwaldner Kantonalbank\"][\"short_name\"=\"NKB\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_der_Nidwaldner_Kantonalbank.svg",
@@ -27218,7 +27218,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "NLB",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"NLB\"][\"brand:wikidata\"=\"Q1481509\"][\"name\"=\"NLB\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Nova_Ljubljanska_banka_logo.svg",
@@ -27254,7 +27254,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "NMB Bank (Nepal)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"NMB Bank\"][\"brand:wikidata\"=\"Q13179664\"][\"name\"=\"NMB Bank\"][\"short_name\"=\"NMB\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -27290,7 +27290,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "NMB Bank (Tanzania)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"NMB Bank\"][\"brand:wikidata\"=\"Q6974322\"][\"name\"=\"NMB Bank\"][\"short_name\"=\"NMB\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Nmb_logo.jpg",
@@ -27326,7 +27326,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "NMB Bank (Zimbabwe)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"NMB Bank\"][\"brand:wikidata\"=\"Q13179664\"][\"name\"=\"NMB Bank\"][\"short_name\"=\"NMB\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -27362,7 +27362,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Nord-Ostsee Sparkasse",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Nord-Ostsee Sparkasse\"][\"brand:wikidata\"=\"Q1369016\"][\"name\"=\"Nord-Ostsee Sparkasse\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Sparkasse.svg",
@@ -27398,7 +27398,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Nordea",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Nordea\"][\"brand:wikidata\"=\"Q1123823\"][\"name\"=\"Nordea\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Nordea.svg",
@@ -27434,7 +27434,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Northern Credit Union",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Northern Credit Union\"][\"brand:wikidata\"=\"Q133208565\"][\"name\"=\"Northern Credit Union\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -27470,7 +27470,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Northwest Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Northwest Bank\"][\"brand:wikidata\"=\"Q7060191\"][\"name\"=\"Northwest Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Northwest_Bank_logo.svg",
@@ -27506,7 +27506,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "NovaBank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"NovaBank\"][\"brand:wikidata\"=\"Q61072074\"][\"name\"=\"NovaBank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -27542,7 +27542,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Novo Banco",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Novo Banco\"][\"brand:wikidata\"=\"Q17488861\"][\"name\"=\"Novo Banco\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logotipo_Novo_Banco.png",
@@ -27578,7 +27578,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "NSB",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"NSB\"][\"brand:wikidata\"=\"Q12500189\"][\"name\"=\"NSB\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -27614,7 +27614,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Nurbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Nurbank\"][\"brand:wikidata\"=\"Q1638772\"][\"name\"=\"Nurbank\"][\"name:en\"=\"Nurbank\"][\"name:kk\"=\"\u041d\u0443\u0440\u0431\u0430\u043d\u043a\"][\"name:ru\"=\"\u041d\u0443\u0440\u0431\u0430\u043d\u043a\"][\"official_name\"=\"Nurbank JSC\"][\"official_name:en\"=\"Nurbank JSC\"][\"official_name:kk\"=\"\u00ab\u041d\u04b1\u0440\u0431\u0430\u043d\u043a\u00bb \u0410\u049a\"][\"official_name:ru\"=\"\u0410\u041e \u00ab\u041d\u0443\u0440\u0431\u0430\u043d\u043a\u00bb\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Nurbank_logo.jpg",
@@ -27650,7 +27650,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Nusenda",
     query: "(nwr[\"alt_name\"=\"Nusenda Credit Union\"][\"amenity\"=\"bank\"][\"brand\"=\"Nusenda\"][\"brand:wikidata\"=\"Q7010183\"][\"name\"=\"Nusenda\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Nusenda_Credit_Union_logo.svg",
@@ -27686,7 +27686,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Oberbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Oberbank\"][\"brand:wikidata\"=\"Q2009139\"][\"name\"=\"Oberbank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Oberbank_Logo.svg",
@@ -27722,7 +27722,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Obwaldner Kantonalbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Obwaldner Kantonalbank\"][\"brand:wikidata\"=\"Q1291630\"][\"name\"=\"Obwaldner Kantonalbank\"][\"short_name\"=\"OKB\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_der_Obwaldner_Kantonalbank.svg",
@@ -27758,7 +27758,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "OCBC (Indonesia)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"OCBC\"][\"brand:wikidata\"=\"Q19724214\"][\"name\"=\"OCBC\"][\"official_name\"=\"Bank OCBC NISP\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo-ocbc.svg",
@@ -27794,7 +27794,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "OCBC Bank (Malaysia/Singapore)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"OCBC Bank\"][\"brand:en\"=\"OCBC Bank\"][\"brand:wikidata\"=\"Q2042423\"][\"brand:zh\"=\"\u534e\u4fa8\u94f6\u884c\"][\"name\"=\"OCBC Bank\"][\"name:en\"=\"OCBC Bank\"][\"name:zh\"=\"\u534e\u4fa8\u94f6\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/OCBC_Bank_logo.png",
@@ -27830,7 +27830,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Occidental de Descuento",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Occidental de Descuento\"][\"brand:wikidata\"=\"Q4854108\"][\"name\"=\"Occidental de Descuento\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bodlogotipo.png",
@@ -27866,7 +27866,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "OCCU",
     query: "(nwr[\"alt_name\"=\"Oregon Community Credit Union\"][\"amenity\"=\"bank\"][\"brand\"=\"OCCU\"][\"brand:wikidata\"=\"Q7101148\"][\"name\"=\"OCCU\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -27902,7 +27902,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Odeabank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Odeabank\"][\"brand:wikidata\"=\"Q6036742\"][\"name\"=\"Odeabank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Odeabank_logo.png",
@@ -27938,7 +27938,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Odisha Gramya Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Odisha Gramya Bank\"][\"brand:en\"=\"Odisha Gramya Bank\"][\"brand:or\"=\"\u0b13\u0b21\u0b3c\u0b3f\u0b36\u0b3e \u0b17\u0b4d\u0b30\u0b3e\u0b2e\u0b4d\u0b5f \u0b2c\u0b4d\u0b5f\u0b3e\u0b19\u0b4d\u0b15\"][\"brand:wikidata\"=\"Q18356206\"][\"name\"=\"Odisha Gramya Bank\"][\"name:en\"=\"Odisha Gramya Bank\"][\"name:or\"=\"\u0b13\u0b21\u0b3c\u0b3f\u0b36\u0b3e \u0b17\u0b4d\u0b30\u0b3e\u0b2e\u0b4d\u0b5f \u0b2c\u0b4d\u0b5f\u0b3e\u0b19\u0b4d\u0b15\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -27974,7 +27974,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "O\u02bbzsanoatqurilishbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"O\u02bbzsanoatqurilishbank\"][\"brand:short\"=\"SQB\"][\"brand:wikidata\"=\"Q125490175\"][\"name\"=\"O\u02bbzsanoatqurilishbank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -28010,7 +28010,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Old National Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Old National Bank\"][\"brand:wikidata\"=\"Q7084595\"][\"name\"=\"Old National Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Old_National_Bank_(logo).svg",
@@ -28046,7 +28046,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Old Second National Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Old Second National Bank\"][\"brand:wikidata\"=\"Q108916891\"][\"name\"=\"Old Second National Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -28082,7 +28082,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Oldenburgische Landesbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Oldenburgische Landesbank\"][\"brand:wikidata\"=\"Q879591\"][\"name\"=\"Oldenburgische Landesbank\"][\"short_name\"=\"OLB\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Oldenburgische_landesbank_logo.svg",
@@ -28118,7 +28118,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "OmniBSIC Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"OmniBSIC Bank\"][\"brand:wikidata\"=\"Q96397377\"][\"name\"=\"OmniBSIC Bank\"][\"operator\"=\"OmniBSIC Bank Ghana Limited\"][\"operator:type\"=\"private\"][\"operator:wikidata\"=\"Q96397377\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -28154,7 +28154,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "OnPoint",
     query: "(nwr[\"alt_name\"=\"OnPoint Community Credit Union\"][\"amenity\"=\"bank\"][\"brand\"=\"OnPoint\"][\"brand:wikidata\"=\"Q107802623\"][\"name\"=\"OnPoint\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -28190,7 +28190,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Orabank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Orabank\"][\"name\"=\"Orabank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -28226,7 +28226,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Oregon State Credit Union",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Oregon State Credit Union\"][\"brand:wikidata\"=\"Q116506780\"][\"name\"=\"Oregon State Credit Union\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -28262,7 +28262,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Oriental",
     query: "(nwr[\"alt_name\"=\"Oriental Bank\"][\"amenity\"=\"bank\"][\"brand\"=\"Oriental\"][\"brand:wikidata\"=\"Q64887002\"][\"name\"=\"Oriental\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Oriental_Bank_logo.png",
@@ -28298,7 +28298,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Oriental Bank of Commerce",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Oriental Bank of Commerce\"][\"brand:wikidata\"=\"Q367008\"][\"name\"=\"Oriental Bank of Commerce\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -28334,7 +28334,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Osuuspankki",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Osuuspankki\"][\"brand:wikidata\"=\"Q4045597\"][\"name\"=\"Osuuspankki\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/OP_Financial_Group.svg",
@@ -28370,7 +28370,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "OTP Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"OTP Bank\"][\"brand:wikidata\"=\"Q912778\"][\"name\"=\"OTP Bank\"][\"short_name\"=\"OTP\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Otp_bank_Logo.svg",
@@ -28406,7 +28406,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "OTP Bank (\u0423\u043a\u0440\u0430\u0457\u043d\u0430)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"OTP Bank\"][\"brand:en\"=\"OTP Bank\"][\"brand:uk\"=\"\u041e\u0422\u041f \u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q16688676\"][\"name\"=\"OTP Bank\"][\"name:en\"=\"OTP Bank\"][\"name:uk\"=\"\u041e\u0422\u041f \u0411\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Otp_bank_Logo.svg",
@@ -28442,7 +28442,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "OTP banka (Hrvatska)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"OTP banka\"][\"brand:wikidata\"=\"Q31198593\"][\"name\"=\"OTP banka\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Otp_bank_Logo.svg",
@@ -28478,7 +28478,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "OTP banka (\u0421\u0440\u0431\u0438\u0458\u0430)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"OTP banka\"][\"brand:wikidata\"=\"Q7552914\"][\"name\"=\"OTP banka\"][\"name:en\"=\"OTP bank\"][\"name:sr\"=\"\u041e\u0422\u041f \u0431\u0430\u043d\u043a\u0430\"][\"name:sr-Latn\"=\"OTP banka\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/OTP_Bank_logo.svg",
@@ -28514,7 +28514,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Panin Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Panin Bank\"][\"brand:wikidata\"=\"Q12502751\"][\"name\"=\"Panin Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -28550,7 +28550,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Partner banka",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Partner banka\"][\"brand:wikidata\"=\"Q125756313\"][\"name\"=\"Partner banka\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -28586,7 +28586,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "PBCom",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"PBCom\"][\"brand:wikidata\"=\"Q7184974\"][\"name\"=\"PBCom\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Philippines_Bank_of_Communications_Logo_(2017).svg",
@@ -28622,7 +28622,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "PC Financial",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"PC Financial\"][\"brand:wikidata\"=\"Q7241126\"][\"name\"=\"PC Financial\"][\"official_name\"=\"President's Choice Financial\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -28658,7 +28658,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "PenFed Credit Union",
     query: "(nwr[\"alt_name\"=\"Pentagon Federal Credit Union\"][\"amenity\"=\"bank\"][\"brand\"=\"PenFed Credit Union\"][\"brand:wikidata\"=\"Q3374885\"][\"name\"=\"PenFed Credit Union\"][\"short_name\"=\"PenFed\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -28694,7 +28694,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Pennsylvania State Employees Credit Union",
     query: "(nwr[\"alt_name\"=\"Pennsylvania State Employees Credit Union\"][\"amenity\"=\"bank\"][\"brand\"=\"PSECU\"][\"brand:wikidata\"=\"Q7120626\"][\"name\"=\"PSECU\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/PSECU_BLACK_SM.jpg",
@@ -28730,7 +28730,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "People's United Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"People's United Bank\"][\"brand:wikidata\"=\"Q7165802\"][\"name\"=\"People's United Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -28766,7 +28766,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Peoples Bank (Flemingsburg, KY)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Peoples Bank\"][\"name\"=\"Peoples Bank\"][\"official_name\"=\"Peoples Bank of Kentucky\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -28802,7 +28802,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Peoples Bank (Ohio-based)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Peoples Bank\"][\"brand:wikidata\"=\"Q65716607\"][\"name\"=\"Peoples Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -28838,7 +28838,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Peoples Bank (Washington)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Peoples Bank\"][\"brand:wikidata\"=\"Q7166050\"][\"name\"=\"Peoples Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -28874,7 +28874,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Permanent TSB",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Permanent TSB\"][\"brand:wikidata\"=\"Q3154461\"][\"name\"=\"Permanent TSB\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Permanent_tsb.png",
@@ -28910,7 +28910,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Philippine Business Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Philippine Business Bank\"][\"brand:wikidata\"=\"Q7184995\"][\"name\"=\"Philippine Business Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Philippine_Business_Bank_Logo.jpg",
@@ -28946,7 +28946,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Pinnacle Bank (Midwest & Southwest USA)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Pinnacle Bank\"][\"brand:wikidata\"=\"Q124021658\"][\"name\"=\"Pinnacle Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -28982,7 +28982,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Pinnacle Bank (Southeast USA)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Pinnacle Bank\"][\"brand:wikidata\"=\"Q7196294\"][\"name\"=\"Pinnacle Bank\"][\"official_name\"=\"Pinnacle Financial Partners\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -29018,7 +29018,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Piraeus Bank (\u0423\u043a\u0440\u0430\u0457\u043d\u0430)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Piraeus Bank\"][\"brand:en\"=\"Piraeus Bank\"][\"brand:uk\"=\"\u041f\u0456\u0440\u0435\u0443\u0441 \u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q116871201\"][\"name\"=\"Piraeus Bank\"][\"name:en\"=\"Piraeus Bank\"][\"name:uk\"=\"\u041f\u0456\u0440\u0435\u0443\u0441 \u0411\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Piraeus_Bank_logo.svg",
@@ -29054,7 +29054,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "PKO BP",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"PKO BP\"][\"brand:wikidata\"=\"Q578832\"][\"name\"=\"PKO BP\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/PKO_Bank_Polski_logo_and_wordmark.jpg",
@@ -29090,7 +29090,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Platte Valley Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Platte Valley Bank\"][\"brand:wikidata\"=\"Q113483051\"][\"name\"=\"Platte Valley Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -29126,7 +29126,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Plus Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Plus Bank\"][\"brand:wikidata\"=\"Q11713529\"][\"name\"=\"Plus Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Biurowiec_Blue_Point_w_Warszawie_2019.jpg",
@@ -29162,7 +29162,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "PNB",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"PNB\"][\"brand:wikidata\"=\"Q1657971\"][\"name\"=\"PNB\"][\"official_name\"=\"Philippine National Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Philippine-National-Bank-logo.svg",
@@ -29198,7 +29198,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "PNC Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"PNC Bank\"][\"brand:wikidata\"=\"Q38928\"][\"name\"=\"PNC Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/PNClogo.svg",
@@ -29234,7 +29234,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Podravska banka",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Podravska banka\"][\"brand:wikidata\"=\"Q125756441\"][\"name\"=\"Podravska banka\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Podravska_banka_logo.svg",
@@ -29270,7 +29270,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Popular",
     query: "(nwr[\"alt_name\"=\"Banco Popular\"][\"amenity\"=\"bank\"][\"brand\"=\"Popular\"][\"brand:wikidata\"=\"Q7229656\"][\"name\"=\"Popular\"][\"official_name\"=\"Banco Popular de Puerto Rico\"][\"short_name\"=\"BPPR\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BPPR_Popular_logo.svg",
@@ -29306,7 +29306,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Po\u0161tanska \u0161tedionica",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u041f\u043e\u0448\u0442\u0430\u043d\u0441\u043a\u0430 \u0448\u0442\u0435\u0434\u0438\u043e\u043d\u0438\u0446\u0430\"][\"brand:en\"=\"Postanska stedionica\"][\"brand:sr\"=\"\u041f\u043e\u0448\u0442\u0430\u043d\u0441\u043a\u0430 \u0448\u0442\u0435\u0434\u0438\u043e\u043d\u0438\u0446\u0430\"][\"brand:sr-Latn\"=\"Po\u0161tanska \u0161tedionica\"][\"brand:wikidata\"=\"Q2882644\"][\"name\"=\"\u041f\u043e\u0448\u0442\u0430\u043d\u0441\u043a\u0430 \u0448\u0442\u0435\u0434\u0438\u043e\u043d\u0438\u0446\u0430\"][\"name:en\"=\"Postanska stedionica\"][\"name:sr\"=\"\u041f\u043e\u0448\u0442\u0430\u043d\u0441\u043a\u0430 \u0448\u0442\u0435\u0434\u0438\u043e\u043d\u0438\u0446\u0430\"][\"name:sr-Latn\"=\"Po\u0161tanska \u0161tedionica\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -29342,7 +29342,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Postbank (Deutschland)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Postbank\"][\"brand:wikidata\"=\"Q708835\"][\"name\"=\"Postbank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Postbank-Logo.svg",
@@ -29378,7 +29378,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Po\u0161tov\u00e1 banka",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Po\u0161tov\u00e1 banka\"][\"brand:wikidata\"=\"Q7237158\"][\"name\"=\"Po\u0161tov\u00e1 banka\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/365.bank.png",
@@ -29414,7 +29414,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Pragathi Krishna Gramin Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Pragathi Krishna Gramin Bank\"][\"brand:wikidata\"=\"Q75801175\"][\"name\"=\"Pragathi Krishna Gramin Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -29450,7 +29450,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Pragathi Krishna Gramina Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Pragathi Krishna Gramina Bank\"][\"name\"=\"Pragathi Krishna Gramina Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -29486,7 +29486,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Prima banka",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Prima banka\"][\"brand:wikidata\"=\"Q13538661\"][\"name\"=\"Prima banka\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -29522,7 +29522,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Privatbanka",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Privatbanka\"][\"brand:wikidata\"=\"Q12774628\"][\"name\"=\"Privatbanka\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -29558,7 +29558,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Privredna banka Zagreb",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Privredna banka Zagreb\"][\"brand:wikidata\"=\"Q7246343\"][\"name\"=\"Privredna banka Zagreb\"][\"short_name\"=\"PBZ\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/PBZ_logo.png",
@@ -29594,7 +29594,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "ProCredit Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"ProCredit Bank\"][\"brand:wikidata\"=\"Q567304\"][\"name\"=\"ProCredit Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_der_ProCredit_Holding_(Frankfurt,_Deutschland).png",
@@ -29630,7 +29630,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "ProCredit Bank (\u0421\u0435\u0432\u0435\u0440\u043d\u0430 \u041c\u0430\u043a\u0435\u0434\u043e\u043d\u0438\u0458\u0430)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"ProCredit Bank\"][\"brand:wikidata\"=\"Q20567486\"][\"name\"=\"ProCredit Bank\"][\"name:en\"=\"ProCredit Bank\"][\"name:mk\"=\"\u041f\u0440\u043e\u041a\u0440\u0435\u0434\u0438\u0442 \u0411\u0430\u043d\u043a\u0430\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_ProCredit_Bank.svg",
@@ -29666,7 +29666,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "ProCredit Bank (\u0423\u043a\u0440\u0430\u0457\u043d\u0430)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"ProCredit Bank\"][\"brand:en\"=\"ProCredit Bank\"][\"brand:uk\"=\"\u041f\u0440\u043e\u041a\u0440\u0435\u0434\u0438\u0442 \u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q20091911\"][\"name\"=\"ProCredit Bank\"][\"name:en\"=\"ProCredit Bank\"][\"name:uk\"=\"\u041f\u0440\u043e\u041a\u0440\u0435\u0434\u0438\u0442 \u0411\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_ProCredit_Bank.svg",
@@ -29702,7 +29702,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "ProCredit banka (\u0421\u0440\u0431\u0438\u0458\u0430)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"ProCredit banka\"][\"brand:wikidata\"=\"Q122811249\"][\"name\"=\"ProCredit banka\"][\"name:en\"=\"ProCredit Bank\"][\"name:sr\"=\"\u041f\u0440\u043e\u041a\u0440\u0435\u0434\u0438\u0442 \u0431\u0430\u043d\u043a\u0430\"][\"name:sr-Latn\"=\"ProCredit banka\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_ProCredit_Bank.svg",
@@ -29738,7 +29738,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Produbanco",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Produbanco\"][\"brand:wikidata\"=\"Q7247678\"][\"name\"=\"Produbanco\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Produbanco_Logo.png",
@@ -29774,7 +29774,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Producers Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Producers Bank\"][\"brand:wikidata\"=\"Q25245606\"][\"name\"=\"Producers Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -29810,7 +29810,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Promerica",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Promerica\"][\"name\"=\"Promerica\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -29846,7 +29846,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Prosperity Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Prosperity Bank\"][\"brand:wikidata\"=\"Q7250893\"][\"name\"=\"Prosperity Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -29882,7 +29882,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Provident Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Provident Bank\"][\"brand:wikidata\"=\"Q7252517\"][\"name\"=\"Provident Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -29918,7 +29918,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Prudential Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Prudential Bank\"][\"brand:wikidata\"=\"Q7252979\"][\"name\"=\"Prudential Bank\"][\"operator\"=\"Prudential Bank Limited\"][\"operator:type\"=\"private\"][\"operator:wikidata\"=\"Q7252979\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -29954,7 +29954,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Prv\u00e1 stavebn\u00e1 sporite\u013e\u0148a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Prv\u00e1 stavebn\u00e1 sporite\u013e\u0148a\"][\"brand:wikidata\"=\"Q29054618\"][\"name\"=\"Prv\u00e1 stavebn\u00e1 sporite\u013e\u0148a\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -29990,7 +29990,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "PSBank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"PSBank\"][\"brand:wikidata\"=\"Q7185203\"][\"name\"=\"PSBank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -30026,7 +30026,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Public Bank (Malaysia)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Public Bank\"][\"brand:en\"=\"Public Bank\"][\"brand:wikidata\"=\"Q3046561\"][\"brand:zh\"=\"\u5927\u4f17\u94f6\u884c\"][\"name\"=\"Public Bank\"][\"name:en\"=\"Public Bank\"][\"name:zh\"=\"\u5927\u4f17\u94f6\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Menara_Public_Bank,_Kuala_Lumpur.JPG",
@@ -30062,7 +30062,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Puduvai Bharathiar Grama Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Puduvai Bharathiar Grama Bank\"][\"brand:wikidata\"=\"Q17014664\"][\"name\"=\"Puduvai Bharathiar Grama Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Pbgblogo.jpg",
@@ -30098,7 +30098,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Punjab & Sind Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Punjab & Sind Bank\"][\"brand:en\"=\"Punjab & Sind Bank\"][\"brand:hi\"=\"\u092a\u0902\u091c\u093e\u092c \u090f\u0923\u094d\u0921 \u0938\u093f\u0902\u0927 \u092c\u0948\u0902\u0915\"][\"brand:wikidata\"=\"Q2003302\"][\"name\"=\"Punjab & Sind Bank\"][\"name:en\"=\"Punjab & Sind Bank\"][\"name:hi\"=\"\u092a\u0902\u091c\u093e\u092c \u090f\u0923\u094d\u0921 \u0938\u093f\u0902\u0927 \u092c\u0948\u0902\u0915\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Punjab_&_Sind_Bank.svg",
@@ -30134,7 +30134,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Punjab National Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Punjab National Bank\"][\"brand:wikidata\"=\"Q2743499\"][\"name\"=\"Punjab National Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Punjab_National_Bank.svg",
@@ -30170,7 +30170,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "QNB",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"QNB\"][\"brand:ar\"=\"\u0628\u0646\u0643 \u0642\u0637\u0631 \u0627\u0644\u0648\u0637\u0646\u064a\"][\"brand:en\"=\"QNB\"][\"brand:wikidata\"=\"Q1136759\"][\"name\"=\"QNB\"][\"name:ar\"=\"\u0628\u0646\u0643 \u0642\u0637\u0631 \u0627\u0644\u0648\u0637\u0646\u064a\"][\"name:en\"=\"QNB\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Qatar_National_Bank.png",
@@ -30206,7 +30206,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "QNB Finansbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"QNB Finansbank\"][\"brand:wikidata\"=\"Q1416237\"][\"name\"=\"QNB Finansbank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/QNB_Finansbank_Kristal_Kule.jpg",
@@ -30242,7 +30242,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Rabobank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Rabobank\"][\"brand:wikidata\"=\"Q252004\"][\"name\"=\"Rabobank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Rabotoren.jpg",
@@ -30278,7 +30278,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Raiffeisen (Luxembourg)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Raiffeisen\"][\"brand:wikidata\"=\"Q11220162\"][\"name\"=\"Raiffeisen\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -30314,7 +30314,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Raiffeisen (Schweiz)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Raiffeisen\"][\"brand:wikidata\"=\"Q681189\"][\"name\"=\"Raiffeisen\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Raiffeisen_Schweiz_Logo.svg",
@@ -30350,7 +30350,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Raiffeisen bank (Hrvatska)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Raiffeisen bank\"][\"brand:wikidata\"=\"Q125756787\"][\"name\"=\"Raiffeisen bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Raiffeisen_Bank_logo.png",
@@ -30386,7 +30386,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Raiffeisen Bank (Magyarorsz\u00e1g)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Raiffeisen Bank\"][\"brand:wikidata\"=\"Q16522506\"][\"name\"=\"Raiffeisen Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Raiffeisen_Bank.svg",
@@ -30422,7 +30422,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Raiffeisen Bank (\u00d6sterreich)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Raiffeisen\"][\"brand:wikidata\"=\"Q22093483\"][\"name\"=\"Raiffeisenbank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Raiffeisen-Giebelkreuz.svg",
@@ -30458,7 +30458,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Raiffeisen Bank (Rom\u00e2nia)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Raiffeisen Bank\"][\"brand:wikidata\"=\"Q7283806\"][\"name\"=\"Raiffeisen Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Raiffeisen_Bank_International_logo.svg",
@@ -30494,7 +30494,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Raiffeisen Bank (Shqip\u00ebri)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Raiffeisen Bank\"][\"brand:wikidata\"=\"Q2127541\"][\"name\"=\"Raiffeisen Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Raiffeisen_Bank.svg",
@@ -30530,7 +30530,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Raiffeisen Bank (\u0423\u043a\u0440\u0430\u0457\u043d\u0430)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Raiffeisen Bank\"][\"brand:en\"=\"Raiffeisen Bank\"][\"brand:ru\"=\"\u0420\u0430\u0439\u0444\u0444\u0430\u0439\u0437\u0435\u043d \u0411\u0430\u043d\u043a\"][\"brand:uk\"=\"\u0420\u0430\u0439\u0444\u0444\u0430\u0439\u0437\u0435\u043d \u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q4389243\"][\"name\"=\"Raiffeisen Bank\"][\"name:en\"=\"Raiffeisen Bank\"][\"name:ru\"=\"\u0420\u0430\u0439\u0444\u0444\u0430\u0439\u0437\u0435\u043d \u0411\u0430\u043d\u043a\"][\"name:uk\"=\"\u0420\u0430\u0439\u0444\u0444\u0430\u0439\u0437\u0435\u043d \u0411\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Raiffeisen_Bank.svg",
@@ -30566,7 +30566,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Raiffeisen Bank Polska",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Raiffeisen Bank Polska\"][\"brand:wikidata\"=\"Q9303218\"][\"name\"=\"Raiffeisen Bank Polska\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Raiffeisen_Bank.svg",
@@ -30602,7 +30602,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Raiffeisen banka Slovensko",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Raiffeisen banka\"][\"brand:wikidata\"=\"Q107986402\"][\"name\"=\"Raiffeisen banka\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Raiffeisen_Bank.svg",
@@ -30638,7 +30638,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Raiffeisen banka Srbije",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Raiffeisen bank\"][\"brand:wikidata\"=\"Q7283807\"][\"name\"=\"Raiffeisen bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Raiffeisen_Bank.svg",
@@ -30674,7 +30674,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Raiffeisenbank (\u010cesko)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Raiffeisenbank\"][\"brand:wikidata\"=\"Q24282825\"][\"name\"=\"Raiffeisenbank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Raiffeisen_Bank_2023_logo.svg",
@@ -30710,7 +30710,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Raiffeisenkasse (S\u00fcdtirol)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Raiffeisen\"][\"brand:wikidata\"=\"Q2127619\"][\"name\"=\"Raiffeisen\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Raiffeisenverband_S\u00fcdtirol_logo.svg",
@@ -30746,7 +30746,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "RAKBANK",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"RAKBANK\"][\"brand:ar\"=\"\u0631\u0627\u0643 \u0628\u0646\u0643\"][\"brand:en\"=\"RAKBANK\"][\"brand:wikidata\"=\"Q7275733\"][\"name\"=\"RAKBANK\"][\"name:ar\"=\"\u0631\u0627\u0643 \u0628\u0646\u0643\"][\"name:en\"=\"RAKBANK\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -30782,7 +30782,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "RBC",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"RBC\"][\"brand:en\"=\"RBC Royal Bank\"][\"brand:fr\"=\"RBC Banque Royale\"][\"brand:wikidata\"=\"Q735261\"][\"name\"=\"RBC\"][\"name:en\"=\"RBC Royal Bank\"][\"name:fr\"=\"RBC Banque Royale\"][\"official_name\"=\"Royal Bank of Canada\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/RBC_logo.jpg",
@@ -30818,7 +30818,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "RBL Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"RBL Bank\"][\"brand:wikidata\"=\"Q13120398\"][\"name\"=\"RBL Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/RBL_Bank_SVG_Logo.svg",
@@ -30854,7 +30854,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "RBS",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"RBS\"][\"brand:wikidata\"=\"Q160126\"][\"name\"=\"RBS\"][\"official_name\"=\"Royal Bank of Scotland\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/RBS_Building_-_geograph.org.uk_-_419288.jpg",
@@ -30890,7 +30890,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "RCB Bank (Cyprus)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"RCB Bank\"][\"brand:wikidata\"=\"Q24914906\"][\"name\"=\"RCB Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -30926,7 +30926,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "RCB Bank (Midwestern USA)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"RCB Bank\"][\"brand:wikidata\"=\"Q131427051\"][\"name\"=\"RCB Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -30962,7 +30962,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "RCBC",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"RCBC\"][\"brand:wikidata\"=\"Q7339070\"][\"name\"=\"RCBC\"][\"official_name\"=\"Rizal Commercial Banking Corporation\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/RCBC_logo.svg",
@@ -30998,7 +30998,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "RegioBank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"RegioBank\"][\"brand:wikidata\"=\"Q2115864\"][\"name\"=\"RegioBank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Regiobank_Logo.svg",
@@ -31034,7 +31034,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Regions Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Regions Bank\"][\"brand:wikidata\"=\"Q917131\"][\"name\"=\"Regions Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Regions_Financial_Corp_logo.svg",
@@ -31070,7 +31070,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Reisebank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Reisebank\"][\"brand:wikidata\"=\"Q1421107\"][\"name\"=\"Reisebank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/ReiseBank-Logo.svg",
@@ -31106,7 +31106,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Repco Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Repco Bank\"][\"brand:wikidata\"=\"Q18394050\"][\"name\"=\"Repco Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -31142,7 +31142,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Republic Bank (Eastern Caribbean)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Republic Bank\"][\"brand:wikidata\"=\"Q7314386\"][\"name\"=\"Republic Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_of_Republic_Bank_of_Trinidad_and_Tobago.svg",
@@ -31178,7 +31178,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Republic Bank (Ghana)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Republic Bank\"][\"brand:wikidata\"=\"Q7314386\"][\"name\"=\"Republic Bank\"][\"operator\"=\"Republic Bank Ghana Limited\"][\"operator:type\"=\"public\"][\"operator:wikidata\"=\"Q4039966\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_of_Republic_Bank_of_Trinidad_and_Tobago.svg",
@@ -31214,7 +31214,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Republic Bank (Kentucky)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Republic Bank\"][\"brand:wikidata\"=\"Q7314387\"][\"name\"=\"Republic Bank\"][\"official_name\"=\"Republic Bank & Trust Company\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -31250,7 +31250,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Republic Bank (Philadelphia)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Republic Bank\"][\"brand:wikidata\"=\"Q55316482\"][\"name\"=\"Republic Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -31286,7 +31286,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Rep\u00fablica",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Rep\u00fablica\"][\"brand:wikidata\"=\"Q4077337\"][\"name\"=\"Rep\u00fablica\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/LogoBROU.png",
@@ -31322,7 +31322,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "RHB Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"RHB Bank\"][\"brand:wikidata\"=\"Q4207443\"][\"name\"=\"RHB Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/RHB_Logo.svg",
@@ -31358,7 +31358,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Rheinhessen Sparkasse",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Rheinhessen Sparkasse\"][\"brand:wikidata\"=\"Q1435829\"][\"name\"=\"Sparkasse\"][\"operator\"=\"Rheinhessen Sparkasse\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Sparkasse_Worms-Alzey-Ried.svg",
@@ -31394,7 +31394,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Robinsons Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Robinsons Bank\"][\"brand:wikidata\"=\"Q30639182\"][\"name\"=\"Robinsons Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Robinsons_Bank_logo.svg",
@@ -31430,7 +31430,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Rockland Trust",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Rockland Trust\"][\"brand:wikidata\"=\"Q7355463\"][\"name\"=\"Rockland Trust\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -31466,7 +31466,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Rogue Credit Union",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Rogue Credit Union\"][\"brand:wikidata\"=\"Q23926666\"][\"name\"=\"Rogue Credit Union\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -31502,7 +31502,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Royal Business Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Royal Business Bank\"][\"brand:wikidata\"=\"Q54959147\"][\"name\"=\"Royal Business Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -31538,7 +31538,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Rural Kutxa",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Rural Kutxa\"][\"brand:wikidata\"=\"Q131322578\"][\"name\"=\"Rural Kutxa\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -31574,7 +31574,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "S-Pankki",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"S-Pankki\"][\"brand:wikidata\"=\"Q7387053\"][\"name\"=\"S-Pankki\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -31610,7 +31610,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Sacombank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Sacombank\"][\"brand:wikidata\"=\"Q6123772\"][\"name\"=\"Sacombank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -31646,7 +31646,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "SAIB",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"SAIB\"][\"brand:wikidata\"=\"Q59050464\"][\"name\"=\"SAIB\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -31682,7 +31682,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Salem Five Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Salem Five Bank\"][\"brand:wikidata\"=\"Q29094215\"][\"name\"=\"Salem Five Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Salem_Five_logo.png",
@@ -31718,7 +31718,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Samoborska banka",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Samoborska banka\"][\"brand:wikidata\"=\"Q125756384\"][\"name\"=\"Samoborska banka\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Samoborska_banka_logo.png",
@@ -31754,7 +31754,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Sampath Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Sampath Bank\"][\"brand:wikidata\"=\"Q7410095\"][\"name\"=\"Sampath Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -31790,7 +31790,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "San Diego County Credit Union",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"San Diego County Credit Union\"][\"brand:wikidata\"=\"Q7413628\"][\"name\"=\"San Diego County Credit Union\"][\"short_name\"=\"SDCCU\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -31826,7 +31826,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Santander (Deutschland)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Santander\"][\"brand:wikidata\"=\"Q875292\"][\"name\"=\"Santander\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Santander_Consumer_Bank_M\u00f6nchengladbach_logo.svg",
@@ -31862,7 +31862,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Santander (Polska)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Santander\"][\"brand:wikidata\"=\"Q806653\"][\"name\"=\"Santander\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Santander_Bank_Polska_S.A.svg",
@@ -31898,7 +31898,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Santander (UK)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Santander\"][\"brand:wikidata\"=\"Q7420065\"][\"name\"=\"Santander\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Santander_Logotipo.svg",
@@ -31934,7 +31934,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Santander (USA)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Santander\"][\"brand:wikidata\"=\"Q5835668\"][\"name\"=\"Santander\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Santander_Logotipo.svg",
@@ -31970,7 +31970,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Santander Consumer Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Santander Consumer Bank\"][\"brand:wikidata\"=\"Q875292\"][\"name\"=\"Santander Consumer Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Santander_Consumer_Bank_M\u00f6nchengladbach_logo.svg",
@@ -32006,7 +32006,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Santander R\u00edo",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Santander R\u00edo\"][\"brand:wikidata\"=\"Q3385268\"][\"name\"=\"Santander R\u00edo\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Santander_Logotipo.svg",
@@ -32042,7 +32042,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Santander Totta",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Santander Totta\"][\"brand:wikidata\"=\"Q4854116\"][\"name\"=\"Santander Totta\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Santander_Logotipo.svg",
@@ -32078,7 +32078,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Sberbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Sberbank\"][\"brand:wikidata\"=\"Q205012\"][\"name\"=\"Sberbank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Sberbank_Logo_2020.svg",
@@ -32114,7 +32114,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "SBI\u65b0\u751f\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"SBI\u65b0\u751f\u9280\u884c\"][\"brand:en\"=\"SBI SHINSEI BANK\"][\"brand:ja\"=\"SBI\u65b0\u751f\u9280\u884c\"][\"brand:wikidata\"=\"Q571997\"][\"name\"=\"SBI\u65b0\u751f\u9280\u884c\"][\"name:en\"=\"SBI Shinsei Bank\"][\"name:ja\"=\"SBI\u65b0\u751f\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/SBI_Shinsei_Bank_Logo.svg",
@@ -32150,7 +32150,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "SBS Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"SBS Bank\"][\"brand:wikidata\"=\"Q7388985\"][\"name\"=\"SBS Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -32186,7 +32186,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Schaffhauser Kantonalbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Schaffhauser Kantonalbank\"][\"brand:wikidata\"=\"Q2230058\"][\"name\"=\"Schaffhauser Kantonalbank\"][\"short_name\"=\"SHKB\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Schaffhauser_Kantonalbank_20xx_logo.svg",
@@ -32222,7 +32222,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Schwyzer Kantonalbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Schwyzer Kantonalbank\"][\"brand:wikidata\"=\"Q2257957\"][\"name\"=\"Schwyzer Kantonalbank\"][\"short_name\"=\"SZKB\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_der_Schwyzer_Kantonalbank.svg",
@@ -32258,7 +32258,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Scotiabank (non-Qu\u00e9bec)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Scotiabank\"][\"brand:wikidata\"=\"Q451476\"][\"name\"=\"Scotiabank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Scotiabank_logo.svg",
@@ -32294,7 +32294,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Scotiabank (Qu\u00e9bec)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Banque Scotia\"][\"brand:wikidata\"=\"Q451476\"][\"name\"=\"Banque Scotia\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Scotiabank_logo.svg",
@@ -32330,7 +32330,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "SC\uc81c\uc77c\uc740\ud589",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"SC\uc81c\uc77c\uc740\ud589\"][\"brand:ko\"=\"SC\uc81c\uc77c\uc740\ud589\"][\"brand:wikidata\"=\"Q625531\"][\"name\"=\"SC\uc81c\uc77c\uc740\ud589\"][\"name:ko\"=\"SC\uc81c\uc77c\uc740\ud589\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -32366,7 +32366,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "SEB",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"SEB\"][\"brand:wikidata\"=\"Q975655\"][\"name\"=\"SEB\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/SEB_logo.svg",
@@ -32402,7 +32402,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Security Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Security Bank\"][\"brand:wikidata\"=\"Q7444945\"][\"name\"=\"Security Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Security_Bank_logo.svg",
@@ -32438,7 +32438,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Security Service Federal Credit Union",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Security Service Federal Credit Union\"][\"brand:wikidata\"=\"Q7444993\"][\"name\"=\"Security Service Federal Credit Union\"][\"short_name\"=\"SSFCU\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Ssfcu-logo-stack.svg",
@@ -32474,7 +32474,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u015eekerbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u015eekerbank\"][\"brand:wikidata\"=\"Q6088369\"][\"name\"=\"\u015eekerbank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/\u015eekerbank_logo.svg",
@@ -32510,7 +32510,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Self-Help Credit Union",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Self-Help Credit Union\"][\"brand:wikidata\"=\"Q111381769\"][\"name\"=\"Self-Help Credit Union\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -32546,7 +32546,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Self-Help Federal Credit Union",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Self-Help Federal Credit Union\"][\"brand:wikidata\"=\"Q111381724\"][\"name\"=\"Self-Help Federal Credit Union\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -32582,7 +32582,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Sense Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Sense Bank\"][\"brand:en\"=\"Sense Bank\"][\"brand:ru\"=\"\u0421\u0435\u043d\u0441 \u0411\u0430\u043d\u043a\"][\"brand:uk\"=\"\u0421\u0435\u043d\u0441 \u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q16691757\"][\"name\"=\"Sense Bank\"][\"name:en\"=\"Sense Bank\"][\"name:ru\"=\"\u0421\u0435\u043d\u0441 \u0411\u0430\u043d\u043a\"][\"name:uk\"=\"\u0421\u0435\u043d\u0441 \u0411\u0430\u043d\u043a\"][\"operator\"=\"Sense Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Sense_bank_logo.svg",
@@ -32618,7 +32618,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Service Credit Union",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Service Credit Union\"][\"brand:wikidata\"=\"Q7455675\"][\"name\"=\"Service Credit Union\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Service_CU_logo.png",
@@ -32654,7 +32654,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Servus Credit Union",
     query: "(nwr[\"alt_name\"=\"Servus\"][\"amenity\"=\"bank\"][\"brand\"=\"Servus Credit Union\"][\"brand:wikidata\"=\"Q2274396\"][\"name\"=\"Servus Credit Union\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Servus_Credit_Union_logo.png",
@@ -32690,7 +32690,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Seylan Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Seylan Bank\"][\"brand:wikidata\"=\"Q3532083\"][\"name\"=\"Seylan Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -32726,7 +32726,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Sharjah Islamic Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Sharjah Islamic Bank\"][\"brand:ar\"=\"\u0645\u0635\u0631\u0641 \u0627\u0644\u0634\u0627\u0631\u0642\u0629 \u0627\u0644\u0625\u0633\u0644\u0627\u0645\u064a\"][\"brand:en\"=\"Sharjah Islamic Bank\"][\"brand:wikidata\"=\"Q7489772\"][\"name\"=\"Sharjah Islamic Bank\"][\"name:ar\"=\"\u0645\u0635\u0631\u0641 \u0627\u0644\u0634\u0627\u0631\u0642\u0629 \u0627\u0644\u0625\u0633\u0644\u0627\u0645\u064a\"][\"name:en\"=\"Sharjah Islamic Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -32762,7 +32762,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Shore United Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Shore United Bank\"][\"brand:wikidata\"=\"Q131462339\"][\"name\"=\"Shore United Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -32798,7 +32798,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Sicoob",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Sicoob\"][\"brand:wikidata\"=\"Q28679754\"][\"name\"=\"Sicoob\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Marca-sicoob.png",
@@ -32834,7 +32834,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Sicredi",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Sicredi\"][\"brand:wikidata\"=\"Q3483060\"][\"name\"=\"Sicredi\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logomarca_Sicredi.jpg",
@@ -32870,7 +32870,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Simmons Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Simmons Bank\"][\"brand:wikidata\"=\"Q28402389\"][\"name\"=\"Simmons Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -32906,7 +32906,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "SKB Banka",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"SKB Banka\"][\"brand:wikidata\"=\"Q93363069\"][\"name\"=\"SKB Banka\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -32942,7 +32942,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Skipton Building Society",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Skipton Building Society\"][\"brand:wikidata\"=\"Q16931747\"][\"name\"=\"Skipton Building Society\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -32978,7 +32978,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Slatinska banka",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Slatinska banka\"][\"brand:wikidata\"=\"Q125756415\"][\"name\"=\"Slatinska banka\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Slatinska_banka_-_logo.png",
@@ -33014,7 +33014,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Slovensk\u00e1 sporite\u013e\u0148a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Slovensk\u00e1 sporite\u013e\u0148a\"][\"brand:wikidata\"=\"Q7541907\"][\"name\"=\"Slovensk\u00e1 sporite\u013e\u0148a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Slovenska-sporitelna-logo.png",
@@ -33050,7 +33050,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "SMBC\u4fe1\u8a17\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"SMBC\u4fe1\u8a17\u9280\u884c\"][\"brand:en\"=\"SMBC Trust Bank\"][\"brand:wikidata\"=\"Q17218805\"][\"name\"=\"SMBC\u4fe1\u8a17\u9280\u884c\"][\"name:en\"=\"SMBC Trust Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -33086,7 +33086,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "SNS Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"SNS Bank\"][\"brand:wikidata\"=\"Q1857899\"][\"name\"=\"SNS Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/De_Volksbank_logo.svg",
@@ -33122,7 +33122,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Soci\u00e9t\u00e9 G\u00e9n\u00e9rale",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Soci\u00e9t\u00e9 G\u00e9n\u00e9rale\"][\"brand:wikidata\"=\"Q270363\"][\"name\"=\"Soci\u00e9t\u00e9 G\u00e9n\u00e9rale\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo-SG-Soci\u00e9t\u00e9-G\u00e9n\u00e9rale.svg",
@@ -33158,7 +33158,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Soci\u00e9t\u00e9 G\u00e9n\u00e9rale (France)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"SG\"][\"brand:wikidata\"=\"Q270363\"][\"name\"=\"SG\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo-SG-Soci\u00e9t\u00e9-G\u00e9n\u00e9rale.svg",
@@ -33194,7 +33194,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Soci\u00e9t\u00e9 G\u00e9n\u00e9rale (Ghana)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Soci\u00e9t\u00e9 G\u00e9n\u00e9rale\"][\"brand:wikidata\"=\"Q270363\"][\"name\"=\"Soci\u00e9t\u00e9 G\u00e9n\u00e9rale\"][\"operator\"=\"Soci\u00e9t\u00e9 G\u00e9n\u00e9rale Ghana Limited\"][\"operator:type\"=\"public\"][\"operator:wikidata\"=\"Q7390038\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo-SG-Soci\u00e9t\u00e9-G\u00e9n\u00e9rale.svg",
@@ -33230,7 +33230,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Soci\u00e9t\u00e9 G\u00e9n\u00e9rale (\u0627\u0644\u0634\u0631\u0643\u0629 \u0627\u0644\u0639\u0627\u0645\u0629)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Soci\u00e9t\u00e9 g\u00e9n\u00e9rale Maroc \u0627\u0644\u0634\u0631\u0643\u0629 \u0627\u0644\u0639\u0627\u0645\u0629\"][\"brand:ar\"=\"\u0627\u0644\u0634\u0631\u0643\u0629 \u0627\u0644\u0639\u0627\u0645\u0629\"][\"brand:fr\"=\"Soci\u00e9t\u00e9 g\u00e9n\u00e9rale Maroc\"][\"brand:wikidata\"=\"Q3488352\"][\"name\"=\"Soci\u00e9t\u00e9 g\u00e9n\u00e9rale Maroc \u0627\u0644\u0634\u0631\u0643\u0629 \u0627\u0644\u0639\u0627\u0645\u0629\"][\"name:ar\"=\"\u0627\u0644\u0634\u0631\u0643\u0629 \u0627\u0644\u0639\u0627\u0645\u0629\"][\"name:fr\"=\"Soci\u00e9t\u00e9 g\u00e9n\u00e9rale Maroc\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Soci\u00e9t\u00e9_G\u00e9n\u00e9rale.svg",
@@ -33266,7 +33266,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Soci\u00e9t\u00e9 g\u00e9n\u00e9rale C\u00f4te d'Ivoire",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Soci\u00e9t\u00e9 g\u00e9n\u00e9rale C\u00f4te d'Ivoire\"][\"brand:wikidata\"=\"Q3488360\"][\"name\"=\"Soci\u00e9t\u00e9 g\u00e9n\u00e9rale C\u00f4te d'Ivoire\"][\"name:fr\"=\"Soci\u00e9t\u00e9 g\u00e9n\u00e9rale C\u00f4te d'Ivoire\"][\"old_name\"=\"SGBCI\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -33302,7 +33302,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Soci\u00e9t\u00e9 Marseillaise de Cr\u00e9dit",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Soci\u00e9t\u00e9 Marseillaise de Cr\u00e9dit\"][\"brand:wikidata\"=\"Q3488479\"][\"name\"=\"Soci\u00e9t\u00e9 Marseillaise de Cr\u00e9dit\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -33338,7 +33338,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "South Indian Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"South Indian Bank\"][\"brand:wikidata\"=\"Q2044973\"][\"name\"=\"South Indian Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/SIB_from_entrance_gate.JPG",
@@ -33374,7 +33374,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "South State Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"South State Bank\"][\"brand:wikidata\"=\"Q55633597\"][\"name\"=\"South State Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -33410,7 +33410,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Southern Bank (Midwest USA)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Southern Bank\"][\"brand:wikidata\"=\"Q130551561\"][\"name\"=\"Southern Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -33446,7 +33446,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Southern Bank (North Carolina/Virginia)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Southern Bank\"][\"brand:wikidata\"=\"Q7569660\"][\"name\"=\"Southern Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -33482,7 +33482,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Sparda-Bank (Deutschland)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Sparda-Bank\"][\"brand:wikidata\"=\"Q2307136\"][\"name\"=\"Sparda-Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Sparda_Bank_2003_logo.svg",
@@ -33518,7 +33518,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Sparda-Bank (\u00d6sterreich)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Sparda-Bank\"][\"brand:wikidata\"=\"Q2307139\"][\"name\"=\"Sparda-Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Sparda-Bank_Linz_logo.svg",
@@ -33554,7 +33554,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Sparda-Bank Baden-W\u00fcrttemberg",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Sparda-Bank Baden-W\u00fcrttemberg\"][\"brand:wikidata\"=\"Q1637412\"][\"name\"=\"Sparda-Bank Baden-W\u00fcrttemberg\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Sparda_Bank_2003_logo.svg",
@@ -33590,7 +33590,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Sparda-Bank Berlin",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Sparda-Bank Berlin\"][\"brand:wikidata\"=\"Q1656189\"][\"name\"=\"Sparda-Bank Berlin\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Sparda-berlin-logo.svg",
@@ -33626,7 +33626,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Sparda-Bank Hamburg",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Sparda-Bank Hamburg\"][\"brand:wikidata\"=\"Q1231375\"][\"name\"=\"Sparda-Bank Hamburg\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Sparda_Bank_2003_logo.svg",
@@ -33662,7 +33662,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Sparda-Bank Hessen",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Sparda-Bank Hessen\"][\"brand:wikidata\"=\"Q2307146\"][\"name\"=\"Sparda-Bank Hessen\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/SbhLogo_www.gif",
@@ -33698,7 +33698,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Sparda-Bank S\u00fcdwest",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Sparda-Bank S\u00fcdwest\"][\"brand:wikidata\"=\"Q2307157\"][\"name\"=\"Sparda-Bank S\u00fcdwest\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Sparda_Bank_2003_logo.svg",
@@ -33734,7 +33734,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Sparkasse - Cassa di Risparmio",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Sparkasse - Cassa di Risparmio\"][\"brand:wikidata\"=\"Q3661920\"][\"name\"=\"Sparkasse - Cassa di Risparmio\"][\"name:de\"=\"Sparkasse\"][\"name:it\"=\"Cassa di Risparmio\"][\"official_name\"=\"S\u00fcdtiroler Sparkasse \u2013 Cassa di Risparmio di Bolzano\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Sparkassa_Bozen_fassade.JPG",
@@ -33770,7 +33770,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Sparkasse (\u00d6sterreich)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Sparkasse\"][\"brand:wikidata\"=\"Q2307785\"][\"name\"=\"Sparkasse\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/ErsteBank_Sparkasse_Logo.svg",
@@ -33806,7 +33806,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Sparkassen",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Sparkassen\"][\"brand:wikidata\"=\"Q1555572\"][\"name\"=\"Sparkassen\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Steierm\u00e4rkische_Sparkasse.svg",
@@ -33842,7 +33842,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "St. Galler Kantonalbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"St. Galler Kantonalbank\"][\"brand:wikidata\"=\"Q2316809\"][\"name\"=\"St. Galler Kantonalbank\"][\"short_name\"=\"SGKB\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_der_St._Galler_Kantonalbank.svg",
@@ -33878,7 +33878,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "St.George",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"St.George\"][\"brand:wikidata\"=\"Q1606050\"][\"name\"=\"St.George\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Kogarah_St_George_Bank.JPG",
@@ -33914,7 +33914,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Stanbic Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Stanbic Bank\"][\"brand:wikidata\"=\"Q7597999\"][\"name\"=\"Stanbic Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -33950,7 +33950,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Stanbic Bank (Ghana)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Standard Bank\"][\"brand:wikidata\"=\"Q1576610\"][\"name\"=\"Stanbic Bank\"][\"operator\"=\"Stanbic Bank Ghana Limited\"][\"operator:type\"=\"public\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Standardbank.jpg",
@@ -33986,7 +33986,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Standard Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Standard Bank\"][\"brand:wikidata\"=\"Q1576610\"][\"name\"=\"Standard Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Standardbank.jpg",
@@ -34022,7 +34022,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Standard Chartered",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Standard Chartered\"][\"brand:wikidata\"=\"Q548278\"][\"name\"=\"Standard Chartered\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Standard_Chartered_(2021).svg",
@@ -34058,7 +34058,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Standard Chartered (Ghana)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Standard Chartered\"][\"brand:wikidata\"=\"Q548278\"][\"name\"=\"Standard Chartered\"][\"operator\"=\"Standard Chartered Ghana\"][\"operator:type\"=\"public\"][\"operator:wikidata\"=\"Q7598195\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Standard_Chartered_(2021).svg",
@@ -34094,7 +34094,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "State Bank of India (California)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"State Bank of India (California)\"][\"brand:wikidata\"=\"Q27920062\"][\"name\"=\"State Bank of India (California)\"][\"short_name\"=\"SBIC\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -34130,7 +34130,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "State Bank of India (Global)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"State Bank of India\"][\"brand:wikidata\"=\"Q1340361\"][\"name\"=\"State Bank of India\"][\"short_name\"=\"SBI\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/State_Bank_of_India.svg",
@@ -34166,7 +34166,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "State Employees Credit Union (Maryland)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"State Employees Credit Union\"][\"brand:wikidata\"=\"Q100386180\"][\"name\"=\"State Employees Credit Union\"][\"short_name\"=\"SECU\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -34202,7 +34202,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "State Employees Credit Union (New Mexico)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"State Employees Credit Union\"][\"brand:wikidata\"=\"Q100272713\"][\"name\"=\"State Employees Credit Union\"][\"short_name\"=\"State ECU\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -34238,7 +34238,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "State Employees Credit Union (North Carolina)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"State Employees Credit Union\"][\"brand:wikidata\"=\"Q7603196\"][\"name\"=\"State Employees Credit Union\"][\"short_name\"=\"SECU\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/State_Employees_Credit_Union,_Raleigh,_North_Carolina.jpg",
@@ -34274,7 +34274,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Summit Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Summit Bank\"][\"brand:wikidata\"=\"Q7637775\"][\"name\"=\"Summit Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Summit_Bank_Karachi.jpg",
@@ -34310,7 +34310,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Summit Credit Union (Wisconsin)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Summit Credit Union\"][\"brand:wikidata\"=\"Q7637799\"][\"name\"=\"Summit Credit Union\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -34346,7 +34346,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Suncoast Credit Union",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Suncoast Credit Union\"][\"brand:wikidata\"=\"Q7639057\"][\"name\"=\"Suncoast Credit Union\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -34382,7 +34382,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Suncorp",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Suncorp\"][\"brand:wikidata\"=\"Q24189567\"][\"name\"=\"Suncorp\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -34418,7 +34418,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "SunTrust",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"SunTrust\"][\"brand:wikidata\"=\"Q181507\"][\"name\"=\"SunTrust\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/SunTrust_Banks_logo.svg",
@@ -34454,7 +34454,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Supervielle",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Supervielle\"][\"brand:wikidata\"=\"Q5718035\"][\"name\"=\"Supervielle\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Supervielle_logo14.png",
@@ -34490,7 +34490,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Swedbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Swedbank\"][\"brand:wikidata\"=\"Q1145493\"][\"name\"=\"Swedbank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Cirkus\u00e4ngen_6_September_2014_05.jpg",
@@ -34526,7 +34526,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Sydbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Sydbank\"][\"brand:wikidata\"=\"Q825159\"][\"name\"=\"Sydbank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Sydbank.svg",
@@ -34562,7 +34562,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Syndicate Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Syndicate Bank\"][\"brand:wikidata\"=\"Q2004088\"][\"name\"=\"Syndicate Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -34598,7 +34598,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Synovus",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Synovus\"][\"brand:wikidata\"=\"Q3508889\"][\"name\"=\"Synovus\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Synovus_logo.png",
@@ -34634,7 +34634,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Takar\u00e9kbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Takar\u00e9kbank\"][\"brand:wikidata\"=\"Q30324674\"][\"name\"=\"Takar\u00e9kbank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -34670,7 +34670,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Tamil Nadu Grama Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Tamil Nadu Grama Bank\"][\"brand:en\"=\"Tamil Nadu Grama Bank\"][\"brand:ta\"=\"\u0ba4\u0bae\u0bbf\u0bb4\u0bcd\u0ba8\u0bbe\u0b9f\u0bc1 \u0b95\u0bbf\u0bb0\u0bbe\u0bae \u0bb5\u0b99\u0bcd\u0b95\u0bbf\"][\"brand:wikidata\"=\"Q108166718\"][\"name\"=\"Tamil Nadu Grama Bank\"][\"name:en\"=\"Tamil Nadu Grama Bank\"][\"name:ta\"=\"\u0ba4\u0bae\u0bbf\u0bb4\u0bcd\u0ba8\u0bbe\u0b9f\u0bc1 \u0b95\u0bbf\u0bb0\u0bbe\u0bae \u0bb5\u0b99\u0bcd\u0b95\u0bbf\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -34706,7 +34706,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Tamilnad Mercantile Bank Limited",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Tamilnad Mercantile Bank Limited\"][\"brand:wikidata\"=\"Q2044991\"][\"name\"=\"Tamilnad Mercantile Bank Limited\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/TMB_SVG_Logo.svg",
@@ -34742,7 +34742,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Tangerine",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Tangerine\"][\"brand:wikidata\"=\"Q15238797\"][\"name\"=\"Tangerine\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Tangerine_Bank_logo.svg",
@@ -34778,7 +34778,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Targobank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Targobank\"][\"brand:wikidata\"=\"Q1455437\"][\"name\"=\"Targobank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Targobank_logo.svg",
@@ -34814,7 +34814,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Tatra banka",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Tatra banka\"][\"brand:wikidata\"=\"Q1718069\"][\"name\"=\"Tatra banka\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Tatra_banka_logo.svg",
@@ -34850,7 +34850,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Taytay sa Kauswagan",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Taytay sa Kauswagan\"][\"brand:wikidata\"=\"Q72361196\"][\"name\"=\"Taytay sa Kauswagan\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -34886,7 +34886,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "TBI Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"TBI Bank\"][\"brand:wikidata\"=\"Q30632901\"][\"name\"=\"TBI Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -34922,7 +34922,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "TBI Money",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"TBI Money\"][\"name\"=\"TBI Money\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -34958,7 +34958,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "TD Bank (Canada)",
     query: "(nwr[\"alt_name\"=\"TD Canada Trust\"][\"amenity\"=\"bank\"][\"brand\"=\"TD\"][\"brand:wikidata\"=\"Q1080670\"][\"name\"=\"TD\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Toronto-Dominion_Bank_logo.svg",
@@ -34994,7 +34994,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "TD Bank (USA)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"TD Bank\"][\"brand:wikidata\"=\"Q7669891\"][\"name\"=\"TD Bank\"][\"short_name\"=\"TD\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/TD_Bank.svg",
@@ -35030,7 +35030,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "TEB",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"TEB\"][\"brand:wikidata\"=\"Q7862447\"][\"name\"=\"TEB\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -35066,7 +35066,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Techcombank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Techcombank\"][\"brand:wikidata\"=\"Q10541776\"][\"name\"=\"Techcombank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Techcombank_logo.png",
@@ -35102,7 +35102,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Tesoro",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Tesoro\"][\"brand:wikidata\"=\"Q5718196\"][\"name\"=\"Tesoro\"][\"official_name\"=\"Banco del Tesoro\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -35138,7 +35138,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Texim Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Texim Bank\"][\"brand:wikidata\"=\"Q126365110\"][\"name\"=\"Texim Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -35174,7 +35174,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "The Co-operative Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"The Co-operative Bank\"][\"brand:wikidata\"=\"Q3520318\"][\"name\"=\"The Co-operative Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/The_co-operative_bank_logo.svg",
@@ -35210,7 +35210,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "The Cumberland",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"The Cumberland\"][\"brand:wikidata\"=\"Q5193845\"][\"name\"=\"The Cumberland\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -35246,7 +35246,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "The Nottingham",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"The Nottingham\"][\"brand:wikidata\"=\"Q7063598\"][\"name\"=\"The Nottingham\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Nottingham_Building_Society,_Upper_Parliament_Street.jpg",
@@ -35282,7 +35282,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "The United Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"The United Bank\"][\"brand:ar\"=\"\u0627\u0644\u0645\u0635\u0631\u0641 \u0627\u0644\u0645\u062a\u062d\u062f (\u0645\u0635\u0631)\"][\"brand:en\"=\"The United Bank\"][\"brand:wikidata\"=\"Q12193242\"][\"name\"=\"The United Bank\"][\"name:ar\"=\"\u0627\u0644\u0645\u0635\u0631\u0641 \u0627\u0644\u0645\u062a\u062d\u062f (\u0645\u0635\u0631)\"][\"name:en\"=\"The United Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/The_United_Bank_of_Egypt.jpg",
@@ -35318,7 +35318,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Thurgauer Kantonalbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Thurgauer Kantonalbank\"][\"brand:wikidata\"=\"Q2430020\"][\"name\"=\"Thurgauer Kantonalbank\"][\"short_name\"=\"TKB\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_der_Thurgauer_Kantonalbank.svg",
@@ -35354,7 +35354,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Tompkins Community Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Tompkins Community Bank\"][\"brand:wikidata\"=\"Q127877070\"][\"name\"=\"Tompkins Community Bank\"][\"short_name\"=\"Tompkins\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -35390,7 +35390,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Tripura Gramin Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Tripura Gramin Bank\"][\"brand:bn\"=\"\u09a4\u09cd\u09b0\u09bf\u09aa\u09c1\u09b0\u09be \u0997\u09cd\u09b0\u09be\u09ae\u09c0\u09a3 \u09ac\u09cd\u09af\u09be\u0999\u09cd\u0995\"][\"brand:en\"=\"Tripura Gramin Bank\"][\"brand:hi\"=\"\u0924\u094d\u0930\u093f\u092a\u0941\u0930\u093e \u0917\u094d\u0930\u093e\u092e\u0940\u0923 \u092c\u0948\u0902\u0915\"][\"brand:wikidata\"=\"Q18354573\"][\"name\"=\"Tripura Gramin Bank\"][\"name:bn\"=\"\u09a4\u09cd\u09b0\u09bf\u09aa\u09c1\u09b0\u09be \u0997\u09cd\u09b0\u09be\u09ae\u09c0\u09a3 \u09ac\u09cd\u09af\u09be\u0999\u09cd\u0995\"][\"name:en\"=\"Tripura Gramin Bank\"][\"name:hi\"=\"\u0924\u094d\u0930\u093f\u092a\u0941\u0930\u093e \u0917\u094d\u0930\u093e\u092e\u0940\u0923 \u092c\u0948\u0902\u0915\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -35426,7 +35426,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Truist",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Truist\"][\"brand:wikidata\"=\"Q795486\"][\"name\"=\"Truist\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Truist_Financial_logo.svg",
@@ -35462,7 +35462,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "TSB (New Zealand)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"TSB\"][\"brand:wikidata\"=\"Q7671559\"][\"name\"=\"TSB\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -35498,7 +35498,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "TSB (UK)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"TSB\"][\"brand:wikidata\"=\"Q7671560\"][\"name\"=\"TSB\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/TSB_Newcastle.jpg",
@@ -35534,7 +35534,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "T\u00fcrk Bankas\u0131",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"T\u00fcrk Bankas\u0131\"][\"brand:wikidata\"=\"Q31188692\"][\"name\"=\"T\u00fcrk Bankas\u0131\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -35570,7 +35570,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "T\u00fcrkiye Finans",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"T\u00fcrkiye Finans\"][\"brand:wikidata\"=\"Q6073140\"][\"name\"=\"T\u00fcrkiye Finans\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -35606,7 +35606,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "T\u00fcrkiye \u0130\u015f Bankas\u0131",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"T\u00fcrkiye \u0130\u015f Bankas\u0131\"][\"brand:wikidata\"=\"Q909613\"][\"name\"=\"T\u00fcrkiye \u0130\u015f Bankas\u0131\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/T\u00fcrkiye_\u0130\u015f_Bankas\u0131_logo.svg",
@@ -35642,7 +35642,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "U.S. Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"U.S. Bank\"][\"brand:wikidata\"=\"Q739084\"][\"name\"=\"U.S. Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/U.S._Bancorp_logo.svg",
@@ -35678,7 +35678,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "UBA",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"UBA\"][\"brand:wikidata\"=\"Q513457\"][\"name\"=\"UBA\"][\"official_name\"=\"United Bank for Africa\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Unitedbank1.jpg",
@@ -35714,7 +35714,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "UBS",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"UBS\"][\"brand:wikidata\"=\"Q193199\"][\"name\"=\"UBS\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/UBS_Logo.png",
@@ -35750,7 +35750,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "UCO Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"UCO Bank\"][\"brand:wikidata\"=\"Q2005310\"][\"name\"=\"UCO Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/UCO_Bank_20180823_144517.jpg",
@@ -35786,7 +35786,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "UCPB Savings Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"UCPB Savings Bank\"][\"brand:wikidata\"=\"Q112161529\"][\"name\"=\"UCPB Savings Bank\"][\"short_name\"=\"UCPB\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -35822,7 +35822,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "UGB",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"UGB\"][\"brand:en\"=\"UGB\"][\"brand:uk\"=\"\u0423\u043a\u0440\u0433\u0430\u0437\u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q4470692\"][\"name\"=\"UGB\"][\"name:en\"=\"UGB\"][\"name:uk\"=\"\u0423\u043a\u0440\u0433\u0430\u0437\u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/UGB_logo.svg",
@@ -35858,7 +35858,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "UIB",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"UIB\"][\"brand:wikidata\"=\"Q3550305\"][\"name\"=\"UIB\"][\"name:ar\"=\"\u0627\u0644\u0627\u062a\u062d\u0627\u062f \u0627\u0644\u062f\u0648\u0644\u064a \u0644\u0644\u0628\u0646\u0648\u0643\"][\"name:en\"=\"UIB\"][\"official_name\"=\"Union internationale de banques\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -35894,7 +35894,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Ujjivan Small Finance Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Ujjivan Small Finance Bank\"][\"brand:wikidata\"=\"Q42529272\"][\"name\"=\"Ujjivan Small Finance Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -35930,7 +35930,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "UkrSibbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"UkrSibbank\"][\"brand:en\"=\"UkrSibbank\"][\"brand:uk\"=\"\u0423\u043a\u0440\u0421\u0438\u0431\u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q1976290\"][\"name\"=\"UkrSibbank\"][\"name:en\"=\"UkrSibbank\"][\"name:uk\"=\"\u0423\u043a\u0440\u0421\u0438\u0431\u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Ukrsibbank_logo.svg",
@@ -35966,7 +35966,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Ulster Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Ulster Bank\"][\"brand:wikidata\"=\"Q2613366\"][\"name\"=\"Ulster Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Ulsterbank_logo.gif",
@@ -36002,7 +36002,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "UMB Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"UMB Bank\"][\"brand:wikidata\"=\"Q7865088\"][\"name\"=\"UMB Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/UMB_Logo.jpg",
@@ -36038,7 +36038,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Umpqua Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Umpqua Bank\"][\"brand:wikidata\"=\"Q7881772\"][\"name\"=\"Umpqua Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -36074,7 +36074,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Unex Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Unex Bank\"][\"brand:en\"=\"Unex Bank\"][\"brand:uk\"=\"\u042e\u043d\u0435\u043a\u0441 \u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q97305672\"][\"name\"=\"Unex Bank\"][\"name:en\"=\"Unex Bank\"][\"name:uk\"=\"\u042e\u043d\u0435\u043a\u0441 \u0411\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Unex_Bank_Ukraine.png",
@@ -36110,7 +36110,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "UNI",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"UNI\"][\"brand:wikidata\"=\"Q2933348\"][\"name\"=\"UNI\"][\"official_name\"=\"UNI Coop\u00e9ration financi\u00e8re\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/UNI_Financial_Cooperation.svg",
@@ -36146,7 +36146,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Unibank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0545\u0578\u0582\u0576\u056b\u0562\u0561\u0576\u056f\"][\"brand:en\"=\"Unibank\"][\"brand:hy\"=\"\u0545\u0578\u0582\u0576\u056b\u0562\u0561\u0576\u056f\"][\"brand:ru\"=\"\u042e\u043d\u0438\u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q116033349\"][\"name\"=\"\u0545\u0578\u0582\u0576\u056b\u0562\u0561\u0576\u056f\"][\"name:en\"=\"Unibank\"][\"name:hy\"=\"\u0545\u0578\u0582\u0576\u056b\u0562\u0561\u0576\u056f\"][\"name:ru\"=\"\u042e\u043d\u0438\u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -36182,7 +36182,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Unicaja Banco",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Unicaja Banco\"][\"brand:wikidata\"=\"Q20908850\"][\"name\"=\"Unicaja Banco\"][\"short_name\"=\"Unicaja\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Edificio_Unicaja.jpg",
@@ -36218,7 +36218,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Unicred",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Unicred\"][\"brand:wikidata\"=\"Q10387649\"][\"name\"=\"Unicred\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -36254,7 +36254,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "UniCredit Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"UniCredit Bank\"][\"brand:wikidata\"=\"Q45568\"][\"name\"=\"UniCredit Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Unicredit_logo.svg",
@@ -36290,7 +36290,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "UniCredit Bulbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"UniCredit Bulbank\"][\"brand:wikidata\"=\"Q7884635\"][\"name\"=\"UniCredit Bulbank\"][\"name:bg\"=\"\u0423\u043d\u0438\u041a\u0440\u0435\u0434\u0438\u0442 \u0411\u0443\u043b\u0431\u0430\u043d\u043a\"][\"name:en\"=\"UniCredit Bulbank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Unicreditlogobg.png",
@@ -36326,7 +36326,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Union Bank (USA)",
     query: "(nwr[\"alt_name\"=\"UnionBank\"][\"amenity\"=\"bank\"][\"brand\"=\"Union Bank\"][\"brand:wikidata\"=\"Q1442804\"][\"name\"=\"Union Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/UnionBank_logo.svg",
@@ -36362,7 +36362,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Union Bank of India",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Union Bank of India\"][\"brand:wikidata\"=\"Q2004078\"][\"name\"=\"Union Bank of India\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Union_Bank_of_India_Logo.svg",
@@ -36398,7 +36398,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Union Savings Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Union Savings Bank\"][\"brand:wikidata\"=\"Q69206498\"][\"name\"=\"Union Savings Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -36434,7 +36434,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "UnionBank (Philippines)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"UnionBank\"][\"brand:wikidata\"=\"Q7885403\"][\"name\"=\"UnionBank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/UnionBank_PH_logo.svg",
@@ -36470,7 +36470,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "United Bank (Connecticut)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"United Bank\"][\"brand:wikidata\"=\"Q16959074\"][\"name\"=\"United Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/United_Bank_(Connecticut)_logo.png",
@@ -36506,7 +36506,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "United Bank (Mid-Atlantic USA)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"United Bank\"][\"brand:wikidata\"=\"Q16920636\"][\"name\"=\"United Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/United_Bank_(West_Virginia)_logo.png",
@@ -36542,7 +36542,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "United Bank of India",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"United Bank of India\"][\"brand:wikidata\"=\"Q2003237\"][\"name\"=\"United Bank of India\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -36578,7 +36578,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "United Community Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"United Community Bank\"][\"brand:wikidata\"=\"Q7887635\"][\"name\"=\"United Community Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -36614,7 +36614,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "United Federal Credit Union",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"United Federal Credit Union\"][\"brand:wikidata\"=\"Q7887758\"][\"name\"=\"United Federal Credit Union\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -36650,7 +36650,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Unitus",
     query: "(nwr[\"alt_name\"=\"Unitus Community Credit Union\"][\"amenity\"=\"bank\"][\"brand\"=\"Unitus\"][\"brand:wikidata\"=\"Q124039542\"][\"name\"=\"Unitus\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -36686,7 +36686,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Universal Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Universal Bank\"][\"brand:en\"=\"Universal Bank\"][\"brand:uk\"=\"\u0423\u043d\u0456\u0432\u0435\u0440\u0441\u0430\u043b \u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q12164628\"][\"name\"=\"Universal Bank\"][\"name:en\"=\"Universal Bank\"][\"name:uk\"=\"\u0423\u043d\u0456\u0432\u0435\u0440\u0441\u0430\u043b \u0411\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Universal_Bank_logo.svg",
@@ -36722,7 +36722,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Universal Merchant Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Universal Merchant Bank\"][\"brand:wikidata\"=\"Q19604603\"][\"name\"=\"Universal Merchant Bank\"][\"operator\"=\"Universal Merchant Bank Limited\"][\"operator:type\"=\"private\"][\"operator:wikidata\"=\"Q19604603\"][\"short_name\"=\"UMB\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -36758,7 +36758,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "University Federal Credit Union",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"University Federal Credit Union\"][\"brand:wikidata\"=\"Q129523006\"][\"name\"=\"University Federal Credit Union\"][\"short_name\"=\"UFCU\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -36794,7 +36794,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "UOB",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"UOB\"][\"brand:en\"=\"UOB\"][\"brand:wikidata\"=\"Q2064074\"][\"brand:zh\"=\"\u5927\u534e\u94f6\u884c\"][\"name\"=\"UOB\"][\"name:en\"=\"UOB\"][\"name:zh\"=\"\u5927\u534e\u94f6\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/UOB_Logo_(2022).svg",
@@ -36830,7 +36830,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Urner Kantonalbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Urner Kantonalbank\"][\"brand:wikidata\"=\"Q17051583\"][\"name\"=\"Urner Kantonalbank\"][\"short_name\"=\"UKB\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_der_Urner_Kantonalbank.svg",
@@ -36866,7 +36866,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "USAA",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"USAA\"][\"brand:wikidata\"=\"Q7865722\"][\"name\"=\"USAA\"][\"official_name\"=\"United Services Automobile Association\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/USAA_Office_in_Colorado_Springs_by_David_Shankbone.jpg",
@@ -36902,7 +36902,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Uttarakhand Gramin Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Uttarakhand Gramin Bank\"][\"brand:wikidata\"=\"Q29467293\"][\"name\"=\"Uttarakhand Gramin Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/UGB.webp",
@@ -36938,7 +36938,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "UW Credit Union",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"UW Credit Union\"][\"brand:wikidata\"=\"Q7876156\"][\"name\"=\"UW Credit Union\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/UWCU_logo.svg",
@@ -36974,7 +36974,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Vak\u0131f Kat\u0131l\u0131m",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Vak\u0131f Kat\u0131l\u0131m\"][\"brand:wikidata\"=\"Q31188912\"][\"name\"=\"Vak\u0131f Kat\u0131l\u0131m\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Vak\u0131f_Kat\u0131l\u0131m_Logo.png",
@@ -37010,7 +37010,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Vak\u0131fbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Vak\u0131fbank\"][\"brand:wikidata\"=\"Q1148521\"][\"name\"=\"Vak\u0131fbank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Vak\u0131fbank_logo.svg",
@@ -37046,7 +37046,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Valiant",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Valiant\"][\"brand:wikidata\"=\"Q2509061\"][\"name\"=\"Valiant\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Valiant_Logo_Neu.jpg",
@@ -37082,7 +37082,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Valley Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Valley Bank\"][\"brand:wikidata\"=\"Q7912152\"][\"name\"=\"Valley Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -37118,7 +37118,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Vancity",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Vancity\"][\"brand:wikidata\"=\"Q7914085\"][\"name\"=\"Vancity\"][\"official_name\"=\"Vancouver City Savings Credit Union\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo-vancity.svg",
@@ -37154,7 +37154,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "VeloBank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"VeloBank\"][\"brand:wikidata\"=\"Q124312517\"][\"name\"=\"VeloBank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_VeloBank.png",
@@ -37190,7 +37190,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Victoriabank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Victoriabank\"][\"brand:wikidata\"=\"Q4052675\"][\"name\"=\"Victoriabank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -37226,7 +37226,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Vietcombank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Vietcombank\"][\"brand:wikidata\"=\"Q6122995\"][\"name\"=\"Vietcombank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Vietcombank_logo_fixed.svg",
@@ -37262,7 +37262,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "VietinBank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"VietinBank\"][\"brand:wikidata\"=\"Q7928459\"][\"name\"=\"VietinBank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Vietinbank_Da_Lat.JPG",
@@ -37298,7 +37298,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Virgin Money",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Virgin Money\"][\"brand:wikidata\"=\"Q2527746\"][\"name\"=\"Virgin Money\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Virgin_Money_Giving_logo.png",
@@ -37334,7 +37334,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "ViviBanca",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"ViviBanca\"][\"brand:wikidata\"=\"Q125266757\"][\"name\"=\"ViviBanca\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -37370,7 +37370,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Volksbank (Italia)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Volksbank\"][\"brand:wikidata\"=\"Q3633728\"][\"name\"=\"Volksbank\"][\"official_name\"=\"S\u00fcdtiroler Volksbank - Banca Popolare dell'Alto Adige\"][\"official_name:de\"=\"S\u00fcdtiroler Volksbank\"][\"official_name:it\"=\"Banca Popolare dell'Alto Adige\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Volksbank_marchio_verticale_colore_rgb.jpg",
@@ -37406,7 +37406,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Volksbank (\u00d6sterreich)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Volksbank\"][\"brand:wikidata\"=\"Q695110\"][\"name\"=\"Volksbank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Volksbank_Logo.svg",
@@ -37442,7 +37442,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Volksbank K\u00f6ln Bonn eG",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Volksbank K\u00f6ln Bonn eG\"][\"brand:wikidata\"=\"Q41680844\"][\"name\"=\"Volksbank K\u00f6ln Bonn eG\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -37478,7 +37478,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "V\u0161eobecn\u00e1 \u00faverov\u00e1 banka",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"V\u0161eobecn\u00e1 \u00faverov\u00e1 banka\"][\"brand:wikidata\"=\"Q12778981\"][\"name\"=\"V\u0161eobecn\u00e1 \u00faverov\u00e1 banka\"][\"short_name\"=\"VUB\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/VUB.png",
@@ -37514,7 +37514,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "VTB Armenia",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u054e\u054f\u0532\"][\"brand:en\"=\"VTB\"][\"brand:hy\"=\"\u054e\u054f\u0532\"][\"brand:ru\"=\"\u0412\u0422\u0411\"][\"brand:wikidata\"=\"Q85983660\"][\"name\"=\"\u054e\u054f\u0532\"][\"name:en\"=\"VTB\"][\"name:hy\"=\"\u054e\u054f\u0532\"][\"name:ru\"=\"\u0412\u0422\u0411\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banko_VTB_en_Erevano_01.jpg",
@@ -37550,7 +37550,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "WaFd Bank",
     query: "(nwr[\"alt_name\"=\"Washington Federal\"][\"amenity\"=\"bank\"][\"brand\"=\"WaFd Bank\"][\"brand:wikidata\"=\"Q7971859\"][\"name\"=\"WaFd Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Washington_Federal_Logo.png",
@@ -37586,7 +37586,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "WebsterBank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"WebsterBank\"][\"brand:wikidata\"=\"Q7978891\"][\"name\"=\"WebsterBank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Webster_Bank_Logo.svg",
@@ -37622,7 +37622,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Wells Fargo",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Wells Fargo\"][\"brand:wikidata\"=\"Q744149\"][\"name\"=\"Wells Fargo\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Wells_Fargo_Bank.svg",
@@ -37658,7 +37658,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "WesBanco",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"WesBanco\"][\"brand:wikidata\"=\"Q7983629\"][\"name\"=\"WesBanco\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/WesBancoLogo-2016.svg",
@@ -37694,7 +37694,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "WESTconsin Credit Union",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"WESTconsin Credit Union\"][\"brand:wikidata\"=\"Q17147752\"][\"name\"=\"WESTconsin Credit Union\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -37730,7 +37730,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Westpac",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Westpac\"][\"brand:wikidata\"=\"Q2031726\"][\"name\"=\"Westpac\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Westpac_logo.svg",
@@ -37766,7 +37766,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Wings Financial Credit Union",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Wings Financial Credit Union\"][\"brand:wikidata\"=\"Q8025267\"][\"name\"=\"Wings Financial Credit Union\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -37802,7 +37802,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Woodforest National Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Woodforest National Bank\"][\"brand:wikidata\"=\"Q7224975\"][\"name\"=\"Woodforest National Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -37838,7 +37838,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "WSFS Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"WSFS Bank\"][\"brand:wikidata\"=\"Q7955609\"][\"name\"=\"WSFS Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -37874,7 +37874,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Xalq banki",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Xalq banki\"][\"brand:en\"=\"Xalq bank\"][\"brand:uz\"=\"Xalq banki\"][\"brand:wikidata\"=\"Q25524065\"][\"name\"=\"Xalq banki\"][\"name:en\"=\"Xalq bank\"][\"name:uz\"=\"Xalq banki\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -37910,7 +37910,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Yap\u0131 Kredi",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Yap\u0131 Kredi\"][\"brand:wikidata\"=\"Q8049138\"][\"name\"=\"Yap\u0131 Kredi\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Yap\u0131_Kredi_Bankas\u0131_Sirkeci_\u015eubesi.JPG",
@@ -37946,7 +37946,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Yes Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Yes Bank\"][\"brand:wikidata\"=\"Q2040394\"][\"name\"=\"Yes Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -37982,7 +37982,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Yettel bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Yettel bank\"][\"brand:wikidata\"=\"Q39022656\"][\"name\"=\"Yettel bank\"][\"name:en\"=\"Yettel bank\"][\"name:sr\"=\"\u0408\u0435\u0442\u0435\u043b \u0431\u0430\u043d\u043a\u0430\"][\"name:sr-Latn\"=\"Jetel banka\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Yettelbank.png",
@@ -38018,7 +38018,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Yorkshire Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Yorkshire Bank\"][\"brand:wikidata\"=\"Q8055678\"][\"name\"=\"Yorkshire Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Yorkshire_Bank.jpg",
@@ -38054,7 +38054,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Yorkshire Building Society",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Yorkshire Building Society\"][\"brand:wikidata\"=\"Q12073381\"][\"name\"=\"Yorkshire Building Society\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Yorkshire_Building_Society,_Briggate,_Leeds_(Taken_by_Flickr_user_29th_January_2012).jpg",
@@ -38090,7 +38090,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Zagreba\u010dka banka",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Zagreba\u010dka banka\"][\"brand:wikidata\"=\"Q140381\"][\"name\"=\"Zagreba\u010dka banka\"][\"short_name\"=\"ZaBa\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Zagreba\u010dka-banka-Logo.svg",
@@ -38126,7 +38126,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Zaman-Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Zaman-Bank\"][\"brand:wikidata\"=\"Q4185641\"][\"name\"=\"Zaman-Bank\"][\"name:en\"=\"Zaman-Bank\"][\"name:kk\"=\"\u0417\u0430\u043c\u0430\u043d-\u0411\u0430\u043d\u043a\"][\"name:ru\"=\"\u0417\u0430\u043c\u0430\u043d-\u0411\u0430\u043d\u043a\"][\"official_name\"=\"Islamic Bank \u201cZaman-Bank\u201d JSC\"][\"official_name:en\"=\"Islamic Bank \u201cZaman-Bank\u201d JSC\"][\"official_name:kk\"=\"\u00ab\u0417\u0430\u043c\u0430\u043d-\u0411\u0430\u043d\u043a \u00ab\u0418\u0441\u043b\u0430\u043c \u0431\u0430\u043d\u043a\u0456\u00bb \u0410\u049a\"][\"official_name:ru\"=\"\u0410\u041e \u00ab\u0418\u0441\u043b\u0430\u043c\u0441\u043a\u0438\u0439 \u0431\u0430\u043d\u043a \u00ab\u0417\u0430\u043c\u0430\u043d-\u0411\u0430\u043d\u043a\u00bb\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -38162,7 +38162,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Zenith Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Zenith Bank\"][\"brand:wikidata\"=\"Q5978240\"][\"name\"=\"Zenith Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Zenith_Bank_Head_Office_Building.jpg",
@@ -38198,7 +38198,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Zions Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Zions Bank\"][\"brand:wikidata\"=\"Q8072576\"][\"name\"=\"Zions Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -38234,7 +38234,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Ziraat Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Ziraat Bank\"][\"brand:wikidata\"=\"Q126365093\"][\"name\"=\"Ziraat Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -38270,7 +38270,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Ziraat Bankas\u0131",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Ziraat Bankas\u0131\"][\"brand:wikidata\"=\"Q696003\"][\"name\"=\"Ziraat Bankas\u0131\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Ziraat_Bankas\u0131_2025_Logo.svg",
@@ -38306,7 +38306,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Ziraat Kat\u0131l\u0131m",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Ziraat Kat\u0131l\u0131m\"][\"brand:wikidata\"=\"Q20476458\"][\"name\"=\"Ziraat Kat\u0131l\u0131m\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Ziraat_Kat\u0131l\u0131m_Bankas\u0131_logo.png",
@@ -38342,7 +38342,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Zuger Kantonalbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Zuger Kantonalbank\"][\"brand:wikidata\"=\"Q228365\"][\"name\"=\"Zuger Kantonalbank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Zuger_Kantonalbank.svg",
@@ -38378,7 +38378,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "Z\u00fcrcher Kantonalbank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Z\u00fcrcher Kantonalbank\"][\"brand:wikidata\"=\"Q248476\"][\"name\"=\"Z\u00fcrcher Kantonalbank\"][\"short_name\"=\"ZKB\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Z\u00fcrcher_Kantonalbank_logo.svg",
@@ -38414,7 +38414,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0395\u03b8\u03bd\u03b9\u03ba\u03ae \u03a4\u03c1\u03ac\u03c0\u03b5\u03b6\u03b1",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0395\u03b8\u03bd\u03b9\u03ba\u03ae \u03a4\u03c1\u03ac\u03c0\u03b5\u03b6\u03b1\"][\"brand:el\"=\"\u0395\u03b8\u03bd\u03b9\u03ba\u03ae \u03a4\u03c1\u03ac\u03c0\u03b5\u03b6\u03b1\"][\"brand:en\"=\"National Bank of Greece\"][\"brand:wikidata\"=\"Q1816028\"][\"name\"=\"\u0395\u03b8\u03bd\u03b9\u03ba\u03ae \u03a4\u03c1\u03ac\u03c0\u03b5\u03b6\u03b1\"][\"name:el\"=\"\u0395\u03b8\u03bd\u03b9\u03ba\u03ae \u03a4\u03c1\u03ac\u03c0\u03b5\u03b6\u03b1\"][\"name:en\"=\"National Bank of Greece\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/\u039c\u03ad\u03b3\u03b1\u03c1\u03bf_\u0393\u03b5\u03c9\u03c1\u03b3\u03af\u03bf\u03c5_\u03a3\u03c4\u03c1\u03ac\u03c4\u03bf\u03c5_-_\u0395\u03b8\u03bd\u03b9\u03ba\u03ae_\u03a4\u03c1\u03ac\u03c0\u03b5\u03b6\u03b1_1249.jpg",
@@ -38450,7 +38450,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u03a4\u03c1\u03ac\u03c0\u03b5\u03b6\u03b1 \u03a0\u03b5\u03b9\u03c1\u03b1\u03b9\u03ce\u03c2",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u03a4\u03c1\u03ac\u03c0\u03b5\u03b6\u03b1 \u03a0\u03b5\u03b9\u03c1\u03b1\u03b9\u03ce\u03c2\"][\"brand:el\"=\"\u03a4\u03c1\u03ac\u03c0\u03b5\u03b6\u03b1 \u03a0\u03b5\u03b9\u03c1\u03b1\u03b9\u03ce\u03c2\"][\"brand:en\"=\"Piraeus Bank\"][\"brand:wikidata\"=\"Q3312\"][\"name\"=\"\u03a4\u03c1\u03ac\u03c0\u03b5\u03b6\u03b1 \u03a0\u03b5\u03b9\u03c1\u03b1\u03b9\u03ce\u03c2\"][\"name:el\"=\"\u03a4\u03c1\u03ac\u03c0\u03b5\u03b6\u03b1 \u03a0\u03b5\u03b9\u03c1\u03b1\u03b9\u03ce\u03c2\"][\"name:en\"=\"Piraeus Bank\"][\"short_name\"=\"\u03a0\u03b5\u03b9\u03c1\u03b1\u03b9\u03ce\u03c2\"][\"short_name:el\"=\"\u03a0\u03b5\u03b9\u03c1\u03b1\u03b9\u03ce\u03c2\"][\"short_name:en\"=\"Piraeus\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Piraeus_Bank_logo.svg",
@@ -38486,7 +38486,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0430\u0300\u0431\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0430\u0300\u0431\u0430\u043d\u043a\"][\"brand:en\"=\"\u00e0bank\"][\"brand:uk\"=\"\u0430\u0300\u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q28705400\"][\"name\"=\"\u0430\u0300\u0431\u0430\u043d\u043a\"][\"name:en\"=\"\u00e0bank\"][\"name:uk\"=\"\u0430\u0300\u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Abank_logo.svg",
@@ -38522,7 +38522,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0410\u0431\u0441\u043e\u043b\u044e\u0442",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0410\u0431\u0441\u043e\u043b\u044e\u0442\"][\"brand:en\"=\"Absolut Bank\"][\"brand:ru\"=\"\u0410\u0431\u0441\u043e\u043b\u044e\u0442\"][\"brand:wikidata\"=\"Q4055122\"][\"name\"=\"\u0410\u0431\u0441\u043e\u043b\u044e\u0442\"][\"name:en\"=\"Absolut Bank\"][\"name:ru\"=\"\u0410\u0431\u0441\u043e\u043b\u044e\u0442\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Absolut_Bank.png",
@@ -38558,7 +38558,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0410\u0431\u0441\u043e\u043b\u044e\u0442\u0431\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0410\u0431\u0441\u043e\u043b\u044e\u0442\u0431\u0430\u043d\u043a\"][\"brand:be\"=\"\u0410\u0431\u0441\u0430\u043b\u044e\u0442\u0431\u0430\u043d\u043a\"][\"brand:en\"=\"Absolutbank\"][\"brand:ru\"=\"\u0410\u0431\u0441\u043e\u043b\u044e\u0442\u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q13028148\"][\"name\"=\"\u0410\u0431\u0441\u043e\u043b\u044e\u0442\u0431\u0430\u043d\u043a\"][\"name:be\"=\"\u0410\u0431\u0441\u0430\u043b\u044e\u0442\u0431\u0430\u043d\u043a\"][\"name:en\"=\"Absolutbank\"][\"name:ru\"=\"\u0410\u0431\u0441\u043e\u043b\u044e\u0442\u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/OptiKurs_logo.svg",
@@ -38594,7 +38594,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0410\u0432\u0430\u043d\u0433\u0430\u0440\u0434",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0410\u0432\u0430\u043d\u0433\u0430\u0440\u0434\"][\"brand:en\"=\"Avangard Bank\"][\"brand:ru\"=\"\u0410\u0432\u0430\u043d\u0433\u0430\u0440\u0434\"][\"brand:wikidata\"=\"Q62122617\"][\"name\"=\"\u0410\u0432\u0430\u043d\u0433\u0430\u0440\u0434\"][\"name:en\"=\"Avangard Bank\"][\"name:ru\"=\"\u0410\u0432\u0430\u043d\u0433\u0430\u0440\u0434\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -38630,7 +38630,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0410\u0437\u0438\u0430\u0442\u0441\u043a\u043e-\u0422\u0438\u0445\u043e\u043e\u043a\u0435\u0430\u043d\u0441\u043a\u0438\u0439 \u0411\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0410\u0437\u0438\u0430\u0442\u0441\u043a\u043e-\u0422\u0438\u0445\u043e\u043e\u043a\u0435\u0430\u043d\u0441\u043a\u0438\u0439 \u0411\u0430\u043d\u043a\"][\"brand:en\"=\"Asian-Pacific Bank\"][\"brand:ru\"=\"\u0410\u0437\u0438\u0430\u0442\u0441\u043a\u043e-\u0422\u0438\u0445\u043e\u043e\u043a\u0435\u0430\u043d\u0441\u043a\u0438\u0439 \u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q4058304\"][\"name\"=\"\u0410\u0437\u0438\u0430\u0442\u0441\u043a\u043e-\u0422\u0438\u0445\u043e\u043e\u043a\u0435\u0430\u043d\u0441\u043a\u0438\u0439 \u0411\u0430\u043d\u043a\"][\"name:en\"=\"Asian-Pacific Bank\"][\"name:ru\"=\"\u0410\u0437\u0438\u0430\u0442\u0441\u043a\u043e-\u0422\u0438\u0445\u043e\u043e\u043a\u0435\u0430\u043d\u0441\u043a\u0438\u0439 \u0411\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -38666,7 +38666,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0410\u043a \u0411\u0430\u0440\u0441 \u0411\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0410\u043a \u0411\u0430\u0440\u0441 \u0411\u0430\u043d\u043a\"][\"brand:en\"=\"Ak Bars Bank\"][\"brand:ru\"=\"\u0410\u043a \u0411\u0430\u0440\u0441 \u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q4059103\"][\"name\"=\"\u0410\u043a \u0411\u0430\u0440\u0441 \u0411\u0430\u043d\u043a\"][\"name:en\"=\"Ak Bars Bank\"][\"name:ru\"=\"\u0410\u043a \u0411\u0430\u0440\u0441 \u0411\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/\u0410\u043a_\u0411\u0430\u0440\u0441_\u0411\u0430\u043d\u043a.svg",
@@ -38702,7 +38702,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0410\u043a\u043e\u0440\u0434\u0431\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0410\u043a\u043e\u0440\u0434\u0431\u0430\u043d\u043a\"][\"brand:en\"=\"Accordbank\"][\"brand:uk\"=\"\u0410\u043a\u043e\u0440\u0434\u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q116871518\"][\"name\"=\"\u0410\u043a\u043e\u0440\u0434\u0431\u0430\u043d\u043a\"][\"name:en\"=\"Accordbank\"][\"name:uk\"=\"\u0410\u043a\u043e\u0440\u0434\u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -38738,7 +38738,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0410\u043b\u044c\u0444\u0430-\u0411\u0430\u043d\u043a (\u0411\u0435\u043b\u0430\u0440\u0443\u0441\u044c)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0410\u043b\u044c\u0444\u0430-\u0411\u0430\u043d\u043a\"][\"brand:be\"=\"\u0410\u043b\u044c\u0444\u0430-\u0411\u0430\u043d\u043a\"][\"brand:en\"=\"Alfa-Bank\"][\"brand:ru\"=\"\u0410\u043b\u044c\u0444\u0430-\u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q3919652\"][\"name\"=\"\u0410\u043b\u044c\u0444\u0430-\u0411\u0430\u043d\u043a\"][\"name:be\"=\"\u0410\u043b\u044c\u0444\u0430-\u0411\u0430\u043d\u043a\"][\"name:en\"=\"Alfa-Bank\"][\"name:ru\"=\"\u0410\u043b\u044c\u0444\u0430-\u0411\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Alfa-Bank.svg",
@@ -38774,7 +38774,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0410\u043b\u044c\u0444\u0430-\u0411\u0430\u043d\u043a (\u0420\u043e\u0441\u0441\u0438\u044f)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0410\u043b\u044c\u0444\u0430-\u0411\u0430\u043d\u043a\"][\"brand:en\"=\"Alfa-Bank\"][\"brand:ru\"=\"\u0410\u043b\u044c\u0444\u0430-\u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q1377835\"][\"name\"=\"\u0410\u043b\u044c\u0444\u0430-\u0411\u0430\u043d\u043a\"][\"name:en\"=\"Alfa-Bank\"][\"name:ru\"=\"\u0410\u043b\u044c\u0444\u0430-\u0411\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Alfa-Bank.svg",
@@ -38810,7 +38810,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0411\u0430\u043a\u0430\u0439 \u0431\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0411\u0430\u043a\u0430\u0439 \u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q4075821\"][\"name\"=\"\u0411\u0430\u043a\u0430\u0439 \u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bakai_Bank_logo.png",
@@ -38846,7 +38846,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0411\u0430\u043d\u043a \u0412\u0422\u0411 (\u0411\u0435\u043b\u0430\u0440\u0443\u0441\u044c)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0411\u0430\u043d\u043a \u0412\u0422\u0411\"][\"brand:be\"=\"\u0411\u0430\u043d\u043a \u0412\u0422\u0411\"][\"brand:en\"=\"VTB Bank\"][\"brand:ru\"=\"\u0411\u0430\u043d\u043a \u0412\u0422\u0411\"][\"brand:wikidata\"=\"Q6703916\"][\"name\"=\"\u0411\u0430\u043d\u043a \u0412\u0422\u0411\"][\"name:be\"=\"\u0411\u0430\u043d\u043a \u0412\u0422\u0411\"][\"name:en\"=\"VTB Bank\"][\"name:ru\"=\"\u0411\u0430\u043d\u043a \u0412\u0422\u0411\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/VTB_Logo_2018.svg",
@@ -38882,7 +38882,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0411\u0430\u043d\u043a \u0414\u0430\u0431\u0440\u0430\u0431\u044b\u0442",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0411\u0430\u043d\u043a \u0414\u0430\u0431\u0440\u0430\u0431\u044b\u0442\"][\"brand:be\"=\"\u0411\u0430\u043d\u043a \u0414\u0430\u0431\u0440\u0430\u0431\u044b\u0442\"][\"brand:en\"=\"Bank Dabrabyt\"][\"brand:ru\"=\"\u0411\u0430\u043d\u043a \u0414\u0430\u0431\u0440\u0430\u0431\u044b\u0442\"][\"brand:wikidata\"=\"Q13028634\"][\"name\"=\"\u0411\u0430\u043d\u043a \u0414\u0430\u0431\u0440\u0430\u0431\u044b\u0442\"][\"name:be\"=\"\u0411\u0430\u043d\u043a \u0414\u0430\u0431\u0440\u0430\u0431\u044b\u0442\"][\"name:en\"=\"Bank Dabrabyt\"][\"name:ru\"=\"\u0411\u0430\u043d\u043a \u0414\u0430\u0431\u0440\u0430\u0431\u044b\u0442\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -38918,7 +38918,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0411\u0430\u043d\u043a \u041a\u043e\u043c\u043f\u0430\u043d\u044c\u043e\u043d",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0411\u0430\u043d\u043a \u041a\u043e\u043c\u043f\u0430\u043d\u044c\u043e\u043d\"][\"name\"=\"\u0411\u0430\u043d\u043a \u041a\u043e\u043c\u043f\u0430\u043d\u044c\u043e\u043d\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -38954,7 +38954,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0411\u0430\u043d\u043a \u041a\u0440\u0435\u0434\u0438\u0442 \u0414\u043d\u0456\u043f\u0440\u043e",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0411\u0430\u043d\u043a \u041a\u0440\u0435\u0434\u0438\u0442 \u0414\u043d\u0456\u043f\u0440\u043e\"][\"brand:en\"=\"Bank Credit Dnipro\"][\"brand:uk\"=\"\u0411\u0430\u043d\u043a \u041a\u0440\u0435\u0434\u0438\u0442 \u0414\u043d\u0456\u043f\u0440\u043e\"][\"brand:wikidata\"=\"Q61374251\"][\"name\"=\"\u0411\u0430\u043d\u043a \u041a\u0440\u0435\u0434\u0438\u0442 \u0414\u043d\u0456\u043f\u0440\u043e\"][\"name:en\"=\"Bank Credit Dnipro\"][\"name:uk\"=\"\u0411\u0430\u043d\u043a \u041a\u0440\u0435\u0434\u0438\u0442 \u0414\u043d\u0456\u043f\u0440\u043e\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -38990,7 +38990,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0411\u0430\u043d\u043a \u041b\u044c\u0432\u0456\u0432",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0411\u0430\u043d\u043a \u041b\u044c\u0432\u0456\u0432\"][\"brand:en\"=\"Bank Lviv\"][\"brand:uk\"=\"\u0411\u0430\u043d\u043a \u041b\u044c\u0432\u0456\u0432\"][\"brand:wikidata\"=\"Q12119076\"][\"name\"=\"\u0411\u0430\u043d\u043a \u041b\u044c\u0432\u0456\u0432\"][\"name:en\"=\"Bank Lviv\"][\"name:uk\"=\"\u0411\u0430\u043d\u043a \u041b\u044c\u0432\u0456\u0432\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/\u041b\u043e\u0433\u043e\u0442\u0438\u043f_\u0411\u0430\u043d\u043a\u0443_\u041b\u044c\u0432\u0456\u0432.jpg",
@@ -39026,7 +39026,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0411\u0430\u043d\u043a \u041f\u0456\u0432\u0434\u0435\u043d\u043d\u0438\u0439",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0411\u0430\u043d\u043a \u041f\u0456\u0432\u0434\u0435\u043d\u043d\u0438\u0439\"][\"brand:en\"=\"Pivdenny Bank\"][\"brand:uk\"=\"\u0411\u0430\u043d\u043a \u041f\u0456\u0432\u0434\u0435\u043d\u043d\u0438\u0439\"][\"brand:wikidata\"=\"Q4362353\"][\"name\"=\"\u0411\u0430\u043d\u043a \u041f\u0456\u0432\u0434\u0435\u043d\u043d\u0438\u0439\"][\"name:en\"=\"Pivdenny Bank\"][\"name:uk\"=\"\u0411\u0430\u043d\u043a \u041f\u0456\u0432\u0434\u0435\u043d\u043d\u0438\u0439\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Bank_Pivdenny.png",
@@ -39062,7 +39062,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0411\u0430\u043d\u043a \u0420\u0435\u0448\u0435\u043d\u0438\u0435",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0411\u0430\u043d\u043a \u0420\u0435\u0448\u0435\u043d\u0438\u0435\"][\"brand:be\"=\"\u0411\u0430\u043d\u043a \u0420\u0430\u0448\u044d\u043d\u043d\u0435\"][\"brand:en\"=\"Reshenie Bank\"][\"brand:ru\"=\"\u0411\u0430\u043d\u043a \u0420\u0435\u0448\u0435\u043d\u0438\u0435\"][\"brand:wikidata\"=\"Q13033027\"][\"name\"=\"\u0411\u0430\u043d\u043a \u0420\u0435\u0448\u0435\u043d\u0438\u0435\"][\"name:be\"=\"\u0411\u0430\u043d\u043a \u0420\u0430\u0448\u044d\u043d\u043d\u0435\"][\"name:en\"=\"Reshenie Bank\"][\"name:ru\"=\"\u0411\u0430\u043d\u043a \u0420\u0435\u0448\u0435\u043d\u0438\u0435\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -39098,7 +39098,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0411\u0430\u043d\u043a \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0411\u0430\u043d\u043a \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433\"][\"brand:en\"=\"Bank of Saint Petersburg\"][\"brand:ru\"=\"\u0411\u0430\u043d\u043a \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433\"][\"brand:wikidata\"=\"Q4407652\"][\"name\"=\"\u0411\u0430\u043d\u043a \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433\"][\"name:en\"=\"Bank of Saint Petersburg\"][\"name:ru\"=\"\u0411\u0430\u043d\u043a \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/\u041f\u043b\u043e\u0449\u0430\u0434\u044c_\u0432\u043e\u0441\u0441\u0442\u0430\u043d\u0438\u044f_\u043d\u043e\u0447\u044c\u044e_\u043e\u0442_\u041c\u043e\u0441\u043a\u043e\u0432\u0441\u043a\u043e\u0433\u043e_\u0432\u043e\u043a\u0437\u0430\u043b\u0430_\u0441_\u041b\u0438\u0433\u043e\u0432\u0441\u043a\u043e\u0433\u043e.jpg",
@@ -39134,7 +39134,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0411\u0430\u043d\u043a\u0430 \u0414\u0421\u041a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0411\u0430\u043d\u043a\u0430 \u0414\u0421\u041a\"][\"brand:bg\"=\"\u0411\u0430\u043d\u043a\u0430 \u0414\u0421\u041a\"][\"brand:en\"=\"DSK Bank\"][\"brand:wikidata\"=\"Q5206146\"][\"name\"=\"\u0411\u0430\u043d\u043a\u0430 \u0414\u0421\u041a\"][\"name:bg\"=\"\u0411\u0430\u043d\u043a\u0430 \u0414\u0421\u041a\"][\"name:en\"=\"DSK Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banka_DSK_logo.jpg",
@@ -39170,7 +39170,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0411\u0435\u043b\u0430\u0433\u0440\u043e\u043f\u0440\u043e\u043c\u0431\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0411\u0435\u043b\u0430\u0433\u0440\u043e\u043f\u0440\u043e\u043c\u0431\u0430\u043d\u043a\"][\"brand:be\"=\"\u0411\u0435\u043b\u0430\u0433\u0440\u0430\u043f\u0440\u0430\u043c\u0431\u0430\u043d\u043a\"][\"brand:en\"=\"Belagroprom Bank\"][\"brand:ru\"=\"\u0411\u0435\u043b\u0430\u0433\u0440\u043e\u043f\u0440\u043e\u043c\u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q1991373\"][\"name\"=\"\u0411\u0435\u043b\u0430\u0433\u0440\u043e\u043f\u0440\u043e\u043c\u0431\u0430\u043d\u043a\"][\"name:be\"=\"\u0411\u0435\u043b\u0430\u0433\u0440\u0430\u043f\u0440\u0430\u043c\u0431\u0430\u043d\u043a\"][\"name:en\"=\"Belagroprom Bank\"][\"name:ru\"=\"\u0411\u0435\u043b\u0430\u0433\u0440\u043e\u043f\u0440\u043e\u043c\u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -39206,7 +39206,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0411\u0435\u043b\u0430\u0440\u0443\u0441\u0431\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0411\u0435\u043b\u0430\u0440\u0443\u0441\u0431\u0430\u043d\u043a\"][\"brand:be\"=\"\u0411\u0435\u043b\u0430\u0440\u0443\u0441\u0431\u0430\u043d\u043a\"][\"brand:en\"=\"Belarusbank\"][\"brand:ru\"=\"\u0411\u0435\u043b\u0430\u0440\u0443\u0441\u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q1997334\"][\"name\"=\"\u0411\u0435\u043b\u0430\u0440\u0443\u0441\u0431\u0430\u043d\u043a\"][\"name:be\"=\"\u0411\u0435\u043b\u0430\u0440\u0443\u0441\u0431\u0430\u043d\u043a\"][\"name:en\"=\"Belarusbank\"][\"name:ru\"=\"\u0411\u0435\u043b\u0430\u0440\u0443\u0441\u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Belarusbank_logo_(be).svg",
@@ -39242,7 +39242,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0411\u0435\u043b\u0412\u042d\u0411",
     query: "(nwr[\"alt_name:ru\"=\"\u0411\u0435\u043b\u0432\u043d\u0435\u0448\u044d\u043a\u043e\u043d\u043e\u043c\u0431\u0430\u043d\u043a\"][\"amenity\"=\"bank\"][\"brand\"=\"\u0411\u0435\u043b\u0412\u042d\u0411\"][\"brand:be\"=\"\u0411\u0435\u043b\u0412\u042d\u0411\"][\"brand:en\"=\"BelVEB\"][\"brand:ru\"=\"\u0411\u0435\u043b\u0412\u042d\u0411\"][\"brand:wikidata\"=\"Q3919664\"][\"name\"=\"\u0411\u0435\u043b\u0412\u042d\u0411\"][\"name:be\"=\"\u0411\u0435\u043b\u0412\u042d\u0411\"][\"name:en\"=\"BelVEB\"][\"name:ru\"=\"\u0411\u0435\u043b\u0412\u042d\u0411\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BelVEB-logo.svg",
@@ -39278,7 +39278,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0411\u0435\u043b\u0433\u0430\u0437\u043f\u0440\u043e\u043c\u0431\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0411\u0435\u043b\u0433\u0430\u0437\u043f\u0440\u043e\u043c\u0431\u0430\u043d\u043a\"][\"brand:be\"=\"\u0411\u0435\u043b\u0433\u0430\u0437\u043f\u0440\u0430\u043c\u0431\u0430\u043d\u043a\"][\"brand:en\"=\"Belgazprombank\"][\"brand:ru\"=\"\u0411\u0435\u043b\u0433\u0430\u0437\u043f\u0440\u043e\u043c\u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q3919670\"][\"name\"=\"\u0411\u0435\u043b\u0433\u0430\u0437\u043f\u0440\u043e\u043c\u0431\u0430\u043d\u043a\"][\"name:be\"=\"\u0411\u0435\u043b\u0433\u0430\u0437\u043f\u0440\u0430\u043c\u0431\u0430\u043d\u043a\"][\"name:en\"=\"Belgazprombank\"][\"name:ru\"=\"\u0411\u0435\u043b\u0433\u0430\u0437\u043f\u0440\u043e\u043c\u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/\u0413\u043b\u0430\u0432\u043d\u044b\u0439_\u043e\u0444\u0438\u0441_\u0411\u0435\u043b\u0433\u0430\u0437\u043f\u0440\u043e\u043c\u0431\u0430\u043d\u043a\u0430.jpg",
@@ -39314,7 +39314,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0411\u0435\u043b\u0438\u043d\u0432\u0435\u0441\u0442\u0431\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0411\u0435\u043b\u0438\u043d\u0432\u0435\u0441\u0442\u0431\u0430\u043d\u043a\"][\"brand:be\"=\"\u0411\u0435\u043b\u0456\u043d\u0432\u0435\u0441\u0442\u0431\u0430\u043d\u043a\"][\"brand:en\"=\"Belinvestbank\"][\"brand:ru\"=\"\u0411\u0435\u043b\u0438\u043d\u0432\u0435\u0441\u0442\u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q4081940\"][\"name\"=\"\u0411\u0435\u043b\u0438\u043d\u0432\u0435\u0441\u0442\u0431\u0430\u043d\u043a\"][\"name:be\"=\"\u0411\u0435\u043b\u0456\u043d\u0432\u0435\u0441\u0442\u0431\u0430\u043d\u043a\"][\"name:en\"=\"Belinvestbank\"][\"name:ru\"=\"\u0411\u0435\u043b\u0438\u043d\u0432\u0435\u0441\u0442\u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -39350,7 +39350,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0411\u0438\u043d\u0431\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0411\u0438\u043d\u0431\u0430\u043d\u043a\"][\"brand:en\"=\"B&N Bank\"][\"brand:ru\"=\"\u0411\u0438\u043d\u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q4086829\"][\"name\"=\"\u0411\u0438\u043d\u0431\u0430\u043d\u043a\"][\"name:en\"=\"B&N Bank\"][\"name:ru\"=\"\u0411\u0438\u043d\u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/B&N_Bank_(Binbank)_2018-04-08.jpg",
@@ -39386,7 +39386,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0411\u041d\u0411-\u0411\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0411\u041d\u0411-\u0411\u0430\u043d\u043a\"][\"brand:be\"=\"\u0411\u041d\u0411-\u0411\u0430\u043d\u043a\"][\"brand:en\"=\"BNB-Bank\"][\"brand:ru\"=\"\u0411\u041d\u0411-\u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q3920002\"][\"name\"=\"\u0411\u041d\u0411-\u0411\u0430\u043d\u043a\"][\"name:be\"=\"\u0411\u041d\u0411-\u0411\u0430\u043d\u043a\"][\"name:en\"=\"BNB-Bank\"][\"name:ru\"=\"\u0411\u041d\u0411-\u0411\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -39422,7 +39422,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0411\u0421\u0411 \u0411\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0411\u0421\u0411 \u0411\u0430\u043d\u043a\"][\"brand:be\"=\"\u0411\u0421\u0411 \u0411\u0430\u043d\u043a\"][\"brand:en\"=\"BSB Bank\"][\"brand:ru\"=\"\u0411\u0421\u0411 \u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q3919666\"][\"name\"=\"\u0411\u0421\u0411 \u0411\u0430\u043d\u043a\"][\"name:be\"=\"\u0411\u0421\u0411 \u0411\u0430\u043d\u043a\"][\"name:en\"=\"BSB Bank\"][\"name:ru\"=\"\u0411\u0421\u0411 \u0411\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/\u0411\u0421\u0411\u0411\u0430\u043d\u043a.png",
@@ -39458,7 +39458,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0411\u0422\u0410 \u0411\u0430\u043d\u043a (\u0411\u0435\u043b\u0430\u0440\u0443\u0441\u044c)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0411\u0422\u0410 \u0411\u0430\u043d\u043a\"][\"brand:be\"=\"\u0411\u0422\u0410 \u0411\u0430\u043d\u043a\"][\"brand:en\"=\"BTA Bank\"][\"brand:ru\"=\"\u0411\u0422\u0410 \u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q13028600\"][\"name\"=\"\u0411\u0422\u0410 \u0411\u0430\u043d\u043a\"][\"name:be\"=\"\u0411\u0422\u0410 \u0411\u0430\u043d\u043a\"][\"name:en\"=\"BTA Bank\"][\"name:ru\"=\"\u0411\u0422\u0410 \u0411\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BTA_Bank_logo.jpg",
@@ -39494,7 +39494,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0411\u0422\u0410 \u0411\u0430\u043d\u043a (\u0423\u043a\u0440\u0430\u0457\u043d\u0430)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0411\u0422\u0410 \u0411\u0430\u043d\u043a\"][\"brand:en\"=\"BTA Bank\"][\"brand:uk\"=\"\u0411\u0422\u0410 \u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q797060\"][\"name\"=\"\u0411\u0422\u0410 \u0411\u0430\u043d\u043a\"][\"name:en\"=\"BTA Bank\"][\"name:uk\"=\"\u0411\u0422\u0410 \u0411\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BTA_Bank.svg",
@@ -39530,7 +39530,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0411\u044a\u043b\u0433\u0430\u0440\u043e-\u0430\u043c\u0435\u0440\u0438\u043a\u0430\u043d\u0441\u043a\u0430 \u043a\u0440\u0435\u0434\u0438\u0442\u043d\u0430 \u0431\u0430\u043d\u043a\u0430",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0411\u0410\u041a\u0411\"][\"brand:wikidata\"=\"Q108851955\"][\"full_name\"=\"\u0411\u044a\u043b\u0433\u0430\u0440\u043e-\u0430\u043c\u0435\u0440\u0438\u043a\u0430\u043d\u0441\u043a\u0430 \u043a\u0440\u0435\u0434\u0438\u0442\u043d\u0430 \u0431\u0430\u043d\u043a\u0430\"][\"full_name:bg\"=\"\u0411\u044a\u043b\u0433\u0430\u0440\u043e-\u0430\u043c\u0435\u0440\u0438\u043a\u0430\u043d\u0441\u043a\u0430 \u043a\u0440\u0435\u0434\u0438\u0442\u043d\u0430 \u0431\u0430\u043d\u043a\u0430\"][\"full_name:en\"=\"Bulgarian-American Credit Bank\"][\"name\"=\"\u0411\u0410\u041a\u0411\"][\"name:bg\"=\"\u0411\u0410\u041a\u0411\"][\"name:en\"=\"BACB\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -39566,7 +39566,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0412\u043e\u0437\u0440\u043e\u0436\u0434\u0435\u043d\u0438\u0435",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0412\u043e\u0437\u0440\u043e\u0436\u0434\u0435\u043d\u0438\u0435\"][\"brand:en\"=\"Vozrozhdenie Bank\"][\"brand:ru\"=\"\u0412\u043e\u0437\u0440\u043e\u0436\u0434\u0435\u043d\u0438\u0435\"][\"brand:wikidata\"=\"Q4114952\"][\"name\"=\"\u0412\u043e\u0437\u0440\u043e\u0436\u0434\u0435\u043d\u0438\u0435\"][\"name:en\"=\"Vozrozhdenie Bank\"][\"name:ru\"=\"\u0412\u043e\u0437\u0440\u043e\u0436\u0434\u0435\u043d\u0438\u0435\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/\u0411\u0430\u043d\u043a_\u00ab\u0412\u043e\u0437\u0440\u043e\u0436\u0434\u0435\u043d\u0438\u0435\u00bb_\u0432_\u0433\u043e\u0440\u043e\u0434\u0435_\u0414\u0437\u0435\u0440\u0436\u0438\u043d\u0441\u043a\u0438\u0439_(24.06.2020).jpg",
@@ -39602,7 +39602,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0412\u043e\u0441\u0442\u043e\u0447\u043d\u044b\u0439",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0412\u043e\u0441\u0442\u043e\u0447\u043d\u044b\u0439\"][\"brand:en\"=\"Vostochny Bank\"][\"brand:ru\"=\"\u0412\u043e\u0441\u0442\u043e\u0447\u043d\u044b\u0439\"][\"brand:wikidata\"=\"Q4126657\"][\"name\"=\"\u0412\u043e\u0441\u0442\u043e\u0447\u043d\u044b\u0439\"][\"name:en\"=\"Vostochny Bank\"][\"name:ru\"=\"\u0412\u043e\u0441\u0442\u043e\u0447\u043d\u044b\u0439\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -39638,7 +39638,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0412\u0422\u0411 (\u0420\u043e\u0441\u0441\u0438\u044f)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0412\u0422\u0411\"][\"brand:en\"=\"VTB Bank\"][\"brand:ru\"=\"\u0412\u0422\u0411\"][\"brand:wikidata\"=\"Q1549389\"][\"name\"=\"\u0412\u0422\u0411\"][\"name:en\"=\"VTB Bank\"][\"name:ru\"=\"\u0412\u0422\u0411\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/VTB_Logo_2018.svg",
@@ -39674,7 +39674,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0413\u0430\u0437\u043f\u0440\u043e\u043c\u0431\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0413\u0430\u0437\u043f\u0440\u043e\u043c\u0431\u0430\u043d\u043a\"][\"brand:en\"=\"Gazprombank\"][\"brand:ru\"=\"\u0413\u0430\u0437\u043f\u0440\u043e\u043c\u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q1924338\"][\"name\"=\"\u0413\u0430\u0437\u043f\u0440\u043e\u043c\u0431\u0430\u043d\u043a\"][\"name:en\"=\"Gazprombank\"][\"name:ru\"=\"\u0413\u0430\u0437\u043f\u0440\u043e\u043c\u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Moscow,_Novocheremushkinskaya_Street_office_block.jpg",
@@ -39710,7 +39710,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0413\u0435\u043d\u0431\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0413\u0435\u043d\u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q62122630\"][\"name\"=\"\u0413\u0435\u043d\u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -39746,7 +39746,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0414\u0435\u043b\u044c\u0442\u0430 \u0411\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0414\u0435\u043b\u044c\u0442\u0430 \u0411\u0430\u043d\u043a\"][\"brand:be\"=\"\u0414\u044d\u043b\u044c\u0442\u0430 \u0411\u0430\u043d\u043a\"][\"brand:en\"=\"Delta Bank\"][\"brand:ru\"=\"\u0414\u0435\u043b\u044c\u0442\u0430 \u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q13030724\"][\"name\"=\"\u0414\u0435\u043b\u044c\u0442\u0430 \u0411\u0430\u043d\u043a\"][\"name:be\"=\"\u0414\u044d\u043b\u044c\u0442\u0430 \u0411\u0430\u043d\u043a\"][\"name:en\"=\"Delta Bank\"][\"name:ru\"=\"\u0414\u0435\u043b\u044c\u0442\u0430 \u0411\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -39782,7 +39782,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0417\u0435\u043d\u0438\u0442",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0417\u0435\u043d\u0438\u0442\"][\"brand:en\"=\"Zenit\"][\"brand:ru\"=\"\u0417\u0435\u043d\u0438\u0442\"][\"brand:wikidata\"=\"Q4191388\"][\"name\"=\"\u0417\u0435\u043d\u0438\u0442\"][\"name:en\"=\"Zenit\"][\"name:ru\"=\"\u0417\u0435\u043d\u0438\u0442\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/\u041e\u0434\u0435\u0441\u0441\u043a\u0430\u044f_\u0443\u043b\u0438\u0446\u0430_(\u041c\u043e\u0441\u043a\u0432\u0430).jpg",
@@ -39818,7 +39818,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0418\u043d\u0432\u0435\u0441\u0442\u0431\u0430\u043d\u043a",
     query: "(nwr[\"alt_name:en\"=\"ibank\"][\"amenity\"=\"bank\"][\"brand\"=\"\u0418\u043d\u0432\u0435\u0441\u0442\u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q110583516\"][\"name\"=\"\u0418\u043d\u0432\u0435\u0441\u0442\u0431\u0430\u043d\u043a\"][\"name:bg\"=\"\u0418\u043d\u0432\u0435\u0441\u0442\u0431\u0430\u043d\u043a\"][\"name:en\"=\"Investbank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -39854,7 +39854,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0406\u043d\u0434\u0443\u0441\u0442\u0440\u0456\u0430\u043b\u0431\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0406\u043d\u0434\u0443\u0441\u0442\u0440\u0456\u0430\u043b\u0431\u0430\u043d\u043a\"][\"brand:en\"=\"IndustrialBank\"][\"brand:uk\"=\"\u0406\u043d\u0434\u0443\u0441\u0442\u0440\u0456\u0430\u043b\u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q12074471\"][\"name\"=\"\u0406\u043d\u0434\u0443\u0441\u0442\u0440\u0456\u0430\u043b\u0431\u0430\u043d\u043a\"][\"name:en\"=\"IndustrialBank\"][\"name:uk\"=\"\u0406\u043d\u0434\u0443\u0441\u0442\u0440\u0456\u0430\u043b\u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Industrialbank_logo.svg",
@@ -39890,7 +39890,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u041a\u043e\u043c\u0435\u0440\u0446\u0438\u0458\u0430\u043b\u043d\u0430 \u0431\u0430\u043d\u043a\u0430",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u041a\u043e\u043c\u0435\u0440\u0446\u0438\u0458\u0430\u043b\u043d\u0430 \u0431\u0430\u043d\u043a\u0430\"][\"brand:wikidata\"=\"Q114290410\"][\"name\"=\"\u041a\u043e\u043c\u0435\u0440\u0446\u0438\u0458\u0430\u043b\u043d\u0430 \u0431\u0430\u043d\u043a\u0430\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -39926,7 +39926,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u041a\u0443\u0431\u0430\u043d\u044c \u041a\u0440\u0435\u0434\u0438\u0442",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u041a\u0443\u0431\u0430\u043d\u044c \u041a\u0440\u0435\u0434\u0438\u0442\"][\"brand:en\"=\"Kuban Credit\"][\"brand:ru\"=\"\u041a\u0443\u0431\u0430\u043d\u044c \u041a\u0440\u0435\u0434\u0438\u0442\"][\"brand:wikidata\"=\"Q4243545\"][\"name\"=\"\u041a\u0443\u0431\u0430\u043d\u044c \u041a\u0440\u0435\u0434\u0438\u0442\"][\"name:en\"=\"Kuban Credit\"][\"name:ru\"=\"\u041a\u0443\u0431\u0430\u043d\u044c \u041a\u0440\u0435\u0434\u0438\u0442\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -39962,7 +39962,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u041c\u0435\u0442\u0430\u0411\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u041c\u0435\u0442\u0430\u0411\u0430\u043d\u043a\"][\"brand:en\"=\"MetaBank\"][\"brand:uk\"=\"\u041c\u0435\u0442\u0430\u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q12122840\"][\"name\"=\"\u041c\u0435\u0442\u0430\u0411\u0430\u043d\u043a\"][\"name:en\"=\"MetaBank\"][\"name:uk\"=\"\u041c\u0435\u0442\u0430\u0411\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -39998,7 +39998,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u041c\u043e\u0441\u043a\u043e\u0432\u0441\u043a\u0438\u0439 \u0438\u043d\u0434\u0443\u0441\u0442\u0440\u0438\u0430\u043b\u044c\u043d\u044b\u0439 \u0431\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u041c\u043e\u0441\u043a\u043e\u0432\u0441\u043a\u0438\u0439 \u0438\u043d\u0434\u0443\u0441\u0442\u0440\u0438\u0430\u043b\u044c\u043d\u044b\u0439 \u0431\u0430\u043d\u043a\"][\"brand:en\"=\"Moscow Industrial Bank\"][\"brand:ru\"=\"\u041c\u043e\u0441\u043a\u043e\u0432\u0441\u043a\u0438\u0439 \u0438\u043d\u0434\u0443\u0441\u0442\u0440\u0438\u0430\u043b\u044c\u043d\u044b\u0439 \u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q4304145\"][\"name\"=\"\u041c\u043e\u0441\u043a\u043e\u0432\u0441\u043a\u0438\u0439 \u0438\u043d\u0434\u0443\u0441\u0442\u0440\u0438\u0430\u043b\u044c\u043d\u044b\u0439 \u0431\u0430\u043d\u043a\"][\"name:en\"=\"Moscow Industrial Bank\"][\"name:ru\"=\"\u041c\u043e\u0441\u043a\u043e\u0432\u0441\u043a\u0438\u0439 \u0438\u043d\u0434\u0443\u0441\u0442\u0440\u0438\u0430\u043b\u044c\u043d\u044b\u0439 \u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Moscow,_Ordzhonikidze_Street_5.jpg",
@@ -40034,7 +40034,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u041c\u043e\u0441\u043a\u043e\u0432\u0441\u043a\u0438\u0439 \u043a\u0440\u0435\u0434\u0438\u0442\u043d\u044b\u0439 \u0431\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u041c\u043e\u0441\u043a\u043e\u0432\u0441\u043a\u0438\u0439 \u043a\u0440\u0435\u0434\u0438\u0442\u043d\u044b\u0439 \u0431\u0430\u043d\u043a\"][\"brand:en\"=\"Credit Bank of Moscow\"][\"brand:ru\"=\"\u041c\u043e\u0441\u043a\u043e\u0432\u0441\u043a\u0438\u0439 \u043a\u0440\u0435\u0434\u0438\u0442\u043d\u044b\u0439 \u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q4304175\"][\"name\"=\"\u041c\u043e\u0441\u043a\u043e\u0432\u0441\u043a\u0438\u0439 \u043a\u0440\u0435\u0434\u0438\u0442\u043d\u044b\u0439 \u0431\u0430\u043d\u043a\"][\"name:en\"=\"Credit Bank of Moscow\"][\"name:ru\"=\"\u041c\u043e\u0441\u043a\u043e\u0432\u0441\u043a\u0438\u0439 \u043a\u0440\u0435\u0434\u0438\u0442\u043d\u044b\u0439 \u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/\u041c\u043e\u0441\u043a\u043e\u0432\u0441\u043a\u0438\u0439_\u043a\u0440\u0435\u0434\u0438\u0442\u043d\u044b\u0439_\u0431\u0430\u043d\u043a,_\u041b\u0443\u043a\u043e\u0432_\u043f\u0435\u0440\u0435\u0443\u043b\u043e\u043a,_\u0434\u043e\u043c_2_(18.11.2023).jpg",
@@ -40070,7 +40070,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u041c\u043e\u0441\u043e\u0431\u043b\u0431\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u041c\u043e\u0441\u043e\u0431\u043b\u0431\u0430\u043d\u043a\"][\"brand:en\"=\"Mosobl Bank\"][\"brand:ru\"=\"\u041c\u043e\u0441\u043e\u0431\u043b\u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q4304446\"][\"name\"=\"\u041c\u043e\u0441\u043e\u0431\u043b\u0431\u0430\u043d\u043a\"][\"name:en\"=\"Mosobl Bank\"][\"name:ru\"=\"\u041c\u043e\u0441\u043e\u0431\u043b\u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -40106,7 +40106,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u041c\u0422\u0411\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u041c\u0422\u0411\u0430\u043d\u043a\"][\"brand:be\"=\"\u041c\u0422\u0411\u0430\u043d\u043a\"][\"brand:en\"=\"MTBank\"][\"brand:ru\"=\"\u041c\u0422\u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q13031624\"][\"name\"=\"\u041c\u0422\u0411\u0430\u043d\u043a\"][\"name:be\"=\"\u041c\u0422\u0411\u0430\u043d\u043a\"][\"name:en\"=\"MTBank\"][\"name:ru\"=\"\u041c\u0422\u0411\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -40142,7 +40142,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u041c\u0422\u0421 \u0411\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u041c\u0422\u0421 \u0411\u0430\u043d\u043a\"][\"brand:en\"=\"MTS Bank\"][\"brand:ru\"=\"\u041c\u0422\u0421 \u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q1667422\"][\"name\"=\"\u041c\u0422\u0421 \u0411\u0430\u043d\u043a\"][\"name:en\"=\"MTS Bank\"][\"name:ru\"=\"\u041c\u0422\u0421 \u0411\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/MTS-Bank.png",
@@ -40178,7 +40178,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u041d\u041b\u0411 \u041a\u043e\u043c\u0435\u0440\u0446\u0438\u0458\u0430\u043b\u043d\u0430 \u0431\u0430\u043d\u043a\u0430",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u041d\u041b\u0411 \u041a\u043e\u043c\u0435\u0440\u0446\u0438\u0458\u0430\u043b\u043d\u0430 \u0431\u0430\u043d\u043a\u0430\"][\"brand:wikidata\"=\"Q1536320\"][\"name\"=\"\u041d\u041b\u0411 \u041a\u043e\u043c\u0435\u0440\u0446\u0438\u0458\u0430\u043b\u043d\u0430 \u0431\u0430\u043d\u043a\u0430\"][\"name:sr\"=\"\u041d\u041b\u0411 \u041a\u043e\u043c\u0435\u0440\u0446\u0438\u0458\u0430\u043b\u043d\u0430 \u0431\u0430\u043d\u043a\u0430\"][\"name:sr-Latn\"=\"NLB Komercijalna banka\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Komercijalna_banka_logo_and_wordmark.svg",
@@ -40214,7 +40214,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u041d\u041b\u0411 \u0422\u0443\u0442\u0443\u043d\u0441\u043a\u0430 \u0411\u0430\u043d\u043a\u0430",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"NLB\"][\"brand:wikidata\"=\"Q20566771\"][\"name\"=\"\u041d\u041b\u0411 \u0422\u0443\u0442\u0443\u043d\u0441\u043a\u0430 \u0411\u0430\u043d\u043a\u0430\"][\"name:en\"=\"NLB Tutunska Banka\"][\"name:mk\"=\"\u041d\u041b\u0411 \u0422\u0443\u0442\u0443\u043d\u0441\u043a\u0430 \u0411\u0430\u043d\u043a\u0430\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Nova_Ljubljanska_banka_logo.svg",
@@ -40250,7 +40250,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u041e\u0411\u0411",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u041e\u0411\u0411\"][\"brand:bg\"=\"\u041e\u0411\u0411\"][\"brand:en\"=\"UBB\"][\"brand:wikidata\"=\"Q7887555\"][\"full_name:bg\"=\"\u041e\u0431\u0435\u0434\u0438\u043d\u0435\u043d\u0430 \u0431\u044a\u043b\u0433\u0430\u0440\u0441\u043a\u0430 \u0431\u0430\u043d\u043a\u0430\"][\"full_name:en\"=\"United Bulgarian Bank\"][\"name\"=\"\u041e\u0411\u0411\"][\"name:bg\"=\"\u041e\u0411\u0411\"][\"name:en\"=\"UBB\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Cvv.png",
@@ -40286,7 +40286,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u041e\u0431\u0449\u0438\u043d\u0441\u043a\u0430 \u0431\u0430\u043d\u043a\u0430",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u041e\u0431\u0449\u0438\u043d\u0441\u043a\u0430 \u0431\u0430\u043d\u043a\u0430\"][\"brand:bg\"=\"\u041e\u0431\u0449\u0438\u043d\u0441\u043a\u0430 \u0431\u0430\u043d\u043a\u0430\"][\"brand:en\"=\"Municipal Bank\"][\"brand:wikidata\"=\"Q12289109\"][\"name\"=\"\u041e\u0431\u0449\u0438\u043d\u0441\u043a\u0430 \u0431\u0430\u043d\u043a\u0430\"][\"name:bg\"=\"\u041e\u0431\u0449\u0438\u043d\u0441\u043a\u0430 \u0431\u0430\u043d\u043a\u0430\"][\"name:en\"=\"Municipal Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -40322,7 +40322,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u041e\u0442\u043a\u0440\u044b\u0442\u0438\u0435",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u041e\u0442\u043a\u0440\u044b\u0442\u0438\u0435\"][\"brand:wikidata\"=\"Q4327204\"][\"name\"=\"\u041e\u0442\u043a\u0440\u044b\u0442\u0438\u0435\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/\u0424\u0438\u043d\u0430\u043d\u0441\u043e\u0432\u0430\u044f_\u043a\u043e\u0440\u043f\u043e\u0440\u0430\u0446\u0438\u044f_\u00ab\u041e\u0442\u043a\u0440\u044b\u0442\u0438\u0435\u00bb._\u041e\u0444\u0438\u0441_\u0432_\u0433\u043e\u0440\u043e\u0434\u0435_\u041f\u0435\u0440\u043c\u044c..jpg",
@@ -40358,7 +40358,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u041e\u0422\u041f \u0411\u0430\u043d\u043a (\u0420\u043e\u0441\u0441\u0438\u044f)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u041e\u0422\u041f \u0411\u0430\u043d\u043a\"][\"brand:en\"=\"OTP Bank\"][\"brand:ru\"=\"\u041e\u0422\u041f \u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q912778\"][\"name\"=\"\u041e\u0422\u041f \u0411\u0430\u043d\u043a\"][\"name:en\"=\"OTP Bank\"][\"name:ru\"=\"\u041e\u0422\u041f \u0411\u0430\u043d\u043a\"][\"short_name\"=\"\u041e\u0422\u041f\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Otp_bank_Logo.svg",
@@ -40394,7 +40394,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u041e\u0449\u0430\u0434\u0431\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u041e\u0449\u0430\u0434\u0431\u0430\u043d\u043a\"][\"brand:en\"=\"Oschadbank\"][\"brand:uk\"=\"\u041e\u0449\u0430\u0434\u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q4340839\"][\"name\"=\"\u041e\u0449\u0430\u0434\u0431\u0430\u043d\u043a\"][\"name:en\"=\"Oschadbank\"][\"name:uk\"=\"\u041e\u0449\u0430\u0434\u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Oschadbank.png",
@@ -40430,7 +40430,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u041f\u0430\u0440\u0438\u0442\u0435\u0442\u0431\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u041f\u0430\u0440\u0438\u0442\u0435\u0442\u0431\u0430\u043d\u043a\"][\"brand:be\"=\"\u041f\u0430\u0440\u044b\u0442\u044d\u0442\u0431\u0430\u043d\u043a\"][\"brand:en\"=\"Paritetbank\"][\"brand:ru\"=\"\u041f\u0430\u0440\u0438\u0442\u0435\u0442\u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q13031909\"][\"name\"=\"\u041f\u0430\u0440\u0438\u0442\u0435\u0442\u0431\u0430\u043d\u043a\"][\"name:be\"=\"\u041f\u0430\u0440\u044b\u0442\u044d\u0442\u0431\u0430\u043d\u043a\"][\"name:en\"=\"Paritetbank\"][\"name:ru\"=\"\u041f\u0430\u0440\u0438\u0442\u0435\u0442\u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -40466,7 +40466,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u041f\u043e\u043b\u0442\u0430\u0432\u0430-\u0411\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u041f\u043e\u043b\u0442\u0430\u0432\u0430-\u0411\u0430\u043d\u043a\"][\"brand:en\"=\"Poltava-Bank\"][\"brand:uk\"=\"\u041f\u043e\u043b\u0442\u0430\u0432\u0430-\u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q123579535\"][\"name\"=\"\u041f\u043e\u043b\u0442\u0430\u0432\u0430-\u0411\u0430\u043d\u043a\"][\"name:en\"=\"Poltava-Bank\"][\"name:uk\"=\"\u041f\u043e\u043b\u0442\u0430\u0432\u0430-\u0411\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -40502,7 +40502,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u041f\u043e\u0447\u0442\u0430 \u0411\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u041f\u043e\u0447\u0442\u0430 \u0411\u0430\u043d\u043a\"][\"brand:en\"=\"Post Bank\"][\"brand:ru\"=\"\u041f\u043e\u0447\u0442\u0430 \u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q24930461\"][\"name\"=\"\u041f\u043e\u0447\u0442\u0430 \u0411\u0430\u043d\u043a\"][\"name:en\"=\"Post Bank\"][\"name:ru\"=\"\u041f\u043e\u0447\u0442\u0430 \u0411\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/\u041d\u0430\u041f\u041b\u041e\u0429\u0410\u0414\u0418_-_panoramio.jpg",
@@ -40538,7 +40538,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u041f\u043e\u0449\u0435\u043d\u0441\u043a\u0430 \u0431\u0430\u043d\u043a\u0430",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u041f\u043e\u0449\u0435\u043d\u0441\u043a\u0430 \u0431\u0430\u043d\u043a\u0430\"][\"brand:wikidata\"=\"Q7234083\"][\"name\"=\"\u041f\u043e\u0449\u0435\u043d\u0441\u043a\u0430 \u0431\u0430\u043d\u043a\u0430\"][\"name:bg\"=\"\u041f\u043e\u0449\u0435\u043d\u0441\u043a\u0430 \u0431\u0430\u043d\u043a\u0430\"][\"name:en\"=\"Postbank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Postlogo.png",
@@ -40574,7 +40574,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u041f\u0440\u0430\u0432\u0435\u043a\u0441-\u0411\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u041f\u0440\u0430\u0432\u0435\u043a\u0441-\u0411\u0430\u043d\u043a\"][\"brand:en\"=\"Pravex Bank\"][\"brand:uk\"=\"\u041f\u0440\u0430\u0432\u0435\u043a\u0441-\u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q7238870\"][\"name\"=\"\u041f\u0440\u0430\u0432\u0435\u043a\u0441-\u0411\u0430\u043d\u043a\"][\"name:en\"=\"Pravex Bank\"][\"name:uk\"=\"\u041f\u0440\u0430\u0432\u0435\u043a\u0441-\u0411\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -40610,7 +40610,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u041f\u0440\u0438\u0432\u0430\u0442\u0411\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u041f\u0440\u0438\u0432\u0430\u0442\u0411\u0430\u043d\u043a\"][\"brand:en\"=\"PrivatBank\"][\"brand:uk\"=\"\u041f\u0440\u0438\u0432\u0430\u0442\u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q1515015\"][\"name\"=\"\u041f\u0440\u0438\u0432\u0430\u0442\u0411\u0430\u043d\u043a\"][\"name:en\"=\"PrivatBank\"][\"name:uk\"=\"\u041f\u0440\u0438\u0432\u0430\u0442\u0411\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/\u041f\u0440\u0438\u0432\u0430\u0442\u0411\u0430\u043d\u043a.png",
@@ -40646,7 +40646,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u041f\u0440\u0438\u0434\u043d\u0435\u0441\u0442\u0440\u043e\u0432\u0441\u043a\u0438\u0439 \u0421\u0431\u0435\u0440\u0431\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u041f\u0440\u0438\u0434\u043d\u0435\u0441\u0442\u0440\u043e\u0432\u0441\u043a\u0438\u0439 \u0421\u0431\u0435\u0440\u0431\u0430\u043d\u043a\"][\"brand:en\"=\"Pridnestrovian Savings Bank\"][\"brand:ru\"=\"\u041f\u0440\u0438\u0434\u043d\u0435\u0441\u0442\u0440\u043e\u0432\u0441\u043a\u0438\u0439 \u0421\u0431\u0435\u0440\u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q4378147\"][\"name\"=\"\u041f\u0440\u0438\u0434\u043d\u0435\u0441\u0442\u0440\u043e\u0432\u0441\u043a\u0438\u0439 \u0421\u0431\u0435\u0440\u0431\u0430\u043d\u043a\"][\"name:en\"=\"Pridnestrovian Savings Bank\"][\"name:ru\"=\"\u041f\u0440\u0438\u0434\u043d\u0435\u0441\u0442\u0440\u043e\u0432\u0441\u043a\u0438\u0439 \u0421\u0431\u0435\u0440\u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -40682,7 +40682,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u041f\u0440\u0438\u043e\u0440\u0431\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u041f\u0440\u0438\u043e\u0440\u0431\u0430\u043d\u043a\"][\"brand:be\"=\"\u041f\u0440\u0456\u043e\u0440\u0431\u0430\u043d\u043a\"][\"brand:be-tarask\"=\"\u041f\u0440\u044b\u0451\u0440\u0431\u0430\u043d\u043a\"][\"brand:en\"=\"PriorBank\"][\"brand:ru\"=\"\u041f\u0440\u0438\u043e\u0440\u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q3919658\"][\"name\"=\"\u041f\u0440\u0438\u043e\u0440\u0431\u0430\u043d\u043a\"][\"name:be\"=\"\u041f\u0440\u0456\u043e\u0440\u0431\u0430\u043d\u043a\"][\"name:be-tarask\"=\"\u041f\u0440\u044b\u0451\u0440\u0431\u0430\u043d\u043a\"][\"name:en\"=\"PriorBank\"][\"name:ru\"=\"\u041f\u0440\u0438\u043e\u0440\u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Priorbank_logo_2024.jpg",
@@ -40718,7 +40718,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u041f\u0440\u043e\u041a\u0440\u0435\u0434\u0438\u0442 \u0411\u0430\u043d\u043a (\u0411\u044a\u043b\u0433\u0430\u0440\u0438\u044f)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u041f\u0440\u043e\u041a\u0440\u0435\u0434\u0438\u0442 \u0411\u0430\u043d\u043a\"][\"brand:bg\"=\"\u041f\u0440\u043e\u041a\u0440\u0435\u0434\u0438\u0442 \u0411\u0430\u043d\u043a\"][\"brand:en\"=\"ProCredit Bank\"][\"brand:wikidata\"=\"Q122763238\"][\"name\"=\"\u041f\u0440\u043e\u041a\u0440\u0435\u0434\u0438\u0442 \u0411\u0430\u043d\u043a\"][\"name:bg\"=\"\u041f\u0440\u043e\u041a\u0440\u0435\u0434\u0438\u0442 \u0411\u0430\u043d\u043a\"][\"name:en\"=\"ProCredit Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_ProCredit_Bank.svg",
@@ -40754,7 +40754,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u041f\u0440\u043e\u043c\u0441\u0432\u044f\u0437\u044c\u0431\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u041f\u0440\u043e\u043c\u0441\u0432\u044f\u0437\u044c\u0431\u0430\u043d\u043a\"][\"brand:en\"=\"Promsvyazbank\"][\"brand:ru\"=\"\u041f\u0440\u043e\u043c\u0441\u0432\u044f\u0437\u044c\u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q649100\"][\"name\"=\"\u041f\u0440\u043e\u043c\u0441\u0432\u044f\u0437\u044c\u0431\u0430\u043d\u043a\"][\"name:en\"=\"Promsvyazbank\"][\"name:ru\"=\"\u041f\u0440\u043e\u043c\u0441\u0432\u044f\u0437\u044c\u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/\u041f\u0440\u043e\u043c\u0441\u0432\u044f\u0437\u044c\u0431\u0430\u043d\u043a_logo_NEW_2008.jpg",
@@ -40790,7 +40790,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u041f\u0423\u041c\u0411",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u041f\u0423\u041c\u0411\"][\"brand:en\"=\"First Ukrainian International Bank\"][\"brand:uk\"=\"\u041f\u0423\u041c\u0411\"][\"brand:wikidata\"=\"Q4341156\"][\"name\"=\"\u041f\u0423\u041c\u0411\"][\"name:en\"=\"First Ukrainian International Bank\"][\"name:uk\"=\"\u041f\u0423\u041c\u0411\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Pumb_logo.svg",
@@ -40826,7 +40826,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0420\u0430\u0439\u0444\u0444\u0430\u0439\u0437\u0435\u043d",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0420\u0430\u0439\u0444\u0444\u0430\u0439\u0437\u0435\u043d\"][\"brand:en\"=\"Raiffeisen Bank\"][\"brand:ru\"=\"\u0420\u0430\u0439\u0444\u0444\u0430\u0439\u0437\u0435\u043d\"][\"brand:wikidata\"=\"Q4389244\"][\"name\"=\"\u0420\u0430\u0439\u0444\u0444\u0430\u0439\u0437\u0435\u043d\"][\"name:en\"=\"Raiffeisen Bank\"][\"name:ru\"=\"\u0420\u0430\u0439\u0444\u0444\u0430\u0439\u0437\u0435\u043d\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Raiffeisen_Bank_RU_Logo.svg",
@@ -40862,7 +40862,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0420\u0413\u0421 \u0411\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0420\u0413\u0421 \u0411\u0430\u043d\u043a\"][\"brand:en\"=\"RGS Bank\"][\"brand:ru\"=\"\u0420\u0413\u0421 \u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q4397742\"][\"name\"=\"\u0420\u0413\u0421 \u0411\u0430\u043d\u043a\"][\"name:en\"=\"RGS Bank\"][\"name:ru\"=\"\u0420\u0413\u0421 \u0411\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/\u0426\u0435\u043d\u0442\u0440\u0430\u043b\u044c\u043d\u044b\u0439_\u043e\u0444\u0438\u0441_\u043a\u043e\u043c\u043f\u0430\u043d\u0438\u0438_\"\u0420\u043e\u0441\u0433\u043e\u0441\u0441\u0442\u0440\u0430\u0445\",_\u0433._\u041c\u043e\u0441\u043a\u0432\u0430.JPG",
@@ -40898,7 +40898,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0420\u0435\u043d\u0435\u0441\u0441\u0430\u043d\u0441 \u041a\u0440\u0435\u0434\u0438\u0442",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0420\u0435\u043d\u0435\u0441\u0441\u0430\u043d\u0441 \u041a\u0440\u0435\u0434\u0438\u0442\"][\"brand:en\"=\"Renaissance Credit\"][\"brand:ru\"=\"\u0420\u0435\u043d\u0435\u0441\u0441\u0430\u043d\u0441 \u041a\u0440\u0435\u0434\u0438\u0442\"][\"brand:wikidata\"=\"Q16691879\"][\"name\"=\"\u0420\u0435\u043d\u0435\u0441\u0441\u0430\u043d\u0441 \u041a\u0440\u0435\u0434\u0438\u0442\"][\"name:en\"=\"Renaissance Credit\"][\"name:ru\"=\"\u0420\u0435\u043d\u0435\u0441\u0441\u0430\u043d\u0441 \u041a\u0440\u0435\u0434\u0438\u0442\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/\u041b\u043e\u0433\u043e\u0442\u0438\u043f_\u0420\u0435\u043d\u0435\u0441\u0441\u0430\u043d\u0441_\u0411\u0430\u043d\u043a.svg",
@@ -40934,7 +40934,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0420\u041d\u041a\u0411",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0420\u041d\u041a\u0411\"][\"brand:wikidata\"=\"Q16912944\"][\"name\"=\"\u0420\u041d\u041a\u0411\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/RNCB_logo.svg",
@@ -40970,7 +40970,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0420\u043e\u0441\u0431\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0420\u043e\u0441\u0431\u0430\u043d\u043a\"][\"brand:en\"=\"Rosbank\"][\"brand:ru\"=\"\u0420\u043e\u0441\u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q1119857\"][\"name\"=\"\u0420\u043e\u0441\u0431\u0430\u043d\u043a\"][\"name:en\"=\"Rosbank\"][\"name:ru\"=\"\u0420\u043e\u0441\u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Rosbank_logo_2022.svg",
@@ -41006,7 +41006,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0420\u043e\u0441\u0441\u0435\u043b\u044c\u0445\u043e\u0437\u0431\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0420\u043e\u0441\u0441\u0435\u043b\u044c\u0445\u043e\u0437\u0431\u0430\u043d\u043a\"][\"brand:en\"=\"Rosselkhozbank\"][\"brand:ru\"=\"\u0420\u043e\u0441\u0441\u0435\u043b\u044c\u0445\u043e\u0437\u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q3920226\"][\"name\"=\"\u0420\u043e\u0441\u0441\u0435\u043b\u044c\u0445\u043e\u0437\u0431\u0430\u043d\u043a\"][\"name:en\"=\"Rosselkhozbank\"][\"name:ru\"=\"\u0420\u043e\u0441\u0441\u0435\u043b\u044c\u0445\u043e\u0437\u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/IQ-querter1.jpg",
@@ -41042,7 +41042,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0420\u0420\u0411-\u0411\u0430\u043d\u043a",
     query: "(nwr[\"alt_name:ru\"=\"\u0411\u0430\u043d\u043a \u0440\u043e\u0441\u0442\u0430 \u0438 \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u044f \u0431\u0438\u0437\u043d\u0435\u0441\u0430\"][\"amenity\"=\"bank\"][\"brand\"=\"\u0420\u0420\u0411-\u0411\u0430\u043d\u043a\"][\"brand:be\"=\"\u0420\u0420\u0411-\u0411\u0430\u043d\u043a\"][\"brand:en\"=\"GBD-Bank\"][\"brand:ru\"=\"\u0420\u0420\u0411-\u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q13032120\"][\"name\"=\"\u0420\u0420\u0411-\u0411\u0430\u043d\u043a\"][\"name:be\"=\"\u0420\u0420\u0411-\u0411\u0430\u043d\u043a\"][\"name:en\"=\"GBD-Bank\"][\"name:ru\"=\"\u0420\u0420\u0411-\u0411\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Ava_rrb_\u0431\u0435\u043b\u044b\u0439_\u043d\u0430_\u043a\u0440\u0430\u0441\u043d\u043e\u043c.jpg",
@@ -41078,7 +41078,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0420\u0443\u0441\u0441\u043a\u0438\u0439 \u0421\u0442\u0430\u043d\u0434\u0430\u0440\u0442",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0420\u0443\u0441\u0441\u043a\u0438\u0439 \u0421\u0442\u0430\u043d\u0434\u0430\u0440\u0442\"][\"brand:en\"=\"Russian Standard Bank\"][\"brand:ru\"=\"\u0420\u0443\u0441\u0441\u043a\u0438\u0439 \u0421\u0442\u0430\u043d\u0434\u0430\u0440\u0442\"][\"brand:wikidata\"=\"Q4400854\"][\"name\"=\"\u0420\u0443\u0441\u0441\u043a\u0438\u0439 \u0421\u0442\u0430\u043d\u0434\u0430\u0440\u0442\"][\"name:en\"=\"Russian Standard Bank\"][\"name:ru\"=\"\u0420\u0443\u0441\u0441\u043a\u0438\u0439 \u0421\u0442\u0430\u043d\u0434\u0430\u0440\u0442\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/\u0411\u0430\u043d\u043a_\u0420\u0443\u0441\u0441\u043a\u0438\u0439_\u0421\u0442\u0430\u043d\u0434\u0430\u0440\u0442_\u043d\u0430_\u041b\u0443\u0433\u0430\u043d\u0441\u043a\u043e\u0439_\u0443\u043b\u0438\u0446\u0435_\u0432_\u041c\u043e\u0441\u043a\u0432\u0435.jpg",
@@ -41114,7 +41114,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0421\u0431\u0435\u0440 \u0411\u0430\u043d\u043a (\u0411\u0435\u043b\u0430\u0440\u0443\u0441\u044c)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0421\u0431\u0435\u0440 \u0411\u0430\u043d\u043a\"][\"brand:be\"=\"\u0421\u0431\u0435\u0440 \u0411\u0430\u043d\u043a\"][\"brand:en\"=\"Sber Bank\"][\"brand:ru\"=\"\u0421\u0431\u0435\u0440 \u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q2074915\"][\"name\"=\"\u0421\u0431\u0435\u0440 \u0411\u0430\u043d\u043a\"][\"name:be\"=\"\u0421\u0431\u0435\u0440 \u0411\u0430\u043d\u043a\"][\"name:en\"=\"Sber Bank\"][\"name:ru\"=\"\u0421\u0431\u0435\u0440 \u0411\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Sberbank.svg",
@@ -41150,7 +41150,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0421\u0431\u0435\u0440\u0431\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0421\u0431\u0435\u0440\u0431\u0430\u043d\u043a\"][\"brand:en\"=\"Sberbank\"][\"brand:ru\"=\"\u0421\u0431\u0435\u0440\u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q205012\"][\"name\"=\"\u0421\u0431\u0435\u0440\u0431\u0430\u043d\u043a\"][\"name:en\"=\"Sberbank\"][\"name:ru\"=\"\u0421\u0431\u0435\u0440\u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Sberbank_Logo_2020.svg",
@@ -41186,7 +41186,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0421\u043e\u0432\u043a\u043e\u043c\u0431\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0421\u043e\u0432\u043a\u043e\u043c\u0431\u0430\u043d\u043a\"][\"brand:en\"=\"Sovcom Bank\"][\"brand:ru\"=\"\u0421\u043e\u0432\u043a\u043e\u043c\u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q4426566\"][\"name\"=\"\u0421\u043e\u0432\u043a\u043e\u043c\u0431\u0430\u043d\u043a\"][\"name:en\"=\"Sovcom Bank\"][\"name:ru\"=\"\u0421\u043e\u0432\u043a\u043e\u043c\u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Scb_logo_rus.svg",
@@ -41222,7 +41222,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0421\u0442\u0430\u0442\u0443\u0441\u0411\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0421\u0442\u0430\u0442\u0443\u0441\u0411\u0430\u043d\u043a\"][\"brand:be\"=\"\u0421\u0442\u0430\u0442\u0443\u0441\u0411\u0430\u043d\u043a\"][\"brand:en\"=\"StatusBank\"][\"brand:ru\"=\"\u0421\u0442\u0430\u0442\u0443\u0441\u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q13134338\"][\"name\"=\"\u0421\u0442\u0430\u0442\u0443\u0441\u0411\u0430\u043d\u043a\"][\"name:be\"=\"\u0421\u0442\u0430\u0442\u0443\u0441\u0411\u0430\u043d\u043a\"][\"name:en\"=\"StatusBank\"][\"name:ru\"=\"\u0421\u0442\u0430\u0442\u0443\u0441\u0411\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -41258,7 +41258,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0421\u0442\u043e\u043f\u0430\u043d\u0441\u043a\u0430 \u0431\u0430\u043d\u043a\u0430 \u0411\u0438\u0442\u043e\u043b\u0430",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0421\u0442\u043e\u043f\u0430\u043d\u0441\u043a\u0430 \u0431\u0430\u043d\u043a\u0430 \u0411\u0438\u0442\u043e\u043b\u0430\"][\"brand:wikidata\"=\"Q114289630\"][\"name\"=\"\u0421\u0442\u043e\u043f\u0430\u043d\u0441\u043a\u0430 \u0431\u0430\u043d\u043a\u0430 \u0411\u0438\u0442\u043e\u043b\u0430\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -41294,7 +41294,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0421\u0442\u043e\u043f\u0430\u043d\u0441\u043a\u0430 \u0431\u0430\u043d\u043a\u0430 \u0421\u043a\u043e\u043f\u0458\u0435",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0421\u0442\u043e\u043f\u0430\u043d\u0441\u043a\u0430 \u0431\u0430\u043d\u043a\u0430 \u0421\u043a\u043e\u043f\u0458\u0435\"][\"brand:wikidata\"=\"Q114289637\"][\"name\"=\"\u0421\u0442\u043e\u043f\u0430\u043d\u0441\u043a\u0430 \u0431\u0430\u043d\u043a\u0430 \u0421\u043a\u043e\u043f\u0458\u0435\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -41330,7 +41330,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0422\u0430\u0441\u043a\u043e\u043c\u0431\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0422\u0430\u0441\u043a\u043e\u043c\u0431\u0430\u043d\u043a\"][\"brand:en\"=\"Tascombank\"][\"brand:uk\"=\"\u0422\u0430\u0441\u043a\u043e\u043c\u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q28669246\"][\"name\"=\"\u0422\u0430\u0441\u043a\u043e\u043c\u0431\u0430\u043d\u043a\"][\"name:en\"=\"Tascombank\"][\"name:uk\"=\"\u0422\u0430\u0441\u043a\u043e\u043c\u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -41366,7 +41366,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0422\u0435\u0445\u043d\u043e\u0431\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0422\u0435\u0445\u043d\u043e\u0431\u0430\u043d\u043a\"][\"brand:be\"=\"\u0422\u044d\u0445\u043d\u0430\u0431\u0430\u043d\u043a\"][\"brand:en\"=\"Technobank\"][\"brand:ru\"=\"\u0422\u0435\u0445\u043d\u043e\u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q13033069\"][\"name\"=\"\u0422\u0435\u0445\u043d\u043e\u0431\u0430\u043d\u043a\"][\"name:be\"=\"\u0422\u044d\u0445\u043d\u0430\u0431\u0430\u043d\u043a\"][\"name:en\"=\"Technobank\"][\"name:ru\"=\"\u0422\u0435\u0445\u043d\u043e\u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -41402,7 +41402,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0422\u041a \u0411\u0430\u043d\u043a",
     query: "(nwr[\"alt_name:ru\"=\"\u0411\u0430\u043d\u043a \u0442\u043e\u0440\u0433\u043e\u0432\u044b\u0439 \u043a\u0430\u043f\u0438\u0442\u0430\u043b\"][\"amenity\"=\"bank\"][\"brand\"=\"\u0422\u041a \u0411\u0430\u043d\u043a\"][\"brand:be\"=\"\u0413\u041a \u0411\u0430\u043d\u043a\"][\"brand:en\"=\"TC Bank\"][\"brand:ru\"=\"\u0422\u041a \u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q13028633\"][\"name\"=\"\u0422\u041a \u0411\u0430\u043d\u043a\"][\"name:be\"=\"\u0413\u041a \u0411\u0430\u043d\u043a\"][\"name:en\"=\"TC Bank\"][\"name:ru\"=\"\u0422\u041a \u0411\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -41438,7 +41438,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0422\u04e9\u0440\u0438\u0439\u043d \u0431\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0422\u04e9\u0440\u0438\u0439\u043d \u0431\u0430\u043d\u043a\"][\"brand:en\"=\"State Bank\"][\"brand:mn\"=\"\u0422\u04e9\u0440\u0438\u0439\u043d \u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q7766381\"][\"name\"=\"\u0422\u04e9\u0440\u0438\u0439\u043d \u0431\u0430\u043d\u043a\"][\"name:en\"=\"State Bank\"][\"name:mn\"=\"\u0422\u04e9\u0440\u0438\u0439\u043d \u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -41474,7 +41474,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0423\u043a\u0440\u0435\u043a\u0441\u0456\u043c\u0431\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0423\u043a\u0440\u0435\u043a\u0441\u0456\u043c\u0431\u0430\u043d\u043a\"][\"brand:en\"=\"Ukreximbank\"][\"brand:uk\"=\"\u0423\u043a\u0440\u0435\u043a\u0441\u0456\u043c\u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q4470728\"][\"name\"=\"\u0423\u043a\u0440\u0435\u043a\u0441\u0456\u043c\u0431\u0430\u043d\u043a\"][\"name:en\"=\"Ukreximbank\"][\"name:uk\"=\"\u0423\u043a\u0440\u0435\u043a\u0441\u0456\u043c\u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/UKREXIMBANK_logo.svg",
@@ -41510,7 +41510,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0423\u041d\u0418\u0411\u0430\u043d\u043a\u0430",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0423\u041d\u0418\u0411\u0430\u043d\u043a\u0430\"][\"brand:wikidata\"=\"Q114289571\"][\"name\"=\"\u0423\u041d\u0418\u0411\u0430\u043d\u043a\u0430\"][\"name:en\"=\"UNIBank\"][\"name:mk\"=\"\u0423\u041d\u0418\u0411\u0430\u043d\u043a\u0430\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -41546,7 +41546,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0423\u0440\u0430\u043b\u0441\u0438\u0431",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0423\u0440\u0430\u043b\u0441\u0438\u0431\"][\"brand:en\"=\"Uralsib Bank\"][\"brand:ru\"=\"\u0423\u0440\u0430\u043b\u0441\u0438\u0431\"][\"brand:wikidata\"=\"Q4476693\"][\"name\"=\"\u0423\u0440\u0430\u043b\u0441\u0438\u0431\"][\"name:en\"=\"Uralsib Bank\"][\"name:ru\"=\"\u0423\u0440\u0430\u043b\u0441\u0438\u0431\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo-bank.JPG",
@@ -41582,7 +41582,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0423\u0440\u0430\u043b\u044c\u0441\u043a\u0438\u0439 \u0431\u0430\u043d\u043a \u0440\u0435\u043a\u043e\u043d\u0441\u0442\u0440\u0443\u043a\u0446\u0438\u0438 \u0438 \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u044f",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0423\u0440\u0430\u043b\u044c\u0441\u043a\u0438\u0439 \u0431\u0430\u043d\u043a \u0440\u0435\u043a\u043e\u043d\u0441\u0442\u0440\u0443\u043a\u0446\u0438\u0438 \u0438 \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u044f\"][\"brand:en\"=\"Ural Bank for Reconstruction and Development\"][\"brand:ru\"=\"\u0423\u0440\u0430\u043b\u044c\u0441\u043a\u0438\u0439 \u0431\u0430\u043d\u043a \u0440\u0435\u043a\u043e\u043d\u0441\u0442\u0440\u0443\u043a\u0446\u0438\u0438 \u0438 \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u044f\"][\"brand:wikidata\"=\"Q4476745\"][\"name\"=\"\u0423\u0440\u0430\u043b\u044c\u0441\u043a\u0438\u0439 \u0431\u0430\u043d\u043a \u0440\u0435\u043a\u043e\u043d\u0441\u0442\u0440\u0443\u043a\u0446\u0438\u0438 \u0438 \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u044f\"][\"name:en\"=\"Ural Bank for Reconstruction and Development\"][\"name:ru\"=\"\u0423\u0440\u0430\u043b\u044c\u0441\u043a\u0438\u0439 \u0431\u0430\u043d\u043a \u0440\u0435\u043a\u043e\u043d\u0441\u0442\u0440\u0443\u043a\u0446\u0438\u0438 \u0438 \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u044f\"][\"short_name\"=\"\u0423\u0411\u0420\u0438\u0420\"][\"short_name:ru\"=\"\u0423\u0411\u0420\u0438\u0420\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -41618,7 +41618,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0424\u043e\u0440\u0430-\u0411\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0424\u043e\u0440\u0430-\u0411\u0430\u043d\u043a\"][\"name\"=\"\u0424\u043e\u0440\u0430-\u0411\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -41654,7 +41654,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0424\u0440\u0430\u043d\u0441\u0430\u0431\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0424\u0440\u0430\u043d\u0441\u0430\u0431\u0430\u043d\u043a\"][\"brand:be\"=\"\u0424\u0440\u0430\u043d\u0441\u0430\u0431\u0430\u043d\u043a\"][\"brand:en\"=\"Fransabank\"][\"brand:ru\"=\"\u0424\u0440\u0430\u043d\u0441\u0430\u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q13033234\"][\"name\"=\"\u0424\u0440\u0430\u043d\u0441\u0430\u0431\u0430\u043d\u043a\"][\"name:be\"=\"\u0424\u0440\u0430\u043d\u0441\u0430\u0431\u0430\u043d\u043a\"][\"name:en\"=\"Fransabank\"][\"name:ru\"=\"\u0424\u0440\u0430\u043d\u0441\u0430\u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -41690,7 +41690,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0425\u0430\u0430\u043d \u0431\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0425\u0430\u0430\u043d \u0431\u0430\u043d\u043a\"][\"brand:en\"=\"Khan Bank\"][\"brand:mn\"=\"\u0425\u0430\u0430\u043d \u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q25632240\"][\"name\"=\"\u0425\u0430\u0430\u043d \u0431\u0430\u043d\u043a\"][\"name:en\"=\"Khan Bank\"][\"name:mn\"=\"\u0425\u0430\u0430\u043d \u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -41726,7 +41726,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0425\u0430\u043b\u043a \u0411\u0430\u043d\u043a\u0430 (\u0421\u0435\u0432\u0435\u0440\u043d\u0430 \u041c\u0430\u043a\u0435\u0434\u043e\u043d\u0438\u0458\u0430)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"Halkbank\"][\"brand:wikidata\"=\"Q3593818\"][\"name\"=\"Halkbank\"][\"name:en\"=\"Halkbank\"][\"name:mk\"=\"\u0425\u0430\u043b\u043a \u0411\u0430\u043d\u043a\u0430\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Halkbank_logo.svg",
@@ -41762,7 +41762,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0425\u043e\u0443\u043c \u041a\u0440\u0435\u0434\u0438\u0442",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0425\u043e\u0443\u043c \u041a\u0440\u0435\u0434\u0438\u0442\"][\"brand:en\"=\"Home Credit & Finance Bank\"][\"brand:ru\"=\"\u0425\u043e\u0443\u043c \u041a\u0440\u0435\u0434\u0438\u0442\"][\"brand:wikidata\"=\"Q4500466\"][\"name\"=\"\u0425\u043e\u0443\u043c \u041a\u0440\u0435\u0434\u0438\u0442\"][\"name:en\"=\"Home Credit & Finance Bank\"][\"name:ru\"=\"\u0425\u043e\u0443\u043c \u041a\u0440\u0435\u0434\u0438\u0442\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Home_Credit_&_Finance_Bank.svg",
@@ -41798,7 +41798,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0426\u0435\u043d\u0442\u0440\u0430\u043b\u043d\u0430 \u041a\u043e\u043e\u043f\u0435\u0440\u0430\u0442\u0438\u0432\u043d\u0430 \u0411\u0430\u043d\u043a\u0430",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0426\u0435\u043d\u0442\u0440\u0430\u043b\u043d\u0430 \u041a\u043e\u043e\u043f\u0435\u0440\u0430\u0442\u0438\u0432\u043d\u0430 \u0411\u0430\u043d\u043a\u0430\"][\"brand:bg\"=\"\u0426\u0435\u043d\u0442\u0440\u0430\u043b\u043d\u0430 \u041a\u043e\u043e\u043f\u0435\u0440\u0430\u0442\u0438\u0432\u043d\u0430 \u0411\u0430\u043d\u043a\u0430\"][\"brand:en\"=\"Central Cooperative Bank\"][\"brand:wikidata\"=\"Q2944755\"][\"name\"=\"\u0426\u0435\u043d\u0442\u0440\u0430\u043b\u043d\u0430 \u041a\u043e\u043e\u043f\u0435\u0440\u0430\u0442\u0438\u0432\u043d\u0430 \u0411\u0430\u043d\u043a\u0430\"][\"name:bg\"=\"\u0426\u0435\u043d\u0442\u0440\u0430\u043b\u043d\u0430 \u041a\u043e\u043e\u043f\u0435\u0440\u0430\u0442\u0438\u0432\u043d\u0430 \u0411\u0430\u043d\u043a\u0430\"][\"name:en\"=\"Central Cooperative Bank\"][\"short_name:bg\"=\"\u0426\u041a\u0411\"][\"short_name:en\"=\"CCBank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Ccblogo.png",
@@ -41834,7 +41834,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0426\u0435\u043d\u0442\u0440\u0430\u043b\u043d\u0430 \u041a\u043e\u043e\u043f\u0435\u0440\u0430\u0442\u0438\u0432\u043d\u0430 \u0411\u0430\u043d\u043a\u0430 \u0421\u043a\u043e\u043f\u0458\u0435",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0426\u0435\u043d\u0442\u0440\u0430\u043b\u043d\u0430 \u041a\u043e\u043e\u043f\u0435\u0440\u0430\u0442\u0438\u0432\u043d\u0430 \u0411\u0430\u043d\u043a\u0430\"][\"brand:en\"=\"Central Cooperative Bank\"][\"brand:mk\"=\"\u0426\u0435\u043d\u0442\u0440\u0430\u043b\u043d\u0430 \u041a\u043e\u043e\u043f\u0435\u0440\u0430\u0442\u0438\u0432\u043d\u0430 \u0411\u0430\u043d\u043a\u0430\"][\"brand:wikidata\"=\"Q114290462\"][\"name\"=\"\u0426\u0435\u043d\u0442\u0440\u0430\u043b\u043d\u0430 \u041a\u043e\u043e\u043f\u0435\u0440\u0430\u0442\u0438\u0432\u043d\u0430 \u0411\u0430\u043d\u043a\u0430\"][\"name:en\"=\"Central Cooperative Bank\"][\"name:mk\"=\"\u0426\u0435\u043d\u0442\u0440\u0430\u043b\u043d\u0430 \u041a\u043e\u043e\u043f\u0435\u0440\u0430\u0442\u0438\u0432\u043d\u0430 \u0411\u0430\u043d\u043a\u0430\"][\"short_name:en\"=\"CCBank\"][\"short_name:mk\"=\"\u0426\u041a\u0411\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -41870,7 +41870,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0426\u0435\u043f\u0442\u0435\u0440 \u0411\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0426\u0435\u043f\u0442\u0435\u0440 \u0411\u0430\u043d\u043a\"][\"brand:be\"=\"\u0426\u044d\u043f\u0442\u0430\u0440 \u0411\u0430\u043d\u043a\"][\"brand:en\"=\"Zepter Bank\"][\"brand:ru\"=\"\u0426\u0435\u043f\u0442\u0435\u0440 \u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q13033367\"][\"name\"=\"\u0426\u0435\u043f\u0442\u0435\u0440 \u0411\u0430\u043d\u043a\"][\"name:be\"=\"\u0426\u044d\u043f\u0442\u0430\u0440 \u0411\u0430\u043d\u043a\"][\"name:en\"=\"Zepter Bank\"][\"name:ru\"=\"\u0426\u0435\u043f\u0442\u0435\u0440 \u0411\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -41906,7 +41906,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0428\u043f\u0430\u0440\u043a\u0430\u0441\u0435",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0428\u043f\u0430\u0440\u043a\u0430\u0441\u0435\"][\"brand:wikidata\"=\"Q1555572\"][\"name\"=\"\u0428\u043f\u0430\u0440\u043a\u0430\u0441\u0435\"][\"name:en\"=\"Sparkassen\"][\"name:mk\"=\"\u0428\u043f\u0430\u0440\u043a\u0430\u0441\u0435\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Steierm\u00e4rkische_Sparkasse.svg",
@@ -41942,7 +41942,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u042d\u043a\u043e\u0418\u0441\u043b\u0430\u043c\u0438\u043a\u0411\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u042d\u043a\u043e\u0418\u0441\u043b\u0430\u043c\u0438\u043a\u0411\u0430\u043d\u043a\"][\"name\"=\"\u042d\u043a\u043e\u0418\u0441\u043b\u0430\u043c\u0438\u043a\u0411\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -41978,7 +41978,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u042e\u043d\u0438\u041a\u0440\u0435\u0434\u0438\u0442 \u0411\u0430\u043d\u043a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u042e\u043d\u0438\u041a\u0440\u0435\u0434\u0438\u0442 \u0411\u0430\u043d\u043a\"][\"brand:en\"=\"UniCredit Bank\"][\"brand:ru\"=\"\u042e\u043d\u0438\u041a\u0440\u0435\u0434\u0438\u0442 \u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q727011\"][\"name\"=\"\u042e\u043d\u0438\u041a\u0440\u0435\u0434\u0438\u0442 \u0411\u0430\u043d\u043a\"][\"name:en\"=\"UniCredit Bank\"][\"name:ru\"=\"\u042e\u043d\u0438\u041a\u0440\u0435\u0434\u0438\u0442 \u0411\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Moscow,_Prechistenskaya_Embankment_9_-_Unicredit_Russia_HQ.jpg",
@@ -42014,7 +42014,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u10d1\u10d0\u10d6\u10d8\u10e1\u10d1\u10d0\u10dc\u10d9\u10d8",
     query: "(nwr[\"amenity\"=\"bank\"][\"bic\"=\"CBASGE22\"][\"brand\"=\"\u10d1\u10d0\u10d6\u10d8\u10e1\u10d1\u10d0\u10dc\u10d9\u10d8\"][\"brand:en\"=\"BasisBank\"][\"brand:ka\"=\"\u10d1\u10d0\u10d6\u10d8\u10e1\u10d1\u10d0\u10dc\u10d9\u10d8\"][\"brand:ru\"=\"\u0411\u0430\u0437\u0438\u0441\u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q16365625\"][\"name\"=\"\u10d1\u10d0\u10d6\u10d8\u10e1\u10d1\u10d0\u10dc\u10d9\u10d8\"][\"name:en\"=\"BasisBank\"][\"name:ka\"=\"\u10d1\u10d0\u10d6\u10d8\u10e1\u10d1\u10d0\u10dc\u10d9\u10d8\"][\"name:ru\"=\"\u0411\u0430\u0437\u0438\u0441\u0411\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -42050,7 +42050,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u10d1\u10d0\u10dc\u10d9\u10d8 \u10e5\u10d0\u10e0\u10d7\u10e3",
     query: "(nwr[\"amenity\"=\"bank\"][\"bic\"=\"CRTUGE22\"][\"brand\"=\"\u10d1\u10d0\u10dc\u10d9\u10d8 \u10e5\u10d0\u10e0\u10d7\u10e3\"][\"brand:en\"=\"Cartu Bank\"][\"brand:ka\"=\"\u10d1\u10d0\u10dc\u10d9\u10d8 \u10e5\u10d0\u10e0\u10d7\u10e3\"][\"brand:ru\"=\"\u041a\u0430\u0440\u0442\u0443 \u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q25541238\"][\"name\"=\"\u10d1\u10d0\u10dc\u10d9\u10d8 \u10e5\u10d0\u10e0\u10d7\u10e3\"][\"name:en\"=\"Cartu Bank\"][\"name:ka\"=\"\u10d1\u10d0\u10dc\u10d9\u10d8 \u10e5\u10d0\u10e0\u10d7\u10e3\"][\"name:ru\"=\"\u041a\u0430\u0440\u0442\u0443 \u0411\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -42086,7 +42086,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u10d6\u10d8\u10e0\u10d0\u10d0\u10d7 \u10d1\u10d0\u10dc\u10d9\u10d8",
     query: "(nwr[\"amenity\"=\"bank\"][\"bic\"=\"TCZBGE22\"][\"brand\"=\"\u10d6\u10d8\u10e0\u10d0\u10d0\u10d7 \u10d1\u10d0\u10dc\u10d9\u10d8\"][\"brand:en\"=\"Ziraat Bank\"][\"brand:ka\"=\"\u10d6\u10d8\u10e0\u10d0\u10d0\u10d7 \u10d1\u10d0\u10dc\u10d9\u10d8\"][\"brand:ru\"=\"\u0417\u0438\u0440\u0430\u0430\u0442 \u0411\u0430\u043d\u043a\"][\"brand:tr\"=\"Ziraat Bankas\u0131\"][\"brand:wikidata\"=\"Q696003\"][\"name\"=\"\u10d6\u10d8\u10e0\u10d0\u10d0\u10d7 \u10d1\u10d0\u10dc\u10d9\u10d8\"][\"name:en\"=\"Ziraat Bank\"][\"name:ka\"=\"\u10d6\u10d8\u10e0\u10d0\u10d0\u10d7 \u10d1\u10d0\u10dc\u10d9\u10d8\"][\"name:ru\"=\"\u0417\u0438\u0440\u0430\u0430\u0442 \u0411\u0430\u043d\u043a\"][\"name:tr\"=\"Ziraat Bankas\u0131\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Ziraat_Bankas\u0131_2025_Logo.svg",
@@ -42122,7 +42122,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u10d7\u10d8\u10d1\u10d8\u10e1\u10d8 \u10d1\u10d0\u10dc\u10d9\u10d8",
     query: "(nwr[\"amenity\"=\"bank\"][\"bic\"=\"TBCBGE22\"][\"brand\"=\"\u10d7\u10d8\u10d1\u10d8\u10e1\u10d8 \u10d1\u10d0\u10dc\u10d9\u10d8\"][\"brand:en\"=\"TBC Bank\"][\"brand:ka\"=\"\u10d7\u10d8\u10d1\u10d8\u10e1\u10d8 \u10d1\u10d0\u10dc\u10d9\u10d8\"][\"brand:ru\"=\"\u0422\u0438\u0411\u0438\u0421\u0438 \u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q2620975\"][\"name\"=\"\u10d7\u10d8\u10d1\u10d8\u10e1\u10d8 \u10d1\u10d0\u10dc\u10d9\u10d8\"][\"name:en\"=\"TBC Bank\"][\"name:ka\"=\"\u10d7\u10d8\u10d1\u10d8\u10e1\u10d8 \u10d1\u10d0\u10dc\u10d9\u10d8\"][\"name:ru\"=\"\u0422\u0438\u0411\u0438\u0421\u0438 \u0411\u0430\u043d\u043a\"][\"short_name:en\"=\"TBC\"][\"short_name:ka\"=\"\u10d7\u10d8\u10d1\u10d8\u10e1\u10d8\"][\"short_name:ru\"=\"\u0422\u0438\u0411\u0438\u0421\u0438\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/TBC_Bank_building.jpg",
@@ -42158,7 +42158,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u10d8\u10e8\u10d1\u10d0\u10dc\u10d9\u10d8",
     query: "(nwr[\"amenity\"=\"bank\"][\"bic\"=\"ISBKGE22\"][\"brand\"=\"\u10d8\u10e8\u10d1\u10d0\u10dc\u10d9\u10d8\"][\"brand:en\"=\"IsBank\"][\"brand:ka\"=\"\u10d8\u10e8\u10d1\u10d0\u10dc\u10d9\u10d8\"][\"brand:ru\"=\"\u0418\u0448\u0411\u0430\u043d\u043a\"][\"brand:tr\"=\"\u0130\u015fBank\"][\"brand:wikidata\"=\"Q909613\"][\"name\"=\"\u10d8\u10e8\u10d1\u10d0\u10dc\u10d9\u10d8\"][\"name:en\"=\"IsBank\"][\"name:ka\"=\"\u10d8\u10e8\u10d1\u10d0\u10dc\u10d9\u10d8\"][\"name:ru\"=\"\u0418\u0448\u0411\u0430\u043d\u043a\"][\"name:tr\"=\"\u0130\u015fBank\"][\"operator\"=\"\u10e1\u10e1 \u10d8\u10e8\u10d1\u10d0\u10dc\u10d9\u10d8 \u10e1\u10d0\u10e5\u10d0\u10e0\u10d7\u10d5\u10d4\u10da\u10dd\"][\"operator:ka\"=\"\u10e1\u10e1 \u10d8\u10e8\u10d1\u10d0\u10dc\u10d9\u10d8 \u10e1\u10d0\u10e5\u10d0\u10e0\u10d7\u10d5\u10d4\u10da\u10dd\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/T\u00fcrkiye_\u0130\u015f_Bankas\u0131_logo.svg",
@@ -42194,7 +42194,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u10d9\u10e0\u10d4\u10d3\u10dd \u10d1\u10d0\u10dc\u10d9\u10d8",
     query: "(nwr[\"amenity\"=\"bank\"][\"bic\"=\"JSCRGE22\"][\"brand\"=\"\u10d9\u10e0\u10d4\u10d3\u10dd \u10d1\u10d0\u10dc\u10d9\u10d8\"][\"brand:en\"=\"Credo Bank\"][\"brand:ka\"=\"\u10d9\u10e0\u10d4\u10d3\u10dd \u10d1\u10d0\u10dc\u10d9\u10d8\"][\"brand:ru\"=\"\u041a\u0440\u0435\u0434\u043e \u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q131470024\"][\"name\"=\"\u10d9\u10e0\u10d4\u10d3\u10dd \u10d1\u10d0\u10dc\u10d9\u10d8\"][\"name:en\"=\"Credo Bank\"][\"name:ka\"=\"\u10d9\u10e0\u10d4\u10d3\u10dd \u10d1\u10d0\u10dc\u10d9\u10d8\"][\"name:ru\"=\"\u041a\u0440\u0435\u0434\u043e \u0411\u0430\u043d\u043a\"][\"short_name:en\"=\"Credo\"][\"short_name:ka\"=\"\u10d9\u10e0\u10d4\u10d3\u10dd\"][\"short_name:ru\"=\"\u041a\u0440\u0435\u0434\u043e\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -42230,7 +42230,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u10d9\u10e0\u10d8\u10e1\u10e2\u10d0\u10da\u10d8",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u10d9\u10e0\u10d8\u10e1\u10e2\u10d0\u10da\u10d8\"][\"brand:en\"=\"Crystal\"][\"brand:ka\"=\"\u10d9\u10e0\u10d8\u10e1\u10e2\u10d0\u10da\u10d8\"][\"brand:ru\"=\"\u041a\u0440\u0438\u0441\u0442\u0430\u043b\"][\"name\"=\"\u10d9\u10e0\u10d8\u10e1\u10e2\u10d0\u10da\u10d8\"][\"name:en\"=\"Crystal\"][\"name:ka\"=\"\u10d9\u10e0\u10d8\u10e1\u10e2\u10d0\u10da\u10d8\"][\"name:ru\"=\"\u041a\u0440\u0438\u0441\u0442\u0430\u043b\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -42266,7 +42266,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u10da\u10d8\u10d1\u10d4\u10e0\u10d7\u10d8 \u10d1\u10d0\u10dc\u10d9\u10d8",
     query: "(nwr[\"amenity\"=\"bank\"][\"bic\"=\"LBRTGE22\"][\"brand\"=\"\u10da\u10d8\u10d1\u10d4\u10e0\u10d7\u10d8\"][\"brand:en\"=\"Liberty\"][\"brand:ka\"=\"\u10da\u10d8\u10d1\u10d4\u10e0\u10d7\u10d8\"][\"brand:ru\"=\"\u041b\u0438\u0431\u0435\u0440\u0442\u0438\"][\"brand:wikidata\"=\"Q6541585\"][\"name\"=\"\u10da\u10d8\u10d1\u10d4\u10e0\u10d7\u10d8\"][\"name:en\"=\"Liberty\"][\"name:ka\"=\"\u10da\u10d8\u10d1\u10d4\u10e0\u10d7\u10d8\"][\"name:ru\"=\"\u041b\u0438\u0431\u0435\u0440\u0442\u0438\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Tbilisi_Fountain.jpg",
@@ -42302,7 +42302,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u10de\u10e0\u10dd\u10d9\u10e0\u10d4\u10d3\u10d8\u10e2 \u10d1\u10d0\u10dc\u10d9\u10d8",
     query: "(nwr[\"amenity\"=\"bank\"][\"bic\"=\"MIBGGE22\"][\"brand\"=\"\u10de\u10e0\u10dd\u10d9\u10e0\u10d4\u10d3\u10d8\u10e2 \u10d1\u10d0\u10dc\u10d9\u10d8\"][\"brand:en\"=\"ProCredit Bank\"][\"brand:ka\"=\"\u10de\u10e0\u10dd\u10d9\u10e0\u10d4\u10d3\u10d8\u10e2 \u10d1\u10d0\u10dc\u10d9\u10d8\"][\"brand:ru\"=\"\u041f\u0440\u043e\u041a\u0440\u0435\u0434\u0438\u0442 \u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q122763256\"][\"name\"=\"\u10de\u10e0\u10dd\u10d9\u10e0\u10d4\u10d3\u10d8\u10e2 \u10d1\u10d0\u10dc\u10d9\u10d8\"][\"name:en\"=\"ProCredit Bank\"][\"name:ka\"=\"\u10de\u10e0\u10dd\u10d9\u10e0\u10d4\u10d3\u10d8\u10e2 \u10d1\u10d0\u10dc\u10d9\u10d8\"][\"name:ru\"=\"\u041f\u0440\u043e\u041a\u0440\u0435\u0434\u0438\u0442 \u0411\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_ProCredit_Bank.svg",
@@ -42338,7 +42338,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u10e0\u10d4|\u10d1\u10d0\u10dc\u10d9\u10d8",
     query: "(nwr[\"amenity\"=\"bank\"][\"bic\"=\"PAHAGE22\"][\"brand\"=\"\u10e0\u10d4|\u10d1\u10d0\u10dc\u10d9\u10d8\"][\"brand:en\"=\"Re|Bank\"][\"brand:ka\"=\"\u10e0\u10d4|\u10d1\u10d0\u10dc\u10d9\u10d8\"][\"brand:ru\"=\"\u0420\u0435|\u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q131470027\"][\"name\"=\"\u10e0\u10d4|\u10d1\u10d0\u10dc\u10d9\u10d8\"][\"name:en\"=\"Re|Bank\"][\"name:ka\"=\"\u10e0\u10d4|\u10d1\u10d0\u10dc\u10d9\u10d8\"][\"name:ru\"=\"\u0420\u0435|\u0411\u0430\u043d\u043a\"][\"operator\"=\"\u10de\u10d0\u10e8\u10d0 \u10d1\u10d0\u10dc\u10d9\u10d8 \u10e1\u10d0\u10e5\u10d0\u10e0\u10d7\u10d5\u10d4\u10da\u10dd\"][\"operator:ka\"=\"\u10de\u10d0\u10e8\u10d0 \u10d1\u10d0\u10dc\u10d9\u10d8 \u10e1\u10d0\u10e5\u10d0\u10e0\u10d7\u10d5\u10d4\u10da\u10dd\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -42374,7 +42374,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u10e1\u10d0\u10e5\u10d0\u10e0\u10d7\u10d5\u10d4\u10da\u10dd\u10e1 \u10d1\u10d0\u10dc\u10d9\u10d8",
     query: "(nwr[\"amenity\"=\"bank\"][\"bic\"=\"BAGAGE22\"][\"brand\"=\"\u10e1\u10d0\u10e5\u10d0\u10e0\u10d7\u10d5\u10d4\u10da\u10dd\u10e1 \u10d1\u10d0\u10dc\u10d9\u10d8\"][\"brand:en\"=\"Bank of Georgia\"][\"brand:ka\"=\"\u10e1\u10d0\u10e5\u10d0\u10e0\u10d7\u10d5\u10d4\u10da\u10dd\u10e1 \u10d1\u10d0\u10dc\u10d9\u10d8\"][\"brand:ru\"=\"\u0411\u0430\u043d\u043a \u0413\u0440\u0443\u0437\u0438\u0438\"][\"brand:tr\"=\"G\u00fcrcistan Bankas\u0131\"][\"brand:wikidata\"=\"Q2469733\"][\"name\"=\"\u10e1\u10dd\u10da\u10dd\"][\"name:en\"=\"Solo\"][\"name:ka\"=\"\u10e1\u10dd\u10da\u10dd\"][\"name:ru\"=\"\u0421\u043e\u043b\u043e\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -42410,7 +42410,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u10e2\u10d4\u10e0\u10d0\u10d1\u10d0\u10dc\u10d9\u10d8",
     query: "(nwr[\"amenity\"=\"bank\"][\"bic\"=\"TEBAGE22\"][\"brand\"=\"\u10e2\u10d4\u10e0\u10d0\u10d1\u10d0\u10dc\u10d9\u10d8\"][\"brand:en\"=\"Terabank\"][\"brand:ka\"=\"\u10e2\u10d4\u10e0\u10d0\u10d1\u10d0\u10dc\u10d9\u10d8\"][\"brand:ru\"=\"\u0422\u0435\u0440\u0430\u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q131470026\"][\"name\"=\"\u10e2\u10d4\u10e0\u10d0\u10d1\u10d0\u10dc\u10d9\u10d8\"][\"name:en\"=\"Terabank\"][\"name:ka\"=\"\u10e2\u10d4\u10e0\u10d0\u10d1\u10d0\u10dc\u10d9\u10d8\"][\"name:ru\"=\"\u0422\u0435\u0440\u0430\u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -42446,7 +42446,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u10ee\u10d0\u10da\u10d8\u10d9 \u10d1\u10d0\u10dc\u10d9\u10d8",
     query: "(nwr[\"amenity\"=\"bank\"][\"bic\"=\"HABGGE22\"][\"brand\"=\"\u10ee\u10d0\u10da\u10d8\u10d9 \u10d1\u10d0\u10dc\u10d9\u10d8\"][\"brand:en\"=\"Halyk Bank\"][\"brand:ka\"=\"\u10ee\u10d0\u10da\u10d8\u10d9 \u10d1\u10d0\u10dc\u10d9\u10d8\"][\"brand:kk\"=\"\u0425\u0430\u043b\u044b\u049b \u0411\u0430\u043d\u043a\u0456\"][\"brand:ru\"=\"\u0425\u0430\u043b\u044b\u043a \u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q1046186\"][\"name\"=\"\u10ee\u10d0\u10da\u10d8\u10d9 \u10d1\u10d0\u10dc\u10d9\u10d8\"][\"name:en\"=\"Halyk Bank\"][\"name:ka\"=\"\u10ee\u10d0\u10da\u10d8\u10d9 \u10d1\u10d0\u10dc\u10d9\u10d8\"][\"name:kk\"=\"\u0425\u0430\u043b\u044b\u049b \u0411\u0430\u043d\u043a\u0456\"][\"name:ru\"=\"\u0425\u0430\u043b\u044b\u043a \u0411\u0430\u043d\u043a\"][\"operator\"=\"\u10ee\u10d0\u10da\u10d8\u10d9 \u10d1\u10d0\u10dc\u10d9\u10d8 \u10e1\u10d0\u10e5\u10d0\u10e0\u10d7\u10d5\u10d4\u10da\u10dd\"][\"operator:ka\"=\"\u10ee\u10d0\u10da\u10d8\u10d9 \u10d1\u10d0\u10dc\u10d9\u10d8 \u10e1\u10d0\u10e5\u10d0\u10e0\u10d7\u10d5\u10d4\u10da\u10dd\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -42482,7 +42482,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u05d1\u05e0\u05e7 \u05d0\u05d2\u05d5\u05d3",
     query: "(nwr[\"alt_name:en\"=\"Bank Igud\"][\"amenity\"=\"bank\"][\"brand\"=\"\u05d1\u05e0\u05e7 \u05d0\u05d2\u05d5\u05d3\"][\"brand:en\"=\"Union Bank of Israel\"][\"brand:he\"=\"\u05d1\u05e0\u05e7 \u05d0\u05d2\u05d5\u05d3\"][\"brand:wikidata\"=\"Q2903265\"][\"name\"=\"\u05d1\u05e0\u05e7 \u05d0\u05d2\u05d5\u05d3\"][\"name:en\"=\"Union Bank of Israel\"][\"name:he\"=\"\u05d1\u05e0\u05e7 \u05d0\u05d2\u05d5\u05d3\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -42518,7 +42518,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u05d1\u05e0\u05e7 \u05d0\u05d5\u05e6\u05e8 \u05d4\u05d7\u05d9\u05d9\u05dc",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u05d1\u05e0\u05e7 \u05d0\u05d5\u05e6\u05e8 \u05d4\u05d7\u05d9\u05d9\u05dc\"][\"brand:en\"=\"Bank Otsar Ha-Hayal\"][\"brand:he\"=\"\u05d1\u05e0\u05e7 \u05d0\u05d5\u05e6\u05e8 \u05d4\u05d7\u05d9\u05d9\u05dc\"][\"brand:wikidata\"=\"Q2900674\"][\"name\"=\"\u05d1\u05e0\u05e7 \u05d0\u05d5\u05e6\u05e8 \u05d4\u05d7\u05d9\u05d9\u05dc\"][\"name:en\"=\"Bank Otsar Ha-Hayal\"][\"name:he\"=\"\u05d1\u05e0\u05e7 \u05d0\u05d5\u05e6\u05e8 \u05d4\u05d7\u05d9\u05d9\u05dc\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -42554,7 +42554,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u05d1\u05e0\u05e7 \u05d3\u05d9\u05e1\u05e7\u05d5\u05e0\u05d8",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u05d1\u05e0\u05e7 \u05d3\u05d9\u05e1\u05e7\u05d5\u05e0\u05d8 \u05dc\u05d9\u05e9\u05e8\u05d0\u05dc\"][\"brand:en\"=\"Israel Discount Bank\"][\"brand:he\"=\"\u05d1\u05e0\u05e7 \u05d3\u05d9\u05e1\u05e7\u05d5\u05e0\u05d8 \u05dc\u05d9\u05e9\u05e8\u05d0\u05dc\"][\"brand:wikidata\"=\"Q250362\"][\"name\"=\"\u05d1\u05e0\u05e7 \u05d3\u05d9\u05e1\u05e7\u05d5\u05e0\u05d8\"][\"name:en\"=\"Bank Discount\"][\"name:he\"=\"\u05d1\u05e0\u05e7 \u05d3\u05d9\u05e1\u05e7\u05d5\u05e0\u05d8\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Discount_Bank,_Ltd_logo.svg",
@@ -42590,7 +42590,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u05d1\u05e0\u05e7 \u05d4\u05e4\u05d5\u05e2\u05dc\u05d9\u05dd",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u05d1\u05e0\u05e7 \u05d4\u05e4\u05d5\u05e2\u05dc\u05d9\u05dd\"][\"brand:en\"=\"Bank Hapoalim\"][\"brand:he\"=\"\u05d1\u05e0\u05e7 \u05d4\u05e4\u05d5\u05e2\u05dc\u05d9\u05dd\"][\"brand:wikidata\"=\"Q2666775\"][\"name\"=\"\u05d1\u05e0\u05e7 \u05d4\u05e4\u05d5\u05e2\u05dc\u05d9\u05dd\"][\"name:en\"=\"Bank Hapoalim\"][\"name:he\"=\"\u05d1\u05e0\u05e7 \u05d4\u05e4\u05d5\u05e2\u05dc\u05d9\u05dd\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_happoalim_2018_logo.svg",
@@ -42626,7 +42626,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u05d1\u05e0\u05e7 \u05d9\u05d4\u05d3",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u05d1\u05e0\u05e7 \u05d9\u05d4\u05d3\"][\"brand:en\"=\"Bank Yahav\"][\"brand:he\"=\"\u05d1\u05e0\u05e7 \u05d9\u05d4\u05d3\"][\"brand:wikidata\"=\"Q7187611\"][\"name\"=\"\u05d1\u05e0\u05e7 \u05d9\u05d4\u05d3\"][\"name:en\"=\"Bank Yahav\"][\"name:he\"=\"\u05d1\u05e0\u05e7 \u05d9\u05d4\u05d3\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -42662,7 +42662,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u05d1\u05e0\u05e7 \u05d9\u05e8\u05d5\u05e9\u05dc\u05d9\u05dd",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u05d1\u05e0\u05e7 \u05d9\u05e8\u05d5\u05e9\u05dc\u05d9\u05dd\"][\"brand:en\"=\"Bank of Jerusalem\"][\"brand:he\"=\"\u05d1\u05e0\u05e7 \u05d9\u05e8\u05d5\u05e9\u05dc\u05d9\u05dd\"][\"brand:wikidata\"=\"Q2900227\"][\"name\"=\"\u05d1\u05e0\u05e7 \u05d9\u05e8\u05d5\u05e9\u05dc\u05d9\u05dd\"][\"name:en\"=\"Bank of Jerusalem\"][\"name:he\"=\"\u05d1\u05e0\u05e7 \u05d9\u05e8\u05d5\u05e9\u05dc\u05d9\u05dd\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -42698,7 +42698,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u05d1\u05e0\u05e7 \u05dc\u05d0\u05d5\u05de\u05d9",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u05d1\u05e0\u05e7 \u05dc\u05d0\u05d5\u05de\u05d9\"][\"brand:en\"=\"Bank Leumi\"][\"brand:he\"=\"\u05d1\u05e0\u05e7 \u05dc\u05d0\u05d5\u05de\u05d9\"][\"brand:wikidata\"=\"Q806641\"][\"name\"=\"\u05d1\u05e0\u05e7 \u05dc\u05d0\u05d5\u05de\u05d9\"][\"name:en\"=\"Bank Leumi\"][\"name:he\"=\"\u05d1\u05e0\u05e7 \u05dc\u05d0\u05d5\u05de\u05d9\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BankLeumiLogoReupload.png",
@@ -42734,7 +42734,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u05d1\u05e0\u05e7 \u05de\u05e1\u05d3",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u05d1\u05e0\u05e7 \u05de\u05e1\u05d3\"][\"brand:en\"=\"Bank Massad\"][\"brand:he\"=\"\u05d1\u05e0\u05e7 \u05de\u05e1\u05d3\"][\"brand:wikidata\"=\"Q7187667\"][\"name\"=\"\u05d1\u05e0\u05e7 \u05de\u05e1\u05d3\"][\"name:en\"=\"Bank Massad\"][\"name:he\"=\"\u05d1\u05e0\u05e7 \u05de\u05e1\u05d3\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -42770,7 +42770,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u05d4\u05d1\u05e0\u05e7 \u05d4\u05d1\u05d9\u05e0\u05dc\u05d0\u05d5\u05de\u05d9",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u05d4\u05d1\u05e0\u05e7 \u05d4\u05d1\u05d9\u05e0\u05dc\u05d0\u05d5\u05de\u05d9\"][\"brand:en\"=\"First International Bank of Israel\"][\"brand:he\"=\"\u05d4\u05d1\u05e0\u05e7 \u05d4\u05d1\u05d9\u05e0\u05dc\u05d0\u05d5\u05de\u05d9\"][\"brand:wikidata\"=\"Q2777497\"][\"name\"=\"\u05d4\u05d1\u05e0\u05e7 \u05d4\u05d1\u05d9\u05e0\u05dc\u05d0\u05d5\u05de\u05d9\"][\"name:en\"=\"First International Bank of Israel\"][\"name:he\"=\"\u05d4\u05d1\u05e0\u05e7 \u05d4\u05d1\u05d9\u05e0\u05dc\u05d0\u05d5\u05de\u05d9\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/31.03.09_Tel_Aviv_066_Beinleumi_Tower_2.JPG",
@@ -42806,7 +42806,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u05de\u05d6\u05e8\u05d7\u05d9 \u05d8\u05e4\u05d7\u05d5\u05ea",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u05de\u05d6\u05e8\u05d7\u05d9 \u05d8\u05e4\u05d7\u05d5\u05ea\"][\"brand:en\"=\"Mizrahi-Tefahot\"][\"brand:he\"=\"\u05de\u05d6\u05e8\u05d7\u05d9 \u05d8\u05e4\u05d7\u05d5\u05ea\"][\"brand:wikidata\"=\"Q2777129\"][\"name\"=\"\u05d1\u05e0\u05e7 \u05de\u05d6\u05e8\u05d7\u05d9 \u05d8\u05e4\u05d7\u05d5\u05ea\"][\"name:en\"=\"Bank Mizrahi-Tefahot\"][\"name:he\"=\"\u05d1\u05e0\u05e7 \u05de\u05d6\u05e8\u05d7\u05d9 \u05d8\u05e4\u05d7\u05d5\u05ea\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/\u05dc\u05d5\u05d2\u05d5_\u05e9\u05dc_\u05d1\u05e0\u05e7_\u05de\u05d6\u05e8\u05d7\u05d9-\u05d8\u05e4\u05d7\u05d5\u05ea.svg",
@@ -42842,7 +42842,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0625\u062a\u0634 \u0625\u0633 \u0628\u064a \u0633\u064a \u0627\u0644\u0633\u0639\u0648\u062f\u064a\u0629",
     query: "(nwr[\"alt_name:en\"=\"HSBCSaudi\"][\"amenity\"=\"bank\"][\"brand\"=\"\u0625\u062a\u0634 \u0625\u0633 \u0628\u064a \u0633\u064a \u0627\u0644\u0633\u0639\u0648\u062f\u064a\u0629\"][\"brand:ar\"=\"\u0625\u062a\u0634 \u0625\u0633 \u0628\u064a \u0633\u064a \u0627\u0644\u0633\u0639\u0648\u062f\u064a\u0629\"][\"brand:en\"=\"HSBC Saudi Arabia\"][\"brand:wikidata\"=\"Q5635879\"][\"name\"=\"\u0625\u062a\u0634 \u0625\u0633 \u0628\u064a \u0633\u064a \u0627\u0644\u0633\u0639\u0648\u062f\u064a\u0629\"][\"name:ar\"=\"\u0625\u062a\u0634 \u0625\u0633 \u0628\u064a \u0633\u064a \u0627\u0644\u0633\u0639\u0648\u062f\u064a\u0629\"][\"name:en\"=\"HSBC Saudi Arabia\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -42878,7 +42878,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0627\u0633\u0679\u06cc\u0646\u0688\u0631\u0688 \u0686\u0627\u0631\u0679\u0631\u0688",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0627\u0633\u0679\u06cc\u0646\u0688\u0631\u0688 \u0686\u0627\u0631\u0679\u0631\u0688\"][\"brand:en\"=\"Standard Chartered\"][\"brand:ur\"=\"\u0627\u0633\u0679\u06cc\u0646\u0688\u0631\u0688 \u0686\u0627\u0631\u0679\u0631\u0688\"][\"brand:wikidata\"=\"Q7598200\"][\"name\"=\"\u0627\u0633\u0679\u06cc\u0646\u0688\u0631\u0688 \u0686\u0627\u0631\u0679\u0631\u0688\"][\"name:en\"=\"Standard Chartered\"][\"name:ur\"=\"\u0627\u0633\u0679\u06cc\u0646\u0688\u0631\u0688 \u0686\u0627\u0631\u0679\u0631\u0688\"][\"short_name\"=\"\u0627\u06cc\u0633 \u0633\u06cc \u0628\u06cc\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Standard_Chartered_Bank_Building,_Karachi.jpg",
@@ -42914,7 +42914,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0623\u0647\u0644\u064a \u0627\u0644\u0633\u0639\u0648\u062f\u064a",
     query: "(nwr[\"alt_name:en\"=\"SNB\"][\"amenity\"=\"bank\"][\"brand\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0623\u0647\u0644\u064a \u0627\u0644\u0633\u0639\u0648\u062f\u064a\"][\"brand:ar\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0623\u0647\u0644\u064a \u0627\u0644\u0633\u0639\u0648\u062f\u064a\"][\"brand:en\"=\"Saudi National Bank\"][\"brand:wikidata\"=\"Q1518238\"][\"name\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0623\u0647\u0644\u064a \u0627\u0644\u0633\u0639\u0648\u062f\u064a\"][\"name:ar\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0623\u0647\u0644\u064a \u0627\u0644\u0633\u0639\u0648\u062f\u064a\"][\"name:en\"=\"Saudi National Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Saudi_National_Bank_Logo.svg",
@@ -42950,7 +42950,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0623\u0648\u0644",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0623\u0648\u0644\"][\"brand:ar\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0623\u0648\u0644\"][\"brand:en\"=\"Alawwal Bank\"][\"brand:wikidata\"=\"Q2693351\"][\"name\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0623\u0648\u0644\"][\"name:ar\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0623\u0648\u0644\"][\"name:en\"=\"Alawwal Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Alawal_Bank_Logo.svg",
@@ -42986,7 +42986,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0633\u0639\u0648\u062f\u064a \u0627\u0644\u0628\u0631\u064a\u0637\u0627\u0646\u064a",
     query: "(nwr[\"alt_name:en\"=\"SABB\"][\"amenity\"=\"bank\"][\"brand\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0633\u0639\u0648\u062f\u064a \u0627\u0644\u0628\u0631\u064a\u0637\u0627\u0646\u064a\"][\"brand:ar\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0633\u0639\u0648\u062f\u064a \u0627\u0644\u0628\u0631\u064a\u0637\u0627\u0646\u064a\"][\"brand:en\"=\"Saudi British Bank\"][\"brand:wikidata\"=\"Q4166519\"][\"name\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0633\u0639\u0648\u062f\u064a \u0627\u0644\u0628\u0631\u064a\u0637\u0627\u0646\u064a\"][\"name:ar\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0633\u0639\u0648\u062f\u064a \u0627\u0644\u0628\u0631\u064a\u0637\u0627\u0646\u064a\"][\"name:en\"=\"Saudi British Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/SABB_Bank_Logo.svg",
@@ -43022,7 +43022,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0633\u0639\u0648\u062f\u064a \u0627\u0644\u0641\u0631\u0646\u0633\u064a",
     query: "(nwr[\"alt_name:en\"=\"BSF\"][\"amenity\"=\"bank\"][\"brand\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0633\u0639\u0648\u062f\u064a \u0627\u0644\u0641\u0631\u0646\u0633\u064a\"][\"brand:ar\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0633\u0639\u0648\u062f\u064a \u0627\u0644\u0641\u0631\u0646\u0633\u064a\"][\"brand:en\"=\"Banque Saudi Fransi\"][\"brand:wikidata\"=\"Q7181252\"][\"name\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0633\u0639\u0648\u062f\u064a \u0627\u0644\u0641\u0631\u0646\u0633\u064a\"][\"name:ar\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0633\u0639\u0648\u062f\u064a \u0627\u0644\u0641\u0631\u0646\u0633\u064a\"][\"name:en\"=\"Banque Saudi Fransi\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Banque_Saudi_Fransi_Logo.svg",
@@ -43058,7 +43058,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0633\u0639\u0648\u062f\u064a \u0644\u0644\u0627\u0633\u062a\u062b\u0645\u0627\u0631",
     query: "(nwr[\"alt_name:en\"=\"SAIB\"][\"amenity\"=\"bank\"][\"brand\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0633\u0639\u0648\u062f\u064a \u0644\u0644\u0627\u0633\u062a\u062b\u0645\u0627\u0631\"][\"brand:ar\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0633\u0639\u0648\u062f\u064a \u0644\u0644\u0627\u0633\u062a\u062b\u0645\u0627\u0631\"][\"brand:en\"=\"Saudi Investment Bank\"][\"brand:wikidata\"=\"Q12184641\"][\"name\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0633\u0639\u0648\u062f\u064a \u0644\u0644\u0627\u0633\u062a\u062b\u0645\u0627\u0631\"][\"name:ar\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0633\u0639\u0648\u062f\u064a \u0644\u0644\u0627\u0633\u062a\u062b\u0645\u0627\u0631\"][\"name:en\"=\"Saudi Investment Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -43094,7 +43094,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0639\u0631\u0628\u064a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0639\u0631\u0628\u064a\"][\"name\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0639\u0631\u0628\u064a\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -43130,7 +43130,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0639\u0631\u0628\u064a \u0627\u0644\u0648\u0637\u0646\u064a",
     query: "(nwr[\"alt_name:en\"=\"ANB\"][\"amenity\"=\"bank\"][\"brand\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0639\u0631\u0628\u064a \u0627\u0644\u0648\u0637\u0646\u064a\"][\"brand:ar\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0639\u0631\u0628\u064a \u0627\u0644\u0648\u0637\u0646\u064a\"][\"brand:en\"=\"Arab National Bank\"][\"brand:wikidata\"=\"Q4783214\"][\"name\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0639\u0631\u0628\u064a \u0627\u0644\u0648\u0637\u0646\u064a\"][\"name:ar\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0639\u0631\u0628\u064a \u0627\u0644\u0648\u0637\u0646\u064a\"][\"name:en\"=\"Arab National Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -43166,7 +43166,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0639\u0631\u0628\u064a \u0644\u062a\u0648\u0646\u0633",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0639\u0631\u0628\u064a \u0644\u062a\u0648\u0646\u0633\"][\"brand:ar\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0639\u0631\u0628\u064a \u0644\u062a\u0648\u0646\u0633\"][\"brand:en\"=\"Arab Tunisian Bank\"][\"brand:wikidata\"=\"Q2859329\"][\"name\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0639\u0631\u0628\u064a \u0644\u062a\u0648\u0646\u0633\"][\"name:ar\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0639\u0631\u0628\u064a \u0644\u062a\u0648\u0646\u0633\"][\"name:en\"=\"Arab Tunisian Bank\"][\"short_name\"=\"ATB\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/ATB_headquarters.JPG",
@@ -43202,7 +43202,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0628\u0627\u0646\u06a9 \u0622\u06cc\u0646\u062f\u0647",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0628\u0627\u0646\u06a9 \u0622\u06cc\u0646\u062f\u0647\"][\"brand:en\"=\"Ayandeh Bank\"][\"brand:fa\"=\"\u0628\u0627\u0646\u06a9 \u0622\u06cc\u0646\u062f\u0647\"][\"brand:wikidata\"=\"Q5938144\"][\"name\"=\"\u0628\u0627\u0646\u06a9 \u0622\u06cc\u0646\u062f\u0647\"][\"name:en\"=\"Ayandeh Bank\"][\"name:fa\"=\"\u0628\u0627\u0646\u06a9 \u0622\u06cc\u0646\u062f\u0647\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -43238,7 +43238,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0628\u0627\u0646\u06a9 \u0627\u0642\u062a\u0635\u0627\u062f \u0646\u0648\u06cc\u0646",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0628\u0627\u0646\u06a9 \u0627\u0642\u062a\u0635\u0627\u062f \u0646\u0648\u06cc\u0646\"][\"brand:en\"=\"EN Bank\"][\"brand:fa\"=\"\u0628\u0627\u0646\u06a9 \u0627\u0642\u062a\u0635\u0627\u062f \u0646\u0648\u06cc\u0646\"][\"brand:wikidata\"=\"Q5323768\"][\"name\"=\"\u0628\u0627\u0646\u06a9 \u0627\u0642\u062a\u0635\u0627\u062f \u0646\u0648\u06cc\u0646\"][\"name:en\"=\"EN Bank\"][\"name:fa\"=\"\u0628\u0627\u0646\u06a9 \u0627\u0642\u062a\u0635\u0627\u062f \u0646\u0648\u06cc\u0646\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/EnbankNewLog-100x18.png",
@@ -43274,7 +43274,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0628\u0627\u0646\u06a9 \u0627\u0646\u0635\u0627\u0631",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0628\u0627\u0646\u06a9 \u0627\u0646\u0635\u0627\u0631\"][\"brand:en\"=\"Ansar Bank\"][\"brand:fa\"=\"\u0628\u0627\u0646\u06a9 \u0627\u0646\u0635\u0627\u0631\"][\"brand:wikidata\"=\"Q5862675\"][\"name\"=\"\u0628\u0627\u0646\u06a9 \u0627\u0646\u0635\u0627\u0631\"][\"name:en\"=\"Ansar Bank\"][\"name:fa\"=\"\u0628\u0627\u0646\u06a9 \u0627\u0646\u0635\u0627\u0631\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -43310,7 +43310,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0628\u0627\u0646\u06a9 \u0627\u06cc\u0631\u0627\u0646 \u0632\u0645\u06cc\u0646",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0628\u0627\u0646\u06a9 \u0627\u06cc\u0631\u0627\u0646 \u0632\u0645\u06cc\u0646\"][\"brand:wikidata\"=\"Q5934423\"][\"name\"=\"\u0628\u0627\u0646\u06a9 \u0627\u06cc\u0631\u0627\u0646 \u0632\u0645\u06cc\u0646\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -43346,7 +43346,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0628\u0627\u0646\u06a9 \u067e\u0627\u0631\u0633\u06cc\u0627\u0646",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0628\u0627\u0646\u06a9 \u067e\u0627\u0631\u0633\u06cc\u0627\u0646\"][\"brand:en\"=\"Parsian Bank\"][\"brand:fa\"=\"\u0628\u0627\u0646\u06a9 \u067e\u0627\u0631\u0633\u06cc\u0627\u0646\"][\"brand:wikidata\"=\"Q2410404\"][\"name\"=\"\u0628\u0627\u0646\u06a9 \u067e\u0627\u0631\u0633\u06cc\u0627\u0646\"][\"name:en\"=\"Parsian Bank\"][\"name:fa\"=\"\u0628\u0627\u0646\u06a9 \u067e\u0627\u0631\u0633\u06cc\u0627\u0646\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -43382,7 +43382,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0628\u0627\u0646\u06a9 \u067e\u0627\u0633\u0627\u0631\u06af\u0627\u062f",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0628\u0627\u0646\u06a9 \u067e\u0627\u0633\u0627\u0631\u06af\u0627\u062f\"][\"brand:en\"=\"Bank Pasargad\"][\"brand:fa\"=\"\u0628\u0627\u0646\u06a9 \u067e\u0627\u0633\u0627\u0631\u06af\u0627\u062f\"][\"brand:wikidata\"=\"Q4855962\"][\"name\"=\"\u0628\u0627\u0646\u06a9 \u067e\u0627\u0633\u0627\u0631\u06af\u0627\u062f\"][\"name:en\"=\"Bank Pasargad\"][\"name:fa\"=\"\u0628\u0627\u0646\u06a9 \u067e\u0627\u0633\u0627\u0631\u06af\u0627\u062f\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -43418,7 +43418,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0628\u0627\u0646\u06a9 \u062a\u062c\u0627\u0631\u062a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0628\u0627\u0646\u06a9 \u062a\u062c\u0627\u0631\u062a\"][\"brand:wikidata\"=\"Q7695198\"][\"name\"=\"\u0628\u0627\u0646\u06a9 \u062a\u062c\u0627\u0631\u062a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Tejarat_Bank_Logo.svg",
@@ -43454,7 +43454,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0628\u0627\u0646\u06a9 \u062a\u0648\u0633\u0639\u0647 \u062a\u0639\u0627\u0648\u0646",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0628\u0627\u0646\u06a9 \u062a\u0648\u0633\u0639\u0647 \u062a\u0639\u0627\u0648\u0646\"][\"brand:wikidata\"=\"Q5684450\"][\"name\"=\"\u0628\u0627\u0646\u06a9 \u062a\u0648\u0633\u0639\u0647 \u062a\u0639\u0627\u0648\u0646\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -43490,7 +43490,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0628\u0627\u0646\u06a9 \u062f\u06cc",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0628\u0627\u0646\u06a9 \u062f\u06cc\"][\"brand:en\"=\"Bank Day\"][\"brand:fa\"=\"\u0628\u0627\u0646\u06a9 \u062f\u06cc\"][\"brand:wikidata\"=\"Q5942230\"][\"name\"=\"\u0628\u0627\u0646\u06a9 \u062f\u06cc\"][\"name:en\"=\"Bank Day\"][\"name:fa\"=\"\u0628\u0627\u0646\u06a9 \u062f\u06cc\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -43526,7 +43526,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0628\u0627\u0646\u06a9 \u0631\u0641\u0627\u0647",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0628\u0627\u0646\u06a9 \u0631\u0641\u0627\u0647\"][\"brand:en\"=\"Refah Bank\"][\"brand:fa\"=\"\u0628\u0627\u0646\u06a9 \u0631\u0641\u0627\u0647\"][\"brand:wikidata\"=\"Q7307083\"][\"name\"=\"\u0628\u0627\u0646\u06a9 \u0631\u0641\u0627\u0647\"][\"name:en\"=\"Refah Bank\"][\"name:fa\"=\"\u0628\u0627\u0646\u06a9 \u0631\u0641\u0627\u0647\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/\u0644\u0648\u06af\u0648_\u062c\u062f\u06cc\u062f_\u0628\u0627\u0646\u06a9_\u0631\u0641\u0627\u0647_\u06a9\u0627\u0631\u06af\u0631\u0627\u0646.svg",
@@ -43562,7 +43562,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0628\u0627\u0646\u06a9 \u0633\u0627\u0645\u0627\u0646",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0628\u0627\u0646\u06a9 \u0633\u0627\u0645\u0627\u0646\"][\"brand:en\"=\"Saman Bank\"][\"brand:fa\"=\"\u0628\u0627\u0646\u06a9 \u0633\u0627\u0645\u0627\u0646\"][\"brand:wikidata\"=\"Q4117676\"][\"name\"=\"\u0628\u0627\u0646\u06a9 \u0633\u0627\u0645\u0627\u0646\"][\"name:en\"=\"Saman Bank\"][\"name:fa\"=\"\u0628\u0627\u0646\u06a9 \u0633\u0627\u0645\u0627\u0646\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -43598,7 +43598,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0628\u0627\u0646\u06a9 \u0633\u067e\u0647",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0628\u0627\u0646\u06a9 \u0633\u067e\u0647\"][\"brand:en\"=\"Bank Sepah\"][\"brand:fa\"=\"\u0628\u0627\u0646\u06a9 \u0633\u067e\u0647\"][\"brand:wikidata\"=\"Q2882624\"][\"name\"=\"\u0628\u0627\u0646\u06a9 \u0633\u067e\u0647\"][\"name:en\"=\"Bank Sepah\"][\"name:fa\"=\"\u0628\u0627\u0646\u06a9 \u0633\u067e\u0647\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BankSepah_Logo.png",
@@ -43634,7 +43634,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0628\u0627\u0646\u06a9 \u0633\u0631\u0645\u0627\u06cc\u0647",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0628\u0627\u0646\u06a9 \u0633\u0631\u0645\u0627\u06cc\u0647\"][\"brand:en\"=\"Sarmayeh Bank\"][\"brand:fa\"=\"\u0628\u0627\u0646\u06a9 \u0633\u0631\u0645\u0627\u06cc\u0647\"][\"brand:wikidata\"=\"Q7424291\"][\"name\"=\"\u0628\u0627\u0646\u06a9 \u0633\u0631\u0645\u0627\u06cc\u0647\"][\"name:en\"=\"Sarmayeh Bank\"][\"name:fa\"=\"\u0628\u0627\u0646\u06a9 \u0633\u0631\u0645\u0627\u06cc\u0647\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -43670,7 +43670,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0628\u0627\u0646\u06a9 \u0633\u06cc\u0646\u0627",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0628\u0627\u0646\u06a9 \u0633\u06cc\u0646\u0627\"][\"brand:en\"=\"Sina Bank\"][\"brand:fa\"=\"\u0628\u0627\u0646\u06a9 \u0633\u06cc\u0646\u0627\"][\"brand:wikidata\"=\"Q10860246\"][\"name\"=\"\u0628\u0627\u0646\u06a9 \u0633\u06cc\u0646\u0627\"][\"name:en\"=\"Sina Bank\"][\"name:fa\"=\"\u0628\u0627\u0646\u06a9 \u0633\u06cc\u0646\u0627\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Sina_Bank_Logo.svg",
@@ -43706,7 +43706,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0628\u0627\u0646\u06a9 \u0634\u0647\u0631",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0628\u0627\u0646\u06a9 \u0634\u0647\u0631\"][\"brand:en\"=\"Shahr Bank\"][\"brand:fa\"=\"\u0628\u0627\u0646\u06a9 \u0634\u0647\u0631\"][\"brand:wikidata\"=\"Q5941033\"][\"name\"=\"\u0628\u0627\u0646\u06a9 \u0634\u0647\u0631\"][\"name:en\"=\"Shahr Bank\"][\"name:fa\"=\"\u0628\u0627\u0646\u06a9 \u0634\u0647\u0631\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Enqelab_(Shah_Reza)_Street_15.jpg",
@@ -43742,7 +43742,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0628\u0627\u0646\u06a9 \u0635\u0627\u062f\u0631\u0627\u062a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0628\u0627\u0646\u06a9 \u0635\u0627\u062f\u0631\u0627\u062a\"][\"brand:en\"=\"Bank Saderat Iran\"][\"brand:fa\"=\"\u0628\u0627\u0646\u06a9 \u0635\u0627\u062f\u0631\u0627\u062a\"][\"brand:wikidata\"=\"Q2882608\"][\"name\"=\"\u0628\u0627\u0646\u06a9 \u0635\u0627\u062f\u0631\u0627\u062a\"][\"name:en\"=\"Bank Saderat Iran\"][\"name:fa\"=\"\u0628\u0627\u0646\u06a9 \u0635\u0627\u062f\u0631\u0627\u062a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_Saderat_Iran_logo.png",
@@ -43778,7 +43778,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0628\u0627\u0646\u06a9 \u0642\u0631\u0636 \u0627\u0644\u062d\u0633\u0646\u0647 \u0645\u0647\u0631 \u0627\u06cc\u0631\u0627\u0646",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0628\u0627\u0646\u06a9 \u0642\u0631\u0636 \u0627\u0644\u062d\u0633\u0646\u0647 \u0645\u0647\u0631 \u0627\u06cc\u0631\u0627\u0646\"][\"brand:en\"=\"Qarz Al-Hasaneh Mehr Iran Bank\"][\"brand:fa\"=\"\u0628\u0627\u0646\u06a9 \u0642\u0631\u0636 \u0627\u0644\u062d\u0633\u0646\u0647 \u0645\u0647\u0631 \u0627\u06cc\u0631\u0627\u0646\"][\"brand:wikidata\"=\"Q18327813\"][\"name\"=\"\u0628\u0627\u0646\u06a9 \u0642\u0631\u0636 \u0627\u0644\u062d\u0633\u0646\u0647 \u0645\u0647\u0631 \u0627\u06cc\u0631\u0627\u0646\"][\"name:en\"=\"Qarz Al-Hasaneh Mehr Iran Bank\"][\"name:fa\"=\"\u0628\u0627\u0646\u06a9 \u0642\u0631\u0636 \u0627\u0644\u062d\u0633\u0646\u0647 \u0645\u0647\u0631 \u0627\u06cc\u0631\u0627\u0646\"][\"short_name\"=\"QMB\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -43814,7 +43814,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0628\u0627\u0646\u06a9 \u0642\u0648\u0627\u0645\u06cc\u0646",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0628\u0627\u0646\u06a9 \u0642\u0648\u0627\u0645\u06cc\u0646\"][\"brand:en\"=\"Ghavamin Bank\"][\"brand:fa\"=\"\u0628\u0627\u0646\u06a9 \u0642\u0648\u0627\u0645\u06cc\u0646\"][\"brand:wikidata\"=\"Q10860253\"][\"name\"=\"\u0628\u0627\u0646\u06a9 \u0642\u0648\u0627\u0645\u06cc\u0646\"][\"name:en\"=\"Ghavamin Bank\"][\"name:fa\"=\"\u0628\u0627\u0646\u06a9 \u0642\u0648\u0627\u0645\u06cc\u0646\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -43850,7 +43850,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0628\u0627\u0646\u06a9 \u06a9\u0634\u0627\u0648\u0631\u0632\u06cc",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0628\u0627\u0646\u06a9 \u06a9\u0634\u0627\u0648\u0631\u0632\u06cc\"][\"brand:en\"=\"Bank Keshavarzi Iran\"][\"brand:fa\"=\"\u0628\u0627\u0646\u06a9 \u06a9\u0634\u0627\u0648\u0631\u0632\u06cc\"][\"brand:wikidata\"=\"Q6395007\"][\"name\"=\"\u0628\u0627\u0646\u06a9 \u06a9\u0634\u0627\u0648\u0631\u0632\u06cc\"][\"name:en\"=\"Bank Keshavarzi Iran\"][\"name:fa\"=\"\u0628\u0627\u0646\u06a9 \u06a9\u0634\u0627\u0648\u0631\u0632\u06cc\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -43886,7 +43886,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0628\u0627\u0646\u06a9 \u06af\u0631\u062f\u0634\u06af\u0631\u06cc",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0628\u0627\u0646\u06a9 \u06af\u0631\u062f\u0634\u06af\u0631\u06cc\"][\"name\"=\"\u0628\u0627\u0646\u06a9 \u06af\u0631\u062f\u0634\u06af\u0631\u06cc\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -43922,7 +43922,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0628\u0627\u0646\u06a9 \u0645\u0633\u06a9\u0646",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0628\u0627\u0646\u06a9 \u0645\u0633\u06a9\u0646\"][\"brand:en\"=\"Bank Maskan\"][\"brand:fa\"=\"\u0628\u0627\u0646\u06a9 \u0645\u0633\u06a9\u0646\"][\"brand:wikidata\"=\"Q4855942\"][\"name\"=\"\u0628\u0627\u0646\u06a9 \u0645\u0633\u06a9\u0646\"][\"name:en\"=\"Bank Maskan\"][\"name:fa\"=\"\u0628\u0627\u0646\u06a9 \u0645\u0633\u06a9\u0646\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_maskan.jpg",
@@ -43958,7 +43958,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0628\u0627\u0646\u06a9 \u0645\u0644\u062a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0628\u0627\u0646\u06a9 \u0645\u0644\u062a\"][\"brand:en\"=\"Bank Mellat\"][\"brand:fa\"=\"\u0628\u0627\u0646\u06a9 \u0645\u0644\u062a\"][\"brand:wikidata\"=\"Q4855944\"][\"name\"=\"\u0628\u0627\u0646\u06a9 \u0645\u0644\u062a\"][\"name:en\"=\"Bank Mellat\"][\"name:fa\"=\"\u0628\u0627\u0646\u06a9 \u0645\u0644\u062a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Melat_Bank_headquarters_2.jpg",
@@ -43994,7 +43994,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0628\u0627\u0646\u06a9 \u0645\u0644\u06cc",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0628\u0627\u0646\u06a9 \u0645\u0644\u06cc\"][\"brand:en\"=\"Bank Melli Iran\"][\"brand:fa\"=\"\u0628\u0627\u0646\u06a9 \u0645\u0644\u06cc\"][\"brand:wikidata\"=\"Q806640\"][\"name\"=\"\u0628\u0627\u0646\u06a9 \u0645\u0644\u06cc\"][\"name:en\"=\"Bank Melli Iran\"][\"name:fa\"=\"\u0628\u0627\u0646\u06a9 \u0645\u0644\u06cc\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_Melli_Iran_New_Logo.png",
@@ -44030,7 +44030,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0628\u0627\u0646\u06a9 \u0645\u0647\u0631 \u0627\u0642\u062a\u0635\u0627\u062f",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0628\u0627\u0646\u06a9 \u0645\u0647\u0631 \u0627\u0642\u062a\u0635\u0627\u062f\"][\"brand:wikidata\"=\"Q5942921\"][\"name\"=\"\u0628\u0627\u0646\u06a9 \u0645\u0647\u0631 \u0627\u0642\u062a\u0635\u0627\u062f\"][\"name:en\"=\"Mehr Eqtesad Bank\"][\"name:fa\"=\"\u0628\u0627\u0646\u06a9 \u0645\u0647\u0631 \u0627\u0642\u062a\u0635\u0627\u062f\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -44066,7 +44066,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0628\u0646\u0643 \u0627\u0644\u0628\u0644\u0627\u062f",
     query: "(nwr[\"alt_name:en\"=\"Al Bilad Bank\"][\"amenity\"=\"bank\"][\"brand\"=\"\u0628\u0646\u0643 \u0627\u0644\u0628\u0644\u0627\u062f\"][\"brand:ar\"=\"\u0628\u0646\u0643 \u0627\u0644\u0628\u0644\u0627\u062f\"][\"brand:en\"=\"Bank Albilad\"][\"brand:wikidata\"=\"Q4166498\"][\"name\"=\"\u0628\u0646\u0643 \u0627\u0644\u0628\u0644\u0627\u062f\"][\"name:ar\"=\"\u0628\u0646\u0643 \u0627\u0644\u0628\u0644\u0627\u062f\"][\"name:en\"=\"Bank Albilad\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -44102,7 +44102,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0628\u0646\u0643 \u0627\u0644\u062c\u0632\u064a\u0631\u0629",
     query: "(nwr[\"alt_name:en\"=\"BAJ\"][\"amenity\"=\"bank\"][\"brand\"=\"\u0628\u0646\u0643 \u0627\u0644\u062c\u0632\u064a\u0631\u0629\"][\"brand:ar\"=\"\u0628\u0646\u0643 \u0627\u0644\u062c\u0632\u064a\u0631\u0629\"][\"brand:en\"=\"Bank Aljazira\"][\"brand:wikidata\"=\"Q12199341\"][\"name\"=\"\u0628\u0646\u0643 \u0627\u0644\u062c\u0632\u064a\u0631\u0629\"][\"name:ar\"=\"\u0628\u0646\u0643 \u0627\u0644\u062c\u0632\u064a\u0631\u0629\"][\"name:en\"=\"Bank Aljazira\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -44138,7 +44138,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0628\u0646\u0643 \u0627\u0644\u0631\u064a\u0627\u0636",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0628\u0646\u0643 \u0627\u0644\u0631\u064a\u0627\u0636\"][\"brand:ar\"=\"\u0628\u0646\u0643 \u0627\u0644\u0631\u064a\u0627\u0636\"][\"brand:en\"=\"Riyad Bank\"][\"brand:wikidata\"=\"Q3433985\"][\"name\"=\"\u0628\u0646\u0643 \u0627\u0644\u0631\u064a\u0627\u0636\"][\"name:ar\"=\"\u0628\u0646\u0643 \u0627\u0644\u0631\u064a\u0627\u0636\"][\"name:en\"=\"Riyad Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Riyad_Bank_logo.svg",
@@ -44174,7 +44174,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0628\u0646\u0643 \u062a\u0648\u0646\u0633 \u0627\u0644\u0639\u0631\u0628\u064a \u0627\u0644\u062f\u0648\u0644\u064a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0628\u0646\u0643 \u062a\u0648\u0646\u0633 \u0627\u0644\u0639\u0631\u0628\u064a \u0627\u0644\u062f\u0648\u0644\u064a\"][\"brand:ar\"=\"\u0628\u0646\u0643 \u062a\u0648\u0646\u0633 \u0627\u0644\u0639\u0631\u0628\u064a \u0627\u0644\u062f\u0648\u0644\u064a\"][\"brand:en\"=\"Arab International Bank of Tunisia\"][\"brand:fr\"=\"Banque internationale arabe de Tunisie\"][\"brand:wikidata\"=\"Q690739\"][\"name\"=\"\u0628\u0646\u0643 \u062a\u0648\u0646\u0633 \u0627\u0644\u0639\u0631\u0628\u064a \u0627\u0644\u062f\u0648\u0644\u064a\"][\"name:ar\"=\"\u0628\u0646\u0643 \u062a\u0648\u0646\u0633 \u0627\u0644\u0639\u0631\u0628\u064a \u0627\u0644\u062f\u0648\u0644\u064a\"][\"name:en\"=\"Arab International Bank of Tunisia\"][\"name:fr\"=\"Banque internationale arabe de Tunisie\"][\"short_name:fr\"=\"BIAT\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Nouveau_si\u00e8ge_de_la_BIAT_REF_5163.jpg",
@@ -44210,7 +44210,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u067e\u0633\u062a \u0628\u0627\u0646\u06a9",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u067e\u0633\u062a \u0628\u0627\u0646\u06a9\"][\"brand:en\"=\"Post Bank of Iran\"][\"brand:fa\"=\"\u067e\u0633\u062a \u0628\u0627\u0646\u06a9\"][\"brand:wikidata\"=\"Q7233625\"][\"name\"=\"\u067e\u0633\u062a \u0628\u0627\u0646\u06a9\"][\"name:en\"=\"Post Bank of Iran\"][\"name:fa\"=\"\u067e\u0633\u062a \u0628\u0627\u0646\u06a9\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -44246,7 +44246,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u062c\u06d2 \u0627\u06cc\u0633 \u0628\u06cc\u0646\u06a9",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u062c\u06d2 \u0627\u06cc\u0633 \u0628\u06cc\u0646\u06a9\"][\"brand:wikidata\"=\"Q6108986\"][\"name\"=\"\u062c\u06d2 \u0627\u06cc\u0633 \u0628\u06cc\u0646\u06a9\"][\"name:en\"=\"JS Bank\"][\"name:ks\"=\"\u062c\u06d2 \u0627\u06cc\u0633 \u0628\u06cc\u0646\u06a9\"][\"name:ur\"=\"\u062c\u06d2 \u0627\u06cc\u0633 \u0628\u06cc\u0646\u06a9\"][\"short_name\"=\"\u062c\u06d2 \u0627\u06cc\u0633 \u0628\u06cc\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/JS_Bank_-_New_logo_2011_-_Copy.png",
@@ -44282,7 +44282,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0633\u0648\u0633\u064a\u062a\u064a\u0647 \u062c\u0646\u0631\u0627\u0644",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0633\u0648\u0633\u064a\u062a\u064a\u0647 \u062c\u0646\u0631\u0627\u0644\"][\"brand:ar\"=\"\u0633\u0648\u0633\u064a\u062a\u064a\u0647 \u062c\u0646\u0631\u0627\u0644\"][\"brand:en\"=\"Soci\u00e9t\u00e9 G\u00e9n\u00e9rale\"][\"brand:wikidata\"=\"Q270363\"][\"name\"=\"\u0633\u0648\u0633\u064a\u062a\u064a\u0647 \u062c\u0646\u0631\u0627\u0644\"][\"name:ar\"=\"\u0633\u0648\u0633\u064a\u062a\u064a\u0647 \u062c\u0646\u0631\u0627\u0644\"][\"name:en\"=\"Soci\u00e9t\u00e9 G\u00e9n\u00e9rale\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo-SG-Soci\u00e9t\u00e9-G\u00e9n\u00e9rale.svg",
@@ -44318,7 +44318,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0645\u0635\u0631\u0641 \u0627\u0644\u0625\u0646\u0645\u0627\u0621",
     query: "(nwr[\"alt_name\"=\"\u0627\u0644\u0625\u0646\u0645\u0627\u0621\"][\"alt_name:ar\"=\"\u0627\u0644\u0625\u0646\u0645\u0627\u0621\"][\"alt_name:en\"=\"alinma\"][\"amenity\"=\"bank\"][\"brand\"=\"\u0645\u0635\u0631\u0641 \u0627\u0644\u0625\u0646\u0645\u0627\u0621\"][\"brand:ar\"=\"\u0645\u0635\u0631\u0641 \u0627\u0644\u0625\u0646\u0645\u0627\u0621\"][\"brand:en\"=\"Alinma Bank\"][\"brand:wikidata\"=\"Q4120111\"][\"name\"=\"\u0645\u0635\u0631\u0641 \u0627\u0644\u0625\u0646\u0645\u0627\u0621\"][\"name:ar\"=\"\u0645\u0635\u0631\u0641 \u0627\u0644\u0625\u0646\u0645\u0627\u0621\"][\"name:en\"=\"Alinma Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Alinma_Bank_logo.svg",
@@ -44354,7 +44354,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0645\u0635\u0631\u0641 \u0627\u0644\u0631\u0627\u062c\u062d\u064a",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0645\u0635\u0631\u0641 \u0627\u0644\u0631\u0627\u062c\u062d\u064a\"][\"brand:wikidata\"=\"Q1761176\"][\"name\"=\"\u0645\u0635\u0631\u0641 \u0627\u0644\u0631\u0627\u062c\u062d\u064a\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Al_Rajhi_Bank_Logo.svg",
@@ -44390,7 +44390,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0645\u0635\u0631\u0641 \u0627\u0644\u0632\u064a\u062a\u0648\u0646\u0629",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0645\u0635\u0631\u0641 \u0627\u0644\u0632\u064a\u062a\u0648\u0646\u0629\"][\"brand:ar\"=\"\u0645\u0635\u0631\u0641 \u0627\u0644\u0632\u064a\u062a\u0648\u0646\u0629\"][\"brand:fr\"=\"Banque Zitouna\"][\"brand:wikidata\"=\"Q2882969\"][\"name\"=\"\u0645\u0635\u0631\u0641 \u0627\u0644\u0632\u064a\u062a\u0648\u0646\u0629\"][\"name:ar\"=\"\u0645\u0635\u0631\u0641 \u0627\u0644\u0632\u064a\u062a\u0648\u0646\u0629\"][\"name:fr\"=\"Banque Zitouna\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -44426,7 +44426,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0646\u06cc\u0634\u0646\u0644 \u0628\u06cc\u0646\u06a9 \u0622\u0641 \u067e\u0627\u06a9\u0633\u062a\u0627\u0646",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0646\u06cc\u0634\u0646\u0644 \u0628\u06cc\u0646\u06a9 \u0622\u0641 \u067e\u0627\u06a9\u0633\u062a\u0627\u0646\"][\"brand:ar\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0648\u0637\u0646\u064a \u0627\u0644\u0628\u0627\u0643\u0633\u062a\u0627\u0646\u064a\"][\"brand:ur\"=\"\u0646\u06cc\u0634\u0646\u0644 \u0628\u06cc\u0646\u06a9 \u0622\u0641 \u067e\u0627\u06a9\u0633\u062a\u0627\u0646\"][\"brand:wikidata\"=\"Q2883425\"][\"name\"=\"\u0646\u06cc\u0634\u0646\u0644 \u0628\u06cc\u0646\u06a9 \u0622\u0641 \u067e\u0627\u06a9\u0633\u062a\u0627\u0646\"][\"name:ar\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0648\u0637\u0646\u064a \u0627\u0644\u0628\u0627\u0643\u0633\u062a\u0627\u0646\u064a\"][\"name:en\"=\"National Bank of Pakistan\"][\"name:fa\"=\"\u0628\u0627\u0646\u06a9 \u0645\u0644\u06cc \u067e\u0627\u06a9\u0633\u062a\u0627\u0646\"][\"name:sd\"=\"\u0646\u064a\u0634\u0646\u0644 \u0628\u064a\u0646\u06aa \u0622\u0641 \u067e\u0627\u06aa\u0633\u062a\u0627\u0646\"][\"name:ur\"=\"\u0646\u06cc\u0634\u0646\u0644 \u0628\u06cc\u0646\u06a9 \u0622\u0641 \u067e\u0627\u06a9\u0633\u062a\u0627\u0646\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/NBP,_World's_Highest_ATM.jpg",
@@ -44462,7 +44462,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u06cc\u0648\u0646\u0627\u0626\u06cc\u0679\u0688 \u0628\u06cc\u0646\u06a9 \u0644\u0645\u06cc\u0679\u0688",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u06cc\u0648\u0646\u0627\u0626\u06cc\u0679\u0688 \u0628\u06cc\u0646\u06a9 \u0644\u0645\u06cc\u0679\u0688\"][\"brand:ar\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0645\u062a\u062d\u062f \u0627\u0644\u0645\u062d\u062f\u0648\u062f \u0627\u0644\u0628\u0627\u0643\u0633\u062a\u0627\u0646\u064a\"][\"brand:ur\"=\"\u06cc\u0648\u0646\u0627\u0626\u06cc\u0679\u0688 \u0628\u06cc\u0646\u06a9 \u0644\u0645\u06cc\u0679\u0688\"][\"brand:wikidata\"=\"Q7887504\"][\"name\"=\"\u06cc\u0648\u0646\u0627\u0626\u06cc\u0679\u0688 \u0628\u06cc\u0646\u06a9 \u0644\u0645\u06cc\u0679\u0688\"][\"name:ar\"=\"\u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0645\u062a\u062d\u062f \u0627\u0644\u0645\u062d\u062f\u0648\u062f \u0627\u0644\u0628\u0627\u0643\u0633\u062a\u0627\u0646\u064a\"][\"name:en\"=\"United Bank Limited\"][\"name:fa\"=\"\u06cc\u0648\u0646\u0627\u06cc\u062a\u062f \u0628\u0646\u06a9\"][\"name:pnb\"=\"\u06cc\u0648\u0646\u0627\u0626\u06cc\u0679\u0688 \u0628\u06cc\u0646\u06a9 \u0644\u0645\u06cc\u0679\u0688\"][\"name:ur\"=\"\u06cc\u0648\u0646\u0627\u0626\u06cc\u0679\u0688 \u0628\u06cc\u0646\u06a9 \u0644\u0645\u06cc\u0679\u0688\"][\"short_name\"=\"\u06cc\u0648 \u0628\u06cc \u0627\u06cc\u0644\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -44498,7 +44498,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0985\u0997\u09cd\u09b0\u09a3\u09c0 \u09ac\u09cd\u09af\u09be\u0982\u0995",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0985\u0997\u09cd\u09b0\u09a3\u09c0 \u09ac\u09cd\u09af\u09be\u0982\u0995\"][\"brand:bn\"=\"\u0985\u0997\u09cd\u09b0\u09a3\u09c0 \u09ac\u09cd\u09af\u09be\u0982\u0995\"][\"brand:en\"=\"Agrani Bank\"][\"brand:wikidata\"=\"Q517050\"][\"name\"=\"\u0985\u0997\u09cd\u09b0\u09a3\u09c0 \u09ac\u09cd\u09af\u09be\u0982\u0995\"][\"name:bn\"=\"\u0985\u0997\u09cd\u09b0\u09a3\u09c0 \u09ac\u09cd\u09af\u09be\u0982\u0995\"][\"name:en\"=\"Agrani Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Agrani_Bank_Limited.jpg",
@@ -44534,7 +44534,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0997\u09cd\u09b0\u09be\u09ae\u09c0\u09a3 \u09ac\u09cd\u09af\u09be\u0982\u0995",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0997\u09cd\u09b0\u09be\u09ae\u09c0\u09a3 \u09ac\u09cd\u09af\u09be\u0982\u0995\"][\"brand:bn\"=\"\u0997\u09cd\u09b0\u09be\u09ae\u09c0\u09a3 \u09ac\u09cd\u09af\u09be\u0982\u0995\"][\"brand:en\"=\"Grameen Bank\"][\"brand:wikidata\"=\"Q188567\"][\"name\"=\"\u0997\u09cd\u09b0\u09be\u09ae\u09c0\u09a3 \u09ac\u09cd\u09af\u09be\u0982\u0995\"][\"name:bn\"=\"\u0997\u09cd\u09b0\u09be\u09ae\u09c0\u09a3 \u09ac\u09cd\u09af\u09be\u0982\u0995\"][\"name:en\"=\"Grameen Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Grameen_Bank_Seal.svg",
@@ -44570,7 +44570,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u099c\u09a8\u09a4\u09be \u09ac\u09cd\u09af\u09be\u0982\u0995 \u09b2\u09bf\u09ae\u09bf\u099f\u09c7\u09a1",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u099c\u09a8\u09a4\u09be \u09ac\u09cd\u09af\u09be\u0982\u0995 \u09b2\u09bf\u09ae\u09bf\u099f\u09c7\u09a1\"][\"brand:bn\"=\"\u099c\u09a8\u09a4\u09be \u09ac\u09cd\u09af\u09be\u0982\u0995 \u09b2\u09bf\u09ae\u09bf\u099f\u09c7\u09a1\"][\"brand:en\"=\"Janata Bank Limited\"][\"brand:wikidata\"=\"Q3347028\"][\"name\"=\"\u099c\u09a8\u09a4\u09be \u09ac\u09cd\u09af\u09be\u0982\u0995 \u09b2\u09bf\u09ae\u09bf\u099f\u09c7\u09a1\"][\"name:bn\"=\"\u099c\u09a8\u09a4\u09be \u09ac\u09cd\u09af\u09be\u0982\u0995 \u09b2\u09bf\u09ae\u09bf\u099f\u09c7\u09a1\"][\"name:en\"=\"Janata Bank Limited\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Janata_bank,_motijheel_branch.jpg",
@@ -44606,7 +44606,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u09ac\u09be\u0982\u09b2\u09be\u09a6\u09c7\u09b6 \u0995\u09c3\u09b7\u09bf \u09ac\u09cd\u09af\u09be\u0982\u0995",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u09ac\u09be\u0982\u09b2\u09be\u09a6\u09c7\u09b6 \u0995\u09c3\u09b7\u09bf \u09ac\u09cd\u09af\u09be\u0982\u0995\"][\"brand:bn\"=\"\u09ac\u09be\u0982\u09b2\u09be\u09a6\u09c7\u09b6 \u0995\u09c3\u09b7\u09bf \u09ac\u09cd\u09af\u09be\u0982\u0995\"][\"brand:en\"=\"Bangladesh Krishi Bank\"][\"brand:wikidata\"=\"Q16345932\"][\"name\"=\"\u09ac\u09be\u0982\u09b2\u09be\u09a6\u09c7\u09b6 \u0995\u09c3\u09b7\u09bf \u09ac\u09cd\u09af\u09be\u0982\u0995\"][\"name:bn\"=\"\u09ac\u09be\u0982\u09b2\u09be\u09a6\u09c7\u09b6 \u0995\u09c3\u09b7\u09bf \u09ac\u09cd\u09af\u09be\u0982\u0995\"][\"name:en\"=\"Bangladesh Krishi Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -44642,7 +44642,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u09b8\u09cb\u09a8\u09be\u09b2\u09c0 \u09ac\u09cd\u09af\u09be\u0982\u0995 \u09b2\u09bf\u09ae\u09bf\u099f\u09c7\u09a1",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u09b8\u09cb\u09a8\u09be\u09b2\u09c0 \u09ac\u09cd\u09af\u09be\u0982\u0995 \u09b2\u09bf\u09ae\u09bf\u099f\u09c7\u09a1\"][\"brand:bn\"=\"\u09b8\u09cb\u09a8\u09be\u09b2\u09c0 \u09ac\u09cd\u09af\u09be\u0982\u0995 \u09b2\u09bf\u09ae\u09bf\u099f\u09c7\u09a1\"][\"brand:en\"=\"Sonali Bank\"][\"brand:wikidata\"=\"Q3350382\"][\"name\"=\"\u09b8\u09cb\u09a8\u09be\u09b2\u09c0 \u09ac\u09cd\u09af\u09be\u0982\u0995 \u09b2\u09bf\u09ae\u09bf\u099f\u09c7\u09a1\"][\"name:bn\"=\"\u09b8\u09cb\u09a8\u09be\u09b2\u09c0 \u09ac\u09cd\u09af\u09be\u0982\u0995 \u09b2\u09bf\u09ae\u09bf\u099f\u09c7\u09a1\"][\"name:en\"=\"Sonali Bank\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Sonali_Bank_Limited.svg",
@@ -44678,7 +44678,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0e01\u0e23\u0e38\u0e07\u0e28\u0e23\u0e35",
     query: "(nwr[\"alt_name:en\"=\"Krungsri\"][\"amenity\"=\"bank\"][\"brand\"=\"\u0e01\u0e23\u0e38\u0e07\u0e28\u0e23\u0e35\"][\"brand:en\"=\"Bank of Ayudhya\"][\"brand:th\"=\"\u0e01\u0e23\u0e38\u0e07\u0e28\u0e23\u0e35\"][\"brand:wikidata\"=\"Q782537\"][\"name\"=\"\u0e01\u0e23\u0e38\u0e07\u0e28\u0e23\u0e35\"][\"name:en\"=\"Bank of Ayudhya\"][\"name:th\"=\"\u0e01\u0e23\u0e38\u0e07\u0e28\u0e23\u0e35\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_of_Ayudhya.svg",
@@ -44714,7 +44714,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0e18\u0e19\u0e32\u0e04\u0e32\u0e23\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0e18\u0e19\u0e32\u0e04\u0e32\u0e23\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\"][\"brand:en\"=\"Bangkok Bank\"][\"brand:th\"=\"\u0e18\u0e19\u0e32\u0e04\u0e32\u0e23\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\"][\"brand:wikidata\"=\"Q806483\"][\"name\"=\"\u0e18\u0e19\u0e32\u0e04\u0e32\u0e23\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\"][\"name:en\"=\"Bangkok Bank\"][\"name:th\"=\"\u0e18\u0e19\u0e32\u0e04\u0e32\u0e23\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Bangkok_Bank_Public_Company_Limited.svg",
@@ -44750,7 +44750,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0e18\u0e19\u0e32\u0e04\u0e32\u0e23\u0e01\u0e23\u0e38\u0e07\u0e44\u0e17\u0e22",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0e18\u0e19\u0e32\u0e04\u0e32\u0e23\u0e01\u0e23\u0e38\u0e07\u0e44\u0e17\u0e22\"][\"brand:en\"=\"Krung Thai Bank\"][\"brand:th\"=\"\u0e18\u0e19\u0e32\u0e04\u0e32\u0e23\u0e01\u0e23\u0e38\u0e07\u0e44\u0e17\u0e22\"][\"brand:wikidata\"=\"Q962865\"][\"name\"=\"\u0e18\u0e19\u0e32\u0e04\u0e32\u0e23\u0e01\u0e23\u0e38\u0e07\u0e44\u0e17\u0e22\"][\"name:en\"=\"Krung Thai Bank\"][\"name:th\"=\"\u0e18\u0e19\u0e32\u0e04\u0e32\u0e23\u0e01\u0e23\u0e38\u0e07\u0e44\u0e17\u0e22\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/\u0e2a\u0e33\u0e19\u0e31\u0e01\u0e07\u0e32\u0e19\u0e43\u0e2b\u0e0d\u0e48\u0e18\u0e19\u0e32\u0e04\u0e32\u0e23\u0e01\u0e23\u0e38\u0e07\u0e44\u0e17\u0e22_Krungthai_Bank_Headquaters_Office_Building_2021_May_(1).jpg",
@@ -44786,7 +44786,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0e18\u0e19\u0e32\u0e04\u0e32\u0e23\u0e01\u0e2a\u0e34\u0e01\u0e23\u0e44\u0e17\u0e22",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0e18\u0e19\u0e32\u0e04\u0e32\u0e23\u0e01\u0e2a\u0e34\u0e01\u0e23\u0e44\u0e17\u0e22\"][\"brand:en\"=\"Kasikornbank\"][\"brand:th\"=\"\u0e18\u0e19\u0e32\u0e04\u0e32\u0e23\u0e01\u0e2a\u0e34\u0e01\u0e23\u0e44\u0e17\u0e22\"][\"brand:wikidata\"=\"Q276557\"][\"name\"=\"\u0e18\u0e19\u0e32\u0e04\u0e32\u0e23\u0e01\u0e2a\u0e34\u0e01\u0e23\u0e44\u0e17\u0e22\"][\"name:en\"=\"Kasikornbank\"][\"name:th\"=\"\u0e18\u0e19\u0e32\u0e04\u0e32\u0e23\u0e01\u0e2a\u0e34\u0e01\u0e23\u0e44\u0e17\u0e22\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/KBank_HO_(2016).jpg",
@@ -44822,7 +44822,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0e18\u0e19\u0e32\u0e04\u0e32\u0e23\u0e17\u0e2b\u0e32\u0e23\u0e44\u0e17\u0e22",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0e18\u0e19\u0e32\u0e04\u0e32\u0e23\u0e17\u0e2b\u0e32\u0e23\u0e44\u0e17\u0e22\"][\"brand:en\"=\"TMBThanachart Bank\"][\"brand:th\"=\"\u0e18\u0e19\u0e32\u0e04\u0e32\u0e23\u0e17\u0e2b\u0e32\u0e23\u0e44\u0e17\u0e22\"][\"brand:wikidata\"=\"Q1527826\"][\"name\"=\"\u0e18\u0e19\u0e32\u0e04\u0e32\u0e23\u0e17\u0e2b\u0e32\u0e23\u0e44\u0e17\u0e22\"][\"name:en\"=\"TMBThanachart Bank\"][\"name:th\"=\"\u0e18\u0e19\u0e32\u0e04\u0e32\u0e23\u0e17\u0e2b\u0e32\u0e23\u0e44\u0e17\u0e22\"][\"short_name\"=\"ttb\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/TTB_Logo.svg",
@@ -44858,7 +44858,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0e18\u0e19\u0e32\u0e04\u0e32\u0e23\u0e44\u0e17\u0e22\u0e1e\u0e32\u0e13\u0e34\u0e0a\u0e22\u0e4c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0e18\u0e19\u0e32\u0e04\u0e32\u0e23\u0e44\u0e17\u0e22\u0e1e\u0e32\u0e13\u0e34\u0e0a\u0e22\u0e4c\"][\"brand:en\"=\"Siam Commercial Bank\"][\"brand:th\"=\"\u0e18\u0e19\u0e32\u0e04\u0e32\u0e23\u0e44\u0e17\u0e22\u0e1e\u0e32\u0e13\u0e34\u0e0a\u0e22\u0e4c\"][\"brand:wikidata\"=\"Q2038986\"][\"name\"=\"\u0e18\u0e19\u0e32\u0e04\u0e32\u0e23\u0e44\u0e17\u0e22\u0e1e\u0e32\u0e13\u0e34\u0e0a\u0e22\u0e4c\"][\"name:en\"=\"Siam Commercial Bank\"][\"name:th\"=\"\u0e18\u0e19\u0e32\u0e04\u0e32\u0e23\u0e44\u0e17\u0e22\u0e1e\u0e32\u0e13\u0e34\u0e0a\u0e22\u0e4c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/SCB222.jpg",
@@ -44894,7 +44894,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0e18\u0e19\u0e32\u0e04\u0e32\u0e23\u0e40\u0e1e\u0e37\u0e48\u0e2d\u0e01\u0e32\u0e23\u0e40\u0e01\u0e29\u0e15\u0e23\u0e41\u0e25\u0e30\u0e2a\u0e2b\u0e01\u0e23\u0e13\u0e4c\u0e01\u0e32\u0e23\u0e40\u0e01\u0e29\u0e15\u0e23",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0e18\u0e19\u0e32\u0e04\u0e32\u0e23\u0e40\u0e1e\u0e37\u0e48\u0e2d\u0e01\u0e32\u0e23\u0e40\u0e01\u0e29\u0e15\u0e23\u0e41\u0e25\u0e30\u0e2a\u0e2b\u0e01\u0e23\u0e13\u0e4c\u0e01\u0e32\u0e23\u0e40\u0e01\u0e29\u0e15\u0e23\"][\"brand:en\"=\"Bank for Agriculture and Agricultural Co-operatives\"][\"brand:th\"=\"\u0e18\u0e19\u0e32\u0e04\u0e32\u0e23\u0e40\u0e1e\u0e37\u0e48\u0e2d\u0e01\u0e32\u0e23\u0e40\u0e01\u0e29\u0e15\u0e23\u0e41\u0e25\u0e30\u0e2a\u0e2b\u0e01\u0e23\u0e13\u0e4c\u0e01\u0e32\u0e23\u0e40\u0e01\u0e29\u0e15\u0e23\"][\"brand:wikidata\"=\"Q23043470\"][\"name\"=\"\u0e18\u0e19\u0e32\u0e04\u0e32\u0e23\u0e40\u0e1e\u0e37\u0e48\u0e2d\u0e01\u0e32\u0e23\u0e40\u0e01\u0e29\u0e15\u0e23\u0e41\u0e25\u0e30\u0e2a\u0e2b\u0e01\u0e23\u0e13\u0e4c\u0e01\u0e32\u0e23\u0e40\u0e01\u0e29\u0e15\u0e23\"][\"name:en\"=\"Bank for Agriculture and Agricultural Co-operatives\"][\"name:th\"=\"\u0e18\u0e19\u0e32\u0e04\u0e32\u0e23\u0e40\u0e1e\u0e37\u0e48\u0e2d\u0e01\u0e32\u0e23\u0e40\u0e01\u0e29\u0e15\u0e23\u0e41\u0e25\u0e30\u0e2a\u0e2b\u0e01\u0e23\u0e13\u0e4c\u0e01\u0e32\u0e23\u0e40\u0e01\u0e29\u0e15\u0e23\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -44930,7 +44930,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u0e18\u0e19\u0e32\u0e04\u0e32\u0e23\u0e2d\u0e2d\u0e21\u0e2a\u0e34\u0e19",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u0e18\u0e19\u0e32\u0e04\u0e32\u0e23\u0e2d\u0e2d\u0e21\u0e2a\u0e34\u0e19\"][\"brand:en\"=\"Government Savings Bank\"][\"brand:th\"=\"\u0e18\u0e19\u0e32\u0e04\u0e32\u0e23\u0e2d\u0e2d\u0e21\u0e2a\u0e34\u0e19\"][\"brand:wikidata\"=\"Q6579041\"][\"name\"=\"\u0e18\u0e19\u0e32\u0e04\u0e32\u0e23\u0e2d\u0e2d\u0e21\u0e2a\u0e34\u0e19\"][\"name:en\"=\"Government Savings Bank\"][\"name:th\"=\"\u0e18\u0e19\u0e32\u0e04\u0e32\u0e23\u0e2d\u0e2d\u0e21\u0e2a\u0e34\u0e19\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/\u0e18\u0e19\u0e32\u0e04\u0e32\u0e23\u0e2d\u0e2d\u0e21\u0e2a\u0e34\u0e19_\u0e2a\u0e33\u0e19\u0e31\u0e01\u0e07\u0e32\u0e19\u0e43\u0e2b\u0e0d\u0e48_\u0e2a\u0e30\u0e1e\u0e32\u0e19\u0e04\u0e27\u0e32\u0e22.jpg",
@@ -44966,7 +44966,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\ub18d\ud611",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\ub18d\ud611\"][\"brand:ko\"=\"\ub18d\ud611\"][\"brand:wikidata\"=\"Q15283673\"][\"name\"=\"\ub18d\ud611\"][\"name:en\"=\"Nonghyup Bank\"][\"name:ko\"=\"\ub18d\ud611\"][\"name:ko-Latn\"=\"Nonghyeop\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -45002,7 +45002,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\uc2e0\ud55c\uc740\ud589",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\uc2e0\ud55c\uc740\ud589\"][\"brand:en\"=\"Shinhan Bank\"][\"brand:ko\"=\"\uc2e0\ud55c\uc740\ud589\"][\"brand:wikidata\"=\"Q487230\"][\"name\"=\"\uc2e0\ud55c\uc740\ud589\"][\"name:en\"=\"Shinhan Bank\"][\"name:ko\"=\"\uc2e0\ud55c\uc740\ud589\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Shinhan_Bank_Logo_(ENG).svg",
@@ -45038,7 +45038,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\uc2e0\ud611",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\uc2e0\ud611\"][\"brand:ko\"=\"\uc2e0\ud611\"][\"name\"=\"\uc2e0\ud611\"][\"name:ko\"=\"\uc2e0\ud611\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -45074,7 +45074,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\uc6b0\ub9ac\uc740\ud589",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\uc6b0\ub9ac\uc740\ud589\"][\"brand:en\"=\"Woori Bank\"][\"brand:ko\"=\"\uc6b0\ub9ac\uc740\ud589\"][\"brand:wikidata\"=\"Q494369\"][\"name\"=\"\uc6b0\ub9ac\uc740\ud589\"][\"name:en\"=\"Woori Bank\"][\"name:ko\"=\"\uc6b0\ub9ac\uc740\ud589\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Woori-Bank-headquarter.jpg",
@@ -45110,7 +45110,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\ud558\ub098\uc740\ud589",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\ud558\ub098\uc740\ud589\"][\"brand:en\"=\"KEB Hana Bank\"][\"brand:ko\"=\"\ud558\ub098\uc740\ud589\"][\"brand:wikidata\"=\"Q484047\"][\"name\"=\"\ud558\ub098\uc740\ud589\"][\"name:en\"=\"KEB Hana Bank\"][\"name:ko\"=\"\ud558\ub098\uc740\ud589\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Hana_Bank_Logo_(eng).svg",
@@ -45146,7 +45146,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u30a4\u30aa\u30f3\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u30a4\u30aa\u30f3\u9280\u884c\"][\"brand:en\"=\"Aeon Bank\"][\"brand:ja\"=\"\u30a4\u30aa\u30f3\u9280\u884c\"][\"brand:wikidata\"=\"Q11286327\"][\"name\"=\"\u30a4\u30aa\u30f3\u9280\u884c\"][\"name:en\"=\"Aeon Bank\"][\"name:ja\"=\"\u30a4\u30aa\u30f3\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Aeon_Bank_logo.svg",
@@ -45182,7 +45182,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u304d\u3089\u307c\u3057\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u304d\u3089\u307c\u3057\u9280\u884c\"][\"brand:en\"=\"Kiraboshi Bank\"][\"brand:ja\"=\"\u304d\u3089\u307c\u3057\u9280\u884c\"][\"brand:wikidata\"=\"Q11390660\"][\"name\"=\"\u304d\u3089\u307c\u3057\u9280\u884c\"][\"name:en\"=\"Kiraboshi Bank\"][\"name:ja\"=\"\u304d\u3089\u307c\u3057\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -45218,7 +45218,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u30b9\u30eb\u30ac\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u30b9\u30eb\u30ac\u9280\u884c\"][\"brand:en\"=\"Suruga Bank\"][\"brand:ja\"=\"\u30b9\u30eb\u30ac\u9280\u884c\"][\"brand:wikidata\"=\"Q11313470\"][\"name\"=\"\u30b9\u30eb\u30ac\u9280\u884c\"][\"name:en\"=\"Suruga Bank\"][\"name:ja\"=\"\u30b9\u30eb\u30ac\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Suruga_Bank_Ltd._head_office_ac.jpg",
@@ -45254,7 +45254,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u30bb\u30d6\u30f3\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u30bb\u30d6\u30f3\u9280\u884c\"][\"brand:en\"=\"Seven Bank\"][\"brand:ja\"=\"\u30bb\u30d6\u30f3\u9280\u884c\"][\"brand:wikidata\"=\"Q7457182\"][\"name\"=\"\u30bb\u30d6\u30f3\u9280\u884c\"][\"name:en\"=\"Seven Bank\"][\"name:ja\"=\"\u30bb\u30d6\u30f3\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/7bank_logo.svg",
@@ -45290,7 +45290,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u307f\u305a\u307b\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u307f\u305a\u307b\u9280\u884c\"][\"brand:en\"=\"Mizuho Bank\"][\"brand:ja\"=\"\u307f\u305a\u307b\u9280\u884c\"][\"brand:wikidata\"=\"Q2882956\"][\"name\"=\"\u307f\u305a\u307b\u9280\u884c\"][\"name:en\"=\"Mizuho Bank\"][\"name:ja\"=\"\u307f\u305a\u307b\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Mizuho_bank_logo.svg",
@@ -45326,7 +45326,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u3086\u3046\u3061\u3087\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u3086\u3046\u3061\u3087\u9280\u884c\"][\"brand:en\"=\"Japan Post Bank\"][\"brand:ja\"=\"\u3086\u3046\u3061\u3087\u9280\u884c\"][\"brand:wikidata\"=\"Q907103\"][\"name\"=\"\u3086\u3046\u3061\u3087\u9280\u884c\"][\"name:en\"=\"Japan Post Bank\"][\"name:ja\"=\"\u3086\u3046\u3061\u3087\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Japan_Post_Bank_Logo.svg",
@@ -45362,7 +45362,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u308a\u305d\u306a\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u308a\u305d\u306a\u9280\u884c\"][\"brand:en\"=\"Resona Bank\"][\"brand:ja\"=\"\u308a\u305d\u306a\u9280\u884c\"][\"brand:wikidata\"=\"Q11281447\"][\"name\"=\"\u308a\u305d\u306a\u9280\u884c\"][\"name:en\"=\"Resona Bank\"][\"name:ja\"=\"\u308a\u305d\u306a\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Resona_Bank_logo.svg",
@@ -45398,7 +45398,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u4e09\u4e95\u4f4f\u53cb\u4fe1\u8a17\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u4e09\u4e95\u4f4f\u53cb\u4fe1\u8a17\u9280\u884c\"][\"brand:en\"=\"Sumitomo Mitsui Trust Bank\"][\"brand:ja\"=\"\u4e09\u4e95\u4f4f\u53cb\u4fe1\u8a17\u9280\u884c\"][\"brand:wikidata\"=\"Q5215421\"][\"name\"=\"\u4e09\u4e95\u4f4f\u53cb\u4fe1\u8a17\u9280\u884c\"][\"name:en\"=\"Sumitomo Mitsui Trust Bank\"][\"name:ja\"=\"\u4e09\u4e95\u4f4f\u53cb\u4fe1\u8a17\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Sumitomo_Mitsui_Trust_Bank_Logo.svg",
@@ -45434,7 +45434,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u4e09\u4e95\u4f4f\u53cb\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u4e09\u4e95\u4f4f\u53cb\u9280\u884c\"][\"brand:en\"=\"Sumitomo Mitsui Banking Corporation\"][\"brand:ja\"=\"\u4e09\u4e95\u4f4f\u53cb\u9280\u884c\"][\"brand:wikidata\"=\"Q2660418\"][\"name\"=\"\u4e09\u4e95\u4f4f\u53cb\u9280\u884c\"][\"name:en\"=\"Sumitomo Mitsui Banking Corporation\"][\"name:ja\"=\"\u4e09\u4e95\u4f4f\u53cb\u9280\u884c\"][\"short_name:en\"=\"SMBC\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Smbc_logo.svg",
@@ -45470,7 +45470,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u4e09\u4fe1\u5546\u696d\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u4e09\u4fe1\u5546\u696d\u9280\u884c\"][\"brand:en\"=\"COTA Commercial Bank\"][\"brand:wikidata\"=\"Q10865324\"][\"brand:zh\"=\"\u4e09\u4fe1\u5546\u696d\u9280\u884c\"][\"name\"=\"\u4e09\u4fe1\u5546\u696d\u9280\u884c\"][\"name:en\"=\"COTA Commercial Bank\"][\"name:nan\"=\"Sam-s\u00ecn Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:nan-Hant\"=\"\u4e09\u4fe1\u5546\u696d\u9280\u884c\"][\"name:nan-Latn-pehoeji\"=\"Sam-s\u00ecn Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:nan-Latn-tailo\"=\"Sam-s\u00ecn Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:zh\"=\"\u4e09\u4fe1\u5546\u696d\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/\u4e09\u4fe1\u5546\u696d\u9280\u884c\u53f0\u4e2d\u5206\u884c_201905.jpg",
@@ -45506,7 +45506,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u4e09\u83f1UFJ\u4fe1\u8a17\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u4e09\u83f1UFJ\u4fe1\u8a17\u9280\u884c\"][\"brand:en\"=\"Mitsubishi UFJ Trust and Banking Corporation\"][\"brand:ja\"=\"\u4e09\u83f1UFJ\u4fe1\u8a17\u9280\u884c\"][\"brand:wikidata\"=\"Q6883178\"][\"name\"=\"\u4e09\u83f1UFJ\u4fe1\u8a17\u9280\u884c\"][\"name:en\"=\"Mitsubishi UFJ Trust and Banking Corporation\"][\"name:ja\"=\"\u4e09\u83f1UFJ\u4fe1\u8a17\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Mitsubishi_UFJ_Financial_Group.svg",
@@ -45542,7 +45542,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u4e09\u83f1UFJ\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u4e09\u83f1UFJ\u9280\u884c\"][\"brand:en\"=\"MUFG Bank\"][\"brand:ja\"=\"\u4e09\u83f1UFJ\u9280\u884c\"][\"brand:wikidata\"=\"Q988284\"][\"name\"=\"\u4e09\u83f1UFJ\u9280\u884c\"][\"name:en\"=\"MUFG Bank\"][\"name:ja\"=\"\u4e09\u83f1UFJ\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Mitsubishi_UFJ_logo.svg",
@@ -45578,7 +45578,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u4e0a\u6d77\u519c\u5546\u94f6\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u4e0a\u6d77\u519c\u5546\u94f6\u884c\"][\"brand:en\"=\"Shanghai Rural Commercial Bank\"][\"brand:wikidata\"=\"Q10867749\"][\"brand:zh\"=\"\u4e0a\u6d77\u519c\u5546\u94f6\u884c\"][\"name\"=\"\u4e0a\u6d77\u519c\u5546\u94f6\u884c\"][\"name:en\"=\"Shanghai Rural Commercial Bank\"][\"name:zh\"=\"\u4e0a\u6d77\u519c\u5546\u94f6\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -45614,7 +45614,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u4e0a\u6d77\u5546\u696d\u5132\u84c4\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u4e0a\u6d77\u5546\u696d\u5132\u84c4\u9280\u884c\"][\"brand:en\"=\"Shanghai Commercial and Savings Bank\"][\"brand:wikidata\"=\"Q4207208\"][\"brand:zh\"=\"\u4e0a\u6d77\u5546\u696d\u5132\u84c4\u9280\u884c\"][\"name\"=\"\u4e0a\u6d77\u5546\u696d\u5132\u84c4\u9280\u884c\"][\"name:en\"=\"Shanghai Commercial and Savings Bank\"][\"name:nan\"=\"Si\u014dng-h\u00e1i Siong-gia\u030dp Lia\u030dp-chek G\u00fbn-h\u00e2ng\"][\"name:nan-Hant\"=\"\u4e0a\u6d77\u5546\u696d\u7c92\u7a4d\u9280\u884c\"][\"name:nan-Latn-pehoeji\"=\"Si\u014dng-h\u00e1i Siong-gia\u030dp Lia\u030dp-chek G\u00fbn-h\u00e2ng\"][\"name:nan-Latn-tailo\"=\"Si\u014dng-h\u00e1i Siong-gia\u030dp Lia\u030dp-tsik G\u00fbn-h\u00e2ng\"][\"name:zh\"=\"\u4e0a\u6d77\u5546\u696d\u5132\u84c4\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Shanghai_Bank_Tower,_Shanghai_Commercial_and_Savings_Bank_20101213.jpg",
@@ -45650,7 +45650,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u4e0a\u6d77\u5546\u696d\u9280\u884c Shanghai Commercial Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u4e0a\u6d77\u5546\u696d\u9280\u884c Shanghai Commercial Bank\"][\"brand:en\"=\"Shanghai Commercial Bank\"][\"brand:wikidata\"=\"Q7488421\"][\"brand:zh\"=\"\u4e0a\u6d77\u5546\u696d\u9280\u884c\"][\"brand:zh-Hans\"=\"\u4e0a\u6d77\u5546\u4e1a\u94f6\u884c\"][\"brand:zh-Hant\"=\"\u4e0a\u6d77\u5546\u696d\u9280\u884c\"][\"name\"=\"\u4e0a\u6d77\u5546\u696d\u9280\u884c Shanghai Commercial Bank\"][\"name:en\"=\"Shanghai Commercial Bank\"][\"name:zh\"=\"\u4e0a\u6d77\u5546\u696d\u9280\u884c\"][\"name:zh-Hans\"=\"\u4e0a\u6d77\u5546\u4e1a\u94f6\u884c\"][\"name:zh-Hant\"=\"\u4e0a\u6d77\u5546\u696d\u9280\u884c\"][\"short_name\"=\"SCB\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Shanghai_Commercial_Bank_Tower_2016.jpg",
@@ -45686,7 +45686,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u4e0a\u6d77\u6d66\u4e1c\u53d1\u5c55\u94f6\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u4e0a\u6d77\u6d66\u4e1c\u53d1\u5c55\u94f6\u884c\"][\"brand:en\"=\"Shanghai Pudong Development Bank\"][\"brand:wikidata\"=\"Q1479076\"][\"brand:zh\"=\"\u4e0a\u6d77\u6d66\u4e1c\u53d1\u5c55\u94f6\u884c\"][\"name\"=\"\u4e0a\u6d77\u6d66\u4e1c\u53d1\u5c55\u94f6\u884c\"][\"name:en\"=\"Shanghai Pudong Development Bank\"][\"name:zh\"=\"\u4e0a\u6d77\u6d66\u4e1c\u53d1\u5c55\u94f6\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/SPD_Bank_Logo.svg",
@@ -45722,7 +45722,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u4e0a\u6d77\u94f6\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u4e0a\u6d77\u94f6\u884c\"][\"brand:en\"=\"Bank of Shanghai\"][\"brand:wikidata\"=\"Q4208351\"][\"brand:zh\"=\"\u4e0a\u6d77\u94f6\u884c\"][\"name\"=\"\u4e0a\u6d77\u94f6\u884c\"][\"name:en\"=\"Bank of Shanghai\"][\"name:zh\"=\"\u4e0a\u6d77\u94f6\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_of_Shanghai,_Jia_Ding.png",
@@ -45758,7 +45758,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u4e1c\u4e9a\u94f6\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u4e1c\u4e9a\u94f6\u884c\"][\"brand:en\"=\"Bank of East Asia\"][\"brand:wikidata\"=\"Q806679\"][\"brand:zh\"=\"\u4e1c\u4e9a\u94f6\u884c\"][\"name\"=\"\u4e1c\u4e9a\u94f6\u884c\"][\"name:en\"=\"Bank of East Asia\"][\"name:zh\"=\"\u4e1c\u4e9a\u94f6\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_of_East_Asia_Logo.svg",
@@ -45794,7 +45794,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u4e2d\u4fe1\u9280\u884c\uff08\u570b\u969b\uff09 China CITIC Bank International",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u4e2d\u4fe1\u9280\u884c China CITIC Bank\"][\"brand:en\"=\"China CITIC Bank\"][\"brand:wikidata\"=\"Q38960\"][\"brand:zh\"=\"\u4e2d\u4fe1\u9280\u884c\"][\"brand:zh-Hans\"=\"\u4e2d\u4fe1\u94f6\u884c\"][\"brand:zh-Hant\"=\"\u4e2d\u4fe1\u9280\u884c\"][\"name\"=\"\u4e2d\u4fe1\u9280\u884c\uff08\u570b\u969b\uff09 China CITIC Bank International\"][\"name:en\"=\"China CITIC Bank International\"][\"name:zh\"=\"\u4e2d\u4fe1\u9280\u884c\uff08\u570b\u969b\uff09\"][\"name:zh-Hans\"=\"\u4e2d\u4fe1\u94f6\u884c\uff08\u56fd\u9645\uff09\"][\"name:zh-Hant\"=\"\u4e2d\u4fe1\u9280\u884c\uff08\u570b\u969b\uff09\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/ChinaCITICBankHangzhou.jpg",
@@ -45830,7 +45830,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u4e2d\u4fe1\u94f6\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u4e2d\u4fe1\u94f6\u884c\"][\"brand:en\"=\"China CITIC Bank\"][\"brand:wikidata\"=\"Q38960\"][\"brand:zh\"=\"\u4e2d\u4fe1\u94f6\u884c\"][\"name\"=\"\u4e2d\u4fe1\u94f6\u884c\"][\"name:en\"=\"China CITIC Bank\"][\"name:zh\"=\"\u4e2d\u4fe1\u94f6\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/ChinaCITICBankHangzhou.jpg",
@@ -45866,7 +45866,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u4e2d\u539f\u94f6\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u4e2d\u539f\u94f6\u884c\"][\"brand:en\"=\"Zhongyuan Bank\"][\"brand:wikidata\"=\"Q15936363\"][\"brand:zh\"=\"\u4e2d\u539f\u94f6\u884c\"][\"name\"=\"\u4e2d\u539f\u94f6\u884c\"][\"name:en\"=\"Zhongyuan Bank\"][\"name:zh\"=\"\u4e2d\u539f\u94f6\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -45902,7 +45902,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u4e2d\u56fd\u5149\u5927\u94f6\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u4e2d\u56fd\u5149\u5927\u94f6\u884c\"][\"brand:en\"=\"China Everbright Bank\"][\"brand:wikidata\"=\"Q10873167\"][\"brand:zh\"=\"\u4e2d\u56fd\u5149\u5927\u94f6\u884c\"][\"name\"=\"\u4e2d\u56fd\u5149\u5927\u94f6\u884c\"][\"name:en\"=\"China Everbright Bank\"][\"name:zh\"=\"\u4e2d\u56fd\u5149\u5927\u94f6\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/China_everbright_bank_beijing_201705.jpg",
@@ -45938,7 +45938,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u4e2d\u56fd\u519c\u4e1a\u94f6\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u4e2d\u56fd\u519c\u4e1a\u94f6\u884c\"][\"brand:en\"=\"Agricultural Bank of China\"][\"brand:wikidata\"=\"Q26298\"][\"brand:zh\"=\"\u4e2d\u56fd\u519c\u4e1a\u94f6\u884c\"][\"name\"=\"\u4e2d\u56fd\u519c\u4e1a\u94f6\u884c\"][\"name:en\"=\"Agricultural Bank of China\"][\"name:zh\"=\"\u4e2d\u56fd\u519c\u4e1a\u94f6\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/\u4e2d\u56fd\u519c\u4e1a\u94f6\u884c_\u897f\u4fa7.jpg",
@@ -45974,7 +45974,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u4e2d\u56fd\u5de5\u5546\u9280\u884c (\u65e5\u672c)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u4e2d\u56fd\u5de5\u5546\u9280\u884c\"][\"brand:en\"=\"Industrial and Commercial Bank of China\"][\"brand:ja\"=\"\u4e2d\u56fd\u5de5\u5546\u9280\u884c\"][\"brand:wikidata\"=\"Q26463\"][\"brand:zh\"=\"\u4e2d\u56fd\u5de5\u5546\u94f6\u884c\"][\"name\"=\"\u4e2d\u56fd\u5de5\u5546\u9280\u884c\"][\"name:en\"=\"Industrial and Commercial Bank of China\"][\"name:ja\"=\"\u4e2d\u56fd\u5de5\u5546\u9280\u884c\"][\"name:zh\"=\"\u4e2d\u56fd\u5de5\u5546\u94f6\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/ICBC_ChanganAVe.jpg",
@@ -46010,7 +46010,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u4e2d\u56fd\u5de5\u5546\u94f6\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u4e2d\u56fd\u5de5\u5546\u94f6\u884c\"][\"brand:en\"=\"Industrial and Commercial Bank of China\"][\"brand:wikidata\"=\"Q26463\"][\"brand:zh\"=\"\u4e2d\u56fd\u5de5\u5546\u94f6\u884c\"][\"name\"=\"\u4e2d\u56fd\u5de5\u5546\u94f6\u884c\"][\"name:en\"=\"Industrial and Commercial Bank of China\"][\"name:zh\"=\"\u4e2d\u56fd\u5de5\u5546\u94f6\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/ICBC_ChanganAVe.jpg",
@@ -46046,7 +46046,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u4e2d\u56fd\u5efa\u8bbe\u94f6\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u4e2d\u56fd\u5efa\u8bbe\u94f6\u884c\"][\"brand:en\"=\"China Construction Bank\"][\"brand:wikidata\"=\"Q26299\"][\"brand:zh\"=\"\u4e2d\u56fd\u5efa\u8bbe\u94f6\u884c\"][\"name\"=\"\u4e2d\u56fd\u5efa\u8bbe\u94f6\u884c\"][\"name:en\"=\"China Construction Bank\"][\"name:zh\"=\"\u4e2d\u56fd\u5efa\u8bbe\u94f6\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/China_Construction_Bank_logo.svg",
@@ -46082,7 +46082,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u4e2d\u56fd\u6c11\u751f\u94f6\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u4e2d\u56fd\u6c11\u751f\u94f6\u884c\"][\"brand:en\"=\"China Minsheng Bank\"][\"brand:wikidata\"=\"Q911543\"][\"brand:zh\"=\"\u4e2d\u56fd\u6c11\u751f\u94f6\u884c\"][\"name\"=\"\u4e2d\u56fd\u6c11\u751f\u94f6\u884c\"][\"name:en\"=\"China Minsheng Bank\"][\"name:zh\"=\"\u4e2d\u56fd\u6c11\u751f\u94f6\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Minsheng_Bank_Tower,_Wuhan,_Hubei_Province,_P.R.China.JPG",
@@ -46118,7 +46118,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u4e2d\u56fd\u90ae\u653f\u50a8\u84c4\u94f6\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u4e2d\u56fd\u90ae\u653f\u50a8\u84c4\u94f6\u884c\"][\"brand:en\"=\"Postal Savings Bank of China\"][\"brand:wikidata\"=\"Q986744\"][\"brand:zh\"=\"\u4e2d\u56fd\u90ae\u653f\u50a8\u84c4\u94f6\u884c\"][\"name\"=\"\u4e2d\u56fd\u90ae\u653f\u50a8\u84c4\u94f6\u884c\"][\"name:en\"=\"Postal Savings Bank of China\"][\"name:zh\"=\"\u4e2d\u56fd\u90ae\u653f\u50a8\u84c4\u94f6\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/\u4e2d\u56fd\u90ae\u653f\u96c6\u56e2\u516c\u53f8.jpg",
@@ -46154,7 +46154,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u4e2d\u56fd\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u4e2d\u56fd\u9280\u884c\"][\"brand:wikidata\"=\"Q10874785\"][\"name\"=\"\u4e2d\u56fd\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -46190,7 +46190,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u4e2d\u56fd\u94f6\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u4e2d\u56fd\u94f6\u884c\"][\"brand:en\"=\"Bank of China\"][\"brand:wikidata\"=\"Q790068\"][\"brand:zh\"=\"\u4e2d\u56fd\u94f6\u884c\"][\"name\"=\"\u4e2d\u56fd\u94f6\u884c\"][\"name:en\"=\"Bank of China\"][\"name:zh\"=\"\u4e2d\u56fd\u94f6\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BOC_Headquarters_at_Xidan_(20171123140827).jpg",
@@ -46226,7 +46226,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u4e2d\u570b\u4fe1\u8a17\u5546\u696d\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u4e2d\u570b\u4fe1\u8a17\u5546\u696d\u9280\u884c\"][\"brand:en\"=\"CTBC Bank\"][\"brand:wikidata\"=\"Q5100191\"][\"brand:zh\"=\"\u4e2d\u570b\u4fe1\u8a17\u5546\u696d\u9280\u884c\"][\"name\"=\"\u4e2d\u570b\u4fe1\u8a17\u5546\u696d\u9280\u884c\"][\"name:en\"=\"CTBC Bank\"][\"name:nan\"=\"Tiong-kok S\u00ecn-thok Siong-gia\u030dp G\u00fbn-h\u00e2ng\"][\"name:nan-Hant\"=\"\u4e2d\u570b\u4fe1\u8a17\u5546\u696d\u9280\u884c\"][\"name:nan-Latn-pehoeji\"=\"Tiong-kok S\u00ecn-thok Siong-gia\u030dp G\u00fbn-h\u00e2ng\"][\"name:nan-Latn-tailo\"=\"Tiong-kok S\u00ecn-thok Siong-gia\u030dp G\u00fbn-h\u00e2ng\"][\"name:zh\"=\"\u4e2d\u570b\u4fe1\u8a17\u5546\u696d\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -46262,7 +46262,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u4e2d\u570b\u5de5\u5546\u9280\u884c\uff08\u4e9e\u6d32\uff09 Industrial and Commercial Bank of China (Asia)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u4e2d\u570b\u5de5\u5546\u9280\u884c\"][\"brand:en\"=\"Industrial and Commercial Bank of China\"][\"brand:wikidata\"=\"Q26463\"][\"brand:zh\"=\"\u4e2d\u570b\u5de5\u5546\u9280\u884c\"][\"brand:zh-Hans\"=\"\u4e2d\u56fd\u5de5\u5546\u94f6\u884c\"][\"brand:zh-Hant\"=\"\u4e2d\u570b\u5de5\u5546\u9280\u884c\"][\"name\"=\"\u4e2d\u570b\u5de5\u5546\u9280\u884c\uff08\u4e9e\u6d32\uff09 ICBC (Asia)\"][\"name:en\"=\"ICBC (Asia)\"][\"name:zh\"=\"\u4e2d\u570b\u5de5\u5546\u9280\u884c\uff08\u4e9e\u6d32\uff09\"][\"name:zh-Hans\"=\"\u4e2d\u56fd\u5de5\u5546\u94f6\u884c\uff08\u4e9a\u6d32\uff09\"][\"name:zh-Hant\"=\"\u4e2d\u570b\u5de5\u5546\u9280\u884c\uff08\u4e9e\u6d32\uff09\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/ICBC_ChanganAVe.jpg",
@@ -46298,7 +46298,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u4e2d\u570b\u5efa\u8a2d\u9280\u884c Banco de Constru\u00e7\u00e3o da China",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u4e2d\u570b\u5efa\u8a2d\u9280\u884c Banco de Constru\u00e7\u00e3o da China\"][\"brand:en\"=\"China Construction Bank\"][\"brand:pt\"=\"Banco de Constru\u00e7\u00e3o da China\"][\"brand:wikidata\"=\"Q26299\"][\"brand:zh\"=\"\u4e2d\u570b\u5efa\u8a2d\u9280\u884c\"][\"brand:zh-Hans\"=\"\u4e2d\u56fd\u5efa\u8bbe\u94f6\u884c\"][\"brand:zh-Hant\"=\"\u4e2d\u570b\u5efa\u8a2d\u9280\u884c\"][\"name\"=\"\u4e2d\u570b\u5efa\u8a2d\u9280\u884c Banco de Constru\u00e7\u00e3o da China\"][\"name:en\"=\"China Construction Bank\"][\"name:pt\"=\"Banco de Constru\u00e7\u00e3o da China\"][\"name:zh\"=\"\u4e2d\u570b\u5efa\u8a2d\u9280\u884c\"][\"name:zh-Hans\"=\"\u4e2d\u56fd\u5efa\u8bbe\u94f6\u884c\"][\"name:zh-Hant\"=\"\u4e2d\u570b\u5efa\u8a2d\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/China_Construction_Bank_logo.svg",
@@ -46334,7 +46334,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u4e2d\u570b\u5efa\u8a2d\u9280\u884c\uff08\u4e9e\u6d32\uff09 China Construction Bank (Asia)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u4e2d\u570b\u5efa\u8a2d\u9280\u884c China Construction Bank\"][\"brand:en\"=\"China Construction Bank\"][\"brand:wikidata\"=\"Q26299\"][\"brand:zh\"=\"\u4e2d\u570b\u5efa\u8a2d\u9280\u884c\"][\"brand:zh-Hans\"=\"\u4e2d\u56fd\u5efa\u8bbe\u94f6\u884c\"][\"brand:zh-Hant\"=\"\u4e2d\u570b\u5efa\u8a2d\u9280\u884c\"][\"name\"=\"\u4e2d\u570b\u5efa\u8a2d\u9280\u884c\uff08\u4e9e\u6d32\uff09 CCB (Asia)\"][\"name:en\"=\"CCB (Asia)\"][\"name:zh\"=\"\u4e2d\u570b\u5efa\u8a2d\u9280\u884c\uff08\u4e9e\u6d32\uff09\"][\"name:zh-Hans\"=\"\u4e2d\u56fd\u5efa\u8bbe\u94f6\u884c\uff08\u4e9a\u6d32\uff09\"][\"name:zh-Hant\"=\"\u4e2d\u570b\u5efa\u8a2d\u9280\u884c\uff08\u4e9e\u6d32\uff09\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/China_Construction_Bank_logo.svg",
@@ -46370,7 +46370,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u4e2d\u570b\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u4e2d\u570b\u9280\u884c\"][\"brand:en\"=\"Bank of China\"][\"brand:pt\"=\"Banco da China\"][\"brand:wikidata\"=\"Q790068\"][\"brand:zh\"=\"\u4e2d\u570b\u9280\u884c\"][\"brand:zh-Hans\"=\"\u4e2d\u56fd\u94f6\u884c\"][\"brand:zh-Hant\"=\"\u4e2d\u570b\u9280\u884c\"][\"name\"=\"\u4e2d\u570b\u9280\u884c Banco da China\"][\"name:en\"=\"Bank of China\"][\"name:pt\"=\"Banco da China\"][\"name:zh\"=\"\u4e2d\u570b\u9280\u884c\"][\"name:zh-Hans\"=\"\u4e2d\u56fd\u94f6\u884c\"][\"name:zh-Hant\"=\"\u4e2d\u570b\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BOC_Headquarters_at_Xidan_(20171123140827).jpg",
@@ -46406,7 +46406,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u4e2d\u570b\u9280\u884c\uff08\u9999\u6e2f\uff09 Bank of China (Hong Kong)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u4e2d\u570b\u9280\u884c Bank of China\"][\"brand:en\"=\"Bank of China\"][\"brand:wikidata\"=\"Q790068\"][\"brand:zh\"=\"\u4e2d\u570b\u9280\u884c\uff08\u9999\u6e2f\uff09\"][\"brand:zh-Hans\"=\"\u4e2d\u56fd\u94f6\u884c\uff08\u9999\u6e2f\uff09\"][\"brand:zh-Hant\"=\"\u4e2d\u570b\u9280\u884c\uff08\u9999\u6e2f\uff09\"][\"name\"=\"\u4e2d\u570b\u9280\u884c\uff08\u9999\u6e2f\uff09 Bank of China (Hong Kong)\"][\"name:en\"=\"Bank of China (Hong Kong)\"][\"name:zh\"=\"\u4e2d\u570b\u9280\u884c\uff08\u9999\u6e2f\uff09\"][\"name:zh-Hans\"=\"\u4e2d\u56fd\u94f6\u884c\uff08\u9999\u6e2f\uff09\"][\"name:zh-Hant\"=\"\u4e2d\u570b\u9280\u884c\uff08\u9999\u6e2f\uff09\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BOC_Headquarters_at_Xidan_(20171123140827).jpg",
@@ -46442,7 +46442,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u4e91\u5357\u7701\u519c\u6751\u4fe1\u7528\u793e",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u4e91\u5357\u7701\u519c\u6751\u4fe1\u7528\u793e\"][\"brand:en\"=\"Yunnan Rural Credit Cooperatives\"][\"brand:wikidata\"=\"Q114321959\"][\"brand:zh\"=\"\u4e91\u5357\u7701\u519c\u6751\u4fe1\u7528\u793e\"][\"name\"=\"\u4e91\u5357\u7701\u519c\u6751\u4fe1\u7528\u793e\"][\"name:en\"=\"Yunnan Rural Credit Cooperatives\"][\"name:zh\"=\"\u4e91\u5357\u7701\u519c\u6751\u4fe1\u7528\u793e\"][\"official_name\"=\"\u4e91\u5357\u7701\u519c\u6751\u4fe1\u7528\u793e\u8054\u5408\u793e\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -46478,7 +46478,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u4ea4\u901a\u9280\u884c Bank of Communications",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u4ea4\u901a\u9280\u884c Bank of Communications\"][\"brand:en\"=\"Bank of Communications\"][\"brand:wikidata\"=\"Q806680\"][\"brand:zh-Hans\"=\"\u4ea4\u901a\u94f6\u884c\"][\"brand:zh-Hant\"=\"\u4ea4\u901a\u9280\u884c\"][\"name\"=\"\u4ea4\u901a\u9280\u884c Bank of Communications\"][\"name:en\"=\"Bank of Communications\"][\"name:zh\"=\"\u4ea4\u901a\u9280\u884c\"][\"name:zh-Hans\"=\"\u4ea4\u901a\u94f6\u884c\"][\"name:zh-Hant\"=\"\u4ea4\u901a\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_of_Communications_Logo.svg",
@@ -46514,7 +46514,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u4ea4\u901a\u94f6\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u4ea4\u901a\u94f6\u884c\"][\"brand:en\"=\"Bank of Communications\"][\"brand:wikidata\"=\"Q806680\"][\"brand:zh\"=\"\u4ea4\u901a\u94f6\u884c\"][\"name\"=\"\u4ea4\u901a\u94f6\u884c\"][\"name:en\"=\"Bank of Communications\"][\"name:zh\"=\"\u4ea4\u901a\u94f6\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_of_Communications_Logo.svg",
@@ -46550,7 +46550,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u4eac\u57ce\u5546\u696d\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u4eac\u57ce\u5546\u696d\u9280\u884c\"][\"brand:wikidata\"=\"Q10883132\"][\"brand:zh\"=\"\u4eac\u57ce\u5546\u696d\u9280\u884c\"][\"name\"=\"\u4eac\u57ce\u5546\u696d\u9280\u884c\"][\"name:en\"=\"King's Town Bank\"][\"name:nan\"=\"Kia\u207f-si\u00e2\u207f Siong-gia\u030dp G\u00fbn-h\u00e2ng\"][\"name:nan-Hant\"=\"\u4eac\u57ce\u5546\u696d\u9280\u884c\"][\"name:nan-Latn-pehoeji\"=\"Kia\u207f-si\u00e2\u207f Siong-gia\u030dp G\u00fbn-h\u00e2ng\"][\"name:nan-Latn-tailo\"=\"Kiann-si\u00e2nn Siong-gia\u030dp G\u00fbn-h\u00e2ng\"][\"name:zh\"=\"\u4eac\u57ce\u5546\u696d\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -46586,7 +46586,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u4eac\u8449\u9280\u884c",
     query: "(nwr[\"alt_name:en\"=\"\u03b1BANK\"][\"amenity\"=\"bank\"][\"brand\"=\"\u4eac\u8449\u9280\u884c\"][\"brand:en\"=\"Keiyo Bank\"][\"brand:ja\"=\"\u4eac\u8449\u9280\u884c\"][\"brand:wikidata\"=\"Q11374734\"][\"name\"=\"\u4eac\u8449\u9280\u884c\"][\"name:en\"=\"Keiyo Bank\"][\"name:ja\"=\"\u4eac\u8449\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/The_Keiyo_Bank,_Ltd._logo.png",
@@ -46622,7 +46622,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u4eac\u90fd\u4e2d\u592e\u4fe1\u7528\u91d1\u5eab",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u4eac\u90fd\u4e2d\u592e\u4fe1\u7528\u91d1\u5eab\"][\"brand:en\"=\"Kyoto Chuo Shinkin Bank\"][\"brand:ja\"=\"\u4eac\u90fd\u4e2d\u592e\u4fe1\u7528\u91d1\u5eab\"][\"brand:wikidata\"=\"Q11374844\"][\"name\"=\"\u4eac\u90fd\u4e2d\u592e\u4fe1\u7528\u91d1\u5eab\"][\"name:en\"=\"Kyoto Chuo Shinkin Bank\"][\"name:ja\"=\"\u4eac\u90fd\u4e2d\u592e\u4fe1\u7528\u91d1\u5eab\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Kyoto_Chushin_logo.png",
@@ -46658,7 +46658,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u4eac\u90fd\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u4eac\u90fd\u9280\u884c\"][\"brand:en\"=\"Bank of Kyoto\"][\"brand:ja\"=\"\u4eac\u90fd\u9280\u884c\"][\"brand:wikidata\"=\"Q11375713\"][\"name\"=\"\u4eac\u90fd\u9280\u884c\"][\"name:en\"=\"Bank of Kyoto\"][\"name:ja\"=\"\u4eac\u90fd\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Kyoto_Bank_logo.jpg",
@@ -46694,7 +46694,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u4f0a\u4e88\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u4f0a\u4e88\u9280\u884c\"][\"brand:en\"=\"Iyo Bank\"][\"brand:ja\"=\"\u4f0a\u4e88\u9280\u884c\"][\"brand:wikidata\"=\"Q2895314\"][\"name\"=\"\u4f0a\u4e88\u9280\u884c\"][\"name:en\"=\"Iyo Bank\"][\"name:ja\"=\"\u4f0a\u4e88\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Iyo_Bank_Logo.svg",
@@ -46730,7 +46730,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u5143\u5927\u5546\u696d\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u5143\u5927\u5546\u696d\u9280\u884c\"][\"brand:en\"=\"Yuanta Commercial Bank\"][\"brand:wikidata\"=\"Q10889602\"][\"brand:zh\"=\"\u5143\u5927\u5546\u696d\u9280\u884c\"][\"name\"=\"\u5143\u5927\u5546\u696d\u9280\u884c\"][\"name:en\"=\"Yuanta Commercial Bank\"][\"name:nan\"=\"Go\u00e2n-t\u0101i Siong-gia\u030dp G\u00fbn-h\u00e2ng\"][\"name:nan-Hant\"=\"\u5143\u5927\u5546\u696d\u9280\u884c\"][\"name:nan-Latn-pehoeji\"=\"Go\u00e2n-t\u0101i Siong-gia\u030dp G\u00fbn-h\u00e2ng\"][\"name:nan-Latn-tailo\"=\"Gu\u00e2n-t\u0101i Siong-gia\u030dp G\u00fbn-h\u00e2ng\"][\"name:zh\"=\"\u5143\u5927\u5546\u696d\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/\u5143\u5927\u9280\u884cLOGO.jpg",
@@ -46766,7 +46766,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u5146\u8c50\u570b\u969b\u5546\u696d\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u5146\u8c50\u570b\u969b\u5546\u696d\u9280\u884c\"][\"brand:en\"=\"Mega International Commercial Bank\"][\"brand:wikidata\"=\"Q709757\"][\"brand:zh\"=\"\u5146\u8c50\u570b\u969b\u5546\u696d\u9280\u884c\"][\"name\"=\"\u5146\u8c50\u570b\u969b\u5546\u696d\u9280\u884c\"][\"name:en\"=\"Mega International Commercial Bank\"][\"name:nan\"=\"Ti\u0101u-hong Kok-ch\u00e8 Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:nan-Hant\"=\"\u5146\u8c50\u570b\u969b\u5546\u696d\u9280\u884c\"][\"name:nan-Latn-pehoeji\"=\"Ti\u0101u-hong Kok-ch\u00e8 Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:nan-Latn-tailo\"=\"Ti\u0101u-hong Kok-ts\u00e8 Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:zh\"=\"\u5146\u8c50\u570b\u969b\u5546\u696d\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -46802,7 +46802,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u516b\u5341\u4e8c\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u516b\u5341\u4e8c\u9280\u884c\"][\"brand:en\"=\"Hachijuni Bank\"][\"brand:ja\"=\"\u516b\u5341\u4e8c\u9280\u884c\"][\"brand:wikidata\"=\"Q11390608\"][\"name\"=\"\u516b\u5341\u4e8c\u9280\u884c\"][\"name:en\"=\"Hachijuni Bank\"][\"name:ja\"=\"\u516b\u5341\u4e8c\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/82bank-logo.svg",
@@ -46838,7 +46838,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u5174\u4e1a\u94f6\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u5174\u4e1a\u94f6\u884c\"][\"brand:en\"=\"Industrial Bank\"][\"brand:wikidata\"=\"Q1410821\"][\"brand:zh\"=\"\u5174\u4e1a\u94f6\u884c\"][\"name\"=\"\u5174\u4e1a\u94f6\u884c\"][\"name:en\"=\"Industrial Bank\"][\"name:zh\"=\"\u5174\u4e1a\u94f6\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Industrial_Bank_Co.,_Ltd._Head_Office.jpg",
@@ -46874,7 +46874,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u51f1\u57fa\u5546\u696d\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u51f1\u57fa\u5546\u696d\u9280\u884c\"][\"brand:en\"=\"KGI Commercial Bank\"][\"brand:wikidata\"=\"Q19851918\"][\"brand:zh\"=\"\u51f1\u57fa\u5546\u696d\u9280\u884c\"][\"name\"=\"\u51f1\u57fa\u5546\u696d\u9280\u884c\"][\"name:en\"=\"KGI Commercial Bank\"][\"name:nan\"=\"Kh\u00e1i-ki Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:nan-Hant\"=\"\u51f1\u57fa\u5546\u696d\u9280\u884c\"][\"name:nan-Latn-pehoeji\"=\"Kh\u00e1i-ki Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:nan-Latn-tailo\"=\"Kh\u00e1i-ki Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:zh\"=\"\u51f1\u57fa\u5546\u696d\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Keelung_Branch,_KGI_Bank_20150124.jpg",
@@ -46910,7 +46910,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u5275\u8208\u9280\u884c Chong Hing Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u5275\u8208\u9280\u884c Chong Hing Bank\"][\"brand:en\"=\"Chong Hing Bank\"][\"brand:wikidata\"=\"Q5104600\"][\"brand:zh\"=\"\u5275\u8208\u9280\u884c\"][\"brand:zh-Hans\"=\"\u521b\u5174\u94f6\u884c\"][\"brand:zh-Hant\"=\"\u5275\u8208\u9280\u884c\"][\"name\"=\"\u5275\u8208\u9280\u884c Chong Hing Bank\"][\"name:en\"=\"Chong Hing Bank\"][\"name:zh\"=\"\u5275\u8208\u9280\u884c\"][\"name:zh-Hans\"=\"\u521b\u5174\u94f6\u884c\"][\"name:zh-Hant\"=\"\u5275\u8208\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/ChongHingBank_logo_(2014).svg",
@@ -46946,7 +46946,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u5317\u4eac\u519c\u5546\u94f6\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u5317\u4eac\u519c\u5546\u94f6\u884c\"][\"brand:en\"=\"Beijing Rural Commercial Bank\"][\"brand:wikidata\"=\"Q10902046\"][\"brand:zh\"=\"\u5317\u4eac\u519c\u5546\u94f6\u884c\"][\"name\"=\"\u5317\u4eac\u519c\u5546\u94f6\u884c\"][\"name:en\"=\"Beijing Rural Commercial Bank\"][\"name:zh\"=\"\u5317\u4eac\u519c\u5546\u94f6\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -46982,7 +46982,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u5317\u4eac\u94f6\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u5317\u4eac\u94f6\u884c\"][\"brand:en\"=\"Bank of Beijing\"][\"brand:wikidata\"=\"Q39146\"][\"brand:zh\"=\"\u5317\u4eac\u94f6\u884c\"][\"name\"=\"\u5317\u4eac\u94f6\u884c\"][\"name:en\"=\"Bank of Beijing\"][\"name:zh\"=\"\u5317\u4eac\u94f6\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/\u5317\u4eac\u94f6\u884c.jpg",
@@ -47018,7 +47018,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u5317\u6d0b\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u5317\u6d0b\u9280\u884c\"][\"brand:en\"=\"North Pacific Bank\"][\"brand:ja\"=\"\u5317\u6d0b\u9280\u884c\"][\"brand:wikidata\"=\"Q11402354\"][\"name\"=\"\u5317\u6d0b\u9280\u884c\"][\"name:en\"=\"North Pacific Bank\"][\"name:ja\"=\"\u5317\u6d0b\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/North_Pacific_Bank_logo.svg",
@@ -47054,7 +47054,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u5317\u6d77\u9053\u4fe1\u7528\u91d1\u5eab",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u5317\u6d77\u9053\u4fe1\u7528\u91d1\u5eab\"][\"brand:wikidata\"=\"Q28691716\"][\"name\"=\"\u5317\u6d77\u9053\u4fe1\u7528\u91d1\u5eab\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -47090,7 +47090,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u5317\u6d77\u9053\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u5317\u6d77\u9053\u9280\u884c\"][\"brand:en\"=\"Hokkaido Bank\"][\"brand:ja\"=\"\u5317\u6d77\u9053\u9280\u884c\"][\"brand:wikidata\"=\"Q5878076\"][\"name\"=\"\u5317\u6d77\u9053\u9280\u884c\"][\"name:en\"=\"Hokkaido Bank\"][\"name:ja\"=\"\u5317\u6d77\u9053\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Hokkaido_Bank_Main_Office.jpg",
@@ -47126,7 +47126,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u5317\u9678\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u5317\u9678\u9280\u884c\"][\"name\"=\"\u5317\u9678\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -47162,7 +47162,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u5341\u516d\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u5341\u516d\u9280\u884c\"][\"brand:en\"=\"Juroku Bank\"][\"brand:ja\"=\"\u5341\u516d\u9280\u884c\"][\"brand:wikidata\"=\"Q11404883\"][\"name\"=\"\u5341\u516d\u9280\u884c\"][\"name:en\"=\"Juroku Bank\"][\"name:ja\"=\"\u5341\u516d\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/The_Juroku_Bank,_Ltd._logo.png",
@@ -47198,7 +47198,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u5343\u8449\u8208\u696d\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u5343\u8449\u8208\u696d\u9280\u884c\"][\"brand:en\"=\"Chiba Kogyo Bank\"][\"brand:ja\"=\"\u5343\u8449\u8208\u696d\u9280\u884c\"][\"brand:wikidata\"=\"Q11406742\"][\"name\"=\"\u5343\u8449\u8208\u696d\u9280\u884c\"][\"name:en\"=\"Chiba Kogyo Bank\"][\"name:ja\"=\"\u5343\u8449\u8208\u696d\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -47234,7 +47234,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u5343\u8449\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u5343\u8449\u9280\u884c\"][\"brand:en\"=\"The Chiba Bank\"][\"brand:ja\"=\"\u5343\u8449\u9280\u884c\"][\"brand:wikidata\"=\"Q1071712\"][\"name\"=\"\u5343\u8449\u9280\u884c\"][\"name:en\"=\"Chiba Bank\"][\"name:ja\"=\"\u5343\u8449\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Chiba_bank_new.jpg",
@@ -47270,7 +47270,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u534e\u590f\u94f6\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u534e\u590f\u94f6\u884c\"][\"brand:en\"=\"Huaxia Bank\"][\"brand:wikidata\"=\"Q1595443\"][\"brand:zh\"=\"\u534e\u590f\u94f6\u884c\"][\"name\"=\"\u534e\u590f\u94f6\u884c\"][\"name:en\"=\"Huaxia Bank\"][\"name:zh\"=\"\u534e\u590f\u94f6\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Beijing_Dongcheng_Chonwenmen_-_Zhushikou_street_IMG_5675_Huaxia_Bank.jpg",
@@ -47306,7 +47306,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u5357\u4eac\u94f6\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u5357\u4eac\u94f6\u884c\"][\"brand:en\"=\"Bank of Nanjing\"][\"brand:wikidata\"=\"Q6850542\"][\"brand:zh\"=\"\u5357\u4eac\u94f6\u884c\"][\"name\"=\"\u5357\u4eac\u94f6\u884c\"][\"name:en\"=\"Bank of Nanjing\"][\"name:zh\"=\"\u5357\u4eac\u94f6\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_of_Nanjing,_Suzhou_Branch.jpg",
@@ -47342,7 +47342,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u5357\u6d0b\u5546\u696d\u9280\u884c Nanyang Commercial Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u5357\u6d0b\u5546\u696d\u9280\u884c Nanyang Commercial Bank\"][\"brand:en\"=\"Nanyang Commercial Bank\"][\"brand:wikidata\"=\"Q3335816\"][\"brand:zh\"=\"\u5357\u6d0b\u5546\u696d\u9280\u884c\"][\"brand:zh-Hans\"=\"\u5357\u6d0b\u5546\u4e1a\u94f6\u884c\"][\"brand:zh-Hant\"=\"\u5357\u6d0b\u5546\u696d\u9280\u884c\"][\"name\"=\"\u5357\u6d0b\u5546\u696d\u9280\u884c NCB\"][\"name:en\"=\"Nanyang Commercial Bank\"][\"name:zh\"=\"\u5357\u6d0b\u5546\u696d\u9280\u884c\"][\"name:zh-Hans\"=\"\u5357\u6d0b\u5546\u4e1a\u94f6\u884c\"][\"name:zh-Hant\"=\"\u5357\u6d0b\u5546\u696d\u9280\u884c\"][\"short_name\"=\"NCB\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Nanyang_Commercial_Bank_Building.jpg",
@@ -47378,7 +47378,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u5357\u90fd\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u5357\u90fd\u9280\u884c\"][\"brand:en\"=\"Nanto Bank\"][\"brand:ja\"=\"\u5357\u90fd\u9280\u884c\"][\"brand:wikidata\"=\"Q4045062\"][\"name\"=\"\u5357\u90fd\u9280\u884c\"][\"name:en\"=\"Nanto Bank\"][\"name:ja\"=\"\u5357\u90fd\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Nanto_bank_logo.JPG",
@@ -47414,7 +47414,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u53f0\u4e2d\u5546\u696d\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u53f0\u4e2d\u5546\u696d\u9280\u884c\"][\"brand:en\"=\"Taichung Bank\"][\"brand:wikidata\"=\"Q6136958\"][\"brand:zh\"=\"\u53f0\u4e2d\u5546\u696d\u9280\u884c\"][\"name\"=\"\u53f0\u4e2d\u5546\u696d\u9280\u884c\"][\"name:en\"=\"Taichung Bank\"][\"name:nan\"=\"T\u00e2i-tiong Siong-gia\u030dp G\u00fbn-h\u00e2ng\"][\"name:nan-Hant\"=\"\u53f0\u4e2d\u5546\u696d\u9280\u884c\"][\"name:nan-Latn-pehoeji\"=\"T\u00e2i-tiong Siong-gia\u030dp G\u00fbn-h\u00e2ng\"][\"name:nan-Latn-tailo\"=\"T\u00e2i-tiong Siong-gia\u030dp G\u00fbn-h\u00e2ng\"][\"name:zh\"=\"\u53f0\u4e2d\u5546\u696d\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Tcbbank_headoffice_2019.jpg",
@@ -47450,7 +47450,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u53f0\u5317\u5bcc\u90a6\u5546\u696d\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u53f0\u5317\u5bcc\u90a6\u5546\u696d\u9280\u884c\"][\"brand:en\"=\"Taipei Fubon Bank\"][\"brand:wikidata\"=\"Q697293\"][\"brand:zh\"=\"\u53f0\u5317\u5bcc\u90a6\u5546\u696d\u9280\u884c\"][\"name\"=\"\u53f0\u5317\u5bcc\u90a6\u5546\u696d\u9280\u884c\"][\"name:en\"=\"Taipei Fubon Bank\"][\"name:nan\"=\"T\u00e2i-pak H\u00f9-pang Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:nan-Hant\"=\"\u53f0\u5317\u5bcc\u90a6\u5546\u696d\u9280\u884c\"][\"name:nan-Latn-pehoeji\"=\"T\u00e2i-pak H\u00f9-pang Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:nan-Latn-tailo\"=\"T\u00e2i-pak H\u00f9-pang Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:zh\"=\"\u53f0\u5317\u5bcc\u90a6\u5546\u696d\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Taipei_Fubon_Bank_headquarters_20160723.jpg",
@@ -47486,7 +47486,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u53f0\u65b0\u570b\u969b\u5546\u696d\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u53f0\u65b0\u570b\u969b\u5546\u696d\u9280\u884c\"][\"brand:en\"=\"Taishin International Bank\"][\"brand:wikidata\"=\"Q7676420\"][\"brand:zh\"=\"\u53f0\u65b0\u570b\u969b\u5546\u696d\u9280\u884c\"][\"name\"=\"\u53f0\u65b0\u570b\u969b\u5546\u696d\u9280\u884c\"][\"name:en\"=\"Taishin International Bank\"][\"name:nan\"=\"T\u00e2i-sin Kok-ch\u00e8 Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:nan-Hant\"=\"\u53f0\u65b0\u570b\u969b\u5546\u696d\u9280\u884c\"][\"name:nan-Latn-pehoeji\"=\"T\u00e2i-sin Kok-ch\u00e8 Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:nan-Latn-tailo\"=\"T\u00e2i-sin Kok-ts\u00e8 Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:zh\"=\"\u53f0\u65b0\u570b\u969b\u5546\u696d\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/TSIB_Dunnan_Branch_20130324.jpg",
@@ -47522,7 +47522,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u5408\u4f5c\u91d1\u5eab\u5546\u696d\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u5408\u4f5c\u91d1\u5eab\u5546\u696d\u9280\u884c\"][\"brand:en\"=\"Taiwan Cooperative Bank\"][\"brand:wikidata\"=\"Q701540\"][\"brand:zh\"=\"\u5408\u4f5c\u91d1\u5eab\u5546\u696d\u9280\u884c\"][\"name\"=\"\u5408\u4f5c\u91d1\u5eab\u5546\u696d\u9280\u884c\"][\"name:en\"=\"Taiwan Cooperative Bank\"][\"name:nan\"=\"Ha\u030dp-chok Kim-kh\u00f2\u0358 Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:nan-Hant\"=\"\u5408\u4f5c\u91d1\u5eab\u5546\u696d\u9280\u884c\"][\"name:nan-Latn-pehoeji\"=\"Ha\u030dp-chok Kim-kh\u00f2\u0358 Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:nan-Latn-tailo\"=\"Ha\u030dp-tsok Kim-kh\u00f2o Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:zh\"=\"\u5408\u4f5c\u91d1\u5eab\u5546\u696d\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Department_of_Business,_Taiwan_Cooperative_Bank_20171216.jpg",
@@ -47558,7 +47558,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u5546\u5de5\u4e2d\u91d1",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u5546\u5de5\u4e2d\u91d1\"][\"brand:en\"=\"Shoko Chukin Bank\"][\"brand:ja\"=\"\u5546\u5de5\u4e2d\u91d1\"][\"brand:wikidata\"=\"Q11418759\"][\"name\"=\"\u5546\u5de5\u4e2d\u91d1\"][\"name:en\"=\"Shoko Chukin Bank\"][\"name:ja\"=\"\u5546\u5de5\u4e2d\u91d1\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/SHOKO_CHUKIN_BANK_logo.svg",
@@ -47594,7 +47594,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u56fd\u6cf0\u94f6\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u56fd\u6cf0\u94f6\u884c\"][\"brand:en\"=\"Cathay Bank\"][\"brand:wikidata\"=\"Q4189507\"][\"brand:zh\"=\"\u56fd\u6cf0\u94f6\u884c\"][\"name\"=\"\u56fd\u6cf0\u94f6\u884c\"][\"name:en\"=\"Cathay Bank\"][\"name:zh\"=\"\u56fd\u6cf0\u94f6\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Cathay_Bank,_Chinatown,_Los_Angeles,_CA,_USA.jpg",
@@ -47630,7 +47630,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u570b\u6cf0\u4e16\u83ef\u5546\u696d\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u570b\u6cf0\u4e16\u83ef\u5546\u696d\u9280\u884c\"][\"brand:en\"=\"Cathay United Bank\"][\"brand:wikidata\"=\"Q702656\"][\"brand:zh\"=\"\u570b\u6cf0\u4e16\u83ef\u5546\u696d\u9280\u884c\"][\"name\"=\"\u570b\u6cf0\u4e16\u83ef\u5546\u696d\u9280\u884c\"][\"name:en\"=\"Cathay United Bank\"][\"name:nan\"=\"Kok-th\u00e0i S\u00e8-ho\u00e2 Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:nan-Hant\"=\"\u570b\u6cf0\u4e16\u83ef\u5546\u696d\u9280\u884c\"][\"name:nan-Latn-pehoeji\"=\"Kok-th\u00e0i S\u00e8-ho\u00e2 Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:nan-Latn-tailo\"=\"Kok-th\u00e0i S\u00e8-hu\u00e2 Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:zh\"=\"\u570b\u6cf0\u4e16\u83ef\u5546\u696d\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/\u570b\u6cf0\u4e16\u83ef\u9280\u884c\u5929\u6bcd\u5206\u884c_20080104.jpg",
@@ -47666,7 +47666,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u57fc\u7389\u308a\u305d\u306a\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u57fc\u7389\u308a\u305d\u306a\u9280\u884c\"][\"brand:en\"=\"Saitama Resona Bank\"][\"brand:ja\"=\"\u57fc\u7389\u308a\u305d\u306a\u9280\u884c\"][\"brand:wikidata\"=\"Q4671591\"][\"name\"=\"\u57fc\u7389\u308a\u305d\u306a\u9280\u884c\"][\"name:en\"=\"Saitama Resona Bank\"][\"name:ja\"=\"\u57fc\u7389\u308a\u305d\u306a\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Saitama_Resona_Bank_Logo.svg",
@@ -47702,7 +47702,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u591a\u6469\u4fe1\u7528\u91d1\u5eab",
     query: "(nwr[\"alt_name\"=\"\u305f\u307e\u3057\u3093\"][\"alt_name:en\"=\"Tamashin\"][\"alt_name:ja\"=\"\u305f\u307e\u3057\u3093\"][\"amenity\"=\"bank\"][\"brand\"=\"\u591a\u6469\u4fe1\u7528\u91d1\u5eab\"][\"brand:en\"=\"Tama Shinkin Bank\"][\"brand:ja\"=\"\u591a\u6469\u4fe1\u7528\u91d1\u5eab\"][\"brand:wikidata\"=\"Q11430719\"][\"name\"=\"\u591a\u6469\u4fe1\u7528\u91d1\u5eab\"][\"name:en\"=\"Tama Shinkin Bank\"][\"name:ja\"=\"\u591a\u6469\u4fe1\u7528\u91d1\u5eab\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Tama-shinkin_bank,_logo.svg",
@@ -47738,7 +47738,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u5927\u65b0\u9280\u884c Dah Sing Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u5927\u65b0\u9280\u884c Dah Sing Bank\"][\"brand:en\"=\"Dah Sing Bank\"][\"brand:wikidata\"=\"Q5208707\"][\"brand:zh\"=\"\u5927\u65b0\u9280\u884c\"][\"brand:zh-Hans\"=\"\u5927\u65b0\u94f6\u884c\"][\"brand:zh-Hant\"=\"\u5927\u65b0\u9280\u884c\"][\"name\"=\"\u5927\u65b0\u9280\u884c Dah Sing Bank\"][\"name:en\"=\"Dah Sing Bank\"][\"name:zh\"=\"\u5927\u65b0\u9280\u884c\"][\"name:zh-Hans\"=\"\u5927\u65b0\u94f6\u884c\"][\"name:zh-Hant\"=\"\u5927\u65b0\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/DSB_Image.jpg",
@@ -47774,7 +47774,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u5927\u773e\u9280\u884c\uff08\u9999\u6e2f\uff09 Public Bank (Hong Kong)",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u5927\u773e\u9280\u884c Public Bank\"][\"brand:en\"=\"Public Bank\"][\"brand:wikidata\"=\"Q3046561\"][\"brand:zh\"=\"\u5927\u773e\u9280\u884c\"][\"brand:zh-Hans\"=\"\u5927\u4f17\u94f6\u884c\"][\"brand:zh-Hant\"=\"\u5927\u773e\u9280\u884c\"][\"name\"=\"\u5927\u773e\u9280\u884c\uff08\u9999\u6e2f\uff09 Public Bank (Hong Kong)\"][\"name:en\"=\"Public Bank (Hong Kong)\"][\"name:zh\"=\"\u5927\u773e\u9280\u884c\uff08\u9999\u6e2f\uff09\"][\"name:zh-Hans\"=\"\u5927\u4f17\u94f6\u884c\uff08\u9999\u6e2f\uff09\"][\"name:zh-Hant\"=\"\u5927\u773e\u9280\u884c\uff08\u9999\u6e2f\uff09\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Menara_Public_Bank,_Kuala_Lumpur.JPG",
@@ -47810,7 +47810,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u5927\u897f\u6d0b\u9280\u884c Banco Nacional Ultramarino",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u5927\u897f\u6d0b\u9280\u884c Banco Nacional Ultramarino\"][\"brand:pt\"=\"Banco Nacional Ultramarino\"][\"brand:wikidata\"=\"Q806190\"][\"brand:zh\"=\"\u5927\u897f\u6d0b\u9280\u884c\"][\"name\"=\"\u5927\u897f\u6d0b\u9280\u884c Banco Nacional Ultramarino\"][\"name:pt\"=\"Banco Nacional Ultramarino\"][\"name:zh\"=\"\u5927\u897f\u6d0b\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BancoNacionalUltramarino_logo.svg",
@@ -47846,7 +47846,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u5927\u8c50\u9280\u884c Banco Tai Fung",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u5927\u8c50\u9280\u884c Banco Tai Fung\"][\"brand:en\"=\"Tai Fung Bank\"][\"brand:pt\"=\"Banco Tai Fung\"][\"brand:wikidata\"=\"Q10938051\"][\"brand:zh\"=\"\u5927\u8c50\u9280\u884c\"][\"name\"=\"\u5927\u8c50\u9280\u884c Banco Tai Fung\"][\"name:en\"=\"Tai Fung Bank\"][\"name:pt\"=\"Banco Tai Fung\"][\"name:zh\"=\"\u5927\u8c50\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -47882,7 +47882,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u5929\u6d25\u94f6\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u5929\u6d25\u94f6\u884c\"][\"brand:en\"=\"Bank of Tianjin\"][\"brand:wikidata\"=\"Q10940359\"][\"brand:zh\"=\"\u5929\u6d25\u94f6\u884c\"][\"name\"=\"\u5929\u6d25\u94f6\u884c\"][\"name:en\"=\"Bank of Tianjin\"][\"name:zh\"=\"\u5929\u6d25\u94f6\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -47918,7 +47918,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u5b81\u6ce2\u94f6\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u5b81\u6ce2\u94f6\u884c\"][\"brand:en\"=\"Bank of Ningbo\"][\"brand:wikidata\"=\"Q4856166\"][\"brand:zh\"=\"\u5b81\u6ce2\u94f6\u884c\"][\"name\"=\"\u5b81\u6ce2\u94f6\u884c\"][\"name:en\"=\"Bank of Ningbo\"][\"name:zh\"=\"\u5b81\u6ce2\u94f6\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_of_Ningbo_Hangzhou_brach.JPG",
@@ -47954,7 +47954,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u5b89\u6cf0\u5546\u696d\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u5b89\u6cf0\u5546\u696d\u9280\u884c\"][\"brand:en\"=\"Entie Commercial Bank\"][\"brand:wikidata\"=\"Q10946952\"][\"brand:zh\"=\"\u5b89\u6cf0\u5546\u696d\u9280\u884c\"][\"name\"=\"\u5b89\u6cf0\u5546\u696d\u9280\u884c\"][\"name:en\"=\"Entie Commercial Bank\"][\"name:nan\"=\"An-th\u00e0i Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:nan-Hant\"=\"\u5b89\u6cf0\u5546\u696d\u9280\u884c\"][\"name:nan-Latn-pehoeji\"=\"An-th\u00e0i Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:nan-Latn-tailo\"=\"An-th\u00e0i Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:zh\"=\"\u5b89\u6cf0\u5546\u696d\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Entie_Bank_logo_2013.svg",
@@ -47990,7 +47990,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u5bcc\u90a6\u9280\u884c Fubon Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u5bcc\u90a6\u9280\u884c Fubon Bank\"][\"brand:en\"=\"Fubon Bank\"][\"brand:wikidata\"=\"Q5506911\"][\"brand:zh\"=\"\u5bcc\u90a6\u9280\u884c\"][\"brand:zh-Hans\"=\"\u5bcc\u90a6\u94f6\u884c\"][\"brand:zh-Hant\"=\"\u5bcc\u90a6\u9280\u884c\"][\"name\"=\"\u5bcc\u90a6\u9280\u884c Fubon Bank\"][\"name:en\"=\"Fubon Bank\"][\"name:zh\"=\"\u5bcc\u90a6\u9280\u884c\"][\"name:zh-Hans\"=\"\u5bcc\u90a6\u94f6\u884c\"][\"name:zh-Hant\"=\"\u5bcc\u90a6\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Fubon_Bank_Branch.jpg",
@@ -48026,7 +48026,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u5c71\u68a8\u4e2d\u592e\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u5c71\u68a8\u4e2d\u592e\u9280\u884c\"][\"brand:en\"=\"Yamanashi Chuo Bank\"][\"brand:ja\"=\"\u5c71\u68a8\u4e2d\u592e\u9280\u884c\"][\"brand:wikidata\"=\"Q11469601\"][\"name\"=\"\u5c71\u68a8\u4e2d\u592e\u9280\u884c\"][\"name:en\"=\"Yamanashi Chuo Bank\"][\"name:ja\"=\"\u5c71\u68a8\u4e2d\u592e\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -48062,7 +48062,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u5de5\u9280\u6fb3\u9580 ICBC",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u4e2d\u570b\u5de5\u5546\u9280\u884c\"][\"brand:en\"=\"Industrial and Commercial Bank of China\"][\"brand:wikidata\"=\"Q26463\"][\"brand:zh\"=\"\u4e2d\u570b\u5de5\u5546\u9280\u884c\"][\"brand:zh-Hans\"=\"\u4e2d\u56fd\u5de5\u5546\u94f6\u884c\"][\"brand:zh-Hant\"=\"\u4e2d\u570b\u5de5\u5546\u9280\u884c\"][\"name\"=\"\u5de5\u9280\u6fb3\u9580 ICBC\"][\"name:en\"=\"ICBC\"][\"name:zh\"=\"\u5de5\u9280\u6fb3\u9580\"][\"name:zh-Hans\"=\"\u5de5\u94f6\u6fb3\u95e8\"][\"name:zh-Hant\"=\"\u5de5\u9280\u6fb3\u9580\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/ICBC_ChanganAVe.jpg",
@@ -48098,7 +48098,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u5e38\u967d\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u5e38\u967d\u9280\u884c\"][\"brand:en\"=\"Joyo Bank\"][\"brand:ja\"=\"\u5e38\u967d\u9280\u884c\"][\"brand:wikidata\"=\"Q6297774\"][\"name\"=\"\u5e38\u967d\u9280\u884c\"][\"name:en\"=\"Joyo Bank\"][\"name:ja\"=\"\u5e38\u967d\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -48134,7 +48134,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u5e73\u5b89\u94f6\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u5e73\u5b89\u94f6\u884c\"][\"brand:en\"=\"Ping An Bank\"][\"brand:wikidata\"=\"Q7195659\"][\"brand:zh\"=\"\u5e73\u5b89\u94f6\u884c\"][\"name\"=\"\u5e73\u5b89\u94f6\u884c\"][\"name:en\"=\"Ping An Bank\"][\"name:zh\"=\"\u5e73\u5b89\u94f6\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Ping_An_Bank_Logo.svg",
@@ -48170,7 +48170,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u5e7f\u53d1\u94f6\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u5e7f\u53d1\u94f6\u884c\"][\"brand:en\"=\"China Guangfa Bank\"][\"brand:wikidata\"=\"Q3118744\"][\"brand:zh\"=\"\u5e7f\u53d1\u94f6\u884c\"][\"name\"=\"\u5e7f\u53d1\u94f6\u884c\"][\"name:en\"=\"China Guangfa Bank\"][\"name:zh\"=\"\u5e7f\u53d1\u94f6\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -48206,7 +48206,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u5f70\u5316\u5546\u696d\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u5f70\u5316\u5546\u696d\u9280\u884c\"][\"brand:en\"=\"Chang Hwa Bank\"][\"brand:wikidata\"=\"Q5071627\"][\"brand:zh\"=\"\u5f70\u5316\u5546\u696d\u9280\u884c\"][\"name\"=\"\u5f70\u5316\u5546\u696d\u9280\u884c\"][\"name:en\"=\"Chang Hwa Bank\"][\"name:nan\"=\"Chiong-h\u00f2a Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:nan-Hant\"=\"\u5f70\u5316\u5546\u696d\u9280\u884c\"][\"name:nan-Latn-pehoeji\"=\"Chiong-h\u00f2a Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:nan-Latn-tailo\"=\"Tsiong-hu\u00e0 Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:zh\"=\"\u5f70\u5316\u5546\u696d\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Central_Branch,_Chang_Hwa_Bank_20101213.jpg",
@@ -48242,7 +48242,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u5fbd\u5546\u94f6\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u5fbd\u5546\u94f6\u884c\"][\"brand:en\"=\"Huishang Bank\"][\"brand:wikidata\"=\"Q11071935\"][\"brand:zh\"=\"\u5fbd\u5546\u94f6\u884c\"][\"name\"=\"\u5fbd\u5546\u94f6\u884c\"][\"name:en\"=\"Huishang Bank\"][\"name:zh\"=\"\u5fbd\u5546\u94f6\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -48278,7 +48278,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u6052\u4e30\u94f6\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u6052\u4e30\u94f6\u884c\"][\"brand:en\"=\"HengFeng Bank\"][\"brand:wikidata\"=\"Q11072892\"][\"brand:zh\"=\"\u6052\u4e30\u94f6\u884c\"][\"name\"=\"\u6052\u4e30\u94f6\u884c\"][\"name:en\"=\"HengFeng Bank\"][\"name:zh\"=\"\u6052\u4e30\u94f6\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -48314,7 +48314,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u6052\u751f\u9280\u884c Hang Seng Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u6052\u751f\u9280\u884c Hang Seng Bank\"][\"brand:en\"=\"Hang Seng Bank\"][\"brand:wikidata\"=\"Q1575470\"][\"brand:zh\"=\"\u6052\u751f\u9280\u884c\"][\"brand:zh-Hans\"=\"\u6052\u751f\u94f6\u884c\"][\"brand:zh-Hant\"=\"\u6052\u751f\u9280\u884c\"][\"name\"=\"\u6052\u751f\u9280\u884c Hang Seng Bank\"][\"name:en\"=\"Hang Seng Bank\"][\"name:zh\"=\"\u6052\u751f\u9280\u884c\"][\"name:zh-Hans\"=\"\u6052\u751f\u94f6\u884c\"][\"name:zh-Hant\"=\"\u6052\u751f\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/HangSengHeadquarter_20071110.jpg",
@@ -48350,7 +48350,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u611b\u77e5\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u611b\u77e5\u9280\u884c\"][\"brand:en\"=\"Aichi Bank\"][\"brand:ja\"=\"\u611b\u77e5\u9280\u884c\"][\"brand:wikidata\"=\"Q746428\"][\"name\"=\"\u611b\u77e5\u9280\u884c\"][\"name:en\"=\"Aichi Bank\"][\"name:ja\"=\"\u611b\u77e5\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Aichi_Bank_logo.png",
@@ -48386,7 +48386,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u62db\u5546\u6c38\u9686\u9280\u884c CMB Wing Lung Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u62db\u5546\u6c38\u9686\u9280\u884c CMB Wing Lung Bank\"][\"brand:en\"=\"CMB Wing Lung Bank\"][\"brand:wikidata\"=\"Q8025114\"][\"brand:zh\"=\"\u62db\u5546\u6c38\u9686\u9280\u884c\"][\"brand:zh-Hans\"=\"\u62db\u5546\u6c38\u9686\u94f6\u884c\"][\"brand:zh-Hant\"=\"\u62db\u5546\u6c38\u9686\u9280\u884c\"][\"name\"=\"\u62db\u5546\u6c38\u9686\u9280\u884c CMB Wing Lung Bank\"][\"name:en\"=\"CMB Wing Lung Bank\"][\"name:zh\"=\"\u62db\u5546\u6c38\u9686\u9280\u884c\"][\"name:zh-Hans\"=\"\u62db\u5546\u6c38\u9686\u94f6\u884c\"][\"name:zh-Hant\"=\"\u62db\u5546\u6c38\u9686\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/\u62db\u5546\u6c38\u9686\u94f6\u884c\u603b\u884c2023\u5e74.jpg",
@@ -48422,7 +48422,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u62db\u5546\u94f6\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u62db\u5546\u94f6\u884c\"][\"brand:en\"=\"China Merchants Bank\"][\"brand:wikidata\"=\"Q1073327\"][\"brand:zh\"=\"\u62db\u5546\u94f6\u884c\"][\"name\"=\"\u62db\u5546\u94f6\u884c\"][\"name:en\"=\"China Merchants Bank\"][\"name:zh\"=\"\u62db\u5546\u94f6\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/CMB_Tower_in_Shenzhen2021.jpg",
@@ -48458,7 +48458,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u65e5\u672c\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u65e5\u672c\u9280\u884c\"][\"brand:en\"=\"Bank of Japan\"][\"brand:ja\"=\"\u65e5\u672c\u9280\u884c\"][\"brand:wikidata\"=\"Q333101\"][\"name\"=\"\u65e5\u672c\u9280\u884c\"][\"name:en\"=\"Bank of Japan\"][\"name:ja\"=\"\u65e5\u672c\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/\u65e5\u672c\u9280\u884c\u30ed\u30b4.svg",
@@ -48494,7 +48494,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u661f\u5c55\uff08\u53f0\u7063\uff09\u5546\u696d\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u661f\u5c55\u9280\u884c\"][\"brand:en\"=\"DBS Bank\"][\"brand:wikidata\"=\"Q705417\"][\"brand:zh\"=\"\u661f\u5c55\u9280\u884c\"][\"name\"=\"\u661f\u5c55\uff08\u53f0\u7063\uff09\u5546\u696d\u9280\u884c\"][\"name:en\"=\"DBS Bank Taiwan\"][\"name:zh\"=\"\u661f\u5c55\uff08\u53f0\u7063\uff09\u5546\u696d\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Marina_Bay_Financial_Centre,_Singapore_-_20121110.jpg",
@@ -48530,7 +48530,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u661f\u5c55\u9280\u884c DBS",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u661f\u5c55\u9280\u884c DBS\"][\"brand:en\"=\"DBS\"][\"brand:wikidata\"=\"Q705417\"][\"brand:zh\"=\"\u661f\u5c55\u9280\u884c\"][\"brand:zh-Hans\"=\"\u661f\u5c55\u94f6\u884c\"][\"brand:zh-Hant\"=\"\u661f\u5c55\u9280\u884c\"][\"name\"=\"\u661f\u5c55\u9280\u884c DBS\"][\"name:en\"=\"DBS\"][\"name:zh\"=\"\u661f\u5c55\u9280\u884c\"][\"name:zh-Hans\"=\"\u661f\u5c55\u94f6\u884c\"][\"name:zh-Hant\"=\"\u661f\u5c55\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Marina_Bay_Financial_Centre,_Singapore_-_20121110.jpg",
@@ -48566,7 +48566,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u661f\u5c55\u94f6\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u661f\u5c55\u94f6\u884c\"][\"brand:en\"=\"DBS\"][\"brand:wikidata\"=\"Q705417\"][\"brand:zh\"=\"\u661f\u5c55\u94f6\u884c\"][\"brand:zh-Hans\"=\"\u661f\u5c55\u94f6\u884c\"][\"brand:zh-Hant\"=\"\u661f\u5c55\u9280\u884c\"][\"name\"=\"\u661f\u5c55\u94f6\u884c\"][\"name:en\"=\"DBS\"][\"name:zh\"=\"\u661f\u5c55\u94f6\u884c\"][\"name:zh-Hans\"=\"\u661f\u5c55\u94f6\u884c\"][\"name:zh-Hant\"=\"\u661f\u5c55\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Marina_Bay_Financial_Centre,_Singapore_-_20121110.jpg",
@@ -48602,7 +48602,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u676d\u5dde\u94f6\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u676d\u5dde\u94f6\u884c\"][\"brand:en\"=\"Bank ok Hangzhou\"][\"brand:wikidata\"=\"Q11102645\"][\"brand:zh\"=\"\u676d\u5dde\u94f6\u884c\"][\"name\"=\"\u676d\u5dde\u94f6\u884c\"][\"name:en\"=\"Bank ok Hangzhou\"][\"name:zh\"=\"\u676d\u5dde\u94f6\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/\u5357\u4eac\u4e2d\u5c71\u8def\u676d\u5dde\u94f6\u884c_-_panoramio.jpg",
@@ -48638,7 +48638,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u6771\u4e9e\u9280\u884c Bank of East Asia",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u6771\u4e9e\u9280\u884c Bank of East Asia\"][\"brand:en\"=\"Bank of East Asia\"][\"brand:wikidata\"=\"Q806679\"][\"brand:zh-Hans\"=\"\u4e1c\u4e9a\u94f6\u884c\"][\"brand:zh-Hant\"=\"\u6771\u4e9e\u9280\u884c\"][\"name\"=\"\u6771\u4e9e\u9280\u884c BEA\"][\"name:en\"=\"Bank of East Asia\"][\"name:zh\"=\"\u6771\u4e9e\u9280\u884c\"][\"name:zh-Hans\"=\"\u4e1c\u4e9a\u94f6\u884c\"][\"name:zh-Hant\"=\"\u6771\u4e9e\u9280\u884c\"][\"short_name\"=\"BEA\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_of_East_Asia_Logo.svg",
@@ -48674,7 +48674,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u6771\u4eac\u30d9\u30a4\u4fe1\u91d1",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u6771\u4eac\u30d9\u30a4\u4fe1\u91d1\"][\"brand:en\"=\"Tokyo Bay Shinkin Bank\"][\"brand:ja\"=\"\u6771\u4eac\u30d9\u30a4\u4fe1\u91d1\"][\"brand:wikidata\"=\"Q11524392\"][\"name\"=\"\u6771\u4eac\u30d9\u30a4\u4fe1\u91d1\"][\"name:en\"=\"Tokyo Bay Shinkin Bank\"][\"name:ja\"=\"\u6771\u4eac\u30d9\u30a4\u4fe1\u91d1\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -48710,7 +48710,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u6771\u65e5\u672c\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u6771\u65e5\u672c\u9280\u884c\"][\"brand:en\"=\"Higashi-Nippon Bank\"][\"brand:ja\"=\"\u6771\u65e5\u672c\u9280\u884c\"][\"brand:wikidata\"=\"Q11527211\"][\"name\"=\"\u6771\u65e5\u672c\u9280\u884c\"][\"name:en\"=\"Higashi-Nippon Bank\"][\"name:ja\"=\"\u6771\u65e5\u672c\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -48746,7 +48746,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u677f\u4fe1\u5546\u696d\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u677f\u4fe1\u5546\u696d\u9280\u884c\"][\"brand:en\"=\"Bank of Panshin\"][\"brand:wikidata\"=\"Q11104946\"][\"brand:zh\"=\"\u677f\u4fe1\u5546\u696d\u9280\u884c\"][\"name\"=\"\u677f\u4fe1\u5546\u696d\u9280\u884c\"][\"name:en\"=\"Bank of Panshin\"][\"name:nan\"=\"P\u00e1n-s\u00ecn Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:nan-Hant\"=\"\u677f\u4fe1\u5546\u696d\u9280\u884c\"][\"name:nan-Latn-pehoeji\"=\"P\u00e1n-s\u00ecn Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:nan-Latn-tailo\"=\"P\u00e1n-s\u00ecn Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:zh\"=\"\u677f\u4fe1\u5546\u696d\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -48782,7 +48782,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u6a2a\u6d5c\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u6a2a\u6d5c\u9280\u884c\"][\"brand:en\"=\"Bank of Yokohama\"][\"brand:ja\"=\"\u6a2a\u6d5c\u9280\u884c\"][\"brand:wikidata\"=\"Q2744340\"][\"name\"=\"\u6a2a\u6d5c\u9280\u884c\"][\"name:en\"=\"Bank of Yokohama\"][\"name:ja\"=\"\u6a2a\u6d5c\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_of_Yokohama_Head_Office_Building_04.JPG",
@@ -48818,7 +48818,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u6b66\u8535\u91ce\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u6b66\u8535\u91ce\u9280\u884c\"][\"brand:en\"=\"Musashino Bank\"][\"brand:ja\"=\"\u6b66\u8535\u91ce\u9280\u884c\"][\"brand:wikidata\"=\"Q11546449\"][\"name\"=\"\u6b66\u8535\u91ce\u9280\u884c\"][\"name:en\"=\"Musashino Bank\"][\"name:ja\"=\"\u6b66\u8535\u91ce\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Japanese_Musashino_Bank_head_office.jpg",
@@ -48854,7 +48854,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u6c38\u8c50\u5546\u696d\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u6c38\u8c50\u5546\u696d\u9280\u884c\"][\"brand:en\"=\"Bank SinoPac\"][\"brand:wikidata\"=\"Q11132721\"][\"brand:zh\"=\"\u6c38\u8c50\u5546\u696d\u9280\u884c\"][\"name\"=\"\u6c38\u8c50\u5546\u696d\u9280\u884c\"][\"name:en\"=\"Bank SinoPac\"][\"name:nan\"=\"\u00c9ng-hong Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:nan-Hant\"=\"\u6c38\u8c50\u5546\u696d\u9280\u884c\"][\"name:nan-Latn-pehoeji\"=\"\u00c9ng-hong Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:nan-Latn-tailo\"=\"\u00cdng-hong Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:zh\"=\"\u6c38\u8c50\u5546\u696d\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -48890,7 +48890,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u6c5f\u82cf\u94f6\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u6c5f\u82cf\u94f6\u884c\"][\"brand:en\"=\"Bank of Jiangsu\"][\"brand:wikidata\"=\"Q11135108\"][\"brand:zh\"=\"\u6c5f\u82cf\u94f6\u884c\"][\"name\"=\"\u6c5f\u82cf\u94f6\u884c\"][\"name:en\"=\"Bank of Jiangsu\"][\"name:zh\"=\"\u6c5f\u82cf\u94f6\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -48926,7 +48926,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u6c96\u7e04\u6d77\u90a6\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u6c96\u7e04\u6d77\u90a6\u9280\u884c\"][\"brand:en\"=\"Okinawa Kaiho Bank\"][\"brand:ja\"=\"\u6c96\u7e04\u6d77\u90a6\u9280\u884c\"][\"brand:wikidata\"=\"Q11552709\"][\"name\"=\"\u6c96\u7e04\u6d77\u90a6\u9280\u884c\"][\"name:en\"=\"Okinawa Kaiho Bank\"][\"name:ja\"=\"\u6c96\u7e04\u6d77\u90a6\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -48962,7 +48962,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u6d1b\u9633\u94f6\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u6d1b\u9633\u94f6\u884c\"][\"brand:en\"=\"Bank of Luoyang\"][\"brand:wikidata\"=\"Q11146242\"][\"brand:zh\"=\"\u6d1b\u9633\u94f6\u884c\"][\"name\"=\"\u6d1b\u9633\u94f6\u884c\"][\"name:en\"=\"Bank of Luoyang\"][\"name:zh\"=\"\u6d1b\u9633\u94f6\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -48998,7 +48998,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u6d59\u5546\u94f6\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u6d59\u5546\u94f6\u884c\"][\"brand:en\"=\"China Zheshang Bank\"][\"brand:wikidata\"=\"Q15924407\"][\"brand:zh\"=\"\u6d59\u5546\u94f6\u884c\"][\"name\"=\"\u6d59\u5546\u94f6\u884c\"][\"name:en\"=\"China Zheshang Bank\"][\"name:zh\"=\"\u6d59\u5546\u94f6\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -49034,7 +49034,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u6e23\u6253\u570b\u969b\u5546\u696d\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u6e23\u6253\u570b\u969b\u5546\u696d\u9280\u884c\"][\"brand:en\"=\"Standard Chartered Taiwan\"][\"brand:wikidata\"=\"Q62267023\"][\"brand:zh\"=\"\u6e23\u6253\u570b\u969b\u5546\u696d\u9280\u884c\"][\"name\"=\"\u6e23\u6253\u570b\u969b\u5546\u696d\u9280\u884c\"][\"name:en\"=\"Standard Chartered Taiwan\"][\"name:zh\"=\"\u6e23\u6253\u570b\u969b\u5546\u696d\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -49070,7 +49070,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u6e23\u6253\u9280\u884c Standard Chartered",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u6e23\u6253\u9280\u884c Standard Chartered\"][\"brand:en\"=\"Standard Chartered\"][\"brand:wikidata\"=\"Q548278\"][\"brand:zh\"=\"\u6e23\u6253\u9280\u884c\"][\"brand:zh-Hans\"=\"\u6e23\u6253\u94f6\u884c\"][\"brand:zh-Hant\"=\"\u6e23\u6253\u9280\u884c\"][\"name\"=\"\u6e23\u6253\u9280\u884c Standard Chartered\"][\"name:en\"=\"Standard Chartered\"][\"name:zh\"=\"\u6e23\u6253\u9280\u884c\"][\"name:zh-Hans\"=\"\u6e23\u6253\u94f6\u884c\"][\"name:zh-Hant\"=\"\u6e23\u6253\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Standard_Chartered_(2021).svg",
@@ -49106,7 +49106,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u6e23\u6253\u94f6\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u6e23\u6253\u94f6\u884c\"][\"brand:en\"=\"Standard Chartered\"][\"brand:wikidata\"=\"Q548278\"][\"brand:zh\"=\"\u6e23\u6253\u94f6\u884c\"][\"name\"=\"\u6e23\u6253\u94f6\u884c\"][\"name:en\"=\"Standard Chartered\"][\"name:zh\"=\"\u6e23\u6253\u94f6\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Standard_Chartered_(2021).svg",
@@ -49142,7 +49142,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u6e24\u6d77\u94f6\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u6e24\u6d77\u94f6\u884c\"][\"brand:en\"=\"China Bohai Bank\"][\"brand:wikidata\"=\"Q4208326\"][\"brand:zh\"=\"\u6e24\u6d77\u94f6\u884c\"][\"name\"=\"\u6e24\u6d77\u94f6\u884c\"][\"name:en\"=\"China Bohai Bank\"][\"name:zh\"=\"\u6e24\u6d77\u94f6\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/China_Bohai_Bank_IMG_4654.jpg",
@@ -49178,7 +49178,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u6ed9\u8c50\uff08\u53f0\u7063\uff09\u5546\u696d\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"HSBC\"][\"brand:en\"=\"HSBC\"][\"brand:wikidata\"=\"Q5635861\"][\"brand:zh\"=\"\u6ed9\u8c50\"][\"brand:zh-Hans\"=\"\u6c47\u4e30\"][\"brand:zh-Hant\"=\"\u6ed9\u8c50\"][\"name\"=\"\u6ed9\u8c50\uff08\u53f0\u7063\uff09\u5546\u696d\u9280\u884c\"][\"name:en\"=\"HSBC Bank Taiwan\"][\"name:zh\"=\"\u6ed9\u8c50\uff08\u53f0\u7063\uff09\u5546\u696d\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -49214,7 +49214,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u6fb3\u9580\u5546\u696d\u9280\u884c Banco Comercial de Macau",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u6fb3\u9580\u5546\u696d\u9280\u884c Banco Comercial de Macau\"][\"brand:pt\"=\"Banco Comercial de Macau\"][\"brand:wikidata\"=\"Q22099041\"][\"brand:zh\"=\"\u6fb3\u9580\u5546\u696d\u9280\u884c\"][\"name\"=\"\u6fb3\u9580\u5546\u696d\u9280\u884c Banco Comercial de Macau\"][\"name:pt\"=\"Banco Comercial de Macau\"][\"name:zh\"=\"\u6fb3\u9580\u5546\u696d\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BCM_\u53f0\u5c71\u5206\u884c.jpg",
@@ -49250,7 +49250,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u6fb3\u9580\u570b\u969b\u9280\u884c Banco Luso Internacional",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u6fb3\u9580\u570b\u969b\u9280\u884c Banco Luso Internacional\"][\"brand:en\"=\"Luso International Banking\"][\"brand:pt\"=\"Banco Luso Internacional\"][\"brand:wikidata\"=\"Q15934810\"][\"brand:zh\"=\"\u6fb3\u9580\u570b\u969b\u9280\u884c\"][\"name\"=\"\u6fb3\u9580\u570b\u969b\u9280\u884c Banco Luso Internacional\"][\"name:en\"=\"Luso International Banking\"][\"name:pt\"=\"Banco Luso Internacional\"][\"name:zh\"=\"\u6fb3\u9580\u570b\u969b\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -49286,7 +49286,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u7389\u5c71\u5546\u696d\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u7389\u5c71\u5546\u696d\u9280\u884c\"][\"brand:en\"=\"E.SUN Commercial Bank\"][\"brand:wikidata\"=\"Q5321663\"][\"brand:zh\"=\"\u7389\u5c71\u5546\u696d\u9280\u884c\"][\"name\"=\"\u7389\u5c71\u5546\u696d\u9280\u884c\"][\"name:en\"=\"E.SUN Commercial Bank\"][\"name:nan\"=\"Gio\u030dk-san Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:nan-Hant\"=\"\u7389\u5c71\u5546\u696d\u9280\u884c\"][\"name:nan-Latn-pehoeji\"=\"Gio\u030dk-san Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:nan-Latn-tailo\"=\"Gio\u030dk-san Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:zh\"=\"\u7389\u5c71\u5546\u696d\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/E.SUN_Bank.svg",
@@ -49322,7 +49322,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u745e\u8208\u5546\u696d\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u745e\u8208\u5546\u696d\u9280\u884c\"][\"brand:en\"=\"Taipei Star Bank\"][\"brand:wikidata\"=\"Q10933886\"][\"brand:zh\"=\"\u745e\u8208\u5546\u696d\u9280\u884c\"][\"name\"=\"\u745e\u8208\u5546\u696d\u9280\u884c\"][\"name:en\"=\"Taipei Star Bank\"][\"name:nan\"=\"S\u016bi-heng Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:nan-Hant\"=\"\u745e\u8208\u5546\u696d\u9280\u884c\"][\"name:nan-Latn-pehoeji\"=\"S\u016bi-heng Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:nan-Latn-tailo\"=\"Su\u012b-hing Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:zh\"=\"\u745e\u8208\u5546\u696d\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Taipei_Star_Bank_logo_2017.svg",
@@ -49358,7 +49358,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u767e\u4e94\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u767e\u4e94\u9280\u884c\"][\"brand:wikidata\"=\"Q11580676\"][\"name\"=\"\u767e\u4e94\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/The_Hyakugo_Bank,_Ltd.JPG",
@@ -49394,7 +49394,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u76e4\u8c37\u9280\u884c Bangkok Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u76e4\u8c37\u9280\u884c Bangkok Bank\"][\"brand:en\"=\"Bangkok Bank\"][\"brand:wikidata\"=\"Q806483\"][\"brand:zh\"=\"\u76e4\u8c37\u9280\u884c\"][\"brand:zh-Hans\"=\"\u76d8\u8c37\u94f6\u884c\"][\"brand:zh-Hant\"=\"\u76e4\u8c37\u9280\u884c\"][\"name\"=\"\u76e4\u8c37\u9280\u884c Bangkok Bank\"][\"name:en\"=\"Bangkok Bank\"][\"name:zh\"=\"\u76e4\u8c37\u9280\u884c\"][\"name:zh-Hans\"=\"\u76d8\u8c37\u94f6\u884c\"][\"name:zh-Hant\"=\"\u76e4\u8c37\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Bangkok_Bank_Public_Company_Limited.svg",
@@ -49430,7 +49430,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u7acb\u6a4b\u9280\u884c Well Link Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u7acb\u6a4b\u9280\u884c Well Link Bank\"][\"brand:en\"=\"Well Link Bank\"][\"brand:pt\"=\"Banco Well Link\"][\"brand:wikidata\"=\"Q117599325\"][\"brand:zh\"=\"\u7acb\u6a4b\u9280\u884c\"][\"name\"=\"\u7acb\u6a4b\u9280\u884c Well Link Bank\"][\"name:en\"=\"Well Link Bank\"][\"name:pt\"=\"Banco Well Link\"][\"name:zh\"=\"\u7acb\u6a4b\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -49466,7 +49466,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u7b2c\u4e00\u5546\u696d\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u7b2c\u4e00\u5546\u696d\u9280\u884c\"][\"brand:en\"=\"First Commercial Bank\"][\"brand:wikidata\"=\"Q11602128\"][\"brand:zh\"=\"\u7b2c\u4e00\u5546\u696d\u9280\u884c\"][\"name\"=\"\u7b2c\u4e00\u5546\u696d\u9280\u884c\"][\"name:en\"=\"First Commercial Bank\"][\"name:nan\"=\"T\u0113-it Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:nan-Hant\"=\"\u7b2c\u4e00\u5546\u696d\u9280\u884c\"][\"name:nan-Latn-pehoeji\"=\"T\u0113-it Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:nan-Latn-tailo\"=\"T\u0113-it Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:zh\"=\"\u7b2c\u4e00\u5546\u696d\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -49502,7 +49502,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u806f\u90a6\u5546\u696d\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u806f\u90a6\u5546\u696d\u9280\u884c\"][\"brand:en\"=\"Union Bank of Taiwan\"][\"brand:wikidata\"=\"Q15927195\"][\"brand:zh\"=\"\u806f\u90a6\u5546\u696d\u9280\u884c\"][\"name\"=\"\u806f\u90a6\u5546\u696d\u9280\u884c\"][\"name:en\"=\"Union Bank of Taiwan\"][\"name:nan\"=\"Li\u00e2n-pang Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:nan-Hant\"=\"\u806f\u90a6\u5546\u696d\u9280\u884c\"][\"name:nan-Latn-pehoeji\"=\"Li\u00e2n-pang Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:nan-Latn-tailo\"=\"Li\u00e2n-pang Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:zh\"=\"\u806f\u90a6\u5546\u696d\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/UBOT_HQ_at_Union_Enterprise_Building_20150912.jpg",
@@ -49538,7 +49538,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u81fa\u7063\u4e2d\u5c0f\u4f01\u696d\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u81fa\u7063\u4e2d\u5c0f\u4f01\u696d\u9280\u884c\"][\"brand:en\"=\"Taiwan Business Bank\"][\"brand:wikidata\"=\"Q15913812\"][\"brand:zh\"=\"\u81fa\u7063\u4e2d\u5c0f\u4f01\u696d\u9280\u884c\"][\"name\"=\"\u81fa\u7063\u4e2d\u5c0f\u4f01\u696d\u9280\u884c\"][\"name:en\"=\"Taiwan Business Bank\"][\"name:nan\"=\"T\u00e2i-o\u00e2n Tiong-si\u00f3 Kh\u00ec-gia\u030dp G\u00een-h\u00e2ng\"][\"name:nan-Hant\"=\"\u81fa\u7063\u4e2d\u5c0f\u4f01\u696d\u9280\u884c\"][\"name:nan-Latn-pehoeji\"=\"T\u00e2i-o\u00e2n Tiong-si\u00f3 Kh\u00ec-gia\u030dp G\u00een-h\u00e2ng\"][\"name:nan-Latn-tailo\"=\"T\u00e2i-u\u00e2n Tiong-si\u00f3 Kh\u00ec-gia\u030dp G\u00een-h\u00e2ng\"][\"name:zh\"=\"\u81fa\u7063\u4e2d\u5c0f\u4f01\u696d\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Taiwan_Business_Bank_logo_20190526.svg",
@@ -49574,7 +49574,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u81fa\u7063\u571f\u5730\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u81fa\u7063\u571f\u5730\u9280\u884c\"][\"brand:en\"=\"Land Bank of Taiwan\"][\"brand:wikidata\"=\"Q717592\"][\"brand:zh\"=\"\u81fa\u7063\u571f\u5730\u9280\u884c\"][\"name\"=\"\u81fa\u7063\u571f\u5730\u9280\u884c\"][\"name:en\"=\"Land Bank of Taiwan\"][\"name:hak\"=\"Th\u00f2i-v\u00e2n Th\u00fa-thi Ngi\u00f9n-h\u00f2ng\"][\"name:nan\"=\"T\u00e2i-o\u00e2n Th\u00f3\u0358-t\u0113 G\u00een-h\u00e2ng\"][\"name:nan-Hant\"=\"\u81fa\u7063\u571f\u5730\u9280\u884c\"][\"name:nan-Latn-pehoeji\"=\"T\u00e2i-o\u00e2n Th\u00f3\u0358-t\u0113 G\u00een-h\u00e2ng\"][\"name:nan-Latn-tailo\"=\"T\u00e2i-u\u00e2n Th\u00f3o-t\u0113 G\u00een-h\u00e2ng\"][\"name:zh\"=\"\u81fa\u7063\u571f\u5730\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Land_Bank_of_Taiwan_headquarters_20070514.jpg",
@@ -49610,7 +49610,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u81fa\u7063\u65b0\u5149\u5546\u696d\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u81fa\u7063\u65b0\u5149\u5546\u696d\u9280\u884c\"][\"brand:en\"=\"Shin Kong Commercial Bank\"][\"brand:wikidata\"=\"Q15909616\"][\"brand:zh\"=\"\u81fa\u7063\u65b0\u5149\u5546\u696d\u9280\u884c\"][\"name\"=\"\u81fa\u7063\u65b0\u5149\u5546\u696d\u9280\u884c\"][\"name:en\"=\"Shin Kong Commercial Bank\"][\"name:nan\"=\"T\u00e2i-o\u00e2n Sin-kong Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:nan-Hant\"=\"\u81fa\u7063\u65b0\u5149\u5546\u696d\u9280\u884c\"][\"name:nan-Latn-pehoeji\"=\"T\u00e2i-o\u00e2n Sin-kong Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:nan-Latn-tailo\"=\"T\u00e2i-u\u00e2n Sin-kong Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:zh\"=\"\u81fa\u7063\u65b0\u5149\u5546\u696d\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -49646,7 +49646,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u81fa\u7063\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u81fa\u7063\u9280\u884c\"][\"brand:en\"=\"Bank of Taiwan\"][\"brand:wikidata\"=\"Q706533\"][\"brand:zh\"=\"\u81fa\u7063\u9280\u884c\"][\"name\"=\"\u81fa\u7063\u9280\u884c\"][\"name:en\"=\"Bank of Taiwan\"][\"name:hak\"=\"Th\u00f2i-v\u00e2n Ngi\u00f9n-h\u00f2ng\"][\"name:nan\"=\"T\u00e2i-o\u00e2n G\u00een-h\u00e2ng\"][\"name:nan-Hant\"=\"\u81fa\u7063\u9280\u884c\"][\"name:nan-Latn-pehoeji\"=\"T\u00e2i-o\u00e2n G\u00een-h\u00e2ng\"][\"name:nan-Latn-tailo\"=\"T\u00e2i-u\u00e2n G\u00een-h\u00e2ng\"][\"name:zh\"=\"\u81fa\u7063\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -49682,7 +49682,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u829d\u4fe1\u7528\u91d1\u5eab",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u829d\u4fe1\u7528\u91d1\u5eab\"][\"brand:en\"=\"Shiba Shinkin Bank\"][\"brand:ja\"=\"\u829d\u4fe1\u7528\u91d1\u5eab\"][\"brand:wikidata\"=\"Q11614605\"][\"name\"=\"\u829d\u4fe1\u7528\u91d1\u5eab\"][\"name:en\"=\"Shiba Shinkin Bank\"][\"name:ja\"=\"\u829d\u4fe1\u7528\u91d1\u5eab\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -49718,7 +49718,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u82b1\u65d7\u9280\u884c Citibank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u82b1\u65d7\u9280\u884c Citibank\"][\"brand:en\"=\"Citibank\"][\"brand:wikidata\"=\"Q857063\"][\"brand:zh\"=\"\u82b1\u65d7\u9280\u884c\"][\"brand:zh-Hans\"=\"\u82b1\u65d7\u94f6\u884c\"][\"brand:zh-Hant\"=\"\u82b1\u65d7\u9280\u884c\"][\"name\"=\"\u82b1\u65d7\u9280\u884c Citibank\"][\"name:en\"=\"Citibank\"][\"name:zh\"=\"\u82b1\u65d7\u9280\u884c\"][\"name:zh-Hans\"=\"\u82b1\u65d7\u94f6\u884c\"][\"name:zh-Hant\"=\"\u82b1\u65d7\u9280\u884c\"][\"short_name\"=\"Citi\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Citibank.svg",
@@ -49754,7 +49754,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u83ef\u50d1\u9280\u884c Banco OCBC",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u83ef\u50d1\u9280\u884c Banco OCBC\"][\"brand:en\"=\"OCBC Bank\"][\"brand:pt\"=\"Banco OCBC\"][\"brand:wikidata\"=\"Q837147\"][\"brand:zh\"=\"\u83ef\u50d1\u9280\u884c\"][\"brand:zh-Hans\"=\"\u534e\u4fa8\u94f6\u884c\"][\"brand:zh-Hant\"=\"\u83ef\u50d1\u9280\u884c\"][\"name\"=\"\u83ef\u50d1\u9280\u884c Banco OCBC\"][\"name:en\"=\"OCBC Bank\"][\"name:pt\"=\"Banco OCBC\"][\"name:zh\"=\"\u83ef\u50d1\u9280\u884c\"][\"name:zh-Hans\"=\"\u534e\u4fa8\u94f6\u884c\"][\"name:zh-Hant\"=\"\u83ef\u50d1\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -49790,7 +49790,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u83ef\u50d1\u9280\u884c OCBC Bank",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u83ef\u50d1\u9280\u884c OCBC Bank\"][\"brand:en\"=\"OCBC Bank\"][\"brand:wikidata\"=\"Q837147\"][\"brand:zh\"=\"\u83ef\u50d1\u9280\u884c\"][\"brand:zh-Hans\"=\"\u534e\u4fa8\u94f6\u884c\"][\"brand:zh-Hant\"=\"\u83ef\u50d1\u9280\u884c\"][\"name\"=\"\u83ef\u50d1\u9280\u884c OCBC Bank\"][\"name:en\"=\"OCBC Bank\"][\"name:zh\"=\"\u83ef\u50d1\u9280\u884c\"][\"name:zh-Hans\"=\"\u534e\u4fa8\u94f6\u884c\"][\"name:zh-Hant\"=\"\u83ef\u50d1\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -49826,7 +49826,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u83ef\u5357\u5546\u696d\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u83ef\u5357\u5546\u696d\u9280\u884c\"][\"brand:en\"=\"Hua Nan Commercial Bank\"][\"brand:wikidata\"=\"Q11620043\"][\"brand:zh\"=\"\u83ef\u5357\u5546\u696d\u9280\u884c\"][\"name\"=\"\u83ef\u5357\u5546\u696d\u9280\u884c\"][\"name:en\"=\"Hua Nan Commercial Bank\"][\"name:nan\"=\"Ho\u00e2-l\u00e2m Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:nan-Hant\"=\"\u83ef\u5357\u5546\u696d\u9280\u884c\"][\"name:nan-Latn-pehoeji\"=\"Ho\u00e2-l\u00e2m Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:nan-Latn-tailo\"=\"Hu\u00e2-l\u00e2m Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:zh\"=\"\u83ef\u5357\u5546\u696d\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -49862,7 +49862,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u83ef\u6cf0\u5546\u696d\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u83ef\u6cf0\u5546\u696d\u9280\u884c\"][\"brand:en\"=\"Hwatai Commercial Bank\"][\"brand:wikidata\"=\"Q17500686\"][\"brand:zh\"=\"\u83ef\u6cf0\u5546\u696d\u9280\u884c\"][\"name\"=\"\u83ef\u6cf0\u5546\u696d\u9280\u884c\"][\"name:en\"=\"Hwatai Commercial Bank\"][\"name:nan\"=\"Ho\u00e2-th\u00e0i Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:nan-Hant\"=\"\u83ef\u6cf0\u5546\u696d\u9280\u884c\"][\"name:nan-Latn-pehoeji\"=\"Ho\u00e2-th\u00e0i Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:nan-Latn-tailo\"=\"Hu\u00e2-th\u00e0i Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:zh\"=\"\u83ef\u6cf0\u5546\u696d\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -49898,7 +49898,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u8fd1\u757f\u5927\u962a\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u8fd1\u757f\u5927\u962a\u9280\u884c\"][\"brand:en\"=\"The Kinki Osaka Bank\"][\"brand:ja\"=\"\u8fd1\u757f\u5927\u962a\u9280\u884c\"][\"brand:wikidata\"=\"Q11638628\"][\"name\"=\"\u8fd1\u757f\u5927\u962a\u9280\u884c\"][\"name:en\"=\"Kinki Osaka Bank\"][\"name:ja\"=\"\u8fd1\u757f\u5927\u962a\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Kinki_Osaka_Bank_Logo_2011.svg",
@@ -49934,7 +49934,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u9060\u6771\u570b\u969b\u5546\u696d\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u9060\u6771\u570b\u969b\u5546\u696d\u9280\u884c\"][\"brand:en\"=\"Far Eastern International Bank\"][\"brand:wikidata\"=\"Q15911143\"][\"brand:zh\"=\"\u9060\u6771\u570b\u969b\u5546\u696d\u9280\u884c\"][\"name\"=\"\u9060\u6771\u570b\u969b\u5546\u696d\u9280\u884c\"][\"name:en\"=\"Far Eastern International Bank\"][\"name:nan\"=\"O\u00e1n-tong Kok-ch\u00e8 Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:nan-Hant\"=\"\u9060\u6771\u570b\u969b\u5546\u696d\u9280\u884c\"][\"name:nan-Latn-pehoeji\"=\"O\u00e1n-tong Kok-ch\u00e8 Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:nan-Latn-tailo\"=\"U\u00e1n-tong Kok-ts\u00e8 Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:zh\"=\"\u9060\u6771\u570b\u969b\u5546\u696d\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -49970,7 +49970,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u95a2\u897f\u307f\u3089\u3044\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u95a2\u897f\u307f\u3089\u3044\u9280\u884c\"][\"brand:en\"=\"Kansai Mirai Bank\"][\"brand:ja\"=\"\u95a2\u897f\u307f\u3089\u3044\u9280\u884c\"][\"brand:wikidata\"=\"Q62679053\"][\"name\"=\"\u95a2\u897f\u307f\u3089\u3044\u9280\u884c\"][\"name:en\"=\"Kansai Mirai Bank\"][\"name:ja\"=\"\u95a2\u897f\u307f\u3089\u3044\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Kansai_Mirai_Bank_logo.svg",
@@ -50006,7 +50006,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u967d\u4fe1\u5546\u696d\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u967d\u4fe1\u5546\u696d\u9280\u884c\"][\"brand:en\"=\"Sunny Commercial Bank\"][\"brand:wikidata\"=\"Q11658759\"][\"brand:zh\"=\"\u967d\u4fe1\u5546\u696d\u9280\u884c\"][\"name\"=\"\u967d\u4fe1\u5546\u696d\u9280\u884c\"][\"name:en\"=\"Sunny Commercial Bank\"][\"name:nan\"=\"I\u00f4ng-s\u00ecn Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:nan-Hant\"=\"\u967d\u4fe1\u5546\u696d\u9280\u884c\"][\"name:nan-Latn-pehoeji\"=\"I\u00f4ng-s\u00ecn Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:nan-Latn-tailo\"=\"I\u00f4ng-s\u00ecn Siong-gia\u030dp G\u00een-h\u00e2ng\"][\"name:zh\"=\"\u967d\u4fe1\u5546\u696d\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
@@ -50042,7 +50042,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u96c6\u53cb\u9280\u884c Chiyu Banking Corporation",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u96c6\u53cb\u9280\u884c Chiyu Banking Corporation\"][\"brand:en\"=\"Chiyu Banking Corporation\"][\"brand:wikidata\"=\"Q877121\"][\"brand:zh\"=\"\u96c6\u53cb\u9280\u884c\"][\"brand:zh-Hans\"=\"\u96c6\u53cb\u94f6\u884c\"][\"brand:zh-Hant\"=\"\u96c6\u53cb\u9280\u884c\"][\"name\"=\"\u96c6\u53cb\u9280\u884c Chiyu Banking Corporation\"][\"name:en\"=\"Chiyu Banking Corporation\"][\"name:zh\"=\"\u96c6\u53cb\u9280\u884c\"][\"name:zh-Hans\"=\"\u96c6\u53cb\u94f6\u884c\"][\"name:zh-Hant\"=\"\u96c6\u53cb\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Chiyu_Bank_Building_in_2018.jpg",
@@ -50078,7 +50078,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u9759\u5ca1\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u9759\u5ca1\u9280\u884c\"][\"brand:en\"=\"Shizuoka Bank\"][\"brand:ja\"=\"\u9759\u5ca1\u9280\u884c\"][\"brand:wikidata\"=\"Q7499501\"][\"name\"=\"\u9759\u5ca1\u9280\u884c\"][\"name:en\"=\"Shizuoka Bank\"][\"name:ja\"=\"\u9759\u5ca1\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Shizuoka-Bank-Honten.jpg",
@@ -50114,7 +50114,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u9999\u6e2f\u4e0a\u6d77\u6ed9\u8c50\u9280\u884c HSBC",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u9999\u6e2f\u4e0a\u6d77\u6ed9\u8c50\u9280\u884c HSBC\"][\"brand:en\"=\"HSBC\"][\"brand:wikidata\"=\"Q190464\"][\"brand:zh\"=\"\u9999\u6e2f\u4e0a\u6d77\u6ed9\u8c50\u9280\u884c\"][\"brand:zh-Hans\"=\"\u9999\u6e2f\u4e0a\u6d77\u6c47\u4e30\u94f6\u884c\"][\"brand:zh-Hant\"=\"\u9999\u6e2f\u4e0a\u6d77\u6ed9\u8c50\u9280\u884c\"][\"name\"=\"\u6ed9\u8c50\u9280\u884c HSBC\"][\"name:en\"=\"HSBC\"][\"name:zh\"=\"\u6ed9\u8c50\u9280\u884c\"][\"name:zh-Hans\"=\"\u6c47\u4e30\u94f6\u884c\"][\"name:zh-Hant\"=\"\u6ed9\u8c50\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/HSBC_logo_(2018).svg",
@@ -50150,7 +50150,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u9ad8\u96c4\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u9ad8\u96c4\u9280\u884c\"][\"brand:en\"=\"Bank of Kaohsiung\"][\"brand:wikidata\"=\"Q11673248\"][\"brand:zh\"=\"\u9ad8\u96c4\u9280\u884c\"][\"name\"=\"\u9ad8\u96c4\u9280\u884c\"][\"name:en\"=\"Bank of Kaohsiung\"][\"name:nan\"=\"Ko-hi\u00f4ng G\u00een-h\u00e2ng\"][\"name:nan-Hant\"=\"\u9ad8\u96c4\u9280\u884c\"][\"name:nan-Latn-pehoeji\"=\"Ko-hi\u00f4ng G\u00een-h\u00e2ng\"][\"name:nan-Latn-tailo\"=\"Ko-hi\u00f4ng G\u00een-h\u00e2ng\"][\"name:zh\"=\"\u9ad8\u96c4\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Po_Ai_Branch,_Bank_of_Kaohsiung_20100921.jpg",
@@ -50186,7 +50186,7 @@ export const bankOverlays = [
     }
 },
 {
-    group: "bank",
+   group: getTranslation('bank'),
     title: "\u9e7f\u5150\u5cf6\u9280\u884c",
     query: "(nwr[\"amenity\"=\"bank\"][\"brand\"=\"\u9e7f\u5150\u5cf6\u9280\u884c\"][\"brand:en\"=\"Kagoshima Bank\"][\"brand:ja\"=\"\u9e7f\u5150\u5cf6\u9280\u884c\"][\"brand:wikidata\"=\"Q11677008\"][\"name\"=\"\u9e7f\u5150\u5cf6\u9280\u884c\"][\"name:en\"=\"Kagoshima Bank\"][\"name:ja\"=\"\u9e7f\u5150\u5cf6\u9280\u884c\"]({{bbox}});node(w););out meta;",
     iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/The_kagoshima_bank.svg",

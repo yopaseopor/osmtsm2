@@ -3,7 +3,7 @@ import { allOverlays } from './overlays/index.js';
 // Create overlay configuration
 // Helper to merge overlays from group folders
 function mergeGroupOverlays(baseOverlays, allOverlays) {
-    const groupKeys = ['food', 'shopping', 'animal', 'health', 'transport', 'education', 'translated'];
+    const groupKeys = ['food', 'shopping', 'animal', 'bank', 'health', 'transport', 'education', 'translated'];
     let overlays = baseOverlays.slice();
     groupKeys.forEach(groupName => {
         if (Array.isArray(allOverlays[groupName])) {
@@ -11,7 +11,7 @@ function mergeGroupOverlays(baseOverlays, allOverlays) {
                 // Avoid duplicates by title+group
                 if (!overlays.some(ov => ov.title === overlay.title && ov.group === (overlay.group || groupName))) {
                     overlays.push({
-                        group: (typeof window.getTranslation === 'function' && ['food','shopping','animal','health','transport','education','leisure','culture','services','accommodation','religion'].includes((overlay.group || groupName)))
+                        group: (typeof window.getTranslation === 'function' && ['food','shopping','animal','bank','health','transport','education','leisure','culture','services','accommodation','religion'].includes((overlay.group || groupName)))
     ? window.getTranslation(overlay.group || groupName)
     : (overlay.group || groupName),
                         title: overlay.title,
@@ -40,7 +40,7 @@ export const overlayConfig = {
         Object.entries(allOverlays).flatMap(([groupName, groupOverlays]) => {
             if (!Array.isArray(groupOverlays)) return [];
             return groupOverlays.map(overlay => ({
-                group: (typeof window.getTranslation === 'function' && ['food','shopping','animal','health','transport','education','leisure','culture','services','accommodation','religion'].includes((overlay.group || groupName)))
+                group: (typeof window.getTranslation === 'function' && ['food','shopping','animal','bank','health','transport','education','leisure','culture','services','accommodation','religion'].includes((overlay.group || groupName)))
     ? window.getTranslation(overlay.group || groupName)
     : (overlay.group || groupName),
                 title: overlay.title,
@@ -69,7 +69,7 @@ window.addEventListener('overlaysUpdated', function(event) {
             Object.entries(window.allOverlays).flatMap(([groupName, groupOverlays]) => {
                 if (!Array.isArray(groupOverlays)) return [];
                 return groupOverlays.map(overlay => ({
-                    group: (typeof window.getTranslation === 'function' && ['food','shopping','animal','health','transport','education','leisure','culture','services','accommodation','religion'].includes((overlay.group || groupName)))
+                    group: (typeof window.getTranslation === 'function' && ['food','shopping','animal','bank','health','transport','education','leisure','culture','services','accommodation','religion'].includes((overlay.group || groupName)))
     ? window.getTranslation(overlay.group || groupName)
     : (overlay.group || groupName),
                     title: overlay.title,
