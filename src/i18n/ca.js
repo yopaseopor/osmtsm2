@@ -33,7 +33,7 @@ export const ca = {
 	animal_boarding: 'Cuida d\'animals',
     animal_shelter: 'Refugi d\'animals',
 	bank: 'Banca',
-	atm: 'Caixers automàtics'
+	atm: 'Caixers automàtics',
     // Specific POIs
     mcdonalds: 'McDonald\'s',
     starbucks: 'Starbucks'
