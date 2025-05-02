@@ -29,12 +29,7 @@ export const ca = {
     services: 'Serveis',
     accommodation: 'Allotjament',
     religion: 'Religió',
-	animal: 'Animals',
-	animal_boarding: 'Cuida d\'animals',
-    animal_shelter: 'Refugi d\'animals',
-	bank: 'Banca',
-	atm: 'Caixers automàtics',
     // Specific POIs
     mcdonalds: 'McDonald\'s',
-    starbucks: 'Starbucks'
+    starbucks: 'Starbuckes'
 }; 

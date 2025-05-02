@@ -29,11 +29,6 @@ export const es = {
     services: 'Servicios',
     accommodation: 'Alojamiento',
     religion: 'Religión',
-	animal: 'Animales',
-	animal_boarding: 'Cuidado de animales',
-    animal_shelter: 'Refugio de animales',
-	bank: 'Banca',
-	atm: 'Cajeros automáticos',
     // Specific POIs
     mcdonalds: 'McDonald\'s',
     starbucks: 'Starbucks'

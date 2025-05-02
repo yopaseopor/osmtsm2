@@ -415,15 +415,6 @@ $(function () {
 
 
 	var layersControlBuild = function () {
-    // Only register overlaysUpdated handler once
-    if (!window._classicSelectorPatched) {
-        window._classicSelectorPatched = true;
-        window.addEventListener('overlaysUpdated', function() {
-            var $menu = $('#menu');
-            $menu.find('.osmcat-menu').remove();
-            $menu.append(layersControlBuild());
-        });
-    }
 		var visibleLayer,
 			previousLayer,
 			layerIndex = 0,
@@ -442,52 +433,13 @@ $(function () {
 			}),
 			content = $('<div>').addClass('osmcat-content');
 
-		// Use latest overlays from config, which have translated group titles
-    // Use overlays from window.overlays for translated group titles (same as overlay searcher)
-    var overlaysByGroup = {};
-    if (window.overlays && Array.isArray(window.overlays)) {
-        window.overlays.forEach(function(overlay) {
-            if (!overlaysByGroup[overlay.group]) overlaysByGroup[overlay.group] = [];
-            overlaysByGroup[overlay.group].push(overlay);
-        });
-    }
-    var layers = (window.config && window.config.layers) ? window.config.layers : config.layers;
-    layers.forEach(layer => {
+		config.layers.forEach(layer => {
 			if (layer.get('type') === 'overlay') {
-                // Use translated group title if available, matching overlay searcher logic
-                // Always display a TRANSLATED group title: use getTranslation on the group key from overlaysByGroup if possible
-                // Use the original group key for translation (not the possibly already-translated string)
-                var groupKey = null;
-                var foundOverlayGroup = null;
-                Object.keys(overlaysByGroup).forEach(function(translatedGroup) {
-                    if (
-                        overlaysByGroup[translatedGroup][0] &&
-                        overlaysByGroup[translatedGroup][0]._groupKey &&
-                        (overlaysByGroup[translatedGroup][0].group === layer.get('title') ||
-                         overlaysByGroup[translatedGroup][0].group === layer.get('group') ||
-                         layer.get('title') === translatedGroup ||
-                         layer.get('group') === translatedGroup)
-                    ) {
-                        foundOverlayGroup = translatedGroup;
-                        groupKey = overlaysByGroup[translatedGroup][0]._groupKey;
-                    }
-                });
-                var groupTitle = null;
-                if (foundOverlayGroup && typeof window.getTranslation === 'function') {
-                    groupTitle = window.getTranslation(groupKey || foundOverlayGroup);
-                } else if (layer.get('group') && typeof window.getTranslation === 'function') {
-                    groupTitle = window.getTranslation(layer.get('group'));
-                } else if (layer.get('title')) {
-                    groupTitle = layer.get('title');
-                } else if (layer.get('group')) {
-                    groupTitle = layer.get('group');
-                } else {
-                    groupTitle = 'Overlay';
-                }
-                var layerButton = $('<h3>').html(groupTitle),
-                    overlayDivContent = $('<div>').addClass('osmcat-content osmcat-overlay overlay' + overlayIndex);
+				var title = layer.get('title'),
+					layerButton = $('<h3>').html(title),
+					overlayDivContent = $('<div>').addClass('osmcat-content osmcat-overlay overlay' + overlayIndex);
 
-				overlaySelect.append($('<option>').val('overlay' + overlayIndex).text(groupTitle));
+				overlaySelect.append($('<option>').val('overlay' + overlayIndex).text(title));
 
 				layer.getLayers().forEach(overlay => {
 					var overlaySrc = overlay.get('iconSrc'),
