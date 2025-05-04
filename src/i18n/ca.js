@@ -22,6 +22,7 @@ export const ca = {
     leisure: 'Oci',
     food: 'Menjar i Beguda',
     shopping: 'Compres',
+	bank: 'Banca',
     transport: 'Transport',
     health: 'Salut',
     education: 'Educació',

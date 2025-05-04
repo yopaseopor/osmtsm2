@@ -1,5 +1,6 @@
 import { foodOverlays } from './groups/food.js';
 import { shoppingOverlays } from './groups/shopping.js';
+import { bankOverlays } from './groups/bank.js';
 import { transportOverlays } from './groups/transport.js';
 import { healthOverlays } from './groups/health.js';
 import { educationOverlays } from './groups/education.js';
@@ -13,6 +14,7 @@ export function getAllOverlays() {
     return {
         food: foodOverlays(), // always re-evaluate for translations
         shopping: shoppingOverlays(), // static for this example
+		bank: bankOverlays(), // static for this example
         transport: transportOverlays,
         health: healthOverlays,
         education: educationOverlays,
