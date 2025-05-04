@@ -1,8 +1,7 @@
 import { getTranslation } from '../../i18n/index.js';
 
-export function shoppingOverlays() {
-    return [
-        {
+export const shoppingOverlays = [
+    {
         group: getTranslation('shopping'),
         title: 'Zara',
         query: '[out:json][timeout:25];(nwr["brand:wikidata"="Q147662"]({{bbox}}););out body;>;out skel qt;',
@@ -36,7 +35,6 @@ export function shoppingOverlays() {
                 stroke: stroke
             });
             return style;
-            }
         }
-    ];
-}
+    }
+]; 

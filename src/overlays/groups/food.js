@@ -1,8 +1,7 @@
 import { getTranslation } from '../../i18n/index.js';
 
-export function foodOverlays() {
-    return [
-        {
+export const foodOverlays = [
+    {
             group: getTranslation('food'),
             title: getTranslation('mcdonalds'),
             query: '[out:json][timeout:25];(nwr["amenity"="fast_food"]["brand"="McDonald\'s"]({{bbox}}););out body;>;out skel qt;',
@@ -72,7 +71,6 @@ export function foodOverlays() {
                     stroke: stroke
                 });
                 return style;
-            }
         }
-    ];
-}
+    }
+]; 
