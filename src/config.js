@@ -242,7 +242,7 @@ var config = {
 				
 		
 {
-			group: getTranslation('food'),
+			group: 'Alimentación',
 			title: 'Supermercados',
 			query: '(nwr["shop"="supermarket"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones/maxspeed_empty.svg',
