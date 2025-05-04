@@ -1,6 +1,7 @@
 {
     "externalOverlayFiles": [
         "food.js",
+		"bank.js"
         "custom_overlays.js"
     ]
 } 
