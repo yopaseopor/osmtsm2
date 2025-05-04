@@ -1,6 +1,6 @@
 import { getTranslation } from '../../i18n/index.js';
 
-export function foodOverlays() {
+export function shoppingOverlays() {
     return [
         {
         group: getTranslation('shopping'),
