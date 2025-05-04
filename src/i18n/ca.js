@@ -30,6 +30,9 @@ export const ca = {
     services: 'Serveis',
     accommodation: 'Allotjament',
     religion: 'Religió',
+	    // Specific POIs
+    restaurants: 'Restaurants',
+    starbucks: 'Starbucks',
     // Specific POIs
     mcdonalds: 'McDonald\'s',
     starbucks: 'Starbucks'
