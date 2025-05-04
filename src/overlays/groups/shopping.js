@@ -1,6 +1,6 @@
 import { getTranslation } from '../../i18n/index.js';
 
-export const shoppingOverlays() = [
+export const shoppingOverlays = [
     {
         group: getTranslation('shopping'),
         title: 'Zara',
