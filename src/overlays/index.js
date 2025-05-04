@@ -12,7 +12,7 @@ console.log('Initializing overlays system...');
 export function getAllOverlays() {
     return {
         food: foodOverlays(), // always re-evaluate for translations
-        shopping: shoppingOverlays, // static for this example
+        shopping: shoppingOverlays(), // static for this example
         transport: transportOverlays,
         health: healthOverlays,
         education: educationOverlays,
