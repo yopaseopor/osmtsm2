@@ -22,7 +22,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -58,7 +58,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -94,7 +94,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -130,7 +130,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -166,7 +166,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Auro_Domus_logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -202,7 +202,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco24Horas_logo.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -238,7 +238,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -274,7 +274,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -310,7 +310,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -346,7 +346,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -382,7 +382,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -418,7 +418,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Chime_company_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -454,7 +454,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/UnionPay_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -490,7 +490,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -526,7 +526,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -562,7 +562,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -598,7 +598,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -634,7 +634,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -670,7 +670,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Deutsche_Post_DHL.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -706,7 +706,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -742,7 +742,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Euronet_Worldwide_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -778,7 +778,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Geldmaat_logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -814,7 +814,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Hitachi_2025_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -850,7 +850,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -886,7 +886,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -922,7 +922,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/MEPS_New_Logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -958,7 +958,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Moneyget_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -994,7 +994,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -1030,7 +1030,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -1066,7 +1066,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/1_Mutual_Place.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -1102,7 +1102,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -1138,7 +1138,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -1174,7 +1174,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Post_Office_Logo_RGB.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -1210,7 +1210,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Postamat.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -1246,7 +1246,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/PostFinance_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -1282,7 +1282,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -1318,7 +1318,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -1354,7 +1354,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Tesco_logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -1390,7 +1390,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/T-Bank_RU_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -1426,7 +1426,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Chunghwa_Post_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -1462,7 +1462,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -1498,7 +1498,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/3_Bank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -1534,7 +1534,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/365.bank.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -1570,7 +1570,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Aargauische_Kantonalbank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -1606,7 +1606,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Abanca_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -1642,7 +1642,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/ABN-AMRO_Logo_new_colors.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -1678,7 +1678,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kneuterfijk,_kantoor_Mees_&_Hope.JPG",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -1714,7 +1714,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -1750,7 +1750,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Absa_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -1786,7 +1786,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Absa_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -1822,7 +1822,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Abu_Dhabi_Commercial_Bank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -1858,7 +1858,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -1894,7 +1894,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Acba-bank-logo.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -1930,7 +1930,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Accessbank1.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -1966,7 +1966,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/ActivoBank_Logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -2002,7 +2002,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -2038,7 +2038,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Addiko_Bank_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -2074,7 +2074,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Affin_Bank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -2110,7 +2110,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Affinity_Credit_Union_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -2146,7 +2146,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -2182,7 +2182,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_do_Agibank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -2218,7 +2218,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Agram_banka_-_logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -2254,7 +2254,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/AgriBank-logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -2290,7 +2290,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -2326,7 +2326,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -2362,7 +2362,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Agrobank_Malaysia_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -2398,7 +2398,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/AIB_Bank_Centre.JPG",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -2434,7 +2434,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -2470,7 +2470,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/AB_Logo_200percent_PPF_RGB.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -2506,7 +2506,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Akbank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -2542,7 +2542,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -2578,7 +2578,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Aktia-logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -2614,7 +2614,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/ABK_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -2650,7 +2650,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/\u00c5landsbanken-logotype.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -2686,7 +2686,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Alex_Bank_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -2722,7 +2722,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Poznanska_street_warsaw,_alior_bank_MG_2932.JPG",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -2758,7 +2758,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -2794,7 +2794,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Alliance_Bank_(Taman_Nusa_Bestari).jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -2830,7 +2830,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Allianz.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -2866,7 +2866,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Allied_Bank_of_Pakistan_(ABL_Tehsil_Road,_Okara_Branch)_-_panoramio.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -2902,7 +2902,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Allied_Bank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -2938,7 +2938,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -2974,7 +2974,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Alpha_Bank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -3010,7 +3010,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Alterna_Savings_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -3046,7 +3046,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Alternatif_Bank_logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -3082,7 +3082,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/AmBank_group.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -3118,7 +3118,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Amegy_Bank_logo.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -3154,7 +3154,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Tunisie_Amen_Banque.JPG",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -3190,7 +3190,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -3226,7 +3226,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -3262,7 +3262,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -3298,7 +3298,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/AMP_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -3334,7 +3334,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Anadolubank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -3370,7 +3370,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Andhra_bank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -3406,7 +3406,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/AP_Grameena_Vikas_Bank.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -3442,7 +3442,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Androscoggin_Bank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -3478,7 +3478,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/ANZ-Logo-2009.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -3514,7 +3514,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Appenzeller_Kantonalbank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -3550,7 +3550,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Central_Savings_Bank_Amst_Av_jeh.JPG",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -3586,7 +3586,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -3622,7 +3622,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/\u0533\u056c\u056d\u0561\u0574\u0561\u057d,_\u0584.\u0535\u0580\u0587\u0561\u0576,_\u054a\u0578\u0582\u0577\u056f\u056b\u0576\u056b_19.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -3658,7 +3658,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Ardshinbank_Logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -3694,7 +3694,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/20190922_204_waremme_(cropped).jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -3730,7 +3730,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Internacia_Flughaveno_Zvartnoc_06.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -3766,7 +3766,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Armeconombank.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -3802,7 +3802,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Armswiss.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -3838,7 +3838,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Yerevan_-_Artsakhbank,_Arshakunyats_Avenue_(2018).jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -3874,7 +3874,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Arvest_Bank_Logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -3910,7 +3910,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/ASB_Bank_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -3946,7 +3946,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -3982,7 +3982,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Asia_United_Bank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -4018,7 +4018,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -4054,7 +4054,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -4090,7 +4090,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -4126,7 +4126,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/ATB_Financial_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -4162,7 +4162,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -4198,7 +4198,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/LogoNew.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -4234,7 +4234,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Aubank.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -4270,7 +4270,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/AXA_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -4306,7 +4306,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/AXISBank_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -4342,7 +4342,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/BAC_Credomatic_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -4378,7 +4378,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -4414,7 +4414,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -4450,7 +4450,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -4486,7 +4486,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banamex.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -4522,7 +4522,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -4558,7 +4558,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -4594,7 +4594,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Baprragusasedecentrale.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -4630,7 +4630,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -4666,7 +4666,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Cassa_di_Risparmio_di_Asti_\u2013_Sede.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -4702,7 +4702,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Torre_Hadid.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -4738,7 +4738,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banca_March_Madrid_HQ_(2_of_2).jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -4774,7 +4774,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banca_Mediolanum.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -4810,7 +4810,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -4846,7 +4846,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banca_Popolare_di_Sondrio_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -4882,7 +4882,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banca_Popolare_Pugliese_(logo).png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -4918,7 +4918,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banca_Sella_Logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -4954,7 +4954,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banca_Transilvania_Logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -4990,7 +4990,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bancaribe-logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -5026,7 +5026,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_der_Tessiner_Kantonalbank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -5062,7 +5062,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Agrario_de_Colombia_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -5098,7 +5098,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_AV_Villas_C\u00facuta_nov_2022.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -5134,7 +5134,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_de_Banco_Azteca.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -5170,7 +5170,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -5206,7 +5206,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Banco_BISA.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -5242,7 +5242,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_do_Banco_Bmg.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -5278,7 +5278,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -5314,7 +5314,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Veduta_di_tre_quarti_del_Palazzo_della_Banca_Popolare_di_Milano.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -5350,7 +5350,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Caja_Social_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -5386,7 +5386,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Banco_Ciudad.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -5422,7 +5422,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -5458,7 +5458,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_CTT_Logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -5494,7 +5494,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_da_Amazonia.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -5530,7 +5530,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_de_Bogot\u00e1_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -5566,7 +5566,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/BRB_Logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -5602,7 +5602,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_de_Chile_Logotipo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -5638,7 +5638,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_cordoba_logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -5674,7 +5674,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Bandec.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -5710,7 +5710,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -5746,7 +5746,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logobn.gif",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -5782,7 +5782,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -5818,7 +5818,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_de_Occidente_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -5854,7 +5854,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/San_Pedro_Sula_BO.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -5890,7 +5890,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_de_Venezuela_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -5926,7 +5926,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -5962,7 +5962,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Sucursal_del_Banco_del_Bienestar.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -5998,7 +5998,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Desio_e_della_Brianza.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -6034,7 +6034,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_di_Sardegna.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -6070,7 +6070,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_do_Brasil_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -6106,7 +6106,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo-bnb.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -6142,7 +6142,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -6178,7 +6178,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_BancoEstado.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -6214,7 +6214,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Falabella_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -6250,7 +6250,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -6286,7 +6286,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -6322,7 +6322,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -6358,7 +6358,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -6394,7 +6394,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_GYT_Continental.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -6430,7 +6430,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -6466,7 +6466,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -6502,7 +6502,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo-banco-industrial-arg.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -6538,7 +6538,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_internacional.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -6574,7 +6574,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Internacional.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -6610,7 +6610,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Mercantil_Santa_Cruz_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -6646,7 +6646,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -6682,7 +6682,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Banco_Metropolitano.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -6718,7 +6718,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -6754,7 +6754,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Naci\u00f3n.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -6790,7 +6790,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Nacional_de_Costa_Rica.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -6826,7 +6826,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bnb.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -6862,7 +6862,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Sede_BNC.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -6898,7 +6898,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_pastor168x78.gif;pv91c0cc0e0080a771.gif",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -6934,7 +6934,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -6970,7 +6970,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Pichincha_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -7006,7 +7006,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Popular_(Colombia)_2015_logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -7042,7 +7042,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo-bpa.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -7078,7 +7078,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Provincia_(Bs.As.,_2021).svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -7114,7 +7114,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -7150,7 +7150,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/BSabadell_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -7186,7 +7186,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Safra.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -7222,7 +7222,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -7258,7 +7258,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Santander_Logotipo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -7294,7 +7294,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -7330,7 +7330,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -7366,7 +7366,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -7402,7 +7402,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -7438,7 +7438,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bancolombia_S.A._logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -7474,7 +7474,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -7510,7 +7510,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -7546,7 +7546,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bandhan_Bank_Svg_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -7582,7 +7582,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banesco_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -7618,7 +7618,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -7654,7 +7654,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_do_Banestes.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -7690,7 +7690,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Bangkok_Bank_Public_Company_Limited.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -7726,7 +7726,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bangor_Savings_Bank_logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -7762,7 +7762,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_1_Saar_Logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -7798,7 +7798,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_Al_Habib,_Karsaz,_Karachi.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -7834,7 +7834,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_Al-Maghrib_Logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -7870,7 +7870,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_alfalah_logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -7906,7 +7906,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Wien_02_Austria_Campus_i.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -7942,7 +7942,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -7978,7 +7978,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_Polskiej_Sp\u00f3\u0142dzielczo\u015bci_S.A..jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -8014,7 +8014,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/KB_Bukopin.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -8050,7 +8050,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_Central_Asia.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -8086,7 +8086,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Danamon_(2024).svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -8122,7 +8122,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/BANK_ISLAM_LOGO.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -8158,7 +8158,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo-jago.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -8194,7 +8194,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_Mandiri_logo_2016.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -8230,7 +8230,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -8266,7 +8266,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -8302,7 +8302,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -8338,7 +8338,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_of_Africa_Logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -8374,7 +8374,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_of_Africa_Logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -8410,7 +8410,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_of_America_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -8446,7 +8446,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -8482,7 +8482,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -8518,7 +8518,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -8554,7 +8554,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_of_Cyprus_huge_offices_in_Aglandjia_suberb_area_of_Nicosia_Republic_of_Cyprus.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -8590,7 +8590,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -8626,7 +8626,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -8662,7 +8662,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_of_Ireland_Logo_2020.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -8698,7 +8698,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -8734,7 +8734,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_of_New_Hampshire_2023_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -8770,7 +8770,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_of_New_Zealand_2008_new_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -8806,7 +8806,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_of_Scotland_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -8842,7 +8842,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -8878,7 +8878,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_OZK_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -8914,7 +8914,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_Pekao_SA_Logo_(2017).svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -8950,7 +8950,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -8986,7 +8986,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Lodz-Bank-Pocztowy-Piotrkowska-170619.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -9022,7 +9022,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -9058,7 +9058,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -9094,7 +9094,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -9130,7 +9130,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/BSN_Johor.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -9166,7 +9166,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_Syariah_Indonesia.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -9202,7 +9202,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -9238,7 +9238,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -9274,7 +9274,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banka_Kovanica_logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -9310,7 +9310,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -9346,7 +9346,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bankia_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -9382,7 +9382,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Post_Office_Logo_RGB.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -9418,7 +9418,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bankinter.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -9454,7 +9454,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bankwest_new_logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -9490,7 +9490,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -9526,7 +9526,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -9562,7 +9562,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banorte.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -9598,7 +9598,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -9634,7 +9634,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banpar\u00e1_-_panoramio_(1).jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -9670,7 +9670,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo-banque-atlantique.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -9706,7 +9706,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_der_Freiburger_Kantonalbank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -9742,7 +9742,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_der_Genfer_Kantonalbank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -9778,7 +9778,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Banque_Cantonale_du_Jura.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -9814,7 +9814,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_BCVS.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -9850,7 +9850,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banque_Cantonale_Neuch\u00e2teloise.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -9886,7 +9886,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banque_Cantonale_Vaudoise_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -9922,7 +9922,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banque_de_France_2022_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -9958,7 +9958,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -9994,7 +9994,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banque_du_caire_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -10030,7 +10030,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -10066,7 +10066,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -10102,7 +10102,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banque_Misr.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -10138,7 +10138,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -10174,7 +10174,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/National_Bank_Of_Canada.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -10210,7 +10210,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Palatine_Noirok.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -10246,7 +10246,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banque_Populaire_2018_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -10282,7 +10282,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_BCP.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -10318,7 +10318,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -10354,7 +10354,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banregio.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -10390,7 +10390,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banrisul_logo_2022.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -10426,7 +10426,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Nuevo_Logo_Banrural.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -10462,7 +10462,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Barclays_logo.jpeg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -10498,7 +10498,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_der_BLKB.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -10534,7 +10534,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Basler_Kantonalbank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -10570,7 +10570,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/BAWAG_P.S.K._logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -10606,7 +10606,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/BB&T_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -10642,7 +10642,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/BBBank_201X_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -10678,7 +10678,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/BBVA_2019.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -10714,7 +10714,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/BBVA_2019.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -10750,7 +10750,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/BBVA_2019.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -10786,7 +10786,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/BBVA_2019.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -10822,7 +10822,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/BBVA_2019.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -10858,7 +10858,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/BBVA_2019.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -10894,7 +10894,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/BCC_Roma.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -10930,7 +10930,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/QG_Banque_et_Caisse_d'\u00c9pargne_de_l'\u00c9tat_(Luxembourg).jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -10966,7 +10966,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bci_Logotype.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -11002,7 +11002,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -11038,7 +11038,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logobcp.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -11074,7 +11074,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Comercial_Portugu\u00eas_logo_(Millenium_BCP).svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -11110,7 +11110,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Comercial_Portugu\u00eas_logo_(Millenium_BCP).svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -11146,7 +11146,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logobcp.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -11182,7 +11182,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/BCR_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -11218,7 +11218,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_de_Costa_Rica.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -11254,7 +11254,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -11290,7 +11290,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_BDL_.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -11326,7 +11326,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -11362,7 +11362,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -11398,7 +11398,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/BDO_Unibank_(logo).svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -11434,7 +11434,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -11470,7 +11470,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -11506,7 +11506,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Becu-logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -11542,7 +11542,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Belfius.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -11578,7 +11578,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -11614,7 +11614,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Beobank-logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -11650,7 +11650,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -11686,7 +11686,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Volksbank_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -11722,7 +11722,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kantonalbankgeb\u00e4ude.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -11758,7 +11758,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Sidejo_de_la_banko_BGL_BNP_Paribas_en_bulvardo_Royal,_Luksemburgo.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -11794,7 +11794,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -11830,7 +11830,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_BIDV.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -11866,7 +11866,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -11902,7 +11902,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/BIL_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -11938,7 +11938,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/BKS-Bank-Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -11974,7 +11974,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Blue_Federal_Credit_Union_Icon.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -12010,7 +12010,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Tour_Mohammed_VI_de_Sal\u00e9.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -12046,7 +12046,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -12082,7 +12082,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/BMN_nuevo_logo.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -12118,7 +12118,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_of_Montreal_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -12154,7 +12154,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/BMO_Harris_Logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -12190,7 +12190,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bna-logo-full.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -12226,7 +12226,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Tunisie_Banque_Nationale_Agricole.JPG",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -12262,7 +12262,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -12298,7 +12298,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -12334,7 +12334,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banca_Nazionale_del_Lavoro_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -12370,7 +12370,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/BNP_Paribas.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -12406,7 +12406,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/BNP_Paribas.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -12442,7 +12442,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -12478,7 +12478,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/BNP_Paribas_Fortis.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -12514,7 +12514,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/BOC_Headquarters_at_Xidan_(20171123140827).jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -12550,7 +12550,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -12586,7 +12586,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -12622,7 +12622,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -12658,7 +12658,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/BPER_Banca_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -12694,7 +12694,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -12730,7 +12730,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Bradesco_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -12766,7 +12766,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/BRD_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -12802,7 +12802,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -12838,7 +12838,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/BRI_2020_(Alternative).svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -12874,7 +12874,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_BTN_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -12910,7 +12910,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_of_Bank_BTPN.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -12946,7 +12946,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_BTV_VIER_LAENDER_BANK.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -12982,7 +12982,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Budapest_Bank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -13018,7 +13018,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -13054,7 +13054,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Baden-W\u00fcrttembergische_Bank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -13090,7 +13090,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -13126,7 +13126,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -13162,7 +13162,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Cadence-Bank-logo-2022.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -13198,7 +13198,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Team_Caisse_d\u2019Epargne.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -13234,7 +13234,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -13270,7 +13270,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -13306,7 +13306,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Caixa_Econ\u00f4mica_Federal_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -13342,7 +13342,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/TriquetraCaixaGeral.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -13378,7 +13378,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -13414,7 +13414,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -13450,7 +13450,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_CaixaBank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -13486,7 +13486,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -13522,7 +13522,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -13558,7 +13558,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo-vector-caja-espana.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -13594,7 +13594,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Caja_Rural.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -13630,7 +13630,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Bantierra_4ts.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -13666,7 +13666,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Cerro_de_Tall\u00e1n_24J_01.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -13702,7 +13702,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Sede_Central_Cajamar_01.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -13738,7 +13738,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo-CajaSur-Banco.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -13774,7 +13774,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_png-01.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -13810,7 +13810,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -13846,7 +13846,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -13882,7 +13882,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -13918,7 +13918,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -13954,7 +13954,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Canara_Bank_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -13990,7 +13990,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Capital_Bank_Financial_Corp_Logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -14026,7 +14026,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Capital_One_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -14062,7 +14062,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -14098,7 +14098,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -14134,7 +14134,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -14170,7 +14170,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Capitec_Bank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -14206,7 +14206,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -14242,7 +14242,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -14278,7 +14278,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_cx_original.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -14314,7 +14314,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Cathay_Bank,_Chinatown,_Los_Angeles,_CA,_USA.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -14350,7 +14350,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -14386,7 +14386,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -14422,7 +14422,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Romanian_Post_Savings_-_panoramio.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -14458,7 +14458,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -14494,7 +14494,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -14530,7 +14530,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -14566,7 +14566,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Central_Bank_of_India,_Mumbai.JPG",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -14602,7 +14602,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Ceska_Sporitelna.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -14638,7 +14638,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Chase_logo_2007.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -14674,7 +14674,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -14710,7 +14710,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -14746,7 +14746,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/China_Construction_Bank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -14782,7 +14782,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Chinabank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -14818,7 +14818,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -14854,7 +14854,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Toronto_-_ON_-_Commerce_Court_West.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -14890,7 +14890,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Cr\u00e9dit_Industriel_et_Commercial_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -14926,7 +14926,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -14962,7 +14962,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/CIMB_Group_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -14998,7 +14998,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_cimbniaga.gif",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -15034,7 +15034,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -15070,7 +15070,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Citibank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -15106,7 +15106,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Citizens_Financial_Group_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -15142,7 +15142,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -15178,7 +15178,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -15214,7 +15214,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -15250,7 +15250,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/City_National_Plaza_Twin_Towers.JPG",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -15286,7 +15286,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/CNBFL_Miami_Tower_and_Orlando_Building.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -15322,7 +15322,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -15358,7 +15358,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -15394,7 +15394,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -15430,7 +15430,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_CNEP_banque_DZ.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -15466,7 +15466,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Coast_Capital_Savings_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -15502,7 +15502,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -15538,7 +15538,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Comerica_Inc._logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -15574,7 +15574,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -15610,7 +15610,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Commerce_2014-10-6.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -15646,7 +15646,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -15682,7 +15682,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Ethiopian_Commercial_Bank_Addis_Abeba.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -15718,7 +15718,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Cib_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -15754,7 +15754,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Commerzbank_(2009).svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -15790,7 +15790,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Commonwealth_Bank_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -15826,7 +15826,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -15862,7 +15862,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -15898,7 +15898,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -15934,7 +15934,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -15970,7 +15970,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -16006,7 +16006,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -16042,7 +16042,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -16078,7 +16078,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -16114,7 +16114,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Yerevan_Converse_Bank_hammer_and_sickle.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -16150,7 +16150,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Corporation_Bank_Head_Office_in_Mangalore.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -16186,7 +16186,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -16222,7 +16222,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -16258,7 +16258,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Credito_Emiliano_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -16294,7 +16294,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Banco_Credicoop.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -16330,7 +16330,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Cr\u00e9dit_Agricole_2020_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -16366,7 +16366,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -16402,7 +16402,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_de_Cariparma.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -16438,7 +16438,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -16474,7 +16474,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/NewLogo_CDM.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -16510,7 +16510,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -16546,7 +16546,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Cr\u00e9dit_Mutuel.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -16582,7 +16582,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -16618,7 +16618,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Credit_Suisse_Logo_2022.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -16654,7 +16654,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -16690,7 +16690,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -16726,7 +16726,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Crelan_Kantoor_in_Belgi\u00eb.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -16762,7 +16762,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -16798,7 +16798,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -16834,7 +16834,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -16870,7 +16870,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/CSB_Bank_New_Logo-02.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -16906,7 +16906,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/CSOB_logo.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -16942,7 +16942,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Danske_Bank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -16978,7 +16978,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -17014,7 +17014,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -17050,7 +17050,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -17086,7 +17086,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/DBP_Building.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -17122,7 +17122,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -17158,7 +17158,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Degussa_bank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -17194,7 +17194,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/DenizBank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -17230,7 +17230,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Desjardins_Group_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -17266,7 +17266,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Deutsche_Bank_logo_without_wordmark.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -17302,7 +17302,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Dhana_lakshmi_bank.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -17338,7 +17338,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -17374,7 +17374,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_DCU_Green.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -17410,7 +17410,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/DNB_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -17446,7 +17446,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Dollar_Bank_logo.jpeg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -17482,7 +17482,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -17518,7 +17518,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/East_West_Bank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -17554,7 +17554,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -17590,7 +17590,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/EastWest_Bank_2011_h-pos_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -17626,7 +17626,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Ecobank_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -17662,7 +17662,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Ecobank_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -17698,7 +17698,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -17734,7 +17734,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -17770,7 +17770,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Equitas-logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -17806,7 +17806,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Equity_BCDC_headquarter_in_Kinshasa.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -17842,7 +17842,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -17878,7 +17878,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -17914,7 +17914,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Equity_Group_Logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -17950,7 +17950,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -17986,7 +17986,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/The_Church_House,_Kampala_Road,_Kampala,_Uganda.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -18022,7 +18022,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -18058,7 +18058,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Erste_Bank_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -18094,7 +18094,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/ESAF_Bank_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -18130,7 +18130,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/ESL_Federal_Credit_Union_headquarters.JPG",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -18166,7 +18166,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -18202,7 +18202,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -18238,7 +18238,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Eurobank_logo_2021.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -18274,7 +18274,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/BancoBIC.JPG",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -18310,7 +18310,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Europabank_Brugge.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -18346,7 +18346,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Evocabank_Head_office.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -18382,7 +18382,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -18418,7 +18418,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -18454,7 +18454,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -18490,7 +18490,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Faysal_Bank,_Shahrah-e-Faisal,_Karachi.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -18526,7 +18526,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Federal_Bank.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -18562,7 +18562,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -18598,7 +18598,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Fibanklogo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -18634,7 +18634,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Ficohsa_logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -18670,7 +18670,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -18706,7 +18706,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Fidelity_Bank,_National_Association_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -18742,7 +18742,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Fidelity_Bank_Louisiana_logo.webp",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -18778,7 +18778,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -18814,7 +18814,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Fidelity_Bank_(North_Carolina)_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -18850,7 +18850,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Fidelity-bank-nigeria.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -18886,7 +18886,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Fidelity_d&d_bank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -18922,7 +18922,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Fidelity_Bank_&_Trust_logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -18958,7 +18958,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -18994,7 +18994,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Fifth_Third_Bank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -19030,7 +19030,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/FinecoBank_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -19066,7 +19066,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/NL_q_3D.JPG",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -19102,7 +19102,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Fio_banka_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -19138,7 +19138,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/First_Abu_Dhabi_Bank_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -19174,7 +19174,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -19210,7 +19210,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/First_Bank_branch,_Landfall_neighborhood,_Wilmington,_North_Carolina.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -19246,7 +19246,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/First_BanCorp_logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -19282,7 +19282,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -19318,7 +19318,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -19354,7 +19354,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/First_Citizens_Bank_Beaufort.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -19390,7 +19390,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -19426,7 +19426,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -19462,7 +19462,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -19498,7 +19498,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -19534,7 +19534,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -19570,7 +19570,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/First_Financial_Bank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -19606,7 +19606,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/First_Horizon_National_Corp_logo_(2020).png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -19642,7 +19642,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -19678,7 +19678,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -19714,7 +19714,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -19750,7 +19750,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -19786,7 +19786,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -19822,7 +19822,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -19858,7 +19858,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -19894,7 +19894,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -19930,7 +19930,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -19966,7 +19966,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -20002,7 +20002,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -20038,7 +20038,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -20074,7 +20074,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -20110,7 +20110,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -20146,7 +20146,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -20182,7 +20182,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -20218,7 +20218,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -20254,7 +20254,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -20290,7 +20290,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -20326,7 +20326,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/First_Tech_Credit_Union_-_Tanasbourne_branch.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -20362,7 +20362,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -20398,7 +20398,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/First_West_Credit_Union_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -20434,7 +20434,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/First_Bank_of_Ustick_(4).jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -20470,7 +20470,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -20506,7 +20506,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Flagstar_Bank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -20542,7 +20542,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -20578,7 +20578,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -20614,7 +20614,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -20650,7 +20650,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Freedom_Holding_logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -20686,7 +20686,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Frost_Tower_SA.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -20722,7 +20722,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -20758,7 +20758,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco-Galicia_Logo_2024.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -20794,7 +20794,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Garanti_BBVA_2019.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -20830,7 +20830,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/GCBBANK.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -20866,7 +20866,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -20902,7 +20902,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Getin_Bank_Logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -20938,7 +20938,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_der_Glarner_Kantonalbank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -20974,7 +20974,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -21010,7 +21010,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -21046,7 +21046,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Golden1CU_logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -21082,7 +21082,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Graub\u00fcndner_Kantonalbank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -21118,7 +21118,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -21154,7 +21154,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -21190,7 +21190,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Groupama_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -21226,7 +21226,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_GuarantyTrustBank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -21262,7 +21262,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -21298,7 +21298,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/HBOS_Halifax_310805.JPG",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -21334,7 +21334,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Halkbank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -21370,7 +21370,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Halkbank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -21406,7 +21406,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -21442,7 +21442,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Hamburger_Sparkasse_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -21478,7 +21478,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/\u0413\u043e\u043b\u043e\u0432\u043d\u043e\u0439_\u043e\u0444\u0438\u0441_Hamkorbank_\u0432_\u0433\u043e\u0440\u043e\u0434\u0435_\u0410\u043d\u0434\u0438\u0436\u0430\u043d.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -21514,7 +21514,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -21550,7 +21550,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Handelsbanken.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -21586,7 +21586,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -21622,7 +21622,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -21658,7 +21658,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -21694,7 +21694,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/HBL_Plaza.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -21730,7 +21730,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/HDFC-Bank-Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -21766,7 +21766,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -21802,7 +21802,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banking_financial_quarter_of_Nicosia_as_you_enter_highway.JPG",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -21838,7 +21838,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -21874,7 +21874,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -21910,7 +21910,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -21946,7 +21946,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/HB_Heritage_Bank,_Lagos_Island.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -21982,7 +21982,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -22018,7 +22018,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -22054,7 +22054,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -22090,7 +22090,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Hong-Leong-Bank_Logo_July_2017.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -22126,7 +22126,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -22162,7 +22162,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Housing_and_Development_Bank.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -22198,7 +22198,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Hpb-logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -22234,7 +22234,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/HSBC_logo_(2018).svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -22270,7 +22270,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/HSBC_logo_(2018).svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -22306,7 +22306,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/HSBC_UK_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -22342,7 +22342,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Huntington_Bancshares_Inc._logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -22378,7 +22378,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/HV-UCG-3D.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -22414,7 +22414,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -22450,7 +22450,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Ibercajawordmark.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -22486,7 +22486,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Industrial_Bank_of_Korea_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -22522,7 +22522,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/ICBC_ChanganAVe.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -22558,7 +22558,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/ICICI_Bank_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -22594,7 +22594,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -22630,7 +22630,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -22666,7 +22666,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Blackjack_close-up.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -22702,7 +22702,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Idea_Bank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -22738,7 +22738,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_of_IDFC_First_Bank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -22774,7 +22774,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -22810,7 +22810,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Imex_banka_Logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -22846,7 +22846,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -22882,7 +22882,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -22918,7 +22918,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -22954,7 +22954,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Indian_Overseas_Bank_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -22990,7 +22990,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -23026,7 +23026,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Inecobank_CJSC_Official_Logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -23062,7 +23062,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/ING_Group_N.V._Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -23098,7 +23098,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/ING_Group_N.V._Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -23134,7 +23134,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Interbank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -23170,7 +23170,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/InterBank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -23206,7 +23206,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -23242,7 +23242,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Intesa_Sanpaolo_-_logo_(Italy,_2007-).svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -23278,7 +23278,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -23314,7 +23314,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -23350,7 +23350,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -23386,7 +23386,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Isbank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -23422,7 +23422,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Istarska_Kreditna_Banka_Umag.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -23458,7 +23458,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Ita\u00fa_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -23494,7 +23494,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Ita\u00fa_Unibanco_logo_2023.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -23530,7 +23530,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Praha_Karlin_Sokolovska_113a_b.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -23566,7 +23566,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -23602,7 +23602,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -23638,7 +23638,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/JA_Bank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -23674,7 +23674,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -23710,7 +23710,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/JB-logo-RGB.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -23746,7 +23746,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -23782,7 +23782,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Karafarin_bank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -23818,7 +23818,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Karlova\u010dka_banka_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -23854,7 +23854,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -23890,7 +23890,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -23926,7 +23926,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -23962,7 +23962,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Karur_Vysya_Bank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -23998,7 +23998,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -24034,7 +24034,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kaspi_Postomat,_Astana_(P1190696).jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -24070,7 +24070,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -24106,7 +24106,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/KBC-bankkantoor_in_Wakken.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -24142,7 +24142,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kanbawza_Bank.JPG",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -24178,7 +24178,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/KB_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -24214,7 +24214,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kent_Bank_logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -24250,7 +24250,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kerala_Gramin_Bank_logo.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -24286,7 +24286,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/KeyBank.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -24322,7 +24322,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kiwibank_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -24358,7 +24358,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Komer\u010dn\u00ed_banka_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -24394,7 +24394,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -24430,7 +24430,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -24466,7 +24466,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -24502,7 +24502,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kredobank_logo.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -24538,7 +24538,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -24574,7 +24574,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kutxabank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -24610,7 +24610,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -24646,7 +24646,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_La_Banque_postale_2022.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -24682,7 +24682,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/La_Caixa_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -24718,7 +24718,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Laboral_Kutxa.JPG",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -24754,7 +24754,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -24790,7 +24790,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Landbank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -24826,7 +24826,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -24862,7 +24862,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Landesbausparkassen.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -24898,7 +24898,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Cr\u00e9dit_Lyonnais_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -24934,7 +24934,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -24970,7 +24970,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Leeds_Building_Society,_Horsefair_Centre,_Wetherby_(18th_April_2014).JPG",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -25006,7 +25006,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Liberbank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -25042,7 +25042,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -25078,7 +25078,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Northeast_Credit_Union_logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -25114,7 +25114,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -25150,7 +25150,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Lloyds_bank_in_Halifax.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -25186,7 +25186,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Luminor_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -25222,7 +25222,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_der_Luzerner_Kantonalbank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -25258,7 +25258,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/M&T_Bank_wordmark.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -25294,7 +25294,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Banco_Macro.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -25330,7 +25330,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -25366,7 +25366,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -25402,7 +25402,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -25438,7 +25438,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Mashreq-new-logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -25474,7 +25474,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Maybank_Tower_Kuala_Lumpur.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -25510,7 +25510,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Mbank-logo.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -25546,7 +25546,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -25582,7 +25582,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Hoofdkantoor_Maduro_&_Curiel's_Bank,_Willemstad,_Cura\u00e7ao.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -25618,7 +25618,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -25654,7 +25654,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/MCB-HQ.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -25690,7 +25690,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Meezan_Bank_Head_office,_Karachi.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -25726,7 +25726,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -25762,7 +25762,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -25798,7 +25798,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Meridian_Credit_Union_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -25834,7 +25834,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -25870,7 +25870,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Metro_Bank,_Paradise_Street.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -25906,7 +25906,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Metropolitan_Bank_and_Trust_Company.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -25942,7 +25942,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -25978,7 +25978,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -26014,7 +26014,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -26050,7 +26050,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Migros-Bank-Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -26086,7 +26086,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_Millenium.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -26122,7 +26122,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Comercial_Portugu\u00eas_logo_(Millenium_BCP).svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -26158,7 +26158,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -26194,7 +26194,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Mittelbrandenburgische_Sparkasse.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -26230,7 +26230,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -26266,7 +26266,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/MKB_Bank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -26302,7 +26302,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Moldindconbank.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -26338,7 +26338,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Maib_ID_new_artwork_colour.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -26374,7 +26374,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Moneta_Money_Bank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -26410,7 +26410,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Monobank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -26446,7 +26446,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Palazzo_Salimbeni,_Siena,_Headquarters_of_Monte_dei_Paschi_di_Siena,_the_worlds_oldest_surviving_bank.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -26482,7 +26482,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -26518,7 +26518,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Mountian_America_Credit_Union_Logo.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -26554,7 +26554,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/MTB_Bank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -26590,7 +26590,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/NAB_building_in_Melbourne.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -26626,7 +26626,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -26662,7 +26662,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -26698,7 +26698,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/National_Bank_Of_Canada.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -26734,7 +26734,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/National_Bank_of_Egypt.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -26770,7 +26770,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/NBK.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -26806,7 +26806,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/National_Investment_Bank_logo.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -26842,7 +26842,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Nationwide_HQ_Swindon.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -26878,7 +26878,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Natwest-logo.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -26914,7 +26914,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Navy_Federal_Credit_Union_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -26950,7 +26950,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -26986,7 +26986,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/NBU_new_logo.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -27022,7 +27022,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -27058,7 +27058,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Nedbank_regional_office_in_Cape_Town,_South_Africa.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -27094,7 +27094,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Nest_Bank_logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -27130,7 +27130,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -27166,7 +27166,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/428_Nicolet-National-Bank-Logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -27202,7 +27202,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_der_Nidwaldner_Kantonalbank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -27238,7 +27238,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Nova_Ljubljanska_banka_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -27274,7 +27274,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -27310,7 +27310,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Nmb_logo.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -27346,7 +27346,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -27382,7 +27382,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Sparkasse.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -27418,7 +27418,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Nordea.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -27454,7 +27454,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -27490,7 +27490,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Northwest_Bank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -27526,7 +27526,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -27562,7 +27562,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logotipo_Novo_Banco.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -27598,7 +27598,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -27634,7 +27634,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Nurbank_logo.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -27670,7 +27670,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Nusenda_Credit_Union_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -27706,7 +27706,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Oberbank_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -27742,7 +27742,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_der_Obwaldner_Kantonalbank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -27778,7 +27778,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo-ocbc.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -27814,7 +27814,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/OCBC_Bank_logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -27850,7 +27850,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bodlogotipo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -27886,7 +27886,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -27922,7 +27922,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Odeabank_logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -27958,7 +27958,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -27994,7 +27994,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -28030,7 +28030,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Old_National_Bank_(logo).svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -28066,7 +28066,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -28102,7 +28102,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Oldenburgische_landesbank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -28138,7 +28138,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -28174,7 +28174,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -28210,7 +28210,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -28246,7 +28246,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -28282,7 +28282,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Oriental_Bank_logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -28318,7 +28318,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -28354,7 +28354,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/OP_Financial_Group.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -28390,7 +28390,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Otp_bank_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -28426,7 +28426,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Otp_bank_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -28462,7 +28462,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Otp_bank_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -28498,7 +28498,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/OTP_Bank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -28534,7 +28534,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -28570,7 +28570,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -28606,7 +28606,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Philippines_Bank_of_Communications_Logo_(2017).svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -28642,7 +28642,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -28678,7 +28678,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -28714,7 +28714,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/PSECU_BLACK_SM.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -28750,7 +28750,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -28786,7 +28786,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -28822,7 +28822,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -28858,7 +28858,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -28894,7 +28894,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Permanent_tsb.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -28930,7 +28930,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Philippine_Business_Bank_Logo.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -28966,7 +28966,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -29002,7 +29002,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -29038,7 +29038,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Piraeus_Bank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -29074,7 +29074,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/PKO_Bank_Polski_logo_and_wordmark.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -29110,7 +29110,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -29146,7 +29146,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Biurowiec_Blue_Point_w_Warszawie_2019.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -29182,7 +29182,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Philippine-National-Bank-logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -29218,7 +29218,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/PNClogo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -29254,7 +29254,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Podravska_banka_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -29290,7 +29290,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/BPPR_Popular_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -29326,7 +29326,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -29362,7 +29362,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Postbank-Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -29398,7 +29398,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/365.bank.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -29434,7 +29434,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -29470,7 +29470,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -29506,7 +29506,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -29542,7 +29542,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -29578,7 +29578,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/PBZ_logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -29614,7 +29614,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_der_ProCredit_Holding_(Frankfurt,_Deutschland).png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -29650,7 +29650,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_ProCredit_Bank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -29686,7 +29686,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_ProCredit_Bank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -29722,7 +29722,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_ProCredit_Bank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -29758,7 +29758,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Produbanco_Logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -29794,7 +29794,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -29830,7 +29830,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -29866,7 +29866,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -29902,7 +29902,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -29938,7 +29938,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -29974,7 +29974,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -30010,7 +30010,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -30046,7 +30046,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Menara_Public_Bank,_Kuala_Lumpur.JPG",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -30082,7 +30082,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Pbgblogo.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -30118,7 +30118,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Punjab_&_Sind_Bank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -30154,7 +30154,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Punjab_National_Bank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -30190,7 +30190,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Qatar_National_Bank.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -30226,7 +30226,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/QNB_Finansbank_Kristal_Kule.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -30262,7 +30262,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Rabotoren.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -30298,7 +30298,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -30334,7 +30334,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Raiffeisen_Schweiz_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -30370,7 +30370,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Raiffeisen_Bank_logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -30406,7 +30406,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Raiffeisen_Bank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -30442,7 +30442,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Raiffeisen-Giebelkreuz.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -30478,7 +30478,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Raiffeisen_Bank_International_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -30514,7 +30514,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Raiffeisen_Bank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -30550,7 +30550,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Raiffeisen_Bank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -30586,7 +30586,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Raiffeisen_Bank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -30622,7 +30622,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Raiffeisen_Bank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -30658,7 +30658,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Raiffeisen_Bank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -30694,7 +30694,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Raiffeisen_Bank_2023_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -30730,7 +30730,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Raiffeisenverband_S\u00fcdtirol_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -30766,7 +30766,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -30802,7 +30802,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/RBC_logo.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -30838,7 +30838,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/RBL_Bank_SVG_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -30874,7 +30874,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/RBS_Building_-_geograph.org.uk_-_419288.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -30910,7 +30910,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -30946,7 +30946,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -30982,7 +30982,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/RCBC_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -31018,7 +31018,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Regiobank_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -31054,7 +31054,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Regions_Financial_Corp_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -31090,7 +31090,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/ReiseBank-Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -31126,7 +31126,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -31162,7 +31162,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_of_Republic_Bank_of_Trinidad_and_Tobago.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -31198,7 +31198,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_of_Republic_Bank_of_Trinidad_and_Tobago.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -31234,7 +31234,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -31270,7 +31270,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -31306,7 +31306,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/LogoBROU.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -31342,7 +31342,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/RHB_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -31378,7 +31378,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Sparkasse_Worms-Alzey-Ried.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -31414,7 +31414,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Robinsons_Bank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -31450,7 +31450,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -31486,7 +31486,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -31522,7 +31522,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -31558,7 +31558,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -31594,7 +31594,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -31630,7 +31630,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -31666,7 +31666,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -31702,7 +31702,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Salem_Five_logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -31738,7 +31738,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Samoborska_banka_logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -31774,7 +31774,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -31810,7 +31810,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -31846,7 +31846,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Santander_Consumer_Bank_M\u00f6nchengladbach_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -31882,7 +31882,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Santander_Bank_Polska_S.A.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -31918,7 +31918,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Santander_Logotipo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -31954,7 +31954,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Santander_Logotipo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -31990,7 +31990,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Santander_Consumer_Bank_M\u00f6nchengladbach_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -32026,7 +32026,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Santander_Logotipo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -32062,7 +32062,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Santander_Logotipo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -32098,7 +32098,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Sberbank_Logo_2020.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -32134,7 +32134,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/SBI_Shinsei_Bank_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -32170,7 +32170,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -32206,7 +32206,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Schaffhauser_Kantonalbank_20xx_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -32242,7 +32242,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_der_Schwyzer_Kantonalbank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -32278,7 +32278,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Scotiabank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -32314,7 +32314,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Scotiabank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -32350,7 +32350,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -32386,7 +32386,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/SEB_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -32422,7 +32422,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Security_Bank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -32458,7 +32458,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Ssfcu-logo-stack.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -32494,7 +32494,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/\u015eekerbank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -32530,7 +32530,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -32566,7 +32566,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -32602,7 +32602,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Sense_bank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -32638,7 +32638,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Service_CU_logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -32674,7 +32674,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Servus_Credit_Union_logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -32710,7 +32710,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -32746,7 +32746,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -32782,7 +32782,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -32818,7 +32818,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Marca-sicoob.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -32854,7 +32854,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logomarca_Sicredi.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -32890,7 +32890,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -32926,7 +32926,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -32962,7 +32962,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -32998,7 +32998,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Slatinska_banka_-_logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -33034,7 +33034,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Slovenska-sporitelna-logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -33070,7 +33070,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -33106,7 +33106,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/De_Volksbank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -33142,7 +33142,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo-SG-Soci\u00e9t\u00e9-G\u00e9n\u00e9rale.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -33178,7 +33178,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo-SG-Soci\u00e9t\u00e9-G\u00e9n\u00e9rale.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -33214,7 +33214,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo-SG-Soci\u00e9t\u00e9-G\u00e9n\u00e9rale.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -33250,7 +33250,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Soci\u00e9t\u00e9_G\u00e9n\u00e9rale.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -33286,7 +33286,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -33322,7 +33322,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -33358,7 +33358,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/SIB_from_entrance_gate.JPG",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -33394,7 +33394,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -33430,7 +33430,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -33466,7 +33466,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -33502,7 +33502,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Sparda_Bank_2003_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -33538,7 +33538,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Sparda-Bank_Linz_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -33574,7 +33574,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Sparda_Bank_2003_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -33610,7 +33610,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Sparda-berlin-logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -33646,7 +33646,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Sparda_Bank_2003_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -33682,7 +33682,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/SbhLogo_www.gif",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -33718,7 +33718,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Sparda_Bank_2003_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -33754,7 +33754,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Sparkassa_Bozen_fassade.JPG",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -33790,7 +33790,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/ErsteBank_Sparkasse_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -33826,7 +33826,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Steierm\u00e4rkische_Sparkasse.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -33862,7 +33862,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_der_St._Galler_Kantonalbank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -33898,7 +33898,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kogarah_St_George_Bank.JPG",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -33934,7 +33934,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -33970,7 +33970,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Standardbank.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -34006,7 +34006,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Standardbank.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -34042,7 +34042,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Standard_Chartered_(2021).svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -34078,7 +34078,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Standard_Chartered_(2021).svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -34114,7 +34114,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -34150,7 +34150,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/State_Bank_of_India.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -34186,7 +34186,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -34222,7 +34222,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -34258,7 +34258,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/State_Employees_Credit_Union,_Raleigh,_North_Carolina.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -34294,7 +34294,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Summit_Bank_Karachi.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -34330,7 +34330,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -34366,7 +34366,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -34402,7 +34402,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -34438,7 +34438,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/SunTrust_Banks_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -34474,7 +34474,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Supervielle_logo14.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -34510,7 +34510,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Cirkus\u00e4ngen_6_September_2014_05.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -34546,7 +34546,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Sydbank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -34582,7 +34582,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -34618,7 +34618,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Synovus_logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -34654,7 +34654,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -34690,7 +34690,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -34726,7 +34726,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/TMB_SVG_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -34762,7 +34762,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Tangerine_Bank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -34798,7 +34798,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Targobank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -34834,7 +34834,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Tatra_banka_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -34870,7 +34870,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -34906,7 +34906,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -34942,7 +34942,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -34978,7 +34978,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Toronto-Dominion_Bank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -35014,7 +35014,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/TD_Bank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -35050,7 +35050,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -35086,7 +35086,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Techcombank_logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -35122,7 +35122,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -35158,7 +35158,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -35194,7 +35194,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/The_co-operative_bank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -35230,7 +35230,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -35266,7 +35266,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Nottingham_Building_Society,_Upper_Parliament_Street.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -35302,7 +35302,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/The_United_Bank_of_Egypt.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -35338,7 +35338,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_der_Thurgauer_Kantonalbank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -35374,7 +35374,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -35410,7 +35410,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -35446,7 +35446,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Truist_Financial_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -35482,7 +35482,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -35518,7 +35518,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/TSB_Newcastle.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -35554,7 +35554,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -35590,7 +35590,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -35626,7 +35626,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/T\u00fcrkiye_\u0130\u015f_Bankas\u0131_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -35662,7 +35662,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/U.S._Bancorp_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -35698,7 +35698,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Unitedbank1.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -35734,7 +35734,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/UBS_Logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -35770,7 +35770,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/UCO_Bank_20180823_144517.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -35806,7 +35806,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -35842,7 +35842,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/UGB_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -35878,7 +35878,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -35914,7 +35914,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -35950,7 +35950,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Ukrsibbank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -35986,7 +35986,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Ulsterbank_logo.gif",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -36022,7 +36022,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/UMB_Logo.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -36058,7 +36058,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -36094,7 +36094,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Unex_Bank_Ukraine.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -36130,7 +36130,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/UNI_Financial_Cooperation.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -36166,7 +36166,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -36202,7 +36202,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Edificio_Unicaja.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -36238,7 +36238,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -36274,7 +36274,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Unicredit_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -36310,7 +36310,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Unicreditlogobg.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -36346,7 +36346,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/UnionBank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -36382,7 +36382,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Union_Bank_of_India_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -36418,7 +36418,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -36454,7 +36454,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/UnionBank_PH_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -36490,7 +36490,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/United_Bank_(Connecticut)_logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -36526,7 +36526,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/United_Bank_(West_Virginia)_logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -36562,7 +36562,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -36598,7 +36598,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -36634,7 +36634,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -36670,7 +36670,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -36706,7 +36706,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Universal_Bank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -36742,7 +36742,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -36778,7 +36778,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -36814,7 +36814,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/UOB_Logo_(2022).svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -36850,7 +36850,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_der_Urner_Kantonalbank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -36886,7 +36886,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/USAA_Office_in_Colorado_Springs_by_David_Shankbone.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -36922,7 +36922,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/UGB.webp",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -36958,7 +36958,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/UWCU_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -36994,7 +36994,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Vak\u0131f_Kat\u0131l\u0131m_Logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -37030,7 +37030,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Vak\u0131fbank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -37066,7 +37066,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Valiant_Logo_Neu.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -37102,7 +37102,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -37138,7 +37138,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo-vancity.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -37174,7 +37174,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_VeloBank.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -37210,7 +37210,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -37246,7 +37246,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Vietcombank_logo_fixed.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -37282,7 +37282,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Vietinbank_Da_Lat.JPG",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -37318,7 +37318,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Virgin_Money_Giving_logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -37354,7 +37354,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -37390,7 +37390,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Volksbank_marchio_verticale_colore_rgb.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -37426,7 +37426,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Volksbank_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -37462,7 +37462,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -37498,7 +37498,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/VUB.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -37534,7 +37534,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banko_VTB_en_Erevano_01.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -37570,7 +37570,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Washington_Federal_Logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -37606,7 +37606,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Webster_Bank_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -37642,7 +37642,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Wells_Fargo_Bank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -37678,7 +37678,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/WesBancoLogo-2016.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -37714,7 +37714,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -37750,7 +37750,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Westpac_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -37786,7 +37786,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -37822,7 +37822,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -37858,7 +37858,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -37894,7 +37894,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -37930,7 +37930,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Yap\u0131_Kredi_Bankas\u0131_Sirkeci_\u015eubesi.JPG",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -37966,7 +37966,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -38002,7 +38002,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Yettelbank.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -38038,7 +38038,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Yorkshire_Bank.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -38074,7 +38074,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Yorkshire_Building_Society,_Briggate,_Leeds_(Taken_by_Flickr_user_29th_January_2012).jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -38110,7 +38110,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Zagreba\u010dka-banka-Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -38146,7 +38146,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -38182,7 +38182,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Zenith_Bank_Head_Office_Building.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -38218,7 +38218,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -38254,7 +38254,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -38290,7 +38290,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Ziraat_Bankas\u0131_2025_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -38326,7 +38326,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Ziraat_Kat\u0131l\u0131m_Bankas\u0131_logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -38362,7 +38362,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Zuger_Kantonalbank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -38398,7 +38398,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Z\u00fcrcher_Kantonalbank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -38434,7 +38434,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/\u039c\u03ad\u03b3\u03b1\u03c1\u03bf_\u0393\u03b5\u03c9\u03c1\u03b3\u03af\u03bf\u03c5_\u03a3\u03c4\u03c1\u03ac\u03c4\u03bf\u03c5_-_\u0395\u03b8\u03bd\u03b9\u03ba\u03ae_\u03a4\u03c1\u03ac\u03c0\u03b5\u03b6\u03b1_1249.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -38470,7 +38470,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Piraeus_Bank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -38506,7 +38506,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Abank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -38542,7 +38542,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Absolut_Bank.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -38578,7 +38578,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/OptiKurs_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -38614,7 +38614,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -38650,7 +38650,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -38686,7 +38686,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/\u0410\u043a_\u0411\u0430\u0440\u0441_\u0411\u0430\u043d\u043a.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -38722,7 +38722,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -38758,7 +38758,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Alfa-Bank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -38794,7 +38794,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Alfa-Bank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -38830,7 +38830,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bakai_Bank_logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -38866,7 +38866,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/VTB_Logo_2018.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -38902,7 +38902,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -38938,7 +38938,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -38974,7 +38974,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -39010,7 +39010,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/\u041b\u043e\u0433\u043e\u0442\u0438\u043f_\u0411\u0430\u043d\u043a\u0443_\u041b\u044c\u0432\u0456\u0432.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -39046,7 +39046,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Bank_Pivdenny.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -39082,7 +39082,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -39118,7 +39118,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/\u041f\u043b\u043e\u0449\u0430\u0434\u044c_\u0432\u043e\u0441\u0441\u0442\u0430\u043d\u0438\u044f_\u043d\u043e\u0447\u044c\u044e_\u043e\u0442_\u041c\u043e\u0441\u043a\u043e\u0432\u0441\u043a\u043e\u0433\u043e_\u0432\u043e\u043a\u0437\u0430\u043b\u0430_\u0441_\u041b\u0438\u0433\u043e\u0432\u0441\u043a\u043e\u0433\u043e.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -39154,7 +39154,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banka_DSK_logo.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -39190,7 +39190,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -39226,7 +39226,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Belarusbank_logo_(be).svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -39262,7 +39262,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/BelVEB-logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -39298,7 +39298,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/\u0413\u043b\u0430\u0432\u043d\u044b\u0439_\u043e\u0444\u0438\u0441_\u0411\u0435\u043b\u0433\u0430\u0437\u043f\u0440\u043e\u043c\u0431\u0430\u043d\u043a\u0430.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -39334,7 +39334,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -39370,7 +39370,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/B&N_Bank_(Binbank)_2018-04-08.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -39406,7 +39406,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -39442,7 +39442,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/\u0411\u0421\u0411\u0411\u0430\u043d\u043a.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -39478,7 +39478,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/BTA_Bank_logo.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -39514,7 +39514,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/BTA_Bank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -39550,7 +39550,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -39586,7 +39586,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/\u0411\u0430\u043d\u043a_\u00ab\u0412\u043e\u0437\u0440\u043e\u0436\u0434\u0435\u043d\u0438\u0435\u00bb_\u0432_\u0433\u043e\u0440\u043e\u0434\u0435_\u0414\u0437\u0435\u0440\u0436\u0438\u043d\u0441\u043a\u0438\u0439_(24.06.2020).jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -39622,7 +39622,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -39658,7 +39658,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/VTB_Logo_2018.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -39694,7 +39694,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Moscow,_Novocheremushkinskaya_Street_office_block.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -39730,7 +39730,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -39766,7 +39766,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -39802,7 +39802,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/\u041e\u0434\u0435\u0441\u0441\u043a\u0430\u044f_\u0443\u043b\u0438\u0446\u0430_(\u041c\u043e\u0441\u043a\u0432\u0430).jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -39838,7 +39838,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -39874,7 +39874,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Industrialbank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -39910,7 +39910,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -39946,7 +39946,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -39982,7 +39982,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -40018,7 +40018,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Moscow,_Ordzhonikidze_Street_5.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -40054,7 +40054,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/\u041c\u043e\u0441\u043a\u043e\u0432\u0441\u043a\u0438\u0439_\u043a\u0440\u0435\u0434\u0438\u0442\u043d\u044b\u0439_\u0431\u0430\u043d\u043a,_\u041b\u0443\u043a\u043e\u0432_\u043f\u0435\u0440\u0435\u0443\u043b\u043e\u043a,_\u0434\u043e\u043c_2_(18.11.2023).jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -40090,7 +40090,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -40126,7 +40126,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -40162,7 +40162,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/MTS-Bank.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -40198,7 +40198,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Komercijalna_banka_logo_and_wordmark.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -40234,7 +40234,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Nova_Ljubljanska_banka_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -40270,7 +40270,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Cvv.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -40306,7 +40306,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -40342,7 +40342,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/\u0424\u0438\u043d\u0430\u043d\u0441\u043e\u0432\u0430\u044f_\u043a\u043e\u0440\u043f\u043e\u0440\u0430\u0446\u0438\u044f_\u00ab\u041e\u0442\u043a\u0440\u044b\u0442\u0438\u0435\u00bb._\u041e\u0444\u0438\u0441_\u0432_\u0433\u043e\u0440\u043e\u0434\u0435_\u041f\u0435\u0440\u043c\u044c..jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -40378,7 +40378,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Otp_bank_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -40414,7 +40414,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Oschadbank.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -40450,7 +40450,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -40486,7 +40486,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -40522,7 +40522,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/\u041d\u0430\u041f\u041b\u041e\u0429\u0410\u0414\u0418_-_panoramio.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -40558,7 +40558,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Postlogo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -40594,7 +40594,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -40630,7 +40630,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/\u041f\u0440\u0438\u0432\u0430\u0442\u0411\u0430\u043d\u043a.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -40666,7 +40666,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -40702,7 +40702,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Priorbank_logo_2024.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -40738,7 +40738,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_ProCredit_Bank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -40774,7 +40774,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/\u041f\u0440\u043e\u043c\u0441\u0432\u044f\u0437\u044c\u0431\u0430\u043d\u043a_logo_NEW_2008.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -40810,7 +40810,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Pumb_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -40846,7 +40846,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Raiffeisen_Bank_RU_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -40882,7 +40882,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/\u0426\u0435\u043d\u0442\u0440\u0430\u043b\u044c\u043d\u044b\u0439_\u043e\u0444\u0438\u0441_\u043a\u043e\u043c\u043f\u0430\u043d\u0438\u0438_\"\u0420\u043e\u0441\u0433\u043e\u0441\u0441\u0442\u0440\u0430\u0445\",_\u0433._\u041c\u043e\u0441\u043a\u0432\u0430.JPG",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -40918,7 +40918,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/\u041b\u043e\u0433\u043e\u0442\u0438\u043f_\u0420\u0435\u043d\u0435\u0441\u0441\u0430\u043d\u0441_\u0411\u0430\u043d\u043a.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -40954,7 +40954,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/RNCB_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -40990,7 +40990,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Rosbank_logo_2022.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -41026,7 +41026,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/IQ-querter1.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -41062,7 +41062,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Ava_rrb_\u0431\u0435\u043b\u044b\u0439_\u043d\u0430_\u043a\u0440\u0430\u0441\u043d\u043e\u043c.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -41098,7 +41098,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/\u0411\u0430\u043d\u043a_\u0420\u0443\u0441\u0441\u043a\u0438\u0439_\u0421\u0442\u0430\u043d\u0434\u0430\u0440\u0442_\u043d\u0430_\u041b\u0443\u0433\u0430\u043d\u0441\u043a\u043e\u0439_\u0443\u043b\u0438\u0446\u0435_\u0432_\u041c\u043e\u0441\u043a\u0432\u0435.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -41134,7 +41134,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Sberbank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -41170,7 +41170,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Sberbank_Logo_2020.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -41206,7 +41206,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Scb_logo_rus.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -41242,7 +41242,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -41278,7 +41278,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -41314,7 +41314,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -41350,7 +41350,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -41386,7 +41386,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -41422,7 +41422,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -41458,7 +41458,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -41494,7 +41494,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/UKREXIMBANK_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -41530,7 +41530,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -41566,7 +41566,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo-bank.JPG",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -41602,7 +41602,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -41638,7 +41638,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -41674,7 +41674,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -41710,7 +41710,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -41746,7 +41746,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Halkbank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -41782,7 +41782,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Home_Credit_&_Finance_Bank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -41818,7 +41818,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Ccblogo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -41854,7 +41854,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -41890,7 +41890,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -41926,7 +41926,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Steierm\u00e4rkische_Sparkasse.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -41962,7 +41962,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -41998,7 +41998,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Moscow,_Prechistenskaya_Embankment_9_-_Unicredit_Russia_HQ.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -42034,7 +42034,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -42070,7 +42070,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -42106,7 +42106,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Ziraat_Bankas\u0131_2025_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -42142,7 +42142,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/TBC_Bank_building.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -42178,7 +42178,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/T\u00fcrkiye_\u0130\u015f_Bankas\u0131_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -42214,7 +42214,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -42250,7 +42250,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -42286,7 +42286,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Tbilisi_Fountain.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -42322,7 +42322,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_ProCredit_Bank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -42358,7 +42358,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -42394,7 +42394,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -42430,7 +42430,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -42466,7 +42466,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -42502,7 +42502,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -42538,7 +42538,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -42574,7 +42574,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Discount_Bank,_Ltd_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -42610,7 +42610,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_happoalim_2018_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -42646,7 +42646,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -42682,7 +42682,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -42718,7 +42718,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/BankLeumiLogoReupload.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -42754,7 +42754,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -42790,7 +42790,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/31.03.09_Tel_Aviv_066_Beinleumi_Tower_2.JPG",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -42826,7 +42826,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/\u05dc\u05d5\u05d2\u05d5_\u05e9\u05dc_\u05d1\u05e0\u05e7_\u05de\u05d6\u05e8\u05d7\u05d9-\u05d8\u05e4\u05d7\u05d5\u05ea.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -42862,7 +42862,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -42898,7 +42898,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Standard_Chartered_Bank_Building,_Karachi.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -42934,7 +42934,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Saudi_National_Bank_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -42970,7 +42970,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Alawal_Bank_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -43006,7 +43006,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/SABB_Bank_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -43042,7 +43042,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Banque_Saudi_Fransi_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -43078,7 +43078,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -43114,7 +43114,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -43150,7 +43150,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -43186,7 +43186,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/ATB_headquarters.JPG",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -43222,7 +43222,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -43258,7 +43258,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/EnbankNewLog-100x18.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -43294,7 +43294,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -43330,7 +43330,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -43366,7 +43366,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -43402,7 +43402,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -43438,7 +43438,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Tejarat_Bank_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -43474,7 +43474,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -43510,7 +43510,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -43546,7 +43546,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/\u0644\u0648\u06af\u0648_\u062c\u062f\u06cc\u062f_\u0628\u0627\u0646\u06a9_\u0631\u0641\u0627\u0647_\u06a9\u0627\u0631\u06af\u0631\u0627\u0646.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -43582,7 +43582,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -43618,7 +43618,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/BankSepah_Logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -43654,7 +43654,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -43690,7 +43690,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Sina_Bank_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -43726,7 +43726,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Enqelab_(Shah_Reza)_Street_15.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -43762,7 +43762,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_Saderat_Iran_logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -43798,7 +43798,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -43834,7 +43834,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -43870,7 +43870,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -43906,7 +43906,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -43942,7 +43942,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_maskan.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -43978,7 +43978,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Melat_Bank_headquarters_2.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -44014,7 +44014,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_Melli_Iran_New_Logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -44050,7 +44050,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -44086,7 +44086,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -44122,7 +44122,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -44158,7 +44158,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Riyad_Bank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -44194,7 +44194,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Nouveau_si\u00e8ge_de_la_BIAT_REF_5163.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -44230,7 +44230,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -44266,7 +44266,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/JS_Bank_-_New_logo_2011_-_Copy.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -44302,7 +44302,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo-SG-Soci\u00e9t\u00e9-G\u00e9n\u00e9rale.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -44338,7 +44338,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Alinma_Bank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -44374,7 +44374,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Al_Rajhi_Bank_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -44410,7 +44410,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -44446,7 +44446,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/NBP,_World's_Highest_ATM.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -44482,7 +44482,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -44518,7 +44518,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Agrani_Bank_Limited.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -44554,7 +44554,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Grameen_Bank_Seal.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -44590,7 +44590,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Janata_bank,_motijheel_branch.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -44626,7 +44626,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -44662,7 +44662,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Sonali_Bank_Limited.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -44698,7 +44698,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_of_Ayudhya.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -44734,7 +44734,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Bangkok_Bank_Public_Company_Limited.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -44770,7 +44770,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/\u0e2a\u0e33\u0e19\u0e31\u0e01\u0e07\u0e32\u0e19\u0e43\u0e2b\u0e0d\u0e48\u0e18\u0e19\u0e32\u0e04\u0e32\u0e23\u0e01\u0e23\u0e38\u0e07\u0e44\u0e17\u0e22_Krungthai_Bank_Headquaters_Office_Building_2021_May_(1).jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -44806,7 +44806,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/KBank_HO_(2016).jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -44842,7 +44842,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/TTB_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -44878,7 +44878,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/SCB222.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -44914,7 +44914,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -44950,7 +44950,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/\u0e18\u0e19\u0e32\u0e04\u0e32\u0e23\u0e2d\u0e2d\u0e21\u0e2a\u0e34\u0e19_\u0e2a\u0e33\u0e19\u0e31\u0e01\u0e07\u0e32\u0e19\u0e43\u0e2b\u0e0d\u0e48_\u0e2a\u0e30\u0e1e\u0e32\u0e19\u0e04\u0e27\u0e32\u0e22.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -44986,7 +44986,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -45022,7 +45022,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Shinhan_Bank_Logo_(ENG).svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -45058,7 +45058,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -45094,7 +45094,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Woori-Bank-headquarter.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -45130,7 +45130,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Hana_Bank_Logo_(eng).svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -45166,7 +45166,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Aeon_Bank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -45202,7 +45202,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -45238,7 +45238,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Suruga_Bank_Ltd._head_office_ac.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -45274,7 +45274,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/7bank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -45310,7 +45310,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Mizuho_bank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -45346,7 +45346,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Japan_Post_Bank_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -45382,7 +45382,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Resona_Bank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -45418,7 +45418,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Sumitomo_Mitsui_Trust_Bank_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -45454,7 +45454,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Smbc_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -45490,7 +45490,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/\u4e09\u4fe1\u5546\u696d\u9280\u884c\u53f0\u4e2d\u5206\u884c_201905.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -45526,7 +45526,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Mitsubishi_UFJ_Financial_Group.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -45562,7 +45562,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Mitsubishi_UFJ_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -45598,7 +45598,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -45634,7 +45634,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Shanghai_Bank_Tower,_Shanghai_Commercial_and_Savings_Bank_20101213.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -45670,7 +45670,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Shanghai_Commercial_Bank_Tower_2016.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -45706,7 +45706,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/SPD_Bank_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -45742,7 +45742,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_of_Shanghai,_Jia_Ding.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -45778,7 +45778,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_of_East_Asia_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -45814,7 +45814,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/ChinaCITICBankHangzhou.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -45850,7 +45850,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/ChinaCITICBankHangzhou.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -45886,7 +45886,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -45922,7 +45922,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/China_everbright_bank_beijing_201705.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -45958,7 +45958,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/\u4e2d\u56fd\u519c\u4e1a\u94f6\u884c_\u897f\u4fa7.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -45994,7 +45994,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/ICBC_ChanganAVe.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -46030,7 +46030,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/ICBC_ChanganAVe.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -46066,7 +46066,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/China_Construction_Bank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -46102,7 +46102,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Minsheng_Bank_Tower,_Wuhan,_Hubei_Province,_P.R.China.JPG",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -46138,7 +46138,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/\u4e2d\u56fd\u90ae\u653f\u96c6\u56e2\u516c\u53f8.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -46174,7 +46174,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -46210,7 +46210,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/BOC_Headquarters_at_Xidan_(20171123140827).jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -46246,7 +46246,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -46282,7 +46282,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/ICBC_ChanganAVe.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -46318,7 +46318,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/China_Construction_Bank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -46354,7 +46354,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/China_Construction_Bank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -46390,7 +46390,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/BOC_Headquarters_at_Xidan_(20171123140827).jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -46426,7 +46426,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/BOC_Headquarters_at_Xidan_(20171123140827).jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -46462,7 +46462,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -46498,7 +46498,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_of_Communications_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -46534,7 +46534,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_of_Communications_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -46570,7 +46570,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -46606,7 +46606,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/The_Keiyo_Bank,_Ltd._logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -46642,7 +46642,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kyoto_Chushin_logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -46678,7 +46678,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kyoto_Bank_logo.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -46714,7 +46714,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Iyo_Bank_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -46750,7 +46750,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/\u5143\u5927\u9280\u884cLOGO.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -46786,7 +46786,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -46822,7 +46822,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/82bank-logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -46858,7 +46858,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Industrial_Bank_Co.,_Ltd._Head_Office.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -46894,7 +46894,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Keelung_Branch,_KGI_Bank_20150124.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -46930,7 +46930,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/ChongHingBank_logo_(2014).svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -46966,7 +46966,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -47002,7 +47002,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/\u5317\u4eac\u94f6\u884c.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -47038,7 +47038,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/North_Pacific_Bank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -47074,7 +47074,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -47110,7 +47110,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Hokkaido_Bank_Main_Office.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -47146,7 +47146,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -47182,7 +47182,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/The_Juroku_Bank,_Ltd._logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -47218,7 +47218,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -47254,7 +47254,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Chiba_bank_new.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -47290,7 +47290,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Beijing_Dongcheng_Chonwenmen_-_Zhushikou_street_IMG_5675_Huaxia_Bank.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -47326,7 +47326,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_of_Nanjing,_Suzhou_Branch.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -47362,7 +47362,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Nanyang_Commercial_Bank_Building.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -47398,7 +47398,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Nanto_bank_logo.JPG",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -47434,7 +47434,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Tcbbank_headoffice_2019.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -47470,7 +47470,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Taipei_Fubon_Bank_headquarters_20160723.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -47506,7 +47506,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/TSIB_Dunnan_Branch_20130324.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -47542,7 +47542,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Department_of_Business,_Taiwan_Cooperative_Bank_20171216.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -47578,7 +47578,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/SHOKO_CHUKIN_BANK_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -47614,7 +47614,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Cathay_Bank,_Chinatown,_Los_Angeles,_CA,_USA.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -47650,7 +47650,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/\u570b\u6cf0\u4e16\u83ef\u9280\u884c\u5929\u6bcd\u5206\u884c_20080104.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -47686,7 +47686,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Saitama_Resona_Bank_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -47722,7 +47722,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Tama-shinkin_bank,_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -47758,7 +47758,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/DSB_Image.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -47794,7 +47794,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Menara_Public_Bank,_Kuala_Lumpur.JPG",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -47830,7 +47830,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/BancoNacionalUltramarino_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -47866,7 +47866,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -47902,7 +47902,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -47938,7 +47938,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_of_Ningbo_Hangzhou_brach.JPG",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -47974,7 +47974,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Entie_Bank_logo_2013.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -48010,7 +48010,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Fubon_Bank_Branch.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -48046,7 +48046,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -48082,7 +48082,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/ICBC_ChanganAVe.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -48118,7 +48118,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -48154,7 +48154,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Ping_An_Bank_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -48190,7 +48190,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -48226,7 +48226,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Central_Branch,_Chang_Hwa_Bank_20101213.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -48262,7 +48262,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -48298,7 +48298,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -48334,7 +48334,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/HangSengHeadquarter_20071110.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -48370,7 +48370,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Aichi_Bank_logo.png",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -48406,7 +48406,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/\u62db\u5546\u6c38\u9686\u94f6\u884c\u603b\u884c2023\u5e74.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -48442,7 +48442,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/CMB_Tower_in_Shenzhen2021.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -48478,7 +48478,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/\u65e5\u672c\u9280\u884c\u30ed\u30b4.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -48514,7 +48514,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Marina_Bay_Financial_Centre,_Singapore_-_20121110.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -48550,7 +48550,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Marina_Bay_Financial_Centre,_Singapore_-_20121110.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -48586,7 +48586,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Marina_Bay_Financial_Centre,_Singapore_-_20121110.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -48622,7 +48622,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/\u5357\u4eac\u4e2d\u5c71\u8def\u676d\u5dde\u94f6\u884c_-_panoramio.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -48658,7 +48658,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_of_East_Asia_Logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -48694,7 +48694,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -48730,7 +48730,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -48766,7 +48766,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -48802,7 +48802,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_of_Yokohama_Head_Office_Building_04.JPG",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -48838,7 +48838,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Japanese_Musashino_Bank_head_office.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -48874,7 +48874,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -48910,7 +48910,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -48946,7 +48946,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -48982,7 +48982,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -49018,7 +49018,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -49054,7 +49054,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -49090,7 +49090,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Standard_Chartered_(2021).svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -49126,7 +49126,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Standard_Chartered_(2021).svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -49162,7 +49162,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/China_Bohai_Bank_IMG_4654.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -49198,7 +49198,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -49234,7 +49234,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/BCM_\u53f0\u5c71\u5206\u884c.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -49270,7 +49270,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -49306,7 +49306,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/E.SUN_Bank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -49342,7 +49342,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Taipei_Star_Bank_logo_2017.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -49378,7 +49378,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/The_Hyakugo_Bank,_Ltd.JPG",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -49414,7 +49414,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Bangkok_Bank_Public_Company_Limited.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -49450,7 +49450,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -49486,7 +49486,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -49522,7 +49522,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/UBOT_HQ_at_Union_Enterprise_Building_20150912.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -49558,7 +49558,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Taiwan_Business_Bank_logo_20190526.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -49594,7 +49594,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Land_Bank_of_Taiwan_headquarters_20070514.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -49630,7 +49630,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -49666,7 +49666,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -49702,7 +49702,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -49738,7 +49738,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Citibank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -49774,7 +49774,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -49810,7 +49810,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -49846,7 +49846,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -49882,7 +49882,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -49918,7 +49918,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kinki_Osaka_Bank_Logo_2011.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -49954,7 +49954,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -49990,7 +49990,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kansai_Mirai_Bank_logo.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -50026,7 +50026,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -50062,7 +50062,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Chiyu_Bank_Building_in_2018.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -50098,7 +50098,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Shizuoka-Bank-Honten.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -50134,7 +50134,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/HSBC_logo_(2018).svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -50170,7 +50170,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Po_Ai_Branch,_Bank_of_Kaohsiung_20100921.jpg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
@@ -50206,7 +50206,7 @@ export function bankOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/The_kagoshima_bank.svg",
-                scale:0.0200
+                scale:0.10
             }),
             text: new ol.style.Text({
                 text: name,
