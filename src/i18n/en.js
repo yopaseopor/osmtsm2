@@ -19,6 +19,10 @@ export const en = {
     searchLayers: 'Search layers...',
     searchOverlays: 'Search overlays...',
     // Overlay groups
+	animal_boarding: 'Animal boarding',
+	animal_shelter: 'Animal shelter',
+	atm: 'ATM',
+	bank: 'Bank',
     leisure: 'Leisure',
     food: 'Food & Drink',
     shopping: 'Shopping',

@@ -19,6 +19,10 @@ export const es = {
     searchLayers: 'Buscar capas...',
     searchOverlays: 'Buscar superposiciones...',
     // Overlay groups
+	animal_boarding: 'Cuidar animales',
+	animal_shelter: 'Refugio de animales',
+	bank: 'Banco',
+	atm: 'Cajero automático',
     leisure: 'Ocio',
     food: 'Comida y Bebida',
     shopping: 'Compras',

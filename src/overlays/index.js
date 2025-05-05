@@ -1,3 +1,4 @@
+import { animalOverlays } from './groups/food.js';
 import { foodOverlays } from './groups/food.js';
 import { shoppingOverlays } from './groups/shopping.js';
 import { bankOverlays } from './groups/bank.js';
@@ -12,6 +13,7 @@ console.log('Initializing overlays system...');
 // Initialize overlays by group
 export function getAllOverlays() {
     return {
+		animal: animalOverlays(), // static for this example
         food: foodOverlays(), // always re-evaluate for translations
         shopping: shoppingOverlays(), // static for this example
 		bank: bankOverlays(), // static for this example
