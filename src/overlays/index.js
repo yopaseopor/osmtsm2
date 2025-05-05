@@ -1,4 +1,4 @@
-import { animalOverlays } from './groups/food.js';
+import { animalOverlays } from './groups/animal.js';
 import { foodOverlays } from './groups/food.js';
 import { shoppingOverlays } from './groups/shopping.js';
 import { bankOverlays } from './groups/bank.js';
