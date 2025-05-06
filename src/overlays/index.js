@@ -2,7 +2,7 @@ import { animalOverlays } from './groups/animal.js';
 import { foodOverlays } from './groups/food.js';
 import { shoppingOverlays } from './groups/shopping.js';
 import { bankOverlays } from './groups/bank.js';
-import { nightclubOverlays } from './groups/bank.js';
+import { nightclubOverlays } from './groups/nightclub.js';
 import { transportOverlays } from './groups/transport.js';
 import { healthOverlays } from './groups/health.js';
 import { educationOverlays } from './groups/education.js';
