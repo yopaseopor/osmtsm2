@@ -23,6 +23,7 @@ export const es = {
 	animal_shelter: 'Refugio de animales',
 	bank: 'Banco',
 	atm: 'Cajero automático',
+	nightclub: 'Bar de copas',
     leisure: 'Ocio',
     food: 'Comida y Bebida',
     shopping: 'Compras',

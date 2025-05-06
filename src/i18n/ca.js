@@ -30,6 +30,7 @@ export const ca = {
     health: 'Salut',
     education: 'Educació',
     culture: 'Cultura',
+	nightclub: 'Bar de copes',
     services: 'Serveis',
     accommodation: 'Allotjament',
     religion: 'Religió',
