@@ -22,7 +22,7 @@ export function nightclubOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.30
             }),
             text: new ol.style.Text({
                 text: name,
@@ -58,7 +58,7 @@ export function nightclubOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.30
             }),
             text: new ol.style.Text({
                 text: name,
@@ -94,7 +94,7 @@ export function nightclubOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.30
             }),
             text: new ol.style.Text({
                 text: name,
@@ -130,7 +130,7 @@ export function nightclubOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.30
             }),
             text: new ol.style.Text({
                 text: name,
@@ -166,7 +166,7 @@ export function nightclubOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.30
             }),
             text: new ol.style.Text({
                 text: name,
@@ -202,7 +202,7 @@ export function nightclubOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/CoyoteUgly.LYH.jpg",
-                scale:0.0200
+                scale:0.30
             }),
             text: new ol.style.Text({
                 text: name,
@@ -238,7 +238,7 @@ export function nightclubOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.30
             }),
             text: new ol.style.Text({
                 text: name,
@@ -274,7 +274,7 @@ export function nightclubOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.30
             }),
             text: new ol.style.Text({
                 text: name,
@@ -310,7 +310,7 @@ export function nightclubOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.30
             }),
             text: new ol.style.Text({
                 text: name,
@@ -346,7 +346,7 @@ export function nightclubOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "https://commons.wikimedia.org/wiki/Special:FilePath/Pijalnia_W\u00f3dki_i_Piwa_logo.svg",
-                scale:0.0200
+                scale:0.30
             }),
             text: new ol.style.Text({
                 text: name,
@@ -382,7 +382,7 @@ export function nightclubOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.30
             }),
             text: new ol.style.Text({
                 text: name,
@@ -418,7 +418,7 @@ export function nightclubOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.30
             }),
             text: new ol.style.Text({
                 text: name,
@@ -454,7 +454,7 @@ export function nightclubOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.30
             }),
             text: new ol.style.Text({
                 text: name,
@@ -490,7 +490,7 @@ export function nightclubOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.30
             }),
             text: new ol.style.Text({
                 text: name,
@@ -526,7 +526,7 @@ export function nightclubOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.30
             }),
             text: new ol.style.Text({
                 text: name,
@@ -562,7 +562,7 @@ export function nightclubOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.30
             }),
             text: new ol.style.Text({
                 text: name,
@@ -598,7 +598,7 @@ export function nightclubOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.30
             }),
             text: new ol.style.Text({
                 text: name,
@@ -634,7 +634,7 @@ export function nightclubOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.30
             }),
             text: new ol.style.Text({
                 text: name,
@@ -670,7 +670,7 @@ export function nightclubOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.30
             }),
             text: new ol.style.Text({
                 text: name,
@@ -706,7 +706,7 @@ export function nightclubOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.30
             }),
             text: new ol.style.Text({
                 text: name,
@@ -742,7 +742,7 @@ export function nightclubOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.30
             }),
             text: new ol.style.Text({
                 text: name,
@@ -778,7 +778,7 @@ export function nightclubOverlays() {
         var style = new ol.style.Style({
             image: new ol.style.Icon({
                 src: "src/img/logos/generic.svg",
-                scale:0.0200
+                scale:0.30
             }),
             text: new ol.style.Text({
                 text: name,
