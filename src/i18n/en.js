@@ -23,6 +23,8 @@ export const en = {
 	animal_shelter: 'Animal shelter',
 	atm: 'ATM',
 	bank: 'Bank',
+	bicycle_parking: 'Bicycle parking',
+		bicycle_rental: 'Bicycle rental',
 	nightclub: 'Music&night bar',
     leisure: 'Leisure',
     food: 'Food & Drink',

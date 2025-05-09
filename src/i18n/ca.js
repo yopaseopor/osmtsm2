@@ -23,6 +23,8 @@ export const ca = {
 	animal_shelter: 'Refugi d\'animals',
 	atm: 'Caixer automàtic',
 	bank: 'Banc',
+		bicycle_parking: 'Aparcament per a bicicletes',
+		bicycle_rental: 'Lloguer de bicicletes',
     leisure: 'Oci',
     food: 'Menjar i Beguda',
     shopping: 'Compres',
