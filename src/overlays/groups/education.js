@@ -5,8 +5,8 @@ export function educationOverlays() {
         {
         group: getTranslation('education'),
         title: getTranslation('schools'),
-        query: '[out:json][timeout:25];(node["amenity"="school"]({{bbox}}););out body;>;out skel qt;',
-        iconSrc: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/School_icon.svg/1200px-School_icon.svg.png',
+        query: "[out:json][timeout:25];(nwr[\"amenity\"=\"school\"]({{bbox}});node(w););out meta;",
+        iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/School_icon.svg",
         iconStyle: 'background-color:rgba(255,255,255,0.4)',
         style: function (feature) {
             var key_regex = /^name$/;
@@ -21,8 +21,8 @@ export function educationOverlays() {
             });
             var style = new ol.style.Style({
                 image: new ol.style.Icon({
-                    src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/School_icon.svg/1200px-School_icon.svg.png',
-                    scale: 0.10
+                    src: "https://commons.wikimedia.org/wiki/Special:FilePath/School_icon.svg",
+                    scale: 0.30
                 }),
                 text: new ol.style.Text({
                     text: name,
