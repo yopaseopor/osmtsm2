@@ -33,6 +33,7 @@ export const es = {
 	casino: 'Casino/Apuestas',
 	charging_station: 'Cargador vehículos',
 	childcare: 'Cuidado niños infancia',
+	cinema: 'Cines',
 	education: 'Educación',
 	nightclub: 'Bar de copas/deportes/musical',
     leisure: 'Ocio',

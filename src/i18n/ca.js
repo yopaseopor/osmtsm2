@@ -33,6 +33,7 @@ export const ca = {
 	casino: 'Casino/Apostes',
 	charging_station: 'Carregador vehicles',
 	childcare: 'Cura d\'infants',
+	cinema: 'Cinemes',
 	education: 'Educació',
     leisure: 'Oci',
     food: 'Menjar i Beguda',

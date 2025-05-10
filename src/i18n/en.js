@@ -33,6 +33,7 @@ export const en = {
 	casino: 'Casino/Gambling',
 	charging_station: 'Charging station',
 	childcare: 'Child care',
+	cinema: 'Cinema',
 	education: 'Education',
 	nightclub: 'Music/Night/Sports bar',
     leisure: 'Leisure',
