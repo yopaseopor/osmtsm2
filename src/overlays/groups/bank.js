@@ -50220,6 +50220,762 @@ export function bankOverlays() {
             stroke: stroke
         });
                 return style;
+    }
+},
+{
+    group: getTranslation('bureau_de_change'),
+    title: "Al Ansari Exchange",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"bureau_de_change\"][\"brand\"=\"Al Ansari Exchange\"][\"brand:ar\"=\"\u0627\u0644\u0623\u0646\u0635\u0627\u0631\u064a \u0644\u0644\u0635\u0631\u0627\u0641\u0629\"][\"brand:en\"=\"Al Ansari Exchange\"][\"brand:wikidata\"=\"Q132524657\"][\"name\"=\"Al Ansari Exchange\"][\"name:ar\"=\"\u0627\u0644\u0623\u0646\u0635\u0627\u0631\u064a \u0644\u0644\u0635\u0631\u0627\u0641\u0629\"][\"name:en\"=\"Al Ansari Exchange\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('bureau_de_change'),
+    title: "CADECA",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"bureau_de_change\"][\"brand\"=\"CADECA\"][\"brand:wikidata\"=\"Q62122716\"][\"name\"=\"CADECA\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_cadeca.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_cadeca.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('bureau_de_change'),
+    title: "Change Group",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"bureau_de_change\"][\"brand\"=\"Change Group\"][\"brand:wikidata\"=\"Q5071758\"][\"name\"=\"Change Group\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/ChangeGroup_Logo.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/ChangeGroup_Logo.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('bureau_de_change'),
+    title: "Confidence C\u00e2mbio",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"bureau_de_change\"][\"brand\"=\"Confidence C\u00e2mbio\"][\"brand:wikidata\"=\"Q20055927\"][\"name\"=\"Confidence C\u00e2mbio\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('bureau_de_change'),
+    title: "Continental Currency Exchange",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"bureau_de_change\"][\"brand\"=\"Continental Currency Exchange\"][\"brand:wikidata\"=\"Q133254858\"][\"name\"=\"Continental Currency Exchange\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('bureau_de_change'),
+    title: "DayC\u00e2mbio",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"bureau_de_change\"][\"brand\"=\"DayC\u00e2mbio\"][\"brand:wikidata\"=\"Q110038882\"][\"name\"=\"DayC\u00e2mbio\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('bureau_de_change'),
+    title: "Eurochange",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"bureau_de_change\"][\"brand\"=\"Eurochange\"][\"brand:wikidata\"=\"Q86525249\"][\"name\"=\"Eurochange\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('bureau_de_change'),
+    title: "Exclusive Change",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"bureau_de_change\"][\"brand\"=\"Exclusive Change\"][\"brand:wikidata\"=\"Q127799085\"][\"name\"=\"Exclusive Change\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('bureau_de_change'),
+    title: "NM Money",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"bureau_de_change\"][\"brand\"=\"NM Money\"][\"brand:wikidata\"=\"Q86529747\"][\"name\"=\"NM Money\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('bureau_de_change'),
+    title: "No1 Currency",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"bureau_de_change\"][\"brand\"=\"No1 Currency\"][\"brand:wikidata\"=\"Q87139463\"][\"name\"=\"No1 Currency\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('bureau_de_change'),
+    title: "PocketChange",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"bureau_de_change\"][\"brand\"=\"PocketChange\"][\"brand:en\"=\"PocketChange\"][\"brand:ja\"=\"\u30dd\u30b1\u30c3\u30c8\u30c1\u30a7\u30f3\u30b8\"][\"brand:wikidata\"=\"Q96182316\"][\"name\"=\"PocketChange\"][\"name:en\"=\"PocketChange\"][\"name:ja\"=\"\u30dd\u30b1\u30c3\u30c8\u30c1\u30a7\u30f3\u30b8\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('bureau_de_change'),
+    title: "Reisebank",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"bureau_de_change\"][\"brand\"=\"Reisebank\"][\"brand:wikidata\"=\"Q1421107\"][\"name\"=\"Reisebank\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/ReiseBank-Logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/ReiseBank-Logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('bureau_de_change'),
+    title: "Sainsbury's Bank Travel Money",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"bureau_de_change\"][\"brand\"=\"Sainsbury's Bank\"][\"brand:wikidata\"=\"Q7400525\"][\"name\"=\"Sainsbury's Bank Travel Money\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('bureau_de_change'),
+    title: "Travel Money Oz",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"bureau_de_change\"][\"brand\"=\"Travel Money Oz\"][\"brand:wikidata\"=\"Q123437458\"][\"name\"=\"Travel Money Oz\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('bureau_de_change'),
+    title: "Travelex",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"bureau_de_change\"][\"brand\"=\"Travelex\"][\"brand:wikidata\"=\"Q2337964\"][\"name\"=\"Travelex\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Travelex_Logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Travelex_Logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('bureau_de_change'),
+    title: "Unimoni",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"bureau_de_change\"][\"brand\"=\"Unimoni\"][\"brand:wikidata\"=\"Q7863721\"][\"name\"=\"Unimoni\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('bureau_de_change'),
+    title: "\u0411\u0435\u043b\u0430\u0440\u0443\u0441\u0431\u0430\u043d\u043a",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"bureau_de_change\"][\"brand\"=\"\u0411\u0435\u043b\u0430\u0440\u0443\u0441\u0431\u0430\u043d\u043a\"][\"brand:be\"=\"\u0411\u0435\u043b\u0430\u0440\u0443\u0441\u0431\u0430\u043d\u043a\"][\"brand:en\"=\"Belarusbank\"][\"brand:wikidata\"=\"Q1997334\"][\"name\"=\"\u0411\u0435\u043b\u0430\u0440\u0443\u0441\u0431\u0430\u043d\u043a\"][\"name:be\"=\"\u0411\u0435\u043b\u0430\u0440\u0443\u0441\u0431\u0430\u043d\u043a\"][\"name:en\"=\"Belarusbank\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Belarusbank_logo_(be).svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Belarusbank_logo_(be).svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('bureau_de_change'),
+    title: "\u041a\u0418\u0422 Group",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"bureau_de_change\"][\"brand\"=\"\u041a\u0418\u0422 Group\"][\"brand:wikidata\"=\"Q119155974\"][\"name\"=\"\u041a\u0418\u0422 Group\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('bureau_de_change'),
+    title: "\u10d5\u10d0\u10da\u10e3\u10e2\u10dd",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"bureau_de_change\"][\"brand\"=\"\u10d7\u10d8\u10d1\u10d8\u10e1\u10d8 \u10d1\u10d0\u10dc\u10d9\u10d8\"][\"brand:en\"=\"TBC Bank\"][\"brand:ka\"=\"\u10d7\u10d8\u10d1\u10d8\u10e1\u10d8 \u10d1\u10d0\u10dc\u10d9\u10d8\"][\"brand:ru\"=\"\u0422\u0438\u0411\u0438\u0421\u0438 \u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q2620975\"][\"currency:EUR\"=\"yes\"][\"currency:GEL\"=\"yes\"][\"currency:RUB\"=\"yes\"][\"currency:USD\"=\"yes\"][\"name\"=\"\u10d5\u10d0\u10da\u10e3\u10e2\u10dd\"][\"name:en\"=\"Valuto\"][\"name:ka\"=\"\u10d5\u10d0\u10da\u10e3\u10e2\u10dd\"][\"name:ru\"=\"\u0412\u0430\u043b\u044e\u0442\u043e\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/TBC_Bank_building.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/TBC_Bank_building.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('bureau_de_change'),
+    title: "\u10e0\u10d8\u10d9\u10dd \u10d9\u10e0\u10d4\u10d3\u10d8\u10e2\u10d8",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"bureau_de_change\"][\"brand\"=\"\u10e0\u10d8\u10d9\u10dd \u10d9\u10e0\u10d4\u10d3\u10d8\u10e2\u10d8\"][\"brand:en\"=\"Rico Credit\"][\"brand:ka\"=\"\u10e0\u10d8\u10d9\u10dd \u10d9\u10e0\u10d4\u10d3\u10d8\u10e2\u10d8\"][\"brand:ru\"=\"\u0420\u0438\u043a\u043e \u041a\u0440\u0435\u0434\u0438\u0442\"][\"name\"=\"\u10e0\u10d8\u10d9\u10dd \u10d9\u10e0\u10d4\u10d3\u10d8\u10e2\u10d8\"][\"name:en\"=\"Rico Credit\"][\"name:ka\"=\"\u10e0\u10d8\u10d9\u10dd \u10d9\u10e0\u10d4\u10d3\u10d8\u10e2\u10d8\"][\"name:ru\"=\"\u0420\u0438\u043a\u043e \u041a\u0440\u0435\u0434\u0438\u0442\"][\"shop\"=\"money_lender\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('bureau_de_change'),
+    title: "\u10e1\u10d5\u10d8\u10e1 \u10d9\u10d0\u10de\u10d8\u10e2\u10d0\u10da\u10d8",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"bureau_de_change\"][\"brand\"=\"\u10e1\u10d5\u10d8\u10e1 \u10d9\u10d0\u10de\u10d8\u10e2\u10d0\u10da\u10d8\"][\"brand:en\"=\"Swiss Capital\"][\"brand:ka\"=\"\u10e1\u10d5\u10d8\u10e1 \u10d9\u10d0\u10de\u10d8\u10e2\u10d0\u10da\u10d8\"][\"brand:ru\"=\"\u0421\u0432\u0438\u0441 \u041a\u0430\u043f\u0438\u0442\u0430\u043b\"][\"name\"=\"\u10e1\u10d5\u10d8\u10e1 \u10d9\u10d0\u10de\u10d8\u10e2\u10d0\u10da\u10d8\"][\"name:en\"=\"Swiss Capital\"][\"name:ka\"=\"\u10e1\u10d5\u10d8\u10e1 \u10d9\u10d0\u10de\u10d8\u10e2\u10d0\u10da\u10d8\"][\"name:ru\"=\"\u0421\u0432\u0438\u0441 \u041a\u0430\u043f\u0438\u0442\u0430\u043b\"][\"shop\"=\"money_lender\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;		
             }
         }
     ];
