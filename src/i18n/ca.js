@@ -26,6 +26,7 @@ export const ca = {
 	bicycle_parking: 'Aparcament per a bicicletes',
 	bicycle_rental: 'Lloguer de bicicletes',
 	bureau_de_change: 'Casa de canvi',
+	cafe: 'Cafè',
     leisure: 'Oci',
     food: 'Menjar i Beguda',
     shopping: 'Compres',

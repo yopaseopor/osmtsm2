@@ -26,6 +26,7 @@ export const en = {
 	bicycle_parking: 'Bicycle parking',
 	bicycle_rental: 'Bicycle rental',
 	bureau_de_change: 'Bureau de change',
+	cafe: 'Cafe',
 	nightclub: 'Music/Night/Sports bar',
     leisure: 'Leisure',
     food: 'Food & Drink',
