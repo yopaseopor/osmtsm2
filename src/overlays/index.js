@@ -2,7 +2,7 @@ import { animalOverlays } from './groups/animal.js';
 import { foodOverlays } from './groups/food.js';
 import { shoppingOverlays } from './groups/shopping.js';
 import { bankOverlays } from './groups/bank.js';
-import { bicycleOverlays } from './groups/bicycle.js';
+import { mobilityOverlays } from './groups/mobility.js';
 import { nightclubOverlays } from './groups/nightclub.js';
 import { transportOverlays } from './groups/transport.js';
 import { healthOverlays } from './groups/health.js';
@@ -19,7 +19,7 @@ export function getAllOverlays() {
         food: foodOverlays(), // always re-evaluate for translations
         shopping: shoppingOverlays(), // static for this example
 		bank: bankOverlays(), // static for this example
-		bicycle: bicycleOverlays(), // static for this example
+		mobility: mobilityOverlays(), // static for this example
 		nightclub: nightclubOverlays(), // static for this example
 		education: educationOverlays(),
         transport: transportOverlays,
