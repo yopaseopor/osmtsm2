@@ -32,12 +32,13 @@ export const ca = {
 	car_wash: 'Autorentat',
 	casino: 'Casino/Apostes',
 	charging_station: 'Charging station',
+	education: 'Educació',
     leisure: 'Oci',
     food: 'Menjar i Beguda',
     shopping: 'Compres',
 	transport: 'Transport',
     health: 'Salut',
-    education: 'Educació',
+
     culture: 'Cultura',
 	nightclub: 'Bar de copes/esports/musical',
     services: 'Serveis',
@@ -45,8 +46,8 @@ export const ca = {
     religion: 'Religió',
 	    // Specific POIs
     restaurants: 'Restaurants',
-    starbucks: 'Starbucks',
-    // Specific POIs
+	schools: 'Escoles',
+    // Brand POIs
     mcdonalds: 'McDonald\'s',
     starbucks: 'Starbucks'
 }; 

@@ -43,7 +43,10 @@ export const es = {
     services: 'Servicios',
     accommodation: 'Alojamiento',
     religion: 'Religión',
-    // Specific POIs
+	    // Specific POIs
+    restaurants: 'Restaurantes',
+	schools: 'Escuelas',
+    // Brand POIs
     mcdonalds: 'McDonald\'s',
     starbucks: 'Starbucks'
-}; 
+};

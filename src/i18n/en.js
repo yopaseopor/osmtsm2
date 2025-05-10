@@ -42,7 +42,11 @@ export const en = {
     services: 'Services',
     accommodation: 'Accommodation',
     religion: 'Religion',
-    // Specific POIs
+	    // Specific POIs
+    restaurants: 'Restaurants',
+	schools: 'Schools',
+    // Brand POIs
     mcdonalds: 'McDonald\'s',
     starbucks: 'Starbucks'
+};
 }; 
