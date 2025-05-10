@@ -31,6 +31,7 @@ export const ca = {
 	car_sharing: 'Mobilitat compartida',
 	car_wash: 'Autorentat',
 	casino: 'Casino/Apostes',
+	charging_station: 'Charging station',
     leisure: 'Oci',
     food: 'Menjar i Beguda',
     shopping: 'Compres',

@@ -31,6 +31,7 @@ export const es = {
 	car_sharing: 'Movilidad compartida',
 	car_wash: 'Autolavado',
 	casino: 'Casino/Apuestas',
+	charging_station: 'Cargador vehículos',
 	nightclub: 'Bar de copas/deportes/musical',
     leisure: 'Ocio',
     food: 'Comida y Bebida',
