@@ -46,6 +46,7 @@ export const en = {
     accommodation: 'Accommodation',
     religion: 'Religion',
 	    // Specific POIs
+			pharmacies: 'Pharmacies',
     restaurants: 'Restaurants',
 	schools: 'Schools',
     // Brand POIs

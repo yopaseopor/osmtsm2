@@ -46,6 +46,7 @@ export const ca = {
     accommodation: 'Allotjament',
     religion: 'Religió',
 	    // Specific POIs
+	pharmacies: 'Farmàcies',
     restaurants: 'Restaurants',
 	schools: 'Escoles/Instituts',
     // Brand POIs

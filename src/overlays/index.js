@@ -22,8 +22,8 @@ export function getAllOverlays() {
 		leisure: leisureOverlays(), // static for this example
 		mobility: mobilityOverlays(), // static for this example
 		education: educationOverlays(),
+		health: healthOverlays(),
         transport: transportOverlays,
-        health: healthOverlays,
         translated: translatedOverlays || [],
         external: []
     };

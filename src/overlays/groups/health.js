@@ -4,7 +4,7 @@ export function healthOverlays() {
     return [
         {
         group: getTranslation('health'),
-        title: 'Pharmacies',
+        title: getTranslation('pharmacies'),
         query: "[out:json][timeout:25];(nwr[\"amenity\"=\"pharmacy\"]({{bbox}}););out body;>;out skel qt;",
         iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Pharmacy_symbol.svg",
         iconStyle: 'background-color:rgba(255,255,255,0.4)',
@@ -36,6 +36,7 @@ export function healthOverlays() {
                 stroke: stroke
             });
             return style;
+            }
         }
-    }
-]; 
+    ];
+}
