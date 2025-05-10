@@ -19,11 +19,12 @@ export function getAllOverlays() {
         food: foodOverlays(), // always re-evaluate for translations
         shopping: shoppingOverlays(), // static for this example
 		bank: bankOverlays(), // static for this example
-				bicycle: bicycleOverlays(), // static for this example
+		bicycle: bicycleOverlays(), // static for this example
 		nightclub: nightclubOverlays(), // static for this example
+		education: educationOverlays(),
         transport: transportOverlays,
         health: healthOverlays,
-        education: educationOverlays,
+
         translated: translatedOverlays || [],
         external: []
     };
