@@ -34,6 +34,7 @@ export const ca = {
 	charging_station: 'Carregador vehicles',
 	childcare: 'Cura d\'infants',
 	cinema: 'Cinemes',
+	clinic: 'Clínica',
 	education: 'Educació',
     leisure: 'Oci',
     food: 'Menjar i Beguda',
