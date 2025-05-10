@@ -24,7 +24,6 @@ export function getAllOverlays() {
 		education: educationOverlays(),
         transport: transportOverlays,
         health: healthOverlays,
-
         translated: translatedOverlays || [],
         external: []
     };
