@@ -1,11 +1,12 @@
 import { getTranslation } from '../../i18n/index.js';
 
-export const healthOverlays = [
-    {
+export function healthOverlays() {
+    return [
+        {
         group: getTranslation('health'),
         title: 'Pharmacies',
-        query: '[out:json][timeout:25];(node["amenity"="pharmacy"]({{bbox}}););out body;>;out skel qt;',
-        iconSrc: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Pharmacy_symbol.svg/1200px-Pharmacy_symbol.svg.png',
+        query: "[out:json][timeout:25];(nwr[\"amenity\"=\"pharmacy\"]({{bbox}}););out body;>;out skel qt;",
+        iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Pharmacy_symbol.svg",
         iconStyle: 'background-color:rgba(255,255,255,0.4)',
         style: function (feature) {
             var key_regex = /^name$/;
@@ -20,7 +21,7 @@ export const healthOverlays = [
             });
             var style = new ol.style.Style({
                 image: new ol.style.Icon({
-                    src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Pharmacy_symbol.svg/1200px-Pharmacy_symbol.svg.png',
+                    src: "https://commons.wikimedia.org/wiki/Special:FilePath/Pharmacy_symbol.svg",
                     scale: 0.10
                 }),
                 text: new ol.style.Text({
