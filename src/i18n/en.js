@@ -48,5 +48,4 @@ export const en = {
     // Brand POIs
     mcdonalds: 'McDonald\'s',
     starbucks: 'Starbucks'
-};
 }; 

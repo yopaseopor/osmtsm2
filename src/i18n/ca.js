@@ -38,7 +38,6 @@ export const ca = {
     shopping: 'Compres',
 	transport: 'Transport',
     health: 'Salut',
-
     culture: 'Cultura',
 	nightclub: 'Bar de copes/esports/musical',
     services: 'Serveis',
