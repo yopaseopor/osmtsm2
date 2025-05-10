@@ -34,7 +34,7 @@ export const en = {
 	charging_station: 'Charging station',
 	childcare: 'Child care',
 	cinema: 'Cinema',
-		clinic: 'Clinic',
+	clinic: 'Clinic',
 	education: 'Education',
 	nightclub: 'Music/Night/Sports bar',
     leisure: 'Leisure',
