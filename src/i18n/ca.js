@@ -30,6 +30,7 @@ export const ca = {
 	car_rental: 'Lloguer de vehicles',
 	car_sharing: 'Mobilitat compartida',
 	car_wash: 'Autorentat',
+	casino: 'Casino/Apostes',
     leisure: 'Oci',
     food: 'Menjar i Beguda',
     shopping: 'Compres',

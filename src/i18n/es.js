@@ -30,6 +30,7 @@ export const es = {
 	car_rental: 'alquiler de vehículos',
 	car_sharing: 'Movilidad compartida',
 	car_wash: 'Autolavado',
+	casino: 'Casino/Apuestas',
 	nightclub: 'Bar de copas/deportes/musical',
     leisure: 'Ocio',
     food: 'Comida y Bebida',

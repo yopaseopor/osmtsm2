@@ -30,6 +30,7 @@ export const en = {
 	car_rental: 'Car rental',
 	car_sharing: 'Car sharing',
 	car_wash: 'Car wash',
+	casino: 'Casino/Gambling',
 	nightclub: 'Music/Night/Sports bar',
     leisure: 'Leisure',
     food: 'Food & Drink',
