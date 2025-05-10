@@ -1,7 +1,7 @@
 import { animalOverlays } from './groups/animal.js';
-import { foodOverlays } from './groups/food.js';
+import { food_drinkOverlays } from './groups/food_drink.js';
 import { shoppingOverlays } from './groups/shopping.js';
-import { bankOverlays } from './groups/bank.js';
+import { economyOverlays } from './groups/bank.js';
 import { mobilityOverlays } from './groups/mobility.js';
 import { nightclubOverlays } from './groups/nightclub.js';
 import { transportOverlays } from './groups/transport.js';
@@ -16,9 +16,9 @@ console.log('Initializing overlays system...');
 export function getAllOverlays() {
     return {
 		animal: animalOverlays(), // static for this example
-        food: foodOverlays(), // always re-evaluate for translations
+        food: food_drinkOverlays(), // always re-evaluate for translations
         shopping: shoppingOverlays(), // static for this example
-		bank: bankOverlays(), // static for this example
+		bank: economyOverlays(), // static for this example
 		mobility: mobilityOverlays(), // static for this example
 		nightclub: nightclubOverlays(), // static for this example
 		education: educationOverlays(),
