@@ -45,7 +45,7 @@ export const es = {
     religion: 'Religión',
 	    // Specific POIs
     restaurants: 'Restaurantes',
-	schools: 'Escuelas',
+	schools: 'Escuelas/Institutos',
     // Brand POIs
     mcdonalds: 'McDonald\'s',
     starbucks: 'Starbucks'
