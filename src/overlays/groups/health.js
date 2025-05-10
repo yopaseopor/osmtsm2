@@ -6,7 +6,7 @@ export function healthOverlays() {
         group: getTranslation('health'),
         title: getTranslation('pharmacies'),
         query: "[out:json][timeout:25];(nwr[\"amenity\"=\"pharmacy\"]({{bbox}}););out body;>;out skel qt;",
-        iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Pharmacy_symbol.svg",
+        iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Green_Pharmacy_Cross_w_Bowl_of_Hygieia.svg",
         iconStyle: 'background-color:rgba(255,255,255,0.4)',
         style: function (feature) {
             var key_regex = /^name$/;
@@ -21,7 +21,7 @@ export function healthOverlays() {
             });
             var style = new ol.style.Style({
                 image: new ol.style.Icon({
-                    src: "https://commons.wikimedia.org/wiki/Special:FilePath/Pharmacy_symbol.svg",
+                    src: "https://commons.wikimedia.org/wiki/Special:FilePath/Green_Pharmacy_Cross_w_Bowl_of_Hygieia.svg",
                     scale: 0.10
                 }),
                 text: new ol.style.Text({
