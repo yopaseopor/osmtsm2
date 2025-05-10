@@ -1,7 +1,7 @@
 import { animalOverlays } from './groups/animal.js';
 import { food_drinkOverlays } from './groups/food_drink.js';
 import { shoppingOverlays } from './groups/shopping.js';
-import { economyOverlays } from './groups/bank.js';
+import { economyOverlays } from './groups/economy.js';
 import { mobilityOverlays } from './groups/mobility.js';
 import { transportOverlays } from './groups/transport.js';
 import { healthOverlays } from './groups/health.js';
