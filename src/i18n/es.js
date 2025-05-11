@@ -46,6 +46,8 @@ export const es = {
 	food_sharing: 'Aprovechar comida',
 	fuel: 'Gasolinera',
     gambling: 'Apuestas',
+	hospital: 'Hospital',
+	ice_cream: 'Heladería',
 	nightclub: 'Bar de copas/deportes/musical',
     leisure: 'Ocio',
     food: 'Comida y Bebida',

@@ -46,6 +46,8 @@ export const ca = {
 	food_sharing: 'Aprofitar menjar',
 	fuel: 'Benzinera',
     gambling: 'Apostes',
+	hospital: 'Hospital',
+	ice_cream: 'Gelateria',
 	leisure: 'Oci',
     food: 'Menjar i Beguda',
     shopping: 'Botigues',
