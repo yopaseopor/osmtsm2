@@ -3636,6 +3636,726 @@ export function leisureOverlays() {
             stroke: stroke
         });
         return style;
+    }
+},
+{
+    group: getTranslation('internet_cafe'),
+	title: "Akshaya",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"internet_cafe\"][\"brand\"=\"Akshaya\"][\"brand:wikidata\"=\"Q99562093\"][\"name\"=\"Akshaya\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('internet_cafe'),
+	title: "Common Service Centres",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"internet_cafe\"][\"brand\"=\"Common Service Centres\"][\"brand:wikidata\"=\"Q5153481\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('internet_cafe'),
+	title: "\u30a2\u30d7\u30ec\u30b7\u30aa",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"internet_cafe\"][\"brand\"=\"\u30a2\u30d7\u30ec\u30b7\u30aa\"][\"brand:en\"=\"Aprecio\"][\"brand:ja\"=\"\u30a2\u30d7\u30ec\u30b7\u30aa\"][\"brand:wikidata\"=\"Q11284756\"][\"internet_access:fee\"=\"yes\"][\"name\"=\"\u30a2\u30d7\u30ec\u30b7\u30aa\"][\"name:en\"=\"Aprecio\"][\"name:ja\"=\"\u30a2\u30d7\u30ec\u30b7\u30aa\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('internet_cafe'),
+	title: "\u30b3\u30df\u30c3\u30af\u30fb\u30d0\u30b9\u30bf\u30fc",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"internet_cafe\"][\"brand\"=\"\u30b3\u30df\u30c3\u30af\u30fb\u30d0\u30b9\u30bf\u30fc\"][\"brand:en\"=\"Comic Buster\"][\"brand:ja\"=\"\u30b3\u30df\u30c3\u30af\u30fb\u30d0\u30b9\u30bf\u30fc\"][\"brand:wikidata\"=\"Q90413129\"][\"internet_access:fee\"=\"yes\"][\"name\"=\"\u30b3\u30df\u30c3\u30af\u30fb\u30d0\u30b9\u30bf\u30fc\"][\"name:en\"=\"Comic Buster\"][\"name:ja\"=\"\u30b3\u30df\u30c3\u30af\u30fb\u30d0\u30b9\u30bf\u30fc\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('internet_cafe'),
+	title: "\u30de\u30f3\u30dc\u30fc",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"internet_cafe\"][\"brand\"=\"\u30de\u30f3\u30dc\u30fc\"][\"brand:en\"=\"Manboo\"][\"brand:ja\"=\"\u30de\u30f3\u30dc\u30fc\"][\"brand:wikidata\"=\"Q11341637\"][\"internet_access:fee\"=\"yes\"][\"name\"=\"\u30de\u30f3\u30dc\u30fc\"][\"name:en\"=\"Manboo\"][\"name:ja\"=\"\u30de\u30f3\u30dc\u30fc\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('internet_cafe'),
+	title: "\u30e1\u30c7\u30a3\u30a2\u30ab\u30d5\u30a7\u30dd\u30d1\u30a4",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"internet_cafe\"][\"brand\"=\"\u30e1\u30c7\u30a3\u30a2\u30ab\u30d5\u30a7\u30dd\u30d1\u30a4\"][\"brand:en\"=\"Media Cafe Popeye\"][\"brand:ja\"=\"\u30e1\u30c7\u30a3\u30a2\u30ab\u30d5\u30a7\u30dd\u30d1\u30a4\"][\"brand:wikidata\"=\"Q11343796\"][\"internet_access:fee\"=\"yes\"][\"name\"=\"\u30e1\u30c7\u30a3\u30a2\u30ab\u30d5\u30a7\u30dd\u30d1\u30a4\"][\"name:en\"=\"Media Cafe Popeye\"][\"name:ja\"=\"\u30e1\u30c7\u30a3\u30a2\u30ab\u30d5\u30a7\u30dd\u30d1\u30a4\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('internet_cafe'),
+	title: "\u5feb\u6d3bCLUB",
+    query: "[out:json][timeout:25];(nwr[\"alt_name\"=\"\u5feb\u6d3b\u30af\u30e9\u30d6\"][\"amenity\"=\"internet_cafe\"][\"brand\"=\"\u5feb\u6d3bCLUB\"][\"brand:en\"=\"Kaikatsu Club\"][\"brand:ja\"=\"\u5feb\u6d3bCLUB\"][\"brand:wikidata\"=\"Q88299591\"][\"internet_access:fee\"=\"yes\"][\"name\"=\"\u5feb\u6d3bCLUB\"][\"name:en\"=\"Kaikatsu Club\"][\"name:ja\"=\"\u5feb\u6d3bCLUB\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('internet_cafe'),
+	title: "\u7f51\u9c7c\u7f51\u5496",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"internet_cafe\"][\"brand\"=\"\u7f51\u9c7c\u7f51\u5496\"][\"brand:wikidata\"=\"Q97350175\"][\"name\"=\"\u7f51\u9c7c\u7f51\u5496\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('internet_cafe'),
+	title: "\u81ea\u904a\u7a7a\u9593",
+    query: "[out:json][timeout:25];(nwr[\"alt_name:en\"=\"Jiyu Kukan\"][\"amenity\"=\"internet_cafe\"][\"brand\"=\"\u81ea\u904a\u7a7a\u9593\"][\"brand:en\"=\"Space Create\"][\"brand:ja\"=\"\u81ea\u904a\u7a7a\u9593\"][\"brand:wikidata\"=\"Q88121843\"][\"internet_access:fee\"=\"yes\"][\"name\"=\"\u81ea\u904a\u7a7a\u9593\"][\"name:en\"=\"Space Create\"][\"name:ja\"=\"\u81ea\u904a\u7a7a\u9593\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('karaoke_box'),
+	title: "Neway",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"karaoke_box\"][\"brand\"=\"Neway\"][\"brand:wikidata\"=\"Q7265439\"][\"fee\"=\"yes\"][\"name\"=\"Neway\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('karaoke_box'),
+	title: "\u30ab\u30e9\u30aa\u30b1 \u307e\u306d\u304d\u306d\u3053",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"karaoke_box\"][\"brand\"=\"\u30ab\u30e9\u30aa\u30b1 \u307e\u306d\u304d\u306d\u3053\"][\"brand:en\"=\"Karaoke Manekineko\"][\"brand:ja\"=\"\u30ab\u30e9\u30aa\u30b1 \u307e\u306d\u304d\u306d\u3053\"][\"brand:wikidata\"=\"Q88326334\"][\"fee\"=\"yes\"][\"name\"=\"\u30ab\u30e9\u30aa\u30b1 \u307e\u306d\u304d\u306d\u3053\"][\"name:en\"=\"Karaoke Manekineko\"][\"name:ja\"=\"\u30ab\u30e9\u30aa\u30b1 \u307e\u306d\u304d\u306d\u3053\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('karaoke_box'),
+	title: "\u30ab\u30e9\u30aa\u30b1\u30d0\u30f3\u30d0\u30f3",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"karaoke_box\"][\"brand\"=\"\u30ab\u30e9\u30aa\u30b1\u30d0\u30f3\u30d0\u30f3\"][\"brand:en\"=\"Karaoke BanBan\"][\"brand:ja\"=\"\u30ab\u30e9\u30aa\u30b1\u30d0\u30f3\u30d0\u30f3\"][\"brand:wikidata\"=\"Q88485685\"][\"fee\"=\"yes\"][\"name\"=\"\u30ab\u30e9\u30aa\u30b1\u30d0\u30f3\u30d0\u30f3\"][\"name:en\"=\"Karaoke BanBan\"][\"name:ja\"=\"\u30ab\u30e9\u30aa\u30b1\u30d0\u30f3\u30d0\u30f3\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('karaoke_box'),
+	title: "\u30ab\u30e9\u30aa\u30b1\u9928",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"karaoke_box\"][\"brand\"=\"\u30ab\u30e9\u30aa\u30b1\u9928\"][\"brand:en\"=\"Karaoke-kan\"][\"brand:ja\"=\"\u30ab\u30e9\u30aa\u30b1\u9928\"][\"brand:wikidata\"=\"Q11294889\"][\"fee\"=\"yes\"][\"name\"=\"\u30ab\u30e9\u30aa\u30b1\u9928\"][\"name:en\"=\"Karaoke-kan\"][\"name:ja\"=\"\u30ab\u30e9\u30aa\u30b1\u9928\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('karaoke_box'),
+	title: "\u30b3\u30fc\u30c8\u30fb\u30c0\u30b8\u30e5\u30fc\u30eb",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"karaoke_box\"][\"brand\"=\"\u30b3\u30fc\u30c8\u30fb\u30c0\u30b8\u30e5\u30fc\u30eb\"][\"brand:en\"=\"Cote d'Azur\"][\"brand:ja\"=\"\u30b3\u30fc\u30c8\u30fb\u30c0\u30b8\u30e5\u30fc\u30eb\"][\"brand:wikidata\"=\"Q93542022\"][\"fee\"=\"yes\"][\"name\"=\"\u30b3\u30fc\u30c8\u30fb\u30c0\u30b8\u30e5\u30fc\u30eb\"][\"name:en\"=\"Cote d'Azur\"][\"name:ja\"=\"\u30b3\u30fc\u30c8\u30fb\u30c0\u30b8\u30e5\u30fc\u30eb\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Karaoke_COTE_D'AZUR_Ishioka_shop.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Karaoke_COTE_D'AZUR_Ishioka_shop.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('karaoke_box'),
+	title: "\u30b7\u30c0\u30c3\u30af\u30b9",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"karaoke_box\"][\"brand\"=\"\u30b7\u30c0\u30c3\u30af\u30b9\"][\"brand:en\"=\"Shidax\"][\"brand:ja\"=\"\u30b7\u30c0\u30c3\u30af\u30b9\"][\"brand:wikidata\"=\"Q7496130\"][\"fee\"=\"yes\"][\"name\"=\"\u30b7\u30c0\u30c3\u30af\u30b9\"][\"name:en\"=\"Shidax\"][\"name:ja\"=\"\u30b7\u30c0\u30c3\u30af\u30b9\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('karaoke_box'),
+	title: "\u30b8\u30e7\u30a4\u30b5\u30a6\u30f3\u30c9",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"karaoke_box\"][\"brand\"=\"\u30b8\u30e7\u30a4\u30b5\u30a6\u30f3\u30c9\"][\"brand:en\"=\"Joysound\"][\"brand:ja\"=\"\u30b8\u30e7\u30a4\u30b5\u30a6\u30f3\u30c9\"][\"brand:wikidata\"=\"Q11226033\"][\"fee\"=\"yes\"][\"name\"=\"\u30b8\u30e7\u30a4\u30b5\u30a6\u30f3\u30c9\"][\"name:en\"=\"Joysound\"][\"name:ja\"=\"\u30b8\u30e7\u30a4\u30b5\u30a6\u30f3\u30c9\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('karaoke_box'),
+	title: "\u30d3\u30c3\u30b0\u30a8\u30b3\u30fc",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"karaoke_box\"][\"brand\"=\"\u30d3\u30c3\u30b0\u30a8\u30b3\u30fc\"][\"brand:en\"=\"Big Echo\"][\"brand:ja\"=\"\u30d3\u30c3\u30b0\u30a8\u30b3\u30fc\"][\"brand:wikidata\"=\"Q15831707\"][\"fee\"=\"yes\"][\"name\"=\"\u30d3\u30c3\u30b0\u30a8\u30b3\u30fc\"][\"name:en\"=\"Big Echo\"][\"name:ja\"=\"\u30d3\u30c3\u30b0\u30a8\u30b3\u30fc\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BIG_ECHO_Chayamachi.JPG",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/BIG_ECHO_Chayamachi.JPG",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('karaoke_box'),
+	title: "\u597d\u6a02\u8feaKTV",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"karaoke_box\"][\"brand\"=\"\u597d\u6a02\u8feaKTV\"][\"brand:en\"=\"Holiday KTV\"][\"brand:wikidata\"=\"Q10942898\"][\"brand:zh\"=\"\u597d\u6a02\u8feaKTV\"][\"fee\"=\"yes\"][\"name\"=\"\u597d\u6a02\u8fea\"][\"name:en\"=\"Holiday\"][\"name:zh\"=\"\u597d\u6a02\u8fea\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('karaoke_box'),
+	title: "\u7eafK",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"karaoke_box\"][\"brand\"=\"\u7eafK\"][\"brand:en\"=\"chun K\"][\"brand:wikidata\"=\"Q131443003\"][\"brand:zh\"=\"\u7eafK\"][\"fee\"=\"yes\"][\"name\"=\"\u7eafK\"][\"name:en\"=\"chun K\"][\"name:zh\"=\"\u7eafK\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('karaoke_box'),
+	title: "\u9322\u6ac3Partyworld",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"karaoke_box\"][\"brand\"=\"\u9322\u6ac3Partyworld\"][\"brand:en\"=\"Cashbox Partyworld\"][\"brand:wikidata\"=\"Q15916325\"][\"brand:zh\"=\"\u9322\u6ac3Partyworld\"][\"fee\"=\"yes\"][\"name\"=\"\u9322\u6ac3Partyworld\"][\"name:en\"=\"Cashbox Partyworld\"][\"name:zh\"=\"\u9322\u6ac3Partyworld\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Cashbox_Partyworld_Zhonghua_New_Hall_20140121.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Cashbox_Partyworld_Zhonghua_New_Hall_20140121.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
             }
         }
     ];
