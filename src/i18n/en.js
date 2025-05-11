@@ -44,7 +44,7 @@ export const en = {
 	education: 'Education',
 	fast_food: 'Fast food',
 	food_sharing: 'Food sharing',
-			fuel: 'Fuel',
+			fuel: 'Petrol/Gas station',
 	nightclub: 'Music/Night/Sports bar',
     leisure: 'Leisure',
     food: 'Food & Drink',
