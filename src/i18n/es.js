@@ -40,7 +40,7 @@ export const es = {
 	conference_centre: 'Centro de conferencias',
 	dentist: 'Dentista',
 	doctors: 'Consultas',
-	driving_school: 'Autoescuelas'
+	driving_school: 'Autoescuelas',
 	education: 'Educación',
 	fast_food: 'Comida rápida',
 	food_sharing: 'Aprovechar comida',
