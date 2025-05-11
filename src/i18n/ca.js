@@ -35,6 +35,7 @@ export const ca = {
 	childcare: 'Cura d\'infants',
 	cinema: 'Cinemes',
 	clinic: 'Clínica',
+	college: 'Facultat',
 	education: 'Educació',
     leisure: 'Oci',
     food: 'Menjar i Beguda',

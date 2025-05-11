@@ -1,6 +1,6 @@
 import { getTranslation } from '../../i18n/index.js';
 
-export function healthOverlays() {
+export function othersOverlays() {
     return [
         {
         group: getTranslation('health'),
