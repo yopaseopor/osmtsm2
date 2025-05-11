@@ -38,6 +38,8 @@ export const es = {
 	college: 'Facultad',
 	community_centre: 'Centro comunitario',
 	conference_centre: 'Centro de conferencias',
+	dentist: 'Dentista',
+	doctors: 'Consultas',
 	education: 'Educación',
 	nightclub: 'Bar de copas/deportes/musical',
     leisure: 'Ocio',

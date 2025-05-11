@@ -38,6 +38,8 @@ export const ca = {
 	college: 'Facultat',
 	community_centre: 'Centre comunitari',
 	conference_centre: 'Centre de conferències',
+	dentist: 'Dentista',
+	doctors: 'Consultes',
 	education: 'Educació',
     leisure: 'Oci',
     food: 'Menjar i Beguda',

@@ -38,6 +38,8 @@ export const en = {
 	college: 'College',
 	community_centre: 'Community Centre',
 	conference_centre: 'Conference Centre',
+	dentist: 'Dentist',
+	doctors: 'Doctors',
 	education: 'Education',
 	nightclub: 'Music/Night/Sports bar',
     leisure: 'Leisure',
