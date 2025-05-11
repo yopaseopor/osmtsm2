@@ -36,6 +36,8 @@ export const en = {
 	cinema: 'Cinema',
 	clinic: 'Clinic',
 	college: 'College',
+	community_centre: 'Community Centre',
+	conference_centre: 'Conference Centre',
 	education: 'Education',
 	nightclub: 'Music/Night/Sports bar',
     leisure: 'Leisure',

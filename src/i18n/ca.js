@@ -36,6 +36,8 @@ export const ca = {
 	cinema: 'Cinemes',
 	clinic: 'Clínica',
 	college: 'Facultat',
+	community_centre: 'Centre comunitari',
+	conference_centre: 'Centre de conferències',
 	education: 'Educació',
     leisure: 'Oci',
     food: 'Menjar i Beguda',
