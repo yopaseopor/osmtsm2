@@ -51912,7 +51912,1986 @@ export function economyOverlays() {
             stroke: stroke
         });
         return style;
-		
+    }
+},
+{
+    group: getTranslation('payment_centre'),
+	title: "Abitab",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_centre\"][\"brand\"=\"Abitab\"][\"brand:wikidata\"=\"Q16488129\"][\"name\"=\"Abitab\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Socios-logo-abitab.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Socios-logo-abitab.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_centre'),
+	title: "Bayad Center",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_centre\"][\"brand\"=\"Bayad Center\"][\"brand:wikidata\"=\"Q120755794\"][\"name\"=\"Bayad Center\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_centre'),
+	title: "EasyPay",
+    query: "[out:json][timeout:25];(nwr[\"alt_name\"=\"Easy Pay\"][\"amenity\"=\"payment_centre\"][\"brand\"=\"EasyPay\"][\"brand:wikidata\"=\"Q110583289\"][\"name\"=\"EasyPay\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_centre'),
+	title: "eBiz",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_centre\"][\"brand\"=\"eBiz\"][\"brand:wikidata\"=\"Q120682063\"][\"bureau_de_change\"=\"yes\"][\"money_transfer\"=\"moneygram;western_union;xoom\"][\"name\"=\"eBiz\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_centre'),
+	title: "FastPay",
+    query: "[out:json][timeout:25];(nwr[\"alt_name\"=\"Fast Pay\"][\"alt_name:bg\"=\"\u0424\u0430\u0441\u0442 \u043f\u0435\u0439\"][\"alt_name:en\"=\"Fast Pay\"][\"amenity\"=\"payment_centre\"][\"brand\"=\"FastPay\"][\"brand:wikidata\"=\"Q110583280\"][\"name\"=\"FastPay\"][\"name:bg\"=\"\u0424\u0430\u0441\u0442\u043f\u0435\u0439\"][\"name:en\"=\"FastPay\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_centre'),
+	title: "Fina - Financijska agencija",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_centre\"][\"brand\"=\"Financijska agencija\"][\"brand:wikidata\"=\"Q12631015\"][\"bureau_de_change\"=\"yes\"][\"money_transfer\"=\"western_union\"][\"name\"=\"Fina\"][\"official_name\"=\"Financijska agencija\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/FINA_Logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/FINA_Logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_centre'),
+	title: "N Kolay",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_centre\"][\"brand\"=\"N Kolay\"][\"brand:wikidata\"=\"Q106802151\"][\"name\"=\"N Kolay\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_centre'),
+	title: "Pago F\u00e1cil",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_centre\"][\"brand\"=\"Pago F\u00e1cil\"][\"brand:wikidata\"=\"Q122273697\"][\"name\"=\"Pago F\u00e1cil\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_centre'),
+	title: "Rapipago",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_centre\"][\"brand\"=\"Rapipago\"][\"brand:wikidata\"=\"Q6100413\"][\"name\"=\"Rapipago\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_centre'),
+	title: "U Super Service Center",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_centre\"][\"brand\"=\"USSC\"][\"brand:wikidata\"=\"Q120679538\"][\"bureau_de_change\"=\"yes\"][\"money_transfer\"=\"moneygram;remitly;ria;uniteller;xoom;western_union\"][\"name\"=\"U Super Service Center\"][\"official_name\"=\"Universal Storefront Services Corporation\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_centre'),
+	title: "\u0415\u0434\u0438\u043d\u044b\u0439 \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u043e\u043d\u043d\u043e-\u0440\u0430\u0441\u0447\u0435\u0442\u043d\u044b\u0439 \u0446\u0435\u043d\u0442\u0440",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_centre\"][\"brand\"=\"\u0415\u0434\u0438\u043d\u044b\u0439 \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u043e\u043d\u043d\u043e-\u0440\u0430\u0441\u0447\u0435\u0442\u043d\u044b\u0439 \u0446\u0435\u043d\u0442\u0440\"][\"name\"=\"\u0415\u0434\u0438\u043d\u044b\u0439 \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u043e\u043d\u043d\u043e-\u0440\u0430\u0441\u0447\u0435\u0442\u043d\u044b\u0439 \u0446\u0435\u043d\u0442\u0440\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_terminal'),
+	title: "BMV Connect",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_terminal\"][\"brand\"=\"BMV Connect\"][\"brand:wikidata\"=\"Q115413393\"][\"name\"=\"BMV Connect\"][\"operator\"=\"Indiana Beareau of Motor Vehicles\"][\"operator:wikidata\"=\"Q115413422\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_terminal'),
+	title: "BottleDrop",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_terminal\"][\"brand\"=\"BottleDrop\"][\"brand:wikidata\"=\"Q107673127\"][\"name\"=\"BottleDrop\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_terminal'),
+	title: "BottleDrop Plus",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_terminal\"][\"brand\"=\"BottleDrop\"][\"brand:wikidata\"=\"Q107673127\"][\"name\"=\"BottleDrop Plus\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_terminal'),
+	title: "Cashterminal",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_terminal\"][\"brand\"=\"Cashterminal\"][\"brand:wikidata\"=\"Q115668697\"][\"name\"=\"Cashterminal\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_terminal'),
+	title: "City24",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_terminal\"][\"brand\"=\"City24\"][\"brand:wikidata\"=\"Q121073989\"][\"name\"=\"City24\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_terminal'),
+	title: "Coinstar",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_terminal\"][\"brand\"=\"Coinstar\"][\"brand:wikidata\"=\"Q5141641\"][\"name\"=\"Coinstar\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Coinstar_logo_2011.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Coinstar_logo_2011.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_terminal'),
+	title: "Colorado MV Express",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_terminal\"][\"brand\"=\"Colorado MV Express\"][\"brand:wikidata\"=\"Q110265726\"][\"name\"=\"Colorado MV Express\"][\"operator\"=\"Colorado Division of Motor Vehicles\"][\"operator:wikidata\"=\"Q115412989\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_terminal'),
+	title: "Cryptal Paybox",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_terminal\"][\"brand\"=\"Cryptal\"][\"brand:en\"=\"Cryptal\"][\"brand:ka\"=\"Cryptal\"][\"operator\"=\"Cryptal\"][\"operator:en\"=\"Cryptal\"][\"operator:ka\"=\"Cryptal\"][\"payment:cash\"=\"yes\"][\"payment:coins\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_terminal'),
+	title: "DMV Now",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_terminal\"][\"brand\"=\"DMV Now\"][\"brand:wikidata\"=\"Q109370939\"][\"name\"=\"DMV Now\"][\"operator\"=\"California Department of Motor Vehicles\"][\"operator:short\"=\"California DMV\"][\"operator:wikidata\"=\"Q5020431\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_terminal'),
+	title: "Easy Pay Armenia",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_terminal\"][\"brand\"=\"\u053b\u0566\u056b \u0553\u0565\u0575\"][\"brand:en\"=\"Easy Pay\"][\"brand:hy\"=\"\u053b\u0566\u056b \u0553\u0565\u0575\"][\"brand:ru\"=\"\u0418\u0437\u0438 \u041f\u0435\u0439\"][\"brand:wikidata\"=\"Q117840019\"][\"name\"=\"\u053b\u0566\u056b \u0553\u0565\u0575\"][\"name:en\"=\"Easy Pay\"][\"name:hy\"=\"\u053b\u0566\u056b \u0553\u0565\u0575\"][\"name:ru\"=\"\u0418\u0437\u0438 \u041f\u0435\u0439\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_terminal'),
+	title: "EasyPay (\u0423\u043a\u0440\u0430\u0457\u043d\u0430)",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_terminal\"][\"brand\"=\"EasyPay\"][\"brand:wikidata\"=\"Q4037884\"][\"name\"=\"EasyPay\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_easypay.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_easypay.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_terminal'),
+	title: "EZ-TAB",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_terminal\"][\"brand\"=\"EZ-TAB\"][\"brand:wikidata\"=\"Q110265735\"][\"name\"=\"EZ-TAB\"][\"operator\"=\"Wisconsin Division of Motor Vehicles\"][\"operator:wikidata\"=\"Q115413096\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_terminal'),
+	title: "Fast Shift",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_terminal\"][\"brand\"=\"\u0556\u0561\u057d\u0569 \u0547\u056b\u0586\u0569\"][\"brand:en\"=\"Fast Shift\"][\"brand:hy\"=\"\u0556\u0561\u057d\u0569 \u0547\u056b\u0586\u0569\"][\"brand:ru\"=\"\u0424\u0430\u0441\u0442 \u0428\u0438\u0444\u0442\"][\"brand:wikidata\"=\"Q118289125\"][\"name\"=\"\u0556\u0561\u057d\u0569 \u0547\u056b\u0586\u0569\"][\"name:en\"=\"Fast Shift\"][\"name:hy\"=\"\u0556\u0561\u057d\u0569 \u0547\u056b\u0586\u0569\"][\"name:ru\"=\"\u0424\u0430\u0441\u0442 \u0428\u0438\u0444\u0442\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_terminal'),
+	title: "Florida MV Express",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_terminal\"][\"brand\"=\"Florida MV Express\"][\"brand:wikidata\"=\"Q110265714\"][\"name\"=\"Florida MV Express\"][\"operator\"=\"Florida Department of Highway Safety and Motor Vehicles\"][\"operator:short\"=\"FLHSMV\"][\"operator:wikidata\"=\"Q5461320\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_terminal'),
+	title: "Georgia MV Express",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_terminal\"][\"brand\"=\"Georgia MV Express\"][\"brand:wikidata\"=\"Q115413364\"][\"name\"=\"Georgia MV Express\"][\"operator\"=\"Georgia Department of Revenue\"][\"operator:wikidata\"=\"Q5547457\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_terminal'),
+	title: "Hawaii DMV Now",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_terminal\"][\"brand\"=\"Hawaii DMV Now\"][\"brand:wikidata\"=\"Q110265704\"][\"name\"=\"Hawaii DMV Now\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_terminal'),
+	title: "Idram",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_terminal\"][\"brand\"=\"\u053b\u0564\u0580\u0561\u0574\"][\"brand:en\"=\"Idram\"][\"brand:hy\"=\"\u053b\u0564\u0580\u0561\u0574\"][\"brand:ru\"=\"\u0418\u0434\u0440\u0430\u043c\"][\"brand:wikidata\"=\"Q13052991\"][\"name\"=\"\u053b\u0564\u0580\u0561\u0574\"][\"name:en\"=\"Idram\"][\"name:hy\"=\"\u053b\u0564\u0580\u0561\u0574\"][\"name:ru\"=\"\u0418\u0434\u0440\u0430\u043c\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_terminal'),
+	title: "krasplat",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_terminal\"][\"brand\"=\"krasplat\"][\"name\"=\"krasplat\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_terminal'),
+	title: "Liberty 365 Paybox / \u10da\u10d8\u10d1\u10d4\u10e0\u10d7\u10d8 365-\u10d8\u10e1 \u10e9\u10d0\u10e1\u10d0\u10e0\u10d8\u10ea\u10ee\u10d8 \u10d0\u10de\u10d0\u10e0\u10d0\u10e2\u10d8 / \u041f\u0435\u0439\u0431\u043e\u043a\u0441 \u041b\u0438\u0431\u0435\u0440\u0442\u0438 365",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_terminal\"][\"brand\"=\"\u10da\u10d8\u10d1\u10d4\u10e0\u10d7\u10d8\"][\"brand:en\"=\"Liberty\"][\"brand:ka\"=\"\u10da\u10d8\u10d1\u10d4\u10e0\u10d7\u10d8\"][\"brand:ru\"=\"\u041b\u0438\u0431\u0435\u0440\u0442\u0438\"][\"brand:wikidata\"=\"Q6541585\"][\"operator\"=\"\u10da\u10d8\u10d1\u10d4\u10e0\u10d7\u10d8\"][\"operator:ka\"=\"\u10da\u10d8\u10d1\u10d4\u10e0\u10d7\u10d8\"][\"operator:wikidata\"=\"Q6541585\"][\"payment:cash\"=\"yes\"][\"payment:coins\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Tbilisi_Fountain.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Tbilisi_Fountain.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_terminal'),
+	title: "Michigan Self-Service Station",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_terminal\"][\"brand\"=\"Michigan Self-Service Station\"][\"brand:wikidata\"=\"Q110265731\"][\"name\"=\"Michigan Self-Service Station\"][\"operator\"=\"Michigan Secretary of State\"][\"operator:wikidata\"=\"Q16147324\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_terminal'),
+	title: "Nevada DMV Now",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_terminal\"][\"brand\"=\"Nevada DMV Now\"][\"brand:wikidata\"=\"Q110265699\"][\"name\"=\"Nevada DMV Now\"][\"operator\"=\"Nevada Department of Motor Vehicles\"][\"operator:short\"=\"Nevada DMV\"][\"operator:wikidata\"=\"Q16920922\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_terminal'),
+	title: "New Mexico MVD Direct",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_terminal\"][\"brand\"=\"New Mexico MVD Direct\"][\"brand:wikidata\"=\"Q115413442\"][\"name\"=\"New Mexico MVD Direct\"][\"operator\"=\"New Mexico Motor Vehicle Division\"][\"operator:short\"=\"MVD New Mexico\"][\"operator:wikidata\"=\"Q16982577\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_terminal'),
+	title: "New York State DMV Now",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_terminal\"][\"brand\"=\"New York State DMV Now\"][\"brand:wikidata\"=\"Q115416989\"][\"name\"=\"New York State DMV Now\"][\"operator\"=\"New York State Department of Motor Vehicles\"][\"operator:short\"=\"NYSDMV\"][\"operator:wikidata\"=\"Q17109616\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_terminal'),
+	title: "North Dakota MV Express",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_terminal\"][\"brand\"=\"North Dakota MV Express\"][\"brand:wikidata\"=\"Q115417027\"][\"name\"=\"North Dakota MV Express\"][\"operator\"=\"North Dakota Department of Transportation\"][\"operator:short\"=\"NDDOT\"][\"operator:wikidata\"=\"Q5569030\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_terminal'),
+	title: "Ohio BMV Express",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_terminal\"][\"brand\"=\"Ohio BMV Express\"][\"brand:wikidata\"=\"Q115417055\"][\"name\"=\"Ohio BMV Express\"][\"operator\"=\"Ohio Bureau of Motor Vehicles\"][\"operator:short\"=\"Ohio BMV\"][\"operator:wikidata\"=\"Q74329867\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_terminal'),
+	title: "OTP Bank (\u0423\u043a\u0440\u0430\u0457\u043d\u0430)",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_terminal\"][\"brand\"=\"OTP Bank\"][\"brand:en\"=\"OTP Bank\"][\"brand:uk\"=\"\u041e\u0422\u041f \u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q16688676\"][\"name\"=\"OTP Bank\"][\"name:en\"=\"OTP Bank\"][\"name:uk\"=\"\u041e\u0422\u041f \u0411\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Otp_bank_Logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Otp_bank_Logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_terminal'),
+	title: "Paynet",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_terminal\"][\"brand\"=\"Paynet\"][\"brand:wikidata\"=\"Q65284105\"][\"name\"=\"Paynet\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_terminal'),
+	title: "Qiwi",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_terminal\"][\"brand\"=\"Qiwi\"][\"brand:wikidata\"=\"Q4047736\"][\"name\"=\"Qiwi\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/QIWI_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/QIWI_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_terminal'),
+	title: "South Dakota DMV Now",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_terminal\"][\"brand\"=\"South Dakota DMV Now\"][\"brand:wikidata\"=\"Q115417103\"][\"name\"=\"South Dakota DMV Now\"][\"operator\"=\"South Dakota Motor Vehicle Division\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_terminal'),
+	title: "Telcell Armenia",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_terminal\"][\"brand\"=\"\u0539\u0565\u056c\u054d\u0565\u056c\"][\"brand:en\"=\"Telcell\"][\"brand:hy\"=\"\u0539\u0565\u056c\u054d\u0565\u056c\"][\"brand:ru\"=\"\u0422\u0435\u043b\u0441\u0435\u043b\u043b\"][\"brand:wikidata\"=\"Q117840236\"][\"name\"=\"\u0539\u0565\u056c\u054d\u0565\u056c\"][\"name:en\"=\"Telcell\"][\"name:hy\"=\"\u0539\u0565\u056c\u054d\u0565\u056c\"][\"name:ru\"=\"\u0422\u0435\u043b\u0441\u0435\u043b\u043b\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_terminal'),
+	title: "Ukrsibbank",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_terminal\"][\"brand\"=\"Ukrsibbank\"][\"brand:en\"=\"Ukrsibbank\"][\"brand:uk\"=\"\u0423\u043a\u0440\u0421\u0438\u0431\u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q1976290\"][\"name\"=\"Ukrsibbank\"][\"name:en\"=\"Ukrsibbank\"][\"name:uk\"=\"\u0423\u043a\u0440\u0421\u0438\u0431\u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Ukrsibbank_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Ukrsibbank_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_terminal'),
+	title: "West Virginia DMV Now",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_terminal\"][\"brand\"=\"West Virginia DMV Now\"][\"brand:wikidata\"=\"Q115417174\"][\"name\"=\"West Virginia DMV Now\"][\"operator\"=\"West Virginia Division of Motor Vehicles\"][\"operator:wikidata\"=\"Q115417228\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_terminal'),
+	title: "\u0410\u043a \u0411\u0430\u0440\u0441 \u0411\u0430\u043d\u043a",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_terminal\"][\"brand\"=\"\u0410\u043a \u0411\u0430\u0440\u0441 \u0411\u0430\u043d\u043a\"][\"name\"=\"\u0410\u043a \u0411\u0430\u0440\u0441 \u0411\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_terminal'),
+	title: "\u041e\u0449\u0430\u0434\u0431\u0430\u043d\u043a",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_terminal\"][\"brand\"=\"\u041e\u0449\u0430\u0434\u0431\u0430\u043d\u043a\"][\"brand:en\"=\"Oschadbank\"][\"brand:uk\"=\"\u041e\u0449\u0430\u0434\u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q4340839\"][\"name\"=\"\u041e\u0449\u0430\u0434\u0431\u0430\u043d\u043a\"][\"name:en\"=\"Oschadbank\"][\"name:uk\"=\"\u041e\u0449\u0430\u0434\u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Oschadbank.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Oschadbank.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_terminal'),
+	title: "\u041f\u0440\u0438\u0432\u0430\u0442\u0411\u0430\u043d\u043a",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_terminal\"][\"brand\"=\"\u041f\u0440\u0438\u0432\u0430\u0442\u0411\u0430\u043d\u043a\"][\"brand:en\"=\"PrivatBank\"][\"brand:uk\"=\"\u041f\u0440\u0438\u0432\u0430\u0442\u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q1515015\"][\"name\"=\"\u041f\u0440\u0438\u0432\u0430\u0442\u0411\u0430\u043d\u043a\"][\"name:en\"=\"PrivatBank\"][\"name:uk\"=\"\u041f\u0440\u0438\u0432\u0430\u0442\u0411\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/\u041f\u0440\u0438\u0432\u0430\u0442\u0411\u0430\u043d\u043a.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/\u041f\u0440\u0438\u0432\u0430\u0442\u0411\u0430\u043d\u043a.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_terminal'),
+	title: "\u041f\u0423\u041c\u0411",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_terminal\"][\"brand\"=\"\u041f\u0423\u041c\u0411\"][\"brand:en\"=\"First Ukrainian International Bank\"][\"brand:uk\"=\"\u041f\u0423\u041c\u0411\"][\"brand:wikidata\"=\"Q4341156\"][\"name\"=\"\u041f\u0423\u041c\u0411\"][\"name:en\"=\"First Ukrainian International Bank\"][\"name:uk\"=\"\u041f\u0423\u041c\u0411\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Pumb_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Pumb_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_terminal'),
+	title: "\u0421\u0431\u0435\u0440\u0431\u0430\u043d\u043a",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_terminal\"][\"brand\"=\"\u0421\u0431\u0435\u0440\u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q205012\"][\"name\"=\"\u0421\u0431\u0435\u0440\u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Sberbank_Logo_2020.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Sberbank_Logo_2020.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_terminal'),
+	title: "\u0422\u0430\u0441\u043a\u043e\u043c\u0431\u0430\u043d\u043a",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_terminal\"][\"brand\"=\"\u0422\u0430\u0441\u043a\u043e\u043c\u0431\u0430\u043d\u043a\"][\"brand:en\"=\"Tascombank\"][\"brand:uk\"=\"\u0422\u0430\u0441\u043a\u043e\u043c\u0431\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q28669246\"][\"name\"=\"\u0422\u0430\u0441\u043a\u043e\u043c\u0431\u0430\u043d\u043a\"][\"name:en\"=\"Tascombank\"][\"name:uk\"=\"\u0422\u0430\u0441\u043a\u043e\u043c\u0431\u0430\u043d\u043a\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_terminal'),
+	title: "\u042d\u043b\u0435\u043a\u0441\u043d\u0435\u0442",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_terminal\"][\"brand\"=\"\u042d\u043b\u0435\u043a\u0441\u043d\u0435\u0442\"][\"brand:wikidata\"=\"Q4530795\"][\"name\"=\"\u042d\u043b\u0435\u043a\u0441\u043d\u0435\u0442\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_terminal'),
+	title: "\u10d7\u10d8\u10d1\u10d8\u10e1\u10d8 \u10d1\u10d0\u10dc\u10d9\u10d8\u10e1 \u10e9\u10d0\u10e1\u10d0\u10e0\u10d8\u10ea\u10ee\u10d8 \u10d0\u10de\u10d0\u10e0\u10d0\u10e2\u10d8",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_terminal\"][\"brand\"=\"\u10d7\u10d8\u10d1\u10d8\u10e1\u10d8 \u10d1\u10d0\u10dc\u10d9\u10d8\"][\"brand:en\"=\"TBC Bank\"][\"brand:ka\"=\"\u10d7\u10d8\u10d1\u10d8\u10e1\u10d8 \u10d1\u10d0\u10dc\u10d9\u10d8\"][\"brand:ru\"=\"\u0422\u0438\u0411\u0438\u0421\u0438 \u0411\u0430\u043d\u043a\"][\"brand:wikidata\"=\"Q2620975\"][\"operator\"=\"\u10d7\u10d8\u10d1\u10d8\u10e1\u10d8 \u10d1\u10d0\u10dc\u10d9\u10d8\"][\"operator:ka\"=\"\u10d7\u10d8\u10d1\u10d8\u10e1\u10d8 \u10d1\u10d0\u10dc\u10d9\u10d8\"][\"operator:wikidata\"=\"Q2620975\"][\"payment:cash\"=\"yes\"][\"payment:cash:EUR\"=\"yes\"][\"payment:cash:USD\"=\"yes\"][\"payment:coins\"=\"no\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/TBC_Bank_building.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/TBC_Bank_building.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_terminal'),
+	title: "\u10d9\u10e0\u10d4\u10d3\u10dd \u10d1\u10d0\u10dc\u10d9\u10d8\u10e1 \u10e9\u10d0\u10e1\u10d0\u10e0\u10d8\u10ea\u10ee\u10d8 \u10d0\u10de\u10d0\u10e0\u10d0\u10e2\u10d8",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_terminal\"][\"brand\"=\"\u10d9\u10e0\u10d4\u10d3\u10dd \u10d1\u10d0\u10dc\u10d9\u10d8\"][\"brand:en\"=\"Credo Bank\"][\"brand:ka\"=\"\u10d9\u10e0\u10d4\u10d3\u10dd \u10d1\u10d0\u10dc\u10d9\u10d8\"][\"brand:ru\"=\"\u041a\u0440\u0435\u0434\u043e \u0411\u0430\u043d\u043a\"][\"operator\"=\"\u10d9\u10e0\u10d4\u10d3\u10dd \u10d1\u10d0\u10dc\u10d9\u10d8\"][\"operator:ka\"=\"\u10d9\u10e0\u10d4\u10d3\u10dd \u10d1\u10d0\u10dc\u10d9\u10d8\"][\"operator:wikidata\"=\"Q131470024\"][\"payment:cash\"=\"yes\"][\"payment:coins\"=\"no\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_terminal'),
+	title: "\u10e1\u10d0\u10e5\u10d0\u10e0\u10d7\u10d5\u10d4\u10da\u10dd\u10e1 \u10d1\u10d0\u10dc\u10d9\u10d8\u10e1 \u10e9\u10d0\u10e1\u10d0\u10e0\u10d8\u10ea\u10ee\u10d8 \u10d0\u10de\u10d0\u10e0\u10d0\u10e2\u10d8",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_terminal\"][\"brand\"=\"\u10e1\u10d0\u10e5\u10d0\u10e0\u10d7\u10d5\u10d4\u10da\u10dd\u10e1 \u10d1\u10d0\u10dc\u10d9\u10d8\"][\"brand:en\"=\"Bank of Georgia\"][\"brand:ka\"=\"\u10e1\u10d0\u10e5\u10d0\u10e0\u10d7\u10d5\u10d4\u10da\u10dd\u10e1 \u10d1\u10d0\u10dc\u10d9\u10d8\"][\"brand:ru\"=\"\u0411\u0430\u043d\u043a \u0413\u0440\u0443\u0437\u0438\u0438\"][\"brand:tr\"=\"G\u00fcrcistan Bankas\u0131\"][\"brand:wikidata\"=\"Q2469733\"][\"operator\"=\"\u10e1\u10d0\u10e5\u10d0\u10e0\u10d7\u10d5\u10d4\u10da\u10dd\u10e1 \u10d1\u10d0\u10dc\u10d9\u10d8\"][\"operator:ka\"=\"\u10e1\u10d0\u10e5\u10d0\u10e0\u10d7\u10d5\u10d4\u10da\u10dd\u10e1 \u10d1\u10d0\u10dc\u10d9\u10d8\"][\"operator:wikidata\"=\"Q2469733\"][\"payment:cash\"=\"yes\"][\"payment:cash:EUR\"=\"yes\"][\"payment:cash:USD\"=\"yes\"][\"payment:coins\"=\"no\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_terminal'),
+	title: "\u10e4\u10d4\u10d8\u10d1\u10dd\u10e5\u10e1\u10d8",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_terminal\"][\"brand\"=\"\u10e4\u10d4\u10d8\u10d1\u10dd\u10e5\u10e1\u10d8\"][\"brand:en\"=\"PayBox\"][\"brand:ka\"=\"\u10e4\u10d4\u10d8\u10d1\u10dd\u10e5\u10e1\u10d8\"][\"brand:wikidata\"=\"Q132183551\"][\"operator\"=\"\u10dd\u10de\u10de\u10d0\"][\"operator:en\"=\"Oppa\"][\"operator:ka\"=\"\u10dd\u10de\u10de\u10d0\"][\"payment:cash\"=\"yes\"][\"payment:coins\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('payment_terminal'),
+	title: "\u0643\u0634\u0643",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"payment_terminal\"][\"brand\"=\"\u0643\u0634\u0643\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;		
             }
         }
     ];

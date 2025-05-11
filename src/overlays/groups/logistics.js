@@ -1,47 +1,11 @@
 import { getTranslation } from '../../i18n/index.js';
 
-export function educationOverlays() {
+export function logisticsOverlays() {
     return [
         {
-        group: getTranslation('education'),
-        title: getTranslation('schools'),
-        query: "[out:json][timeout:25];(nwr[\"amenity\"=\"school\"]({{bbox}});node(w););out meta;",
-        iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/School_icon.svg",
-        iconStyle: 'background-color:rgba(255,255,255,0.4)',
-        style: function (feature) {
-            var key_regex = /^name$/;
-            var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name";
-            var name = feature.get(name_key) || '';
-            var fill = new ol.style.Fill({
-                color: 'rgba(255,165,0,0.4)'
-            });
-            var stroke = new ol.style.Stroke({
-                color: 'rgba(255,165,0,1)',
-                width: 1
-            });
-            var style = new ol.style.Style({
-                image: new ol.style.Icon({
-                    src: "https://commons.wikimedia.org/wiki/Special:FilePath/School_icon.svg",
-                    scale: 0.30
-                }),
-                text: new ol.style.Text({
-                    text: name,
-                    offsetX: 7,
-                    offsetY: -12,
-                    fill: new ol.style.Fill({
-                        color: 'rgba(0,0,0,1)'
-                    }),
-                }),
-                fill: fill,
-                stroke: stroke
-            });
-            return style;
-    }
-},
-{
-    group: getTranslation('childcare'),
-    title: "Anganvady",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"childcare\"][\"brand\"=\"Anganvady\"][\"name\"=\"Anganvady\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "5post",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"5post\"][\"name\"=\"5post\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -75,10 +39,10 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('childcare'),
-    title: "Anganwadi",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"childcare\"][\"brand\"=\"Anganwadi\"][\"brand:en\"=\"Anganwadi\"][\"brand:hi\"=\"\u0906\u0901\u0917\u0928\u0935\u093e\u0921\u0940\"][\"brand:pa\"=\"\u0a06\u0a02\u0a17\u0a23\u0a35\u0a3e\u0a5c\u0a40\"][\"brand:pnb\"=\"\u0622\u0646\u06af\u0646 \u0648\u0627\u0691\u06cc\"][\"brand:ur\"=\"\u0622\u0646\u06af\u0646 \u0648\u0627\u0691\u06cc\"][\"brand:wikidata\"=\"Q16251231\"][\"name\"=\"Anganwadi\"][\"name:en\"=\"Anganwadi\"][\"name:hi\"=\"\u0906\u0901\u0917\u0928\u0935\u093e\u0921\u0940\"][\"name:pa\"=\"\u0a06\u0a02\u0a17\u0a23\u0a35\u0a3e\u0a5c\u0a40\"][\"name:pnb\"=\"\u0622\u0646\u06af\u0646 \u0648\u0627\u0691\u06cc\"][\"name:ur\"=\"\u0622\u0646\u06af\u0646 \u0648\u0627\u0691\u06cc\"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Anganwadi_Centre_-_Budhibili_-_Dandadhar_Road_-_Dhenkanal_2018-01-25_9601.JPG",
+    group: getTranslation('parcel_locker'),
+	title: "Allegro One Box",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Allegro One Box\"][\"brand:wikidata\"=\"Q110738715\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/AllegroOne.png",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -93,7 +57,7 @@ export function educationOverlays() {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Anganwadi_Centre_-_Budhibili_-_Dandadhar_Road_-_Dhenkanal_2018-01-25_9601.JPG",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/AllegroOne.png",
                 scale:0.30
             }),
             text: new ol.style.Text({
@@ -111,45 +75,9 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('childcare'),
-    title: "Arbeiterwohlfahrt",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"childcare\"][\"brand\"=\"Arbeiterwohlfahrt\"][\"brand:wikidata\"=\"Q627256\"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Awo-logo-08.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
-    style: function (feature) {
-        var key_regex = /^name$/
-        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-        var name = feature.get(name_key) || '';
-        var fill = new ol.style.Fill({
-            color: 'rgba(255,0,0,0.4)'
-        });
-        var stroke = new ol.style.Stroke({
-            color: 'rgba(255,0,0,1)',
-            width: 1
-        });
-        var style = new ol.style.Style({
-            image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Awo-logo-08.svg",
-                scale:0.30
-            }),
-            text: new ol.style.Text({
-                text: name,
-                offsetX : 7,
-                offsetY : -12,
-                fill: new ol.style.Fill({
-                    color: 'rgba(0,0,0,1)'
-                }),
-            }),
-            fill: fill,
-            stroke: stroke
-        });
-        return style;
-    }
-},
-{
-    group: getTranslation('childcare'),
-    title: "Busy Bees",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"childcare\"][\"brand\"=\"Busy Bees\"][\"brand:wikidata\"=\"Q28134563\"][\"name\"=\"Busy Bees\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "AlzaBox",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"AlzaBox\"][\"brand:wikidata\"=\"Q115254158\"][\"operator\"=\"Alza\"][\"operator:wikidata\"=\"Q10786832\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -183,9 +111,9 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('childcare'),
-    title: "CEN-CINAI",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"childcare\"][\"brand\"=\"CEN-CINAI\"][\"name\"=\"CEN-CINAI\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "Amazon Hub Locker",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Amazon Hub\"][\"brand:wikidata\"=\"Q100274430\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -219,45 +147,9 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('childcare'),
-    title: "Deutsches Rotes Kreuz",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"childcare\"][\"brand\"=\"Deutsches Rotes Kreuz\"][\"brand:wikidata\"=\"Q694104\"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/DRK-Logo_rund_RGB.jpg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
-    style: function (feature) {
-        var key_regex = /^name$/
-        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-        var name = feature.get(name_key) || '';
-        var fill = new ol.style.Fill({
-            color: 'rgba(255,0,0,0.4)'
-        });
-        var stroke = new ol.style.Stroke({
-            color: 'rgba(255,0,0,1)',
-            width: 1
-        });
-        var style = new ol.style.Style({
-            image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/DRK-Logo_rund_RGB.jpg",
-                scale:0.30
-            }),
-            text: new ol.style.Text({
-                text: name,
-                offsetX : 7,
-                offsetY : -12,
-                fill: new ol.style.Fill({
-                    color: 'rgba(0,0,0,1)'
-                }),
-            }),
-            fill: fill,
-            stroke: stroke
-        });
-        return style;
-    }
-},
-{
-    group: getTranslation('childcare'),
-    title: "Kidango",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"childcare\"][\"brand\"=\"Kidango\"][\"brand:wikidata\"=\"Q105378193\"][\"name\"=\"Kidango\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "Amazon Hub \u30ed\u30c3\u30ab\u30fc",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Amazon Hub \u30ed\u30c3\u30ab\u30fc\"][\"brand:en\"=\"Amazon Hub Locker\"][\"brand:ja\"=\"Amazon Hub \u30ed\u30c3\u30ab\u30fc\"][\"brand:wikidata\"=\"Q100274430\"][\"name\"=\"Amazon Hub \u30ed\u30c3\u30ab\u30fc\"][\"name:en\"=\"Amazon Hub Locker\"][\"name:ja\"=\"Amazon Hub \u30ed\u30c3\u30ab\u30fc\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -291,9 +183,45 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('childcare'),
-    title: "Kids 'R' Kids",
-    query: "[out:json][timeout:25];(nwr[\"after_school\"=\"yes\"][\"amenity\"=\"childcare\"][\"brand\"=\"Kids 'R' Kids\"][\"brand:wikidata\"=\"Q65560342\"][\"grades\"=\"PK\"][\"name\"=\"Kids 'R' Kids\"][\"nursery\"=\"yes\"][\"official_name\"=\"Kids 'R' Kids Learning Academies\"][\"preschool\"=\"yes\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "Amazon Locker",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Amazon Locker\"][\"brand:wikidata\"=\"Q16974764\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Amazon_locker_logotype.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Amazon_locker_logotype.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('parcel_locker'),
+	title: "Appkomat InPost",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Appkomat InPost\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -327,9 +255,81 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('childcare'),
-    title: "Merryhill Preschool",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"childcare\"][\"brand\"=\"Merryhill Preschool\"][\"brand:wikidata\"=\"Q6820493\"][\"name\"=\"Merryhill Preschool\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "Australia Post Parcel Locker",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Australia Post\"][\"brand:wikidata\"=\"Q1142936\"][\"name\"=\"Australia Post Parcel Locker\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Australia_Post.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Australia_Post.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('parcel_locker'),
+	title: "automat przesy\u0142kowy AliExpress",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"AliExpress\"][\"brand:wikidata\"=\"Q29904317\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/AliExpress_2024.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/AliExpress_2024.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('parcel_locker'),
+	title: "Bal\u00edkoBOX",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Bal\u00edkoBOX\"][\"brand:wikidata\"=\"Q131136953\"][\"name\"=\"Bal\u00edkoBOX\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -363,9 +363,9 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('childcare'),
-    title: "N. Family Club",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"childcare\"][\"brand\"=\"N. Family Club\"][\"brand:wikidata\"=\"Q123476376\"][\"name\"=\"N. Family Club\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "bal\u00edkovo box",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"bal\u00edkovo box\"][\"brand:wikidata\"=\"Q132188077\"][\"name\"=\"bal\u00edkovo box\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -399,45 +399,9 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('childcare'),
-    title: "YMCA Child Care",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"childcare\"][\"brand\"=\"YMCA\"][\"brand:wikidata\"=\"Q157169\"][\"name\"=\"YMCA Child Care\"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/World_YMCA_logo.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
-    style: function (feature) {
-        var key_regex = /^name$/
-        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-        var name = feature.get(name_key) || '';
-        var fill = new ol.style.Fill({
-            color: 'rgba(255,0,0,0.4)'
-        });
-        var stroke = new ol.style.Stroke({
-            color: 'rgba(255,0,0,1)',
-            width: 1
-        });
-        var style = new ol.style.Style({
-            image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/World_YMCA_logo.svg",
-                scale:0.30
-            }),
-            text: new ol.style.Text({
-                text: name,
-                offsetX : 7,
-                offsetY : -12,
-                fill: new ol.style.Fill({
-                    color: 'rgba(0,0,0,1)'
-                }),
-            }),
-            fill: fill,
-            stroke: stroke
-        });
-        return style;
-    }
-},
-{
-    group: getTranslation('childcare'),
-    title: "\u0411\u044d\u0431\u0438-\u043a\u043b\u0443\u0431",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"childcare\"][\"brand\"=\"\u0411\u044d\u0431\u0438-\u043a\u043b\u0443\u0431\"][\"brand:en\"=\"Baby-Club\"][\"brand:ru\"=\"\u0411\u044d\u0431\u0438-\u043a\u043b\u0443\u0431\"][\"name\"=\"\u0411\u044d\u0431\u0438-\u043a\u043b\u0443\u0431\"][\"name:en\"=\"Baby-Club\"][\"name:ru\"=\"\u0411\u044d\u0431\u0438-\u043a\u043b\u0443\u0431\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "Box Now (Hrvatska)",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Box Now\"][\"brand:wikidata\"=\"Q117195375\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -471,9 +435,9 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('childcare'),
-    title: "\u30b0\u30ed\u30fc\u30d0\u30eb\u30ad\u30c3\u30ba",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"childcare\"][\"brand\"=\"\u30b0\u30ed\u30fc\u30d0\u30eb\u30ad\u30c3\u30ba\"][\"brand:en\"=\"Global Kids\"][\"brand:ja\"=\"\u30b0\u30ed\u30fc\u30d0\u30eb\u30ad\u30c3\u30ba\"][\"brand:wikidata\"=\"Q91950777\"][\"name\"=\"\u30b0\u30ed\u30fc\u30d0\u30eb\u30ad\u30c3\u30ba\"][\"name:en\"=\"Global Kids\"][\"name:ja\"=\"\u30b0\u30ed\u30fc\u30d0\u30eb\u30ad\u30c3\u30ba\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "Box Now (\u0395\u03bb\u03bb\u03ac\u03b4\u03b1)",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Box Now\"][\"brand:wikidata\"=\"Q117195376\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -507,117 +471,9 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('childcare'),
-    title: "\u3061\u3073\u3063\u3053\u30e9\u30f3\u30c9",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"childcare\"][\"brand\"=\"\u3061\u3073\u3063\u3053\u30e9\u30f3\u30c9\"][\"brand:en\"=\"Chibikko Land\"][\"brand:ja\"=\"\u3061\u3073\u3063\u3053\u30e9\u30f3\u30c9\"][\"brand:wikidata\"=\"Q91948998\"][\"name\"=\"\u3061\u3073\u3063\u3053\u30e9\u30f3\u30c9\"][\"name:en\"=\"Chibikko Land\"][\"name:ja\"=\"\u3061\u3073\u3063\u3053\u30e9\u30f3\u30c9\"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Chibikko_Land_logo.png",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
-    style: function (feature) {
-        var key_regex = /^name$/
-        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-        var name = feature.get(name_key) || '';
-        var fill = new ol.style.Fill({
-            color: 'rgba(255,0,0,0.4)'
-        });
-        var stroke = new ol.style.Stroke({
-            color: 'rgba(255,0,0,1)',
-            width: 1
-        });
-        var style = new ol.style.Style({
-            image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Chibikko_Land_logo.png",
-                scale:0.30
-            }),
-            text: new ol.style.Text({
-                text: name,
-                offsetX : 7,
-                offsetY : -12,
-                fill: new ol.style.Fill({
-                    color: 'rgba(0,0,0,1)'
-                }),
-            }),
-            fill: fill,
-            stroke: stroke
-        });
-        return style;
-    }
-},
-{
-    group: getTranslation('childcare'),
-    title: "\u30dd\u30dd\u30e9\u30fc",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"childcare\"][\"brand\"=\"\u30dd\u30dd\u30e9\u30fc\"][\"brand:en\"=\"Popolar\"][\"brand:ja\"=\"\u30dd\u30dd\u30e9\u30fc\"][\"brand:wikidata\"=\"Q91945087\"][\"name\"=\"\u30dd\u30dd\u30e9\u30fc\"][\"name:en\"=\"Popolar\"][\"name:ja\"=\"\u30dd\u30dd\u30e9\u30fc\"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Popolar_logo.png",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
-    style: function (feature) {
-        var key_regex = /^name$/
-        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-        var name = feature.get(name_key) || '';
-        var fill = new ol.style.Fill({
-            color: 'rgba(255,0,0,0.4)'
-        });
-        var stroke = new ol.style.Stroke({
-            color: 'rgba(255,0,0,1)',
-            width: 1
-        });
-        var style = new ol.style.Style({
-            image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Popolar_logo.png",
-                scale:0.30
-            }),
-            text: new ol.style.Text({
-                text: name,
-                offsetX : 7,
-                offsetY : -12,
-                fill: new ol.style.Fill({
-                    color: 'rgba(0,0,0,1)'
-                }),
-            }),
-            fill: fill,
-            stroke: stroke
-        });
-        return style;
-    }
-},
-{
-    group: getTranslation('college'),
-    title: "Akademie Deutsche POP",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"college\"][\"brand\"=\"Akademie Deutsche POP\"][\"brand:wikidata\"=\"Q413887\"][\"name\"=\"Akademie Deutsche POP\"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/DPOP_Logo.jpg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
-    style: function (feature) {
-        var key_regex = /^name$/
-        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-        var name = feature.get(name_key) || '';
-        var fill = new ol.style.Fill({
-            color: 'rgba(255,0,0,0.4)'
-        });
-        var stroke = new ol.style.Stroke({
-            color: 'rgba(255,0,0,1)',
-            width: 1
-        });
-        var style = new ol.style.Style({
-            image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/DPOP_Logo.jpg",
-                scale:0.30
-            }),
-            text: new ol.style.Text({
-                text: name,
-                offsetX : 7,
-                offsetY : -12,
-                fill: new ol.style.Fill({
-                    color: 'rgba(0,0,0,1)'
-                }),
-            }),
-            fill: fill,
-            stroke: stroke
-        });
-        return style;
-    }
-},
-{
-    group: getTranslation('college'),
-    title: "ComCave",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"college\"][\"brand\"=\"ComCave\"][\"brand:wikidata\"=\"Q121503226\"][\"name\"=\"ComCave\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "Box Now (\u0411\u044a\u043b\u0433\u0430\u0440\u0438\u044f)",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Box Now\"][\"brand:wikidata\"=\"Q117195372\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -651,10 +507,10 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('college'),
-    title: "SAE Institute",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"college\"][\"brand\"=\"SAE Institute\"][\"brand:wikidata\"=\"Q201438\"][\"name\"=\"SAE Institute\"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/SAE_Institute_Black_Logo.jpg",
+    group: getTranslation('parcel_locker'),
+	title: "bpost",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"bpost\"][\"brand:wikidata\"=\"Q740553\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bpost_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -669,7 +525,7 @@ export function educationOverlays() {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/SAE_Institute_Black_Logo.jpg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bpost_logo.svg",
                 scale:0.30
             }),
             text: new ol.style.Text({
@@ -687,81 +543,9 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('kindergarten'),
-	title: "Arbeiter-Samariter-Bund (Deutschland)",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"kindergarten\"][\"brand\"=\"Arbeiter-Samariter-Bund\"][\"brand:wikidata\"=\"Q627071\"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Arbeiter-Samariter-Bund_Deutschland_logo.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
-    style: function (feature) {
-        var key_regex = /^name$/
-        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-        var name = feature.get(name_key) || '';
-        var fill = new ol.style.Fill({
-            color: 'rgba(255,0,0,0.4)'
-        });
-        var stroke = new ol.style.Stroke({
-            color: 'rgba(255,0,0,1)',
-            width: 1
-        });
-        var style = new ol.style.Style({
-            image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Arbeiter-Samariter-Bund_Deutschland_logo.svg",
-                scale:0.30
-            }),
-            text: new ol.style.Text({
-                text: name,
-                offsetX : 7,
-                offsetY : -12,
-                fill: new ol.style.Fill({
-                    color: 'rgba(0,0,0,1)'
-                }),
-            }),
-            fill: fill,
-            stroke: stroke
-        });
-        return style;
-    }
-},
-{
-    group: getTranslation('kindergarten'),
-	title: "Arbeiterwohlfahrt",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"kindergarten\"][\"brand\"=\"Arbeiterwohlfahrt\"][\"brand:wikidata\"=\"Q627256\"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Awo-logo-08.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
-    style: function (feature) {
-        var key_regex = /^name$/
-        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-        var name = feature.get(name_key) || '';
-        var fill = new ol.style.Fill({
-            color: 'rgba(255,0,0,0.4)'
-        });
-        var stroke = new ol.style.Stroke({
-            color: 'rgba(255,0,0,1)',
-            width: 1
-        });
-        var style = new ol.style.Style({
-            image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Awo-logo-08.svg",
-                scale:0.30
-            }),
-            text: new ol.style.Text({
-                text: name,
-                offsetX : 7,
-                offsetY : -12,
-                fill: new ol.style.Fill({
-                    color: 'rgba(0,0,0,1)'
-                }),
-            }),
-            fill: fill,
-            stroke: stroke
-        });
-        return style;
-    }
-},
-{
-    group: getTranslation('kindergarten'),
-	title: "Auckland Kindergarten Association",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"kindergarten\"][\"brand\"=\"Auckland Kindergarten Association\"][\"brand:wikidata\"=\"Q116824744\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "Budbee",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Budbee\"][\"brand:wikidata\"=\"Q123582538\"][\"name\"=\"Budbee\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -795,45 +579,9 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('kindergarten'),
-	title: "Babilou",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"kindergarten\"][\"brand\"=\"Babilou\"][\"brand:wikidata\"=\"Q16530800\"][\"name\"=\"Babilou\"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Babilou_logo.jpg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
-    style: function (feature) {
-        var key_regex = /^name$/
-        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-        var name = feature.get(name_key) || '';
-        var fill = new ol.style.Fill({
-            color: 'rgba(255,0,0,0.4)'
-        });
-        var stroke = new ol.style.Stroke({
-            color: 'rgba(255,0,0,1)',
-            width: 1
-        });
-        var style = new ol.style.Style({
-            image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Babilou_logo.jpg",
-                scale:0.30
-            }),
-            text: new ol.style.Text({
-                text: name,
-                offsetX : 7,
-                offsetY : -12,
-                fill: new ol.style.Fill({
-                    color: 'rgba(0,0,0,1)'
-                }),
-            }),
-            fill: fill,
-            stroke: stroke
-        });
-        return style;
-    }
-},
-{
-    group: getTranslation('kindergarten'),
-	title: "BestStart Educare",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"kindergarten\"][\"brand\"=\"BestStart Educare\"][\"brand:wikidata\"=\"Q115565848\"][\"name\"=\"BestStart Educare\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "Cainiao",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Cainiao\"][\"name\"=\"Cainiao\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -867,10 +615,10 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('kindergarten'),
-	title: "Bright Horizons",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"kindergarten\"][\"brand\"=\"Bright Horizons\"][\"brand:wikidata\"=\"Q4967421\"][\"fee\"=\"yes\"][\"isced:level\"=\"0\"][\"name\"=\"Bright Horizons\"][\"nursery\"=\"yes\"][\"preschool\"=\"yes\"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bright_Horizons_539a_W29_jeh.jpg",
+    group: getTranslation('parcel_locker'),
+	title: "CityPaq",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"CityPaq\"][\"brand:wikidata\"=\"Q110748819\"][\"name\"=\"CityPaq\"][\"operator\"=\"Correos\"][\"operator:wikidata\"=\"Q776605\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Cajeros_autom\u00e1ticos_de_paqueter\u00eda_en_los_mercados_de_Madrid_(01).jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -885,7 +633,7 @@ export function educationOverlays() {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bright_Horizons_539a_W29_jeh.jpg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Cajeros_autom\u00e1ticos_de_paqueter\u00eda_en_los_mercados_de_Madrid_(01).jpg",
                 scale:0.30
             }),
             text: new ol.style.Text({
@@ -903,9 +651,45 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('kindergarten'),
-	title: "CEFA Early Learning",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"kindergarten\"][\"brand\"=\"CEFA Early Learning\"][\"brand:wikidata\"=\"Q120491807\"][\"max_age\"=\"5\"][\"min_age\"=\"1\"][\"name\"=\"CEFA Early Learning\"][\"preschool\"=\"yes\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "Costco.com",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Costco\"][\"brand:wikidata\"=\"Q715583\"][\"name\"=\"Costco.com\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Costco_Wholesale_logo_2010-10-26.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Costco_Wholesale_logo_2010-10-26.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('parcel_locker'),
+	title: "de Buren",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"de Buren\"][\"brand:wikidata\"=\"Q119648956\"][\"name\"=\"de Buren\"][\"operator\"=\"de Buren\"][\"operator:wikidata\"=\"Q119648956\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -939,9 +723,45 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('kindergarten'),
-	title: "Chesterbrook Academy",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"kindergarten\"][\"brand\"=\"Chesterbrook Academy\"][\"brand:wikidata\"=\"Q109137942\"][\"fee\"=\"yes\"][\"name\"=\"Chesterbrook Academy\"][\"nursery\"=\"yes\"][\"preschool\"=\"yes\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "Deutsche Post",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Deutsche Post\"][\"brand:wikidata\"=\"Q157645\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Deutsche_Post_DHL.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Deutsche_Post_DHL.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('parcel_locker'),
+	title: "DExpress",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"DExpress\"][\"name\"=\"DExpress\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -975,9 +795,9 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('kindergarten'),
-	title: "Childcare Network",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"kindergarten\"][\"brand\"=\"Childcare Network\"][\"brand:wikidata\"=\"Q121356406\"][\"name\"=\"Childcare Network\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "DHL BOX 24/7",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"DHL BOX 24/7\"][\"brand:wikidata\"=\"Q115568785\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -1011,9 +831,9 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('kindergarten'),
-	title: "Children's Learning Adventure",
-    query: "[out:json][timeout:25];(nwr[\"after_school\"=\"yes\"][\"amenity\"=\"kindergarten\"][\"brand\"=\"Children's Learning Adventure\"][\"brand:short\"=\"CLA\"][\"brand:wikidata\"=\"Q64821213\"][\"fee\"=\"yes\"][\"isced:level\"=\"0\"][\"name\"=\"Children's Learning Adventure\"][\"nursery\"=\"yes\"][\"preschool\"=\"yes\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "DHL csomagautomata",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"DHL\"][\"brand:wikidata\"=\"Q131712019\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -1047,10 +867,10 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('kindergarten'),
-	title: "Childtime",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"kindergarten\"][\"brand\"=\"Childtime\"][\"brand:wikidata\"=\"Q64877793\"][\"fee\"=\"yes\"][\"isced:level\"=\"0\"][\"name\"=\"Childtime\"][\"nursery\"=\"yes\"][\"preschool\"=\"yes\"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Childtime_Learning_Centers_logo.svg",
+    group: getTranslation('parcel_locker'),
+	title: "DHL Packstation",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"DHL Packstation\"][\"brand:wikidata\"=\"Q1766703\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Packstation_winter.jpg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -1065,7 +885,7 @@ export function educationOverlays() {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Childtime_Learning_Centers_logo.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Packstation_winter.jpg",
                 scale:0.30
             }),
             text: new ol.style.Text({
@@ -1083,45 +903,9 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('kindergarten'),
-	title: "Cr\u00e8che People & Baby",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"kindergarten\"][\"brand\"=\"Cr\u00e8che People & Baby\"][\"brand:wikidata\"=\"Q112913569\"][\"name\"=\"Cr\u00e8che People & Baby\"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_People_and_baby.png",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
-    style: function (feature) {
-        var key_regex = /^name$/
-        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-        var name = feature.get(name_key) || '';
-        var fill = new ol.style.Fill({
-            color: 'rgba(255,0,0,0.4)'
-        });
-        var stroke = new ol.style.Stroke({
-            color: 'rgba(255,0,0,1)',
-            width: 1
-        });
-        var style = new ol.style.Style({
-            image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_People_and_baby.png",
-                scale:0.30
-            }),
-            text: new ol.style.Text({
-                text: name,
-                offsetX : 7,
-                offsetY : -12,
-                fill: new ol.style.Fill({
-                    color: 'rgba(0,0,0,1)'
-                }),
-            }),
-            fill: fill,
-            stroke: stroke
-        });
-        return style;
-    }
-},
-{
-    group: getTranslation('kindergarten'),
-	title: "Deutscher Kinderschutzbund",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"kindergarten\"][\"brand\"=\"Deutscher Kinderschutzbund\"][\"brand:short\"=\"DKSB\"][\"brand:wikidata\"=\"Q1205011\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "DHL Paketbox",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Paketbox\"][\"brand:wikidata\"=\"Q2046604\"][\"name\"=\"DHL Paketbox\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -1155,81 +939,9 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('kindergarten'),
-	title: "Deutsches Rotes Kreuz",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"kindergarten\"][\"brand\"=\"Deutsches Rotes Kreuz\"][\"brand:wikidata\"=\"Q694104\"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/DRK-Logo_rund_RGB.jpg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
-    style: function (feature) {
-        var key_regex = /^name$/
-        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-        var name = feature.get(name_key) || '';
-        var fill = new ol.style.Fill({
-            color: 'rgba(255,0,0,0.4)'
-        });
-        var stroke = new ol.style.Stroke({
-            color: 'rgba(255,0,0,1)',
-            width: 1
-        });
-        var style = new ol.style.Style({
-            image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/DRK-Logo_rund_RGB.jpg",
-                scale:0.30
-            }),
-            text: new ol.style.Text({
-                text: name,
-                offsetX : 7,
-                offsetY : -12,
-                fill: new ol.style.Fill({
-                    color: 'rgba(0,0,0,1)'
-                }),
-            }),
-            fill: fill,
-            stroke: stroke
-        });
-        return style;
-    }
-},
-{
-    group: getTranslation('kindergarten'),
-	title: "Diakonie",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"kindergarten\"][\"brand\"=\"Diakonie\"][\"brand:wikidata\"=\"Q126501\"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Diakonie.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
-    style: function (feature) {
-        var key_regex = /^name$/
-        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-        var name = feature.get(name_key) || '';
-        var fill = new ol.style.Fill({
-            color: 'rgba(255,0,0,0.4)'
-        });
-        var stroke = new ol.style.Stroke({
-            color: 'rgba(255,0,0,1)',
-            width: 1
-        });
-        var style = new ol.style.Style({
-            image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Diakonie.svg",
-                scale:0.30
-            }),
-            text: new ol.style.Text({
-                text: name,
-                offsetX : 7,
-                offsetY : -12,
-                fill: new ol.style.Fill({
-                    color: 'rgba(0,0,0,1)'
-                }),
-            }),
-            fill: fill,
-            stroke: stroke
-        });
-        return style;
-    }
-},
-{
-    group: getTranslation('kindergarten'),
-	title: "Guidepost Montessori",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"kindergarten\"][\"brand\"=\"Guidepost Montessori\"][\"brand:wikidata\"=\"Q114840336\"][\"name\"=\"Guidepost Montessori\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "DHL Pakketautomaat",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"DHL\"][\"brand:wikidata\"=\"Q132858576\"][\"name\"=\"DHL Pakketautomaat\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -1263,9 +975,117 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('kindergarten'),
-	title: "K\u00efdo",
-    query: "[out:json][timeout:25];(nwr[\"alt_name\"=\"Kido\"][\"amenity\"=\"kindergarten\"][\"brand\"=\"K\u00efdo\"][\"brand:wikidata\"=\"Q104849185\"][\"fee\"=\"yes\"][\"isced:level\"=\"0\"][\"name\"=\"K\u00efdo\"][\"nursery\"=\"yes\"][\"official_name\"=\"K\u00efdo International Preschool\"][\"preschool\"=\"yes\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "DHL Poststation",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"DHL Poststation\"][\"brand:wikidata\"=\"Q123120984\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/DHL_Poststation_(2022).png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/DHL_Poststation_(2022).png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('parcel_locker'),
+	title: "DPD",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"DPD\"][\"brand:wikidata\"=\"Q541030\"][\"operator\"=\"DPD Latvia\"][\"operator:wikidata\"=\"Q125973085\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/DPD_logo_(2015).svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/DPD_logo_(2015).svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('parcel_locker'),
+	title: "DPD Pickup Station",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"DPD Pickup Station\"][\"brand:wikidata\"=\"Q114273730\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/DPD_logo_(2015).svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/DPD_logo_(2015).svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('parcel_locker'),
+	title: "Dr. Max Box",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Dr. Max Box\"][\"brand:wikidata\"=\"Q133275002\"][\"operator\"=\"Dr. Max\"][\"operator:wikidata\"=\"Q56317371\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -1299,9 +1119,81 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('kindergarten'),
-	title: "Kidsfirst",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"kindergarten\"][\"brand\"=\"Kidsfirst Kindergartens\"][\"brand:wikidata\"=\"Q111022330\"][\"name\"=\"Kidsfirst\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "DSV Locker",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"DSV Locker\"][\"brand:wikidata\"=\"Q1155771\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/DSV_Logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/DSV_Logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('parcel_locker'),
+	title: "easybox",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"easybox\"][\"brand:wikidata\"=\"Q114496224\"][\"payment:cash\"=\"no\"][\"payment:contactless\"=\"yes\"][\"payment:maestro\"=\"yes\"][\"payment:mastercard\"=\"yes\"][\"payment:mastercard_contactless\"=\"yes\"][\"payment:mastercard_electronic\"=\"yes\"][\"payment:visa\"=\"yes\"][\"payment:visa_electron\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Sameday_easybox_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Sameday_easybox_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('parcel_locker'),
+	title: "Evri",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Evri\"][\"brand:wikidata\"=\"Q115200168\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -1335,9 +1227,9 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('kindergarten'),
-	title: "Kindercare (New Zealand)",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"kindergarten\"][\"brand\"=\"Kindercare\"][\"brand:wikidata\"=\"Q111023246\"][\"name\"=\"Kindercare\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "Express One csomagpont",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Express One\"][\"brand:wikidata\"=\"Q131629851\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -1371,9 +1263,189 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('kindergarten'),
-	title: "KinderCare (USA)",
-    query: "[out:json][timeout:25];(nwr[\"after_school\"=\"yes\"][\"alt_name\"=\"KinderCare Learning Center\"][\"amenity\"=\"kindergarten\"][\"brand\"=\"KinderCare\"][\"brand:wikidata\"=\"Q6410551\"][\"fee\"=\"yes\"][\"isced:level\"=\"0\"][\"name\"=\"KinderCare\"][\"nursery\"=\"yes\"][\"preschool\"=\"yes\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "FANbox",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"FANbox\"][\"brand:wikidata\"=\"Q115351090\"][\"name\"=\"FANbox\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/FANbox_in_Mega_Image_of_Drumul_Fermei.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/FANbox_in_Mega_Image_of_Drumul_Fermei.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('parcel_locker'),
+	title: "Foxpost",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Foxpost\"][\"brand:wikidata\"=\"Q126538316\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Foxpost,_Coop,_Eszperant\u00f3_t\u00e9r,_Sz\u00e9kesfeh\u00e9rv\u00e1r_00002.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Foxpost,_Coop,_Eszperant\u00f3_t\u00e9r,_Sz\u00e9kesfeh\u00e9rv\u00e1r_00002.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('parcel_locker'),
+	title: "GLS",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"GLS\"][\"brand:wikidata\"=\"Q366182\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/GLS_Logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/GLS_Logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('parcel_locker'),
+	title: "GLS Bal\u00edkomat",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"GLS Bal\u00edkomat\"][\"brand:wikidata\"=\"Q366182\"][\"name\"=\"GLS Bal\u00edkomat\"][\"operator\"=\"GLS General Logistics Systems Slovakia\"][\"operator:wikidata\"=\"Q133842648\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/GLS_Logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/GLS_Logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('parcel_locker'),
+	title: "GLS Paketomat",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"GLS Paketomat\"][\"brand:wikidata\"=\"Q366182\"][\"name\"=\"GLS Paketomat\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/GLS_Logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/GLS_Logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('parcel_locker'),
+	title: "Growing Communities",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Growing Communities\"][\"brand:wikidata\"=\"Q109768523\"][\"name\"=\"Growing Communities\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -1407,9 +1479,9 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('kindergarten'),
-	title: "La Petite Academy",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"kindergarten\"][\"brand\"=\"La Petite Academy\"][\"brand:wikidata\"=\"Q64877784\"][\"fee\"=\"yes\"][\"isced:level\"=\"0\"][\"name\"=\"La Petite Academy\"][\"nursery\"=\"yes\"][\"preschool\"=\"yes\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "IKEA csomagpont",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"IKEA\"][\"brand:wikidata\"=\"Q131629951\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -1443,10 +1515,10 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('kindergarten'),
-	title: "Lebenshilfe",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"kindergarten\"][\"brand\"=\"Lebenshilfe\"][\"brand:wikidata\"=\"Q20533\"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bundesvereinigung_Lebenshilfe_logo.svg",
+    group: getTranslation('parcel_locker'),
+	title: "InPost",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"InPost\"][\"brand:wikidata\"=\"Q3182097\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/InPost_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -1461,7 +1533,7 @@ export function educationOverlays() {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bundesvereinigung_Lebenshilfe_logo.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/InPost_logo.svg",
                 scale:0.30
             }),
             text: new ol.style.Text({
@@ -1479,9 +1551,9 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('kindergarten'),
-	title: "Les Petits Chaperons Rouges",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"kindergarten\"][\"brand\"=\"Les Petits Chaperons Rouges\"][\"brand:wikidata\"=\"Q130214582\"][\"name\"=\"Les Petits Chaperons Rouges\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "Instabox",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Instabox\"][\"brand:wikidata\"=\"Q109923726\"][\"name\"=\"Instabox\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -1515,9 +1587,81 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('kindergarten'),
-	title: "Lollipops Educare",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"kindergarten\"][\"brand\"=\"Lollipops Educare\"][\"brand:wikidata\"=\"Q116824919\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "i\u90f5\u7bb1",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"i\u90f5\u7bb1\"][\"brand:en\"=\"iBox\"][\"brand:nan\"=\"i-i\u00fb-siu\u207f\"][\"brand:nan-Hant\"=\"i\u90f5\u7bb1\"][\"brand:nan-Latn-pehoeji\"=\"i-i\u00fb-siu\u207f\"][\"brand:nan-Latn-tailo\"=\"i-i\u00fb-siunn\"][\"brand:wikidata\"=\"Q4375439\"][\"brand:zh\"=\"i\u90f5\u7bb1\"][\"operator\"=\"\u4e2d\u83ef\u90f5\u653f\"][\"operator:en\"=\"Chunghwa Post\"][\"operator:nan\"=\"Tiong-h\u00f4a I\u00fb-ch\u00e8ng\"][\"operator:nan-Hant\"=\"\u4e2d\u83ef\u90f5\u653f\"][\"operator:nan-Latn-pehoeji\"=\"Tiong-h\u00f4a I\u00fb-ch\u00e8ng\"][\"operator:nan-Latn-tailo\"=\"Tiong-hu\u00e2 I\u00fb-ts\u00ecng\"][\"operator:wikidata\"=\"Q709259\"][\"operator:zh\"=\"\u4e2d\u83ef\u90f5\u653f\"][\"operator:zh-Hans\"=\"\u4e2d\u534e\u90ae\u653f\"][\"operator:zh-Hant\"=\"\u4e2d\u83ef\u90f5\u653f\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/TRA_Taipei_Station_(4)_iBox_20190615.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/TRA_Taipei_Station_(4)_iBox_20190615.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('parcel_locker'),
+	title: "Latvijas Pasts",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Latvijas Pasts\"][\"brand:wikidata\"=\"Q1807088\"][\"name\"=\"Latvijas Pasts\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Riga_(13.08.2011)_071.JPG",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Riga_(13.08.2011)_071.JPG",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('parcel_locker'),
+	title: "Locker.ge Parcel Locker",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Locker.ge\"][\"brand:ka\"=\"Locker.ge\"][\"brand:wikidata\"=\"Q131470040\"][\"name\"=\"Locker.ge\"][\"name:en\"=\"Locker.ge\"][\"name:ka\"=\"Locker.ge\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -1551,9 +1695,9 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('kindergarten'),
-	title: "Merryhill Preschool",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"kindergarten\"][\"brand\"=\"Merryhill Preschool\"][\"brand:wikidata\"=\"Q6820493\"][\"fee\"=\"yes\"][\"isced:level\"=\"0\"][\"name\"=\"Merryhill Preschool\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "LockerPost",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"LockerPost\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -1587,9 +1731,9 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('kindergarten'),
-	title: "New Horizon Academy",
-    query: "[out:json][timeout:25];(nwr[\"after_school\"=\"yes\"][\"amenity\"=\"kindergarten\"][\"brand\"=\"New Horizon Academy\"][\"brand:wikidata\"=\"Q64821306\"][\"fee\"=\"yes\"][\"isced:level\"=\"0\"][\"name\"=\"New Horizon Academy\"][\"nursery\"=\"yes\"][\"preschool\"=\"yes\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "LP Express",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"LP Express\"][\"name\"=\"LP Express\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -1623,9 +1767,81 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('kindergarten'),
-	title: "Primrose School",
-    query: "[out:json][timeout:25];(nwr[\"after_school\"=\"yes\"][\"alt_name\"=\"Primrose Schools\"][\"amenity\"=\"kindergarten\"][\"brand\"=\"Primrose School\"][\"brand:wikidata\"=\"Q7243677\"][\"fee\"=\"yes\"][\"isced:level\"=\"0\"][\"max_age\"=\"12\"][\"min_age\"=\"6 weeks\"][\"name\"=\"Primrose School\"][\"nursery\"=\"yes\"][\"preschool\"=\"yes\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "Meest",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Meest\"][\"brand:wikidata\"=\"Q25432124\"][\"name\"=\"Meest\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Mist.PNG",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Mist.PNG",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('parcel_locker'),
+	title: "Mondial Relay",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Mondial Relay\"][\"brand:wikidata\"=\"Q3320547\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/2006-2014_L4H3_Citroen_Jumper_panel_van_(rr).jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/2006-2014_L4H3_Citroen_Jumper_panel_van_(rr).jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('parcel_locker'),
+	title: "MPL (Magyar Posta Logisztika)",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"MPL\"][\"brand:wikidata\"=\"Q131431491\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -1659,9 +1875,45 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('kindergarten'),
-	title: "Safari Kid",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"kindergarten\"][\"brand\"=\"Safari Kid\"][\"brand:wikidata\"=\"Q104849344\"][\"fee\"=\"yes\"][\"isced:level\"=\"0\"][\"name\"=\"Safari Kid\"][\"nursery\"=\"yes\"][\"preschool\"=\"yes\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "My Post 24",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"My Post 24\"][\"brand:wikidata\"=\"Q110748685\"][\"name\"=\"My Post 24\"][\"operator\"=\"Die Post\"][\"operator:de\"=\"Die Post\"][\"operator:en\"=\"Swiss Post\"][\"operator:fr\"=\"La Poste\"][\"operator:it\"=\"La Posta\"][\"operator:rm\"=\"La Posta\"][\"operator:wikidata\"=\"Q614803\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Schweizerische_Post_Logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Schweizerische_Post_Logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('parcel_locker'),
+	title: "Myflexbox",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Myflexbox\"][\"brand:wikidata\"=\"Q117313525\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -1695,45 +1947,9 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('kindergarten'),
-	title: "The Children's Courtyard",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"kindergarten\"][\"brand\"=\"The Children's Courtyard\"][\"brand:wikidata\"=\"Q64877852\"][\"fee\"=\"yes\"][\"isced:level\"=\"0\"][\"name\"=\"The Children's Courtyard\"][\"nursery\"=\"yes\"][\"preschool\"=\"yes\"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/The_Children's_Courtyard_logo.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
-    style: function (feature) {
-        var key_regex = /^name$/
-        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-        var name = feature.get(name_key) || '';
-        var fill = new ol.style.Fill({
-            color: 'rgba(255,0,0,0.4)'
-        });
-        var stroke = new ol.style.Stroke({
-            color: 'rgba(255,0,0,1)',
-            width: 1
-        });
-        var style = new ol.style.Style({
-            image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/The_Children's_Courtyard_logo.svg",
-                scale:0.30
-            }),
-            text: new ol.style.Text({
-                text: name,
-                offsetX : 7,
-                offsetY : -12,
-                fill: new ol.style.Fill({
-                    color: 'rgba(0,0,0,1)'
-                }),
-            }),
-            fill: fill,
-            stroke: stroke
-        });
-        return style;
-    }
-},
-{
-    group: getTranslation('kindergarten'),
-	title: "The Goddard School",
-    query: "[out:json][timeout:25];(nwr[\"after_school\"=\"yes\"][\"alt_name\"=\"Goddard School\"][\"amenity\"=\"kindergarten\"][\"brand\"=\"The Goddard School\"][\"brand:wikidata\"=\"Q5576260\"][\"fee\"=\"yes\"][\"isced:level\"=\"0\"][\"min_age\"=\"6 weeks\"][\"name\"=\"The Goddard School\"][\"nursery\"=\"yes\"][\"preschool\"=\"yes\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "Nova Poshta",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Nova Poshta\"][\"brand:wikidata\"=\"Q97191085\"][\"name\"=\"Nova Poshta\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -1767,10 +1983,10 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('kindergarten'),
-	title: "Tutor Time",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"kindergarten\"][\"brand\"=\"Tutor Time\"][\"brand:wikidata\"=\"Q64877826\"][\"fee\"=\"yes\"][\"isced:level\"=\"0\"][\"name\"=\"Tutor Time\"][\"nursery\"=\"yes\"][\"preschool\"=\"yes\"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Tutor_Time_logo.svg",
+    group: getTranslation('parcel_locker'),
+	title: "Omniva",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Omniva\"][\"brand:wikidata\"=\"Q282457\"][\"name\"=\"Omniva\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Omniva.png",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -1785,7 +2001,7 @@ export function educationOverlays() {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Tutor_Time_logo.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Omniva.png",
                 scale:0.30
             }),
             text: new ol.style.Text({
@@ -1803,10 +2019,10 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('kindergarten'),
-	title: "Volkssolidarit\u00e4t",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"kindergarten\"][\"brand\"=\"Volkssolidarit\u00e4t\"][\"brand:wikidata\"=\"Q2532186\"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Signet_Volkssolidaritaet.svg",
+    group: getTranslation('parcel_locker'),
+	title: "Orlen Paczka",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Orlen Paczka\"][\"brand:wikidata\"=\"Q110457879\"][\"operator\"=\"Orlen\"][\"operator:wikidata\"=\"Q971649\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Orlen_paczka_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -1821,7 +2037,7 @@ export function educationOverlays() {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Signet_Volkssolidaritaet.svg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Orlen_paczka_logo.svg",
                 scale:0.30
             }),
             text: new ol.style.Text({
@@ -1839,9 +2055,45 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('kindergarten'),
-	title: "\u5927\u98ce\u8f66\u5e7c\u513f\u56ed",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"kindergarten\"][\"brand\"=\"\u5927\u98ce\u8f66\u5e7c\u513f\u56ed\"][\"brand:wikidata\"=\"Q114390650\"][\"fee\"=\"yes\"][\"preschool\"=\"yes\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "Ozon Box",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Ozon Box\"][\"brand:wikidata\"=\"Q2365235\"][\"name\"=\"Ozon Box\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Ozon_logo_clear.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Ozon_logo_clear.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('parcel_locker'),
+	title: "Packeta",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Packeta\"][\"brand:wikidata\"=\"Q67809905\"][\"name\"=\"Z-Box\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -1875,10 +2127,10 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('kindergarten'),
-	title: "\u67ab\u53f6\u5c0f\u718a",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"kindergarten\"][\"brand\"=\"\u67ab\u53f6\u5c0f\u718a\"][\"brand:wikidata\"=\"Q10324823\"][\"name\"=\"\u67ab\u53f6\u5c0f\u718a\"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Maple_Bear.png",
+    group: getTranslation('parcel_locker'),
+	title: "Paczkomat InPost",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Paczkomat InPost\"][\"brand:wikidata\"=\"Q110970254\"][\"operator\"=\"InPost\"][\"operator:wikidata\"=\"Q3182097\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/InPost_logo.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -1893,7 +2145,7 @@ export function educationOverlays() {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Maple_Bear.png",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/InPost_logo.svg",
                 scale:0.30
             }),
             text: new ol.style.Text({
@@ -1911,9 +2163,9 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('kindergarten'),
-	title: "\u7ea2\u7f28\u5e7c\u513f\u56ed",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"kindergarten\"][\"brand\"=\"\u7ea2\u7f28\u5e7c\u513f\u56ed\"][\"brand:wikidata\"=\"Q114390577\"][\"fee\"=\"yes\"][\"preschool\"=\"yes\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "Paket24",
+    query: "[out:json][timeout:25];(nwr[\"alt_name\"=\"Paketomat\"][\"amenity\"=\"parcel_locker\"][\"brand\"=\"Paket24\"][\"brand:wikidata\"=\"Q110748166\"][\"name\"=\"Paket24\"][\"operator\"=\"Hrvatska po\u0161ta\"][\"operator:wikidata\"=\"Q507289\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -1947,9 +2199,45 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('kindergarten'),
-	title: "\u7ea2\u9ec4\u84dd\u5e7c\u513f\u56ed",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"kindergarten\"][\"brand\"=\"\u7ea2\u9ec4\u84dd\u5e7c\u513f\u56ed\"][\"brand:en\"=\"RYB Education\"][\"brand:wikidata\"=\"Q43452224\"][\"brand:zh\"=\"\u7ea2\u9ec4\u84dd\u5e7c\u513f\u56ed\"][\"fee\"=\"yes\"][\"name\"=\"\u7ea2\u9ec4\u84dd\u5e7c\u513f\u56ed\"][\"name:en\"=\"RYB Education\"][\"name:zh\"=\"\u7ea2\u9ec4\u84dd\u5e7c\u513f\u56ed\"][\"preschool\"=\"yes\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "Pakkeboksen",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Pakkeboksen\"][\"brand:wikidata\"=\"Q12309164\"][\"name\"=\"Pakkeboksen\"][\"operator\"=\"PostNord Danmark\"][\"operator:wikidata\"=\"Q1334647\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Doegnposten,_Lindholm_2010_(ubt).jpeg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Doegnposten,_Lindholm_2010_(ubt).jpeg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('parcel_locker'),
+	title: "Parcel Pending",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Parcel Pending\"][\"brand:wikidata\"=\"Q127685418\"][\"operator\"=\"Quadient\"][\"operator:wikidata\"=\"Q70117211\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -1983,81 +2271,9 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('language_school'),
-	title: "AEON",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"language_school\"][\"brand\"=\"AEON\"][\"brand:en\"=\"AEON\"][\"brand:ja\"=\"\u30a4\u30fc\u30aa\u30f3\"][\"brand:ja-Hira\"=\"\u3044\u30fc\u304a\u3093\"][\"brand:ja-Latn\"=\"\u012aon\"][\"brand:wikidata\"=\"Q4687898\"][\"language:en\"=\"main\"][\"name\"=\"AEON\"][\"name:en\"=\"AEON\"][\"name:ja\"=\"\u30a4\u30fc\u30aa\u30f3\"][\"name:ja-Hira\"=\"\u3044\u30fc\u304a\u3093\"][\"name:ja-Latn\"=\"\u012aon\"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Aeon_(eikaiwa)_logo.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
-    style: function (feature) {
-        var key_regex = /^name$/
-        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-        var name = feature.get(name_key) || '';
-        var fill = new ol.style.Fill({
-            color: 'rgba(255,0,0,0.4)'
-        });
-        var stroke = new ol.style.Stroke({
-            color: 'rgba(255,0,0,1)',
-            width: 1
-        });
-        var style = new ol.style.Style({
-            image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Aeon_(eikaiwa)_logo.svg",
-                scale:0.30
-            }),
-            text: new ol.style.Text({
-                text: name,
-                offsetX : 7,
-                offsetY : -12,
-                fill: new ol.style.Fill({
-                    color: 'rgba(0,0,0,1)'
-                }),
-            }),
-            fill: fill,
-            stroke: stroke
-        });
-        return style;
-    }
-},
-{
-    group: getTranslation('language_school'),
-	title: "Berlitz",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"language_school\"][\"brand\"=\"Berlitz\"][\"brand:wikidata\"=\"Q821960\"][\"name\"=\"Berlitz\"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Berlitz_Sprachschulen_logo.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
-    style: function (feature) {
-        var key_regex = /^name$/
-        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-        var name = feature.get(name_key) || '';
-        var fill = new ol.style.Fill({
-            color: 'rgba(255,0,0,0.4)'
-        });
-        var stroke = new ol.style.Stroke({
-            color: 'rgba(255,0,0,1)',
-            width: 1
-        });
-        var style = new ol.style.Style({
-            image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Berlitz_Sprachschulen_logo.svg",
-                scale:0.30
-            }),
-            text: new ol.style.Text({
-                text: name,
-                offsetX : 7,
-                offsetY : -12,
-                fill: new ol.style.Fill({
-                    color: 'rgba(0,0,0,1)'
-                }),
-            }),
-            fill: fill,
-            stroke: stroke
-        });
-        return style;
-    }
-},
-{
-    group: getTranslation('language_school'),
-	title: "CCAA",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"language_school\"][\"brand\"=\"CCAA\"][\"brand:wikidata\"=\"Q9669735\"][\"language:en\"=\"yes\"][\"language:es\"=\"yes\"][\"name\"=\"CCAA\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "Penguin Box",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Penguin Box\"][\"brand:wikidata\"=\"Q120022128\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -2091,45 +2307,9 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('language_school'),
-	title: "CNA",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"language_school\"][\"brand\"=\"CNA\"][\"brand:wikidata\"=\"Q18465698\"][\"language:en\"=\"main\"][\"language:es\"=\"yes\"][\"name\"=\"CNA\"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo-CNA-2018.png",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
-    style: function (feature) {
-        var key_regex = /^name$/
-        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-        var name = feature.get(name_key) || '';
-        var fill = new ol.style.Fill({
-            color: 'rgba(255,0,0,0.4)'
-        });
-        var stroke = new ol.style.Stroke({
-            color: 'rgba(255,0,0,1)',
-            width: 1
-        });
-        var style = new ol.style.Style({
-            image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo-CNA-2018.png",
-                scale:0.30
-            }),
-            text: new ol.style.Text({
-                text: name,
-                offsetX : 7,
-                offsetY : -12,
-                fill: new ol.style.Fill({
-                    color: 'rgba(0,0,0,1)'
-                }),
-            }),
-            fill: fill,
-            stroke: stroke
-        });
-        return style;
-    }
-},
-{
-    group: getTranslation('language_school'),
-	title: "Cultura Inglesa",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"language_school\"][\"brand\"=\"Cultura Inglesa\"][\"brand:wikidata\"=\"Q777467\"][\"language:en\"=\"main\"][\"name\"=\"Cultura Inglesa\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "Pick",
+    query: "[out:json][timeout:25];(nwr[\"alt_name\"=\"Shop 'n' Pick;Pick Locker\"][\"amenity\"=\"parcel_locker\"][\"brand\"=\"Pick\"][\"brand:wikidata\"=\"Q120051152\"][\"name\"=\"Pick\"][\"operator\"=\"Pick Network\"][\"operator:wikidata\"=\"Q120047262\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -2163,45 +2343,9 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('language_school'),
-	title: "ECC\u5916\u8a9e\u5b66\u9662",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"language_school\"][\"brand\"=\"ECC\u5916\u8a9e\u5b66\u9662\"][\"brand:en\"=\"ECC Foreign Language Institute\"][\"brand:ja\"=\"ECC\u5916\u8a9e\u5b66\u9662\"][\"brand:ja-Hira\"=\"\u3044\u30fc\u3057\u30fc\u3057\u30fc\u304c\u3044\u3054\u304c\u304f\u3044\u3093\"][\"brand:ja-Latn\"=\"\u012ash\u012bsh\u012b Gaigo Gakuin\"][\"brand:short\"=\"ECC\"][\"brand:short:en\"=\"ECC\"][\"brand:short:ja\"=\"ECC\"][\"brand:short:ja-Hira\"=\"\u3044\u30fc\u3057\u30fc\u3057\u30fc\"][\"brand:short:ja-Latn\"=\"\u012ash\u012bsh\u012b\"][\"brand:wikidata\"=\"Q5322655\"][\"language:en\"=\"main\"][\"name\"=\"ECC\u5916\u8a9e\u5b66\u9662\"][\"name:en\"=\"ECC Foreign Language Institute\"][\"name:ja\"=\"ECC\u5916\u8a9e\u5b66\u9662\"][\"name:ja-Hira\"=\"\u3044\u30fc\u3057\u30fc\u3057\u30fc\u304c\u3044\u3054\u304c\u304f\u3044\u3093\"][\"name:ja-Latn\"=\"\u012ash\u012bsh\u012b Gaigo Gakuin\"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/ECC_(eikaiwa)_logo.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
-    style: function (feature) {
-        var key_regex = /^name$/
-        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-        var name = feature.get(name_key) || '';
-        var fill = new ol.style.Fill({
-            color: 'rgba(255,0,0,0.4)'
-        });
-        var stroke = new ol.style.Stroke({
-            color: 'rgba(255,0,0,1)',
-            width: 1
-        });
-        var style = new ol.style.Style({
-            image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/ECC_(eikaiwa)_logo.svg",
-                scale:0.30
-            }),
-            text: new ol.style.Text({
-                text: name,
-                offsetX : 7,
-                offsetY : -12,
-                fill: new ol.style.Fill({
-                    color: 'rgba(0,0,0,1)'
-                }),
-            }),
-            fill: fill,
-            stroke: stroke
-        });
-        return style;
-    }
-},
-{
-    group: getTranslation('language_school'),
-	title: "ELS",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"language_school\"][\"brand\"=\"ELS\"][\"brand:en\"=\"ELS\"][\"brand:wikidata\"=\"Q5323325\"][\"language:en\"=\"main\"][\"name\"=\"ELS\"][\"name:en\"=\"ELS\"][\"official_name\"=\"ELS Language Centers\"][\"official_name:en\"=\"ELS Language Centers\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "PickPoint",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"PickPoint\"][\"brand:wikidata\"=\"Q110276197\"][\"name\"=\"PickPoint\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -2235,9 +2379,45 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('language_school'),
-	title: "Fisk",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"language_school\"][\"brand\"=\"Fisk\"][\"brand:wikidata\"=\"Q10286392\"][\"language:en\"=\"yes\"][\"language:es\"=\"yes\"][\"name\"=\"Fisk\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "Pickup Station",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Pickup Station\"][\"brand:wikidata\"=\"Q110748562\"][\"name\"=\"Pickup Station\"][\"operator\"=\"La Poste\"][\"operator:wikidata\"=\"Q373724\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/La_Poste_(Frankreich)_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/La_Poste_(Frankreich)_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('parcel_locker'),
+	title: "Pilulka Box",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Pilulka Box\"][\"brand:wikidata\"=\"Q130684499\"][\"name\"=\"Pilulka Box\"][\"operator\"=\"Pilulka\"][\"operator:wikidata\"=\"Q41960196\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -2271,81 +2451,9 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('language_school'),
-	title: "GABA",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"language_school\"][\"brand\"=\"GABA\"][\"brand:en\"=\"Gaba\"][\"brand:ja\"=\"GABA\"][\"brand:ja-Hira\"=\"\u304c\u3070\"][\"brand:ja-Latn\"=\"GABA\"][\"brand:wikidata\"=\"Q5515241\"][\"language:en\"=\"main\"][\"name\"=\"GABA\"][\"name:en\"=\"Gaba\"][\"name:ja\"=\"GABA\"][\"name:ja-Hira\"=\"\u304c\u3070\"][\"name:ja-Latn\"=\"GABA\"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Gaba-logo.gif",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
-    style: function (feature) {
-        var key_regex = /^name$/
-        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-        var name = feature.get(name_key) || '';
-        var fill = new ol.style.Fill({
-            color: 'rgba(255,0,0,0.4)'
-        });
-        var stroke = new ol.style.Stroke({
-            color: 'rgba(255,0,0,1)',
-            width: 1
-        });
-        var style = new ol.style.Style({
-            image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Gaba-logo.gif",
-                scale:0.30
-            }),
-            text: new ol.style.Text({
-                text: name,
-                offsetX : 7,
-                offsetY : -12,
-                fill: new ol.style.Fill({
-                    color: 'rgba(0,0,0,1)'
-                }),
-            }),
-            fill: fill,
-            stroke: stroke
-        });
-        return style;
-    }
-},
-{
-    group: getTranslation('language_school'),
-	title: "NOVA",
-    query: "[out:json][timeout:25];(nwr[\"alt_name:ja\"=\"\u30ce\u30f4\u30a1\"][\"alt_name:ja-Latn\"=\"Nobua\"][\"amenity\"=\"language_school\"][\"brand\"=\"NOVA\"][\"brand:en\"=\"Nova\"][\"brand:ja\"=\"NOVA\"][\"brand:ja-Hira\"=\"\u306e\u3070\"][\"brand:ja-Latn\"=\"Noba\"][\"brand:wikidata\"=\"Q7064000\"][\"language:en\"=\"main\"][\"name\"=\"NOVA\"][\"name:en\"=\"Nova\"][\"name:ja\"=\"NOVA\"][\"name:ja-Hira\"=\"\u306e\u3070\"][\"name:ja-Latn\"=\"Noba\"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Nova_(eikaiwa)_logo.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
-    style: function (feature) {
-        var key_regex = /^name$/
-        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-        var name = feature.get(name_key) || '';
-        var fill = new ol.style.Fill({
-            color: 'rgba(255,0,0,0.4)'
-        });
-        var stroke = new ol.style.Stroke({
-            color: 'rgba(255,0,0,1)',
-            width: 1
-        });
-        var style = new ol.style.Style({
-            image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Nova_(eikaiwa)_logo.svg",
-                scale:0.30
-            }),
-            text: new ol.style.Text({
-                text: name,
-                offsetX : 7,
-                offsetY : -12,
-                fill: new ol.style.Fill({
-                    color: 'rgba(0,0,0,1)'
-                }),
-            }),
-            fill: fill,
-            stroke: stroke
-        });
-        return style;
-    }
-},
-{
-    group: getTranslation('language_school'),
-	title: "Shane English School",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"language_school\"][\"brand\"=\"Shane English School\"][\"brand:en\"=\"Shane English School\"][\"brand:ja\"=\"\u30b7\u30a7\u30fc\u30f3\u82f1\u4f1a\u8a71\"][\"brand:ja-Latn\"=\"Sh\u0113n Eikaiwa\"][\"brand:wikidata\"=\"Q17054332\"][\"language:en\"=\"main\"][\"name\"=\"Shane English School\"][\"name:en\"=\"Shane English School\"][\"name:ja\"=\"\u30b7\u30a7\u30fc\u30f3\u82f1\u4f1a\u8a71\"][\"name:ja-Latn\"=\"Sh\u0113n Eikaiwa\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "Pocztex",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Pocztex\"][\"brand:wikidata\"=\"Q127106701\"][\"opening_hours\"=\"24/7\"][\"operator\"=\"Poczta Polska\"][\"operator:wikidata\"=\"Q168833\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -2379,9 +2487,9 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('language_school'),
-	title: "Wall Street English",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"language_school\"][\"brand\"=\"Wall Street English\"][\"brand:wikidata\"=\"Q561407\"][\"name\"=\"Wall Street English\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "POPStation",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"POPStation\"][\"brand:wikidata\"=\"Q120048216\"][\"name\"=\"POPStation\"][\"operator\"=\"Singapore Post\"][\"operator:wikidata\"=\"Q4049531\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -2415,45 +2523,9 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('language_school'),
-	title: "Wizard",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"language_school\"][\"brand\"=\"Wizard\"][\"brand:wikidata\"=\"Q10393925\"][\"name\"=\"Wizard\"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Wizard_by_Pearson.png",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
-    style: function (feature) {
-        var key_regex = /^name$/
-        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-        var name = feature.get(name_key) || '';
-        var fill = new ol.style.Fill({
-            color: 'rgba(255,0,0,0.4)'
-        });
-        var stroke = new ol.style.Stroke({
-            color: 'rgba(255,0,0,1)',
-            width: 1
-        });
-        var style = new ol.style.Style({
-            image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Wizard_by_Pearson.png",
-                scale:0.30
-            }),
-            text: new ol.style.Text({
-                text: name,
-                offsetX : 7,
-                offsetY : -12,
-                fill: new ol.style.Fill({
-                    color: 'rgba(0,0,0,1)'
-                }),
-            }),
-            fill: fill,
-            stroke: stroke
-        });
-        return style;
-    }
-},
-{
-    group: getTranslation('language_school'),
-	title: "Yes! Idiomas",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"language_school\"][\"brand\"=\"Yes! Idiomas\"][\"brand:wikidata\"=\"Q121365811\"][\"name\"=\"Yes! Idiomas\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "Post Abholstation",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Post Abholstation\"][\"brand:wikidata\"=\"Q110748491\"][\"name\"=\"Post Abholstation\"][\"operator\"=\"\u00d6sterreichische Post\"][\"operator:wikidata\"=\"Q1763505\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -2487,9 +2559,9 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('language_school'),
-	title: "\u30b7\u30a7\u30fc\u30f3\u82f1\u4f1a\u8a71",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"language_school\"][\"brand\"=\"\u30b7\u30a7\u30fc\u30f3\u82f1\u4f1a\u8a71\"][\"brand:en\"=\"Shane English School\"][\"brand:ja\"=\"\u30b7\u30a7\u30fc\u30f3\u82f1\u4f1a\u8a71\"][\"brand:ja-Latn\"=\"Sh\u0113n Eikaiwa\"][\"brand:wikidata\"=\"Q17054332\"][\"language:en\"=\"main\"][\"name\"=\"\u30b7\u30a7\u30fc\u30f3\u82f1\u4f1a\u8a71\"][\"name:en\"=\"Shane English School\"][\"name:ja\"=\"\u30b7\u30a7\u30fc\u30f3\u82f1\u4f1a\u8a71\"][\"name:ja-Latn\"=\"Sh\u0113n Eikaiwa\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "POST PackUp",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"POST Luxembourg\"][\"brand:wikidata\"=\"Q1570910\"][\"name\"=\"PackUp\"][\"operator\"=\"POST Luxembourg\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -2523,9 +2595,81 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('language_school'),
-	title: "\u30bb\u30a4\u30cf\u82f1\u8a9e\u5b66\u9662",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"language_school\"][\"brand\"=\"\u30bb\u30a4\u30cf\u82f1\u8a9e\u5b66\u9662\"][\"brand:en\"=\"Seiha English Academy\"][\"brand:ja\"=\"\u30bb\u30a4\u30cf\u82f1\u8a9e\u5b66\u9662\"][\"brand:ja-Hira\"=\"\u305b\u3044\u306f\u3048\u3044\u3054\u304c\u304f\u3044\u3093\"][\"brand:ja-Latn\"=\"Seiha Eigo Gakuin\"][\"brand:wikidata\"=\"Q7446694\"][\"language:en\"=\"main\"][\"name\"=\"\u30bb\u30a4\u30cf\u82f1\u8a9e\u5b66\u9662\"][\"name:en\"=\"Seiha English Academy\"][\"name:ja\"=\"\u30bb\u30a4\u30cf\u82f1\u8a9e\u5b66\u9662\"][\"name:ja-Hira\"=\"\u305b\u3044\u306f\u3048\u3044\u3054\u304c\u304f\u3044\u3093\"][\"name:ja-Latn\"=\"Seiha Eigo Gakuin\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "PostNL Pakketautomaat",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"PostNL\"][\"brand:wikidata\"=\"Q5921598\"][\"name\"=\"PostNL Pakketautomaat\"][\"operator\"=\"PostNL\"][\"operator:wikidata\"=\"Q5921598\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/PostNL_logo_fullcolor.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/PostNL_logo_fullcolor.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('parcel_locker'),
+	title: "PostNord",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"PostNord\"][\"brand:wikidata\"=\"Q3181430\"][\"name\"=\"PostNord\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/PostNord_wordmark.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/PostNord_wordmark.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('parcel_locker'),
+	title: "PPL Parcelbox",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"PPL Parcelbox\"][\"brand:wikidata\"=\"Q132131206\"][\"name\"=\"PPL Parcelbox\"][\"operator\"=\"PPL CZ\"][\"operator:wikidata\"=\"Q12043470\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -2559,9 +2703,9 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('language_school'),
-	title: "\u30da\u30c3\u30d4\u30fc\u30ad\u30c3\u30ba\u30af\u30e9\u30d6",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"language_school\"][\"brand\"=\"\u30da\u30c3\u30d4\u30fc\u30ad\u30c3\u30ba\u30af\u30e9\u30d6\"][\"brand:en\"=\"Peppy Kids Club\"][\"brand:ja\"=\"\u30da\u30c3\u30d4\u30fc\u30ad\u30c3\u30ba\u30af\u30e9\u30d6\"][\"brand:ja-Latn\"=\"Peppi Kizzu Kurabu\"][\"brand:wikidata\"=\"Q7166471\"][\"language:en\"=\"main\"][\"name\"=\"\u30da\u30c3\u30d4\u30fc\u30ad\u30c3\u30ba\u30af\u30e9\u30d6\"][\"name:en\"=\"Peppy Kids Club\"][\"name:ja\"=\"\u30da\u30c3\u30d4\u30fc\u30ad\u30c3\u30ba\u30af\u30e9\u30d6\"][\"name:ja-Latn\"=\"Peppi Kizzu Kurabu\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "PS Paketomat",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"PS Paketomat\"][\"brand:wikidata\"=\"Q110748273\"][\"name\"=\"PS Paketomat\"][\"operator\"=\"Po\u0161ta Slovenije\"][\"operator:wikidata\"=\"Q6522631\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -2595,45 +2739,9 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('language_school'),
-	title: "\u30d9\u30eb\u30ea\u30c3\u30c4",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"language_school\"][\"brand\"=\"\u30d9\u30eb\u30ea\u30c3\u30c4\"][\"brand:en\"=\"Berlitz\"][\"brand:ja\"=\"\u30d9\u30eb\u30ea\u30c3\u30c4\"][\"brand:ja-Hira\"=\"\u3079\u308b\u308a\u3063\u3064\"][\"brand:wikidata\"=\"Q4892545\"][\"name\"=\"\u30d9\u30eb\u30ea\u30c3\u30c4\"][\"name:en\"=\"Berlitz\"][\"name:ja\"=\"\u30d9\u30eb\u30ea\u30c3\u30c4\"][\"name:ja-Hira\"=\"\u3079\u308b\u308a\u3063\u3064\"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Berlitz_Sprachschulen_logo.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
-    style: function (feature) {
-        var key_regex = /^name$/
-        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-        var name = feature.get(name_key) || '';
-        var fill = new ol.style.Fill({
-            color: 'rgba(255,0,0,0.4)'
-        });
-        var stroke = new ol.style.Stroke({
-            color: 'rgba(255,0,0,1)',
-            width: 1
-        });
-        var style = new ol.style.Style({
-            image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Berlitz_Sprachschulen_logo.svg",
-                scale:0.30
-            }),
-            text: new ol.style.Text({
-                text: name,
-                offsetX : 7,
-                offsetY : -12,
-                fill: new ol.style.Fill({
-                    color: 'rgba(0,0,0,1)'
-                }),
-            }),
-            fill: fill,
-            stroke: stroke
-        });
-        return style;
-    }
-},
-{
-    group: getTranslation('language_school'),
-	title: "\u5730\u7403\u6751\u6587\u6559\u6a5f\u69cb",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"language_school\"][\"brand\"=\"\u5730\u7403\u6751\"][\"brand:en\"=\"Global Village Organization\"][\"brand:wikidata\"=\"Q65681329\"][\"brand:zh\"=\"\u5730\u7403\u6751\"][\"language:en\"=\"main\"][\"language:ja\"=\"yes\"][\"language:ko\"=\"yes\"][\"name\"=\"\u5730\u7403\u6751\"][\"name:en\"=\"Global Village Organization\"][\"name:zh\"=\"\u5730\u7403\u6751\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "pudo",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"pudo\"][\"brand:wikidata\"=\"Q116753323\"][\"operator\"=\"The Courier Guy\"][\"operator:wikidata\"=\"Q116753262\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -2667,9 +2775,9 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('language_school'),
-	title: "\u590f\u6069\u82f1\u8a9e\u5b78\u6821",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"language_school\"][\"brand\"=\"\u590f\u6069\u82f1\u8a9e\u5b78\u6821\"][\"brand:en\"=\"Shane English School\"][\"brand:wikidata\"=\"Q17054332\"][\"brand:zh\"=\"\u590f\u6069\u82f1\u8a9e\u5b78\u6821\"][\"language:en\"=\"main\"][\"name\"=\"\u590f\u6069\u82f1\u8a9e\u5b78\u6821\"][\"name:en\"=\"Shane English School\"][\"name:zh\"=\"\u590f\u6069\u82f1\u8a9e\u5b78\u6821\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "PUDO\u30b9\u30c6\u30fc\u30b7\u30e7\u30f3",
+    query: "[out:json][timeout:25];(nwr[\"alt_name\"=\"\u30d7\u30c9\u30fc\u30fb\u30b9\u30c6\u30fc\u30b7\u30e7\u30f3\"][\"amenity\"=\"parcel_locker\"][\"brand\"=\"\u30d7\u30c9\u30fc\"][\"brand:en\"=\"PUDO\"][\"brand:ja\"=\"\u30d7\u30c9\u30fc\"][\"brand:wikidata\"=\"Q86738066\"][\"name\"=\"PUDO\u30b9\u30c6\u30fc\u30b7\u30e7\u30f3\"][\"name:en\"=\"PUDO Station\"][\"name:ja\"=\"PUDO\u30b9\u30c6\u30fc\u30b7\u30e7\u30f3\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -2703,9 +2811,9 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('language_school'),
-	title: "\u590f\u6069\u82f1\u8bed\u5b66\u6821",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"language_school\"][\"brand\"=\"\u590f\u6069\u82f1\u8bed\u5b66\u6821\"][\"brand:en\"=\"Shane English School\"][\"brand:wikidata\"=\"Q17054332\"][\"brand:zh\"=\"\u590f\u6069\u82f1\u8bed\u5b66\u6821\"][\"language:en\"=\"main\"][\"name\"=\"\u590f\u6069\u82f1\u8bed\u5b66\u6821\"][\"name:en\"=\"Shane English School\"][\"name:zh\"=\"\u590f\u6069\u82f1\u8bed\u5b66\u6821\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "PuntoPoste",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"PuntoPoste\"][\"brand:wikidata\"=\"Q110748322\"][\"name\"=\"PuntoPoste\"][\"operator\"=\"Poste Italiane\"][\"operator:wikidata\"=\"Q495026\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -2739,9 +2847,81 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('language_school'),
-	title: "\u5de8\u5320\u6771\u5927\u65e5\u8a9e",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"language_school\"][\"brand\"=\"\u5de8\u5320\u6559\u80b2\"][\"brand:en\"=\"Gjun\"][\"brand:wikidata\"=\"Q11057516\"][\"brand:zh\"=\"\u5de8\u5320\u6559\u80b2\"][\"language:ja\"=\"main\"][\"name\"=\"\u5de8\u5320\u6771\u5927\u65e5\u8a9e\"][\"name:zh\"=\"\u5de8\u5320\u6771\u5927\u65e5\u8a9e\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "Royal Mail",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Royal Mail\"][\"brand:wikidata\"=\"Q638098\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Royal_Mail_LDV.JPG",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Royal_Mail_LDV.JPG",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('parcel_locker'),
+	title: "Rozetka",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Rozetka\"][\"brand:wikidata\"=\"Q12072279\"][\"name\"=\"Rozetka\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/ROZETKA-Logo-L3-B-RGB.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/ROZETKA-Logo-L3-B-RGB.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('parcel_locker'),
+	title: "Ship & Go",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Ship & Go\"][\"brand:wikidata\"=\"Q117327750\"][\"name\"=\"Cargus Ship & Go\"][\"operator\"=\"Cargus\"][\"operator:wikidata\"=\"Q12723442\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -2775,9 +2955,9 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('language_school'),
-	title: "\u5de8\u5320\u7f8e\u8a9e",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"language_school\"][\"brand\"=\"\u5de8\u5320\u6559\u80b2\"][\"brand:en\"=\"Gjun\"][\"brand:wikidata\"=\"Q11057516\"][\"brand:zh\"=\"\u5de8\u5320\u6559\u80b2\"][\"language:en\"=\"main\"][\"name\"=\"\u5de8\u5320\u7f8e\u8a9e\"][\"name:en\"=\"Gjun English\"][\"name:zh\"=\"\u5de8\u5320\u7f8e\u8a9e\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "Smartpost",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Smartpost\"][\"brand:wikidata\"=\"Q7543889\"][\"name\"=\"Smartpost\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -2811,45 +2991,9 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('language_school'),
-	title: "\u65b0\u4e1c\u65b9",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"language_school\"][\"brand\"=\"\u65b0\u4e1c\u65b9\"][\"brand:en\"=\"New Oriental Education\"][\"brand:wikidata\"=\"Q13631921\"][\"brand:zh\"=\"\u65b0\u4e1c\u65b9\"][\"name\"=\"\u65b0\u4e1c\u65b9\"][\"name:en\"=\"New Oriental Education\"][\"name:zh\"=\"\u65b0\u4e1c\u65b9\"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/New_Oriental.svg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
-    style: function (feature) {
-        var key_regex = /^name$/
-        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-        var name = feature.get(name_key) || '';
-        var fill = new ol.style.Fill({
-            color: 'rgba(255,0,0,0.4)'
-        });
-        var stroke = new ol.style.Stroke({
-            color: 'rgba(255,0,0,1)',
-            width: 1
-        });
-        var style = new ol.style.Style({
-            image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/New_Oriental.svg",
-                scale:0.30
-            }),
-            text: new ol.style.Text({
-                text: name,
-                offsetX : 7,
-                offsetY : -12,
-                fill: new ol.style.Fill({
-                    color: 'rgba(0,0,0,1)'
-                }),
-            }),
-            fill: fill,
-            stroke: stroke
-        });
-        return style;
-    }
-},
-{
-    group: getTranslation('language_school'),
-	title: "\u6a31\u82b1\u65e5\u8bed",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"language_school\"][\"brand\"=\"\u6a31\u82b1\u65e5\u8bed\"][\"brand:en\"=\"Sakura JP\"][\"brand:ja\"=\"\u685c\u306b\u307b\u3093\u3054\"][\"brand:wikidata\"=\"Q7403164\"][\"brand:zh\"=\"\u6a31\u82b1\u65e5\u8bed\"][\"name\"=\"\u6a31\u82b1\u65e5\u8bed\"][\"name:en\"=\"Sakura JP\"][\"name:ja\"=\"\u685c\u306b\u307b\u3093\u3054\"][\"name:zh\"=\"\u6a31\u82b1\u65e5\u8bed\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "Smartpost Itella",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Smartpost\"][\"brand:wikidata\"=\"Q7543889\"][\"operator\"=\"Itella\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -2883,9 +3027,9 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('library'),
-	title: "CCRLS",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"library\"][\"brand\"=\"Chemeketa Cooperative Regional Library Service\"][\"brand:short\"=\"CCRLS\"][\"brand:wikidata\"=\"Q55075378\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "SmartPosti",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"SmartPosti\"][\"brand:wikidata\"=\"Q132157239\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -2919,9 +3063,9 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('library'),
-	title: "LEO",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"library\"][\"brand\"=\"Libraries of Eastern Oregon\"][\"brand:short\"=\"LEO\"][\"brand:wikidata\"=\"Q108936556\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "Speedy",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Speedy\"][\"brand:wikidata\"=\"Q131312685\"][\"name\"=\"Speedy\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -2955,9 +3099,9 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('library'),
-	title: "LINCC",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"library\"][\"brand\"=\"Libraries in Clackamas County\"][\"brand:short\"=\"LINCC\"][\"brand:wikidata\"=\"Q6542507\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "Tamburi",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Tamburi\"][\"brand:wikidata\"=\"Q125176523\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -2991,9 +3135,45 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('library'),
-	title: "WCCLS",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"library\"][\"brand\"=\"Washington County Cooperative Library Services\"][\"brand:short\"=\"WCCLS\"][\"brand:wikidata\"=\"Q7971759\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "Venipak",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Venipak\"][\"brand:wikidata\"=\"Q124379827\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Venipak_duty_vehicle_in_Jelgava.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Venipak_duty_vehicle_in_Jelgava.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('parcel_locker'),
+	title: "Yeep",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"Yeep\"][\"brand:wikidata\"=\"Q123421114\"][\"name\"=\"Yeep\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -3027,9 +3207,9 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('music_school'),
-	title: "Bach to Rock",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"music_school\"][\"brand\"=\"Bach to Rock\"][\"brand:wikidata\"=\"Q132825628\"][\"name\"=\"Bach to Rock\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "\u0415\u043a\u043e\u043d\u0442\u043e\u043c\u0430\u0442",
+    query: "[out:json][timeout:25];(nwr[\"alt_name\"=\"\u0415\u043a\u043e\u043d\u0442\u043e\u043c\u0430\u0442\"][\"alt_name:bg\"=\"\u0415\u043a\u043e\u043d\u0442\u043e\u043c\u0430\u0442\"][\"alt_name:en\"=\"Econtomat\"][\"amenity\"=\"parcel_locker\"][\"brand\"=\"\u0415\u043a\u043e\u043d\u0442\"][\"brand:wikidata\"=\"Q12279603\"][\"name\"=\"\u0415\u043a\u043e\u043d\u0442\"][\"name:bg\"=\"\u0415\u043a\u043e\u043d\u0442\"][\"name:en\"=\"Econt\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -3063,9 +3243,117 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('music_school'),
-	title: "School of Rock",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"music_school\"][\"brand\"=\"School of Rock\"][\"brand:wikidata\"=\"Q7756376\"][\"name\"=\"School of Rock\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "\u0415\u043f\u0456\u0446\u0435\u043d\u0442\u0440 \u041a",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"\u0415\u043f\u0456\u0446\u0435\u043d\u0442\u0440 \u041a\"][\"brand:wikidata\"=\"Q4532244\"][\"name\"=\"\u0415\u043f\u0456\u0446\u0435\u043d\u0442\u0440 \u041a\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Word_epic_cent.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Word_epic_cent.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('parcel_locker'),
+	title: "\u049a\u0430\u0437\u043f\u043e\u0448\u0442\u0430",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"\u049a\u0430\u0437\u043f\u043e\u0448\u0442\u0430\"][\"brand:en\"=\"Kazpost\"][\"brand:kk\"=\"\u049a\u0430\u0437\u043f\u043e\u0448\u0442\u0430\"][\"brand:ru\"=\"\u041a\u0430\u0437\u043f\u043e\u0447\u0442\u0430\"][\"brand:wikidata\"=\"Q746263\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/QazPost_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/QazPost_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('parcel_locker'),
+	title: "\u041d\u043e\u0432\u0430 \u041f\u043e\u0448\u0442\u0430",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"\u041d\u043e\u0432\u0430 \u041f\u043e\u0448\u0442\u0430\"][\"brand:wikidata\"=\"Q12133863\"][\"name\"=\"\u041d\u043e\u0432\u0430 \u041f\u043e\u0448\u0442\u0430\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Nova_Poshta_2022_logo.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Nova_Poshta_2022_logo.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('parcel_locker'),
+	title: "\u041e\u043c\u043d\u0438\u0421\u0414\u042d\u041a",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"\u041e\u043c\u043d\u0438\u0421\u0414\u042d\u041a\"][\"brand:en\"=\"OmniCEDK\"][\"brand:ru\"=\"\u041e\u043c\u043d\u0438\u0421\u0414\u042d\u041a\"][\"brand:wikidata\"=\"Q110240113\"][\"name\"=\"\u041e\u043c\u043d\u0438\u0421\u0414\u042d\u041a\"][\"name:en\"=\"OmniCDEK\"][\"name:ru\"=\"\u041e\u043c\u043d\u0438\u0421\u0414\u042d\u041a\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -3099,10 +3387,10 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('music_school'),
-	title: "Yamaha\u97f3\u6a02\u6559\u5ba4",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"music_school\"][\"brand\"=\"Yamaha\u97f3\u6a02\u6559\u5ba4\"][\"brand:en\"=\"Yamaha Music School\"][\"brand:ja\"=\"\u30e4\u30de\u30cf\u97f3\u697d\u6559\u5ba4\"][\"brand:wikidata\"=\"Q90327852\"][\"brand:zh\"=\"Yamaha\u97f3\u6a02\u6559\u5ba4\"][\"name\"=\"Yamaha\u97f3\u6a02\u6559\u5ba4\"][\"name:en\"=\"Yamaha Music School\"][\"name:ja\"=\"\u30e4\u30de\u30cf\u97f3\u697d\u6559\u5ba4\"][\"name:zh\"=\"Yamaha\u97f3\u6a02\u6559\u5ba4\"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Praha_Lhotka_Ve_Lhotce_18_hudebni_skola.jpg",
+    group: getTranslation('parcel_locker'),
+	title: "\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438\"][\"brand:en\"=\"Russian Post\"][\"brand:ru\"=\"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438\"][\"brand:wikidata\"=\"Q1502763\"][\"name\"=\"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438\"][\"name:en\"=\"Russian Post\"][\"name:ru\"=\"\u041f\u043e\u0447\u0442\u0430 \u0420\u043e\u0441\u0441\u0438\u0438\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Russian_Post_wordmark.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
         var key_regex = /^name$/
@@ -3117,7 +3405,7 @@ export function educationOverlays() {
         });
         var style = new ol.style.Style({
             image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Praha_Lhotka_Ve_Lhotce_18_hudebni_skola.jpg",
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Russian_Post_wordmark.svg",
                 scale:0.30
             }),
             text: new ol.style.Text({
@@ -3135,45 +3423,9 @@ export function educationOverlays() {
     }
 },
 {
-    group: getTranslation('music_school'),
-	title: "\u30e4\u30de\u30cf\u97f3\u697d\u6559\u5ba4",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"music_school\"][\"brand\"=\"\u30e4\u30de\u30cf\u97f3\u697d\u6559\u5ba4\"][\"brand:en\"=\"Yamaha Music School\"][\"brand:ja\"=\"\u30e4\u30de\u30cf\u97f3\u697d\u6559\u5ba4\"][\"brand:ja-Latn\"=\"Yamaha Ongaku Ky\u014dshitsu\"][\"brand:wikidata\"=\"Q90327852\"][\"name\"=\"\u30e4\u30de\u30cf\u97f3\u697d\u6559\u5ba4\"][\"name:en\"=\"Yamaha Music School\"][\"name:ja\"=\"\u30e4\u30de\u30cf\u97f3\u697d\u6559\u5ba4\"][\"name:ja-Latn\"=\"Yamaha Ongaku Ky\u014dshitsu\"]({{bbox}});node(w););out meta;",
-    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Praha_Lhotka_Ve_Lhotce_18_hudebni_skola.jpg",
-    iconStyle: "background-color:rgba(255,255,255,0.4)",
-    style: function (feature) {
-        var key_regex = /^name$/
-        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-        var name = feature.get(name_key) || '';
-        var fill = new ol.style.Fill({
-            color: 'rgba(255,0,0,0.4)'
-        });
-        var stroke = new ol.style.Stroke({
-            color: 'rgba(255,0,0,1)',
-            width: 1
-        });
-        var style = new ol.style.Style({
-            image: new ol.style.Icon({
-                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Praha_Lhotka_Ve_Lhotce_18_hudebni_skola.jpg",
-                scale:0.30
-            }),
-            text: new ol.style.Text({
-                text: name,
-                offsetX : 7,
-                offsetY : -12,
-                fill: new ol.style.Fill({
-                    color: 'rgba(0,0,0,1)'
-                }),
-            }),
-            fill: fill,
-            stroke: stroke
-        });
-        return style;
-    }
-},
-{
-    group: getTranslation('music_school'),
-	title: "\u6416\u6efe\u6559\u5ba4",
-    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"music_school\"][\"brand\"=\"\u6416\u6efe\u6559\u5ba4\"][\"brand:en\"=\"School of Rock\"][\"brand:wikidata\"=\"Q7756376\"][\"brand:zh\"=\"\u6416\u6efe\u6559\u5ba4\"][\"name\"=\"\u6416\u6efe\u6559\u5ba4\"][\"name:en\"=\"School of Rock\"][\"name:zh\"=\"\u6416\u6efe\u6559\u5ba4\"]({{bbox}});node(w););out meta;",
+    group: getTranslation('parcel_locker'),
+	title: "\u041f\u043e\u0448\u0442\u0438\u043d \u043f\u0430\u043a\u0435\u0442\u043e\u043c\u0430\u0442",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"\u041f\u043e\u0448\u0442\u0438\u043d \u043f\u0430\u043a\u0435\u0442\u043e\u043c\u0430\u0442\"][\"name\"=\"\u041f\u043e\u0448\u0442\u0438\u043d \u043f\u0430\u043a\u0435\u0442\u043e\u043c\u0430\u0442\"][\"name:sr\"=\"\u041f\u043e\u0448\u0442\u0438\u043d \u043f\u0430\u043a\u0435\u0442\u043e\u043c\u0430\u0442\"][\"name:sr-Latn\"=\"Po\u0161tin paketomat\"][\"operator\"=\"\u041f\u043e\u0448\u0442\u0430 \u0421\u0440\u0431\u0438\u0458\u0435\"][\"operator:wikidata\"=\"Q769311\"]({{bbox}});node(w););out meta;",
     iconSrc: "src/img/logos/generic.svg",
     iconStyle: "background-color:rgba(255,255,255,0.4)",
     style: function (feature) {
@@ -3204,7 +3456,367 @@ export function educationOverlays() {
             stroke: stroke
         });
         return style;
-		
+    }
+},
+{
+    group: getTranslation('parcel_locker'),
+	title: "\u041f\u0440\u043e\u0434\u0443\u043a\u0442\u043e\u043c\u0430\u0442 \u0423\u0442\u043a\u043e\u043d\u043e\u0441",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"\u041f\u0440\u043e\u0434\u0443\u043a\u0442\u043e\u043c\u0430\u0442 \u0423\u0442\u043a\u043e\u043d\u043e\u0441\"][\"name\"=\"\u041f\u0440\u043e\u0434\u0443\u043a\u0442\u043e\u043c\u0430\u0442 \u0423\u0442\u043a\u043e\u043d\u043e\u0441\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('parcel_locker'),
+	title: "\u0421\u0414\u042d\u041a",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"\u0421\u0414\u042d\u041a\"][\"name\"=\"\u0421\u0414\u042d\u041a\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('parcel_locker'),
+	title: "\u0425\u0430\u043b\u0432\u0430",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"\u0425\u0430\u043b\u0432\u0430\"][\"name\"=\"\u0425\u0430\u043b\u0432\u0430\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('parcel_locker'),
+	title: "\u042f\u043d\u0434\u0435\u043a\u0441.\u041c\u0430\u0440\u043a\u0435\u0442",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"\u042f\u043d\u0434\u0435\u043a\u0441.\u041c\u0430\u0440\u043a\u0435\u0442\"][\"name\"=\"\u042f\u043d\u0434\u0435\u043a\u0441.\u041c\u0430\u0440\u043a\u0435\u0442\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('parcel_locker'),
+	title: "\u306f\u3053\u307d\u3059",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"\u306f\u3053\u307d\u3059\"][\"brand:en\"=\"HAKO POST\"][\"brand:ja\"=\"\u306f\u3053\u307d\u3059\"][\"brand:wikidata\"=\"Q117428085\"][\"name\"=\"\u306f\u3053\u307d\u3059\"][\"name:en\"=\"Hako Post\"][\"name:ja\"=\"\u306f\u3053\u307d\u3059\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Hako_Post_(Aoba_Post_Office).jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Hako_Post_(Aoba_Post_Office).jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('parcel_locker'),
+	title: "\u4e30\u5de2",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"\u4e30\u5de2\"][\"brand:en\"=\"Hive Box\"][\"brand:wikidata\"=\"Q96076112\"][\"brand:zh\"=\"\u4e30\u5de2\"][\"name\"=\"\u4e30\u5de2\"][\"name:en\"=\"Hive Box\"][\"name:zh\"=\"\u4e30\u5de2\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('parcel_locker'),
+	title: "\u667a\u90f5\u5bc4 iPostal Kiosk",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"\u9999\u6e2f\u90f5\u653f Hongkong Post\"][\"brand:en\"=\"Hongkong Post\"][\"brand:wikidata\"=\"Q196631\"][\"brand:zh\"=\"\u9999\u6e2f\u90f5\u653f\"][\"name\"=\"\u667a\u90f5\u5bc4 iPostal Kiosk\"][\"name:en\"=\"iPostal Kiosk\"][\"name:zh\"=\"\u667a\u90f5\u5bc4\"][\"operator\"=\"\u9999\u6e2f\u90f5\u653f Hongkong Post\"][\"operator:en\"=\"Hongkong Post\"][\"operator:wikidata\"=\"Q196631\"][\"operator:zh\"=\"\u9999\u6e2f\u90f5\u653f\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/HK_CWB_Postmen_and_Post_car.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/HK_CWB_Postmen_and_Post_car.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('parcel_locker'),
+	title: "\u667a\u90f5\u7ad9 iPostal Station",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"\u9999\u6e2f\u90f5\u653f Hongkong Post\"][\"brand:en\"=\"Hongkong Post\"][\"brand:wikidata\"=\"Q196631\"][\"brand:zh\"=\"\u9999\u6e2f\u90f5\u653f\"][\"name\"=\"\u667a\u90f5\u7ad9 iPostal Station\"][\"name:en\"=\"iPostal Station\"][\"name:zh\"=\"\u667a\u90f5\u7ad9\"][\"operator\"=\"\u9999\u6e2f\u90f5\u653f Hongkong Post\"][\"operator:en\"=\"Hongkong Post\"][\"operator:wikidata\"=\"Q196631\"][\"operator:zh\"=\"\u9999\u6e2f\u90f5\u653f\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/HK_CWB_Postmen_and_Post_car.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/HK_CWB_Postmen_and_Post_car.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('parcel_locker'),
+	title: "\u8766\u76ae\u5e97\u5230\u5e97",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"\u8766\u76ae\u5e97\u5230\u5e97\"][\"brand:wikidata\"=\"Q109676747\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('parcel_locker'),
+	title: "\u9806\u8c50\u81ea\u52a9\u6ac3 SF Locker",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parcel_locker\"][\"brand\"=\"\u9806\u8c50\u901f\u904b SF Express\"][\"brand:en\"=\"SF Express\"][\"brand:wikidata\"=\"Q7390019\"][\"brand:zh\"=\"\u9806\u8c50\u901f\u904b\"][\"name\"=\"\u9806\u8c50\u81ea\u52a9\u6ac3 SF Locker\"][\"name:en\"=\"SF Locker\"][\"name:zh\"=\"\u9806\u8c50\u81ea\u52a9\u6ac3\"][\"operator\"=\"\u9806\u8c50\u901f\u904b SF Express\"][\"operator:en\"=\"SF Express\"][\"operator:wikidata\"=\"Q7390019\"][\"operator:zh\"=\"\u9806\u8c50\u901f\u904b\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/HK_SW_\u4e0a\u74b0_Sheung_Wan_\u6587\u54b8\u8857_Bonham_Strand_shops_n_buildings_March_2020_SS2_16.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/HK_SW_\u4e0a\u74b0_Sheung_Wan_\u6587\u54b8\u8857_Bonham_Strand_shops_n_buildings_March_2020_SS2_16.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+
             }
         }
     ];

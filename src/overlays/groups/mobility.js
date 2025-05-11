@@ -42480,6 +42480,150 @@ export function mobilityOverlays() {
             stroke: stroke
         });
         return style;
+    }
+},
+{
+    group: getTranslation('parking'),
+	title: "D-Parking",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parking\"][\"brand\"=\"D-Parking\"][\"brand:en\"=\"D-Parking\"][\"brand:ja\"=\"D\u30d1\u30fc\u30ad\u30f3\u30b0\"][\"brand:wikidata\"=\"Q117337694\"][\"fee\"=\"yes\"][\"name\"=\"D\u30d1\u30fc\u30ad\u30f3\u30b0\"][\"name:en\"=\"D-Parking\"][\"name:ja\"=\"D\u30d1\u30fc\u30ad\u30f3\u30b0\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('parking'),
+	title: "JustPark",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parking\"][\"brand\"=\"JustPark\"][\"brand:wikidata\"=\"Q17143517\"][\"fee\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/JustPark_Black-Green_Logo.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/JustPark_Black-Green_Logo.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('parking'),
+	title: "\u4fe5\u4ead\u505c\u8eca",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parking\"][\"brand\"=\"\u4fe5\u4ead\u505c\u8eca\"][\"brand:en\"=\"youparking\"][\"brand:wikidata\"=\"Q132009628\"][\"brand:zh\"=\"\u4fe5\u4ead\u505c\u8eca\"][\"fee\"=\"yes\"][\"name\"=\"\u4fe5\u4ead\u505c\u8eca\"][\"name:en\"=\"youparking\"][\"name:zh\"=\"\u4fe5\u4ead\u505c\u8eca\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('parking'),
+	title: "\u548c\u96f2\u884c\u52d5",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"parking\"][\"brand\"=\"\u548c\u96f2\u884c\u52d5\"][\"brand:en\"=\"Hi parking\"][\"brand:wikidata\"=\"Q132008893\"][\"brand:zh\"=\"\u548c\u96f2\u884c\u52d5\"][\"fee\"=\"yes\"][\"name\"=\"\u548c\u96f2\u884c\u52d5\"][\"name:en\"=\"Hi parking\"][\"name:zh\"=\"\u548c\u96f2\u884c\u52d5\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;		
             }
         }
     ];
