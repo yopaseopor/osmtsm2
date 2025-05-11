@@ -17748,6 +17748,150 @@ export function mobilityOverlays() {
             stroke: stroke
         });
         return style;
+    }
+},
+{
+    group: getTranslation('driving_school'),
+    title: "\u00c9cole de Conduite Fran\u00e7aise",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"driving_school\"][\"brand\"=\"ECF\"][\"brand:wikidata\"=\"Q114870266\"][\"name\"=\"ECF\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('driving_school'),
+    title: "Galadari",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"driving_school\"][\"brand\"=\"Galadari\"][\"name\"=\"Galadari\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('driving_school'),
+    title: "Pointcode",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"driving_school\"][\"brand\"=\"Pointcode\"][\"brand:wikidata\"=\"Q126912107\"][\"name\"=\"Pointcode\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('driving_school'),
+    title: "Young Drivers of Canada",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"driving_school\"][\"brand\"=\"Young Drivers of Canada\"][\"brand:wikidata\"=\"Q28163093\"][\"name\"=\"Young Drivers of Canada\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
             }
         }
     ];
