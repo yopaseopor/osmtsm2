@@ -35,6 +35,7 @@ export const en = {
 	childcare: 'Child care',
 	cinema: 'Cinema',
 	clinic: 'Clinic',
+	college: 'College',
 	education: 'Education',
 	nightclub: 'Music/Night/Sports bar',
     leisure: 'Leisure',

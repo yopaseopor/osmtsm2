@@ -4,6 +4,7 @@ import { shoppingOverlays } from './groups/shopping.js';
 import { economyOverlays } from './groups/economy.js';
 import { leisureOverlays } from './groups/leisure.js';
 import { mobilityOverlays } from './groups/mobility.js';
+import { othersOverlays } from './groups/others.js';
 import { transportOverlays } from './groups/transport.js';
 import { healthOverlays } from './groups/health.js';
 import { educationOverlays } from './groups/education.js';
@@ -23,6 +24,7 @@ export function getAllOverlays() {
 		mobility: mobilityOverlays(), // static for this example
 		education: educationOverlays(),
 		health: healthOverlays(),
+		others: othersOverlays(),
         transport: transportOverlays,
         translated: translatedOverlays || [],
         external: []
