@@ -44,6 +44,7 @@ export const es = {
 	education: 'Educación',
 	fast_food: 'Comida rápida',
 	food_sharing: 'Aprovechar comida',
+			fuel: 'Gasolinera',
 	nightclub: 'Bar de copas/deportes/musical',
     leisure: 'Ocio',
     food: 'Comida y Bebida',
