@@ -3204,6 +3204,1338 @@ export function educationOverlays() {
             stroke: stroke
         });
         return style;
+    }
+},
+{
+    group: getTranslation('prep_school'),
+	title: "Best Brains",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"prep_school\"][\"brand\"=\"Best Brains\"][\"brand:wikidata\"=\"Q130507507\"][\"name\"=\"Best Brains\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('prep_school'),
+	title: "C2 Education",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"prep_school\"][\"brand\"=\"C2 Education\"][\"brand:wikidata\"=\"Q5008097\"][\"name\"=\"C2 Education\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/C2-education-company-logo.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/C2-education-company-logo.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('prep_school'),
+	title: "Huntington Learning Center",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"prep_school\"][\"brand\"=\"Huntington Learning Center\"][\"brand:wikidata\"=\"Q5945399\"][\"name\"=\"Huntington Learning Center\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('prep_school'),
+	title: "Kumon (International)",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"prep_school\"][\"brand\"=\"Kumon\"][\"brand:wikidata\"=\"Q142054\"][\"name\"=\"Kumon\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Kumon_Method_Logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kumon_Method_Logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('prep_school'),
+	title: "KUMON (\u65e5\u672c)",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"prep_school\"][\"brand\"=\"KUMON\"][\"brand:wikidata\"=\"Q142054\"][\"name\"=\"KUMON\"][\"name:ja\"=\"\u516c\u6587\"][\"name:ja-Hira\"=\"\u304f\u3082\u3093\"][\"name:ja-Latn\"=\"KUMON\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Kumon_Method_Logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kumon_Method_Logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('prep_school'),
+	title: "Mathnasium",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"prep_school\"][\"brand\"=\"Mathnasium\"][\"brand:wikidata\"=\"Q6787302\"][\"name\"=\"Mathnasium\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Mathnasium_logo.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Mathnasium_logo.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('prep_school'),
+	title: "Oxford Learning",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"prep_school\"][\"brand\"=\"Oxford Learning\"][\"brand:wikidata\"=\"Q126617389\"][\"name\"=\"Oxford Learning\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('prep_school'),
+	title: "Russian School of Mathematics",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"prep_school\"][\"brand\"=\"Russian School of Mathematics\"][\"brand:wikidata\"=\"Q7382122\"][\"name\"=\"Russian School of Mathematics\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('prep_school'),
+	title: "Sch\u00fclerhilfe",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"prep_school\"][\"brand\"=\"Sch\u00fclerhilfe\"][\"brand:wikidata\"=\"Q2259702\"][\"name\"=\"Sch\u00fclerhilfe\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Sch\u00fclerhilfe_(Ochsenhausen).jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Sch\u00fclerhilfe_(Ochsenhausen).jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('prep_school'),
+	title: "Studienkreis",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"prep_school\"][\"brand\"=\"Studienkreis\"][\"brand:wikidata\"=\"Q2358555\"][\"name\"=\"Studienkreis\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Studienkreis_Logo_negativ_rot.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Studienkreis_Logo_negativ_rot.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('prep_school'),
+	title: "Sylvan",
+    query: "[out:json][timeout:25];(nwr[\"alt_name\"=\"Sylvan Learning Center\"][\"amenity\"=\"prep_school\"][\"brand\"=\"Sylvan\"][\"brand:wikidata\"=\"Q7660663\"][\"name\"=\"Sylvan\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/US_2016_SYLVAN_LOGO.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/US_2016_SYLVAN_LOGO.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('prep_school'),
+	title: "\u4e5d\u5927\u9032\u5b66\u4f1a",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"prep_school\"][\"brand\"=\"\u9032\u5b66\u4f1a\"][\"brand:en\"=\"SHINGAKUKAI\"][\"brand:ja\"=\"\u9032\u5b66\u4f1a\"][\"brand:wikidata\"=\"Q11640144\"][\"name\"=\"\u4e5d\u5927\u9032\u5b66\u4f1a\"][\"name:en\"=\"Kyudai Shingakukai\"][\"name:ja\"=\"\u4e5d\u5927\u9032\u5b66\u4f1a\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('prep_school'),
+	title: "\u4eac\u5927\u9032\u5b66\u4f1a",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"prep_school\"][\"brand\"=\"\u9032\u5b66\u4f1a\"][\"brand:en\"=\"SHINGAKUKAI\"][\"brand:ja\"=\"\u9032\u5b66\u4f1a\"][\"brand:wikidata\"=\"Q11640144\"][\"name\"=\"\u4eac\u5927\u9032\u5b66\u4f1a\"][\"name:en\"=\"Kyodai Shingakukai\"][\"name:ja\"=\"\u4eac\u5927\u9032\u5b66\u4f1a\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('prep_school'),
+	title: "\u4ed9\u53f0\u7df4\u6210\u4f1a",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"prep_school\"][\"brand\"=\"\u7df4\u6210\u4f1a\"][\"brand:en\"=\"RENSEIKAI\"][\"brand:ja\"=\"\u7df4\u6210\u4f1a\"][\"brand:wikidata\"=\"Q11608020\"][\"name\"=\"\u4ed9\u53f0\u7df4\u6210\u4f1a\"][\"name:en\"=\"Sendai Renseikai\"][\"name:ja\"=\"\u4ed9\u53f0\u7df4\u6210\u4f1a\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('prep_school'),
+	title: "\u4f73\u97f3\u82f1\u8a9e",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"prep_school\"][\"brand\"=\"\u4f73\u97f3\u82f1\u8a9e\"][\"brand:en\"=\"Joy English\"][\"brand:ja\"=\"\u4f73\u97f3\u82f1\u8a9e\"][\"brand:wikidata\"=\"Q10887049\"][\"name\"=\"\u4f73\u97f3\u82f1\u8a9e\"][\"name:en\"=\"Joy English\"][\"name:ja\"=\"\u4f73\u97f3\u82f1\u8a9e\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('prep_school'),
+	title: "\u500b\u5225\u6559\u5ba4\u306e\u30c8\u30e9\u30a4",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"prep_school\"][\"brand\"=\"\u500b\u5225\u6559\u5ba4\u306e\u30c8\u30e9\u30a4\"][\"brand:ja\"=\"\u500b\u5225\u6559\u5ba4\u306e\u30c8\u30e9\u30a4\"][\"brand:wikidata\"=\"Q11455435\"][\"name\"=\"\u500b\u5225\u6559\u5ba4\u306e\u30c8\u30e9\u30a4\"][\"name:ja\"=\"\u500b\u5225\u6559\u5ba4\u306e\u30c8\u30e9\u30a4\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('prep_school'),
+	title: "\u51fd\u9928\u7df4\u6210\u4f1a",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"prep_school\"][\"brand\"=\"\u7df4\u6210\u4f1a\"][\"brand:en\"=\"RENSEIKAI\"][\"brand:ja\"=\"\u7df4\u6210\u4f1a\"][\"brand:wikidata\"=\"Q11608020\"][\"name\"=\"\u51fd\u9928\u7df4\u6210\u4f1a\"][\"name:en\"=\"Hakodate Renseikai\"][\"name:ja\"=\"\u51fd\u9928\u7df4\u6210\u4f1a\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('prep_school'),
+	title: "\u5317\u5927\u5b66\u529b\u5897\u9032\u4f1a",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"prep_school\"][\"brand\"=\"\u9032\u5b66\u4f1a\"][\"brand:en\"=\"SHINGAKUKAI\"][\"brand:ja\"=\"\u9032\u5b66\u4f1a\"][\"brand:wikidata\"=\"Q11640144\"][\"name\"=\"\u5317\u5927\u5b66\u529b\u5897\u9032\u4f1a\"][\"name:en\"=\"Hokudai Gakuryoku Zoshinkai\"][\"name:ja\"=\"\u5317\u5927\u5b66\u529b\u5897\u9032\u4f1a\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('prep_school'),
+	title: "\u5317\u898b\u7df4\u6210\u4f1a",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"prep_school\"][\"brand\"=\"\u7df4\u6210\u4f1a\"][\"brand:en\"=\"RENSEIKAI\"][\"brand:ja\"=\"\u7df4\u6210\u4f1a\"][\"brand:wikidata\"=\"Q11608020\"][\"name\"=\"\u5317\u898b\u7df4\u6210\u4f1a\"][\"name:en\"=\"Kitami Renseikai\"][\"name:ja\"=\"\u5317\u898b\u7df4\u6210\u4f1a\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('prep_school'),
+	title: "\u540d\u5927\u9032\u5b66\u4f1a",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"prep_school\"][\"brand\"=\"\u9032\u5b66\u4f1a\"][\"brand:en\"=\"SHINGAKUKAI\"][\"brand:ja\"=\"\u9032\u5b66\u4f1a\"][\"brand:wikidata\"=\"Q11640144\"][\"name\"=\"\u540d\u5927\u9032\u5b66\u4f1a\"][\"name:en\"=\"Meidai Shingakukai\"][\"name:ja\"=\"\u540d\u5927\u9032\u5b66\u4f1a\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('prep_school'),
+	title: "\u5c0f\u6a3d\u7df4\u6210\u4f1a",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"prep_school\"][\"brand\"=\"\u7df4\u6210\u4f1a\"][\"brand:en\"=\"RENSEIKAI\"][\"brand:ja\"=\"\u7df4\u6210\u4f1a\"][\"brand:wikidata\"=\"Q11608020\"][\"name\"=\"\u5c0f\u6a3d\u7df4\u6210\u4f1a\"][\"name:en\"=\"Otaru Renseikai\"][\"name:ja\"=\"\u5c0f\u6a3d\u7df4\u6210\u4f1a\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('prep_school'),
+	title: "\u5c71\u5f62\u7df4\u6210\u4f1a",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"prep_school\"][\"brand\"=\"\u7df4\u6210\u4f1a\"][\"brand:en\"=\"RENSEIKAI\"][\"brand:ja\"=\"\u7df4\u6210\u4f1a\"][\"brand:wikidata\"=\"Q11608020\"][\"name\"=\"\u5c71\u5f62\u7df4\u6210\u4f1a\"][\"name:en\"=\"Yamagata Renseikai\"][\"name:ja\"=\"\u5c71\u5f62\u7df4\u6210\u4f1a\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('prep_school'),
+	title: "\u5ca9\u898b\u6ca2\u7df4\u6210\u4f1a",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"prep_school\"][\"brand\"=\"\u7df4\u6210\u4f1a\"][\"brand:en\"=\"RENSEIKAI\"][\"brand:ja\"=\"\u7df4\u6210\u4f1a\"][\"brand:wikidata\"=\"Q11608020\"][\"name\"=\"\u5ca9\u898b\u6ca2\u7df4\u6210\u4f1a\"][\"name:en\"=\"Iwamizawa Renseikai\"][\"name:ja\"=\"\u5ca9\u898b\u6ca2\u7df4\u6210\u4f1a\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('prep_school'),
+	title: "\u65ed\u5ddd\u7df4\u6210\u4f1a",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"prep_school\"][\"brand\"=\"\u7df4\u6210\u4f1a\"][\"brand:en\"=\"RENSEIKAI\"][\"brand:ja\"=\"\u7df4\u6210\u4f1a\"][\"brand:wikidata\"=\"Q11608020\"][\"name\"=\"\u65ed\u5ddd\u7df4\u6210\u4f1a\"][\"name:en\"=\"Asahikawa Renseikai\"][\"name:ja\"=\"\u65ed\u5ddd\u7df4\u6210\u4f1a\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('prep_school'),
+	title: "\u660e\u5149\u7fa9\u587e",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"prep_school\"][\"brand\"=\"\u660e\u5149\u7fa9\u587e\"][\"brand:wikidata\"=\"Q11512003\"][\"name\"=\"\u660e\u5149\u7fa9\u587e\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('prep_school'),
+	title: "\u660e\u5149\u7fa9\u587e (\u81fa\u7063)",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"prep_school\"][\"brand\"=\"\u660e\u5149\u7fa9\u587e\"][\"brand:wikidata\"=\"Q11512003\"][\"name\"=\"\u660e\u5149\u7fa9\u587e\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('prep_school'),
+	title: "\u672d\u5e4c\u7df4\u6210\u4f1a",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"prep_school\"][\"brand\"=\"\u7df4\u6210\u4f1a\"][\"brand:en\"=\"RENSEIKAI\"][\"brand:ja\"=\"\u7df4\u6210\u4f1a\"][\"brand:wikidata\"=\"Q11608020\"][\"name\"=\"\u672d\u5e4c\u7df4\u6210\u4f1a\"][\"name:en\"=\"Sapporo Renseikai\"][\"name:ja\"=\"\u672d\u5e4c\u7df4\u6210\u4f1a\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('prep_school'),
+	title: "\u6771\u5317\u5927\u9032\u5b66\u4f1a",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"prep_school\"][\"brand\"=\"\u9032\u5b66\u4f1a\"][\"brand:en\"=\"SHINGAKUKAI\"][\"brand:ja\"=\"\u9032\u5b66\u4f1a\"][\"brand:wikidata\"=\"Q11640144\"][\"name\"=\"\u6771\u5317\u5927\u9032\u5b66\u4f1a\"][\"name:en\"=\"Tohokudai Shingakukai\"][\"name:ja\"=\"\u6771\u5317\u5927\u9032\u5b66\u4f1a\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('prep_school'),
+	title: "\u6771\u5927\u9032\u5b66\u4f1a",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"prep_school\"][\"brand\"=\"\u9032\u5b66\u4f1a\"][\"brand:en\"=\"SHINGAKUKAI\"][\"brand:ja\"=\"\u9032\u5b66\u4f1a\"][\"brand:wikidata\"=\"Q11640144\"][\"name\"=\"\u6771\u5927\u9032\u5b66\u4f1a\"][\"name:en\"=\"Todai Shingakukai\"][\"name:ja\"=\"\u6771\u5927\u9032\u5b66\u4f1a\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('prep_school'),
+	title: "\u6771\u9032\u885b\u661f\u4e88\u5099\u6821",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"prep_school\"][\"brand\"=\"\u6771\u9032\u885b\u661f\u4e88\u5099\u6821\"][\"brand:en\"=\"Toshin Eisei Yobiko\"][\"brand:ja\"=\"\u6771\u9032\u885b\u661f\u4e88\u5099\u6821\"][\"brand:wikidata\"=\"Q11528409\"][\"name\"=\"\u6771\u9032\u885b\u661f\u4e88\u5099\u6821\"][\"name:en\"=\"Toshin Eisei Yobiko\"][\"name:ja\"=\"\u6771\u9032\u885b\u661f\u4e88\u5099\u6821\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('prep_school'),
+	title: "\u6804\u5149\u30bc\u30df\u30ca\u30fc\u30eb",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"prep_school\"][\"brand\"=\"\u6804\u5149\u30bc\u30df\u30ca\u30fc\u30eb\"][\"brand:ja\"=\"\u6804\u5149\u30bc\u30df\u30ca\u30fc\u30eb\"][\"brand:ja-Hira\"=\"\u3048\u3044\u3053\u3046\u305c\u307f\u306a\u30fc\u308b\"][\"brand:ja-Latn\"=\"Eik\u014d Zemin\u0101ru\"][\"brand:wikidata\"=\"Q11535632\"][\"name\"=\"\u6804\u5149\u30bc\u30df\u30ca\u30fc\u30eb\"][\"name:en\"=\"Eikoh Seminar\"][\"name:ja\"=\"\u6804\u5149\u30bc\u30df\u30ca\u30fc\u30eb\"][\"name:ja-Hira\"=\"\u3048\u3044\u3053\u3046\u305c\u307f\u306a\u30fc\u308b\"][\"name:ja-Latn\"=\"Eik\u014d Zemin\u0101ru\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Eikoh_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Eikoh_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('prep_school'),
+	title: "\u6edd\u5ddd\u7df4\u6210\u4f1a",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"prep_school\"][\"brand\"=\"\u7df4\u6210\u4f1a\"][\"brand:en\"=\"RENSEIKAI\"][\"brand:ja\"=\"\u7df4\u6210\u4f1a\"][\"brand:wikidata\"=\"Q11608020\"][\"name\"=\"\u6edd\u5ddd\u7df4\u6210\u4f1a\"][\"name:en\"=\"Takikawa Renseikai\"][\"name:ja\"=\"\u6edd\u5ddd\u7df4\u6210\u4f1a\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('prep_school'),
+	title: "\u755c\u5927\u7df4\u6210\u4f1a",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"prep_school\"][\"brand\"=\"\u7df4\u6210\u4f1a\"][\"brand:en\"=\"RENSEIKAI\"][\"brand:ja\"=\"\u7df4\u6210\u4f1a\"][\"brand:wikidata\"=\"Q11608020\"][\"name\"=\"\u755c\u5927\u7df4\u6210\u4f1a\"][\"name:en\"=\"Chikudai Renseikai\"][\"name:ja\"=\"\u755c\u5927\u7df4\u6210\u4f1a\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('prep_school'),
+	title: "\u79c0\u82f1\u4e88\u5099\u6821",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"prep_school\"][\"brand\"=\"\u79c0\u82f1\u4e88\u5099\u6821\"][\"brand:en\"=\"Shuei-Yobiko\"][\"brand:ja\"=\"\u79c0\u82f1\u4e88\u5099\u6821\"][\"brand:wikidata\"=\"Q11594557\"][\"name\"=\"\u79c0\u82f1\u4e88\u5099\u6821\"][\"name:en\"=\"Shuei Yobiko\"][\"name:ja\"=\"\u79c0\u82f1\u4e88\u5099\u6821\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/SHUEI_YOBIKO_Co.,_Ltd._logo.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/SHUEI_YOBIKO_Co.,_Ltd._logo.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('prep_school'),
+	title: "\u82eb\u5c0f\u7267\u7df4\u6210\u4f1a",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"prep_school\"][\"brand\"=\"\u7df4\u6210\u4f1a\"][\"brand:en\"=\"RENSEIKAI\"][\"brand:ja\"=\"\u7df4\u6210\u4f1a\"][\"brand:wikidata\"=\"Q11608020\"][\"name\"=\"\u82eb\u5c0f\u7267\u7df4\u6210\u4f1a\"][\"name:en\"=\"Tomakomai Renseikai\"][\"name:ja\"=\"\u82eb\u5c0f\u7267\u7df4\u6210\u4f1a\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('prep_school'),
+	title: "\u91e7\u8def\u7df4\u6210\u4f1a",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"prep_school\"][\"brand\"=\"\u7df4\u6210\u4f1a\"][\"brand:en\"=\"RENSEIKAI\"][\"brand:ja\"=\"\u7df4\u6210\u4f1a\"][\"brand:wikidata\"=\"Q11608020\"][\"name\"=\"\u91e7\u8def\u7df4\u6210\u4f1a\"][\"name:en\"=\"Kushiro Renseikai\"][\"name:ja\"=\"\u91e7\u8def\u7df4\u6210\u4f1a\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('prep_school'),
+	title: "\u9752\u68ee\u7df4\u6210\u4f1a",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"prep_school\"][\"brand\"=\"\u7df4\u6210\u4f1a\"][\"brand:en\"=\"RENSEIKAI\"][\"brand:ja\"=\"\u7df4\u6210\u4f1a\"][\"brand:wikidata\"=\"Q11608020\"][\"name\"=\"\u9752\u68ee\u7df4\u6210\u4f1a\"][\"name:en\"=\"Aomori Renseikai\"][\"name:ja\"=\"\u9752\u68ee\u7df4\u6210\u4f1a\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
 		
             }
         }
