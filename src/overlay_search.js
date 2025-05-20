@@ -21,7 +21,7 @@
         }
         // Fallback: Directly add overlays from window.allOverlays if not already present
         if (window.allOverlays) {
-            const groupKeys = ['animal', 'economy', 'mobility', 'education', 'food_drink', 'health', 'leisure', 'logistics', 'shopping', 'transport', 'others'];
+            const groupKeys = ['animal', 'culture', 'economy', 'mobility', 'education', 'food_drink', 'health', 'leisure', 'logistics', 'shopping', 'transport', 'others'];
             groupKeys.forEach(group => {
                 if (Array.isArray(window.allOverlays[group])) {
                     window.allOverlays[group].forEach(o => {

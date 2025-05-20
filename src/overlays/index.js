@@ -5,6 +5,7 @@ import { economyOverlays } from './groups/economy.js';
 import { leisureOverlays } from './groups/leisure.js';
 import { logisticsOverlays } from './groups/logistics.js';
 import { mobilityOverlays } from './groups/mobility.js';
+import { cultureOverlays } from './groups/culture.js';
 import { othersOverlays } from './groups/others.js';
 import { transportOverlays } from './groups/transport.js';
 import { healthOverlays } from './groups/health.js';
@@ -24,6 +25,7 @@ export function getAllOverlays() {
 		leisure: leisureOverlays(), // static for this example
 		logistics: logisticsOverlays(), // static for this example
 		mobility: mobilityOverlays(), // static for this example
+		culture: cultureOverlays(), // static for this example
 		education: educationOverlays(),
 		health: healthOverlays(),
 		others: othersOverlays(),
