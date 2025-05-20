@@ -69,6 +69,7 @@ export const es = {
 	prep_school: 'Academia de repaso',
 	pub: 'Bar',
 	public_bookcase: 'Biblioteca libre',
+	recycling: 'Reciclaje',
     leisure: 'Ocio',
     food: 'Comida y Bebida',
     shopping: 'Compras',
