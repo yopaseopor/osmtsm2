@@ -70,6 +70,7 @@ export const es = {
 	pub: 'Bar',
 	public_bookcase: 'Biblioteca libre',
 	recycling: 'Reciclaje',
+		restaurant: 'Restaurante',
     leisure: 'Ocio',
     food: 'Comida y Bebida',
     shopping: 'Compras',

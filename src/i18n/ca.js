@@ -69,6 +69,7 @@ export const ca = {
 	pub: 'Bar',
 	public_bookcase: 'Biblioteca lliure',
 	recycling: 'Reciclatge',
+		restaurant: 'Restaurant',
 	leisure: 'Oci',
     food: 'Menjar i Beguda',
     shopping: 'Botigues',
