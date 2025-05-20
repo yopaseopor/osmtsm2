@@ -68,6 +68,7 @@ export const en = {
 	post_office: 'Post office',
 	prep_school: 'Cram school',
 	pub: 'Pub',
+	public_bookcase: 'Public bookcase',
     leisure: 'Leisure',
     food: 'Food & Drink',
     shopping: 'Shopping',

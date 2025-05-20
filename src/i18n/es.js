@@ -68,6 +68,7 @@ export const es = {
 	post_office: 'Oficina de correos',
 	prep_school: 'Academia de repaso',
 	pub: 'Bar',
+	public_bookcase: 'Biblioteca libre',
     leisure: 'Ocio',
     food: 'Comida y Bebida',
     shopping: 'Compras',

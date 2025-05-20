@@ -67,6 +67,7 @@ export const ca = {
 	post_office: 'Oficina de correus',
 	prep_school: 'Acadèmia de repàs',
 	pub: 'Bar',
+	public_bookcase: 'Biblioteca lliure',
 	leisure: 'Oci',
     food: 'Menjar i Beguda',
     shopping: 'Botigues',
