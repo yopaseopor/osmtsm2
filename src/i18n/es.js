@@ -67,6 +67,7 @@ export const es = {
 	post_depot: 'Almacén transporte',	
 	post_office: 'Oficina de correos',
 	prep_school: 'Academia de repaso',
+	pub: 'Bar',
     leisure: 'Ocio',
     food: 'Comida y Bebida',
     shopping: 'Compras',

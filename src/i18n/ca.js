@@ -66,6 +66,7 @@ export const ca = {
 	post_depot: 'Magatzem transport',	
 	post_office: 'Oficina de correus',
 	prep_school: 'Acadèmia de repàs',
+	pub: 'Bar',
 	leisure: 'Oci',
     food: 'Menjar i Beguda',
     shopping: 'Botigues',
