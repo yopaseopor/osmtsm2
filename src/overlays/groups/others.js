@@ -3783,6 +3783,42 @@ export function othersOverlays() {
     }
 },
 {
+	group: getTranslation('telephone'),
+	title: "NTT",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"telephone\"][\"brand\"=\"NTT\"][\"brand:en\"=\"Nippon Telegraph and Telephone\"][\"brand:ja\"=\"\u65e5\u672c\u96fb\u4fe1\u96fb\u8a71\u682a\u5f0f\u4f1a\u793e\"][\"brand:short\"=\"NTT\"][\"brand:wikidata\"=\"Q1054787\"][\"name\"=\"NTT\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Nippon_Telegraph_and_Telephone_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Nippon_Telegraph_and_Telephone_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
     group: getTranslation('social_facility'),
 	title: "\u660e\u611b\u6703 Caritas",
     query: "[out:json][timeout:25];(nwr[\"amenity\"=\"social_facility\"][\"brand\"=\"\u660e\u611b\u6703 Caritas\"][\"brand:en\"=\"Caritas\"][\"brand:wikidata\"=\"Q533143\"][\"brand:zh\"=\"\u660e\u611b\u6703\"][\"name\"=\"\u660e\u611b\u6703 Caritas\"][\"name:en\"=\"Caritas\"][\"name:zh\"=\"\u660e\u611b\u6703\"]({{bbox}});node(w););out meta;",
@@ -3817,6 +3853,78 @@ export function othersOverlays() {
         });
         return style;
 
+    }
+},
+{
+    group: getTranslation('trolley_bay'),
+	title: "Chariots",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"trolley_bay\"][\"brand\"=\"Chariots\"][\"name\"=\"Chariots\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('trolley_bay'),
+	title: "Smarte Carte",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"trolley_bay\"][\"brand\"=\"Smarte Carte\"][\"brand:wikidata\"=\"Q7544098\"][\"fee\"=\"yes\"][\"name\"=\"Smarte Carte\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Smarte_Carte_stand_SJC_2019.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Smarte_Carte_stand_SJC_2019.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
 
             }
         }
