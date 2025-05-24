@@ -77,6 +77,8 @@ export const en = {
 	telephone: 'Telephone',
 	training: 'Training',
 	trolley_bay: 'Trolley bay',
+	university: 'University',
+		vehicle_inspection: 'Vehicle Inspection',
     leisure: 'Leisure',
     food: 'Food & Drink',
     shopping: 'Shopping',

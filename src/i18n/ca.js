@@ -76,6 +76,8 @@ export const ca = {
 	telephone: 'Telèfon',
 	training: 'Aprenent',
 	trolley_bay: 'Carros',
+	university: 'Universitat',
+	vehicle_inspection: 'Inspecció de vehicles',
 	leisure: 'Oci',
     food: 'Menjar i Beguda',
     shopping: 'Botigues',
