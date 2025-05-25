@@ -82584,6 +82584,5118 @@ export function food_drinkOverlays() {
             stroke: stroke
         });
         return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "7 Up (Canada/USA)",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"7 Up\"][\"brand:wikidata\"=\"Q270059\"][\"drink:soft_drink\"=\"yes\"][\"name\"=\"7 Up\"][\"vending\"=\"drinks\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/7-up_Logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/7-up_Logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "7up",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"7up\"][\"brand:wikidata\"=\"Q270059\"][\"drink:soft_drink\"=\"yes\"][\"name\"=\"7up\"][\"vending\"=\"drinks\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/7-up_Logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/7-up_Logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Abendzeitung",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Abendzeitung\"][\"brand:wikidata\"=\"Q225076\"][\"vending\"=\"newspapers\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Abendzeitung_M\u00fcnchen_Logo_(2022).svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Abendzeitung_M\u00fcnchen_Logo_(2022).svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Alive Water / \u0416\u0438\u0432\u0430\u044f \u0432\u043e\u0434\u0430",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"\u0416\u0438\u0432\u0430\u044f \u0432\u043e\u0434\u0430\"][\"brand:en\"=\"Alive Water\"][\"brand:ru\"=\"\u0416\u0438\u0432\u0430\u044f \u0432\u043e\u0434\u0430\"][\"brand:wikidata\"=\"Q125924184\"][\"name\"=\"\u0416\u0438\u0432\u0430\u044f \u0432\u043e\u0434\u0430\"][\"name:en\"=\"Alive Water\"][\"name:ru\"=\"\u0416\u0438\u0432\u0430\u044f \u0432\u043e\u0434\u0430\"][\"vending\"=\"water\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "AmeriGas",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"AmeriGas\"][\"brand:wikidata\"=\"Q23130318\"][\"fuel:lpg\"=\"yes\"][\"name\"=\"AmeriGas\"][\"vending\"=\"gas\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/AmeriGas_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/AmeriGas_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Aqvagold",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Aqvagold\"][\"brand:wikidata\"=\"Q132127407\"][\"vending\"=\"water\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Automat \u015aKUP",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Automat \u015aKUP\"][\"brand:wikidata\"=\"Q24945427\"][\"name\"=\"Automat \u015aKUP\"][\"vending\"=\"public_transport_tickets\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/\u015aKUP_card_-_front.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/\u015aKUP_card_-_front.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "BAHART jegykiad\u00f3 automata",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"BAHART jegykiad\u00f3 automata\"][\"vending\"=\"public_transport_tickets\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "belloo",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"belloo\"][\"brand:wikidata\"=\"Q98526006\"][\"vending\"=\"excrement_bags\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Belv\u00e1ros-Lip\u00f3tv\u00e1ros parkol\u00e1s",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Belv\u00e1ros-Lip\u00f3tv\u00e1ros parkol\u00e1s\"][\"vending\"=\"parking_tickets\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Best Buy Express",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Best Buy Express\"][\"brand:wikidata\"=\"Q533415\"][\"name\"=\"Best Buy Express\"][\"vending\"=\"electronics\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Best_Buy_logo_2018.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Best_Buy_logo_2018.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Bild",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Bild\"][\"brand:wikidata\"=\"Q156203\"][\"vending\"=\"newspapers\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_BILD.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_BILD.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "BioBag",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"BioBag\"][\"brand:wikidata\"=\"Q115613513\"][\"vending\"=\"excrement_bags\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "BKK jegy- \u00e9s b\u00e9rletkiad\u00f3 automata",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"BKK jegy- \u00e9s b\u00e9rletkiad\u00f3 automata\"][\"brand:wikidata\"=\"Q130377585\"][\"operator\"=\"BKK\"][\"operator:wikidata\"=\"Q608917\"][\"vending\"=\"public_transport_tickets\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Blue Rhino",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Blue Rhino\"][\"brand:wikidata\"=\"Q65681213\"][\"fuel:lpg\"=\"yes\"][\"name\"=\"Blue Rhino\"][\"vending\"=\"gas\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "BOSS",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"BOSS\"][\"brand:en\"=\"BOSS\"][\"brand:ja\"=\"\u30dc\u30b9\"][\"brand:wikidata\"=\"Q4947502\"][\"name\"=\"BOSS\"][\"name:en\"=\"BOSS\"][\"name:ja\"=\"\u30dc\u30b9\"][\"vending\"=\"coffee\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Suntory_Boss_Cafe_au_Lait_canned_coffee.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Suntory_Boss_Cafe_au_Lait_canned_coffee.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "BottleDrop",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"BottleDrop\"][\"brand:wikidata\"=\"Q107673127\"][\"name\"=\"BottleDrop\"][\"operator\"=\"Oregon Beverage Recycling Cooperative\"][\"recycling:cans\"=\"yes\"][\"recycling:glass_bottles\"=\"yes\"][\"recycling:plastic_bottles\"=\"yes\"][\"vending\"=\"bottle_return\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Bravo",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Bravo\"][\"vending\"=\"excrement_bags\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Break & Wash",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Break & Wash\"][\"brand:wikidata\"=\"Q125499503\"][\"name\"=\"Break & Wash\"][\"vending\"=\"laundry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Budapest II. ker\u00fclet parkol\u00e1s",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Budapest II. ker\u00fclet parkol\u00e1s\"][\"vending\"=\"parking_tickets\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Budapest XIII. ker\u00fclet parkol\u00e1s",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Budapest XIII. ker\u00fclet parkol\u00e1s\"][\"vending\"=\"parking_tickets\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Budav\u00e1r parkol\u00e1s",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Budav\u00e1r parkol\u00e1s\"][\"vending\"=\"parking_tickets\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "bwegt",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"bwegt\"][\"brand:wikidata\"=\"Q60982912\"][\"vending\"=\"public_transport_tickets\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bwegt_Logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bwegt_Logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "BWT Aqua",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"BWT Aqua\"][\"brand:wikidata\"=\"Q117351226\"][\"name\"=\"BWT Aqua\"][\"vending\"=\"water\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BWT_logo_2020.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/BWT_logo_2020.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Cale",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Cale\"][\"vending\"=\"parking_tickets\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "CAME Parkare",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"CAME Parkare\"][\"vending\"=\"parking_tickets\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Chaqwa",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Chaqwa\"][\"brand:wikidata\"=\"Q109265856\"][\"vending\"=\"coffee\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Chaqwa.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Chaqwa.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Coca-Cola",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Coca-Cola\"][\"brand:wikidata\"=\"Q2813\"][\"drink:cola\"=\"yes\"][\"name\"=\"Coca-Cola\"][\"vending\"=\"drinks\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Coca-Cola_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Coca-Cola_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Continental",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Continental\"][\"brand:wikidata\"=\"Q64739247\"][\"vending\"=\"bicycle_tube\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Costa Express",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Costa Express\"][\"brand:wikidata\"=\"Q113556385\"][\"name\"=\"Costa Express\"][\"vending\"=\"coffee\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Cupslocker",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Cupslocker\"][\"name\"=\"Cupslocker\"][\"vending\"=\"coffee\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "CVS Pharmacy",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"CVS Pharmacy\"][\"brand:wikidata\"=\"Q2078880\"][\"name\"=\"CVS Pharmacy\"][\"short_name\"=\"CVS\"][\"vending\"=\"chemist\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/CVS_Logo_2016.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/CVS_Logo_2016.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Decathlon Radtour-Retter",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Decathlon\"][\"brand:wikidata\"=\"Q509349\"][\"name\"=\"Decathlon Radtour-Retter\"][\"vending\"=\"bicycle_tube\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Decathlon_Logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Decathlon_Logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Depoz\u012bta punkts",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Depoz\u012bta punkts\"][\"brand:wikidata\"=\"Q110979381\"][\"name\"=\"Depoz\u012bta punkts\"][\"recycling:cans\"=\"yes\"][\"recycling:glass_bottles\"=\"yes\"][\"recycling:plastic_bottles\"=\"yes\"][\"vending\"=\"bottle_return\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Deutsche Bahn",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Deutsche Bahn\"][\"brand:wikidata\"=\"Q9322\"][\"operator\"=\"DB Vertrieb GmbH\"][\"operator:wikidata\"=\"Q1152124\"][\"vending\"=\"public_transport_tickets\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Deutsche_Bahn_AG-Logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Deutsche_Bahn_AG-Logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Deutsche Post",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Deutsche Post\"][\"brand:wikidata\"=\"Q157645\"][\"operator\"=\"Deutsche Post\"][\"operator:wikidata\"=\"Q157645\"][\"vending\"=\"stamps\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Deutsche_Post_DHL.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Deutsche_Post_DHL.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Dog-Station",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Dog-Station\"][\"brand:wikidata\"=\"Q63720061\"][\"vending\"=\"excrement_bags\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Dog_station,_avenue_de_la_Libert\u00e9,_D\u00e9ifferdeng.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Dog_station,_avenue_de_la_Libert\u00e9,_D\u00e9ifferdeng.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Doggie Walk Bags",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Doggie Walk Bags\"][\"brand:wikidata\"=\"Q115613320\"][\"vending\"=\"excrement_bags\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "DogiPot",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"DogiPot\"][\"brand:wikidata\"=\"Q115613289\"][\"vending\"=\"excrement_bags\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Durex",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Durex\"][\"brand:wikidata\"=\"Q1267311\"][\"vending\"=\"condoms\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/New_Logo_Durex.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/New_Logo_Durex.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Ecoplatform",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Ecoplatform\"][\"name\"=\"Ecoplatform\"][\"vending\"=\"bottle_return\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "FastKey",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"FastKey\"][\"brand:wikidata\"=\"Q110622141\"][\"name\"=\"FastKey\"][\"vending\"=\"key\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Ferencv\u00e1rosi parkol\u00e1s",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Ferencv\u00e1rosi parkol\u00e1s\"][\"vending\"=\"parking_tickets\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Fido House",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Fido House\"][\"brand:wikidata\"=\"Q115613857\"][\"vending\"=\"excrement_bags\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "FuelRod",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"FuelRod\"][\"brand:wikidata\"=\"Q65057692\"][\"name\"=\"FuelRod\"][\"vending\"=\"chargers\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Glacier Water",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Glacier Water\"][\"brand:wikidata\"=\"Q109371103\"][\"name\"=\"Glacier Water\"][\"vending\"=\"water\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Hall Tabakwaren",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Hall Tabakwaren\"][\"brand:wikidata\"=\"Q113470149\"][\"vending\"=\"cigarettes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Hectronic",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Hectronic\"][\"vending\"=\"parking_tickets\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Hectronic Kienzle",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Hectronic Kienzle\"][\"vending\"=\"parking_tickets\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Hegyvid\u00e9ki parkol\u00e1s",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Hegyvid\u00e9ki parkol\u00e1s\"][\"vending\"=\"parking_tickets\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Home City Ice",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Home City Ice\"][\"brand:wikidata\"=\"Q5888287\"][\"name\"=\"Home City Ice\"][\"vending\"=\"ice_cubes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Ibersegur Systems",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Ibersegur Systems\"][\"vending\"=\"parking_tickets\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "iParqueStreet",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"iParqueStreet\"][\"vending\"=\"parking_tickets\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "J\u00f3zsefv\u00e1ros parkol\u00e1s",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"J\u00f3zsefv\u00e1ros parkol\u00e1s\"][\"vending\"=\"parking_tickets\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "JT",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"JT\"][\"brand:wikidata\"=\"Q898568\"][\"name\"=\"JT\"][\"official_name\"=\"\u65e5\u672c\u305f\u3070\u3053\u7523\u696d\"][\"official_name:en\"=\"Japan Tobacco\"][\"official_name:ja\"=\"\u65e5\u672c\u305f\u3070\u3053\u7523\u696d\"][\"vending\"=\"cigarettes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Japan_Tobacco_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Japan_Tobacco_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Karlsruher Verkehrsverbund",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Karlsruher Verkehrsverbund\"][\"brand:wikidata\"=\"Q1733986\"][\"network\"=\"Karlsruher Verkehrsverbund\"][\"network:guid\"=\"DE-BW-KVV\"][\"network:short\"=\"KVV\"][\"network:wikidata\"=\"Q1733986\"][\"vending\"=\"public_transport_tickets\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/KVV_2010.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/KVV_2010.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "KeyMe",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"KeyMe\"][\"brand:wikidata\"=\"Q48965608\"][\"name\"=\"KeyMe\"][\"vending\"=\"key\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "KIRIN",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"KIRIN\"][\"name\"=\"KIRIN\"][\"vending\"=\"drinks\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "KKM",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"KKM\"][\"brand:wikidata\"=\"Q57515549\"][\"name\"=\"KKM\"][\"vending\"=\"public_transport_tickets\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Kosan Gas",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Kosan Gas\"][\"name\"=\"Kosan Gas\"][\"vending\"=\"gas\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Lavazza",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Lavazza\"][\"brand:wikidata\"=\"Q543750\"][\"name\"=\"Lavazza\"][\"vending\"=\"coffee\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Lavazza_-_logo_(Italy,_1995).svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Lavazza_-_logo_(Italy,_1995).svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Lego",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Lego\"][\"brand:wikidata\"=\"Q170484\"][\"name\"=\"Lego\"][\"vending\"=\"toys\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/LEGO_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/LEGO_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "LEON",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"LEON\"][\"brand:wikidata\"=\"Q6524851\"][\"name\"=\"LEON\"][\"vending\"=\"coffee\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Kingsx-6119.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kingsx-6119.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Lubika",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Lubika\"][\"vending\"=\"public_transport_tickets\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Manix",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Manix\"][\"vending\"=\"condoms\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "M\u00c1V-START jegy- \u00e9s b\u00e9rletkiad\u00f3 automata",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"M\u00c1V-START jegy- \u00e9s b\u00e9rletkiad\u00f3 automata\"][\"vending\"=\"public_transport_tickets\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "MIKA Hundetoiletten",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"MIKA\"][\"brand:wikidata\"=\"Q109336084\"][\"vending\"=\"excrement_bags\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Mika_Hundetoiletten.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Mika_Hundetoiletten.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Mini Melts",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Mini Melts\"][\"brand:wikidata\"=\"Q108922362\"][\"name\"=\"Mini Melts\"][\"vending\"=\"ice_cream\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Minute Key",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Minute Key\"][\"brand:wikidata\"=\"Q108726953\"][\"name\"=\"Minute Key\"][\"vending\"=\"key\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "M\u00fcnchner Merkur",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"M\u00fcnchner Merkur\"][\"brand:wikidata\"=\"Q279832\"][\"vending\"=\"newspapers\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Merkur.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Merkur.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Mutt Mitt",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Mutt Mitt\"][\"brand:wikidata\"=\"Q6944063\"][\"vending\"=\"excrement_bags\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "My Key Machine",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"My Key Machine\"][\"brand:wikidata\"=\"Q113576555\"][\"name\"=\"My Key Machine\"][\"vending\"=\"key\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "PAAS",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"PAAS\"][\"vending\"=\"parking_tickets\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Parkeon",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Parkeon\"][\"brand:wikidata\"=\"Q3365450\"][\"vending\"=\"parking_tickets\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Parking Kitty (Portland)",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Parking Kitty\"][\"brand:wikidata\"=\"Q108274455\"][\"name\"=\"Parking Kitty\"][\"operator\"=\"Portland Bureau of Transportation\"][\"operator:short\"=\"PBOT\"][\"operator:type\"=\"government\"][\"operator:wikidata\"=\"Q18156807\"][\"vending\"=\"parking_tickets\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Parking Kitty (Vancouver)",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Parking Kitty\"][\"brand:wikidata\"=\"Q108274455\"][\"name\"=\"Parking Kitty\"][\"operator\"=\"City of Vancouver\"][\"operator:type\"=\"government\"][\"operator:wikidata\"=\"Q234053\"][\"vending\"=\"parking_tickets\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "ParkPlus (Calgary)",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"ParkPlus\"][\"brand:wikidata\"=\"Q63719595\"][\"name\"=\"ParkPlus\"][\"vending\"=\"parking_tickets\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Pepsi",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Pepsi\"][\"brand:wikidata\"=\"Q47719\"][\"drink:cola\"=\"yes\"][\"name\"=\"Pepsi\"][\"vending\"=\"drinks\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Pepsi_logo_(2014).svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Pepsi_logo_(2014).svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "PharmaBox",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"PharmaBox\"][\"brand:wikidata\"=\"Q108728294\"][\"name\"=\"PharmaBox\"][\"vending\"=\"chemist\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Primo Water",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Primo Water\"][\"brand:wikidata\"=\"Q2071102\"][\"name\"=\"Primo Water\"][\"vending\"=\"water\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Proactiv",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Proactiv\"][\"brand:wikidata\"=\"Q6125565\"][\"name\"=\"Proactiv\"][\"vending\"=\"beauty\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/ProactivLogo.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/ProactivLogo.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Punkt dystrybucji biuletynu wroclaw.pl",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"wroclaw.pl\"][\"brand:wikidata\"=\"Q129464634\"][\"fee\"=\"no\"][\"operator\"=\"Agencja Rozwoju Aglomeracji Wroc\u0142awskiej\"][\"operator:short\"=\"ARAW\"][\"operator:wikidata\"=\"Q126685212\"][\"vending\"=\"newspapers\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Quick Tag",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Quick Tag\"][\"brand:wikidata\"=\"Q108728673\"][\"name\"=\"Quick Tag\"][\"vending\"=\"pet\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Redbox",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Redbox\"][\"brand:wikidata\"=\"Q7305489\"][\"name\"=\"Redbox\"][\"vending\"=\"movies\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Redbox_logo_2017.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Redbox_logo_2017.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Reddy Ice",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Reddy Ice\"][\"brand:wikidata\"=\"Q7305666\"][\"name\"=\"Reddy Ice\"][\"vending\"=\"ice_cubes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Regiomat",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Regiomat\"][\"name\"=\"Regiomat\"][\"vending\"=\"drinks;food\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Robidog",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"bin\"=\"yes\"][\"brand\"=\"Robidog\"][\"brand:wikidata\"=\"Q2159689\"][\"vending\"=\"excrement_bags\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Robidog.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Robidog.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Schlumberger",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Schlumberger\"][\"vending\"=\"parking_tickets\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Schwalbe",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Schwalbe\"][\"brand:wikidata\"=\"Q1312213\"][\"vending\"=\"bicycle_tube\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Selecta",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Selecta\"][\"brand:wikidata\"=\"Q472153\"][\"vending\"=\"drinks;sweets\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Selecta-Logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Selecta-Logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Sephora",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Sephora\"][\"brand:wikidata\"=\"Q2408041\"][\"name\"=\"Sephora\"][\"vending\"=\"cosmetics\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Sephora_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Sephora_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Short \u00c9dition",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Short \u00c9dition\"][\"brand:wikidata\"=\"Q133699195\"][\"fee\"=\"no\"][\"name\"=\"Short \u00c9dition\"][\"vending\"=\"short_story\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Short_\u00c9dition_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Short_\u00c9dition_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Smart Caf\u00e9",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Smart Caf\u00e9\"][\"brand:wikidata\"=\"Q117448428\"][\"name\"=\"Smart Caf\u00e9\"][\"vending\"=\"coffee\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "S\u00fcddeutsche Zeitung",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"S\u00fcddeutsche Zeitung\"][\"brand:wikidata\"=\"Q158870\"][\"vending\"=\"newspapers\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/S\u00fcddeutsche_Zeitung_Logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/S\u00fcddeutsche_Zeitung_Logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Szolnok parkol\u00e1s",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Szolnok parkol\u00e1s\"][\"vending\"=\"parking_tickets\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Teika",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"teika\"][\"brand:wikidata\"=\"Q115475314\"][\"vending\"=\"food;drinks\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Ter\u00e9zv\u00e1ros parkol\u00e1s",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Ter\u00e9zv\u00e1ros parkol\u00e1s\"][\"vending\"=\"parking_tickets\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Terminal Autom\u00e1tica SUBE",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Terminal Autom\u00e1tica SUBE\"][\"name\"=\"Terminal Autom\u00e1tica SUBE\"][\"vending\"=\"public_transport_tickets\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Timpson",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Timpson\"][\"brand:wikidata\"=\"Q7807658\"][\"name\"=\"Timpson\"][\"vending\"=\"key\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Timpson_Shoe_and_Watch_Repairs_-_Main_Street_-_geograph.org.uk_-_1595933.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Timpson_Shoe_and_Watch_Repairs_-_Main_Street_-_geograph.org.uk_-_1595933.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Tobaccoland",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"tobaccoland\"][\"brand:wikidata\"=\"Q1439872\"][\"min_age\"=\"18\"][\"operator\"=\"Tobaccoland Automatengesellschaft\"][\"operator:wikidata\"=\"Q1439872\"][\"vending\"=\"cigarettes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Tokeny.Store",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Tokeny.Store\"][\"name\"=\"Tokeny.Store\"][\"vending\"=\"electronics\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "TWO DOWN",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"TWO DOWN\"][\"brand:en\"=\"TWO DOWN\"][\"brand:ja\"=\"\u30c4\u30fc\u30c0\u30a6\u30f3\"][\"name\"=\"TWO DOWN\"][\"name:en\"=\"TWO DOWN\"][\"name:ja\"=\"\u30c4\u30fc\u30c0\u30a6\u30f3\"][\"vending\"=\"drinks\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "tz",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"tz\"][\"brand:wikidata\"=\"Q264205\"][\"vending\"=\"newspapers\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/TZ_Logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/TZ_Logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "UCC",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"UCC\"][\"brand:wikidata\"=\"Q1185060\"][\"name\"=\"UCC\"][\"official_name\"=\"\u4e0a\u5cf6\u73c8\u7432\"][\"official_name:en\"=\"Ueshima Coffee\"][\"official_name:ja\"=\"\u4e0a\u5cf6\u73c8\u7432\"][\"vending\"=\"coffee\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/UCC_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/UCC_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "\u00dajbuda parkol\u00e1s",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"\u00dajbuda parkol\u00e1s\"][\"vending\"=\"parking_tickets\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Urbancard",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Urbancard\"][\"brand:wikidata\"=\"Q129707263\"][\"vending\"=\"public_transport_tickets\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "VVO Fahrausweise",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"VVO Fahrausweise\"][\"vending\"=\"public_transport_tickets\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "yamakyu",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"yamakyu\"][\"brand:en\"=\"yamakyu\"][\"brand:ja\"=\"\u5c71\u4e45\"][\"vending\"=\"drinks\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Zernova",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Zernova\"][\"brand:wikidata\"=\"Q131598948\"][\"name\"=\"Zernova\"][\"vending\"=\"coffee\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "Zona Azul",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Zona Azul\"][\"brand:wikidata\"=\"Q6052214\"][\"name\"=\"Zona Azul\"][\"vending\"=\"parking_tickets\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "\u0410\u0440\u0442\u0435\u0437\u0438\u0430\u043d\u0441\u043a\u0430\u044f \u0432\u043e\u0434\u0430",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"\u0410\u0440\u0442\u0435\u0437\u0438\u0430\u043d\u0441\u043a\u0430\u044f \u0432\u043e\u0434\u0430\"][\"name\"=\"\u0410\u0440\u0442\u0435\u0437\u0438\u0430\u043d\u0441\u043a\u0430\u044f \u0432\u043e\u0434\u0430\"][\"vending\"=\"water\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "\u041a\u043b\u044e\u0447 \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u044f",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"\u041a\u043b\u044e\u0447 \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u044f\"][\"name\"=\"\u041a\u043b\u044e\u0447 \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u044f\"][\"vending\"=\"water\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "\u041b\u0438\u043d\u0437\u044b \u0442\u0443\u0442",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"\u041b\u0438\u043d\u0437\u044b \u0442\u0443\u0442\"][\"name\"=\"\u041b\u0438\u043d\u0437\u044b \u0442\u0443\u0442\"][\"vending\"=\"contact_lenses\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "\u30a2\u30ad\u30e5\u30a2",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"\u30a2\u30ad\u30e5\u30a2\"][\"brand:en\"=\"Acure\"][\"brand:ja\"=\"\u30a2\u30ad\u30e5\u30a2\"][\"brand:wikidata\"=\"Q11226260\"][\"name\"=\"\u30a2\u30ad\u30e5\u30a2\"][\"name:en\"=\"Acure\"][\"name:ja\"=\"\u30a2\u30ad\u30e5\u30a2\"][\"vending\"=\"drinks\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "\u30a2\u30b5\u30d2\u30d3\u30fc\u30eb",
+    query: "[out:json][timeout:25];(nwr[\"alt_name:en\"=\"Asahi Beer\"][\"amenity\"=\"vending_machine\"][\"brand\"=\"\u30a2\u30b5\u30d2\u30d3\u30fc\u30eb\"][\"brand:en\"=\"Asahi Breweries\"][\"brand:ja\"=\"\u30a2\u30b5\u30d2\u30d3\u30fc\u30eb\"][\"brand:wikidata\"=\"Q720479\"][\"drink:brewery\"=\"yes\"][\"name\"=\"\u30a2\u30b5\u30d2\u30d3\u30fc\u30eb\"][\"name:en\"=\"Asahi Breweries\"][\"name:ja\"=\"\u30a2\u30b5\u30d2\u30d3\u30fc\u30eb\"][\"short_name:en\"=\"Asahi\"][\"vending\"=\"drinks\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Asahi_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Asahi_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "\u30a2\u30b5\u30d2\u98f2\u6599",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Asahi SOFT DRINKS\"][\"brand:en\"=\"Asahi SOFT DRINKS\"][\"brand:ja\"=\"\u30a2\u30b5\u30d2\u98f2\u6599\"][\"brand:wikidata\"=\"Q1833890\"][\"name\"=\"\u30a2\u30b5\u30d2\u98f2\u6599\"][\"name:en\"=\"Asahi Soft Drinks\"][\"name:ja\"=\"\u30a2\u30b5\u30d2\u98f2\u6599\"][\"short_name:en\"=\"Asahi\"][\"vending\"=\"drinks\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Asahi_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Asahi_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "\u30a2\u30da\u30c3\u30af\u30b9",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"\u30a2\u30da\u30c3\u30af\u30b9\"][\"brand:en\"=\"Apex\"][\"brand:ja\"=\"\u30a2\u30da\u30c3\u30af\u30b9\"][\"brand:wikidata\"=\"Q11284782\"][\"name\"=\"\u30a2\u30da\u30c3\u30af\u30b9\"][\"name:en\"=\"Apex\"][\"name:ja\"=\"\u30a2\u30da\u30c3\u30af\u30b9\"][\"vending\"=\"coffee\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/APEX_Corporation_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/APEX_Corporation_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "\u3044\u30fb\u308d\u30fb\u306f\u30fb\u3059",
+    query: "[out:json][timeout:25];(nwr[\"alt_name:en\"=\"ILOHAS\"][\"amenity\"=\"vending_machine\"][\"brand\"=\"\u3044\u30fb\u308d\u30fb\u306f\u30fb\u3059\"][\"brand:en\"=\"I Lohas\"][\"brand:ja\"=\"\u3044\u30fb\u308d\u30fb\u306f\u30fb\u3059\"][\"brand:wikidata\"=\"Q11260234\"][\"drink:water\"=\"yes\"][\"name\"=\"\u3044\u30fb\u308d\u30fb\u306f\u30fb\u3059\"][\"name:en\"=\"I Lohas\"][\"name:ja\"=\"\u3044\u30fb\u308d\u30fb\u306f\u30fb\u3059\"][\"vending\"=\"drinks\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/\u3044\u308d\u306f\u3059_\u4f7f\u7528\u524d_\u4f7f\u7528\u5f8c_(6011421730).jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/\u3044\u308d\u306f\u3059_\u4f7f\u7528\u524d_\u4f7f\u7528\u5f8c_(6011421730).jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "\u30ab\u30c3\u30d7\u30cc\u30fc\u30c9\u30eb",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"\u30ab\u30c3\u30d7\u30cc\u30fc\u30c9\u30eb\"][\"brand:en\"=\"Cup Noodle\"][\"brand:ja\"=\"\u30ab\u30c3\u30d7\u30cc\u30fc\u30c9\u30eb\"][\"brand:wikidata\"=\"Q1143401\"][\"name\"=\"\u30ab\u30c3\u30d7\u30cc\u30fc\u30c9\u30eb\"][\"name:en\"=\"Cup Noodle\"][\"name:ja\"=\"\u30ab\u30c3\u30d7\u30cc\u30fc\u30c9\u30eb\"][\"vending\"=\"food\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Nissin_Cup_Noodles_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Nissin_Cup_Noodles_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "\u30ab\u30eb\u30d4\u30b9",
+    query: "[out:json][timeout:25];(nwr[\"alt_name:en\"=\"Calpico\"][\"amenity\"=\"vending_machine\"][\"brand\"=\"\u30ab\u30eb\u30d4\u30b9\"][\"brand:en\"=\"Calpis\"][\"brand:ja\"=\"\u30ab\u30eb\u30d4\u30b9\"][\"brand:wikidata\"=\"Q1027454\"][\"name\"=\"\u30ab\u30eb\u30d4\u30b9\"][\"name:en\"=\"Calpis\"][\"name:ja\"=\"\u30ab\u30eb\u30d4\u30b9\"][\"vending\"=\"drinks\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/CALPIS_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/CALPIS_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "\u30ad\u30ea\u30f3\u30d3\u30fc\u30eb",
+    query: "[out:json][timeout:25];(nwr[\"alt_name:en\"=\"Kirin Beer\"][\"amenity\"=\"vending_machine\"][\"brand\"=\"\u30ad\u30ea\u30f3\u30d3\u30fc\u30eb\"][\"brand:en\"=\"Kirin Brewery\"][\"brand:ja\"=\"\u30ad\u30ea\u30f3\u30d3\u30fc\u30eb\"][\"brand:wikidata\"=\"Q13403399\"][\"drink:brewery\"=\"yes\"][\"name\"=\"\u30ad\u30ea\u30f3\u30d3\u30fc\u30eb\"][\"name:en\"=\"Kirin Brewery\"][\"name:ja\"=\"\u30ad\u30ea\u30f3\u30d3\u30fc\u30eb\"][\"official_name\"=\"\u9e92\u9e9f\u9ea6\u9152\"][\"vending\"=\"drinks\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Kirin_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kirin_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "\u30ad\u30ea\u30f3\u30d3\u30d0\u30ec\u30c3\u30b8",
+    query: "[out:json][timeout:25];(nwr[\"alt_name\"=\"\u30ad\u30ea\u30f3BV\"][\"amenity\"=\"vending_machine\"][\"brand\"=\"\u30ad\u30ea\u30f3\u30d3\u30d0\u30ec\u30c3\u30b8\"][\"brand:en\"=\"Kirin Beverage\"][\"brand:ja\"=\"\u30ad\u30ea\u30f3\u30d3\u30d0\u30ec\u30c3\u30b8\"][\"brand:wikidata\"=\"Q1833953\"][\"drink:tea\"=\"yes\"][\"name\"=\"\u30ad\u30ea\u30f3\u30d3\u30d0\u30ec\u30c3\u30b8\"][\"name:en\"=\"Kirin Beverage\"][\"name:ja\"=\"\u30ad\u30ea\u30f3\u30d3\u30d0\u30ec\u30c3\u30b8\"][\"vending\"=\"drinks\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Kirin_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kirin_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "\u30b3\u30ab\u30fb\u30b3\u30fc\u30e9",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"\u30b3\u30ab\u30fb\u30b3\u30fc\u30e9\"][\"brand:en\"=\"Coca-Cola\"][\"brand:ja\"=\"\u30b3\u30ab\u30fb\u30b3\u30fc\u30e9\"][\"brand:wikidata\"=\"Q2813\"][\"drink:cola\"=\"yes\"][\"name\"=\"\u30b3\u30ab\u30fb\u30b3\u30fc\u30e9\"][\"name:en\"=\"Coca-Cola\"][\"name:ja\"=\"\u30b3\u30ab\u30fb\u30b3\u30fc\u30e9\"][\"vending\"=\"drinks\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Coca-Cola_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Coca-Cola_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "\u30b5\u30f3\u30c8\u30ea\u30fc",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"\u30b5\u30f3\u30c8\u30ea\u30fc\"][\"brand:en\"=\"Suntory\"][\"brand:ja\"=\"\u30b5\u30f3\u30c8\u30ea\u30fc\"][\"brand:wikidata\"=\"Q1345267\"][\"name\"=\"\u30b5\u30f3\u30c8\u30ea\u30fc\"][\"name:en\"=\"Suntory\"][\"name:ja\"=\"\u30b5\u30f3\u30c8\u30ea\u30fc\"][\"vending\"=\"drinks\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/SUNTORY_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/SUNTORY_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "\u30b8\u30e7\u30fc\u30b8\u30a2",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"\u30b8\u30e7\u30fc\u30b8\u30a2\"][\"brand:en\"=\"Georgia\"][\"brand:ja\"=\"\u30b8\u30e7\u30fc\u30b8\u30a2\"][\"brand:wikidata\"=\"Q5547323\"][\"name\"=\"\u30b8\u30e7\u30fc\u30b8\u30a2\"][\"name:en\"=\"Georgia\"][\"name:ja\"=\"\u30b8\u30e7\u30fc\u30b8\u30a2\"][\"vending\"=\"coffee\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "\u30bb\u30d6\u30f3\u30c6\u30a3\u30fc\u30f3\u30a2\u30a4\u30b9",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"\u30bb\u30d6\u30f3\u30c6\u30a3\u30fc\u30f3\u30a2\u30a4\u30b9\"][\"brand:en\"=\"Seventeen Ice\"][\"brand:ja\"=\"\u30bb\u30d6\u30f3\u30c6\u30a3\u30fc\u30f3\u30a2\u30a4\u30b9\"][\"brand:wikidata\"=\"Q11314427\"][\"name\"=\"\u30bb\u30d6\u30f3\u30c6\u30a3\u30fc\u30f3\u30a2\u30a4\u30b9\"][\"name:en\"=\"Seventeen Ice\"][\"name:ja\"=\"\u30bb\u30d6\u30f3\u30c6\u30a3\u30fc\u30f3\u30a2\u30a4\u30b9\"][\"vending\"=\"ice_cream\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Seventeen_Ice_vending_machine_2012-01.JPG",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Seventeen_Ice_vending_machine_2012-01.JPG",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "\u30c0\u30a4\u30c9\u30fc\u30c9\u30ea\u30f3\u30b3",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"\u30c0\u30a4\u30c9\u30fc\"][\"brand:en\"=\"DyDo\"][\"brand:ja\"=\"\u30c0\u30a4\u30c9\u30fc\"][\"brand:wikidata\"=\"Q11316814\"][\"drink:soft_drink\"=\"yes\"][\"name\"=\"\u30c0\u30a4\u30c9\u30fc\u30c9\u30ea\u30f3\u30b3\"][\"name:en\"=\"DyDo Drinco\"][\"name:ja\"=\"\u30c0\u30a4\u30c9\u30fc\u30c9\u30ea\u30f3\u30b3\"][\"vending\"=\"drinks\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/DyDo_DRINCO_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/DyDo_DRINCO_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "\u3060\u3057\u9053\u697d",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"\u3060\u3057\u9053\u697d\"][\"brand:en\"=\"Dashi Douraku\"][\"brand:ja\"=\"\u3060\u3057\u9053\u697d\"][\"brand:wikidata\"=\"Q60989429\"][\"drink:brewery\"=\"yes\"][\"name\"=\"\u3060\u3057\u9053\u697d\"][\"name:en\"=\"Dashi Douraku\"][\"name:ja\"=\"\u3060\u3057\u9053\u697d\"][\"vending\"=\"food\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "\u30c1\u30a7\u30ea\u30aa",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"\u30c1\u30a7\u30ea\u30aa\"][\"brand:en\"=\"Cheerio\"][\"brand:ja\"=\"\u30c1\u30a7\u30ea\u30aa\"][\"brand:wikidata\"=\"Q5089350\"][\"drink:soft_drink\"=\"yes\"][\"name\"=\"\u30c1\u30a7\u30ea\u30aa\"][\"name:en\"=\"Cheerio\"][\"name:ja\"=\"\u30c1\u30a7\u30ea\u30aa\"][\"vending\"=\"drinks\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Cheerio_drinks_grape_orange_melon.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Cheerio_drinks_grape_orange_melon.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "\u30c9\u30fc\u30eb",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"\u30c9\u30fc\u30eb\"][\"brand:en\"=\"Dole\"][\"brand:ja\"=\"\u30c9\u30fc\u30eb\"][\"brand:wikidata\"=\"Q492747\"][\"name\"=\"\u30c9\u30fc\u30eb\"][\"name:en\"=\"Dole\"][\"name:ja\"=\"\u30c9\u30fc\u30eb\"][\"vending\"=\"food\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Dolejf2103.JPG",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Dolejf2103.JPG",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "\u30cb\u30c1\u30ec\u30a4\u30d5\u30fc\u30ba",
+    query: "[out:json][timeout:25];(nwr[\"alt_name:en\"=\"Nichirei 24 Hour Hot Menu Casual Frozen Foods\"][\"amenity\"=\"vending_machine\"][\"brand\"=\"\u30cb\u30c1\u30ec\u30a4\u30d5\u30fc\u30ba\"][\"brand:en\"=\"Nichirei Foods\"][\"brand:ja\"=\"\u30cb\u30c1\u30ec\u30a4\u30d5\u30fc\u30ba\"][\"brand:wikidata\"=\"Q4921527\"][\"name\"=\"\u30cb\u30c1\u30ec\u30a4\u30d5\u30fc\u30ba\"][\"name:en\"=\"Nichirei Foods\"][\"name:ja\"=\"\u30cb\u30c1\u30ec\u30a4\u30d5\u30fc\u30ba\"][\"vending\"=\"food\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/NICHIREI_Logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/NICHIREI_Logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "\u30cd\u30aa\u30b9",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"Neos\"][\"brand:en\"=\"Neos\"][\"brand:ja\"=\"\u30cd\u30aa\u30b9\"][\"brand:wikidata\"=\"Q11325244\"][\"name\"=\"\u30cd\u30aa\u30b9\"][\"name:en\"=\"Neos\"][\"name:ja\"=\"\u30cd\u30aa\u30b9\"][\"vending\"=\"drinks\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "\u30dd\u30c3\u30ab\u30b5\u30c3\u30dd\u30ed",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"\u30dd\u30c3\u30ab\u30b5\u30c3\u30dd\u30ed\"][\"brand:en\"=\"Pokka Sapporo\"][\"brand:ja\"=\"\u30dd\u30c3\u30ab\u30b5\u30c3\u30dd\u30ed\"][\"brand:wikidata\"=\"Q7208665\"][\"name\"=\"\u30dd\u30c3\u30ab\u30b5\u30c3\u30dd\u30ed\"][\"name:en\"=\"Pokka Sapporo\"][\"name:ja\"=\"\u30dd\u30c3\u30ab\u30b5\u30c3\u30dd\u30ed\"][\"vending\"=\"water;food\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Pokka_Sapporo_Food_&_Beverage_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Pokka_Sapporo_Food_&_Beverage_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "\u30e1\u30c8\u30ed\u306e\u7f36\u8a70",
+    query: "[out:json][timeout:25];(nwr[\"alt_name:en\"=\"Metocan Shop\"][\"amenity\"=\"vending_machine\"][\"brand\"=\"\u30e1\u30c8\u30ed\u306e\u7f36\u8a70\"][\"brand:en\"=\"Metro Commerce\"][\"brand:ja\"=\"\u30e1\u30c8\u30ed\u306e\u7f36\u8a70\"][\"brand:wikidata\"=\"Q11343895\"][\"name\"=\"\u30e1\u30c8\u30ed\u306e\u7f36\u8a70\"][\"name:en\"=\"Metro Commerce\"][\"name:ja\"=\"\u30e1\u30c8\u30ed\u306e\u7f36\u8a70\"][\"vending\"=\"gift\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "\u30e4\u30af\u30eb\u30c8",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"\u30e4\u30af\u30eb\u30c8\"][\"brand:en\"=\"Yakult\"][\"brand:ja\"=\"\u30e4\u30af\u30eb\u30c8\"][\"brand:wikidata\"=\"Q16172223\"][\"drink:milk\"=\"yes\"][\"name\"=\"\u30e4\u30af\u30eb\u30c8\"][\"name:en\"=\"Yakult\"][\"name:ja\"=\"\u30e4\u30af\u30eb\u30c8\"][\"vending\"=\"milk\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Yakult-logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Yakult-logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "\u30ed\u30c3\u30c6\u30a2\u30a4\u30b9",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"\u30ed\u30c3\u30c6\u30a2\u30a4\u30b9\"][\"brand:en\"=\"Lotte Ice Cream\"][\"brand:ja\"=\"\u30ed\u30c3\u30c6\u30a2\u30a4\u30b9\"][\"brand:wikidata\"=\"Q24886018\"][\"name\"=\"\u30ed\u30c3\u30c6\u30a2\u30a4\u30b9\"][\"name:en\"=\"Lotte Ice Cream\"][\"name:ja\"=\"\u30ed\u30c3\u30c6\u30a2\u30a4\u30b9\"][\"vending\"=\"ice_cream\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Lotte_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Lotte_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "\u4f0a\u85e4\u5712",
+    query: "[out:json][timeout:25];(nwr[\"alt_name:en\"=\"ITOEN\"][\"amenity\"=\"vending_machine\"][\"brand\"=\"\u4f0a\u85e4\u5712\"][\"brand:en\"=\"Ito En\"][\"brand:ja\"=\"\u4f0a\u85e4\u5712\"][\"brand:wikidata\"=\"Q3079325\"][\"drink:tea\"=\"yes\"][\"name\"=\"\u4f0a\u85e4\u5712\"][\"name:en\"=\"Ito En\"][\"name:ja\"=\"\u4f0a\u85e4\u5712\"][\"vending\"=\"drinks\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/ITO_EN_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/ITO_EN_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "\u53ef\u53e3\u53ef\u6a02 Coca-Cola",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"\u53ef\u53e3\u53ef\u6a02 Coca-Cola\"][\"brand:en\"=\"Coca-Cola\"][\"brand:wikidata\"=\"Q2813\"][\"brand:zh\"=\"\u53ef\u53e3\u53ef\u6a02\"][\"drink:cola\"=\"yes\"][\"name\"=\"\u53ef\u53e3\u53ef\u6a02 Coca-Cola\"][\"name:en\"=\"Coca-Cola\"][\"name:zh\"=\"\u53ef\u53e3\u53ef\u6a02\"][\"vending\"=\"drinks\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Coca-Cola_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Coca-Cola_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "\u5927\u585a\u98df\u54c1",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"\u5927\u585a\"][\"brand:en\"=\"Otsuka\"][\"brand:ja\"=\"\u5927\u585a\"][\"brand:wikidata\"=\"Q11434124\"][\"name\"=\"\u5927\u585a\u98df\u54c1\"][\"name:en\"=\"Otsuka Foods\"][\"name:ja\"=\"\u5927\u585a\u98df\u54c1\"][\"vending\"=\"food\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Otsuka_Holdings_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Otsuka_Holdings_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "\u660e\u6cbb",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"\u660e\u6cbb\"][\"brand:en\"=\"Meiji\"][\"brand:ja\"=\"\u660e\u6cbb\"][\"brand:wikidata\"=\"Q11512281\"][\"name\"=\"\u660e\u6cbb\"][\"name:en\"=\"Meiji\"][\"name:ja\"=\"\u660e\u6cbb\"][\"vending\"=\"food\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Meiji_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Meiji_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "\u7dad\u4ed6 Vita",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"\u7dad\u4ed6 Vita\"][\"brand:en\"=\"Vita\"][\"brand:wikidata\"=\"Q15910439\"][\"brand:zh\"=\"\u7dad\u4ed6\"][\"name\"=\"\u7dad\u4ed6 Vita\"][\"name:en\"=\"Vita\"][\"name:zh\"=\"\u7dad\u4ed6\"][\"operator\"=\"\u7dad\u4ed6\u5976\u570b\u969b Vitasoy International Holdings\"][\"operator:en\"=\"Vitasoy International Holdings\"][\"operator:wikidata\"=\"Q15081643\"][\"operator:zh\"=\"\u7dad\u4ed6\u5976\u570b\u969b\"][\"vending\"=\"drinks\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('vending_machine'),
+	title: "\u7dad\u4ed6\u5976 Vitasoy",
+    query: "[out:json][timeout:25];(nwr[\"amenity\"=\"vending_machine\"][\"brand\"=\"\u7dad\u4ed6\u5976 Vitasoy\"][\"brand:en\"=\"Vitasoy\"][\"brand:wikidata\"=\"Q7937007\"][\"brand:zh\"=\"\u7dad\u4ed6\u5976\"][\"name\"=\"\u7dad\u4ed6\u5976 Vitasoy\"][\"name:en\"=\"Vitasoy\"][\"name:zh\"=\"\u7dad\u4ed6\u5976\"][\"operator\"=\"\u7dad\u4ed6\u5976\u570b\u969b Vitasoy International Holdings\"][\"operator:en\"=\"Vitasoy International Holdings\"][\"operator:wikidata\"=\"Q15081643\"][\"operator:zh\"=\"\u7dad\u4ed6\u5976\u570b\u969b\"][\"vending\"=\"drinks\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
 
             }
         }

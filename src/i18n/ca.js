@@ -78,6 +78,8 @@ export const ca = {
 	trolley_bay: 'Carros',
 	university: 'Universitat',
 	vehicle_inspection: 'Inspecció de vehicles',
+	vending_machine: 'Màquina de venda',
+	veterinary: 'Veterinari',
 	leisure: 'Oci',
     food: 'Menjar i Beguda',
     shopping: 'Botigues',
