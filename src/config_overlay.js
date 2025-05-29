@@ -3,7 +3,7 @@ import { allOverlays } from './overlays/index.js';
 // Create overlay configuration
 // Helper to merge overlays from group folders
 function mergeGroupOverlays(baseOverlays, allOverlays) {
-    const groupKeys = ['animal', 'culture', 'economy', 'mobility', 'education', 'food_drink', 'health', 'leisure', 'logistics', 'shopping', 'transport', 'others', 'translated'];
+    const groupKeys = ['animal', 'business', 'culture', 'economy', 'mobility', 'education', 'food_drink', 'health', 'leisure', 'logistics', 'shopping', 'transport', 'others', 'translated'];
     let overlays = baseOverlays.slice();
     groupKeys.forEach(groupName => {
         if (Array.isArray(allOverlays[groupName])) {
