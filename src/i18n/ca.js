@@ -31,6 +31,7 @@ export const ca = {
 	car_sharing: 'Mobilitat compartida',
 	car_wash: 'Autorentat',
 	carpenter: 'Fusteria',
+	cleaning: 'Neteja',
 	casino: 'Casino/Apostes',
 	charging_station: 'Carregador vehicles',
 	childcare: 'Cura d\'infants',

@@ -31,6 +31,7 @@ export const es = {
 	car_sharing: 'Movilidad compartida',
 	car_wash: 'Autolavado',
 	carpenter: 'Carpintería',
+	cleaning: 'Limpieza',
 	casino: 'Casino/Apuestas',
 	charging_station: 'Cargador vehículos',
 	childcare: 'Cuidado niños infancia',

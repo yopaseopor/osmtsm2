@@ -31,6 +31,7 @@ export const en = {
 	car_sharing: 'Car sharing',
 	car_wash: 'Car wash',
 	carpenter: 'Carpenter',
+	cleaning: 'Cleaning',
 	casino: 'Casino/Gambling',
 	charging_station: 'Charging station',
 	childcare: 'Child care',
