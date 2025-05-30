@@ -44,6 +44,8 @@ export const ca = {
 	doctors: 'Consulta',
 	driving_school: 'Autoescola',
 	education: 'Educació',
+	electrician: 'Electricista',
+	electronics_repair: 'Reparació electrònica',
 	fast_food: 'Menjar ràpid',
 	food_sharing: 'Aprofitar menjar',
 	freemasonry: 'Masoneria',

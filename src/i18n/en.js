@@ -44,6 +44,8 @@ export const en = {
 	doctors: 'Doctors',
 	driving_school: 'Driving school',
 	education: 'Education',
+	electrician: 'Electrician',
+	electronics_repair: 'Electronics repair',
 	fast_food: 'Fast food',
 	food_sharing: 'Food sharing',
 	freemasonry: 'Freemasonry',

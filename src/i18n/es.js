@@ -44,6 +44,8 @@ export const es = {
 	doctors: 'Consultas',
 	driving_school: 'Autoescuelas',
 	education: 'Educación',
+	electrician: 'Electricista',
+	electronics_repair: 'Reparación electrónica',
 	fast_food: 'Comida rápida',
 	food_sharing: 'Aprovechar comida',
 	freemasonry: 'Masonería',
