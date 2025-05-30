@@ -162,7 +162,27 @@ $(function () {
         Object.keys(letterMap).sort().forEach(function(letter) {
             letterMap[letter].forEach(function(overlay) {
                 var isActive = activeOverlay && ((overlay.id && activeOverlay.get('id') === overlay.id) || (activeOverlay.get('title') === overlay.title && activeOverlay.get('group') === overlay.group));
-                var $item = $('<div>').addClass('overlay-list-item').text((overlay.group ? overlay.group + ': ' : '') + overlay.title);
+                var $item = $('<div>').addClass('overlay-list-item');
+                
+                // Add icon if available
+                if (overlay.iconSrc) {
+                    var $icon = $('<img>')
+                        .attr('src', overlay.iconSrc)
+                        .attr('alt', '')
+                        .css({
+                            'max-width': '30px',
+                            'max-height': '30px',
+                            'width': 'auto',
+                            'height': 'auto',
+                            'margin-right': '10px',
+                            'vertical-align': 'middle'
+                        });
+                    $item.append($icon);
+                }
+                
+                // Add text
+                $item.append($('<span>').text((overlay.group ? overlay.group + ': ' : '') + overlay.title));
+                
                 if (isActive) $item.addClass('active').attr('tabindex', 0);
                 $item.css({cursor:'pointer'}).on('click', function() {
                     window.activateOverlay(overlay);
