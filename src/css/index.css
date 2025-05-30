@@ -84,6 +84,26 @@ a:hover {
     flex-direction: column;
 }
 
+.overlay-list-item {
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.overlay-list-item img {
+    max-width: 30px;
+    max-height: 30px;
+    width: auto;
+    height: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.overlay-list-item:hover {
+    background-color: #f0f0f0;
+}
+
 
 #overlay-search-container {
     margin: 8px 8px 4px 8px;
