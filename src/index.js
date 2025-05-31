@@ -218,8 +218,10 @@ $(function () {
                 });
             }
         });
-        // Optionally, update the overlay list UI
-        if (window.renderOverlayList) window.renderOverlayList([], '');
+        // Update the overlay list UI with all overlays
+        if (window.renderOverlayList) {
+            window.renderOverlayList(window.overlays, '');
+        }
     };
 
     // Render all overlays initially
