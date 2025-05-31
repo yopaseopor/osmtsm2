@@ -73,26 +73,24 @@ function integrateOverlays() {
         const allOverlaysFlat = Object.values(window.allOverlays)
             .filter(Array.isArray)
             .flat();
-        // Get current language
-        const currentLang = getCurrentLanguage && getCurrentLanguage();
-        // Only include overlays whose group matches the translation for their _groupKey in the current language
-        const overlaysFiltered = allOverlaysFlat.filter(overlay => {
-            if (!overlay.group || !overlay._groupKey) return false;
-            const expectedGroup = languages[currentLang] && languages[currentLang].translations[overlay._groupKey];
-            return overlay.group === expectedGroup;
+        // Group overlays by their _groupKey (translation key)
+        const groupKeyMap = {};
+        allOverlaysFlat.forEach(overlay => {
+            if (!overlay._groupKey) return;
+            if (!groupKeyMap[overlay._groupKey]) groupKeyMap[overlay._groupKey] = [];
+            groupKeyMap[overlay._groupKey].push(overlay);
         });
-        // Group overlays by their translated group property (in the current language)
-        const groupMap = {};
-        overlaysFiltered.forEach(overlay => {
-            if (!overlay.group) return;
-            if (!groupMap[overlay.group]) groupMap[overlay.group] = [];
-            groupMap[overlay.group].push(overlay);
-        });
-        // Create OpenLayers groups for each unique group name
+        // For each groupKey, use the translation for the current language as the group name
         const overlayGroups = {};
-        Object.entries(groupMap).forEach(([groupName, overlays]) => {
-            const layers = overlays.map(overlay => createOlLayer(overlay));
-            overlayGroups[groupName] = createOverlayGroup(groupName, layers);
+        const currentLang = getCurrentLanguage && getCurrentLanguage();
+        Object.entries(groupKeyMap).forEach(([groupKey, overlays]) => {
+            // Get the group name in the current language
+            const groupName = languages[currentLang] && languages[currentLang].translations[groupKey] ? languages[currentLang].translations[groupKey] : getTranslation(groupKey);
+            // Only add the group if the translation exists (avoid showing untranslated keys)
+            if (groupName && !overlayGroups[groupName]) {
+                const layers = overlays.map(overlay => createOlLayer(overlay));
+                overlayGroups[groupName] = createOverlayGroup(groupName, layers);
+            }
         });
         // Add groups to config layers
         Object.values(overlayGroups).forEach(group => {
