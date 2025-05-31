@@ -19,20 +19,7 @@
         if (window.config && window.config.overlays) {
             overlays = window.config.overlays.slice();
         }
-        // Fallback: Directly add overlays from window.allOverlays if not already present
-        if (window.allOverlays) {
-            const groupKeys = ['animal', 'business', 'culture', 'economy', 'mobility', 'education', 'food_drink', 'health', 'leisure', 'logistics', 'shopping', 'transport', 'others'];
-            groupKeys.forEach(group => {
-                if (Array.isArray(window.allOverlays[group])) {
-                    window.allOverlays[group].forEach(o => {
-                        // Avoid duplicates by title+group
-                        if (!overlays.some(ov => ov.title === o.title && ov.group === o.group)) {
-                            overlays.push(o);
-                        }
-                    });
-                }
-            });
-        }
+        // Fallback removed: do not add overlays from window.allOverlays by group key to avoid duplicates
         return overlays;
     }
 
