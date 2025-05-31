@@ -67,39 +67,38 @@ function createOverlayGroup(title, layers) {
 function integrateOverlays() {
     if (window.config && window.config.layers) {
         console.log('Integrating overlays...');
-        
-        // Create layers for each group
+        // Flatten all overlays from all groups
+        const allOverlaysFlat = Object.values(window.allOverlays)
+            .filter(Array.isArray)
+            .flat();
+        // Group overlays by their translated group property
+        const groupMap = {};
+        allOverlaysFlat.forEach(overlay => {
+            if (!overlay.group) return;
+            if (!groupMap[overlay.group]) groupMap[overlay.group] = [];
+            groupMap[overlay.group].push(overlay);
+        });
+        // Create OpenLayers groups for each unique group name
         const overlayGroups = {};
-        for (const [groupName, groupOverlays] of Object.entries(window.allOverlays)) {
-            if (Array.isArray(groupOverlays) && groupOverlays.length > 0) {
-                console.log(`Creating layers for ${groupName} group...`);
-                const layers = groupOverlays.map(overlay => createOlLayer(overlay));
-                // Use translated group name for group title
-                let translatedGroup = (groupOverlays[0] && groupOverlays[0].group) ? groupOverlays[0].group : (groupName.charAt(0).toUpperCase() + groupName.slice(1));
-                overlayGroups[groupName] = createOverlayGroup(
-                    translatedGroup,
-                    layers
-                );
-            }
-        }
-        
+        Object.entries(groupMap).forEach(([translatedGroup, overlays]) => {
+            const layers = overlays.map(overlay => createOlLayer(overlay));
+            overlayGroups[translatedGroup] = createOverlayGroup(translatedGroup, layers);
+        });
         // Add groups to config layers
         Object.values(overlayGroups).forEach(group => {
             window.config.layers.push(group);
         });
-
         // Update window.overlays for the search functionality
         console.log('Updating window.overlays...');
         window.overlays = Object.entries(overlayGroups).flatMap(([groupName, group]) => 
             group.getLayers().getArray().map(layer => ({
                 title: layer.get('title'),
-                group: groupName.charAt(0).toUpperCase() + groupName.slice(1),
+                group: groupName,
                 id: layer.get('id') || '',
                 _olLayer: layer,
                 ...layer.overlay
             }))
         );
-
         // Dispatch event to notify that overlays are ready
         console.log('Dispatching overlaysReady event...');
         window.dispatchEvent(new CustomEvent('overlaysReady', {
@@ -108,7 +107,6 @@ function integrateOverlays() {
                 groups: overlayGroups
             }
         }));
-
         // Trigger overlay list update
         if (window.renderOverlayList) {
             console.log('Updating overlay list...');
