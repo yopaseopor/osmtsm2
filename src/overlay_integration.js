@@ -75,7 +75,8 @@ function createOverlayGroup(groupKey, layers) {
 function integrateOverlays() {
     if (window.config && window.config.layers) {
         console.log('Integrating overlays...');
-        
+        // Remove previous overlay groups from config.layers
+        window.config.layers = window.config.layers.filter(layer => layer.get('type') !== 'overlay');
         // Create layers for each group
         const overlayGroups = {};
         for (const [groupKey, groupOverlays] of Object.entries(window.allOverlays)) {
@@ -85,13 +86,11 @@ function integrateOverlays() {
                 overlayGroups[groupKey] = createOverlayGroup(groupKey, layers);
             }
         }
-        
-        // Add groups to config layers
+        // Add groups to config layers (preserving group structure)
         Object.values(overlayGroups).forEach(group => {
             window.config.layers.push(group);
         });
-
-        // Update window.overlays for the search functionality
+        // Update window.overlays for the search functionality (flattened for search, but not for check selector)
         console.log('Updating window.overlays...');
         window.overlays = Object.entries(overlayGroups).flatMap(([groupKey, group]) => 
             group.getLayers().getArray().map(layer => ({
@@ -102,7 +101,6 @@ function integrateOverlays() {
                 ...layer.overlay
             }))
         );
-
         // Dispatch event to notify that overlays are ready
         console.log('Dispatching overlaysReady event...');
         window.dispatchEvent(new CustomEvent('overlaysReady', {
@@ -111,7 +109,6 @@ function integrateOverlays() {
                 groups: overlayGroups
             }
         }));
-
         // Trigger overlay list update
         if (window.renderOverlayList) {
             console.log('Updating overlay list...');
