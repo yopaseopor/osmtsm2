@@ -73,24 +73,35 @@ function integrateOverlays() {
         const allOverlaysFlat = Object.values(window.allOverlays)
             .filter(Array.isArray)
             .flat();
-        // Group overlays by their _groupKey (translation key)
-        const groupKeyMap = {};
+        // Group overlays by their translated group property
+        const groupMap = {};
         allOverlaysFlat.forEach(overlay => {
-            if (!overlay._groupKey) return;
-            if (!groupKeyMap[overlay._groupKey]) groupKeyMap[overlay._groupKey] = [];
-            groupKeyMap[overlay._groupKey].push(overlay);
+            if (!overlay.group || !overlay._groupKey) return;
+            // Always use the group name in the current language for grouping
+            let groupKey = getTranslation(overlay._groupKey);
+            if (!groupMap[groupKey]) groupMap[groupKey] = [];
+            groupMap[groupKey].push(overlay);
         });
-        // For each groupKey, use the translation for the current language as the group name
-        const overlayGroups = {};
+        // Only keep groups that match the current language's translation
+        const filteredGroupMap = {};
         const currentLang = getCurrentLanguage && getCurrentLanguage();
-        Object.entries(groupKeyMap).forEach(([groupKey, overlays]) => {
-            // Get the group name in the current language
-            const groupName = languages[currentLang] && languages[currentLang].translations[groupKey] ? languages[currentLang].translations[groupKey] : getTranslation(groupKey);
-            // Only add the group if the translation exists (avoid showing untranslated keys)
-            if (groupName && !overlayGroups[groupName]) {
-                const layers = overlays.map(overlay => createOlLayer(overlay));
-                overlayGroups[groupName] = createOverlayGroup(groupName, layers);
+        Object.entries(groupMap).forEach(([groupName, overlays]) => {
+            // For English, groupName must match the English translation; for others, must match the current language translation
+            if (currentLang === 'en') {
+                if (languages.en.translations[overlays[0]._groupKey] === groupName) {
+                    filteredGroupMap[groupName] = overlays;
+                }
+            } else {
+                if (languages[currentLang] && languages[currentLang].translations[overlays[0]._groupKey] === groupName) {
+                    filteredGroupMap[groupName] = overlays;
+                }
             }
+        });
+        // Create OpenLayers groups for each unique group name
+        const overlayGroups = {};
+        Object.entries(filteredGroupMap).forEach(([groupName, overlays]) => {
+            const layers = overlays.map(overlay => createOlLayer(overlay));
+            overlayGroups[groupName] = createOverlayGroup(groupName, layers);
         });
         // Add groups to config layers
         Object.values(overlayGroups).forEach(group => {
