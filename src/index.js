@@ -56,40 +56,6 @@ $(function () {
     };
 
 
-    // 3. Define window.activateLayer
-    window.activateLayer = function(layer) {
-        var activated = false;
-        // Hide all base layers and overlays, show only selected base layer
-        $.each(config.layers, function(indexLayer, layerGroup) {
-            if (layerGroup.get && layerGroup.get('type') !== 'overlay') {
-                // If _olLayerGroup exists and matches, activate directly
-                if (!activated && layer._olLayerGroup && layerGroup === layer._olLayerGroup) {
-                    layerGroup.setVisible(true);
-                    activated = true;
-                } else if (!activated && ((layer.id && layerGroup.get('id') === layer.id) ||
-                    (layerGroup.get('title') === layer.title && layerGroup.get('group') === layer.group))) {
-                    layerGroup.setVisible(true);
-                    activated = true;
-                } else {
-                    layerGroup.setVisible(false);
-                }
-            } else if (layerGroup.get && layerGroup.get('type') === 'overlay') {
-                // Hide all overlays
-                $.each(layerGroup.getLayers().getArray(), function(idx, olayer) {
-                    olayer.setVisible(false);
-                });
-            }
-        });
-        // If not found by id/title/group, try to activate by index fallback (for robustness)
-        if (!activated && typeof layer._olLayerGroup !== 'undefined') {
-            layer._olLayerGroup.setVisible(true);
-        }
-        // Optionally, update the layer list to show only this layer
-        window.renderLayerList([layer], layer.title);
-    };
-
-
-
     // Render all layers initially
     $(document).ready(function() {
         window.renderLayerList(window.layers);
