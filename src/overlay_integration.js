@@ -85,9 +85,27 @@ function integrateOverlays() {
             if (!groupMap[groupKey]) groupMap[groupKey] = [];
             groupMap[groupKey].push(overlay);
         });
+        // Filter groupMap to only show English group names if English is selected, otherwise only translated group names
+        const filteredGroupMap = {};
+        if (getCurrentLanguage && getCurrentLanguage() === 'en') {
+            // Only keep groups that match the English translation or key
+            Object.entries(groupMap).forEach(([groupName, overlays]) => {
+                // If groupName is in the English translations or is a group key
+                if (Object.values(languages.en.translations).includes(groupName) || overlays.some(o => o._groupKey && (languages.en.translations[o._groupKey] === groupName || o._groupKey === groupName))) {
+                    filteredGroupMap[groupName] = overlays;
+                }
+            });
+        } else {
+            // Only keep groups that are not in the English translations
+            Object.entries(groupMap).forEach(([groupName, overlays]) => {
+                if (!Object.values(languages.en.translations).includes(groupName)) {
+                    filteredGroupMap[groupName] = overlays;
+                }
+            });
+        }
         // Create OpenLayers groups for each unique group name
         const overlayGroups = {};
-        Object.entries(groupMap).forEach(([groupName, overlays]) => {
+        Object.entries(filteredGroupMap).forEach(([groupName, overlays]) => {
             const layers = overlays.map(overlay => createOlLayer(overlay));
             overlayGroups[groupName] = createOverlayGroup(groupName, layers);
         });

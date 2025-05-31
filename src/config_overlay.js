@@ -15,6 +15,7 @@ function mergeGroupOverlays(baseOverlays, allOverlays) {
                 if (!overlays.some(ov => ov.title === overlay.title && ov.group === translatedGroup)) {
                     overlays.push({
                         group: translatedGroup,
+                        _groupKey: overlay._groupKey || overlay.groupKey || overlay.group_key || overlay.group_key_name || overlay.groupKeyName || overlay.groupName || overlay.group || groupName,
                         title: overlay.title,
                         query: overlay.query,
                         iconSrc: overlay.iconSrc,
@@ -44,6 +45,7 @@ export const overlayConfig = {
                 const translatedGroup = overlay.group || getTranslation(groupName);
                 return {
                     group: translatedGroup,
+                    _groupKey: overlay._groupKey || overlay.groupKey || overlay.group_key || overlay.group_key_name || overlay.groupKeyName || overlay.groupName || overlay.group || groupName,
                     title: overlay.title,
                     query: overlay.query,
                     iconSrc: overlay.iconSrc,
@@ -74,6 +76,7 @@ window.addEventListener('overlaysUpdated', function(event) {
                     const translatedGroup = overlay.group || getTranslation(groupName);
                     return {
                         group: translatedGroup,
+                        _groupKey: overlay._groupKey || overlay.groupKey || overlay.group_key || overlay.group_key_name || overlay.groupKeyName || overlay.groupName || overlay.group || groupName,
                         title: overlay.title,
                         query: overlay.query,
                         iconSrc: overlay.iconSrc,
