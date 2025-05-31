@@ -1,5 +1,6 @@
 // Import the overlays
 import { allOverlays } from './overlays/index.js';
+import { getTranslation } from '../i18n/index.js';
 
 // Function to convert overlay to OpenLayers layer
 function createOlLayer(overlay) {
@@ -74,8 +75,10 @@ function integrateOverlays() {
             if (Array.isArray(groupOverlays) && groupOverlays.length > 0) {
                 console.log(`Creating layers for ${groupName} group...`);
                 const layers = groupOverlays.map(overlay => createOlLayer(overlay));
-                overlayGroups[groupName] = createOverlayGroup(
-                    groupName.charAt(0).toUpperCase() + groupName.slice(1),
+                // Use translated group name for group title
+                const translatedGroup = getTranslation(groupName) || groupName.charAt(0).toUpperCase() + groupName.slice(1);
+                overlayGroups[translatedGroup] = createOverlayGroup(
+                    translatedGroup,
                     layers
                 );
             }
@@ -88,10 +91,10 @@ function integrateOverlays() {
 
         // Update window.overlays for the search functionality
         console.log('Updating window.overlays...');
-        window.overlays = Object.entries(overlayGroups).flatMap(([groupName, group]) => 
+        window.overlays = Object.entries(overlayGroups).flatMap(([translatedGroup, group]) => 
             group.getLayers().getArray().map(layer => ({
                 title: layer.get('title'),
-                group: groupName.charAt(0).toUpperCase() + groupName.slice(1),
+                group: translatedGroup,
                 id: layer.get('id') || '',
                 _olLayer: layer,
                 ...layer.overlay
