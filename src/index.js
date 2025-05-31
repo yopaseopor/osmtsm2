@@ -114,20 +114,48 @@ $(function () {
             return;
         }
         var activeOverlay = null;
+        
+        // Group overlays by normalized group name to avoid duplicates
+        var groupMap = {};
+        
+        // Process all overlays and organize them by group
+        filtered.forEach(function(overlay) {
+            if (!overlay.group) return;
+            
+            // Normalize group name (lowercase for comparison)
+            var normalizedGroup = overlay.group.toLowerCase();
+            
+            // Initialize group if not exists
+            if (!groupMap[normalizedGroup]) {
+                groupMap[normalizedGroup] = {
+                    displayName: overlay.group, // Keep original case for display
+                    overlays: []
+                };
+            }
+            
+            // Add overlay to group if not already present
+            if (!groupMap[normalizedGroup].overlays.some(o => o.title === overlay.title)) {
+                groupMap[normalizedGroup].overlays.push(overlay);
+            }
+        });
+        
         // Group overlays by first letter only, show max 10 per letter
         var letterMap = {};
         
-        // Filter for translated overlays
-        const translatedOverlays = filtered.filter(overlay => overlay.group === window.getTranslation('Translated'));
-
-        translatedOverlays.forEach(function(overlay) {
-            var titleOrGroup = (overlay.title || overlay.group || '').trim();
-            var firstLetter = titleOrGroup.charAt(0) ? titleOrGroup.charAt(0).toUpperCase() : '_';
-            if (!letterMap[firstLetter]) letterMap[firstLetter] = [];
-            if (letterMap[firstLetter].length < 10) {
-                letterMap[firstLetter].push(overlay);
-            }
+        // Convert grouped overlays to flat list for display, prioritizing translated groups
+        Object.values(groupMap).forEach(function(group) {
+            group.overlays.forEach(function(overlay) {
+                var titleOrGroup = (overlay.title || group.displayName || '').trim();
+                var firstLetter = titleOrGroup.charAt(0) ? titleOrGroup.charAt(0).toUpperCase() : '_';
+                if (!letterMap[firstLetter]) letterMap[firstLetter] = [];
+                if (letterMap[firstLetter].length < 10) {
+                    // Use the normalized group display name for consistency
+                    var displayOverlay = {...overlay, group: group.displayName};
+                    letterMap[firstLetter].push(displayOverlay);
+                }
+            });
         });
+        
         // Render overlays (max 10 per letter)
         Object.keys(letterMap).sort().forEach(function(letter) {
             letterMap[letter].forEach(function(overlay) {
