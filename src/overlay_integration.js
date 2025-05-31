@@ -1,5 +1,7 @@
 // Import the overlays
 import { allOverlays } from './overlays/index.js';
+import { getCurrentLanguage } from './i18n/index.js';
+import { languages } from './i18n/index.js';
 
 // Function to convert overlay to OpenLayers layer
 function createOlLayer(overlay) {
@@ -75,14 +77,19 @@ function integrateOverlays() {
         const groupMap = {};
         allOverlaysFlat.forEach(overlay => {
             if (!overlay.group) return;
-            if (!groupMap[overlay.group]) groupMap[overlay.group] = [];
-            groupMap[overlay.group].push(overlay);
+            // If English is selected, use the English translation key for the group name
+            let groupKey = overlay.group;
+            if (getCurrentLanguage && getCurrentLanguage() === 'en' && overlay._groupKey) {
+                groupKey = languages.en.translations[overlay._groupKey] || overlay._groupKey;
+            }
+            if (!groupMap[groupKey]) groupMap[groupKey] = [];
+            groupMap[groupKey].push(overlay);
         });
         // Create OpenLayers groups for each unique group name
         const overlayGroups = {};
-        Object.entries(groupMap).forEach(([translatedGroup, overlays]) => {
+        Object.entries(groupMap).forEach(([groupName, overlays]) => {
             const layers = overlays.map(overlay => createOlLayer(overlay));
-            overlayGroups[translatedGroup] = createOverlayGroup(translatedGroup, layers);
+            overlayGroups[groupName] = createOverlayGroup(groupName, layers);
         });
         // Add groups to config layers
         Object.values(overlayGroups).forEach(group => {
