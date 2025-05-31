@@ -116,7 +116,11 @@ $(function () {
         var activeOverlay = null;
         // Group overlays by first letter only, show max 10 per letter
         var letterMap = {};
-        filtered.forEach(function(overlay) {
+        
+        // Filter for translated overlays
+        const translatedOverlays = filtered.filter(overlay => overlay.group === window.getTranslation('Translated'));
+
+        translatedOverlays.forEach(function(overlay) {
             var titleOrGroup = (overlay.title || overlay.group || '').trim();
             var firstLetter = titleOrGroup.charAt(0) ? titleOrGroup.charAt(0).toUpperCase() : '_';
             if (!letterMap[firstLetter]) letterMap[firstLetter] = [];
