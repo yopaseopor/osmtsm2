@@ -73,18 +73,20 @@ function integrateOverlays() {
         const allOverlaysFlat = Object.values(window.allOverlays)
             .filter(Array.isArray)
             .flat();
-        // Group overlays by their group key, but only include overlays whose group name matches the current language
-        const groupMap = {};
+        // Get current language
         const currentLang = getCurrentLanguage && getCurrentLanguage();
-        allOverlaysFlat.forEach(overlay => {
-            if (!overlay._groupKey) return;
-            // Get the group name in the current language
-            const groupNameInLang = languages[currentLang]?.translations[overlay._groupKey];
-            if (!groupNameInLang) return;
-            // Only include overlays whose group matches the current language's translation
-            if (overlay.group !== groupNameInLang) return;
-            if (!groupMap[groupNameInLang]) groupMap[groupNameInLang] = [];
-            groupMap[groupNameInLang].push(overlay);
+        // Only include overlays whose group matches the translation for their _groupKey in the current language
+        const overlaysFiltered = allOverlaysFlat.filter(overlay => {
+            if (!overlay.group || !overlay._groupKey) return false;
+            const expectedGroup = languages[currentLang] && languages[currentLang].translations[overlay._groupKey];
+            return overlay.group === expectedGroup;
+        });
+        // Group overlays by their translated group property (in the current language)
+        const groupMap = {};
+        overlaysFiltered.forEach(overlay => {
+            if (!overlay.group) return;
+            if (!groupMap[overlay.group]) groupMap[overlay.group] = [];
+            groupMap[overlay.group].push(overlay);
         });
         // Create OpenLayers groups for each unique group name
         const overlayGroups = {};
