@@ -1,4 +1,5 @@
 import { allOverlays } from './overlays/index.js';
+import { getTranslation } from '../i18n/index.js';
 
 // Create overlay configuration
 // Helper to merge overlays from group folders
@@ -8,10 +9,12 @@ function mergeGroupOverlays(baseOverlays, allOverlays) {
     groupKeys.forEach(groupName => {
         if (Array.isArray(allOverlays[groupName])) {
             allOverlays[groupName].forEach(overlay => {
-                // Avoid duplicates by title+group
-                if (!overlays.some(ov => ov.title === overlay.title && ov.group === (overlay.group || groupName))) {
+                // Always use translated group name
+                const translatedGroup = overlay.group || getTranslation(groupName);
+                // Avoid duplicates by title+translated group
+                if (!overlays.some(ov => ov.title === overlay.title && ov.group === translatedGroup)) {
                     overlays.push({
-                        group: overlay.group || groupName,
+                        group: translatedGroup,
                         title: overlay.title,
                         query: overlay.query,
                         iconSrc: overlay.iconSrc,
@@ -37,35 +40,10 @@ export const overlayConfig = {
     overlays: mergeGroupOverlays(
         Object.entries(allOverlays).flatMap(([groupName, groupOverlays]) => {
             if (!Array.isArray(groupOverlays)) return [];
-            return groupOverlays.map(overlay => ({
-                group: overlay.group || groupName,
-                title: overlay.title,
-                query: overlay.query,
-                iconSrc: overlay.iconSrc,
-                iconStyle: overlay.iconStyle,
-                style: overlay.style || function(feature) {
-                    return new ol.style.Style({
-                        image: new ol.style.Icon({
-                            src: overlay.iconSrc,
-                            scale: 0.5
-                        })
-                    });
-                },
-                visible: false
-            }));
-        }),
-        allOverlays
-    )
-};
-
-// Update overlays when they change
-window.addEventListener('overlaysUpdated', function(event) {
-    if (window.allOverlays && window.config) {
-        window.config.overlays = mergeGroupOverlays(
-            Object.entries(window.allOverlays).flatMap(([groupName, groupOverlays]) => {
-                if (!Array.isArray(groupOverlays)) return [];
-                return groupOverlays.map(overlay => ({
-                    group: overlay.group || groupName,
+            return groupOverlays.map(overlay => {
+                const translatedGroup = overlay.group || getTranslation(groupName);
+                return {
+                    group: translatedGroup,
                     title: overlay.title,
                     query: overlay.query,
                     iconSrc: overlay.iconSrc,
@@ -79,7 +57,38 @@ window.addEventListener('overlaysUpdated', function(event) {
                         });
                     },
                     visible: false
-                }));
+                };
+            });
+        }),
+        allOverlays
+    )
+};
+
+// Update overlays when they change
+window.addEventListener('overlaysUpdated', function(event) {
+    if (window.allOverlays && window.config) {
+        window.config.overlays = mergeGroupOverlays(
+            Object.entries(window.allOverlays).flatMap(([groupName, groupOverlays]) => {
+                if (!Array.isArray(groupOverlays)) return [];
+                return groupOverlays.map(overlay => {
+                    const translatedGroup = overlay.group || getTranslation(groupName);
+                    return {
+                        group: translatedGroup,
+                        title: overlay.title,
+                        query: overlay.query,
+                        iconSrc: overlay.iconSrc,
+                        iconStyle: overlay.iconStyle,
+                        style: overlay.style || function(feature) {
+                            return new ol.style.Style({
+                                image: new ol.style.Icon({
+                                    src: overlay.iconSrc,
+                                    scale: 0.5
+                                })
+                            });
+                        },
+                        visible: false
+                    };
+                });
             }),
             window.allOverlays
         );
