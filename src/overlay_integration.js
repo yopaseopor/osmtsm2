@@ -56,8 +56,15 @@ function createOlLayer(overlay) {
 
 // Function to create overlay group
 function createOverlayGroup(groupKey, layers) {
+    // Use a special translation for the 'translated' group
+    let groupTitle;
+    if (groupKey === 'translated') {
+        groupTitle = getTranslation('translated_group') || 'Translated';
+    } else {
+        groupTitle = getTranslation(groupKey);
+    }
     return new ol.layer.Group({
-        title: getTranslation(groupKey),
+        title: groupTitle,
         type: 'overlay',
         layers: new ol.Collection(layers),
         visible: true
@@ -89,7 +96,7 @@ function integrateOverlays() {
         window.overlays = Object.entries(overlayGroups).flatMap(([groupKey, group]) => 
             group.getLayers().getArray().map(layer => ({
                 title: layer.get('title'),
-                group: getTranslation(groupKey),
+                group: groupKey === 'translated' ? (getTranslation('translated_group') || 'Translated') : getTranslation(groupKey),
                 id: layer.get('id') || '',
                 _olLayer: layer,
                 ...layer.overlay

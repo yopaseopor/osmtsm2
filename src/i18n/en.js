@@ -102,11 +102,12 @@ export const en = {
     services: 'Services',
     accommodation: 'Accommodation',
     religion: 'Religion',
-	    // Specific POIs
-			pharmacies: 'Pharmacies',
+    // Specific POIs
+    pharmacies: 'Pharmacies',
     restaurants: 'Restaurants',
-	schools: 'Schools',
+    schools: 'Schools',
     // Brand POIs
     mcdonalds: 'McDonald\'s',
-    starbucks: 'Starbucks'
+    starbucks: 'Starbucks',
+    translated_group: 'Translated'
 }; 
