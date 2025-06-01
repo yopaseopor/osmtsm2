@@ -73,18 +73,21 @@ function integrateOverlays() {
         const allOverlaysFlat = Object.values(window.allOverlays)
             .filter(Array.isArray)
             .flat();
-        // Group overlays by their translation key (_groupKey)
+        // Group overlays by their _groupKey
         const groupMap = {};
         allOverlaysFlat.forEach(overlay => {
             if (!overlay._groupKey) return;
             if (!groupMap[overlay._groupKey]) groupMap[overlay._groupKey] = [];
             groupMap[overlay._groupKey].push(overlay);
         });
-        // For each group, use the translated group name for the current language
+        // Always show group names in the current language
         const overlayGroups = {};
         Object.entries(groupMap).forEach(([groupKey, overlays]) => {
             const groupName = getTranslation(groupKey);
-            const layers = overlays.map(overlay => createOlLayer(overlay));
+            const layers = overlays.map(overlay => createOlLayer({
+                ...overlay,
+                group: groupName // ensure group property is in the current language
+            }));
             overlayGroups[groupName] = createOverlayGroup(groupName, layers);
         });
         // Add groups to config layers
