@@ -73,31 +73,17 @@ function integrateOverlays() {
         const allOverlaysFlat = Object.values(window.allOverlays)
             .filter(Array.isArray)
             .flat();
-        // Group overlays by their translated group property
+        // Group overlays by their translation key (_groupKey)
         const groupMap = {};
         allOverlaysFlat.forEach(overlay => {
-            if (!overlay.group || !overlay._groupKey) return;
-            // Always use the group name in the current language
-            let groupKey = overlay._groupKey;
-            let groupName = getTranslation(groupKey);
-            if (!groupMap[groupName]) groupMap[groupName] = [];
-            groupMap[groupName].push(overlay);
+            if (!overlay._groupKey) return;
+            if (!groupMap[overlay._groupKey]) groupMap[overlay._groupKey] = [];
+            groupMap[overlay._groupKey].push(overlay);
         });
-        // Only keep groups that match the current language's translation
-        const filteredGroupMap = {};
-        Object.entries(groupMap).forEach(([groupName, overlays]) => {
-            // For English, groupName must match the English translation
-            // For other languages, groupName must match the translation in that language
-            const lang = getCurrentLanguage();
-            const key = overlays[0]._groupKey;
-            const expectedGroupName = languages[lang] && languages[lang].translations[key] ? languages[lang].translations[key] : getTranslation(key);
-            if (groupName === expectedGroupName) {
-                filteredGroupMap[groupName] = overlays;
-            }
-        });
-        // Create OpenLayers groups for each unique group name
+        // For each group, use the translated group name for the current language
         const overlayGroups = {};
-        Object.entries(filteredGroupMap).forEach(([groupName, overlays]) => {
+        Object.entries(groupMap).forEach(([groupKey, overlays]) => {
+            const groupName = getTranslation(groupKey);
             const layers = overlays.map(overlay => createOlLayer(overlay));
             overlayGroups[groupName] = createOverlayGroup(groupName, layers);
         });
