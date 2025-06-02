@@ -87,18 +87,18 @@ function integrateOverlays() {
         });
         // Filter groupMap to only show English group names if English is selected, otherwise only translated group names
         const filteredGroupMap = {};
+        const englishGroupNames = Object.values(languages.en.translations);
         if (getCurrentLanguage && getCurrentLanguage() === 'en') {
-            // Only keep groups that match the English translation or key
+            // Only keep groups that match the English translations
             Object.entries(groupMap).forEach(([groupName, overlays]) => {
-                // If groupName is in the English translations or is a group key
-                if (Object.values(languages.en.translations).includes(groupName) || overlays.some(o => o._groupKey && (languages.en.translations[o._groupKey] === groupName || o._groupKey === groupName))) {
+                if (englishGroupNames.includes(groupName)) {
                     filteredGroupMap[groupName] = overlays;
                 }
             });
         } else {
-            // Only keep groups that are not in the English translations
+            // Only keep groups that are NOT in the English translations
             Object.entries(groupMap).forEach(([groupName, overlays]) => {
-                if (!Object.values(languages.en.translations).includes(groupName)) {
+                if (!englishGroupNames.includes(groupName)) {
                     filteredGroupMap[groupName] = overlays;
                 }
             });
