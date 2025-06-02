@@ -85,20 +85,21 @@ function integrateOverlays() {
             if (!groupMap[groupKey]) groupMap[groupKey] = [];
             groupMap[groupKey].push(overlay);
         });
+        // Prepare normalized English group names for comparison
+        const englishGroupNames = Object.values(languages.en.translations).map(g => g.trim().toLowerCase());
         // Filter groupMap to only show English group names if English is selected, otherwise only translated group names
         const filteredGroupMap = {};
-        const englishGroupNames = Object.values(languages.en.translations);
         if (getCurrentLanguage && getCurrentLanguage() === 'en') {
-            // Only keep groups that match the English translations
+            // Only keep groups that match the English translations (case-insensitive)
             Object.entries(groupMap).forEach(([groupName, overlays]) => {
-                if (englishGroupNames.includes(groupName)) {
+                if (englishGroupNames.includes(groupName.trim().toLowerCase())) {
                     filteredGroupMap[groupName] = overlays;
                 }
             });
         } else {
-            // Only keep groups that are NOT in the English translations
+            // Only keep groups that are NOT in the English translations (case-insensitive)
             Object.entries(groupMap).forEach(([groupName, overlays]) => {
-                if (!englishGroupNames.includes(groupName)) {
+                if (!englishGroupNames.includes(groupName.trim().toLowerCase())) {
                     filteredGroupMap[groupName] = overlays;
                 }
             });
