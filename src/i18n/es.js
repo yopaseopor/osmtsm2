@@ -19,6 +19,8 @@ export const es = {
     searchLayers: 'Buscar capas...',
     searchOverlays: 'Buscar superposiciones...',
     // Overlay groups
+	ambulance_station: 'Ambulancias',
+	alternative: 'Medicina alternativa',
 	animal_boarding: 'Cuidar animales',
 	animal_shelter: 'Refugio de animales',
 	bank: 'Banco',
@@ -92,6 +94,7 @@ export const es = {
 	vending_machine: 'Máquina de venta',
 	waste_basket: 'Papelera',
 	weighbridge: 'Báscula',
+	window_construction: 'Ventanas',
     leisure: 'Ocio',
     food: 'Comida y Bebida',
     shopping: 'Compras',

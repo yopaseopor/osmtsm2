@@ -19,6 +19,8 @@ export const ca = {
     searchLayers: 'Cercar capes...',
     searchOverlays: 'Cercar superposicions...',
     // Overlay groups
+	ambulance_station: 'Ambulàncies',
+	alternative: 'Medicina alternativa',
 	animal_boarding: 'Cuida d\'animals',
 	animal_shelter: 'Refugi d\'animals',
 	atm: 'Caixer automàtic',
@@ -92,6 +94,7 @@ export const ca = {
 	veterinary: 'Veterinari',
 	waste_basket: 'Paperera',
 	weighbridge: 'Bàscula',
+	window_construction: 'Finestres',
 	leisure: 'Oci',
     food: 'Menjar i Beguda',
     shopping: 'Botigues',
