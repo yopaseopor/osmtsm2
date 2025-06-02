@@ -69,10 +69,19 @@ function createOverlayGroup(title, layers) {
 function integrateOverlays() {
     if (window.config && window.config.layers) {
         console.log('Integrating overlays...');
+        // Prepare normalized English group names for comparison
+        const englishGroupNames = Object.values(languages.en.translations).map(g => g.trim().toLowerCase());
         // Flatten all overlays from all groups
-        const allOverlaysFlat = Object.values(window.allOverlays)
+        let allOverlaysFlat = Object.values(window.allOverlays)
             .filter(Array.isArray)
             .flat();
+        // In non-English, filter out overlays whose group matches any English group name
+        if (getCurrentLanguage && getCurrentLanguage() !== 'en') {
+            allOverlaysFlat = allOverlaysFlat.filter(overlay => {
+                if (!overlay.group) return false;
+                return !englishGroupNames.includes(overlay.group.trim().toLowerCase());
+            });
+        }
         // Group overlays by their translated group property
         const groupMap = {};
         allOverlaysFlat.forEach(overlay => {
@@ -85,9 +94,7 @@ function integrateOverlays() {
             if (!groupMap[groupKey]) groupMap[groupKey] = [];
             groupMap[groupKey].push(overlay);
         });
-        // Prepare normalized English group names for comparison
-        const englishGroupNames = Object.values(languages.en.translations).map(g => g.trim().toLowerCase());
-        // Filter groupMap to only show English group names if English is selected, otherwise only translated group names
+        // Prepare filtered group map
         const filteredGroupMap = {};
         if (getCurrentLanguage && getCurrentLanguage() === 'en') {
             // Only keep groups that match the English translations (case-insensitive)
