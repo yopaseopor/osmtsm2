@@ -1,4 +1,6 @@
 /* global config, ol */
+import { applyStyle } from 'ol-mapbox-style';
+
 $(function () {
     // --- Layer Searcher Integration ---
     // Remove early addition of 'Translated' overlay group here. It will be added after all overlays are loaded.
@@ -859,6 +861,25 @@ $(function () {
 		});
 
 	});
+
+    // After map and layers are initialized
+    // Find the MapTiler Vector layer by title
+    var mapTilerLayer = null;
+    if (window.config && Array.isArray(window.config.layers)) {
+        mapTilerLayer = window.config.layers.find(function(layer) {
+            return layer.get && layer.get('title') === 'MapTiler Vector';
+        });
+    }
+    if (mapTilerLayer) {
+        fetch('./src/style.json')
+            .then(function(response) { return response.json(); })
+            .then(function(styleJson) {
+                applyStyle(mapTilerLayer, styleJson, 'openmaptiles');
+            })
+            .catch(function(err) {
+                console.error('Failed to load or apply MapTiler style.json:', err);
+            });
+    }
 });
 
 function linearColorInterpolation(colorFrom, colorTo, weight) {
