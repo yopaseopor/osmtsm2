@@ -72,20 +72,25 @@ function integrateOverlays() {
         // Get current language and translation map
         const lang = getCurrentLanguage ? getCurrentLanguage() : 'en';
         const translationMap = languages[lang]?.translations || languages['en'].translations;
+        const englishMap = languages['en'].translations;
         // Flatten all overlays from all groups
         let allOverlaysFlat = Object.values(window.allOverlays)
             .filter(Array.isArray)
             .flat();
-        // For each overlay, set group to the current language translation using _groupKey
+        // For each overlay, set group to the current language translation using _groupKey, fallback to English if missing
         allOverlaysFlat = allOverlaysFlat
             .map(overlay => {
-                if (overlay._groupKey && translationMap[overlay._groupKey]) {
-                    return { ...overlay, group: translationMap[overlay._groupKey] };
+                if (overlay._groupKey) {
+                    if (translationMap[overlay._groupKey]) {
+                        return { ...overlay, group: translationMap[overlay._groupKey] };
+                    } else if (englishMap[overlay._groupKey]) {
+                        return { ...overlay, group: englishMap[overlay._groupKey] };
+                    }
                 }
-                return null; // Exclude overlays without a valid translation
+                return null; // Exclude overlays without a valid translation in any language
             })
             .filter(Boolean);
-        // Group overlays by their translated group property (in current language)
+        // Group overlays by their translated group property (in current language or English fallback)
         const groupMap = {};
         allOverlaysFlat.forEach(overlay => {
             if (!overlay.group) return;
