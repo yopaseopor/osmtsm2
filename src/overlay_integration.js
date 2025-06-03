@@ -77,13 +77,14 @@ function integrateOverlays() {
             .filter(Array.isArray)
             .flat();
         // For each overlay, set group to the current language translation using _groupKey
-        allOverlaysFlat = allOverlaysFlat.map(overlay => {
-            let groupName = overlay.group;
-            if (overlay._groupKey && translationMap[overlay._groupKey]) {
-                groupName = translationMap[overlay._groupKey];
-            }
-            return { ...overlay, group: groupName };
-        });
+        allOverlaysFlat = allOverlaysFlat
+            .map(overlay => {
+                if (overlay._groupKey && translationMap[overlay._groupKey]) {
+                    return { ...overlay, group: translationMap[overlay._groupKey] };
+                }
+                return null; // Exclude overlays without a valid translation
+            })
+            .filter(Boolean);
         // Group overlays by their translated group property (in current language)
         const groupMap = {};
         allOverlaysFlat.forEach(overlay => {
