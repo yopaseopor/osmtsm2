@@ -155,6 +155,7 @@ new ol.layer.VectorTile({
         url: 'https://api.maptiler.com/tiles/v3-openmaptiles/{z}/{x}/{y}.pbf?key=tKDOqJGURiimBRaaKrDJ',
         crossOrigin: 'anonymous'
     }),
+	style: 'style.json', // <-- Add this line
     visible: false
 }),
 				new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
