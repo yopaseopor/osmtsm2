@@ -12,9 +12,9 @@ function mergeGroupOverlays(baseOverlays, allOverlays) {
                 // Always use translated group name
                 const translatedGroup = overlay.group || getTranslation(groupName);
                 // Try to extract the translation key from the overlay definition
-                let groupKey = groupName;
-                if (overlay.group && typeof overlay.group === 'string') {
-                    // Try to find the translation key by matching the value in the translations
+                let groupKey = overlay._groupKey || groupName;
+                // If overlay.group is a translation and _groupKey is missing, try to infer the key
+                if (!overlay._groupKey && overlay.group && typeof overlay.group === 'string') {
                     for (const [key, value] of Object.entries(require('../i18n/en.js').en)) {
                         if (value === overlay.group) {
                             groupKey = key;
@@ -54,8 +54,8 @@ export const overlayConfig = {
             if (!Array.isArray(groupOverlays)) return [];
             return groupOverlays.map(overlay => {
                 const translatedGroup = overlay.group || getTranslation(groupName);
-                let groupKey = groupName;
-                if (overlay.group && typeof overlay.group === 'string') {
+                let groupKey = overlay._groupKey || groupName;
+                if (!overlay._groupKey && overlay.group && typeof overlay.group === 'string') {
                     for (const [key, value] of Object.entries(require('../i18n/en.js').en)) {
                         if (value === overlay.group) {
                             groupKey = key;
@@ -94,8 +94,8 @@ window.addEventListener('overlaysUpdated', function(event) {
                 if (!Array.isArray(groupOverlays)) return [];
                 return groupOverlays.map(overlay => {
                     const translatedGroup = overlay.group || getTranslation(groupName);
-                    let groupKey = groupName;
-                    if (overlay.group && typeof overlay.group === 'string') {
+                    let groupKey = overlay._groupKey || groupName;
+                    if (!overlay._groupKey && overlay.group && typeof overlay.group === 'string') {
                         for (const [key, value] of Object.entries(require('../i18n/en.js').en)) {
                             if (value === overlay.group) {
                                 groupKey = key;
