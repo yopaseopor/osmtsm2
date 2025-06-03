@@ -11,22 +11,10 @@ function mergeGroupOverlays(baseOverlays, allOverlays) {
             allOverlays[groupName].forEach(overlay => {
                 // Always use translated group name
                 const translatedGroup = overlay.group || getTranslation(groupName);
-                // Try to extract the translation key from the overlay definition
-                let groupKey = overlay._groupKey || groupName;
-                // If overlay.group is a translation and _groupKey is missing, try to infer the key
-                if (!overlay._groupKey && overlay.group && typeof overlay.group === 'string') {
-                    for (const [key, value] of Object.entries(require('../i18n/en.js').en)) {
-                        if (value === overlay.group) {
-                            groupKey = key;
-                            break;
-                        }
-                    }
-                }
                 // Avoid duplicates by title+translated group
                 if (!overlays.some(ov => ov.title === overlay.title && ov.group === translatedGroup)) {
                     overlays.push({
                         group: translatedGroup,
-                        _groupKey: groupKey,
                         title: overlay.title,
                         query: overlay.query,
                         iconSrc: overlay.iconSrc,
@@ -54,18 +42,8 @@ export const overlayConfig = {
             if (!Array.isArray(groupOverlays)) return [];
             return groupOverlays.map(overlay => {
                 const translatedGroup = overlay.group || getTranslation(groupName);
-                let groupKey = overlay._groupKey || groupName;
-                if (!overlay._groupKey && overlay.group && typeof overlay.group === 'string') {
-                    for (const [key, value] of Object.entries(require('../i18n/en.js').en)) {
-                        if (value === overlay.group) {
-                            groupKey = key;
-                            break;
-                        }
-                    }
-                }
                 return {
                     group: translatedGroup,
-                    _groupKey: groupKey,
                     title: overlay.title,
                     query: overlay.query,
                     iconSrc: overlay.iconSrc,
@@ -94,18 +72,8 @@ window.addEventListener('overlaysUpdated', function(event) {
                 if (!Array.isArray(groupOverlays)) return [];
                 return groupOverlays.map(overlay => {
                     const translatedGroup = overlay.group || getTranslation(groupName);
-                    let groupKey = overlay._groupKey || groupName;
-                    if (!overlay._groupKey && overlay.group && typeof overlay.group === 'string') {
-                        for (const [key, value] of Object.entries(require('../i18n/en.js').en)) {
-                            if (value === overlay.group) {
-                                groupKey = key;
-                                break;
-                            }
-                        }
-                    }
                     return {
                         group: translatedGroup,
-                        _groupKey: groupKey,
                         title: overlay.title,
                         query: overlay.query,
                         iconSrc: overlay.iconSrc,

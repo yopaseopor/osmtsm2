@@ -1,7 +1,6 @@
 // Import the overlays
 import { allOverlays } from './overlays/index.js';
 import { getCurrentLanguage } from './i18n/index.js';
-import { languages } from './i18n/index.js';
 
 // Function to convert overlay to OpenLayers layer
 function createOlLayer(overlay) {
@@ -69,33 +68,21 @@ function createOverlayGroup(title, layers) {
 function integrateOverlays() {
     if (window.config && window.config.layers) {
         console.log('Integrating overlays...');
-        // Get current language and translation map
-        const lang = getCurrentLanguage ? getCurrentLanguage() : 'en';
-        const translationMap = languages[lang]?.translations || languages['en'].translations;
-        const englishMap = languages['en'].translations;
         // Flatten all overlays from all groups
-        let allOverlaysFlat = Object.values(window.allOverlays)
+        const allOverlaysFlat = Object.values(window.allOverlays)
             .filter(Array.isArray)
             .flat();
-        // For each overlay, set group to the current language translation using _groupKey, fallback to English if missing
-        allOverlaysFlat = allOverlaysFlat
-            .map(overlay => {
-                if (overlay._groupKey) {
-                    if (translationMap[overlay._groupKey]) {
-                        return { ...overlay, group: translationMap[overlay._groupKey] };
-                    } else if (englishMap[overlay._groupKey]) {
-                        return { ...overlay, group: englishMap[overlay._groupKey] };
-                    }
-                }
-                return null; // Exclude overlays without a valid translation in any language
-            })
-            .filter(Boolean);
-        // Group overlays by their translated group property (in current language or English fallback)
+        // Group overlays by their translated group property
         const groupMap = {};
         allOverlaysFlat.forEach(overlay => {
             if (!overlay.group) return;
-            if (!groupMap[overlay.group]) groupMap[overlay.group] = [];
-            groupMap[overlay.group].push(overlay);
+            let groupKey = overlay.group;
+            // If English is selected, use the English translation for group names
+            if (getCurrentLanguage && getCurrentLanguage() === 'en' && overlay._groupKey) {
+                groupKey = overlay._groupKey;
+            }
+            if (!groupMap[groupKey]) groupMap[groupKey] = [];
+            groupMap[groupKey].push(overlay);
         });
         // Create OpenLayers groups for each unique group name
         const overlayGroups = {};
