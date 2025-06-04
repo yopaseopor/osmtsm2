@@ -43,24 +43,6 @@ var config = {
 	},
 	//@@ Mapas de fondo
 	layers: [
-		// MapTiler Raster Tiles (fallback for compatibility)
-		new ol.layer.Tile({
-			title: 'MapTiler Raster',
-			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
-			visible: false,
-			source: new ol.source.XYZ({
-				url: 'https://api.maptiler.com/maps/basic-v2/{z}/{x}/{y}.png?key=E5BwIFUchx7KJfjbQtGf',
-				tileGrid: ol.tilegrid.createXYZ({
-					minZoom: 0,
-					maxZoom: 22
-				}),
-				attributions: [
-					'<a href="https://www.maptiler.com/copyright/" target="_blank"> MapTiler</a>',
-					'<a href="https://www.openstreetmap.org/copyright" target="_blank"> OpenStreetMap contributors</a>'
-				]
-			})
-		}),
-		// Default OSM Layer - set as default visible
 		new ol.layer.Tile({
 			title: 'OpenStreetMap',
 			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
