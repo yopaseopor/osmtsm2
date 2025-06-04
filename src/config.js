@@ -8,10 +8,6 @@
 var imgSrc = 'src/img/';
 
 //@@Coordenadas LONgitud LATitud Rotación Zoom, Zoom de la geolocalización, unidades
-import { applyStyle } from 'ol-mapbox-style';
-import VectorTileLayer from 'ol/layer/VectorTile';
-import VectorTileSource from 'ol/source/VectorTile';
-
 var config = {
 	initialConfig: {
 		lon: 1.59647,
@@ -47,25 +43,6 @@ var config = {
 	},
 	//@@ Mapas de fondo
 	layers: [
-		// MapTiler Vector Tiles Layer
-		(function() {
-			const layer = new VectorTileLayer({
-				title: 'MapTiler Vector',
-				visible: false,
-			});
-			// Load the Mapbox GL style from the local style.json
-			fetch('src/style.json')
-				.then(response => response.json())
-				.then(style => {
-					// Replace {key} in the style with your API key
-					const apiKey = 'E5BwIFUchx7KJfjbQtGf';
-					const mapId = '01973c4a-e3ce-7589-b677-87c4bdafc490';
-					const styleString = JSON.stringify(style).replace(/\{key\}/g, apiKey).replace(/\{mapId\}/g, mapId);
-					const updatedStyle = JSON.parse(styleString);
-					applyStyle(layer, updatedStyle, 'openmaptiles');
-				});
-			return layer;
-		})(),
 		new ol.layer.Tile({
 			title: 'OpenStreetMap',
 			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
