@@ -24,4 +24,18 @@ window.dispatchEvent(new CustomEvent('overlaySearchUpdate', {
 // Initialize map when document is ready
 $(document).ready(function() {
     // Map initialization will be handled by index.js
-}); 
+});
+
+// --- MapTiler style integration ---
+// If olms is available and MapTiler layer is present, apply style.json
+if (typeof olms !== 'undefined' && window.config && window.config.layers) {
+    var maptilerLayer = window.config.layers.find(
+        l => l instanceof ol.layer.VectorTile && l.get('title') === 'MapTiler Vector'
+    );
+    if (maptilerLayer) {
+        // Find the map instance (assume global 'map')
+        if (typeof map !== 'undefined') {
+            olms(map, window.maptilerStyleUrl || 'src/style.json');
+        }
+    }
+} 
