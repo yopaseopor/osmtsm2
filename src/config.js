@@ -43,25 +43,15 @@ var config = {
 	},
 	//@@ Mapas de fondo
 	layers: [
-		// MapTiler Vector Tile Layer with inline styling
+		// MapTiler Vector Tile Layer
 		new ol.layer.VectorTile({
 			title: 'MapTiler Vector',
 			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
 			visible: false,
-			opacity: 0.9,
-			style: new ol.style.Style({
-				fill: new ol.style.Fill({
-					color: 'rgba(255, 255, 255, 0.7)'
-				}),
-				stroke: new ol.style.Stroke({
-					color: '#3399CC',
-					width: 1
-				})
-			}),
 			source: new ol.source.VectorTile({
 				projection: 'EPSG:3857',
 				format: new ol.format.MVT(),
-				url: 'https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.pbf?key=tKDOqJGURiimBRaaKrDJ ',
+				url: 'https://api.maptiler.com/tiles/v3-openmaptiles/{z}/{x}/{y}.pbf?key=E5BwIFUchx7KJfjbQtGf',
 				tileGrid: ol.tilegrid.createXYZ({
 					minZoom: 0,
 					maxZoom: 22
@@ -70,7 +60,27 @@ var config = {
 					'<a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a>',
 					'<a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a>'
 				]
-			})
+			}),
+			style: function(feature) {
+				var style = new ol.style.Style({
+					fill: new ol.style.Fill({
+						color: 'rgba(240, 240, 240, 0.8)'
+					}),
+					stroke: new ol.style.Stroke({
+						color: '#666666',
+						width: 1
+					})
+				});
+
+				// Simple styling based on feature type
+				var layer = feature.get('layer');
+				if (layer === 'water') {
+					style.getFill().setColor('rgba(170, 210, 255, 0.7)');
+				} else if (layer === 'landuse') {
+					style.getFill().setColor('rgba(200, 250, 200, 0.5)');
+				}
+				return [style];
+			}
 		}),
 		new ol.layer.Tile({
 			title: 'OpenStreetMap',
