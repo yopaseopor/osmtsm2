@@ -43,6 +43,19 @@ var config = {
 	},
 	//@@ Mapas de fondo
 	layers: [
+		new ol.layer.VectorTile({
+			title: 'MapTiler Basic',
+			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
+			visible: false,
+			source: new ol.source.VectorTile({
+				tilePixelRatio: 1,
+				format: new ol.format.MVT(),
+				url: 'https://api.maptiler.com/tiles/v3-openmaptiles/{z}/{x}/{y}.pbf?key=E5BwIFUchx7KJfjbQtGf',
+				tileGrid: ol.tilegrid.createXYZ({ maxZoom: 22 })
+			}),
+			style: 'src/style.json',
+			renderMode: 'vector'
+		}),
 		new ol.layer.Tile({
 			title: 'OpenStreetMap',
 			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
@@ -142,21 +155,7 @@ var config = {
 			}),
 			visible: false
 
-}),
-		
-new ol.layer.VectorTile({
-    title: 'MapTiler Vector',
-    iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png', // Replace with MapTiler logo if available
-    source: new ol.source.VectorTile({
-        tilePixelRatio: 1,
-        tileGrid: ol.tilegrid.createXYZ({maxZoom: 22}),
-        format: new ol.format.MVT(),
-        attributions: '&copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> contributors, &copy; <a href="https://www.maptiler.com/copyright/" target="_blank">MapTiler</a>',
-        url: 'https://api.maptiler.com/tiles/v3-openmaptiles/{z}/{x}/{y}.pbf?key=tKDOqJGURiimBRaaKrDJ',
-        crossOrigin: 'anonymous'
-    }),
-    visible: false
-}),
+		}),
 				new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
 			title: 'Vector Tile4',
 			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
