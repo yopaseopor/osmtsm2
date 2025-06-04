@@ -43,6 +43,35 @@ var config = {
 	},
 	//@@ Mapas de fondo
 	layers: [
+		// MapTiler Vector Tile Layer with inline styling
+		new ol.layer.VectorTile({
+			title: 'MapTiler Vector',
+			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
+			visible: false,
+			opacity: 0.9,
+			style: new ol.style.Style({
+				fill: new ol.style.Fill({
+					color: 'rgba(255, 255, 255, 0.7)'
+				}),
+				stroke: new ol.style.Stroke({
+					color: '#3399CC',
+					width: 1
+				})
+			}),
+			source: new ol.source.VectorTile({
+				projection: 'EPSG:3857',
+				format: new ol.format.MVT(),
+				url: 'https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.pbf?key=E5BwIFUchx7KJfjbQtGf',
+				tileGrid: ol.tilegrid.createXYZ({
+					minZoom: 0,
+					maxZoom: 22
+				}),
+				attributions: [
+					'<a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a>',
+					'<a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a>'
+				]
+			})
+		}),
 		new ol.layer.Tile({
 			title: 'OpenStreetMap',
 			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
