@@ -43,19 +43,64 @@ var config = {
 	},
 	//@@ Mapas de fondo
 	layers: [
+		// MapTiler Vector Tile Layer with proper styling
 		new ol.layer.VectorTile({
 			title: 'MapTiler Basic',
 			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
 			visible: false,
+			declutter: true,
 			source: new ol.source.VectorTile({
-				tilePixelRatio: 1,
+				projection: 'EPSG:3857',
 				format: new ol.format.MVT(),
 				url: 'https://api.maptiler.com/tiles/v3-openmaptiles/{z}/{x}/{y}.pbf?key=E5BwIFUchx7KJfjbQtGf',
-				tileGrid: ol.tilegrid.createXYZ({ maxZoom: 22 })
+				tileGrid: ol.tilegrid.createXYZ({
+					minZoom: 0,
+					maxZoom: 22
+				}),
+				tilePixelRatio: 2, // For high DPI displays
+				overlaps: false,
+				attributions: [
+					'<a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a>',
+					'<a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a>'
+				]
 			}),
-			style: 'src/style.json',
-			renderMode: 'vector'
+			style: function(feature) {
+				const type = feature.getGeometry().getType();
+				const layer = feature.get('layer');
+				const cls = feature.get('class');
+
+				// Default style
+				const style = new ol.style.Style({
+					fill: new ol.style.Fill({
+						color: 'rgba(255, 255, 255, 0.7)'
+					}),
+					stroke: new ol.style.Stroke({
+						color: '#3399CC',
+						width: 1.5
+					})
+				});
+
+				// Style based on feature type
+				switch(cls) {
+					case 'water':
+						style.getFill().setColor('rgba(170, 210, 255, 0.7)');
+						break;
+					case 'landcover':
+						style.getFill().setColor('rgba(210, 255, 200, 0.7)');
+						break;
+					case 'building':
+						style.getFill().setColor('rgba(200, 200, 200, 0.7)');
+						break;
+					case 'road':
+						style.getStroke().setColor('#666666');
+						style.getStroke().setWidth(1);
+						break;
+				}
+
+				return style;
+			}
 		}),
+		// Default OSM Layer
 		new ol.layer.Tile({
 			title: 'OpenStreetMap',
 			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
@@ -155,21 +200,7 @@ var config = {
 			}),
 			visible: false
 
-}),
-		
-new ol.layer.VectorTile({
-    title: 'MapTiler Vector',
-    iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png', // Replace with MapTiler logo if available
-    source: new ol.source.VectorTile({
-        tilePixelRatio: 1,
-        tileGrid: ol.tilegrid.createXYZ({maxZoom: 22}),
-        format: new ol.format.MVT(),
-        attributions: '&copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> contributors, &copy; <a href="https://www.maptiler.com/copyright/" target="_blank">MapTiler</a>',
-        url: 'https://api.maptiler.com/tiles/v3-openmaptiles/{z}/{x}/{y}.pbf?key=tKDOqJGURiimBRaaKrDJ',
-        crossOrigin: 'anonymous'
-    }),
-    visible: false
-}),
+		}),
 				new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
 			title: 'Vector Tile4',
 			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
