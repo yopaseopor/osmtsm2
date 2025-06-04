@@ -47,15 +47,15 @@ var config = {
 		new ol.layer.VectorTile({
 			title: 'MapTiler Vector',
 			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
-			visible: true,
+			visible: false,
 			opacity: 0.9,
 			source: new ol.source.VectorTile({
 				projection: 'EPSG:3857',
 				format: new ol.format.MVT(),
-				url: 'https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.pbf?key=tKDOqJGURiimBRaaKrDJ',
+				url: 'https://api.maptiler.com/tiles/v3-openmaptiles/{z}/{x}/{y}.pbf?key=tKDOqJGURiimBRaaKrDJ',
 				tileGrid: ol.tilegrid.createXYZ({
 					minZoom: 0,
-					maxZoom: 22
+					maxZoom: 14
 				}),
 				attributions: [
 					'<a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a>',
@@ -68,17 +68,22 @@ var config = {
 						color: 'rgba(240, 240, 240, 0.8)'
 					}),
 					stroke: new ol.style.Stroke({
-						color: '#666666',
+						color: '#999999',
 						width: 1
 					})
 				});
 
-				// Simple styling based on feature type
+				// Simple styling based on layer type
 				var layer = feature.get('layer');
 				if (layer === 'water') {
 					style.getFill().setColor('rgba(170, 210, 255, 0.7)');
 				} else if (layer === 'landuse') {
 					style.getFill().setColor('rgba(200, 250, 200, 0.5)');
+				} else if (layer === 'building') {
+					style.getFill().setColor('rgba(220, 220, 220, 0.7)');
+				} else if (layer === 'road') {
+					style.getStroke().setColor('#666666');
+					style.getStroke().setWidth(1);
 				}
 				return [style];
 			}
