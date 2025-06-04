@@ -143,6 +143,29 @@ var config = {
 			visible: false
 
 		}),
+		// ... existing code ...
+//@@ MapTiler Vector Layer (configurable)
+var maptilerApiKey = 'tKDOqJGURiimBRaaKrDJ'; // <-- Set your MapTiler API key here
+var maptilerStyleUrl = 'src/style.json'; // <-- Set your style.json path or MapTiler style URL here
+window.maptilerStyleUrl = maptilerStyleUrl;
+
+config.layers.push(
+  new ol.layer.VectorTile({
+    title: 'MapTiler Vector',
+    iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png', // Use a generic icon or replace with MapTiler icon if available
+    visible: false,
+    source: new ol.source.VectorTile({
+      format: new ol.format.MVT(),
+      tileGrid: ol.tilegrid.createXYZ({maxZoom: 14}),
+      url: 'https://api.maptiler.com/tiles/v3-openmaptiles/{z}/{x}/{y}.pbf?key=' + maptilerApiKey,
+      attributions: '&copy; <a href="https://www.maptiler.com/copyright/">MapTiler</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      crossOrigin: 'anonymous'
+    })
+    // To apply style.json, you need to use a library like ol-mapbox-style in your app initialization:
+    // olms(map, maptilerStyleUrl); // See https://github.com/openlayers/ol-mapbox-style
+  })
+);
+// ... existing code ...
 				new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
 			title: 'Vector Tile4',
 			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
