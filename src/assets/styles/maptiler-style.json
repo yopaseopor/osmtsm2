@@ -2,13 +2,13 @@
   "version": 8,
   "name": "MapTiler Streets",
   "sources": {
-    "openmaptiles": {
+    "maptiler_planet": {
       "type": "vector",
-      "url": "https://api.maptiler.com/tiles/v3-openmaptiles/tiles.json?key=E5BwIFUchx7KJfjbQtGf"
+      "url": "https://api.maptiler.com/tiles/v3-openmaptiles/tiles.json?key=tKDOqJGURiimBRaaKrDJ"
     }
   },
-  "glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=E5BwIFUchx7KJfjbQtGf",
-  "sprite": "https://api.maptiler.com/maps/streets-v2/sprite?key=E5BwIFUchx7KJfjbQtGf",
+  "glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=tKDOqJGURiimBRaaKrDJ",
+  "sprite": "https://api.maptiler.com/maps/streets/sprite?key=tKDOqJGURiimBRaaKrDJ",
   "layers": [
     {
       "id": "background",
@@ -20,9 +20,8 @@
     {
       "id": "water",
       "type": "fill",
-      "source": "openmaptiles",
+      "source": "maptiler_planet",
       "source-layer": "water",
-      "filter": ["==", "$type", "Polygon"],
       "paint": {
         "fill-color": "#a5bfdd"
       }
@@ -30,7 +29,7 @@
     {
       "id": "landuse",
       "type": "fill",
-      "source": "openmaptiles",
+      "source": "maptiler_planet",
       "source-layer": "landuse",
       "filter": ["in", "class", "grass", "park", "forest", "cemetery"],
       "paint": {
@@ -40,9 +39,8 @@
     {
       "id": "roads",
       "type": "line",
-      "source": "openmaptiles",
+      "source": "maptiler_planet",
       "source-layer": "transportation",
-      "filter": ["==", "$type", "LineString"],
       "layout": {
         "line-join": "round",
         "line-cap": "round"
@@ -55,7 +53,7 @@
     {
       "id": "buildings",
       "type": "fill",
-      "source": "openmaptiles",
+      "source": "maptiler_planet",
       "source-layer": "building",
       "paint": {
         "fill-color": "#d4d4d4",
