@@ -1,152 +1,141 @@
-// Vector Tile Style Configuration
-// Inspired by OpenStreetMap Americana styling patterns
+/**
+ * Vector Tile Style Configuration
+ * Inspired by OpenStreetMap Americana style patterns
+ */
 window.vectorTileStyle = function(feature, resolution) {
-    // Calculate zoom level from resolution (approximate)
-    // At zoom level 0, the resolution is 156543.03392804097 meters/pixel
-    // Each zoom level halves the resolution
-    var zoom = resolution ? Math.round(Math.log(156543.03392804097 / resolution) / Math.LN2) : 0;
+    // Debug logging (uncomment if needed)
+    // console.log('Styling feature:', feature);
     
-    // Get feature properties with fallbacks
-    var layer = feature.get('layer') || '';
-    var cls = feature.get('class') || '';
-    var type = feature.getGeometry().getType();
-    var brunnel = feature.get('brunnel') || '';
-    var isToll = feature.get('toll') === 1;
-    
-    // Base style with defaults
-    var style = new ol.style.Style({
-        fill: new ol.style.Fill({
-            color: 'rgba(240, 240, 240, 0.3)'
-        }),
-        stroke: new ol.style.Stroke({
-            color: 'rgba(100, 100, 100, 0.5)',
-            width: 0.5
-        })
-    });
+    // Common colors
+    const colors = {
+        water: 'rgba(170, 210, 255, 0.9)',
+        residential: 'rgba(240, 238, 235, 0.7)',
+        park: 'rgba(210, 250, 210, 0.7)',
+        forest: 'rgba(190, 220, 190, 0.8)',
+        building: 'rgba(220, 217, 210, 0.9)',
+        buildingOutline: 'rgba(180, 177, 170, 0.8)',
+        highway: {
+            motorway: { color: '#4a4a4a', width: 2 },
+            trunk: { color: '#4a4a4a', width: 1.8 },
+            primary: { color: '#5a5a5a', width: 1.5 },
+            secondary: { color: '#6a6a6a', width: 1.25 },
+            tertiary: { color: '#7a7a7a', width: 1 },
+            residential: { color: '#8a8a8a', width: 0.8 },
+            service: { color: '#9a9a9a', width: 0.6 }
+        },
+        landuse: {
+            residential: 'rgba(240, 238, 235, 0.7)',
+            commercial: 'rgba(240, 235, 240, 0.5)',
+            industrial: 'rgba(230, 230, 220, 0.6)',
+            retail: 'rgba(245, 235, 235, 0.6)',
+            park: 'rgba(210, 250, 210, 0.7)',
+            forest: 'rgba(190, 220, 190, 0.8)',
+            grass: 'rgba(200, 250, 200, 0.6)',
+            cemetery: 'rgba(200, 230, 200, 0.7)'
+        },
+        boundary: {
+            national: '#000000',
+            administrative: '#777777',
+            protected_area: '#2d5f2d'
+        }
+    };
 
     try {
-        // Water features
+        // Get feature properties
+        const layer = feature.get('layer') || 'unknown';
+        const cls = feature.get('class') || '';
+        const type = feature.getGeometry().getType();
+        const brunnel = feature.get('brunnel');
+        const isBridge = brunnel === 'bridge';
+        const isTunnel = brunnel === 'tunnel';
+        
+        // Debug logging (uncomment if needed)
+        // console.log(`Layer: ${layer}, Class: ${cls}, Type: ${type}`);
+
+        // Water
         if (layer === 'water') {
-            const isIntermittent = feature.get('intermittent') === 1;
-            style.getFill().setColor(isIntermittent ? 'rgba(170, 210, 255, 0.5)' : 'rgba(170, 210, 255, 0.7)');
-            
-            // Add water line for larger water bodies
-            if (['river', 'lake', 'ocean'].includes(cls) && zoom >= 8) {
-                return [
-                    style,
-                    new ol.style.Style({
-                        stroke: new ol.style.Stroke({
-                            color: 'rgba(100, 150, 255, 0.8)',
-                            width: zoom >= 12 ? 1.5 : 0.75,
-                            lineDash: isIntermittent ? [4, 2] : undefined
-                        })
-                    })
-                ];
-            }
-        } 
-        // Landuse features
-        else if (layer === 'landuse') {
-            if (['residential', 'suburb', 'neighbourhood'].includes(cls)) {
-                style.getFill().setColor('rgba(240, 235, 220, 0.7)');
-            } else if (['grass', 'park', 'garden', 'village_green'].includes(cls)) {
-                style.getFill().setColor('rgba(210, 250, 210, 0.6)');
-            } else if (['forest', 'wood', 'nature_reserve'].includes(cls)) {
-                style.getFill().setColor('rgba(180, 220, 180, 0.6)');
-            } else if (['industrial', 'commercial', 'retail'].includes(cls)) {
-                style.getFill().setColor('rgba(230, 220, 220, 0.6)');
-            } else if (['cemetery', 'grave_yard'].includes(cls)) {
-                style.getFill().setColor('rgba(200, 210, 200, 0.7)');
-            }
-        }
-        // Buildings
-        else if (layer === 'building') {
-            const height = feature.get('height') || 3;
-            const color = zoom >= 16 ? 'hsl(0, 0%, 80%)' : 'hsl(0, 0%, 87%)';
-            
             return [new ol.style.Style({
                 fill: new ol.style.Fill({
-                    color: color
+                    color: colors.water
+                })
+            })];
+        }
+        
+        // Landuse
+        if (layer === 'landuse') {
+            const fillColor = colors.landuse[cls] || colors.landuse.residential;
+            return [new ol.style.Style({
+                fill: new ol.style.Fill({
+                    color: fillColor
+                })
+            })];
+        }
+
+        // Buildings
+        if (layer === 'building') {
+            return [new ol.style.Style({
+                fill: new ol.style.Fill({
+                    color: colors.building
                 }),
                 stroke: new ol.style.Stroke({
-                    color: 'rgba(180, 180, 180, 0.8)',
+                    color: colors.buildingOutline,
                     width: 0.5
                 })
             })];
         }
+
         // Transportation (roads, paths, etc.)
-        else if (layer === 'transportation') {
-            const isTunnel = brunnel === 'tunnel';
-            const isBridge = brunnel === 'bridge';
-            const isLink = feature.get('ramp') === 1;
+        if (layer === 'transportation') {
+            const roadType = cls || 'tertiary';
+            const roadStyle = colors.highway[roadType] || colors.highway.tertiary;
             
-            // Base road style
-            let color, width, dashArray;
-            
-            // Determine style based on road class
-            if (['motorway', 'trunk'].includes(cls)) {
-                color = isToll ? 'hsl(48, 80%, 50%)' : 'hsl(0, 0%, 30%)';
-                width = isLink ? 1.5 : 2.5;
-            } else if (cls === 'primary') {
-                color = isToll ? 'hsl(48, 80%, 50%)' : 'hsl(0, 0%, 40%)';
-                width = isLink ? 1.25 : 2;
-            } else if (cls === 'secondary') {
-                color = 'hsl(0, 0%, 50%)';
-                width = isLink ? 1 : 1.5;
-            } else if (cls === 'tertiary') {
-                color = 'hsl(0, 0%, 60%)';
-                width = 1.25;
-            } else if (['service', 'residential'].includes(cls)) {
-                color = 'hsl(0, 0%, 70%)';
-                width = 1;
-            } else {
-                color = 'hsl(0, 0%, 80%)';
-                width = 0.75;
-            }
-            
-            // Adjust for tunnels
+            // Skip rendering tunnels for now
             if (isTunnel) {
-                dashArray = [2, 2];
-                color = color.replace(')', ', 0.5)').replace('hsl', 'hsla');
+                return [];
             }
             
-            // Create the style
+            // For bridges, make the line slightly wider and lighter
+            if (isBridge) {
+                roadStyle.width += 0.2;
+                roadStyle.color = adjustColor(roadStyle.color, 20);
+            }
+            
             return [new ol.style.Style({
                 stroke: new ol.style.Stroke({
-                    color: color,
-                    width: width,
-                    lineDash: dashArray,
+                    color: roadStyle.color,
+                    width: roadStyle.width,
                     lineCap: 'round',
                     lineJoin: 'round'
                 })
             })];
         }
+        
         // Boundaries
-        else if (layer === 'boundary') {
-            const adminLevel = feature.get('admin_level');
-            if (adminLevel) {
-                const level = parseInt(adminLevel);
-                if (level <= 2) {
-                    return [new ol.style.Style({
-                        stroke: new ol.style.Stroke({
-                            color: 'rgba(180, 50, 50, 0.8)',
-                            width: 1.5,
-                            lineDash: [4, 2]
-                        })
-                    })];
-                } else if (level <= 4) {
-                    return [new ol.style.Style({
-                        stroke: new ol.style.Stroke({
-                            color: 'rgba(200, 100, 100, 0.6)',
-                            width: 1,
-                            lineDash: [3, 3]
-                        })
-                    })];
-                }
+        if (layer === 'boundary') {
+            const boundaryStyle = {
+                stroke: new ol.style.Stroke({
+                    color: colors.boundary.administrative,
+                    width: 1,
+                    lineDash: [4, 2]
+                })
+            };
+            
+            if (cls === 'national') {
+                boundaryStyle.stroke.color = colors.boundary.national;
+                boundaryStyle.stroke.width = 1.5;
+                boundaryStyle.stroke.lineDash = [6, 3];
+            } else if (cls === 'protected_area') {
+                boundaryStyle.stroke.color = colors.boundary.protected_area;
+                boundaryStyle.stroke.width = 1;
+                boundaryStyle.stroke.lineDash = [3, 3];
             }
+            
+            return [new ol.style.Style(boundaryStyle)];
         }
+        
     } catch (error) {
-        console.error('Error styling feature:', error);
-        // Fallback style for errors
+        console.error('Error styling feature:', error, feature);
+        // Fallback style for debugging
         return [new ol.style.Style({
             fill: new ol.style.Fill({
                 color: 'rgba(255, 0, 0, 0.2)'
@@ -158,6 +147,40 @@ window.vectorTileStyle = function(feature, resolution) {
         })];
     }
     
-    // Return default style if no specific style was applied
-    return [style];
+    // Default style for any unhandled features
+    return [new ol.style.Style({
+        fill: new ol.style.Fill({
+            color: 'rgba(200, 200, 200, 0.3)'
+        }),
+        stroke: new ol.style.Stroke({
+            color: 'rgba(100, 100, 100, 0.5)',
+            width: 0.5
+        })
+    })];
 };
+
+/**
+ * Helper function to lighten or darken a color
+ * @param {string} color - Hex color code
+ * @param {number} percent - Positive to lighten, negative to darken
+ * @returns {string} Adjusted color
+ */
+function adjustColor(color, percent) {
+    // Convert hex to RGB
+    const num = parseInt(color.replace('#', ''), 16);
+    const amt = Math.round(2.55 * percent);
+    const R = (num >> 16) + amt;
+    const G = (num >> 8 & 0x00FF) + amt;
+    const B = (num & 0x0000FF) + amt;
+
+    // Ensure values are within bounds
+    const clamp = (value) => Math.min(255, Math.max(0, value));
+    
+    // Convert back to hex
+    return '#' + (
+        0x1000000 +
+        (clamp(R) << 16) +
+        (clamp(G) << 8) +
+        clamp(B)
+    ).toString(16).slice(1);
+}
