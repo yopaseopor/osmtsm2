@@ -47,8 +47,8 @@ var config = {
 		new ol.layer.VectorTile({
 			title: 'MapTiler Vector',
 			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
-			visible: false,
-			opacity: 0.9,
+			visible: true,  // Make it visible by default for testing
+			opacity: 1.0,
 			source: new ol.source.VectorTile({
 				projection: 'EPSG:3857',
 				format: new ol.format.MVT(),
@@ -58,11 +58,11 @@ var config = {
 					maxZoom: 14
 				}),
 				attributions: [
-					'<a href="https://www.maptiler.com/copyright/" target="_blank"> MapTiler</a>',
-					'<a href="https://www.openstreetmap.org/copyright" target="_blank"> OpenStreetMap contributors</a>'
+					'<a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a>',
+					'<a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a>'
 				]
 			}),
-			style: vectorTileStyle
+			style: window.vectorTileStyle
 		}),
 		new ol.layer.Tile({
 			title: 'OpenStreetMap',
