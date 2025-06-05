@@ -2,13 +2,13 @@
   "version": 8,
   "name": "MapTiler Streets",
   "sources": {
-    "maptiler_planet": {
+    "openmaptiles": {
       "type": "vector",
       "url": "https://api.maptiler.com/tiles/v3-openmaptiles/tiles.json?key=tKDOqJGURiimBRaaKrDJ"
     }
   },
   "glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=tKDOqJGURiimBRaaKrDJ",
-  "sprite": "https://api.maptiler.com/maps/streets/sprite?key=tKDOqJGURiimBRaaKrDJ",
+  "sprite": "https://api.maptiler.com/maps/streets-v2/sprite?key=tKDOqJGURiimBRaaKrDJ",
   "layers": [
     {
       "id": "background",
@@ -20,8 +20,9 @@
     {
       "id": "water",
       "type": "fill",
-      "source": "maptiler_planet",
+      "source": "openmaptiles",
       "source-layer": "water",
+      "filter": ["==", "$type", "Polygon"],
       "paint": {
         "fill-color": "#a5bfdd"
       }
@@ -29,7 +30,7 @@
     {
       "id": "landuse",
       "type": "fill",
-      "source": "maptiler_planet",
+      "source": "openmaptiles",
       "source-layer": "landuse",
       "filter": ["in", "class", "grass", "park", "forest", "cemetery"],
       "paint": {
@@ -39,8 +40,9 @@
     {
       "id": "roads",
       "type": "line",
-      "source": "maptiler_planet",
+      "source": "openmaptiles",
       "source-layer": "transportation",
+      "filter": ["==", "$type", "LineString"],
       "layout": {
         "line-join": "round",
         "line-cap": "round"
@@ -53,7 +55,7 @@
     {
       "id": "buildings",
       "type": "fill",
-      "source": "maptiler_planet",
+      "source": "openmaptiles",
       "source-layer": "building",
       "paint": {
         "fill-color": "#d4d4d4",
