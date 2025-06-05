@@ -1,64 +1,20 @@
 /**
- * Gets the best label text for a feature
- * @param {ol/Feature} feature - The feature to get label for
- * @returns {string|null} The best available label text or null if none found
- */
-function getFeatureLabel(feature) {
-    // Try to get name, ref, or house number
-    const name = feature.get('name');
-    const ref = feature.get('ref');
-    const houseNumber = feature.get('addr:housenumber');
-    
-    // For POIs, include their type (shop, amenity, etc.)
-    const shop = feature.get('shop');
-    const amenity = feature.get('amenity');
-    const tourism = feature.get('tourism');
-    const office = feature.get('office');
-    const building = feature.get('building');
-    
-    // Build label parts
-    const parts = [];
-    
-    // Add ref if available
-    if (ref) parts.push(ref);
-    
-    // Add name if available
-    if (name) parts.push(name);
-    
-    // If no name or ref, try to use POI type
-    if (parts.length === 0) {
-        if (shop) parts.push(shop);
-        else if (amenity) parts.push(amenity);
-        else if (tourism) parts.push(tourism);
-        else if (office) parts.push(office);
-        else if (building) parts.push(building);
-    }
-    
-    // Add house number if available
-    if (houseNumber) parts.push(`#${houseNumber}`);
-    
-    return parts.length > 0 ? parts.join(' ') : null;
-}
-
-/**
  * Vector Tile Style Configuration
  * Inspired by OpenStreetMap Americana style patterns
  */
 window.vectorTileStyle = function(feature, resolution) {
-    // Debug logging (uncomment if needed)
-    // console.log('Styling feature:', feature);
+    // Debug: Log feature properties for the first few features
+    if (window.debugFeatureCount === undefined) window.debugFeatureCount = 0;
+    if (window.debugFeatureCount < 50) {
+        console.log('--- Feature ' + window.debugFeatureCount + ' ---');
+        console.log('Layer:', feature.get('layer'));
+        console.log('Properties:', Object.keys(feature.getProperties()));
+        console.log('Geometry type:', feature.getGeometry().getType());
+        window.debugFeatureCount++;
+    }
     
     // Common colors
     const colors = {
-        // POI colors
-        poi: {
-            amenity: '#3498db',
-            shop: '#9b59b6',
-            tourism: '#e74c3c',
-            office: '#2ecc71',
-            building: '#e67e22',
-            default: '#7f8c8d'
-        },
         // Base colors
         water: 'rgba(170, 210, 255, 0.9)',
         waterIntermittent: 'rgba(170, 210, 255, 0.6)',
@@ -87,11 +43,13 @@ window.vectorTileStyle = function(feature, resolution) {
             fill: '#000000',
             stroke: '#ffffff',
             strokeWidth: 2,
-            font: '12px Arial, sans-serif',
+            font: 'bold 12px Arial, sans-serif',
             offsetY: 0,
             padding: [2, 4],
             maxAngle: 30,
-            overflow: true
+            overflow: true,
+            textBaseline: 'middle',
+            textAlign: 'center'
         },
         landuse: {
             residential: 'rgba(240, 238, 235, 0.7)',
@@ -118,6 +76,12 @@ window.vectorTileStyle = function(feature, resolution) {
         const brunnel = feature.get('brunnel');
         const isBridge = brunnel === 'bridge';
         const isTunnel = brunnel === 'tunnel';
+        
+        // Debug: Log all feature properties
+        if (layer === 'water' || layer === 'transportation' || layer === 'boundary') {
+            console.log(`Feature layer: ${layer}, class: ${cls}, type: ${type}`);
+            console.log('Feature properties:', Object.keys(feature.getProperties()));
+        }
         
         // Debug logging (uncomment if needed)
         // console.log(`Layer: ${layer}, Class: ${cls}, Type: ${type}`);
@@ -177,27 +141,22 @@ window.vectorTileStyle = function(feature, resolution) {
                 })
             }));
             
-            // Get label for any landuse with name, ref, or address
-            const label = getFeatureLabel(feature);
-            if (label) {
-                const fontSize = cls === 'park' || cls === 'forest' || cls === 'cemetery' ? 10 : 9;
-                const textColor = cls === 'cemetery' ? '#666666' : 
-                                 cls === 'park' || cls === 'forest' ? '#2d5f2d' : '#333333';
-                
+            // Add label for named landuse areas
+            if (name && (cls === 'park' || cls === 'forest' || cls === 'cemetery')) {
                 styles.push(new ol.style.Style({
                     text: new ol.style.Text({
-                        text: label,
-                        font: `${fontSize}px Arial`,
-                        fill: new ol.style.Fill({ color: textColor }),
+                        text: name,
+                        font: '10px Arial',
+                        fill: new ol.style.Fill({
+                            color: cls === 'cemetery' ? '#666666' : '#2d5f2d'
+                        }),
                         stroke: new ol.style.Stroke({
                             color: 'rgba(255, 255, 255, 0.7)',
-                            width: 2
+                            width: 3
                         }),
                         overflow: true,
                         textBaseline: 'middle',
-                        textAlign: 'center',
-                        placement: 'point',
-                        maxAngle: 0.7
+                        textAlign: 'center'
                     })
                 }));
             }
@@ -207,11 +166,11 @@ window.vectorTileStyle = function(feature, resolution) {
         
         // Buildings
         if (layer === 'building') {
+            const name = feature.get('name');
             const height = parseFloat(feature.get('height') || '0');
             const levels = parseInt(feature.get('building:levels') || '1', 10);
-            const buildingType = feature.get('building');
             
-            // Calculate building color based on height/levels/type
+            // Calculate building color based on height/levels
             let buildingColor = colors.building;
             if (height > 20 || levels > 5) {
                 buildingColor = adjustColor(colors.building, -15); // Darker for taller buildings
@@ -224,45 +183,28 @@ window.vectorTileStyle = function(feature, resolution) {
                 stroke: new ol.style.Stroke({
                     color: colors.buildingOutline,
                     width: 0.5
-                }),
-                zIndex: 10 // Ensure buildings are above other features
+                })
             })];
             
-            // Get label for building (name, ref, or address)
-            const label = getFeatureLabel(feature);
-            if (label) {
-                // Only show labels for significant buildings or when zoomed in
-                const showLabel = resolution < 10; // Adjust this value based on your needs
-                if (showLabel) {
-                    styles.push(new ol.style.Style({
-                        text: new ol.style.Text({
-                            text: label,
-                            font: '9px Arial',
-                            fill: new ol.style.Fill({
-                                color: '#333333'
-                            }),
-                            stroke: new ol.style.Stroke({
-                                color: 'rgba(255, 255, 255, 0.7)',
-                                width: 2
-                            }),
-                            offsetY: 0,
-                            overflow: true,
-                            maxAngle: 0.7,
-                            placement: 'point',
-                            textAlign: 'center',
-                            textBaseline: 'bottom',
-                            padding: [2, 5, 2, 5],
-                            backgroundFill: new ol.style.Fill({
-                                color: 'rgba(255, 255, 255, 0.5)'
-                            }),
-                            backgroundStroke: new ol.style.Stroke({
-                                color: 'rgba(200, 200, 200, 0.7)',
-                                width: 1
-                            })
+            // Add building label if it has a name
+            if (name) {
+                styles.push(new ol.style.Style({
+                    text: new ol.style.Text({
+                        text: name,
+                        font: '9px Arial',
+                        fill: new ol.style.Fill({
+                            color: '#333333'
                         }),
-                        zIndex: 20 // Ensure labels are above buildings
-                    }));
-                }
+                        stroke: new ol.style.Stroke({
+                            color: 'rgba(255, 255, 255, 0.7)',
+                            width: 2
+                        }),
+                        offsetY: 0,
+                        overflow: true,
+                        maxAngle: 0.7,
+                        placement: 'point'
+                    })
+                }));
             }
             
             return styles;
@@ -313,49 +255,31 @@ window.vectorTileStyle = function(feature, resolution) {
             }
             
             // Add road labels for named or numbered roads
-            const label = getFeatureLabel(feature);
-            if (label) {
+            if (name || ref) {
+                const labelText = ref ? `${ref}${name ? ' ' + name : ''}` : name;
                 const isMajorRoad = ['motorway', 'trunk', 'primary', 'secondary'].includes(roadType);
-                const fontSize = isMajorRoad ? 10 : 9;
-                const textColor = isMajorRoad ? '#ffffff' : roadStyle.textColor || '#000000';
-                const strokeColor = isMajorRoad ? 'rgba(0, 0, 0, 0.7)' : 'rgba(255, 255, 255, 0.8)';
                 
-                // Only show labels at appropriate zoom levels
-                const showLabel = resolution < (isMajorRoad ? 20 : 10);
-                
-                if (showLabel) {
-                    styles.push(new ol.style.Style({
-                        text: new ol.style.Text({
-                            text: label,
-                            font: isMajorRoad ? `bold ${fontSize}px Arial` : `${fontSize}px Arial`,
-                            fill: new ol.style.Fill({
-                                color: textColor
-                            }),
-                            stroke: new ol.style.Stroke({
-                                color: strokeColor,
-                                width: isMajorRoad ? 3 : 2
-                            }),
-                            offsetY: 0,
-                            rotation: 0,
-                            textAlign: 'center',
-                            textBaseline: 'alphabetic',
-                            overflow: true,
-                            placement: 'line',
-                            maxAngle: 0.5,
-                            textOverflow: 'ellipsis',
-                            maxResolution: isMajorRoad ? 10 : 5,
-                            backgroundFill: isMajorRoad ? new ol.style.Fill({
-                                color: 'rgba(0, 0, 0, 0.3)'
-                            }) : null,
-                            backgroundStroke: isMajorRoad ? new ol.style.Stroke({
-                                color: 'rgba(0, 0, 0, 0.2)',
-                                width: 1
-                            }) : null,
-                            padding: isMajorRoad ? [2, 4, 2, 4] : [1, 2, 1, 2]
+                styles.push(new ol.style.Style({
+                    text: new ol.style.Text({
+                        text: labelText,
+                        font: isMajorRoad ? 'bold 10px Arial' : '9px Arial',
+                        fill: new ol.style.Fill({
+                            color: isMajorRoad ? '#ffffff' : roadStyle.textColor || '#000000'
                         }),
-                        zIndex: 30 // Ensure road labels are above other features
-                    }));
-                }
+                        stroke: new ol.style.Stroke({
+                            color: isMajorRoad ? 'rgba(0, 0, 0, 0.5)' : 'rgba(255, 255, 255, 0.7)',
+                            width: isMajorRoad ? 3 : 2
+                        }),
+                        offsetY: 0,
+                        rotation: 0,
+                        textAlign: 'center',
+                        textBaseline: 'middle',
+                        overflow: true,
+                        placement: 'line',
+                        maxAngle: 0.5
+                    }),
+                    zIndex: 3
+                }));
             }
             
             return styles;
@@ -423,90 +347,16 @@ window.vectorTileStyle = function(feature, resolution) {
         
     } catch (error) {
         console.error('Error styling feature:', error, feature);
-        // POI (Point of Interest) styling
-        const poiType = feature.get('amenity') || feature.get('shop') || 
-                       feature.get('tourism') || feature.get('office') || 
-                       feature.get('building') ? 'poi' : null;
-        
-        if (poiType) {
-            const poiColor = colors.poi[
-                feature.get('amenity') ? 'amenity' : 
-                feature.get('shop') ? 'shop' :
-                feature.get('tourism') ? 'tourism' :
-                feature.get('office') ? 'office' :
-                feature.get('building') ? 'building' : 'default'
-            ];
-            
-            const styles = [
-                new ol.style.Style({
-                    image: new ol.style.Circle({
-                        radius: 5,
-                        fill: new ol.style.Fill({
-                            color: poiColor
-                        }),
-                        stroke: new ol.style.Stroke({
-                            color: '#fff',
-                            width: 1
-                        })
-                    })
-                })
-            ];
-            
-            // Add label for POI
-            const label = getFeatureLabel(feature);
-            if (label) {
-                styles.push(new ol.style.Style({
-                    text: new ol.style.Text({
-                        text: label,
-                        font: '10px Arial',
-                        fill: new ol.style.Fill({
-                            color: '#000'
-                        }),
-                        stroke: new ol.style.Stroke({
-                            color: '#fff',
-                            width: 2
-                        }),
-                        offsetY: 12,
-                        overflow: true
-                    })
-                }));
-            }
-            
-            return styles;
-        }
-        
-        // Default style (fallback) - with label if available
-        const styles = [new ol.style.Style({
+        // Fallback style for debugging
+        return [new ol.style.Style({
             fill: new ol.style.Fill({
-                color: 'rgba(200, 200, 200, 0.3)'
+                color: 'rgba(255, 0, 0, 0.2)'
             }),
             stroke: new ol.style.Stroke({
-                color: 'rgba(100, 100, 100, 0.5)',
+                color: '#ff0000',
                 width: 1
             })
         })];
-        
-        // Add label for any feature with a name or ref
-        const label = getFeatureLabel(feature);
-        if (label) {
-            styles.push(new ol.style.Style({
-                text: new ol.style.Text({
-                    text: label,
-                    font: '9px Arial',
-                    fill: new ol.style.Fill({
-                        color: '#333'
-                    }),
-                    stroke: new ol.style.Stroke({
-                        color: 'rgba(255, 255, 255, 0.7)',
-                        width: 2
-                    }),
-                    offsetY: 10,
-                    overflow: true
-                })
-            }));
-        }
-        
-        return styles;
     }
     
     // Default style for any unhandled features
