@@ -1,8 +1,10 @@
 // Vector Tile Style Configuration
 // Inspired by OpenStreetMap Americana styling patterns
 window.vectorTileStyle = function(feature, resolution) {
-    // Get zoom level from the map if available
-    var zoom = map ? map.getView().getZoom() : 0;
+    // Calculate zoom level from resolution (approximate)
+    // At zoom level 0, the resolution is 156543.03392804097 meters/pixel
+    // Each zoom level halves the resolution
+    var zoom = resolution ? Math.round(Math.log(156543.03392804097 / resolution) / Math.LN2) : 0;
     
     // Get feature properties with fallbacks
     var layer = feature.get('layer') || '';
