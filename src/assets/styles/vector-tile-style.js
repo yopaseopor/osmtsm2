@@ -3,8 +3,15 @@
  * Inspired by OpenStreetMap Americana style patterns
  */
 window.vectorTileStyle = function(feature, resolution) {
-    // Debug logging (uncomment if needed)
-    // console.log('Styling feature:', feature);
+    // Debug: Log feature properties for the first few features
+    if (window.debugFeatureCount === undefined) window.debugFeatureCount = 0;
+    if (window.debugFeatureCount < 50) {
+        console.log('--- Feature ' + window.debugFeatureCount + ' ---');
+        console.log('Layer:', feature.get('layer'));
+        console.log('Properties:', Object.keys(feature.getProperties()));
+        console.log('Geometry type:', feature.getGeometry().getType());
+        window.debugFeatureCount++;
+    }
     
     // Common colors
     const colors = {
@@ -36,11 +43,13 @@ window.vectorTileStyle = function(feature, resolution) {
             fill: '#000000',
             stroke: '#ffffff',
             strokeWidth: 2,
-            font: '12px Arial, sans-serif',
+            font: 'bold 12px Arial, sans-serif',
             offsetY: 0,
             padding: [2, 4],
             maxAngle: 30,
-            overflow: true
+            overflow: true,
+            textBaseline: 'middle',
+            textAlign: 'center'
         },
         landuse: {
             residential: 'rgba(240, 238, 235, 0.7)',
@@ -67,6 +76,12 @@ window.vectorTileStyle = function(feature, resolution) {
         const brunnel = feature.get('brunnel');
         const isBridge = brunnel === 'bridge';
         const isTunnel = brunnel === 'tunnel';
+        
+        // Debug: Log all feature properties
+        if (layer === 'water' || layer === 'transportation' || layer === 'boundary') {
+            console.log(`Feature layer: ${layer}, class: ${cls}, type: ${type}`);
+            console.log('Feature properties:', Object.keys(feature.getProperties()));
+        }
         
         // Debug logging (uncomment if needed)
         // console.log(`Layer: ${layer}, Class: ${cls}, Type: ${type}`);
