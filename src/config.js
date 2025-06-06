@@ -65,19 +65,11 @@ var config = {
 					'<a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a>'
 				]
 			}),
-			style: function(feature, resolution) {
-				// Ensure the style function is properly bound to the window context
-				if (window.vectorTileStyle) {
-					// Add a small timeout to ensure the map is fully rendered
-					setTimeout(function() {
-						map.render();
-					}, 0);
-					return window.vectorTileStyle(feature, resolution);
-				}
-				return [];
-			},
+			style: window.vectorTileStyle || function() { return []; },
 			updateWhileAnimating: true,  // Update labels during animations
-			updateWhileInteracting: true  // Update labels during interactions
+			updateWhileInteracting: true,  // Update labels during interactions
+			preload: 0,  // Don't preload tiles to reduce initial load
+			useInterimTilesOnError: true  // Show lower zoom level tiles if needed
 		}),
 		new ol.layer.Tile({
 			title: 'OpenStreetMap',

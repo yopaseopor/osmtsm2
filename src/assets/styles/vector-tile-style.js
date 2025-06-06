@@ -1,57 +1,79 @@
-/**
- * Gets the best label text for a feature
- * @param {ol/Feature} feature - The feature to get label for
- * @returns {string|null} The best available label text or null if none found
- */
-function getFeatureLabel(feature) {
-    // Try to get name, ref, or house number
-    const name = feature.get('name');
-    const ref = feature.get('ref');
-    const houseNumber = feature.get('addr:housenumber');
+// Minimal vector tile style for testing
+window.vectorTileStyle = function(feature, resolution) {
+    // Get the layer name
+    const layer = feature.get('layer');
     
-    // For POIs, include their type (shop, amenity, etc.)
-    const shop = feature.get('shop');
-    const amenity = feature.get('amenity');
-    const tourism = feature.get('tourism');
-    const office = feature.get('office');
-    const building = feature.get('building');
+    // Skip if no layer
+    if (!layer) return [];
     
-    // Build label parts
-    const parts = [];
-    
-    // Add ref if available
-    if (ref) parts.push(ref);
-    
-    // Add name if available
-    if (name) parts.push(name);
-    
-    // If no name or ref, try to use POI type
-    if (parts.length === 0) {
-        if (shop) parts.push(shop);
-        else if (amenity) parts.push(amenity);
-        else if (tourism) parts.push(tourism);
-        else if (office) parts.push(office);
-        else if (building) parts.push(building);
+    // Simple styles for different layers
+    if (layer === 'water') {
+        return [new ol.style.Style({
+            fill: new ol.style.Fill({
+                color: '#9db9e8'
+            })
+        })];
     }
     
-    // Add house number if available
-    if (houseNumber) parts.push(`#${houseNumber}`);
+    if (layer === 'landcover') {
+        return [new ol.style.Style({
+            fill: new ol.style.Fill({
+                color: '#f2efe9'
+            })
+        })];
+    }
     
-    return parts.length > 0 ? parts.join(' ') : null;
-}
-
-/**
- * Vector Tile Style Configuration
- * Inspired by OpenStreetMap Americana style patterns
- */
-window.vectorTileStyle = function(feature, resolution) {
-    // Debug logging (uncomment if needed)
-    // console.log('Styling feature:', feature);
+    if (layer === 'transportation') {
+        const roadClass = feature.get('class') || 'road';
+        let color = '#cccccc';
+        let width = 1;
+        
+        // Simple road styling based on class
+        switch(roadClass) {
+            case 'motorway':
+                color = '#ff9999';
+                width = 5;
+                break;
+            case 'trunk':
+                color = '#ffb3b3';
+                width = 4;
+                break;
+            case 'primary':
+                color = '#ffcccc';
+                width = 3;
+                break;
+            case 'secondary':
+                color = '#ffe6cc';
+                width = 2.5;
+                break;
+            case 'tertiary':
+                color = '#ffffcc';
+                width = 2;
+                break;
+            default:
+                width = 1;
+        }
+        
+        return [new ol.style.Style({
+            stroke: new ol.style.Stroke({
+                color: color,
+                width: width,
+                lineCap: 'round',
+                lineJoin: 'round'
+            })
+        })];
+    }
     
-    // Common colors
-    const colors = {
-        // Text colors with better contrast
-        text: {
+    // Default style for other layers
+    return [new ol.style.Style({
+        fill: new ol.style.Fill({
+            color: 'rgba(200, 200, 200, 0.5)'
+        }),
+        stroke: new ol.style.Stroke({
+            color: '#999999',
+            width: 1
+        })
+    })];
             primary: '#000000',
             secondary: '#333333',
             light: '#ffffff',
@@ -361,79 +383,53 @@ window.vectorTileStyle = function(feature, resolution) {
             return styles;
         }
 
-        // Transportation name labels (road names, refs, etc.)
+        // Transportation Name Layer (road labels)
         if (layer === 'transportation_name') {
-            const roadClass = cls || 'tertiary';
-            const name = feature.get('name');
-            const ref = feature.get('ref');
-            const network = feature.get('network');
-            
-            // Skip if no name or ref
-            if (!name && !ref) {
-                return [];
-            }
-            
-            // Determine text to show - prefer ref for motorways/trunks, name for others
-            let text = '';
-            if (['motorway', 'trunk'].includes(roadClass)) {
-                text = ref || name;
-            } else {
-                text = name || ref;
-            }
-            
-            // Get the road style for this class
-            const roadStyle = colors.highway[roadClass] || colors.highway.tertiary;
-            
-            // Determine text color based on road type
-            let textColor = roadStyle.textColor || '#000000';
-            let haloColor = roadStyle.color ? 
-                (roadStyle.color.startsWith('#') ? roadStyle.color : '#ffffff') : 
-                '#ffffff';
+            try {
+                // Get the road class from the feature
+                const cls = feature.get('class') || '';
+                const name = feature.get('name');
+                const ref = feature.get('ref');
                 
-            // Invert colors for better contrast if needed
-            if (roadStyle.color && roadStyle.color.startsWith('#')) {
-                // Simple brightness check to determine if we need a white or black text
-                const r = parseInt(roadStyle.color.substr(1, 2), 16);
-                const g = parseInt(roadStyle.color.substr(3, 2), 16);
-                const b = parseInt(roadStyle.color.substr(5, 2), 16);
-                const brightness = (r * 299 + g * 587 + b * 114) / 1000;
-                textColor = brightness > 128 ? '#000000' : '#ffffff';
-            }
-            
-            // Only show labels at appropriate zoom levels
-            const showLabel = resolution < (['motorway', 'trunk', 'primary'].includes(roadClass) ? 20 : 10);
-            
-            if (showLabel) {
+                // Skip if no name or ref
+                if (!name && !ref) {
+                    return [];
+                }
+                
+                // Choose between name and ref based on road class
+                let text = '';
+                if (ref && ['motorway', 'trunk', 'primary', 'secondary'].includes(cls)) {
+                    text = ref;
+                } else if (name) {
+                    text = name;
+                } else {
+                    return [];
+                }
+                
+                // Simple style for now - we can enhance this later
                 return [new ol.style.Style({
                     text: new ol.style.Text({
                         text: text,
-                        font: ['motorway', 'trunk'].includes(roadClass) ? 'bold 12px Arial' : '11px Arial',
-                        fill: new ol.style.Fill({ color: textColor }),
+                        font: ['motorway', 'trunk'].includes(cls) ? 'bold 12px Arial' : '11px Arial',
+                        fill: new ol.style.Fill({
+                            color: '#000'
+                        }),
                         stroke: new ol.style.Stroke({
-                            color: haloColor,
+                            color: '#fff',
                             width: 3
                         }),
                         offsetY: 0,
-                        rotation: 0,
                         textAlign: 'center',
                         textBaseline: 'middle',
                         overflow: true,
                         placement: 'line',
-                        maxAngle: 0.5,
-                        maxResolution: ['motorway', 'trunk', 'primary'].includes(roadClass) ? 20 : 10,
-                        padding: [2, 4],
-                        backgroundFill: new ol.style.Fill({
-                            color: 'rgba(255, 255, 255, 0.7)'
-                        }),
-                        backgroundStroke: new ol.style.Stroke({
-                            color: 'rgba(200, 200, 200, 0.7)',
-                            width: 1
-                        })
-                    }),
-                    zIndex: 100 // Ensure labels are on top
+                        maxAngle: 0.5
+                    })
                 })];
+            } catch (e) {
+                console.error('Error in transportation_name style:', e);
+                return [];
             }
-            return [];
         }
         
         // Transportation (roads, paths, etc.)
