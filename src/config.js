@@ -49,20 +49,35 @@ var config = {
 			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
 			visible: true,  // Make it visible by default for testing
 			opacity: 1.0,
+			renderMode: 'vector',  // Ensure vector rendering mode for better text quality
 			source: new ol.source.VectorTile({
 				projection: 'EPSG:3857',
 				format: new ol.format.MVT(),
 				url: 'https://api.maptiler.com/tiles/v3-openmaptiles/{z}/{x}/{y}.pbf?key=tKDOqJGURiimBRaaKrDJ',
 				tileGrid: ol.tilegrid.createXYZ({
 					minZoom: 0,
-					maxZoom: 14
+					maxZoom: 14,
+					tileSize: 512  // Larger tile size for better label rendering
 				}),
+				overlaps: false,  // Prevent label duplicates at tile edges
 				attributions: [
 					'<a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a>',
 					'<a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a>'
 				]
 			}),
-			style: window.vectorTileStyle
+			style: function(feature, resolution) {
+				// Ensure the style function is properly bound to the window context
+				if (window.vectorTileStyle) {
+					// Add a small timeout to ensure the map is fully rendered
+					setTimeout(function() {
+						map.render();
+					}, 0);
+					return window.vectorTileStyle(feature, resolution);
+				}
+				return [];
+			},
+			updateWhileAnimating: true,  // Update labels during animations
+			updateWhileInteracting: true  // Update labels during interactions
 		}),
 		new ol.layer.Tile({
 			title: 'OpenStreetMap',

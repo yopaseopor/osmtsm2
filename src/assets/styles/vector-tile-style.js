@@ -50,6 +50,26 @@ window.vectorTileStyle = function(feature, resolution) {
     
     // Common colors
     const colors = {
+        // Text colors with better contrast
+        text: {
+            primary: '#000000',
+            secondary: '#333333',
+            light: '#ffffff',
+            dark: '#000000',
+            highlight: '#1a73e8',
+            poi: '#1a73e8',
+            road: '#1a1a1a',
+            water: '#1a73e8',
+            boundary: '#666666',
+            building: '#333333',
+            landuse: '#2d5f2d'
+        },
+        // Text halo/background
+        textHalo: {
+            light: 'rgba(255, 255, 255, 0.8)',
+            dark: 'rgba(0, 0, 0, 0.5)',
+            highlight: 'rgba(255, 255, 255, 0.9)'
+        },
         // POI colors
         poi: {
             amenity: '#3498db',
@@ -57,7 +77,16 @@ window.vectorTileStyle = function(feature, resolution) {
             tourism: '#e74c3c',
             office: '#2ecc71',
             building: '#e67e22',
-            default: '#7f8c8d'
+            default: '#7f8c8d',
+            // Brighter variants for better visibility
+            bright: {
+                amenity: '#42a5f5',
+                shop: '#ab47bc',
+                tourism: '#ef5350',
+                office: '#66bb6a',
+                building: '#ff9800',
+                default: '#90a4ae'
+            }
         },
         // Base colors
         water: 'rgba(170, 210, 255, 0.9)',
@@ -145,19 +174,37 @@ window.vectorTileStyle = function(feature, resolution) {
             // Add water label if name exists
             const name = feature.get('name');
             if (name) {
+                const isLargeWaterBody = feature.get('area') > 1000000; // Large water bodies in square meters
+                const fontSize = isLargeWaterBody ? 14 : 12;
+                const textColor = colors.text.water;
+                const haloColor = colors.textHalo.light;
+                
                 styles.push(new ol.style.Style({
                     text: new ol.style.Text({
                         text: name,
-                        font: 'italic 11px Arial',
+                        font: `italic ${fontSize}px Arial`,
                         fill: new ol.style.Fill({
-                            color: 'rgba(0, 0, 128, 0.8)'
+                            color: textColor
                         }),
                         stroke: new ol.style.Stroke({
-                            color: 'rgba(255, 255, 255, 0.7)',
-                            width: 2
+                            color: haloColor,
+                            width: 3
                         }),
-                        offsetY: -10
-                    })
+                        offsetY: isLargeWaterBody ? -15 : -12,
+                        overflow: true,
+                        placement: 'point',
+                        textBaseline: 'bottom',
+                        textAlign: 'center',
+                        padding: [2, 4],
+                        backgroundFill: new ol.style.Fill({
+                            color: 'rgba(255, 255, 255, 0.3)'
+                        }),
+                        backgroundStroke: new ol.style.Stroke({
+                            color: 'rgba(0, 0, 0, 0.2)',
+                            width: 0.5
+                        })
+                    }),
+                    zIndex: 40 // Above water but below roads and POIs
                 }));
             }
             
@@ -180,25 +227,39 @@ window.vectorTileStyle = function(feature, resolution) {
             // Get label for any landuse with name, ref, or address
             const label = getFeatureLabel(feature);
             if (label) {
-                const fontSize = cls === 'park' || cls === 'forest' || cls === 'cemetery' ? 10 : 9;
-                const textColor = cls === 'cemetery' ? '#666666' : 
-                                 cls === 'park' || cls === 'forest' ? '#2d5f2d' : '#333333';
+                const isImportantLanduse = ['park', 'forest', 'cemetery', 'university', 'hospital'].includes(cls);
+                const fontSize = isImportantLanduse ? 12 : 10;
+                const textColor = colors.text.light; // White text for better contrast
+                const haloColor = colors.textHalo.dark;
+                const fontWeight = isImportantLanduse ? 'bold' : 'normal';
                 
                 styles.push(new ol.style.Style({
                     text: new ol.style.Text({
                         text: label,
-                        font: `${fontSize}px Arial`,
-                        fill: new ol.style.Fill({ color: textColor }),
-                        stroke: new ol.style.Stroke({
-                            color: 'rgba(255, 255, 255, 0.7)',
-                            width: 2
+                        font: `${fontWeight} ${fontSize}px Arial`,
+                        fill: new ol.style.Fill({ 
+                            color: textColor 
                         }),
+                        stroke: new ol.style.Stroke({
+                            color: haloColor,
+                            width: 3
+                        }),
+                        offsetY: 0,
                         overflow: true,
                         textBaseline: 'middle',
                         textAlign: 'center',
                         placement: 'point',
-                        maxAngle: 0.7
-                    })
+                        maxAngle: 0.7,
+                        padding: [3, 6],
+                        backgroundFill: new ol.style.Fill({
+                            color: 'rgba(0, 0, 0, 0.5)'
+                        }),
+                        backgroundStroke: new ol.style.Stroke({
+                            color: 'rgba(255, 255, 255, 0.3)',
+                            width: 1
+                        })
+                    }),
+                    zIndex: 80 // Above most features but below POIs
                 }));
             }
             
@@ -316,44 +377,54 @@ window.vectorTileStyle = function(feature, resolution) {
             const label = getFeatureLabel(feature);
             if (label) {
                 const isMajorRoad = ['motorway', 'trunk', 'primary', 'secondary'].includes(roadType);
-                const fontSize = isMajorRoad ? 10 : 9;
-                const textColor = isMajorRoad ? '#ffffff' : roadStyle.textColor || '#000000';
-                const strokeColor = isMajorRoad ? 'rgba(0, 0, 0, 0.7)' : 'rgba(255, 255, 255, 0.8)';
+                const fontSize = isMajorRoad ? 11 : 10; // Slightly larger font
+                const textColor = isMajorRoad ? '#ffffff' : colors.text.road;
+                const strokeColor = isMajorRoad ? 'rgba(0, 0, 0, 0.8)' : 'rgba(255, 255, 255, 0.9)';
+                const strokeWidth = isMajorRoad ? 3 : 2.5;
                 
-                // Only show labels at appropriate zoom levels
-                const showLabel = resolution < (isMajorRoad ? 20 : 10);
+                // Show labels at appropriate zoom levels based on road importance
+                const showLabel = resolution < (isMajorRoad ? 15 : 7.5);
                 
                 if (showLabel) {
-                    styles.push(new ol.style.Style({
-                        text: new ol.style.Text({
-                            text: label,
-                            font: isMajorRoad ? `bold ${fontSize}px Arial` : `${fontSize}px Arial`,
-                            fill: new ol.style.Fill({
-                                color: textColor
-                            }),
-                            stroke: new ol.style.Stroke({
-                                color: strokeColor,
-                                width: isMajorRoad ? 3 : 2
-                            }),
-                            offsetY: 0,
-                            rotation: 0,
-                            textAlign: 'center',
-                            textBaseline: 'alphabetic',
-                            overflow: true,
-                            placement: 'line',
-                            maxAngle: 0.5,
-                            textOverflow: 'ellipsis',
-                            maxResolution: isMajorRoad ? 10 : 5,
-                            backgroundFill: isMajorRoad ? new ol.style.Fill({
-                                color: 'rgba(0, 0, 0, 0.3)'
-                            }) : null,
-                            backgroundStroke: isMajorRoad ? new ol.style.Stroke({
-                                color: 'rgba(0, 0, 0, 0.2)',
-                                width: 1
-                            }) : null,
-                            padding: isMajorRoad ? [2, 4, 2, 4] : [1, 2, 1, 2]
+                    const textStyle = new ol.style.Text({
+                        text: label,
+                        font: isMajorRoad ? `bold ${fontSize}px Arial` : `${fontSize}px Arial`,
+                        fill: new ol.style.Fill({ color: textColor }),
+                        stroke: new ol.style.Stroke({
+                            color: strokeColor,
+                            width: strokeWidth
                         }),
-                        zIndex: 30 // Ensure road labels are above other features
+                        offsetY: 0,
+                        rotation: 0,
+                        textAlign: 'center',
+                        textBaseline: 'middle',
+                        overflow: true,
+                        placement: 'line',
+                        maxAngle: 0.5,
+                        textOverflow: 'ellipsis',
+                        maxResolution: isMajorRoad ? 15 : 7.5,
+                        padding: isMajorRoad ? [3, 6] : [2, 4],
+                        backgroundFill: isMajorRoad ? new ol.style.Fill({
+                            color: 'rgba(0, 0, 0, 0.4)'
+                        }) : null,
+                        backgroundStroke: isMajorRoad ? new ol.style.Stroke({
+                            color: 'rgba(0, 0, 0, 0.2)',
+                            width: 1
+                        }) : null
+                    });
+                    
+                    // For highways, add a second outline for better visibility
+                    if (isMajorRoad) {
+                        textStyle.setTextBaseline('middle');
+                        textStyle.setStroke(new ol.style.Stroke({
+                            color: 'rgba(0, 0, 0, 0.7)',
+                            width: strokeWidth + 2
+                        }));
+                    }
+                    
+                    styles.push(new ol.style.Style({
+                        text: textStyle,
+                        zIndex: 50 // Ensure road labels are above most features
                     }));
                 }
             }
@@ -455,20 +526,34 @@ window.vectorTileStyle = function(feature, resolution) {
             // Add label for POI
             const label = getFeatureLabel(feature);
             if (label) {
+                const isMajorPOI = ['university', 'hospital', 'stadium', 'zoo', 'attraction'].includes(feature.get('amenity') || feature.get('tourism') || '');
+                const labelFont = isMajorPOI ? 'bold 11px Arial' : '10px Arial';
+                const textColor = colors.text.light; // White text for better contrast
+                const haloColor = colors.textHalo.dark;
+                
                 styles.push(new ol.style.Style({
                     text: new ol.style.Text({
                         text: label,
-                        font: '10px Arial',
+                        font: labelFont,
                         fill: new ol.style.Fill({
-                            color: '#000'
+                            color: textColor
                         }),
                         stroke: new ol.style.Stroke({
-                            color: '#fff',
-                            width: 2
+                            color: haloColor,
+                            width: 3
                         }),
                         offsetY: 12,
-                        overflow: true
-                    })
+                        overflow: true,
+                        padding: [2, 4],
+                        backgroundFill: new ol.style.Fill({
+                            color: 'rgba(0, 0, 0, 0.5)'
+                        }),
+                        backgroundStroke: new ol.style.Stroke({
+                            color: 'rgba(255, 255, 255, 0.3)',
+                            width: 1
+                        })
+                    }),
+                    zIndex: 100 // Ensure POI labels are on top
                 }));
             }
             
