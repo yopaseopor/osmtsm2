@@ -66,34 +66,28 @@ var config = {
 				]
 			}),
 			style: function(feature, resolution) {
-			try {
-				// Use the vector tile style function if available
-				if (window.vectorTileStyle) {
-					const styles = window.vectorTileStyle(feature, resolution);
-					
-					// Force a re-render to ensure labels appear
-					setTimeout(() => {
-						if (window.map) {
-							window.map.render();
+				try {
+					// Use the vector tile style function if available
+					if (window.vectorTileStyle) {
+						const styles = window.vectorTileStyle(feature, resolution) || [];
+						if (styles && styles.length > 0) {
+							return styles;
 						}
-					}, 0);
-					
-					return styles || [];
+					}
+				} catch (error) {
+					console.error('Error in vectorTileStyle:', error);
 				}
-			} catch (error) {
-				console.error('Error in vectorTileStyle:', error);
-			}
-			
-			// Fallback style with red fill to verify features are being rendered
-			return [new ol.style.Style({
-				fill: new ol.style.Fill({
-					color: 'rgba(255, 0, 0, 0.2)'
-				}),
-				stroke: new ol.style.Stroke({
-					color: 'rgba(200, 0, 0, 0.8)',
-					width: 1
-				})
-			})];
+				
+				// Fallback style
+				return [new ol.style.Style({
+					fill: new ol.style.Fill({
+						color: 'rgba(200, 200, 200, 0.2)'
+					}),
+					stroke: new ol.style.Stroke({
+						color: 'rgba(100, 100, 100, 0.5)',
+						width: 1
+					})
+				})];
 		},
 			updateWhileAnimating: true,  // Update labels during animations
 			updateWhileInteracting: true  // Update labels during interactions

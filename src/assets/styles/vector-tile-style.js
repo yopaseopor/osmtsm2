@@ -10,34 +10,38 @@ function logFeature(feature) {
  * Vector Tile Style Configuration
  * Minimal style to ensure labels are visible
  */
-// Debug style to verify features are being rendered
+// Debug helper
+console.log('Vector tile style function loaded');
+
+// Simple and reliable vector tile style
 window.vectorTileStyle = function(feature, resolution) {
-    // Log the feature type and properties for debugging
-    console.log('Feature type:', feature.getGeometry().getType());
-    console.log('Feature properties:', Object.entries(feature.getProperties())
-        .filter(([key]) => key !== 'geometry'));
-    
+    // Debug: Log feature info for the first few features
+    if (Math.random() < 0.01) {  // Log only 1% of features to avoid console spam
+        console.log('Styling feature:', feature.get('name') || feature.get('ref'), 
+                   'Type:', feature.getGeometry().getType());
+    }
     const styles = [];
-    const name = feature.get('name') || feature.get('ref');
     
-    // Always add a visible style for the feature
-    styles.push(new ol.style.Style({
+    // Basic style for all features
+    const baseStyle = new ol.style.Style({
         fill: new ol.style.Fill({
-            color: 'rgba(0, 200, 0, 0.3)'  // Green fill to verify features are visible
+            color: 'rgba(200, 200, 200, 0.2)'
         }),
         stroke: new ol.style.Stroke({
-            color: '#00aa00',
+            color: 'rgba(100, 100, 100, 0.5)',
             width: 1
         })
-    }));
+    });
+    styles.push(baseStyle);
     
-    // Add text label if feature has a name or ref
+    // Add label if feature has a name or ref
+    const name = feature.get('name') || feature.get('ref');
     if (name) {
         const textStyle = new ol.style.Text({
             text: name,
-            font: 'bold 16px Arial, sans-serif',
+            font: 'bold 14px Arial, sans-serif',
             fill: new ol.style.Fill({
-                color: '#ff0000'  // Red text to be highly visible
+                color: '#000000'
             }),
             stroke: new ol.style.Stroke({
                 color: '#ffffff',
@@ -58,6 +62,8 @@ window.vectorTileStyle = function(feature, resolution) {
             text: textStyle
         }));
     }
+    
+    return styles;
 };
 
 // Keep the original style function reference for future use
