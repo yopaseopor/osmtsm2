@@ -97,23 +97,50 @@ window.vectorTileStyle = function(feature, resolution) {
         building: 'rgba(220, 217, 210, 0.9)',
         buildingOutline: 'rgba(180, 177, 170, 0.8)',
         
-        // Road colors and widths (all widths are doubled for better visibility)
+        // Road colors and widths based on OpenMapTiles schema
+        // All widths are doubled for better visibility
         highway: {
-            motorway: { color: '#0000ff', width: 6.0, textColor: '#0000ff' },  // blue
-            trunk: { color: '#8b0000', width: 5.6, textColor: '#8b0000' },      // dark red
-            primary: { color: '#ff0000', width: 5.0, textColor: '#ff0000' },    // red
-            secondary: { color: '#006400', width: 4.0, textColor: '#006400' },  // dark green
-            tertiary: { color: '#ffa500', width: 3.6, textColor: '#ff8c00' },   // orange
-            unclassified: { color: '#ff00ff', width: 3.0, textColor: '#ff00ff' }, // magenta
-            residential: { color: '#ffff00', width: 2.4, textColor: '#000000' }, // yellow (changed from black)
-            living_street: { color: '#777777', width: 2.0, textColor: '#ffffff' }, // dark grey
-            pedestrian: { color: '#dddddd', width: 1.6, textColor: '#333333' }, // light grey
-            service: { color: '#999999', width: 1.6, textColor: '#999999' },
-            path: { color: '#aaaaaa', width: 1.2, textColor: '#666666' },
-            track: { color: '#8b4513', width: 1.2, textColor: '#8b4513' }, // brown
-            footway: { color: '#cccccc', width: 1.0, textColor: '#666666' },
+            // Main road types
+            motorway: { color: '#4a6bb5', width: 6.0, textColor: '#ffffff', casingWidth: 1.25, casingColor: 'rgba(0, 0, 0, 0.2)' },
+            trunk: { color: '#5d8c47', width: 5.6, textColor: '#ffffff', casingWidth: 1.2, casingColor: 'rgba(0, 0, 0, 0.2)' },
+            primary: { color: '#8d6b4a', width: 5.0, textColor: '#ffffff', casingWidth: 1.15, casingColor: 'rgba(0, 0, 0, 0.2)' },
+            secondary: { color: '#a5927c', width: 4.0, textColor: '#000000', casingWidth: 1.1, casingColor: 'rgba(0, 0, 0, 0.15)' },
+            tertiary: { color: '#c0b4a5', width: 3.6, textColor: '#000000', casingWidth: 1.05, casingColor: 'rgba(0, 0, 0, 0.1)' },
+            
+            // Other road types
+            minor: { color: '#e0dcd6', width: 3.0, textColor: '#333333' },
+            service: { color: '#e0dcd6', width: 2.0, textColor: '#666666' },
+            track: { color: '#8b4513', width: 1.5, textColor: '#8b4513', dash: [4, 2] },
+            path: { color: '#d4d0c9', width: 1.2, textColor: '#666666' },
+            
+            // Path types
+            footway: { color: '#d4d0c9', width: 1.0, textColor: '#666666', dash: [2, 2] },
             cycleway: { color: '#4b8bff', width: 1.2, textColor: '#4b8bff' },
-            steps: { color: '#999999', width: 0.8, textColor: '#666666' }
+            bridleway: { color: '#8b4513', width: 1.0, textColor: '#8b4513', dash: [4, 4] },
+            steps: { color: '#999999', width: 0.8, textColor: '#666666', dash: [1, 1] },
+            
+            // Special types
+            raceway: { color: '#ff0000', width: 2.0, textColor: '#ff0000' },
+            bus_guideway: { color: '#800080', width: 1.5, textColor: '#800080' },
+            
+            // Construction types
+            motorway_construction: { color: '#4a6bb5', width: 6.0, textColor: '#4a6bb5', dash: [8, 4] },
+            trunk_construction: { color: '#5d8c47', width: 5.6, textColor: '#5d8c47', dash: [8, 4] },
+            primary_construction: { color: '#8d6b4a', width: 5.0, textColor: '#8d6b4a', dash: [8, 4] },
+            secondary_construction: { color: '#a5927c', width: 4.0, textColor: '#a5927c', dash: [8, 4] },
+            tertiary_construction: { color: '#c0b4a5', width: 3.6, textColor: '#c0b4a5', dash: [8, 4] },
+            minor_construction: { color: '#e0dcd6', width: 3.0, textColor: '#e0dcd6', dash: [8, 4] },
+            service_construction: { color: '#e0dcd6', width: 2.0, textColor: '#e0dcd6', dash: [8, 4] },
+            track_construction: { color: '#8b4513', width: 1.5, textColor: '#8b4513', dash: [8, 4] },
+            path_construction: { color: '#d4d0c9', width: 1.2, textColor: '#d4d0c9', dash: [8, 4] },
+            raceway_construction: { color: '#ff0000', width: 2.0, textColor: '#ff0000', dash: [8, 4] },
+            
+            // Railway
+            rail: { color: '#666666', width: 1.5, textColor: '#666666', dash: [5, 5] },
+            narrow_gauge: { color: '#8b4513', width: 1.0, textColor: '#8b4513', dash: [5, 5] },
+            light_rail: { color: '#666666', width: 1.0, textColor: '#666666', dash: [3, 3] },
+            subway: { color: '#666666', width: 1.2, textColor: '#666666', dash: [4, 4] },
+            tram: { color: '#006400', width: 1.0, textColor: '#006400', dash: [3, 3] }
         },
         
         // Text styles
@@ -334,60 +361,160 @@ window.vectorTileStyle = function(feature, resolution) {
             return styles;
         }
 
-        // Transportation (roads, paths, etc.)
-        if (layer === 'transportation') {
-            let roadType = cls || 'tertiary';
-            
-            // Handle railway specially
-            if (roadType === 'rail') {
-                return [new ol.style.Style({
-                    stroke: new ol.style.Stroke({
-                        color: '#000000',
-                        width: 3.0, // Doubled from 1.5
-                        lineDash: [5, 5],
-                        lineCap: 'round'
-                    }),
-                    zIndex: 3
-                })];
-            }
-            
-            // Handle track types
-            if (roadType === 'track') {
-                const trackType = parseInt(feature.get('tracktype') || '1', 10);
-                // Double the widths for better visibility
-                const trackWidths = [0.8, 1.2, 1.6, 2.0, 2.4]; // Doubled widths for tracktypes 1-5
-                const trackWidth = trackType >= 1 && trackType <= 5 ? trackWidths[trackType - 1] : 1.2;
-                const trackColor = '#8b4513'; // Brown
-                
-                return [new ol.style.Style({
-                    stroke: new ol.style.Stroke({
-                        color: trackColor,
-                        width: trackWidth,
-                        lineCap: 'round',
-                        lineJoin: 'round',
-                        lineDash: [6, 3] // Slightly longer dashes for visibility
-                    }),
-                    zIndex: 1
-                })];
-            }
-            
-            const roadStyle = colors.highway[roadType] || colors.highway.tertiary;
+        // Transportation name labels (road names, refs, etc.)
+        if (layer === 'transportation_name') {
+            const roadClass = cls || 'tertiary';
             const name = feature.get('name');
             const ref = feature.get('ref');
+            const network = feature.get('network');
+            
+            // Skip if no name or ref
+            if (!name && !ref) {
+                return [];
+            }
+            
+            // Determine text to show - prefer ref for motorways/trunks, name for others
+            let text = '';
+            if (['motorway', 'trunk'].includes(roadClass)) {
+                text = ref || name;
+            } else {
+                text = name || ref;
+            }
+            
+            // Get the road style for this class
+            const roadStyle = colors.highway[roadClass] || colors.highway.tertiary;
+            
+            // Determine text color based on road type
+            let textColor = roadStyle.textColor || '#000000';
+            let haloColor = roadStyle.color ? 
+                (roadStyle.color.startsWith('#') ? roadStyle.color : '#ffffff') : 
+                '#ffffff';
+                
+            // Invert colors for better contrast if needed
+            if (roadStyle.color && roadStyle.color.startsWith('#')) {
+                // Simple brightness check to determine if we need a white or black text
+                const r = parseInt(roadStyle.color.substr(1, 2), 16);
+                const g = parseInt(roadStyle.color.substr(3, 2), 16);
+                const b = parseInt(roadStyle.color.substr(5, 2), 16);
+                const brightness = (r * 299 + g * 587 + b * 114) / 1000;
+                textColor = brightness > 128 ? '#000000' : '#ffffff';
+            }
+            
+            // Only show labels at appropriate zoom levels
+            const showLabel = resolution < (['motorway', 'trunk', 'primary'].includes(roadClass) ? 20 : 10);
+            
+            if (showLabel) {
+                return [new ol.style.Style({
+                    text: new ol.style.Text({
+                        text: text,
+                        font: ['motorway', 'trunk'].includes(roadClass) ? 'bold 12px Arial' : '11px Arial',
+                        fill: new ol.style.Fill({ color: textColor }),
+                        stroke: new ol.style.Stroke({
+                            color: haloColor,
+                            width: 3
+                        }),
+                        offsetY: 0,
+                        rotation: 0,
+                        textAlign: 'center',
+                        textBaseline: 'middle',
+                        overflow: true,
+                        placement: 'line',
+                        maxAngle: 0.5,
+                        maxResolution: ['motorway', 'trunk', 'primary'].includes(roadClass) ? 20 : 10,
+                        padding: [2, 4],
+                        backgroundFill: new ol.style.Fill({
+                            color: 'rgba(255, 255, 255, 0.7)'
+                        }),
+                        backgroundStroke: new ol.style.Stroke({
+                            color: 'rgba(200, 200, 200, 0.7)',
+                            width: 1
+                        })
+                    }),
+                    zIndex: 100 // Ensure labels are on top
+                })];
+            }
+            return [];
+        }
+        
+        // Transportation (roads, paths, etc.)
+        if (layer === 'transportation') {
+            const roadClass = cls || 'tertiary';
+            const roadSubclass = feature.get('subclass');
+            const brunnel = feature.get('brunnel');
+            const isBridge = brunnel === 'bridge';
+            const isTunnel = brunnel === 'tunnel';
+            const isFord = brunnel === 'ford';
+            const isRamp = roadSubclass === 'ramp';
             
             // Skip rendering tunnels for now
             if (isTunnel) {
                 return [];
             }
             
+            // Handle different road classes based on OpenMapTiles schema
+            let roadType = roadClass;
+            
+            // Handle construction types
+            if (roadClass.endsWith('_construction')) {
+                const baseType = roadClass.replace('_construction', '');
+                roadType = baseType + '_construction';
+            }
+            
+            // Handle ramps
+            if (isRamp) {
+                roadType = 'ramp';
+            }
+            
+            // Get the road style, default to tertiary if not found
+            const roadStyle = colors.highway[roadType] || colors.highway.tertiary;
+            
+            // Handle special road types
+            if (roadClass === 'rail' || roadClass === 'transit') {
+                const railType = roadSubclass || 'rail';
+                const railStyle = colors.highway[railType] || colors.highway.rail;
+                
+                return [new ol.style.Style({
+                    stroke: new ol.style.Stroke({
+                        color: railStyle.color,
+                        width: railStyle.width,
+                        lineDash: railStyle.dash,
+                        lineCap: 'round',
+                        lineJoin: 'round'
+                    }),
+                    zIndex: 3
+                })];
+            }
+            
+            // Handle track types
+            if (roadClass === 'track') {
+                const trackType = parseInt(feature.get('tracktype') || '1', 10);
+                const trackStyle = colors.highway.track;
+                
+                return [new ol.style.Style({
+                    stroke: new ol.style.Stroke({
+                        color: trackStyle.color,
+                        width: trackStyle.width * (1 + (trackType * 0.2)), // Scale width based on tracktype
+                        lineDash: trackStyle.dash,
+                        lineCap: 'round',
+                        lineJoin: 'round'
+                    }),
+                    zIndex: 1
+                }];
+            }
+            
+            const name = feature.get('name');
+            const ref = feature.get('ref');
+            
+            // Skip rendering tunnels (already handled at the start)
+            
             const styles = [];
             
-            // Main road casing (wider, slightly transparent)
-            if (['motorway', 'trunk', 'primary', 'secondary', 'tertiary'].includes(roadType)) {
+            // Add casing for major roads
+            if (roadStyle.casingWidth && roadStyle.casingColor) {
                 styles.push(new ol.style.Style({
                     stroke: new ol.style.Stroke({
-                        color: 'rgba(0, 0, 0, 0.2)',
-                        width: roadStyle.width * 1.25, // Slightly smaller multiplier since base widths are larger
+                        color: roadStyle.casingColor,
+                        width: roadStyle.width * roadStyle.casingWidth,
                         lineCap: 'round',
                         lineJoin: 'round'
                     }),
@@ -395,8 +522,8 @@ window.vectorTileStyle = function(feature, resolution) {
                 }));
             }
             
-            // Main road fill
-            const lineDash = roadType === 'living_street' ? [4, 2] : undefined;
+            // Main road fill with optional dash pattern
+            const lineDash = roadStyle.dash || (roadType === 'living_street' ? [4, 2] : undefined);
             
             styles.push(new ol.style.Style({
                 stroke: new ol.style.Stroke({
@@ -577,13 +704,7 @@ window.vectorTileStyle = function(feature, resolution) {
                        feature.get('building') ? 'poi' : null;
         
         if (poiType) {
-            const poiColor = colors.poi[
-                feature.get('amenity') ? 'amenity' : 
-                feature.get('shop') ? 'shop' :
-                feature.get('tourism') ? 'tourism' :
-                feature.get('office') ? 'office' :
-                feature.get('building') ? 'building' : 'default'
-            ];
+            const poiColor = '#666666';
             
             const styles = [
                 new ol.style.Style({
