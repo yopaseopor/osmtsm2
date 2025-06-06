@@ -1,73 +1,74 @@
-// Minimal style that just shows labels
-window.vectorTileStyle = function(feature, resolution) {
-    const styles = [];
+/**
+ * Gets the best label text for a feature
+ * @param {ol/Feature} feature - The feature to get label for
+ * @returns {string|null} The best available label text or null if none found
+ */
+function getFeatureLabel(feature) {
+    // Try to get name, ref, or house number
+    const name = feature.get('name');
+    const ref = feature.get('ref');
+    const houseNumber = feature.get('addr:housenumber');
     
-    // Get any available label text
-    const name = feature.get('name') || feature.get('ref') || 
-                feature.get('addr:housenumber') || feature.get('amenity') || 
-                feature.get('shop') || feature.get('tourism') || 
-                feature.get('office') || feature.get('building');
+    // For POIs, include their type (shop, amenity, etc.)
+    const shop = feature.get('shop');
+    const amenity = feature.get('amenity');
+    const tourism = feature.get('tourism');
+    const office = feature.get('office');
+    const building = feature.get('building');
     
-    // Only proceed if we have a name/label
-    if (!name) return styles;
+    // Build label parts
+    const parts = [];
     
-    // Create a simple text style
-    const textStyle = new ol.style.Text({
-        text: String(name), // Ensure it's a string
-        font: 'bold 14px Arial, sans-serif',
-        fill: new ol.style.Fill({
-            color: '#000000' // Black text
-        }),
-        stroke: new ol.style.Stroke({
-            color: '#ffffff', // White outline
-            width: 3
-        }),
-        offsetY: 0,
-        overflow: true,
-        padding: [3, 5],
-        backgroundFill: new ol.style.Fill({
-            color: 'rgba(255, 255, 255, 0.7)' // Semi-transparent white background
-        })
-    });
+    // Add ref if available
+    if (ref) parts.push(ref);
     
-    // For polygons, we need to create a point geometry at the center for the label
-    const geometry = (feature.getGeometry().getType() === 'Polygon' || 
-                     feature.getGeometry().getType() === 'MultiPolygon')
-        ? new ol.geom.Point(ol.extent.getCenter(feature.getGeometry().getExtent()))
-        : undefined;
+    // Add name if available
+    if (name) parts.push(name);
     
-    // Add the style with the text
-    styles.push(new ol.style.Style({
-        text: textStyle,
-        geometry: geometry,
-        zIndex: 1000 // Ensure labels are on top
-    }));
+    // If no name or ref, try to use POI type
+    if (parts.length === 0) {
+        if (shop) parts.push(shop);
+        else if (amenity) parts.push(amenity);
+        else if (tourism) parts.push(tourism);
+        else if (office) parts.push(office);
+        else if (building) parts.push(building);
+    }
     
-    return styles;
-};
+    // Add house number if available
+    if (houseNumber) parts.push(`#${houseNumber}`);
+    
+    return parts.length > 0 ? parts.join(' ') : null;
+}
 
-// Keep the original style function for reference
-window.vectorTileStyleAdvanced = function(feature, resolution) {
+/**
+ * Vector Tile Style Configuration
+ * Inspired by OpenStreetMap Americana style patterns
+ */
+window.vectorTileStyle = function(feature, resolution) {
+    // Debug logging (uncomment if needed)
+    // console.log('Styling feature:', feature);
+    
+    // Common colors
     const colors = {
         // Text colors with better contrast
         text: {
+            primary: '#000000',
+            secondary: '#333333',
             light: '#ffffff',
-            dark: '#000000',  // Darker for better contrast
-            road: '#000000',
-            water: '#4a80b5',
-            poi: '#000000',
-            landuse: '#2d5f2d',
-            boundary: '#000000'  // Darker for better contrast
+            dark: '#000000',
+            highlight: '#1a73e8',
+            poi: '#1a73e8',
+            road: '#1a1a1a',
+            water: '#1a73e8',
+            boundary: '#666666',
+            building: '#333333',
+            landuse: '#2d5f2d'
         },
-        // Text halo/outline for better readability
+        // Text halo/background
         textHalo: {
-            light: 'rgba(255, 255, 255, 0.9)',  // Brighter white halo
-            dark: 'rgba(0, 0, 0, 0.8)'  // Darker black halo
-        },
-        // Background for text labels
-        textBackground: {
-            light: 'rgba(255, 255, 255, 0.7)',
-            dark: 'rgba(0, 0, 0, 0.5)'
+            light: 'rgba(255, 255, 255, 0.8)',
+            dark: 'rgba(0, 0, 0, 0.5)',
+            highlight: 'rgba(255, 255, 255, 0.9)'
         },
         // POI colors
         poi: {
@@ -104,10 +105,15 @@ window.vectorTileStyleAdvanced = function(feature, resolution) {
             secondary: { color: '#006400', width: 2.0, textColor: '#006400' },  // dark green
             tertiary: { color: '#ffa500', width: 1.8, textColor: '#ff8c00' },   // orange
             unclassified: { color: '#ff00ff', width: 1.5, textColor: '#ff00ff' }, // magenta
-            residential: { color: '#666666', width: 1.2, textColor: '#666666' },
+            residential: { color: '#000000', width: 1.2, textColor: '#000000' }, // black
+            living_street: { color: '#555555', width: 1.0, textColor: '#555555' }, // dark grey
+            pedestrian: { color: '#dddddd', width: 0.8, textColor: '#666666' }, // light grey
             service: { color: '#999999', width: 0.8, textColor: '#999999' },
             path: { color: '#aaaaaa', width: 0.6, textColor: '#666666' },
-            pedestrian: { color: '#cccccc', width: 0.8, textColor: '#666666' }
+            track: { color: '#8b4513', width: 0.6, textColor: '#8b4513' }, // brown
+            footway: { color: '#cccccc', width: 0.5, textColor: '#666666' },
+            cycleway: { color: '#4b8bff', width: 0.6, textColor: '#4b8bff' },
+            steps: { color: '#999999', width: 0.4, textColor: '#666666' }
         },
         
         // Text styles
@@ -330,7 +336,40 @@ window.vectorTileStyleAdvanced = function(feature, resolution) {
 
         // Transportation (roads, paths, etc.)
         if (layer === 'transportation') {
-            const roadType = cls || 'tertiary';
+            let roadType = cls || 'tertiary';
+            
+            // Handle railway specially
+            if (roadType === 'rail') {
+                return [new ol.style.Style({
+                    stroke: new ol.style.Stroke({
+                        color: '#000000',
+                        width: 1.5,
+                        lineDash: [5, 5],
+                        lineCap: 'round'
+                    }),
+                    zIndex: 3
+                })];
+            }
+            
+            // Handle track types
+            if (roadType === 'track') {
+                const trackType = parseInt(feature.get('tracktype') || '1', 10);
+                const trackWidths = [0.4, 0.6, 0.8, 1.0, 1.2]; // Widths for tracktypes 1-5
+                const trackWidth = trackType >= 1 && trackType <= 5 ? trackWidths[trackType - 1] : 0.6;
+                const trackColor = '#8b4513'; // Brown
+                
+                return [new ol.style.Style({
+                    stroke: new ol.style.Stroke({
+                        color: trackColor,
+                        width: trackWidth,
+                        lineCap: 'round',
+                        lineJoin: 'round',
+                        lineDash: [4, 2] // Dashed line for tracks
+                    }),
+                    zIndex: 1
+                })];
+            }
+            
             const roadStyle = colors.highway[roadType] || colors.highway.tertiary;
             const name = feature.get('name');
             const ref = feature.get('ref');
@@ -343,10 +382,10 @@ window.vectorTileStyleAdvanced = function(feature, resolution) {
             const styles = [];
             
             // Main road casing (wider, slightly transparent)
-            if (['motorway', 'trunk', 'primary', 'secondary'].includes(roadType)) {
+            if (['motorway', 'trunk', 'primary', 'secondary', 'tertiary'].includes(roadType)) {
                 styles.push(new ol.style.Style({
                     stroke: new ol.style.Stroke({
-                        color: 'rgba(0, 0, 0, 0.3)',
+                        color: 'rgba(0, 0, 0, 0.2)',
                         width: roadStyle.width * 1.5,
                         lineCap: 'round',
                         lineJoin: 'round'
@@ -356,12 +395,15 @@ window.vectorTileStyleAdvanced = function(feature, resolution) {
             }
             
             // Main road fill
+            const lineDash = roadType === 'living_street' ? [4, 2] : undefined;
+            
             styles.push(new ol.style.Style({
                 stroke: new ol.style.Stroke({
                     color: roadStyle.color,
                     width: roadStyle.width,
                     lineCap: 'round',
-                    lineJoin: 'round'
+                    lineJoin: 'round',
+                    lineDash: lineDash
                 }),
                 zIndex: 2
             }));
@@ -374,40 +416,80 @@ window.vectorTileStyleAdvanced = function(feature, resolution) {
             
             // Add road labels for named or numbered roads
             const label = getFeatureLabel(feature);
-            if (label && resolution < 20) { // Only show labels at reasonable zoom levels
+            if (label) {
                 const isMajorRoad = ['motorway', 'trunk', 'primary', 'secondary'].includes(roadType);
-                const fontSize = isMajorRoad ? 12 : 10;
+                const fontSize = isMajorRoad ? 11 : 10; // Slightly larger font
                 
-                // Create a simple text style that will definitely be visible
-                const textStyle = new ol.style.Text({
-                    text: label,
-                    font: `${isMajorRoad ? 'bold ' : ''}${fontSize}px Arial, sans-serif`,
-                    fill: new ol.style.Fill({
-                        color: isMajorRoad ? '#ffffff' : '#000000'
-                    }),
-                    stroke: new ol.style.Stroke({
-                        color: isMajorRoad ? 'rgba(0, 0, 0, 0.8)' : 'rgba(255, 255, 255, 0.9)',
-                        width: isMajorRoad ? 3 : 2
-                    }),
-                    offsetY: 0,
-                    overflow: true,
-                    placement: 'line',
-                    maxAngle: 0.5,
-                    textOverflow: 'ellipsis',
-                    padding: [2, 4],
-                    backgroundFill: new ol.style.Fill({
-                        color: isMajorRoad ? 'rgba(0, 0, 0, 0.4)' : 'rgba(255, 255, 255, 0.7)'
-                    }),
-                    backgroundStroke: new ol.style.Stroke({
-                        color: isMajorRoad ? 'rgba(0, 0, 0, 0.2)' : 'rgba(0, 0, 0, 0.1)',
-                        width: 0.5
-                    })
-                });
+                // Special handling for different road types
+                let textColor, strokeColor, strokeWidth;
                 
-                styles.push(new ol.style.Style({
-                    text: textStyle,
-                    zIndex: 50
-                }));
+                if (roadType === 'residential') {
+                    textColor = '#ffffff'; // White text for black residential roads
+                    strokeColor = 'rgba(0, 0, 0, 0.8)';
+                    strokeWidth = 3;
+                } else if (roadType === 'living_street') {
+                    textColor = '#ffffff'; // White text for dark grey living streets
+                    strokeColor = 'rgba(0, 0, 0, 0.8)';
+                    strokeWidth = 2.5;
+                } else if (roadType === 'pedestrian') {
+                    textColor = '#333333'; // Dark text for light grey pedestrian areas
+                    strokeColor = 'rgba(255, 255, 255, 0.9)';
+                    strokeWidth = 2;
+                } else if (isMajorRoad) {
+                    textColor = '#ffffff'; // White text for major roads
+                    strokeColor = 'rgba(0, 0, 0, 0.8)';
+                    strokeWidth = 3;
+                } else {
+                    textColor = colors.text.road;
+                    strokeColor = 'rgba(255, 255, 255, 0.9)';
+                    strokeWidth = 2.5;
+                }
+                
+                // Show labels at appropriate zoom levels based on road importance
+                const showLabel = resolution < (isMajorRoad ? 15 : 7.5);
+                
+                if (showLabel) {
+                    const textStyle = new ol.style.Text({
+                        text: label,
+                        font: isMajorRoad ? `bold ${fontSize}px Arial` : `${fontSize}px Arial`,
+                        fill: new ol.style.Fill({ color: textColor }),
+                        stroke: new ol.style.Stroke({
+                            color: strokeColor,
+                            width: strokeWidth
+                        }),
+                        offsetY: 0,
+                        rotation: 0,
+                        textAlign: 'center',
+                        textBaseline: 'middle',
+                        overflow: true,
+                        placement: 'line',
+                        maxAngle: 0.5,
+                        textOverflow: 'ellipsis',
+                        maxResolution: isMajorRoad ? 15 : 7.5,
+                        padding: isMajorRoad ? [3, 6] : [2, 4],
+                        backgroundFill: isMajorRoad ? new ol.style.Fill({
+                            color: 'rgba(0, 0, 0, 0.4)'
+                        }) : null,
+                        backgroundStroke: isMajorRoad ? new ol.style.Stroke({
+                            color: 'rgba(0, 0, 0, 0.2)',
+                            width: 1
+                        }) : null
+                    });
+                    
+                    // For highways, add a second outline for better visibility
+                    if (isMajorRoad) {
+                        textStyle.setTextBaseline('middle');
+                        textStyle.setStroke(new ol.style.Stroke({
+                            color: 'rgba(0, 0, 0, 0.7)',
+                            width: strokeWidth + 2
+                        }));
+                    }
+                    
+                    styles.push(new ol.style.Style({
+                        text: textStyle,
+                        zIndex: 50 // Ensure road labels are above most features
+                    }));
+                }
             }
             
             return styles;
