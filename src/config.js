@@ -66,16 +66,25 @@ var config = {
 				]
 			}),
 			style: function(feature, resolution) {
-				// Use the simplified style function
-				if (window.vectorTileStyle) {
-					try {
-						return window.vectorTileStyle(feature, resolution);
-					} catch (error) {
-						console.error('Error in vectorTileStyle:', error);
-					}
+			// Ensure the style function is properly bound to the window context
+			if (window.vectorTileStyle) {
+				try {
+					const styles = window.vectorTileStyle(feature, resolution);
+					
+					// Force a re-render to ensure labels appear
+					setTimeout(() => {
+						if (map) {
+							map.render();
+						}
+					}, 0);
+					
+					return styles;
+				} catch (error) {
+					console.error('Error in vectorTileStyle:', error);
 				}
-				return [];
-			},
+			}
+			return [];
+		},
 			updateWhileAnimating: true,  // Update labels during animations
 			updateWhileInteracting: true  // Update labels during interactions
 		}),
