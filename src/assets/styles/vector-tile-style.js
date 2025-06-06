@@ -44,9 +44,14 @@ function getFeatureLabel(feature) {
  * Vector Tile Style Configuration
  * Inspired by OpenStreetMap Americana style patterns
  */
-window.vectorTileStyle = function(feature, resolution) {
-    // Debug logging (uncomment if needed)
-    // console.log('Styling feature:', feature);
+const vectorTileStyle = function(feature, resolution) {
+    console.log('Styling feature:', feature);
+    console.log('Feature properties:', feature.getProperties());
+    
+    // Get layer and class from feature properties
+    const layer = feature.get('layer');
+    const cls = feature.get('class');
+    console.log(`Layer: ${layer}, Class: ${cls}`);
     
     // Common colors
     const colors = {
@@ -506,20 +511,32 @@ window.vectorTileStyle = function(feature, resolution) {
             }));
         }
         
+        console.warn('Using default style for unhandled feature:', feature.getProperties());
         return styles;
     }
     
     // Default style for any unhandled features
+    console.warn('Using default style for unhandled feature:', feature.getProperties());
     return [new ol.style.Style({
         fill: new ol.style.Fill({
-            color: 'rgba(200, 200, 200, 0.3)'
+            color: 'rgba(255, 0, 0, 0.3)'
         }),
         stroke: new ol.style.Stroke({
-            color: 'rgba(100, 100, 100, 0.5)',
-            width: 0.5
+            color: 'rgba(255, 0, 0, 0.8)',
+            width: 1
         })
     })];
 };
+
+// Expose the style function to the global scope
+if (typeof window !== 'undefined') {
+    window.vectorTileStyle = vectorTileStyle;
+    console.log('vectorTileStyle function has been exposed to window');
+} else {
+    console.error('Failed to expose vectorTileStyle: window is not available');
+}
+
+export default vectorTileStyle;
 
 /**
  * Helper function to lighten or darken a color
