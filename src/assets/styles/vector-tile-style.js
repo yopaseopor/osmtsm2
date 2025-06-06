@@ -97,23 +97,23 @@ window.vectorTileStyle = function(feature, resolution) {
         building: 'rgba(220, 217, 210, 0.9)',
         buildingOutline: 'rgba(180, 177, 170, 0.8)',
         
-        // Road colors and widths
+        // Road colors and widths (all widths are doubled for better visibility)
         highway: {
-            motorway: { color: '#0000ff', width: 3.0, textColor: '#0000ff' },  // blue
-            trunk: { color: '#8b0000', width: 2.8, textColor: '#8b0000' },      // dark red
-            primary: { color: '#ff0000', width: 2.5, textColor: '#ff0000' },    // red
-            secondary: { color: '#006400', width: 2.0, textColor: '#006400' },  // dark green
-            tertiary: { color: '#ffa500', width: 1.8, textColor: '#ff8c00' },   // orange
-            unclassified: { color: '#ff00ff', width: 1.5, textColor: '#ff00ff' }, // magenta
-            residential: { color: '#000000', width: 1.2, textColor: '#000000' }, // black
-            living_street: { color: '#555555', width: 1.0, textColor: '#555555' }, // dark grey
-            pedestrian: { color: '#dddddd', width: 0.8, textColor: '#666666' }, // light grey
-            service: { color: '#999999', width: 0.8, textColor: '#999999' },
-            path: { color: '#aaaaaa', width: 0.6, textColor: '#666666' },
-            track: { color: '#8b4513', width: 0.6, textColor: '#8b4513' }, // brown
-            footway: { color: '#cccccc', width: 0.5, textColor: '#666666' },
-            cycleway: { color: '#4b8bff', width: 0.6, textColor: '#4b8bff' },
-            steps: { color: '#999999', width: 0.4, textColor: '#666666' }
+            motorway: { color: '#0000ff', width: 6.0, textColor: '#0000ff' },  // blue
+            trunk: { color: '#8b0000', width: 5.6, textColor: '#8b0000' },      // dark red
+            primary: { color: '#ff0000', width: 5.0, textColor: '#ff0000' },    // red
+            secondary: { color: '#006400', width: 4.0, textColor: '#006400' },  // dark green
+            tertiary: { color: '#ffa500', width: 3.6, textColor: '#ff8c00' },   // orange
+            unclassified: { color: '#ff00ff', width: 3.0, textColor: '#ff00ff' }, // magenta
+            residential: { color: '#ffff00', width: 2.4, textColor: '#000000' }, // yellow (changed from black)
+            living_street: { color: '#777777', width: 2.0, textColor: '#ffffff' }, // dark grey
+            pedestrian: { color: '#dddddd', width: 1.6, textColor: '#333333' }, // light grey
+            service: { color: '#999999', width: 1.6, textColor: '#999999' },
+            path: { color: '#aaaaaa', width: 1.2, textColor: '#666666' },
+            track: { color: '#8b4513', width: 1.2, textColor: '#8b4513' }, // brown
+            footway: { color: '#cccccc', width: 1.0, textColor: '#666666' },
+            cycleway: { color: '#4b8bff', width: 1.2, textColor: '#4b8bff' },
+            steps: { color: '#999999', width: 0.8, textColor: '#666666' }
         },
         
         // Text styles
@@ -343,7 +343,7 @@ window.vectorTileStyle = function(feature, resolution) {
                 return [new ol.style.Style({
                     stroke: new ol.style.Stroke({
                         color: '#000000',
-                        width: 1.5,
+                        width: 3.0, // Doubled from 1.5
                         lineDash: [5, 5],
                         lineCap: 'round'
                     }),
@@ -354,8 +354,9 @@ window.vectorTileStyle = function(feature, resolution) {
             // Handle track types
             if (roadType === 'track') {
                 const trackType = parseInt(feature.get('tracktype') || '1', 10);
-                const trackWidths = [0.4, 0.6, 0.8, 1.0, 1.2]; // Widths for tracktypes 1-5
-                const trackWidth = trackType >= 1 && trackType <= 5 ? trackWidths[trackType - 1] : 0.6;
+                // Double the widths for better visibility
+                const trackWidths = [0.8, 1.2, 1.6, 2.0, 2.4]; // Doubled widths for tracktypes 1-5
+                const trackWidth = trackType >= 1 && trackType <= 5 ? trackWidths[trackType - 1] : 1.2;
                 const trackColor = '#8b4513'; // Brown
                 
                 return [new ol.style.Style({
@@ -364,7 +365,7 @@ window.vectorTileStyle = function(feature, resolution) {
                         width: trackWidth,
                         lineCap: 'round',
                         lineJoin: 'round',
-                        lineDash: [4, 2] // Dashed line for tracks
+                        lineDash: [6, 3] // Slightly longer dashes for visibility
                     }),
                     zIndex: 1
                 })];
@@ -386,7 +387,7 @@ window.vectorTileStyle = function(feature, resolution) {
                 styles.push(new ol.style.Style({
                     stroke: new ol.style.Stroke({
                         color: 'rgba(0, 0, 0, 0.2)',
-                        width: roadStyle.width * 1.5,
+                        width: roadStyle.width * 1.25, // Slightly smaller multiplier since base widths are larger
                         lineCap: 'round',
                         lineJoin: 'round'
                     }),
@@ -410,8 +411,21 @@ window.vectorTileStyle = function(feature, resolution) {
             
             // For bridges, make the line slightly wider and lighter
             if (isBridge) {
-                styles[styles.length - 1].getStroke().setWidth(roadStyle.width * 1.1);
+                // Use a smaller multiplier since base widths are larger now
+                styles[styles.length - 1].getStroke().setWidth(roadStyle.width * 1.05);
                 styles[styles.length - 1].getStroke().setColor(adjustColor(roadStyle.color, 15));
+                
+                // Add a subtle white line in the middle for bridges
+                styles.push(new ol.style.Style({
+                    stroke: new ol.style.Stroke({
+                        color: 'rgba(255, 255, 255, 0.3)',
+                        width: roadStyle.width * 0.5,
+                        lineDash: [10, 5],
+                        lineCap: 'round',
+                        lineJoin: 'round'
+                    }),
+                    zIndex: 3
+                }));
             }
             
             // Add road labels for named or numbered roads
