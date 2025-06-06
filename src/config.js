@@ -66,28 +66,58 @@ var config = {
 				]
 			}),
 			style: function(feature, resolution) {
-				try {
-					// Use the vector tile style function if available
-					if (window.vectorTileStyle) {
-						const styles = window.vectorTileStyle(feature, resolution) || [];
-						if (styles && styles.length > 0) {
-							return styles;
-						}
+			try {
+				// Debug: Log feature properties
+				console.log('Feature type:', feature.getGeometry().getType());
+				console.log('Feature properties:', Object.keys(feature.getProperties()));
+				
+				// Simple style that shows all features with basic styling
+				const styles = [];
+				
+				// Get any available label text
+				const name = feature.get('name') || feature.get('ref') || 
+						  feature.get('addr:housenumber') || feature.get('amenity') || 
+						  feature.get('shop') || feature.get('tourism') || 
+						  feature.get('office') || feature.get('building');
+				
+				console.log('Found name:', name);
+				
+				if (name) {
+					const textStyle = new ol.style.Text({
+						text: String(name),
+						font: 'bold 14px Arial, sans-serif',
+						fill: new ol.style.Fill({
+							color: '#000000'
+						}),
+						stroke: new ol.style.Stroke({
+							color: '#ffffff',
+							width: 3
+						}),
+						offsetY: 0,
+						overflow: true,
+						padding: [3, 5]
+					});
+					
+					// For polygons, create a point at the center for the label
+					const geom = feature.getGeometry();
+					let labelGeometry;
+					
+					if (geom.getType() === 'Polygon' || geom.getType() === 'MultiPolygon') {
+						labelGeometry = new ol.geom.Point(ol.extent.getCenter(geom.getExtent()));
 					}
-				} catch (error) {
-					console.error('Error in vectorTileStyle:', error);
+					
+					styles.push(new ol.style.Style({
+						text: textStyle,
+						geometry: labelGeometry,
+						zIndex: 1000
+					}));
 				}
 				
-				// Fallback style
-				return [new ol.style.Style({
-					fill: new ol.style.Fill({
-						color: 'rgba(200, 200, 200, 0.2)'
-					}),
-					stroke: new ol.style.Stroke({
-						color: 'rgba(100, 100, 100, 0.5)',
-						width: 1
-					})
-				})];
+				return styles;
+			} catch (error) {
+				console.error('Error in style function:', error);
+				return [];
+			}
 		},
 			updateWhileAnimating: true,  // Update labels during animations
 			updateWhileInteracting: true  // Update labels during interactions

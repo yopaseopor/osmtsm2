@@ -1,74 +1,53 @@
-// Debug function to log feature properties
-function logFeature(feature) {
-    console.log('Feature layer:', feature.get('layer'));
-    console.log('Feature class:', feature.get('class'));
-    console.log('Feature properties:', Object.entries(feature.getProperties())
-        .filter(([key]) => !['geometry', 'layer', 'class'].includes(key)));
-}
-
-/**
- * Vector Tile Style Configuration
- * Minimal style to ensure labels are visible
- */
-// Debug helper
-console.log('Vector tile style function loaded');
-
-// Simple and reliable vector tile style
+// Minimal style that just shows labels
 window.vectorTileStyle = function(feature, resolution) {
-    // Debug: Log feature info for the first few features
-    if (Math.random() < 0.01) {  // Log only 1% of features to avoid console spam
-        console.log('Styling feature:', feature.get('name') || feature.get('ref'), 
-                   'Type:', feature.getGeometry().getType());
-    }
     const styles = [];
     
-    // Basic style for all features
-    const baseStyle = new ol.style.Style({
+    // Get any available label text
+    const name = feature.get('name') || feature.get('ref') || 
+                feature.get('addr:housenumber') || feature.get('amenity') || 
+                feature.get('shop') || feature.get('tourism') || 
+                feature.get('office') || feature.get('building');
+    
+    // Only proceed if we have a name/label
+    if (!name) return styles;
+    
+    // Create a simple text style
+    const textStyle = new ol.style.Text({
+        text: String(name), // Ensure it's a string
+        font: 'bold 14px Arial, sans-serif',
         fill: new ol.style.Fill({
-            color: 'rgba(200, 200, 200, 0.2)'
+            color: '#000000' // Black text
         }),
         stroke: new ol.style.Stroke({
-            color: 'rgba(100, 100, 100, 0.5)',
-            width: 1
+            color: '#ffffff', // White outline
+            width: 3
+        }),
+        offsetY: 0,
+        overflow: true,
+        padding: [3, 5],
+        backgroundFill: new ol.style.Fill({
+            color: 'rgba(255, 255, 255, 0.7)' // Semi-transparent white background
         })
     });
-    styles.push(baseStyle);
     
-    // Add label if feature has a name or ref
-    const name = feature.get('name') || feature.get('ref');
-    if (name) {
-        const textStyle = new ol.style.Text({
-            text: name,
-            font: 'bold 14px Arial, sans-serif',
-            fill: new ol.style.Fill({
-                color: '#000000'
-            }),
-            stroke: new ol.style.Stroke({
-                color: '#ffffff',
-                width: 3
-            }),
-            offsetY: 0,
-            overflow: true,
-            placement: 'point',
-            textAlign: 'left',
-            textBaseline: 'bottom',
-            padding: [2, 5],
-            backgroundFill: new ol.style.Fill({
-                color: 'rgba(255, 255, 255, 0.7)'
-            })
-        });
-        
-        styles.push(new ol.style.Style({
-            text: textStyle
-        }));
-    }
+    // For polygons, we need to create a point geometry at the center for the label
+    const geometry = (feature.getGeometry().getType() === 'Polygon' || 
+                     feature.getGeometry().getType() === 'MultiPolygon')
+        ? new ol.geom.Point(ol.extent.getCenter(feature.getGeometry().getExtent()))
+        : undefined;
+    
+    // Add the style with the text
+    styles.push(new ol.style.Style({
+        text: textStyle,
+        geometry: geometry,
+        zIndex: 1000 // Ensure labels are on top
+    }));
     
     return styles;
 };
 
-// Keep the original style function reference for future use
+// Keep the original style function for reference
 window.vectorTileStyleAdvanced = function(feature, resolution) {
-    // Original style implementation will go here
     const colors = {
         // Text colors with better contrast
         text: {
