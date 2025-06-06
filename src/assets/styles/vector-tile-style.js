@@ -40,22 +40,97 @@ function getFeatureLabel(feature) {
     return parts.length > 0 ? parts.join(' ') : null;
 }
 
-/**
- * Vector Tile Style Configuration
- * Ensures labels and POIs are visible
- */
-window.vectorTileStyle = function(feature, resolution) {
-    // Skip rendering features that are too small at current resolution
-    const area = feature.get('area');
-    if (area && area < 100 && resolution > 10) {
-        return [];
-    }
-    
-    // Get feature properties
-    const layer = feature.get('layer');
-    const cls = feature.get('class');
-    const isBridge = feature.get('bridge') === 'yes' || feature.get('bridge') === 'true' || feature.get('bridge') === '1';
-    const isTunnel = feature.get('tunnel') === 'yes' || feature.get('tunnel') === 'true' || feature.get('tunnel') === '1';
+// Make sure the style function is properly exposed to window
+if (typeof window !== 'undefined') {
+    window.vectorTileStyle = function(feature, resolution) {
+        // Get feature properties
+        const layer = feature.get('layer') || '';
+        const cls = feature.get('class') || '';
+        const name = feature.get('name') || '';
+        const isBridge = feature.get('bridge') === 'yes' || feature.get('bridge') === 'true' || feature.get('bridge') === '1';
+        const isTunnel = feature.get('tunnel') === 'yes' || feature.get('tunnel') === 'true' || feature.get('tunnel') === '1';
+        
+        // Basic style based on layer type
+        let fillColor = 'rgba(200, 200, 200, 0.5)';
+        let strokeColor = '#999999';
+        let strokeWidth = 1;
+        
+        // Style based on layer type
+        if (layer === 'water') {
+            fillColor = 'rgba(170, 210, 255, 0.9)';
+            strokeColor = 'rgba(120, 160, 205, 0.9)';
+        } else if (layer === 'landuse') {
+            fillColor = 'rgba(200, 250, 200, 0.5)';
+            strokeColor = 'rgba(150, 200, 150, 0.7)';
+        } else if (layer === 'building') {
+            fillColor = 'rgba(220, 217, 210, 0.9)';
+            strokeColor = 'rgba(180, 177, 170, 0.8)';
+            strokeWidth = 0.5;
+        } else if (layer === 'transportation') {
+            // Style roads
+            if (cls === 'motorway') {
+                fillColor = '#0000ff';
+                strokeColor = '#0000cc';
+                strokeWidth = 3;
+            } else if (cls === 'trunk') {
+                fillColor = '#8b0000';
+                strokeColor = '#690000';
+                strokeWidth = 2.5;
+            } else if (cls === 'primary') {
+                fillColor = '#ff0000';
+                strokeColor = '#cc0000';
+                strokeWidth = 2;
+            } else if (cls === 'secondary') {
+                fillColor = '#006400';
+                strokeColor = '#004400';
+                strokeWidth = 1.5;
+            } else if (cls === 'tertiary') {
+                fillColor = '#ffa500';
+                strokeColor = '#cc8400';
+                strokeWidth = 1.2;
+            } else if (cls === 'unclassified') {
+                fillColor = '#ff00ff';
+                strokeColor = '#cc00cc';
+                strokeWidth = 1;
+            }
+        }
+        
+        const styles = [new ol.style.Style({
+            fill: new ol.style.Fill({
+                color: fillColor
+            }),
+            stroke: new ol.style.Stroke({
+                color: strokeColor,
+                width: strokeWidth,
+                lineDash: isTunnel ? [4, 2] : undefined
+            }),
+            zIndex: isBridge ? 10 : 1
+        })];
+        
+        // Add label if feature has a name
+        if (name) {
+            styles.push(new ol.style.Style({
+                text: new ol.style.Text({
+                    text: name,
+                    font: 'bold 12px Arial',
+                    fill: new ol.style.Fill({
+                        color: '#000000'
+                    }),
+                    stroke: new ol.style.Stroke({
+                        color: '#ffffff',
+                        width: 3
+                    }),
+                    offsetY: -10,
+                    backgroundFill: new ol.style.Fill({
+                        color: 'rgba(255, 255, 255, 0.7)'
+                    }),
+                    padding: [2, 4]
+                }),
+                zIndex: 100
+            }));
+        }
+        
+        return styles;
     // Debug logging (uncomment if needed)
     // console.log('Styling feature:', feature);
     
@@ -523,65 +598,35 @@ window.vectorTileStyle = function(feature, resolution) {
         })];
         
         // Add label for any feature with a name or ref
+        // Add label if feature has a name
         const label = getFeatureLabel(feature);
         if (label) {
             styles.push(new ol.style.Style({
                 text: new ol.style.Text({
                     text: label,
-                    font: '9px Arial',
+                    font: 'bold 10px Arial',
                     fill: new ol.style.Fill({
-                        color: '#333'
+                        color: '#000000'
                     }),
                     stroke: new ol.style.Stroke({
-                        color: 'rgba(255, 255, 255, 0.7)',
+                        color: '#ffffff',
                         width: 2
                     }),
-                    offsetY: 10,
-                    overflow: true
-                })
+                    offsetY: -10,
+                    overflow: true,
+                    backgroundFill: new ol.style.Fill({
+                        color: 'rgba(255, 255, 255, 0.7)'
+                    }),
+                    padding: [2, 4]
+                }),
+                zIndex: 100
             }));
         }
         
         return styles;
     }
-    
-    // Default style for any unhandled features - with label if available
-    const styles = [new ol.style.Style({
-        fill: new ol.style.Fill({
-            color: 'rgba(200, 200, 200, 0.3)'
-        }),
-        stroke: new ol.style.Stroke({
-            color: 'rgba(100, 100, 100, 0.5)',
-            width: 1
-        })
-    })];
-    
-    // Add label for any feature with a name or ref
-    const label = getFeatureLabel(feature);
-    if (label) {
-        styles.push(new ol.style.Style({
-            text: new ol.style.Text({
-                text: label,
-                font: '10px Arial',
-                fill: new ol.style.Fill({
-                    color: colors.text.dark
-                }),
-                stroke: new ol.style.Stroke({
-                    color: colors.text.light,
-                    width: 2
-                }),
-                offsetY: 10,
-                overflow: true,
-                backgroundFill: new ol.style.Fill({
-                    color: 'rgba(255, 255, 255, 0.7)'
-                }),
-                padding: [2, 4]
-            })
-        }));
-    }
-    
-    return styles;
 };
+} // Close the if (typeof window) block
 
 /**
  * Helper function to lighten or darken a color
