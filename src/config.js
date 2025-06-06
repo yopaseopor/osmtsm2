@@ -67,27 +67,16 @@ var config = {
 			}),
 			style: function(feature, resolution) {
 			try {
-				// Debug: Log feature info
-				console.log('Feature type:', feature.getGeometry().getType());
-				console.log('Feature properties:', Object.entries(feature.getProperties())
-					.filter(([key]) => key !== 'geometry'));
-				
 				// Use the vector tile style function if available
 				if (window.vectorTileStyle) {
 					const styles = window.vectorTileStyle(feature, resolution);
-					console.log('Generated styles:', styles);
 					
 					// Force a re-render to ensure labels appear
 					setTimeout(() => {
 						if (window.map) {
-							console.log('Forcing map re-render');
 							window.map.render();
 						}
-					}, 100);
-					
-					if (!styles || styles.length === 0) {
-						console.warn('Empty styles array returned');
-					}
+					}, 0);
 					
 					return styles || [];
 				}
@@ -95,20 +84,16 @@ var config = {
 				console.error('Error in vectorTileStyle:', error);
 			}
 			
-			// Return a visible default style for debugging
-			const defaultStyle = new ol.style.Style({
-				fill: new ol.style.Fill({ color: 'rgba(200, 0, 0, 0.1)' }),
-				stroke: new ol.style.Stroke({ color: '#f00', width: 1 }),
-				text: new ol.style.Text({
-					text: feature.get('name') || feature.get('ref') || 'No name',
-					font: 'bold 12px Arial',
-					fill: new ol.style.Fill({ color: '#000' }),
-					stroke: new ol.style.Stroke({ color: '#fff', width: 3 })
+			// Fallback style with red fill to verify features are being rendered
+			return [new ol.style.Style({
+				fill: new ol.style.Fill({
+					color: 'rgba(255, 0, 0, 0.2)'
+				}),
+				stroke: new ol.style.Stroke({
+					color: 'rgba(200, 0, 0, 0.8)',
+					width: 1
 				})
-			});
-			
-			console.log('Using default style');
-			return [defaultStyle];
+			})];
 		},
 			updateWhileAnimating: true,  // Update labels during animations
 			updateWhileInteracting: true  // Update labels during interactions

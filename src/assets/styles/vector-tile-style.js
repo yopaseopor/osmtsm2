@@ -10,33 +10,34 @@ function logFeature(feature) {
  * Vector Tile Style Configuration
  * Minimal style to ensure labels are visible
  */
+// Debug style to verify features are being rendered
 window.vectorTileStyle = function(feature, resolution) {
-    // Debug: Uncomment to see feature properties in console
-    // logFeature(feature);
+    // Log the feature type and properties for debugging
+    console.log('Feature type:', feature.getGeometry().getType());
+    console.log('Feature properties:', Object.entries(feature.getProperties())
+        .filter(([key]) => key !== 'geometry'));
     
     const styles = [];
-    const layer = feature.get('layer');
     const name = feature.get('name') || feature.get('ref');
     
-    // Add a simple style for the feature
+    // Always add a visible style for the feature
     styles.push(new ol.style.Style({
-        // Basic style for the feature
         fill: new ol.style.Fill({
-            color: 'rgba(200, 200, 200, 0.2)'
+            color: 'rgba(0, 200, 0, 0.3)'  // Green fill to verify features are visible
         }),
         stroke: new ol.style.Stroke({
-            color: 'rgba(100, 100, 100, 0.5)',
+            color: '#00aa00',
             width: 1
         })
     }));
     
-    // Add label if feature has a name or ref
+    // Add text label if feature has a name or ref
     if (name) {
         const textStyle = new ol.style.Text({
             text: name,
-            font: 'bold 14px Arial, sans-serif',
+            font: 'bold 16px Arial, sans-serif',
             fill: new ol.style.Fill({
-                color: '#000000'
+                color: '#ff0000'  // Red text to be highly visible
             }),
             stroke: new ol.style.Stroke({
                 color: '#ffffff',
@@ -54,19 +55,9 @@ window.vectorTileStyle = function(feature, resolution) {
         });
         
         styles.push(new ol.style.Style({
-            text: textStyle,
-            geometry: function(feature) {
-                // For polygons, get the center point for the label
-                const geom = feature.getGeometry();
-                if (geom.getType() === 'Polygon' || geom.getType() === 'MultiPolygon') {
-                    return new ol.geom.Point(ol.extent.getCenter(geom.getExtent()));
-                }
-                return null;
-            }
+            text: textStyle
         }));
     }
-    
-    return styles;
 };
 
 // Keep the original style function reference for future use
