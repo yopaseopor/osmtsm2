@@ -61,18 +61,18 @@ var config = {
 				}),
 				overlaps: false,  // Prevent label duplicates at tile edges
 				attributions: [
-					'<a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a>',
-					'<a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a>'
+					'<a href="https://www.maptiler.com/copyright/" target="_blank"> MapTiler</a>',
+					'<a href="https://www.openstreetmap.org/copyright" target="_blank"> OpenStreetMap contributors</a>'
 				]
 			}),
 			style: function(feature, resolution) {
-				// Ensure the style function is properly bound to the window context
+				// Use the simplified style function
 				if (window.vectorTileStyle) {
-					// Add a small timeout to ensure the map is fully rendered
-					setTimeout(function() {
-						map.render();
-					}, 0);
-					return window.vectorTileStyle(feature, resolution);
+					try {
+						return window.vectorTileStyle(feature, resolution);
+					} catch (error) {
+						console.error('Error in vectorTileStyle:', error);
+					}
 				}
 				return [];
 			},

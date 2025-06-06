@@ -1,54 +1,108 @@
-/**
- * Gets the best label text for a feature
- * @param {ol/Feature} feature - The feature to get label for
- * @returns {string|null} The best available label text or null if none found
- */
-function getFeatureLabel(feature) {
-    // Try to get name, ref, or house number
-    const name = feature.get('name');
-    const ref = feature.get('ref');
-    const houseNumber = feature.get('addr:housenumber');
-    
-    // For POIs, include their type (shop, amenity, etc.)
-    const shop = feature.get('shop');
-    const amenity = feature.get('amenity');
-    const tourism = feature.get('tourism');
-    const office = feature.get('office');
-    const building = feature.get('building');
-    
-    // Build label parts
-    const parts = [];
-    
-    // Add ref if available
-    if (ref) parts.push(ref);
-    
-    // Add name if available
-    if (name) parts.push(name);
-    
-    // If no name or ref, try to use POI type
-    if (parts.length === 0) {
-        if (shop) parts.push(shop);
-        else if (amenity) parts.push(amenity);
-        else if (tourism) parts.push(tourism);
-        else if (office) parts.push(office);
-        else if (building) parts.push(building);
-    }
-    
-    // Add house number if available
-    if (houseNumber) parts.push(`#${houseNumber}`);
-    
-    return parts.length > 0 ? parts.join(' ') : null;
+// Simple debug function to log feature properties
+function logFeature(feature) {
+    console.log('Feature properties:', feature.getProperties());
+    console.log('Geometry type:', feature.getGeometry().getType());
 }
 
 /**
  * Vector Tile Style Configuration
- * Inspired by OpenStreetMap Americana style patterns
+ * Simple style to ensure labels are visible
  */
 window.vectorTileStyle = function(feature, resolution) {
-    // Debug logging (uncomment if needed)
-    // console.log('Styling feature:', feature);
+    // Uncomment to debug feature properties
+    // logFeature(feature);
     
-    // Common colors
+    // Get the layer name from the feature
+    const layer = feature.get('layer');
+    const cls = feature.get('class');
+    const name = feature.get('name');
+    const ref = feature.get('ref');
+    
+    // Simple style with basic colors
+    const styles = [];
+    
+    // Add fill style for polygons
+    if (feature.getGeometry().getType() === 'Polygon' || 
+        feature.getGeometry().getType() === 'MultiPolygon') {
+        styles.push(new ol.style.Style({
+            fill: new ol.style.Fill({
+                color: 'rgba(200, 200, 200, 0.3)'
+            }),
+            stroke: new ol.style.Stroke({
+                color: 'rgba(100, 100, 100, 0.5)',
+                width: 1
+            })
+        }));
+    }
+    
+    // Add stroke style for lines
+    if (feature.getGeometry().getType() === 'LineString' ||
+        feature.getGeometry().getType() === 'MultiLineString') {
+        styles.push(new ol.style.Style({
+            stroke: new ol.style.Stroke({
+                color: '#666666',
+                width: 2
+            })
+        }));
+    }
+    
+    // Add point style for points
+    if (feature.getGeometry().getType() === 'Point' ||
+        feature.getGeometry().getType() === 'MultiPoint') {
+        styles.push(new ol.style.Style({
+            image: new ol.style.Circle({
+                radius: 5,
+                fill: new ol.style.Fill({
+                    color: '#ff0000'
+                }),
+                stroke: new ol.style.Stroke({
+                    color: '#ffffff',
+                    width: 1
+                })
+            })
+        }));
+    }
+    
+    // Add label for any feature with a name or ref
+    const label = name || ref;
+    if (label) {
+        const textStyle = new ol.style.Text({
+            text: label,
+            font: '12px Arial',
+            fill: new ol.style.Fill({
+                color: '#000000'
+            }),
+            stroke: new ol.style.Stroke({
+                color: '#ffffff',
+                width: 3
+            }),
+            offsetY: 0,
+            overflow: true,
+            placement: 'point',
+            textAlign: 'left',
+            textBaseline: 'bottom',
+            padding: [2, 5]
+        });
+        
+        styles.push(new ol.style.Style({
+            text: textStyle,
+            geometry: function(feature) {
+                // For polygons, get the center point for the label
+                const geom = feature.getGeometry();
+                if (geom.getType() === 'Polygon' || geom.getType() === 'MultiPolygon') {
+                    return new ol.geom.Point(ol.extent.getCenter(geom.getExtent()));
+                }
+                return null;
+            }
+        }));
+    }
+    
+    return styles;
+};
+
+// Keep the original style function for reference
+window.vectorTileStyleAdvanced = function(feature, resolution) {
+    // Original style implementation will go here
     const colors = {
         // Text colors with better contrast
         text: {
