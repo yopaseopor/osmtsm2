@@ -42,27 +42,39 @@ function getFeatureLabel(feature) {
 
 /**
  * Vector Tile Style Configuration
- * Inspired by OpenStreetMap Americana style patterns
+ * Ensures labels and POIs are visible
  */
-const vectorTileStyle = function(feature, resolution) {
-    console.log('Styling feature:', feature);
-    console.log('Feature properties:', feature.getProperties());
+window.vectorTileStyle = function(feature, resolution) {
+    // Skip rendering features that are too small at current resolution
+    const area = feature.get('area');
+    if (area && area < 100 && resolution > 10) {
+        return [];
+    }
     
-    // Get layer and class from feature properties
+    // Get feature properties
     const layer = feature.get('layer');
     const cls = feature.get('class');
-    console.log(`Layer: ${layer}, Class: ${cls}`);
+    const isBridge = feature.get('bridge') === 'yes' || feature.get('bridge') === 'true' || feature.get('bridge') === '1';
+    const isTunnel = feature.get('tunnel') === 'yes' || feature.get('tunnel') === 'true' || feature.get('tunnel') === '1';
+    // Debug logging (uncomment if needed)
+    // console.log('Styling feature:', feature);
     
     // Common colors
     const colors = {
-        // POI colors
+        // POI colors - brighter and more visible
         poi: {
             amenity: '#3498db',
             shop: '#9b59b6',
             tourism: '#e74c3c',
             office: '#2ecc71',
             building: '#e67e22',
-            default: '#7f8c8d'
+            default: '#e74c3c'  // Default to red for better visibility
+        },
+        // Text colors - high contrast
+        text: {
+            dark: '#000000',
+            light: '#ffffff',
+            highlight: '#ffff00'
         },
         // Base colors
         water: 'rgba(170, 210, 255, 0.9)',
@@ -428,12 +440,18 @@ const vectorTileStyle = function(feature, resolution) {
         
     } catch (error) {
         console.error('Error styling feature:', error, feature);
-        // POI (Point of Interest) styling
+        // POI (Point of Interest) styling - simplified and more visible
         const poiType = feature.get('amenity') || feature.get('shop') || 
                        feature.get('tourism') || feature.get('office') || 
-                       feature.get('building') ? 'poi' : null;
+                       feature.get('building') || feature.get('leisure') ||
+                       feature.get('historic') || feature.get('aeroway') ||
+                       feature.get('aerialway') || feature.get('aerodrome') ||
+                       feature.get('military') || feature.get('natural') ||
+                       feature.get('railway') || feature.get('sport') ||
+                       feature.get('waterway');
         
         if (poiType) {
+            // Get POI color based on type
             const poiColor = colors.poi[
                 feature.get('amenity') ? 'amenity' : 
                 feature.get('shop') ? 'shop' :
@@ -442,38 +460,51 @@ const vectorTileStyle = function(feature, resolution) {
                 feature.get('building') ? 'building' : 'default'
             ];
             
-            const styles = [
-                new ol.style.Style({
-                    image: new ol.style.Circle({
-                        radius: 5,
-                        fill: new ol.style.Fill({
-                            color: poiColor
-                        }),
-                        stroke: new ol.style.Stroke({
-                            color: '#fff',
-                            width: 1
-                        })
-                    })
-                })
-            ];
+            const styles = [];
             
-            // Add label for POI
-            const label = getFeatureLabel(feature);
+            // Add a larger, more visible point
+            styles.push(new ol.style.Style({
+                image: new ol.style.Circle({
+                    radius: 6,
+                    fill: new ol.style.Fill({
+                        color: poiColor
+                    }),
+                    stroke: new ol.style.Stroke({
+                        color: '#ffffff',
+                        width: 2
+                    })
+                }),
+                zIndex: 1000 // Ensure POIs are on top
+            }));
+            
+            // Always add label for POIs
+            const label = getFeatureLabel(feature) || 'POI';
             if (label) {
                 styles.push(new ol.style.Style({
                     text: new ol.style.Text({
                         text: label,
-                        font: '10px Arial',
+                        font: 'bold 12px Arial',
                         fill: new ol.style.Fill({
-                            color: '#000'
+                            color: colors.text.dark
                         }),
                         stroke: new ol.style.Stroke({
-                            color: '#fff',
-                            width: 2
+                            color: colors.text.light,
+                            width: 3
                         }),
-                        offsetY: 12,
-                        overflow: true
-                    })
+                        offsetY: -15,
+                        overflow: true,
+                        backgroundFill: new ol.style.Fill({
+                            color: 'rgba(255, 255, 255, 0.7)'
+                        }),
+                        backgroundStroke: new ol.style.Stroke({
+                            color: 'rgba(0, 0, 0, 0.2)',
+                            width: 1
+                        }),
+                        padding: [2, 4],
+                        textBaseline: 'bottom',
+                        textAlign: 'center'
+                    }),
+                    zIndex: 1001 // Labels above POI markers
                 }));
             }
             
@@ -511,32 +542,46 @@ const vectorTileStyle = function(feature, resolution) {
             }));
         }
         
-        console.warn('Using default style for unhandled feature:', feature.getProperties());
         return styles;
     }
     
-    // Default style for any unhandled features
-    console.warn('Using default style for unhandled feature:', feature.getProperties());
-    return [new ol.style.Style({
+    // Default style for any unhandled features - with label if available
+    const styles = [new ol.style.Style({
         fill: new ol.style.Fill({
-            color: 'rgba(255, 0, 0, 0.3)'
+            color: 'rgba(200, 200, 200, 0.3)'
         }),
         stroke: new ol.style.Stroke({
-            color: 'rgba(255, 0, 0, 0.8)',
+            color: 'rgba(100, 100, 100, 0.5)',
             width: 1
         })
     })];
+    
+    // Add label for any feature with a name or ref
+    const label = getFeatureLabel(feature);
+    if (label) {
+        styles.push(new ol.style.Style({
+            text: new ol.style.Text({
+                text: label,
+                font: '10px Arial',
+                fill: new ol.style.Fill({
+                    color: colors.text.dark
+                }),
+                stroke: new ol.style.Stroke({
+                    color: colors.text.light,
+                    width: 2
+                }),
+                offsetY: 10,
+                overflow: true,
+                backgroundFill: new ol.style.Fill({
+                    color: 'rgba(255, 255, 255, 0.7)'
+                }),
+                padding: [2, 4]
+            })
+        }));
+    }
+    
+    return styles;
 };
-
-// Expose the style function to the global scope
-if (typeof window !== 'undefined') {
-    window.vectorTileStyle = vectorTileStyle;
-    console.log('vectorTileStyle function has been exposed to window');
-} else {
-    console.error('Failed to expose vectorTileStyle: window is not available');
-}
-
-export default vectorTileStyle;
 
 /**
  * Helper function to lighten or darken a color
