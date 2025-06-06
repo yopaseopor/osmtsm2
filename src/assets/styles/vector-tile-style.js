@@ -1,54 +1,77 @@
-/**
- * Gets the best label text for a feature
- * @param {ol/Feature} feature - The feature to get label for
- * @returns {string|null} The best available label text or null if none found
- */
-function getFeatureLabel(feature) {
-    // Try to get name, ref, or house number
-    const name = feature.get('name');
-    const ref = feature.get('ref');
-    const houseNumber = feature.get('addr:housenumber');
-    
-    // For POIs, include their type (shop, amenity, etc.)
-    const shop = feature.get('shop');
-    const amenity = feature.get('amenity');
-    const tourism = feature.get('tourism');
-    const office = feature.get('office');
-    const building = feature.get('building');
-    
-    // Build label parts
-    const parts = [];
-    
-    // Add ref if available
-    if (ref) parts.push(ref);
-    
-    // Add name if available
-    if (name) parts.push(name);
-    
-    // If no name or ref, try to use POI type
-    if (parts.length === 0) {
-        if (shop) parts.push(shop);
-        else if (amenity) parts.push(amenity);
-        else if (tourism) parts.push(tourism);
-        else if (office) parts.push(office);
-        else if (building) parts.push(building);
-    }
-    
-    // Add house number if available
-    if (houseNumber) parts.push(`#${houseNumber}`);
-    
-    return parts.length > 0 ? parts.join(' ') : null;
+// Debug function to log feature properties
+function logFeature(feature) {
+    console.log('Feature layer:', feature.get('layer'));
+    console.log('Feature class:', feature.get('class'));
+    console.log('Feature properties:', Object.entries(feature.getProperties())
+        .filter(([key]) => !['geometry', 'layer', 'class'].includes(key)));
 }
 
 /**
  * Vector Tile Style Configuration
- * Inspired by OpenStreetMap Americana style patterns
+ * Minimal style to ensure labels are visible
  */
 window.vectorTileStyle = function(feature, resolution) {
-    // Debug logging (uncomment if needed)
-    // console.log('Styling feature:', feature);
+    // Debug: Uncomment to see feature properties in console
+    // logFeature(feature);
     
-    // Common colors
+    const styles = [];
+    const layer = feature.get('layer');
+    const name = feature.get('name') || feature.get('ref');
+    
+    // Add a simple style for the feature
+    styles.push(new ol.style.Style({
+        // Basic style for the feature
+        fill: new ol.style.Fill({
+            color: 'rgba(200, 200, 200, 0.2)'
+        }),
+        stroke: new ol.style.Stroke({
+            color: 'rgba(100, 100, 100, 0.5)',
+            width: 1
+        })
+    }));
+    
+    // Add label if feature has a name or ref
+    if (name) {
+        const textStyle = new ol.style.Text({
+            text: name,
+            font: 'bold 14px Arial, sans-serif',
+            fill: new ol.style.Fill({
+                color: '#000000'
+            }),
+            stroke: new ol.style.Stroke({
+                color: '#ffffff',
+                width: 3
+            }),
+            offsetY: 0,
+            overflow: true,
+            placement: 'point',
+            textAlign: 'left',
+            textBaseline: 'bottom',
+            padding: [2, 5],
+            backgroundFill: new ol.style.Fill({
+                color: 'rgba(255, 255, 255, 0.7)'
+            })
+        });
+        
+        styles.push(new ol.style.Style({
+            text: textStyle,
+            geometry: function(feature) {
+                // For polygons, get the center point for the label
+                const geom = feature.getGeometry();
+                if (geom.getType() === 'Polygon' || geom.getType() === 'MultiPolygon') {
+                    return new ol.geom.Point(ol.extent.getCenter(geom.getExtent()));
+                }
+                return null;
+            }
+        }));
+    }
+    
+    return styles;
+};
+
+// Keep the original style function reference for future use
+window.vectorTileStyleAdvanced = function(feature, resolution) {
+    // Original style implementation will go here
     const colors = {
         // Text colors with better contrast
         text: {
