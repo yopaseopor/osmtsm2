@@ -47,48 +47,22 @@ var config = {
 		new ol.layer.VectorTile({
 			title: 'MapTiler Vector',
 			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
-			visible: true,
+			visible: true,  // Make it visible by default for testing
 			opacity: 1.0,
-			renderMode: 'vector',
 			source: new ol.source.VectorTile({
 				projection: 'EPSG:3857',
 				format: new ol.format.MVT(),
 				url: 'https://api.maptiler.com/tiles/v3-openmaptiles/{z}/{x}/{y}.pbf?key=tKDOqJGURiimBRaaKrDJ',
 				tileGrid: ol.tilegrid.createXYZ({
 					minZoom: 0,
-					maxZoom: 20
+					maxZoom: 14
 				}),
-				overlaps: false,
 				attributions: [
 					'<a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a>',
 					'<a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a>'
-				],
-				// Add cache size to improve performance
-				cacheSize: 128
+				]
 			}),
-			// Use a function to ensure the style is properly initialized
-			style: function(feature, resolution) {
-				try {
-					if (window.vectorTileStyle) {
-						return window.vectorTileStyle(feature, resolution);
-					}
-				} catch (e) {
-					console.error('Error in vector tile style:', e);
-				}
-				// Fallback style
-				return [new ol.style.Style({
-					fill: new ol.style.Fill({
-						color: 'rgba(200, 200, 200, 0.3)'
-					}),
-					stroke: new ol.style.Stroke({
-						color: 'rgba(100, 100, 100, 0.5)',
-						width: 1
-					})
-				})];
-			},
-			updateWhileAnimating: true,
-			updateWhileInteracting: true,
-			renderBuffer: 256
+			style: window.vectorTileStyle
 		}),
 		new ol.layer.Tile({
 			title: 'OpenStreetMap',
