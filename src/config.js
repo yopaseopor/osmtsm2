@@ -46,7 +46,7 @@ var config = {
 		// MapTiler Vector Tile Layer with enhanced glyph and sprite support
 		new ol.layer.VectorTile({
 			title: 'MapTiler Vector',
-			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
+			iconSrc: imgSrc + 'icones_web/maptiler_logo.png',
 			visible: true,
 			opacity: 1.0,
 			source: new ol.source.VectorTile({
