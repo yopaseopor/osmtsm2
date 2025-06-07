@@ -43,26 +43,64 @@ var config = {
 	},
 	//@@ Mapas de fondo
 	layers: [
-		// MapTiler Vector Tile Layer
+		// MapTiler Vector Tile Layer with enhanced glyph and sprite support
 		new ol.layer.VectorTile({
 			title: 'MapTiler Vector',
 			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
-			visible: true,  // Make it visible by default for testing
+			visible: true,
 			opacity: 1.0,
 			source: new ol.source.VectorTile({
 				projection: 'EPSG:3857',
 				format: new ol.format.MVT(),
-				url: 'https://api.maptiler.com/tiles/v3-openmaptiles/{z}/{x}/{y}.pbf?key=tKDOqJGURiimBRaaKrDJ',
+				url: 'https://api.maptiler.com/tiles/v3/{z}/{x}/{y}.pbf?key=tKDOqJGURiimBRaaKrDJ',
 				tileGrid: ol.tilegrid.createXYZ({
 					minZoom: 0,
 					maxZoom: 14
 				}),
 				attributions: [
-					'<a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a>',
-					'<a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a>'
+					'<a href="https://www.maptiler.com/copyright/" target="_blank"> MapTiler</a>',
+					'<a href="https://www.openstreetmap.org/copyright" target="_blank"> OpenStreetMap contributors</a>'
 				]
 			}),
-			style: window.vectorTileStyle
+			style: (function() {
+				// Initialize style configuration with glyphs and sprites
+				window.maptilerStyleConfig = {
+					spriteBaseUrl: 'https://api.maptiler.com/maps/streets/sprite',
+					glyphs: 'https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=tKDOqJGURiimBRaaKrDJ',
+					fontStacks: {
+						regular: ['Noto Sans Regular', 'Arial Unicode MS Regular'],
+						bold: ['Noto Sans Bold', 'Arial Unicode MS Bold'],
+						italic: ['Noto Sans Italic', 'Arial Unicode MS Italic'],
+						bolditalic: ['Noto Sans Bold Italic', 'Arial Unicode MS Bold Italic']
+					}
+				};
+
+				// Preload fonts
+				const fontPromises = [];
+				Object.values(window.maptilerStyleConfig.fontStacks).forEach(fonts => {
+					fonts.forEach(font => {
+						const fontUrl = window.maptilerStyleConfig.glyphs
+							.replace('{fontstack}', encodeURIComponent(font))
+							.replace('{range}', '0-255');
+						fontPromises.push(
+							fetch(fontUrl).catch(e => console.warn('Failed to load font:', font, e))
+						);
+					});
+				});
+
+				// Return the style function with access to the config
+				return function(feature, resolution) {
+					if (window.vectorTileStyle) {
+						try {
+							return window.vectorTileStyle(feature, resolution, window.maptilerStyleConfig);
+						} catch (e) {
+							console.error('Error in vectorTileStyle:', e);
+							return [];
+						}
+					}
+					return [];
+				};
+			})()
 		}),
 		new ol.layer.Tile({
 			title: 'OpenStreetMap',

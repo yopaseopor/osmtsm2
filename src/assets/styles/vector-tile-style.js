@@ -1,54 +1,151 @@
 /**
- * Gets the best label text for a feature
+ * Gets the best label text for a feature according to Mapbox GL Style Spec
  * @param {ol/Feature} feature - The feature to get label for
- * @returns {string|null} The best available label text or null if none found
+ * @param {string} [textField] - Field specification (e.g., '{name} {ref}')
+ * @returns {string|null} The formatted label or null if none found
  */
-function getFeatureLabel(feature) {
-    // Try to get name, ref, or house number
-    const name = feature.get('name');
-    const ref = feature.get('ref');
-    const houseNumber = feature.get('addr:housenumber');
+function getFeatureLabel(feature, textField) {
+    if (!textField) {
+        // Default to name, then ref, then other common fields
+        return (
+            feature.get('name') ||
+            feature.get('ref') ||
+            feature.get('name_en') ||
+            feature.get('name:en') ||
+            feature.get('int_name') ||
+            feature.get('loc_name') ||
+            feature.get('alt_name') ||
+            feature.get('addr:housename') ||
+            feature.get('addr:housenumber') ||
+            null
+        );
+    }
+
+    // Handle field formatting like {name} {ref}
+    return textField.replace(/\{([^}]+)\}/g, (match, p1) => {
+        // Handle nested properties like {name:latin}
+        const field = p1.split(':')[0];
+        return feature.get(field) || '';
+    }).trim() || null;
+}
+
+/**
+ * Gets the appropriate font stack based on style properties
+ * @param {Object} style - Style properties
+ * @param {Object} config - Configuration with fontStacks
+ * @returns {string} Font stack string
+ */
+function getFontStack(style, config) {
+    if (!config || !config.fontStacks) return 'Arial, sans-serif';
     
-    // For POIs, include their type (shop, amenity, etc.)
-    const shop = feature.get('shop');
-    const amenity = feature.get('amenity');
-    const tourism = feature.get('tourism');
-    const office = feature.get('office');
-    const building = feature.get('building');
+    const weight = style.fontWeight === 'bold' ? 'bold' : 'regular';
+    const styleType = style.fontStyle === 'italic' ? 'italic' : 'normal';
     
-    // Build label parts
-    const parts = [];
-    
-    // Add ref if available
-    if (ref) parts.push(ref);
-    
-    // Add name if available
-    if (name) parts.push(name);
-    
-    // If no name or ref, try to use POI type
-    if (parts.length === 0) {
-        if (shop) parts.push(shop);
-        else if (amenity) parts.push(amenity);
-        else if (tourism) parts.push(tourism);
-        else if (office) parts.push(office);
-        else if (building) parts.push(building);
+    let fontKey = weight;
+    if (style.fontStyle === 'italic') {
+        fontKey = weight === 'bold' ? 'bolditalic' : 'italic';
     }
     
-    // Add house number if available
-    if (houseNumber) parts.push(`#${houseNumber}`);
+    const stack = config.fontStacks[fontKey] || config.fontStacks.regular;
+    return stack.map(font => `"${font}"`).concat('Arial, sans-serif').join(', ');
+}
+
+/**
+ * Creates a text style with proper font handling
+ * @param {Object} options - Text style options
+ * @param {Object} config - Style configuration
+ * @returns {ol/style/Text} OpenLayers text style
+ */
+function createTextStyle(options, config) {
+    const {
+        text,
+        font = {},
+        color = '#000000',
+        haloColor = '#ffffff',
+        haloWidth = 1,
+        offsetX = 0,
+        offsetY = 0,
+        maxAngle = 0.785, // 45 degrees in radians
+        placement = 'point',
+        maxResolution,
+        padding = [0, 0, 0, 0],
+        textAlign = 'center',
+        textBaseline = 'middle',
+        rotation = 0
+    } = options;
     
-    return parts.length > 0 ? parts.join(' ') : null;
+    const fontStack = getFontStack(font, config);
+    const fontSize = font.size || 12;
+    const fontStyle = font.style || 'normal';
+    const fontWeight = font.weight || 'normal';
+    
+    return new ol.style.Text({
+        text: text || '',
+        font: `${fontStyle} ${fontWeight} ${fontSize}px ${fontStack}`,
+        fill: new ol.style.Fill({ color }),
+        stroke: new ol.style.Stroke({
+            color: haloColor,
+            width: haloWidth
+        }),
+        offsetX,
+        offsetY,
+        maxAngle,
+        placement,
+        maxResolution,
+        padding,
+        textAlign,
+        textBaseline,
+        rotation,
+        overflow: true
+    });
+}
+
+/**
+ * Gets an icon style with sprite support
+ * @param {string} iconName - Name of the icon in the sprite
+ * @param {Object} config - Style configuration
+ * @param {Object} options - Additional options
+ * @returns {ol/style/Icon} Icon style
+ */
+function getIconStyle(iconName, config, options = {}) {
+    const {
+        size = 1,
+        opacity = 1,
+        rotation = 0,
+        color,
+        haloColor,
+        haloWidth = 0
+    } = options;
+    
+    const spriteUrl = config && config.spriteBaseUrl 
+        ? `${config.spriteBaseUrl}?key=${config.apiKey || ''}`
+        : null;
+    
+    if (!spriteUrl) {
+        console.warn('Sprite base URL not configured');
+        return null;
+    }
+    
+    // In a real implementation, you would need to have the sprite metadata
+    // to get the correct position and size of the icon in the sprite sheet
+    // This is a simplified version
+    return new ol.style.Icon({
+        src: spriteUrl.replace('{icon}', iconName),
+        scale: size,
+        opacity,
+        rotation,
+        color,
+        // Additional properties would be needed for proper sprite sheet handling
+        // This is a simplified version
+    });
 }
 
 /**
  * Vector Tile Style Configuration
- * Inspired by OpenStreetMap Americana style patterns
+ * Implements a style function following Mapbox GL Style Specification patterns
  */
-window.vectorTileStyle = function(feature, resolution) {
-    // Debug logging (uncomment if needed)
-    // console.log('Styling feature:', feature);
-    
-    // Common colors
+window.vectorTileStyle = function(feature, resolution, config = {}) {
+    // Common colors following Mapbox GL Style Specification naming
     const colors = {
         // POI colors
         poi: {
@@ -143,21 +240,23 @@ window.vectorTileStyle = function(feature, resolution) {
             }
             
             // Add water label if name exists
-            const name = feature.get('name');
+            const name = getFeatureLabel(feature, '{name}');
             if (name) {
                 styles.push(new ol.style.Style({
-                    text: new ol.style.Text({
+                    text: createTextStyle({
                         text: name,
-                        font: 'italic 11px Arial',
-                        fill: new ol.style.Fill({
-                            color: 'rgba(0, 0, 128, 0.8)'
-                        }),
-                        stroke: new ol.style.Stroke({
-                            color: 'rgba(255, 255, 255, 0.7)',
-                            width: 2
-                        }),
-                        offsetY: -10
-                    })
+                        font: {
+                            style: 'italic',
+                            size: 11,
+                            weight: 'normal'
+                        },
+                        color: 'rgba(0, 0, 128, 0.8)',
+                        haloColor: 'rgba(255, 255, 255, 0.7)',
+                        haloWidth: 2,
+                        offsetY: -10,
+                        textBaseline: 'bottom',
+                        textAlign: 'center'
+                    }, config)
                 }));
             }
             
@@ -170,36 +269,65 @@ window.vectorTileStyle = function(feature, resolution) {
             const name = feature.get('name');
             const styles = [];
             
-            // Base fill
+            // Only show landuse at appropriate zoom levels
+            const showLanduse = resolution < (cls === 'park' || cls === 'forest' ? 100 : 50);
+            if (!showLanduse) {
+                return [];
+            }
+            
+            // Base fill with z-index based on landuse type
+            const zIndex = cls === 'park' || cls === 'forest' ? 1 : 0;
             styles.push(new ol.style.Style({
                 fill: new ol.style.Fill({
                     color: fillColor
-                })
+                }),
+                zIndex
             }));
             
+            // Add stroke for certain landuse types
+            if (cls === 'park' || cls === 'forest' || cls === 'cemetery') {
+                styles[0].setStroke(new ol.style.Stroke({
+                    color: adjustColor(fillColor, -10),
+                    width: 0.5
+                }));
+            }
+            
             // Get label for any landuse with name, ref, or address
-            const label = getFeatureLabel(feature);
+            const label = getFeatureLabel(feature, '{name}');
             if (label) {
                 const fontSize = cls === 'park' || cls === 'forest' || cls === 'cemetery' ? 10 : 9;
                 const textColor = cls === 'cemetery' ? '#666666' : 
                                  cls === 'park' || cls === 'forest' ? '#2d5f2d' : '#333333';
+                const showLabel = resolution < 20; // Only show labels when zoomed in
                 
-                styles.push(new ol.style.Style({
-                    text: new ol.style.Text({
-                        text: label,
-                        font: `${fontSize}px Arial`,
-                        fill: new ol.style.Fill({ color: textColor }),
-                        stroke: new ol.style.Stroke({
-                            color: 'rgba(255, 255, 255, 0.7)',
-                            width: 2
-                        }),
-                        overflow: true,
-                        textBaseline: 'middle',
-                        textAlign: 'center',
-                        placement: 'point',
-                        maxAngle: 0.7
-                    })
-                }));
+                if (showLabel) {
+                    styles.push(new ol.style.Style({
+                        text: createTextStyle({
+                            text: label,
+                            font: {
+                                size: fontSize,
+                                weight: 'normal',
+                                style: cls === 'park' || cls === 'forest' ? 'italic' : 'normal'
+                            },
+                            color: textColor,
+                            haloColor: 'rgba(255, 255, 255, 0.7)',
+                            haloWidth: 2,
+                            textBaseline: 'middle',
+                            textAlign: 'center',
+                            placement: 'point',
+                            maxAngle: 0.7,
+                            maxResolution: 10,
+                            padding: [2, 4, 2, 4],
+                            backgroundFill: {
+                                color: 'rgba(255, 255, 255, 0.5)'
+                            },
+                            backgroundStroke: {
+                                color: 'rgba(200, 200, 200, 0.7)',
+                                width: 0.5
+                            }
+                        }, config)
+                    }));
+                }
             }
             
             return styles;
@@ -313,47 +441,41 @@ window.vectorTileStyle = function(feature, resolution) {
             }
             
             // Add road labels for named or numbered roads
-            const label = getFeatureLabel(feature);
+            const label = getFeatureLabel(feature, '{name} {ref}');
             if (label) {
                 const isMajorRoad = ['motorway', 'trunk', 'primary', 'secondary'].includes(roadType);
                 const fontSize = isMajorRoad ? 10 : 9;
                 const textColor = isMajorRoad ? '#ffffff' : roadStyle.textColor || '#000000';
-                const strokeColor = isMajorRoad ? 'rgba(0, 0, 0, 0.7)' : 'rgba(255, 255, 255, 0.8)';
+                const haloColor = isMajorRoad ? 'rgba(0, 0, 0, 0.7)' : 'rgba(255, 255, 255, 0.8)';
                 
                 // Only show labels at appropriate zoom levels
                 const showLabel = resolution < (isMajorRoad ? 20 : 10);
                 
                 if (showLabel) {
                     styles.push(new ol.style.Style({
-                        text: new ol.style.Text({
+                        text: createTextStyle({
                             text: label,
-                            font: isMajorRoad ? `bold ${fontSize}px Arial` : `${fontSize}px Arial`,
-                            fill: new ol.style.Fill({
-                                color: textColor
-                            }),
-                            stroke: new ol.style.Stroke({
-                                color: strokeColor,
-                                width: isMajorRoad ? 3 : 2
-                            }),
-                            offsetY: 0,
-                            rotation: 0,
-                            textAlign: 'center',
-                            textBaseline: 'alphabetic',
-                            overflow: true,
+                            font: {
+                                size: fontSize,
+                                weight: isMajorRoad ? 'bold' : 'normal'
+                            },
+                            color: textColor,
+                            haloColor: haloColor,
+                            haloWidth: isMajorRoad ? 3 : 2,
                             placement: 'line',
-                            maxAngle: 0.5,
-                            textOverflow: 'ellipsis',
+                            maxAngle: 0.5, // ~28.6 degrees in radians
                             maxResolution: isMajorRoad ? 10 : 5,
-                            backgroundFill: isMajorRoad ? new ol.style.Fill({
+                            textBaseline: 'alphabetic',
+                            textAlign: 'center',
+                            padding: isMajorRoad ? [2, 4, 2, 4] : [1, 2, 1, 2],
+                            backgroundFill: isMajorRoad ? {
                                 color: 'rgba(0, 0, 0, 0.3)'
-                            }) : null,
-                            backgroundStroke: isMajorRoad ? new ol.style.Stroke({
+                            } : null,
+                            backgroundStroke: isMajorRoad ? {
                                 color: 'rgba(0, 0, 0, 0.2)',
                                 width: 1
-                            }) : null,
-                            padding: isMajorRoad ? [2, 4, 2, 4] : [1, 2, 1, 2]
-                        }),
-                        zIndex: 30 // Ensure road labels are above other features
+                            } : null
+                        }, config)
                     }));
                 }
             }
@@ -374,7 +496,8 @@ window.vectorTileStyle = function(feature, resolution) {
                     color: colors.boundary.administrative,
                     width: 0.8,
                     lineDash: [4, 2]
-                })
+                }),
+                zIndex: 1
             };
             
             // National boundaries
@@ -382,40 +505,51 @@ window.vectorTileStyle = function(feature, resolution) {
                 boundaryStyle.stroke.color = colors.boundary.national;
                 boundaryStyle.stroke.width = 1.5;
                 boundaryStyle.stroke.lineDash = [6, 3];
+                boundaryStyle.zIndex = 3;
             } 
             // State/regional boundaries
             else if (adminLevel <= 4) {
                 boundaryStyle.stroke.color = '#666666';
                 boundaryStyle.stroke.width = 1;
                 boundaryStyle.stroke.lineDash = [5, 3];
+                boundaryStyle.zIndex = 2;
             }
             // Protected areas
             else if (boundaryType === 'protected_area' || cls === 'protected_area') {
                 boundaryStyle.stroke.color = colors.boundary.protected_area;
                 boundaryStyle.stroke.width = 1;
                 boundaryStyle.stroke.lineDash = [3, 3];
+                boundaryStyle.zIndex = 1;
             }
             
-            styles.push(new ol.style.Style(boundaryStyle));
-            
-            // Add label for named boundaries (countries, states, etc.)
-            if (name && (adminLevel <= 4 || boundaryType === 'protected_area')) {
-                styles.push(new ol.style.Style({
-                    text: new ol.style.Text({
-                        text: name,
-                        font: adminLevel <= 2 ? 'bold 11px Arial' : '10px Arial',
-                        fill: new ol.style.Fill({
-                            color: boundaryType === 'protected_area' ? colors.boundary.protected_area : '#666666'
-                        }),
-                        stroke: new ol.style.Stroke({
-                            color: 'rgba(255, 255, 255, 0.7)',
-                            width: adminLevel <= 2 ? 3 : 2
-                        }),
-                        overflow: true,
-                        placement: 'line',
-                        maxAngle: 0.7
-                    })
-                }));
+            // Only show boundaries at appropriate zoom levels
+            const showBoundary = resolution < (adminLevel <= 2 ? 100 : adminLevel <= 4 ? 50 : 10);
+            if (showBoundary) {
+                styles.push(new ol.style.Style(boundaryStyle));
+                
+                // Add label for named boundaries (countries, states, etc.)
+                if (name && (adminLevel <= 4 || boundaryType === 'protected_area')) {
+                    const isNational = adminLevel <= 2;
+                    const textColor = boundaryType === 'protected_area' ? colors.boundary.protected_area : '#666666';
+                    
+                    styles.push(new ol.style.Style({
+                        text: createTextStyle({
+                            text: name,
+                            font: {
+                                size: isNational ? 11 : 10,
+                                weight: isNational ? 'bold' : 'normal'
+                            },
+                            color: textColor,
+                            haloColor: 'rgba(255, 255, 255, 0.7)',
+                            haloWidth: isNational ? 3 : 2,
+                            placement: 'line',
+                            maxAngle: 0.7,
+                            maxResolution: isNational ? 20 : 10,
+                            textBaseline: 'middle',
+                            textAlign: 'center'
+                        }, config)
+                    }));
+                }
             }
             
             return styles;
@@ -437,8 +571,30 @@ window.vectorTileStyle = function(feature, resolution) {
                 feature.get('building') ? 'building' : 'default'
             ];
             
-            const styles = [
-                new ol.style.Style({
+            const styles = [];
+            
+            // Get icon name based on POI type
+            let iconName = 'marker';
+            if (feature.get('amenity') === 'cafe') iconName = 'cafe';
+            else if (feature.get('amenity') === 'restaurant') iconName = 'restaurant';
+            else if (feature.get('shop')) iconName = 'shop';
+            else if (feature.get('tourism') === 'hotel') iconName = 'lodging';
+            else if (feature.get('office')) iconName = 'commercial';
+            
+            // Add icon style if available
+            const iconStyle = getIconStyle(iconName, config, {
+                size: 1,
+                color: poiColor,
+                opacity: 0.9
+            });
+            
+            if (iconStyle) {
+                styles.push(new ol.style.Style({
+                    image: iconStyle
+                }));
+            } else {
+                // Fallback to circle if no icon available
+                styles.push(new ol.style.Style({
                     image: new ol.style.Circle({
                         radius: 5,
                         fill: new ol.style.Fill({
@@ -449,68 +605,36 @@ window.vectorTileStyle = function(feature, resolution) {
                             width: 1
                         })
                     })
-                })
-            ];
+                }));
+            }
             
             // Add label for POI
-            const label = getFeatureLabel(feature);
+            const label = getFeatureLabel(feature, '{name}');
             if (label) {
                 styles.push(new ol.style.Style({
-                    text: new ol.style.Text({
+                    text: createTextStyle({
                         text: label,
-                        font: '10px Arial',
-                        fill: new ol.style.Fill({
-                            color: '#000'
-                        }),
-                        stroke: new ol.style.Stroke({
-                            color: '#fff',
-                            width: 2
-                        }),
+                        font: {
+                            size: 10,
+                            weight: 'normal'
+                        },
+                        color: '#000',
+                        haloColor: '#fff',
+                        haloWidth: 2,
                         offsetY: 12,
-                        overflow: true
-                    })
+                        textBaseline: 'top',
+                        textAlign: 'center',
+                        maxResolution: 5 // Only show at higher zoom levels
+                    }, config)
                 }));
             }
             
             return styles;
         }
-        
-        // Default style (fallback) - with label if available
-        const styles = [new ol.style.Style({
-            fill: new ol.style.Fill({
-                color: 'rgba(200, 200, 200, 0.3)'
-            }),
-            stroke: new ol.style.Stroke({
-                color: 'rgba(100, 100, 100, 0.5)',
-                width: 1
-            })
-        })];
-        
-        // Add label for any feature with a name or ref
-        const label = getFeatureLabel(feature);
-        if (label) {
-            styles.push(new ol.style.Style({
-                text: new ol.style.Text({
-                    text: label,
-                    font: '9px Arial',
-                    fill: new ol.style.Fill({
-                        color: '#333'
-                    }),
-                    stroke: new ol.style.Stroke({
-                        color: 'rgba(255, 255, 255, 0.7)',
-                        width: 2
-                    }),
-                    offsetY: 10,
-                    overflow: true
-                })
-            }));
-        }
-        
-        return styles;
     }
-    
-    // Default style for any unhandled features
-    return [new ol.style.Style({
+
+    // Default style (fallback) - with label if available
+    const styles = [new ol.style.Style({
         fill: new ol.style.Fill({
             color: 'rgba(200, 200, 200, 0.3)'
         }),
@@ -519,6 +643,29 @@ window.vectorTileStyle = function(feature, resolution) {
             width: 0.5
         })
     })];
+
+    // Add label for any feature with a name or ref
+    const label = getFeatureLabel(feature);
+    if (label) {
+        styles.push(new ol.style.Style({
+            text: createTextStyle({
+                text: label,
+                font: {
+                    size: 9,
+                    weight: 'normal'
+                },
+                color: '#333',
+                haloColor: 'rgba(255, 255, 255, 0.7)',
+                haloWidth: 2,
+                offsetY: 10,
+                textBaseline: 'middle',
+                textAlign: 'center',
+                maxResolution: 10
+            }, config)
+        }));
+    }
+    
+    return styles;
 };
 
 /**
