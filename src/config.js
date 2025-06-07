@@ -43,57 +43,26 @@ var config = {
 	},
 	//@@ Mapas de fondo
 	layers: [
-		// MapTiler Vector Tile Layer with enhanced glyph and sprite support
+		// MapTiler Vector Tile Layer
 		new ol.layer.VectorTile({
 			title: 'MapTiler Vector',
 			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
-			visible: true,
+			visible: true,  // Make it visible by default for testing
 			opacity: 1.0,
-			renderMode: 'vector',
 			source: new ol.source.VectorTile({
 				projection: 'EPSG:3857',
 				format: new ol.format.MVT(),
 				url: 'https://api.maptiler.com/tiles/v3-openmaptiles/{z}/{x}/{y}.pbf?key=tKDOqJGURiimBRaaKrDJ',
 				tileGrid: ol.tilegrid.createXYZ({
 					minZoom: 0,
-					maxZoom: 14,
-					tileSize: 512
+					maxZoom: 14
 				}),
-				overlaps: false,
 				attributions: [
 					'<a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a>',
 					'<a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a>'
 				]
 			}),
-			style: (function() {
-				// Initialize style configuration
-				window.maptilerStyleConfig = {
-					spriteBaseUrl: 'https://api.maptiler.com/maps/streets/sprite',
-					glyphs: 'https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=tKDOqJGURiimBRaaKrDJ',
-					fontStacks: {
-						regular: ['Noto Sans Regular', 'Arial Unicode MS Regular'],
-						bold: ['Noto Sans Bold', 'Arial Unicode MS Bold'],
-						italic: ['Noto Sans Italic', 'Arial Unicode MS Italic'],
-						bolditalic: ['Noto Sans Bold Italic', 'Arial Unicode MS Bold Italic']
-					}
-				};
-
-				return function(feature, resolution) {
-					if (window.vectorTileStyle) {
-						setTimeout(function() {
-							if (map && typeof map.render === 'function') {
-								map.render();
-							}
-						}, 0);
-						return window.vectorTileStyle(feature, resolution);
-					}
-					return [];
-				};
-			})(),
-			updateWhileAnimating: true,
-			updateWhileInteracting: true,
-			preload: 1,
-			declutter: true
+			style: window.vectorTileStyle
 		}),
 		new ol.layer.Tile({
 			title: 'OpenStreetMap',
