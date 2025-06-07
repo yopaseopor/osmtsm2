@@ -43,11 +43,11 @@ var config = {
 	},
 	//@@ Mapas de fondo
 	layers: [
-		// MapTiler Vector Tile Layer with enhanced glyph and sprite support
+		// Option 1: MapTiler Vector Tiles (MVT format)
 		new ol.layer.VectorTile({
-			title: 'MapTiler Vector',
-			iconSrc: imgSrc + 'icones_web/maptiler_logo.png',
-			visible: true,
+			title: 'MapTiler Vector (MVT)',
+			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
+			visible: false,
 			opacity: 1.0,
 			source: new ol.source.VectorTile({
 				projection: 'EPSG:3857',
@@ -58,11 +58,11 @@ var config = {
 					maxZoom: 14
 				}),
 				attributions: [
-					'<a href="https://www.maptiler.com/copyright/" target="_blank"> MapTiler</a>',
-					'<a href="https://www.openstreetmap.org/copyright" target="_blank"> OpenStreetMap contributors</a>'
-				]
-			}),
-			style: (function() {
+						'<a href="https://www.maptiler.com/copyright/" target="_blank">MapTiler</a>',
+						'<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>'
+					]
+				}),
+				style: (function() {
 				// Initialize style configuration with glyphs and sprites
 				window.maptilerStyleConfig = {
 					spriteBaseUrl: 'https://api.maptiler.com/maps/streets/sprite',
@@ -102,6 +102,60 @@ var config = {
 				};
 			})()
 		}),
+
+		// MapTiler Vector Tiles (TileJSON format)
+		new ol.layer.VectorTile({
+			title: 'MapTiler Vector (TileJSON)',
+			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
+			visible: true,
+			opacity: 1.0,
+			source: new ol.source.VectorTile({
+				projection: 'EPSG:3857',
+				format: new ol.format.MVT(),
+				url: 'https://api.maptiler.com/tiles/v3/tiles.json?key=tKDOqJGURiimBRaaKrDJ',
+				tileJSON: {
+					attribution: [
+						'<a href="https://www.maptiler.com/copyright/" target="_blank">MapTiler</a>',
+						'<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>'
+					],
+					bounds: [-180, -85.0511, 180, 85.0511],
+					center: [0, 0, 2],
+					minzoom: 0,
+					maxzoom: 14,
+					tiles: [
+						'https://api.maptiler.com/tiles/v3/{z}/{x}/{y}.pbf?key=tKDOqJGURiimBRaaKrDJ'
+					],
+					vector_layers: [
+						{ id: 'water' },
+						{ id: 'landuse' },
+						{ id: 'building' },
+						{ id: 'transportation' },
+						{ id: 'boundary' },
+						{ id: 'place' },
+						{ id: 'housenumber' },
+						{ id: 'waterway' },
+						{ id: 'aeroway' },
+						{ id: 'mountain_peak' },
+						{ id: 'poi' }
+					]
+				}
+			}),
+			style: (function() {
+				// Reuse the same style configuration as the MVT layer
+				return function(feature, resolution) {
+					if (window.vectorTileStyle) {
+						try {
+							return window.vectorTileStyle(feature, resolution, window.maptilerStyleConfig);
+						} catch (e) {
+							console.error('Error in vectorTileStyle (TileJSON):', e);
+							return [];
+						}
+					}
+					return [];
+				};
+			})()
+		}),
+
 		new ol.layer.Tile({
 			title: 'OpenStreetMap',
 			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
