@@ -43,91 +43,57 @@ var config = {
 	},
 	//@@ Mapas de fondo
 	layers: [
-		// MapTiler Vector Tile Layer with ol-mapbox-style
+		// MapTiler Vector Tile Layer
 		new ol.layer.VectorTile({
 			title: 'MapTiler Vector',
 			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
-			visible: true,
+			visible: true,  // Make it visible by default for testing
+			opacity: 1.0,
+			renderMode: 'vector',  // Ensure vector rendering mode for better text quality
 			source: new ol.source.VectorTile({
 				projection: 'EPSG:3857',
-				format: new ol.format.MVT({
-					featureClass: ol.Feature,
-					geometryName: 'geometry',
-					layerName: 'layer',
-					supportedMediaTypes: ['application/vnd.mapbox-vector-tile'],
-					featureClass: ol.Feature
-				}),
+				format: new ol.format.MVT(),
 				url: 'https://api.maptiler.com/tiles/v3-openmaptiles/{z}/{x}/{y}.pbf?key=tKDOqJGURiimBRaaKrDJ',
 				tileGrid: ol.tilegrid.createXYZ({
 					minZoom: 0,
 					maxZoom: 14,
-					tileSize: 512
+					tileSize: 512  // Larger tile size for better label rendering
 				}),
-				overlaps: false,
+				overlaps: false,  // Prevent label duplicates at tile edges
 				attributions: [
 					'<a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a>',
 					'<a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a>'
-				],
-				transition: 0,
-				cacheSize: 128,
-				tileLoadFunction: function(tile, src) {
-					tile.setLoader(function(extent, resolution, projection) {
-						var xhr = new XMLHttpRequest();
-						xhr.open('GET', src);
-						xhr.responseType = 'arraybuffer';
-						xhr.onload = function() {
-							if (xhr.status === 200) {
-								tile.setFeatures(tile.getFormat().readFeatures(
-									xhr.response,
-									{ 
-										featureProjection: projection,
-										dataProjection: 'EPSG:3857'
-									}
-								));
-								tile.setState(ol.TileState.LOADED);
-							} else {
-								tile.setState(ol.TileState.ERROR);
-							}
-						};
-						xhr.onerror = function() {
-							tile.setState(ol.TileState.ERROR);
-						};
-						xhr.send();
-					});
-				}
+				]
 			}),
-			style: window.vectorTileStyle || function() { 
-				return [new ol.style.Style({
-					fill: new ol.style.Fill({ color: 'rgba(200, 200, 200, 0.1)' }),
-					stroke: new ol.style.Stroke({ color: '#ddd', width: 0.5 })
-				})];
+			style: function(feature, resolution) {
+				// Ensure the style function is properly bound to the window context
+				if (window.vectorTileStyle) {
+					// Add a small timeout to ensure the map is fully rendered
+					setTimeout(function() {
+						map.render();
+					}, 0);
+					return window.vectorTileStyle(feature, resolution);
+				}
+				return [];
 			},
-			renderMode: 'vector',
-			declutter: true,
-			updateWhileAnimating: true,
-			updateWhileInteracting: true,
-			preload: 1,
-			useInterimTilesOnError: true,
-			renderBuffer: 768,
-			renderOrder: null,
-			opacity: 1.0,
-			zIndex: 0
+			updateWhileAnimating: true,  // Update labels during animations
+			updateWhileInteracting: true  // Update labels during interactions
 		}),
 		new ol.layer.Tile({
 			title: 'OpenStreetMap',
 			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
 			source: new ol.source.OSM()
-		}),
-		new ol.layer.Tile({
-			title: 'OpenStreetMap DE',
-			iconSrc: imgSrc + 'icones_web/osmbw_logo-layer.png',
-			maxZoom: 18,
-			source: new ol.source.XYZ({
-				attributions: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-				url: 'https://{a-c}.tile.openstreetmap.de/{z}/{x}/{y}.png'
-			}),
-			visible: false
-		}),
+/*@@ inicio de copia */			}),
+								new ol.layer.Tile({
+/*@@ título */					title: 'OpenStreetMap DE',
+/*@@ icono */					iconSrc: imgSrc + 'icones_web/osmbw_logo-layer.png',
+/*@@ zoom máximo */				maxZoom: 18,
+								source: new ol.source.XYZ({
+/*@@ atribución */				attributions: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+/*@@ url */						url: 'https://{a-c}.tile.openstreetmap.de/{z}/{x}/{y}.png'
+								}),
+/*@@ visible de inicio */		visible: false
+/*@@ final de copia */			}),
 		new ol.layer.Tile({// OpenStreetMap France https://openstreetmap.fr
 			title: 'OpenStreetMap FR',
 			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
