@@ -43,73 +43,13 @@ var config = {
 	},
 	//@@ Mapas de fondo
 	layers: [
-// MapTiler Vector Tile Layer with enhanced glyph and sprite support
-new ol.layer.VectorTile({
-    title: 'MapTiler Vector',
-    iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
-    visible: true,
-    opacity: 1.0,
-    renderMode: 'vector',
-    source: new ol.source.VectorTile({
-        projection: 'EPSG:3857',
-        format: new ol.format.MVT(),
-        url: 'https://api.maptiler.com/tiles/v3-openmaptiles/{z}/{x}/{y}.pbf?key=tKDOqJGURiimBRaaKrDJ',
-        tileGrid: ol.tilegrid.createXYZ({
-            minZoom: 0,
-            maxZoom: 14,
-            tileSize: 512
-        }),
-        overlaps: false,
-        attributions: [
-            '<a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a>',
-            '<a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a>'
-        ]
-    }),
-    style: function(feature, resolution) {
-        // Add sprite and glyph configuration
-        if (!window.maptilerStyleConfig) {
-            window.maptilerStyleConfig = {
-                // Sprite configuration for icons and patterns
-                spriteBaseUrl: 'https://api.maptiler.com/maps/streets/sprite',
-                // Glyph configuration for text rendering
-                glyphs: 'https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=tKDOqJGURiimBRaaKrDJ',
-                // Font stacks for different text styles
-                fontStacks: {
-                    regular: ['Noto Sans Regular', 'Arial Unicode MS Regular'],
-                    bold: ['Noto Sans Bold', 'Arial Unicode MS Bold'],
-                    italic: ['Noto Sans Italic', 'Arial Unicode MS Italic'],
-                    bolditalic: ['Noto Sans Bold Italic', 'Arial Unicode MS Bold Italic']
-                }
-            };
-        }
-
-        // Ensure the style function is properly bound to the window context
-        if (window.vectorTileStyle) {
-            // Pass the configuration to the style function
-            const style = window.vectorTileStyle(feature, resolution);
-            
-            // Add a small timeout to ensure the map is fully rendered
-            setTimeout(function() {
-                map.render();
-            }, 0);
-            
-            return style;
-        }
-        return [];
-    },
-    updateWhileAnimating: true,
-    updateWhileInteracting: true,
-    // Add preload for better performance
-    preload: 1,
-    // Add declutter to prevent label overlapping
-    declutter: true
-}),
+		// MapTiler Vector Tile Layer with enhanced glyph and sprite support
 		new ol.layer.VectorTile({
-			title: 'MapTiler Old Vector',
+			title: 'MapTiler Vector',
 			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
-			visible: true,  // Make it visible by default for testing
+			visible: true,
 			opacity: 1.0,
-			renderMode: 'vector',  // Ensure vector rendering mode for better text quality
+			renderMode: 'vector',
 			source: new ol.source.VectorTile({
 				projection: 'EPSG:3857',
 				format: new ol.format.MVT(),
@@ -117,27 +57,43 @@ new ol.layer.VectorTile({
 				tileGrid: ol.tilegrid.createXYZ({
 					minZoom: 0,
 					maxZoom: 14,
-					tileSize: 512  // Larger tile size for better label rendering
+					tileSize: 512
 				}),
-				overlaps: false,  // Prevent label duplicates at tile edges
+				overlaps: false,
 				attributions: [
 					'<a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a>',
 					'<a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a>'
 				]
 			}),
-			style: function(feature, resolution) {
-				// Ensure the style function is properly bound to the window context
-				if (window.vectorTileStyle) {
-					// Add a small timeout to ensure the map is fully rendered
-					setTimeout(function() {
-						map.render();
-					}, 0);
-					return window.vectorTileStyle(feature, resolution);
-				}
-				return [];
-			},
-			updateWhileAnimating: true,  // Update labels during animations
-			updateWhileInteracting: true  // Update labels during interactions
+			style: (function() {
+				// Initialize style configuration
+				window.maptilerStyleConfig = {
+					spriteBaseUrl: 'https://api.maptiler.com/maps/streets/sprite',
+					glyphs: 'https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=tKDOqJGURiimBRaaKrDJ',
+					fontStacks: {
+						regular: ['Noto Sans Regular', 'Arial Unicode MS Regular'],
+						bold: ['Noto Sans Bold', 'Arial Unicode MS Bold'],
+						italic: ['Noto Sans Italic', 'Arial Unicode MS Italic'],
+						bolditalic: ['Noto Sans Bold Italic', 'Arial Unicode MS Bold Italic']
+					}
+				};
+
+				return function(feature, resolution) {
+					if (window.vectorTileStyle) {
+						setTimeout(function() {
+							if (map && typeof map.render === 'function') {
+								map.render();
+							}
+						}, 0);
+						return window.vectorTileStyle(feature, resolution);
+					}
+					return [];
+				};
+			})(),
+			updateWhileAnimating: true,
+			updateWhileInteracting: true,
+			preload: 1,
+			declutter: true
 		}),
 		new ol.layer.Tile({
 			title: 'OpenStreetMap',
