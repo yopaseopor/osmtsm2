@@ -274,7 +274,87 @@ window.vectorTileStyle = function(feature, resolution) {
                         text: new ol.style.Text({
                             text: label,
                             font: '9px Arial',
-                            fill: new ol.style.Fill({
+// Add this at the top of your vector-tile-style.js
+const maptilerStyleConfig = window.maptilerStyleConfig || {};
+
+// Update the text style creation to use proper font stacks
+function createTextStyle(options = {}) {
+    const fontStack = maptilerStyleConfig.fontStacks?.[options.fontWeight || 'regular'] || ['Arial', 'sans-serif'];
+    const fontSize = options.fontSize || 12;
+    const textColor = options.color || '#000000';
+    const haloColor = options.haloColor || 'rgba(255, 255, 255, 0.7)';
+    const haloWidth = options.haloWidth || 1.5;
+    
+    return new ol.style.Text({
+        text: options.text,
+        font: `${options.fontWeight || 'normal'} ${fontSize}px ${fontStack.join(', ')}`,
+        fill: new ol.style.Fill({
+            color: textColor
+        }),
+        stroke: new ol.style.Stroke({
+            color: haloColor,
+            width: haloWidth
+        }),
+        offsetX: options.offsetX || 0,
+        offsetY: options.offsetY || 0,
+        rotation: options.rotation || 0,
+        scale: options.scale || 1,
+        textAlign: options.textAlign || 'center',
+        textBaseline: options.textBaseline || 'middle',
+        overflow: options.overflow !== false,
+        padding: options.padding || [2, 4],
+        backgroundFill: options.backgroundFill ? new ol.style.Fill(options.backgroundFill) : undefined,
+        backgroundStroke: options.backgroundStroke ? new ol.style.Stroke(options.backgroundStroke) : undefined
+    });
+}
+
+// Update the style function to use the new text style creator
+window.vectorTileStyle = function(feature, resolution) {
+    // ... rest of your existing style function ...
+    
+    // Example of using the new text style for labels
+    if (layer === 'place' && type === 'Point') {
+        const placeType = feature.get('class');
+        const name = feature.get('name');
+        
+        if (name) {
+            let fontSize, fontWeight;
+            switch(placeType) {
+                case 'city':
+                    fontSize = 14;
+                    fontWeight = 'bold';
+                    break;
+                case 'town':
+                    fontSize = 12;
+                    fontWeight = 'bold';
+                    break;
+                case 'village':
+                    fontSize = 11;
+                    fontWeight = 'normal';
+                    break;
+                default:
+                    fontSize = 10;
+                    fontWeight = 'normal';
+            }
+            
+            return [new ol.style.Style({
+                text: createTextStyle({
+                    text: name,
+                    fontSize: fontSize,
+                    fontWeight: fontWeight,
+                    color: '#333333',
+                    haloColor: 'rgba(255, 255, 255, 0.7)',
+                    haloWidth: 2,
+                    textBaseline: 'bottom',
+                    offsetY: -5
+                }),
+                zIndex: 100
+            })];
+        }
+    }
+    
+    // ... rest of your style function ...
+};                            fill: new ol.style.Fill({
                                 color: '#333333'
                             }),
                             stroke: new ol.style.Stroke({
