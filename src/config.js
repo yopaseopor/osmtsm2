@@ -54,7 +54,8 @@ var config = {
 					featureClass: ol.Feature,
 					geometryName: 'geometry',
 					layerName: 'layer',
-					supportedMediaTypes: ['application/vnd.mapbox-vector-tile']
+					supportedMediaTypes: ['application/vnd.mapbox-vector-tile'],
+					featureClass: ol.Feature
 				}),
 				url: 'https://api.maptiler.com/tiles/v3-openmaptiles/{z}/{x}/{y}.pbf?key=tKDOqJGURiimBRaaKrDJ',
 				tileGrid: ol.tilegrid.createXYZ({
@@ -68,7 +69,7 @@ var config = {
 					'<a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a>'
 				],
 				transition: 0,
-				cacheSize: 0,
+				cacheSize: 128,
 				tileLoadFunction: function(tile, src) {
 					tile.setLoader(function(extent, resolution, projection) {
 						var xhr = new XMLHttpRequest();
@@ -78,8 +79,14 @@ var config = {
 							if (xhr.status === 200) {
 								tile.setFeatures(tile.getFormat().readFeatures(
 									xhr.response,
-									{ featureProjection: projection }
+									{ 
+										featureProjection: projection,
+										dataProjection: 'EPSG:3857'
+									}
 								));
+								tile.setState(ol.TileState.LOADED);
+							} else {
+								tile.setState(ol.TileState.ERROR);
 							}
 						};
 						xhr.onerror = function() {
@@ -89,16 +96,22 @@ var config = {
 					});
 				}
 			}),
-			style: window.vectorTileStyle || function() { return []; },
+			style: window.vectorTileStyle || function() { 
+				return [new ol.style.Style({
+					fill: new ol.style.Fill({ color: 'rgba(200, 200, 200, 0.1)' }),
+					stroke: new ol.style.Stroke({ color: '#ddd', width: 0.5 })
+				})];
+			},
 			renderMode: 'vector',
 			declutter: true,
 			updateWhileAnimating: true,
 			updateWhileInteracting: true,
-			preload: 0,
+			preload: 1,
 			useInterimTilesOnError: true,
 			renderBuffer: 768,
 			renderOrder: null,
-			opacity: 1.0
+			opacity: 1.0,
+			zIndex: 0
 		}),
 		new ol.layer.Tile({
 			title: 'OpenStreetMap',
