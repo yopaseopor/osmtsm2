@@ -63,68 +63,16 @@ var config = {
 				]
 			}),
 			style: (function() {
-				// Initialize style configuration with glyphs and sprites from Basic GL Style
+				// Initialize style configuration with glyphs and sprites
 				window.maptilerStyleConfig = {
-					// Use the sprite from the Basic GL Style
-					spriteBaseUrl: 'https://openmaptiles.github.io/maptiler-basic-gl-style/sprite',
-					// Use the same glyphs URL but with our key
+					spriteBaseUrl: 'https://api.maptiler.com/maps/streets/sprite',
 					glyphs: 'https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=tKDOqJGURiimBRaaKrDJ',
 					fontStacks: {
-						regular: ['Noto Sans Regular'],
-						bold: ['Noto Sans Bold'],
-						italic: ['Noto Sans Italic'],
-						bolditalic: ['Noto Sans Bold Italic']
-					},
-					// Add source configuration
-					source: {
-						type: 'vector',
-						url: 'https://api.maptiler.com/tiles/v3/tiles.json?key=tKDOqJGURiimBRaaKrDJ'
-					},
-					// Add layer configuration
-					layers: [
-						'background',
-						'landuse-residential',
-						'landcover_grass',
-						'landcover_wood',
-						'water',
-						'water_intermittent',
-						'landcover-ice-shelf',
-						'landcover-glacier',
-						'landcover_sand',
-						'landuse',
-						'landuse_overlay_national_park',
-						'waterway-tunnel',
-						'waterway',
-						'waterway_intermittent',
-						'tunnel_railway_transit',
-						'railway',
-						'railway-transit',
-						'road_area_pier',
-						'road_pier',
-						'road_bridge_area',
-						'road_path',
-						'road_minor',
-						'tunnel_minor',
-						'tunnel_major',
-						'aeroway-area',
-						'aeroway-taxiway',
-						'aeroway-runway',
-						'road_trunk_primary',
-						'road_secondary_tertiary',
-						'road_major_motorway',
-						'building',
-						'housenumber',
-						'admin_sub',
-						'admin_country_z0-4',
-						'admin_country_z5-',
-						'poi_label',
-						'airport-label',
-						'road_major_label',
-						'place_label_other',
-						'place_label_city',
-						'country_label-other',
-						'country_label'
-					]
+						regular: ['Noto Sans Regular', 'Arial Unicode MS Regular'],
+						bold: ['Noto Sans Bold', 'Arial Unicode MS Bold'],
+						italic: ['Noto Sans Italic', 'Arial Unicode MS Italic'],
+						bolditalic: ['Noto Sans Bold Italic', 'Arial Unicode MS Bold Italic']
+					}
 				};
 
 				// Preload fonts
