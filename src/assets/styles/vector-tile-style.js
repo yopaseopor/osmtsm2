@@ -1,43 +1,69 @@
 /**
  * Vector Tile Style for MapTiler/OpenMapTiles
- * Focused on text rendering with minimal base styles
+ * Enhanced text rendering with proper font configuration
  */
 window.vectorTileStyle = function(feature, resolution) {
+    // Pre-load fonts to ensure they're available for rendering
+    const loadFonts = () => {
+        const style = document.createElement('style');
+        style.textContent = `
+            @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+        `;
+        document.head.appendChild(style);
+    };
+    
+    // Load fonts on first run
+    if (!window._fontsLoaded) {
+        loadFonts();
+        window._fontsLoaded = true;
+    }
     // Color definitions for text and basic features
     const colors = {
         // Basic feature colors
         water: '#9db9e8',
         land: '#f2efe9',
         
-        // Text styling
+        // Text styling with improved font stack
         text: {
             // Road labels
             road: {
                 fill: '#000000',
                 stroke: '#ffffff',
                 strokeWidth: 3,
-                font: 'bold 14px Arial, sans-serif',
-                halo: true,
+                font: '600 14px "Noto Sans", Arial, sans-serif',
+                fontScale: 1.0,
                 minResolution: 0,
-                maxResolution: 20
+                maxResolution: 20,
+                padding: [2, 2, 2, 2],
+                textBaseline: 'middle',
+                textAlign: 'center'
             },
             // Place labels (cities, towns, etc.)
             place: {
                 fill: '#333333',
                 stroke: '#ffffff',
                 strokeWidth: 3,
-                halo: true,
+                font: '600 16px "Noto Sans", Arial, sans-serif',
+                fontScale: 1.0,
                 minResolution: 0,
-                maxResolution: 1000
+                maxResolution: 1000,
+                padding: [3, 3, 3, 3],
+                textBaseline: 'middle',
+                textAlign: 'center'
             },
             // POI labels (points of interest)
             poi: {
                 fill: '#555555',
                 stroke: '#ffffff',
                 strokeWidth: 2,
-                halo: true,
+                font: '500 12px "Noto Sans", Arial, sans-serif',
+                fontScale: 1.0,
                 minResolution: 0,
-                maxResolution: 100
+                maxResolution: 100,
+                padding: [1, 1, 1, 1],
+                textBaseline: 'middle',
+                textAlign: 'center'
             }
         },
         // Basic road styling (just enough to see where labels should go)
@@ -76,83 +102,176 @@ window.vectorTileStyle = function(feature, resolution) {
             return [new ol.style.Style({
                 text: new ol.style.Text({
                     text: name,
-                    font: 'italic 12px Arial, sans-serif',
+                    font: 'italic 14px "Noto Serif", serif',
                     fill: new ol.style.Fill({ color: '#1a5fb4' }),
                     stroke: new ol.style.Stroke({
-                        color: '#ffffff',
-                        width: 2
+                        color: 'rgba(255, 255, 255, 0.8)',
+                        width: 3
                     }),
+                    padding: [3, 3, 3, 3],
                     overflow: true,
                     placement: 'line',
                     maxAngle: 0.4,
-                    rotation: 0
+                    rotation: 0,
+                    textBaseline: 'middle',
+                    textAlign: 'center',
+                    offsetY: 0,
+                    offsetX: 0,
+                    backgroundFill: new ol.style.Fill({
+                        color: 'rgba(255, 255, 255, 0.6)'
+                    }),
+                    backgroundStroke: new ol.style.Stroke({
+                        color: 'rgba(255, 255, 255, 0.3)',
+                        width: 1
+                    })
                 })
             })];
         }
         
-        // Place labels (cities, towns, etc.)
+        // Enhanced place labels with better typography
         if (layer === 'place') {
             let fontSize = 12;
             let fontWeight = 'normal';
+            let fontFamily = '"Noto Sans", Arial, sans-serif';
+            let letterSpacing = '0px';
             
-            // Adjust size based on place type
+            // Adjust size and weight based on place type
             switch (place) {
                 case 'city':
-                    fontSize = 18;
-                    fontWeight = 'bold';
+                    fontSize = 20;
+                    fontWeight = '700';
+                    letterSpacing = '0.5px';
                     break;
                 case 'town':
-                    fontSize = 14;
-                    fontWeight = 'bold';
+                    fontSize = 16;
+                    fontWeight = '600';
+                    letterSpacing = '0.3px';
                     break;
                 case 'village':
-                    fontSize = 12;
+                    fontSize = 14;
+                    fontWeight = '500';
                     break;
                 case 'hamlet':
-                    fontSize = 10;
+                    fontSize = 12;
+                    fontWeight = 'normal';
+                    break;
+                case 'locality':
+                    fontSize = 11;
+                    fontWeight = 'normal';
                     break;
                 default:
                     fontSize = 10;
+                    fontWeight = 'normal';
             }
+            
+            // Adjust size based on zoom level
+            const zoom = Math.log2(156543.03390625) - Math.log2(resolution);
+            if (zoom < 8) fontSize = Math.max(10, fontSize * 0.8);
+            if (zoom > 14) fontSize = fontSize * 1.2;
             
             return [new ol.style.Style({
                 text: new ol.style.Text({
                     text: name,
-                    font: `${fontWeight} ${fontSize}px Arial, sans-serif`,
-                    fill: new ol.style.Fill({ color: colors.text.place.fill }),
-                    stroke: new ol.style.Stroke({
-                        color: colors.text.place.stroke,
-                        width: colors.text.place.strokeWidth
+                    font: `${fontWeight} ${fontSize}px ${fontFamily}`,
+                    letterSpacing: letterSpacing,
+                    fill: new ol.style.Fill({ 
+                        color: place === 'city' ? '#1a237e' : '#283593' 
                     }),
+                    stroke: new ol.style.Stroke({
+                        color: 'rgba(255, 255, 255, 0.8)',
+                        width: 3
+                    }),
+                    padding: [3, 6, 3, 6],
                     offsetY: 0,
                     overflow: true,
                     placement: 'point',
                     maxAngle: 0,
-                    rotation: 0
+                    rotation: 0,
+                    textBaseline: 'middle',
+                    textAlign: 'center',
+                    backgroundFill: new ol.style.Fill({
+                        color: 'rgba(255, 255, 255, 0.6)'
+                    }),
+                    backgroundStroke: new ol.style.Stroke({
+                        color: 'rgba(255, 255, 255, 0.3)',
+                        width: 1
+                    })
                 })
             })];
         }
         
-        // POI (Points of Interest)
+        // Enhanced POI (Points of Interest) with icons and better text
         if (layer === 'poi' && name) {
-            return [new ol.style.Style({
-                text: new ol.style.Text({
-                    text: name,
-                    font: '11px Arial, sans-serif',
-                    fill: new ol.style.Fill({ color: colors.text.poi.fill }),
-                    stroke: new ol.style.Stroke({
-                        color: colors.text.poi.stroke,
-                        width: colors.text.poi.strokeWidth
-                    }),
-                    offsetY: 12,
-                    textAlign: 'center',
-                    textBaseline: 'bottom',
-                    overflow: true,
-                    placement: 'point',
-                    maxAngle: 0,
-                    rotation: 0
+            const poiClass = cls || 'other';
+            let icon = null;
+            
+            // Get appropriate icon based on POI class
+            switch (poiClass) {
+                case 'restaurant':
+                case 'cafe':
+                case 'bar':
+                    icon = '🍽️';
+                    break;
+                case 'hotel':
+                case 'hostel':
+                    icon = '🏨';
+                    break;
+                case 'shop':
+                    icon = '🛍️';
+                    break;
+                case 'attraction':
+                case 'museum':
+                    icon = '🏛️';
+                    break;
+                case 'park':
+                case 'garden':
+                    icon = '🌳';
+                    break;
+                default:
+                    icon = '📍';
+            }
+            
+            return [
+                // Icon
+                new ol.style.Style({
+                    text: new ol.style.Text({
+                        text: icon,
+                        font: '20px "Noto Color Emoji", "Apple Color Emoji", sans-serif',
+                        fill: new ol.style.Fill({ color: '#2c3e50' }),
+                        offsetY: -10,
+                        textAlign: 'center',
+                        textBaseline: 'middle',
+                        rotation: 0
+                    })
+                }),
+                // Text label
+                new ol.style.Style({
+                    text: new ol.style.Text({
+                        text: name,
+                        font: '500 11px "Noto Sans", Arial, sans-serif',
+                        fill: new ol.style.Fill({ color: '#2c3e50' }),
+                        stroke: new ol.style.Stroke({
+                            color: 'rgba(255, 255, 255, 0.8)',
+                            width: 2
+                        }),
+                        offsetY: 12,
+                        textAlign: 'center',
+                        textBaseline: 'top',
+                        overflow: true,
+                        placement: 'point',
+                        maxAngle: 0,
+                        rotation: 0,
+                        padding: [2, 4, 2, 4],
+                        backgroundFill: new ol.style.Fill({
+                            color: 'rgba(255, 255, 255, 0.7)'
+                        }),
+                        backgroundStroke: new ol.style.Stroke({
+                            color: 'rgba(0, 0, 0, 0.1)',
+                            width: 1
+                        })
+                    })
                 })
-            })];
+            ];
         }
         
         // Landuse layer - just show the name if it has one
@@ -176,27 +295,46 @@ window.vectorTileStyle = function(feature, resolution) {
             })];
         }
         
-        // Road labels
+        // Road labels with improved styling
         if (layer === 'transportation_name' && name) {
             const roadClass = cls || 'tertiary';
             const isMajorRoad = ['motorway', 'trunk', 'primary', 'secondary'].includes(roadClass);
-            let fontSize = isMajorRoad ? 12 : 10;
-            let fontWeight = isMajorRoad ? 'bold' : 'normal';
+            let fontSize = isMajorRoad ? 13 : 11;
+            let fontWeight = isMajorRoad ? '600' : '500';
+            let letterSpacing = isMajorRoad ? '0.5px' : '0.3px';
+            
+            // Adjust font size based on zoom level
+            const zoom = Math.log2(156543.03390625) - Math.log2(resolution);
+            if (zoom < 10) fontSize *= 0.8;
+            if (zoom > 14) fontSize *= 1.2;
             
             return [new ol.style.Style({
                 text: new ol.style.Text({
-                    text: name,
-                    font: `${fontWeight} ${fontSize}px Arial, sans-serif`,
-                    fill: new ol.style.Fill({ color: colors.text.road.fill }),
-                    stroke: new ol.style.Stroke({
-                        color: colors.text.road.stroke,
-                        width: colors.text.road.strokeWidth
+                    text: name.toUpperCase(),
+                    font: `${fontWeight} ${fontSize}px/1.4 "Noto Sans", Arial, sans-serif`,
+                    letterSpacing: letterSpacing,
+                    fill: new ol.style.Fill({ 
+                        color: isMajorRoad ? '#2c3e50' : '#34495e' 
                     }),
+                    stroke: new ol.style.Stroke({
+                        color: 'rgba(255, 255, 255, 0.8)',
+                        width: 3
+                    }),
+                    padding: [2, 4, 2, 4],
                     offsetY: 0,
                     overflow: true,
                     placement: 'line',
                     maxAngle: 0.4,
-                    rotation: 0
+                    rotation: 0,
+                    textBaseline: 'middle',
+                    textAlign: 'center',
+                    backgroundFill: new ol.style.Fill({
+                        color: 'rgba(255, 255, 255, 0.6)'
+                    }),
+                    backgroundStroke: new ol.style.Stroke({
+                        color: 'rgba(255, 255, 255, 0.3)',
+                        width: 1
+                    })
                 }),
                 zIndex: 100
             }];

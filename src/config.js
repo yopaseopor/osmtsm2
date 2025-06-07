@@ -43,16 +43,22 @@ var config = {
 	},
 	//@@ Mapas de fondo
 	layers: [
-		// MapTiler Vector Tile Layer
+		// MapTiler Vector Tile Layer with proper text rendering
 		new ol.layer.VectorTile({
 			title: 'MapTiler Vector',
 			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
-			visible: true,  // Make it visible by default for testing
+			visible: true,
 			opacity: 1.0,
-			renderMode: 'vector',  // Ensure vector rendering mode for better text quality
+			renderMode: 'vector',  // Required for proper text rendering
+			declutter: true,      // Prevents label overlapping
 			source: new ol.source.VectorTile({
 				projection: 'EPSG:3857',
-				format: new ol.format.MVT(),
+				format: new ol.format.MVT({
+					featureClass: ol.Feature,
+					geometryName: 'geometry',
+					layerName: 'layer',
+					supportedMediaTypes: ['application/vnd.mapbox-vector-tile']
+				}),
 				url: 'https://api.maptiler.com/tiles/v3-openmaptiles/{z}/{x}/{y}.pbf?key=tKDOqJGURiimBRaaKrDJ',
 				tileGrid: ol.tilegrid.createXYZ({
 					minZoom: 0,
@@ -63,13 +69,37 @@ var config = {
 				attributions: [
 					'<a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a>',
 					'<a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a>'
-				]
+				],
+				transition: 0,  // Disable fade-in for better text rendering
+				cacheSize: 0,  // Disable cache to prevent memory issues
+				tileLoadFunction: function(tile, src) {
+					// Custom tile loading to handle CORS if needed
+					tile.setLoader(function(extent, resolution, projection) {
+						var xhr = new XMLHttpRequest();
+						xhr.open('GET', src);
+						xhr.responseType = 'arraybuffer';
+						xhr.onload = function() {
+							if (xhr.status === 200) {
+								tile.setFeatures(tile.getFormat().readFeatures(
+									xhr.response,
+									{ featureProjection: projection }
+								));
+							}
+						};
+						xhr.onerror = function() {
+							tile.setState(ol.TileState.ERROR);
+						};
+						xhr.send();
+					});
+				}
 			}),
 			style: window.vectorTileStyle || function() { return []; },
 			updateWhileAnimating: true,  // Update labels during animations
 			updateWhileInteracting: true,  // Update labels during interactions
 			preload: 0,  // Don't preload tiles to reduce initial load
-			useInterimTilesOnError: true  // Show lower zoom level tiles if needed
+			useInterimTilesOnError: true,  // Show lower zoom level tiles if needed
+			renderBuffer: 512,  // Increase render buffer for better label rendering at tile edges
+			renderOrder: null  // Use default render order
 		}),
 		new ol.layer.Tile({
 			title: 'OpenStreetMap',
