@@ -43,7 +43,7 @@ var config = {
 	},
 	//@@ Mapas de fondo
 	layers: [
-		// MapTiler Vector Tile Layer with Basic GL Style
+		// MapTiler Vector Tile Layer with ol-mapbox-style
 		new ol.layer.VectorTile({
 			title: 'MapTiler Basic',
 			iconSrc: imgSrc + 'icones_web/maptiler_logo.png',
@@ -63,56 +63,8 @@ var config = {
 				]
 			}),
 			style: (function() {
-				// Initialize style configuration with glyphs and sprites for Basic GL Style
-				window.maptilerStyleConfig = {
-					spriteBaseUrl: 'https://openmaptiles.github.io/maptiler-basic-gl-style/sprite',
-					glyphs: 'https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=tKDOqJGURiimBRaaKrDJ',
-					fontStacks: {
-						regular: ['Noto Sans Regular', 'Arial Unicode MS Regular'],
-						bold: ['Noto Sans Bold', 'Arial Unicode MS Bold'],
-						italic: ['Noto Sans Italic', 'Arial Unicode MS Italic'],
-						bolditalic: ['Noto Sans Bold Italic', 'Arial Unicode MS Bold Italic']
-					},
-					source: 'openmaptiles', // Match the source name in the style
-					style: {
-						version: 8,
-						name: 'Basic',
-						sources: {
-							openmaptiles: {
-								type: 'vector',
-								url: 'https://api.maptiler.com/tiles/v3-openmaptiles/tiles.json?key=tKDOqJGURiimBRaaKrDJ'
-							}
-						},
-						sprite: 'https://openmaptiles.github.io/maptiler-basic-gl-style/sprite',
-						glyphs: 'https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=tKDOqJGURiimBRaaKrDJ'
-					}
-				};
-
-				// Preload fonts
-				const fontPromises = [];
-				Object.values(window.maptilerStyleConfig.fontStacks).forEach(fonts => {
-					fonts.forEach(font => {
-						const fontUrl = window.maptilerStyleConfig.glyphs
-							.replace('{fontstack}', encodeURIComponent(font))
-							.replace('{range}', '0-255');
-						fontPromises.push(
-							fetch(fontUrl).catch(e => console.warn('Failed to load font:', font, e))
-						);
-					});
-				});
-
-				// Return the style function with access to the config
-				return function(feature, resolution) {
-					if (window.vectorTileStyle) {
-						try {
-							return window.vectorTileStyle(feature, resolution, window.maptilerStyleConfig);
-						} catch (e) {
-							console.error('Error in vectorTileStyle:', e);
-							return [];
-						}
-					}
-					return [];
-				};
+				// This will be set by olms.applyStyle()
+				return function() { return []; };
 			})()
 		}),
 		new ol.layer.Tile({

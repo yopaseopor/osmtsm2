@@ -413,6 +413,20 @@ $(function () {
 		view: view
 	});
 
+	// Apply MapTiler Basic style using ol-mapbox-style
+	const maptilerLayer = config.layers.find(layer => layer.get('title') === 'MapTiler Basic');
+	if (maptilerLayer && window.olms) {
+		olms.applyStyle(
+			maptilerLayer,
+			'https://api.maptiler.com/maps/basic/style.json?key=tKDOqJGURiimBRaaKrDJ',
+			'server'
+		).then(() => {
+			console.log('MapTiler Basic style applied successfully');
+		}).catch(error => {
+			console.error('Error applying MapTiler Basic style:', error);
+		});
+	}
+
 	// Initialize Nominatim search
 	initNominatimSearch(map);
 
