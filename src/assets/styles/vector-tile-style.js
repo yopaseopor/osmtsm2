@@ -156,14 +156,14 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
             building: '#e67e22',
             default: '#7f8c8d'
         },
-        // Base colors
-        water: 'rgba(170, 210, 255, 0.9)',
-        waterIntermittent: 'rgba(170, 210, 255, 0.6)',
-        residential: 'rgba(240, 238, 235, 0.7)',
-        park: 'rgba(210, 250, 210, 0.7)',
-        forest: 'rgba(190, 220, 190, 0.8)',
-        building: 'rgba(220, 217, 210, 0.9)',
-        buildingOutline: 'rgba(180, 177, 170, 0.8)',
+        // Base colors - Standard OpenStreetMap style
+        water: '#a5bfdd',
+        waterIntermittent: '#c0d8e8',
+        residential: '#f2e9e1',
+        park: '#d6e7d5',
+        forest: '#c8e9c3',
+        building: '#e0e0e0',
+        buildingOutline: '#cccccc',
         
         // Road colors and widths - Standard OpenStreetMap style
         highway: {
@@ -182,26 +182,31 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
             cycleway: { color: '#b3d1ff', width: 0.6, textColor: '#2e3b4e' }    // light blue
         },
         
-        // Text styles
+        // Text styles - Standard OpenStreetMap style
         text: {
-            fill: '#000000',
-            stroke: '#ffffff',
+            fill: '#2e3b4e',
+            stroke: 'rgba(255, 255, 255, 0.8)',
             strokeWidth: 2,
-            font: '12px Arial, sans-serif',
+            font: '12px Noto Sans, Arial, sans-serif',
             offsetY: 0,
             padding: [2, 4],
             maxAngle: 30,
             overflow: true
         },
         landuse: {
-            residential: 'rgba(240, 238, 235, 0.7)',
-            commercial: 'rgba(240, 235, 240, 0.5)',
-            industrial: 'rgba(230, 230, 220, 0.6)',
-            retail: 'rgba(245, 235, 235, 0.6)',
-            park: 'rgba(210, 250, 210, 0.7)',
-            forest: 'rgba(190, 220, 190, 0.8)',
-            grass: 'rgba(200, 250, 200, 0.6)',
-            cemetery: 'rgba(200, 230, 200, 0.7)'
+            residential: '#f2e9e1',
+            commercial: '#f2e9e1',
+            industrial: '#e8e8e8',
+            retail: '#f2e9e1',
+            park: '#d6e7d5',
+            forest: '#c8e9c3',
+            grass: '#d6e7d5',
+            cemetery: '#c8e9c3',
+            school: '#f2e9e1',
+            hospital: '#f2e9e1',
+            military: '#e8e8e8',
+            industrial: '#e8e8e8',
+            construction: '#e8e8e8'
         },
         boundary: {
             national: '#000000',
