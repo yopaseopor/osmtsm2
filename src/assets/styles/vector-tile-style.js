@@ -595,7 +595,7 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
         console.error('Error styling feature:', error, feature);
         return []; // Return empty styles array on error
     }
-
+    
     // Default style (fallback) - with label if available
     const styles = [new ol.style.Style({
         fill: new ol.style.Fill({
