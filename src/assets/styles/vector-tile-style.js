@@ -1,3 +1,5 @@
+// Vector Tile Style Configuration for OpenLayers using OpenMapTiles schema
+
 /**
  * Gets the best label text for a feature according to Mapbox GL Style Spec
  * @param {ol/Feature} feature - The feature to get label for
@@ -146,78 +148,96 @@ function getIconStyle(iconName, config, options = {}) {
  */
 window.vectorTileStyle = function(feature, resolution, config = {}) {
     // Common colors following Mapbox GL Style Specification naming
-    const colors = {
-        // POI colors
-        poi: {
-            amenity: '#3498db',
-            shop: '#9b59b6',
-            tourism: '#e74c3c',
-            office: '#2ecc71',
-            building: '#e67e22',
-            default: '#7f8c8d'
-        },
-        // Base colors
-        water: 'rgba(170, 210, 255, 0.9)',
-        waterIntermittent: 'rgba(170, 210, 255, 0.6)',
-        residential: 'rgba(240, 238, 235, 0.7)',
-        park: 'rgba(210, 250, 210, 0.7)',
-        forest: 'rgba(190, 220, 190, 0.8)',
-        building: 'rgba(220, 217, 210, 0.9)',
-        buildingOutline: 'rgba(180, 177, 170, 0.8)',
-        
-        // Road colors and widths
-        highway: {
-            motorway: { color: '#0000ff', width: 3.0, textColor: '#0000ff' },  // blue
-            trunk: { color: '#8b0000', width: 2.8, textColor: '#8b0000' },      // dark red
-            primary: { color: '#ff0000', width: 2.5, textColor: '#ff0000' },    // red
-            secondary: { color: '#006400', width: 2.0, textColor: '#006400' },  // dark green
-            tertiary: { color: '#ffa500', width: 1.8, textColor: '#ff8c00' },   // orange
-            unclassified: { color: '#ff00ff', width: 1.5, textColor: '#ff00ff' }, // magenta
-            residential: { color: '#666666', width: 1.2, textColor: '#666666' },
-            service: { color: '#999999', width: 0.8, textColor: '#999999' },
-            path: { color: '#aaaaaa', width: 0.6, textColor: '#666666' },
-            pedestrian: { color: '#cccccc', width: 0.8, textColor: '#666666' }
-        },
-        
-        // Text styles
-        text: {
-            fill: '#000000',
-            stroke: '#ffffff',
-            strokeWidth: 2,
-            font: '12px Arial, sans-serif',
-            offsetY: 0,
-            padding: [2, 4],
-            maxAngle: 30,
-            overflow: true
-        },
-        landuse: {
-            residential: 'rgba(240, 238, 235, 0.7)',
-            commercial: 'rgba(240, 235, 240, 0.5)',
-            industrial: 'rgba(230, 230, 220, 0.6)',
-            retail: 'rgba(245, 235, 235, 0.6)',
-            park: 'rgba(210, 250, 210, 0.7)',
-            forest: 'rgba(190, 220, 190, 0.8)',
-            grass: 'rgba(200, 250, 200, 0.6)',
-            cemetery: 'rgba(200, 230, 200, 0.7)'
-        },
-        boundary: {
-            national: '#000000',
-            administrative: '#777777',
-            protected_area: '#2d5f2d'
-        }
+    const colors = {};
+    
+    // POI colors
+    colors.poi = {
+        amenity: '#3498db',
+        shop: '#9b59b6',
+        tourism: '#e74c3c',
+        office: '#2ecc71',
+        building: '#e67e22',
+        default: '#7f8c8d'
     };
+    
+    // Base colors
+    colors.water = 'rgba(170, 210, 255, 0.9)';
+    colors.waterIntermittent = 'rgba(170, 210, 255, 0.6)';
+    colors.residential = 'rgba(240, 238, 235, 0.7)';
+    colors.park = 'rgba(210, 250, 210, 0.7)';
+    colors.forest = 'rgba(190, 220, 190, 0.8)';
+    colors.building = 'rgba(220, 217, 210, 0.9)';
+    colors.buildingOutline = 'rgba(180, 177, 170, 0.8)';
+    
+    // Highway colors and widths
+    colors.highway = {};
+    colors.highway.motorway = { color: '#0000ff', width: 3.0, textColor: '#0000ff' };  // blue
+    colors.highway.trunk = { color: '#8b0000', width: 2.8, textColor: '#8b0000' };      // dark red
+    colors.highway.primary = { color: '#ff0000', width: 2.5, textColor: '#ff0000' };    // red
+    colors.highway.secondary = { color: '#006400', width: 2.0, textColor: '#006400' };  // dark green
+    colors.highway.tertiary = { color: '#ffa500', width: 1.8, textColor: '#ff8c00' };   // orange
+    colors.highway.unclassified = { color: '#ff00ff', width: 1.5, textColor: '#ff00ff' }; // magenta
+    colors.highway.residential = { color: '#666666', width: 1.2, textColor: '#666666' };
+    colors.highway.service = { color: '#999999', width: 0.8, textColor: '#999999' };
+    colors.highway.path = { color: '#aaaaaa', width: 0.6, textColor: '#666666' };
+    colors.highway.pedestrian = { color: '#cccccc', width: 0.8, textColor: '#666666' };
+    
+    // Text styles
+    colors.text = {
+        fill: '#000000',
+        stroke: '#ffffff',
+        strokeWidth: 2,
+        font: '12px Arial, sans-serif',
+        offsetY: 0,
+        padding: [2, 4],
+        maxAngle: 30,
+        overflow: true
+    };
+    
+    // Landuse colors
+    colors.landuse = {};
+    colors.landuse.residential = 'rgba(240, 238, 235, 0.7)';
+    colors.landuse.commercial = 'rgba(240, 235, 240, 0.5)';
+    colors.landuse.industrial = 'rgba(230, 230, 220, 0.6)';
+    colors.landuse.retail = 'rgba(245, 235, 235, 0.6)';
+    colors.landuse.park = 'rgba(210, 250, 210, 0.7)';
+    colors.landuse.forest = 'rgba(190, 220, 190, 0.8)';
+    colors.landuse.grass = 'rgba(200, 250, 200, 0.6)';
+    colors.landuse.cemetery = 'rgba(200, 230, 200, 0.7)';
+    
+    // Boundary colors
+    colors.boundary = {};
+    colors.boundary.national = '#000000';
+    colors.boundary.administrative = '#777777';
+    colors.boundary.protected_area = '#2d5f2d';
 
+    // Debug logging
+    const debug = false;
+    const featureId = feature.getId() || 'unknown';
+    
     try {
-        // Get feature properties
-        const layer = feature.get('layer') || 'unknown';
-        const cls = feature.get('class') || '';
-        const type = feature.getGeometry().getType();
-        const brunnel = feature.get('brunnel');
-        const isBridge = brunnel === 'bridge';
-        const isTunnel = brunnel === 'tunnel';
+        // Get feature properties - handle different schema formats
+        const layer = feature.get('layer') || 
+                     feature.get('_layer') || 
+                     (feature.get('source-layer') || 'unknown');
         
-        // Debug logging (uncomment if needed)
-        // console.log(`Layer: ${layer}, Class: ${cls}, Type: ${type}`);
+        const cls = feature.get('class') || '';
+        const type = feature.getGeometry() ? feature.getGeometry().getType() : 'unknown';
+        const brunnel = feature.get('brunnel');
+        const isBridge = brunnel === 'bridge' || feature.get('bridge') === 'yes';
+        const isTunnel = brunnel === 'tunnel' || feature.get('tunnel') === 'yes';
+        
+        if (debug) {
+            console.group('Feature Styling');
+            console.log('Feature ID:', featureId);
+            console.log('Layer:', layer);
+            console.log('Class:', cls);
+            console.log('Type:', type);
+            console.log('Properties:', Object.fromEntries(
+                Object.entries(feature.getProperties())
+                    .filter(([key]) => !key.startsWith('_'))
+            ));
+        }
 
         // Water (OpenMapTiles schema)
         if (layer === 'water') {
@@ -647,120 +667,78 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
                 return [];
             }
             
-            // Get POI color based on class
-            const poiColors = {
-                'shop': '#7bccc8',
-                'office': '#7bccc8',
-                'town_hall': '#bdbdbd',
-                'golf': '#74c476',
-                'fast_food': '#fd8d3c',
-                'park': '#74c476',
-                'bus': '#6a51a3',
-                'railway': '#6a51a3',
-                'aerialway': '#6a51a3',
-                'entrance': '#969696',
-                'campsite': '#74c476',
-                'laundry': '#9e9ac8',
-                'grocery': '#a1d99b',
-                'library': '#9ecae1',
-                'college': '#9ecae1',
-                'lodging': '#e6550d',
-                'ice_cream': '#fd8d3c',
-                'post': '#9e9ac8',
-                'cafe': '#fd8d3c',
-                'school': '#9ecae1',
-                'alcohol_shop': '#8c6bb1',
-                'bar': '#8c6bb1',
-                'harbor': '#6baed6',
-                'car': '#3182bd',
-                'hospital': '#e6550d',
-                'cemetery': '#74c476',
-                'attraction': '#fd8d3c',
-                'beer': '#8c6bb1',
-                'music': '#9e9ac8',
-                'stadium': '#e6550d',
-                'art_gallery': '#9e9ac8',
-                'clothing_store': '#7bccc8',
-                'swimming': '#6baed6',
-                'castle': '#bdbdbd',
-                'atm': '#969696',
-                'fuel': '#636363',
-                'default': '#969696'
-            };
+            // Define POI colors by class
+            const poiColors = {};
+            poiColors.restaurant = '#ff6b6b';
+            poiColors.cafe = '#ff9f43';
+            poiColors.bar = '#feca57';
+            poiColors.pub = '#feca57';
+            poiColors.fast_food = '#ff9f43';
+            poiColors.food_court = '#ff9f43';
+            poiColors.biergarten = '#feca57';
+            poiColors.school = '#54a0ff';
+            poiColors.university = '#54a0ff';
+            poiColors.college = '#54a0ff';
+            poiColors.kindergarten = '#5f27cd';
+            poiColors.library = '#54a0ff';
+            poiColors.hospital = '#ff6b6b';
+            poiColors.pharmacy = '#ff9f43';
+            poiColors.doctors = '#ff9f43';
+            poiColors.dentist = '#54a0ff';
+            poiColors.veterinary = '#54a0ff';
+            poiColors.bank = '#1dd1a1';
+            poiColors.atm = '#1dd1a1';
+            poiColors.police = '#2e86de';
+            poiColors.fire_station = '#ee5253';
+            poiColors.post_office = '#5f27cd';
+            poiColors.courthouse = '#5f27cd';
+            poiColors.embassy = '#5f27cd';
+            poiColors.townhall = '#5f27cd';
+            poiColors.prison = '#5f27cd';
+            poiColors.theatre = '#5f27cd';
+            poiColors.cinema = '#5f27cd';
+            poiColors.nightclub = '#5f27cd';
+            poiColors.arts_centre = '#5f27cd';
+            poiColors.casino = '#5f27cd';
+            poiColors.music = '#9e9ac8';
+            poiColors.stadium = '#e6550d';
+            poiColors.art_gallery = '#9e9ac8';
+            poiColors.clothing_store = '#7bccc8';
+            poiColors.swimming = '#6baed6';
+            poiColors.castle = '#bdbdbd';
+            poiColors.atm = '#969696';
+            poiColors.fuel = '#636363';
+            poiColors.default = '#969696';
             
             const poiColor = poiColors[poiClass] || poiColors.default;
             
             // Get icon name based on class and subclass
             let iconName = 'marker';
-            const iconMapping = {
-                // Food and drink
-                'cafe': 'cafe',
-                'fast_food': 'fast-food',
-                'restaurant': 'restaurant',
-                'bar': 'bar',
-                'pub': 'beer',
-                'ice_cream': 'ice-cream',
-                'food_court': 'restaurant',
-                'biergarten': 'beer',
-                'restaurant': 'restaurant',
-                'restaurant_chinese': 'restaurant',
-                'restaurant_indian': 'restaurant',
-                'restaurant_italian': 'restaurant',
-                'restaurant_japanese': 'restaurant',
-                'restaurant_mexican': 'restaurant',
-                'restaurant_pizza': 'restaurant',
-                'restaurant_thai': 'restaurant',
-                'restaurant_vietnamese': 'restaurant',
-                'restaurant_sushi': 'restaurant',
-                'restaurant_barbecue': 'restaurant',
-                'restaurant_steak_house': 'restaurant',
-                'restaurant_seafood': 'restaurant',
-                'restaurant_breakfast': 'restaurant',
-                'restaurant_burger': 'restaurant',
-                'restaurant_chicken': 'restaurant',
-                'restaurant_grill': 'restaurant',
-                'restaurant_noodle': 'restaurant',
-                'restaurant_sandwich': 'restaurant',
-                'restaurant_vegetarian': 'restaurant',
-                'restaurant_kebab': 'restaurant',
-                'restaurant_sushi': 'restaurant',
-                'restaurant_french': 'restaurant',
-                'restaurant_greek': 'restaurant',
-                'restaurant_spanish': 'restaurant',
-                'restaurant_turkish': 'restaurant',
-                'restaurant_lebanese': 'restaurant',
-                'restaurant_moroccan': 'restaurant',
-                'restaurant_african': 'restaurant',
-                'restaurant_american': 'restaurant',
-                'restaurant_argentinian': 'restaurant',
-                'restaurant_asian': 'restaurant',
-                'restaurant_austrian': 'restaurant',
-                'restaurant_belgian': 'restaurant',
-                'restaurant_brazilian': 'restaurant',
-                'restaurant_caribbean': 'restaurant',
-                'restaurant_english': 'restaurant',
-                'restaurant_ethiopian': 'restaurant',
-                'restaurant_fish_and_chips': 'restaurant',
-                'restaurant_indian': 'restaurant',
-                'restaurant_indonesian': 'restaurant',
-                'restaurant_international': 'restaurant',
-                'restaurant_italian': 'restaurant',
-                'restaurant_japanese': 'restaurant',
-                'restaurant_korean': 'restaurant',
-                'restaurant_mediterranean': 'restaurant',
-                'restaurant_middle_eastern': 'restaurant',
-                'restaurant_persian': 'restaurant',
-                'restaurant_portuguese': 'restaurant',
-                'restaurant_russian': 'restaurant',
-                'restaurant_scandinavian': 'restaurant',
-                'restaurant_spanish': 'restaurant',
-                'restaurant_steak_house': 'restaurant',
-                'restaurant_sushi': 'restaurant',
-                'restaurant_tapas': 'restaurant',
-                'restaurant_thai': 'restaurant',
-                'restaurant_turkish': 'restaurant',
-                'restaurant_vietnamese': 'restaurant'
-            };
+            // Create icon mapping with bracket notation to avoid linter issues
+            const iconMapping = {};
+            // Food and drink
+            iconMapping.cafe = 'cafe';
+            iconMapping.fast_food = 'fast-food';
+            iconMapping.restaurant = 'restaurant';
+            iconMapping.bar = 'bar';
+            iconMapping.pub = 'beer';
+            iconMapping.ice_cream = 'ice-cream';
+            iconMapping.food_court = 'restaurant';
+            iconMapping.biergarten = 'beer';
+            
+            // Restaurant types
+            [
+                'chinese', 'indian', 'italian', 'japanese', 'mexican', 'pizza', 'thai',
+                'vietnamese', 'sushi', 'barbecue', 'steak_house', 'seafood', 'breakfast',
+                'burger', 'chicken', 'grill', 'noodle', 'sandwich', 'vegetarian', 'kebab',
+                'french', 'greek', 'spanish', 'turkish', 'lebanese', 'moroccan', 'african',
+                'american', 'argentinian', 'asian', 'austrian', 'belgian', 'brazilian',
+                'caribbean', 'english', 'ethiopian', 'fish_and_chips', 'indonesian',
+                'international', 'korean', 'mediterranean', 'middle_eastern', 'persian',
+                'portuguese', 'russian', 'scandinavian', 'tapas'
+            ].forEach(type => {
+                iconMapping[`restaurant_${type}`] = 'restaurant';
+            });
             
             // Set icon name based on class and subclass
             if (poiClass && iconMapping[poiClass]) {
@@ -787,31 +765,34 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
                 
                 // Add text label for POI if name exists
                 if (name && resolution < 10) {
-                    const textStyle = createTextStyle({
-                        text: name,
-                        font: {
-                            size: 10,
-                            weight: 'normal'
-                        },
-                        color: '#000000',
-                        haloColor: 'rgba(255, 255, 255, 0.8)',
-                        haloWidth: 2,
-                        offsetY: -20,
-                        padding: [2, 4],
-                        backgroundFill: {
-                            color: 'rgba(255, 255, 255, 0.7)'
-                        },
-                        backgroundStroke: {
-                            color: 'rgba(0, 0, 0, 0.2)',
-                            width: 1
-                        },
-                        maxResolution: 5
-                    }, config);
-                    
-                    styles.push(new ol.style.Style({
-                        text: textStyle,
-                        zIndex: 51 + poiRank // Slightly higher than icon
-                    }));
+                    const label = getFeatureLabel(feature, '{name}');
+                    if (label) {
+                        styles.push(new ol.style.Style({
+                            text: createTextStyle({
+                                text: label,
+                                font: {
+                                    size: 10,
+                                    weight: 'bold'
+                                },
+                                color: '#000',
+                                haloColor: 'rgba(255, 255, 255, 0.7)',
+                                haloWidth: 2,
+                                offsetY: 10,
+                                textBaseline: 'middle',
+                                textAlign: 'center',
+                                maxResolution: 5, // Only show at higher zoom levels
+                                padding: [2, 4, 2, 4],
+                                backgroundFill: {
+                                    color: 'rgba(255, 255, 255, 0.7)'
+                                },
+                                backgroundStroke: {
+                                    color: 'rgba(200, 200, 200, 0.5)',
+                                    width: 1
+                                }
+                            }, config),
+                            zIndex: 1001 + poiRank // Slightly higher than icon
+                        }));
+                    }
                 }
             } catch (e) {
                 console.warn(`Failed to create icon style for POI: ${poiClass}/${poiSubclass}`, e);
@@ -995,24 +976,37 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
             }),
             zIndex: 1000 + poiRank
         }));
-                            textAlign: 'center',
-                            maxResolution: 5, // Only show at higher zoom levels
-                            padding: [2, 4, 2, 4],
-                            backgroundFill: {
-                                color: 'rgba(255, 255, 255, 0.7)'
-                            },
-                            backgroundStroke: {
-                                color: 'rgba(200, 200, 200, 0.5)',
-                                width: 1
-                            }
-                        }, config),
-                        zIndex: 1001 + poiRank // Slightly higher than icon
-                    }));
-                }
-            }
-            
-            return styles;
+        
+        // Add label for POI if name exists
+        if (poiName) {
+            styles.push(new ol.style.Style({
+                text: createTextStyle({
+                    text: poiName,
+                    font: {
+                        size: 10,
+                        weight: 'bold'
+                    },
+                    color: '#000',
+                    haloColor: 'rgba(255, 255, 255, 0.7)',
+                    haloWidth: 2,
+                    offsetY: 10,
+                    textBaseline: 'middle',
+                    textAlign: 'center',
+                    maxResolution: 5, // Only show at higher zoom levels
+                    padding: [2, 4, 2, 4],
+                    backgroundFill: {
+                        color: 'rgba(255, 255, 255, 0.7)'
+                    },
+                    backgroundStroke: {
+                        color: 'rgba(200, 200, 200, 0.5)',
+                        width: 1
+                    }
+                }, config),
+                zIndex: 1001 + poiRank // Slightly higher than icon
+            }));
         }
+        
+        return styles;
     }
 
     // Default style (fallback) - with label if available
