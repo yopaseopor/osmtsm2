@@ -46,7 +46,7 @@ var config = {
 		// Option 1: MapTiler Vector Tiles (MVT format)
 		new ol.layer.VectorTile({
 			title: 'MapTiler Vector (MVT)',
-			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
+			iconSrc: imgSrc + 'icones_web/maptiler_logo.png',
 			visible: false,
 			opacity: 1.0,
 			source: new ol.source.VectorTile({
@@ -107,7 +107,7 @@ var config = {
 		new ol.layer.VectorTile({
 			title: 'OpenFreeMap Vector',
 			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
-			visible: true,
+			visible: false,
 			source: new ol.source.VectorTile({
 				projection: 'EPSG:3857',
 				format: new ol.format.MVT(),
