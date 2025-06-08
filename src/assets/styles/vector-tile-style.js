@@ -627,7 +627,7 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
                         offsetY: 12,
                         textBaseline: 'top',
                         textAlign: 'center',
-                        maxResolution: 5 // Only show at higher zoom levels
+                        maxResolution: 0.5 // Only show at zoom level 17 and above
                     }, config)
                 }));
             }
