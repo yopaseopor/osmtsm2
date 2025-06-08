@@ -219,10 +219,25 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
         // Debug logging (uncomment if needed)
         // console.log(`Layer: ${layer}, Class: ${cls}, Type: ${type}`);
 
-        // Water
+        // Water (OpenMapTiles schema)
         if (layer === 'water') {
+            const waterClass = feature.get('class') || 'ocean';
             const isIntermittent = feature.get('intermittent') === 1 || feature.get('intermittent') === '1';
-            const waterColor = isIntermittent ? colors.waterIntermittent : colors.water;
+            
+            // Different water colors based on class
+            const waterColors = {
+                'ocean': 'rgba(170, 210, 255, 0.9)',
+                'lake': 'rgba(170, 210, 255, 0.9)',
+                'reservoir': 'rgba(170, 210, 255, 0.9)',
+                'river': 'rgba(170, 210, 255, 0.9)',
+                'canal': 'rgba(170, 210, 255, 0.9)',
+                'basin': 'rgba(200, 230, 255, 0.9)',
+                'pond': 'rgba(200, 230, 255, 0.9)'
+            };
+            
+            const waterColor = isIntermittent ? 
+                adjustColor(waterColors[waterClass] || waterColors.ocean, 10) : 
+                waterColors[waterClass] || waterColors.ocean;
             
             const styles = [new ol.style.Style({
                 fill: new ol.style.Fill({
@@ -230,32 +245,38 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
                 })
             })];
             
-            // Add stroke for intermittent water
-            if (isIntermittent) {
+            // Add stroke for intermittent water or rivers/canals
+            if (isIntermittent || waterClass === 'river' || waterClass === 'canal') {
                 styles[0].setStroke(new ol.style.Stroke({
-                    color: colors.water,
-                    width: 1,
-                    lineDash: [4, 4]
+                    color: adjustColor(waterColor, -15),
+                    width: waterClass === 'river' || waterClass === 'canal' ? 1.5 : 1,
+                    lineDash: isIntermittent ? [4, 4] : null
                 }));
             }
             
-            // Add water label if name exists
+            // Add water label if name exists (for named water bodies)
             const name = getFeatureLabel(feature, '{name}');
-            if (name) {
+            if (name && waterClass !== 'ocean') {  // Don't label the ocean
+                const isRiver = waterClass === 'river' || waterClass === 'canal';
+                const fontSize = isRiver ? 10 : 11;
+                const textColor = isRiver ? 'rgba(0, 0, 128, 0.9)' : 'rgba(0, 0, 128, 0.8)';
+                
                 styles.push(new ol.style.Style({
                     text: createTextStyle({
                         text: name,
                         font: {
                             style: 'italic',
-                            size: 11,
-                            weight: 'normal'
+                            size: fontSize,
+                            weight: isRiver ? 'normal' : 'bold'
                         },
-                        color: 'rgba(0, 0, 128, 0.8)',
+                        color: textColor,
                         haloColor: 'rgba(255, 255, 255, 0.7)',
                         haloWidth: 2,
-                        offsetY: -10,
-                        textBaseline: 'bottom',
-                        textAlign: 'center'
+                        offsetY: isRiver ? 0 : -10,
+                        textBaseline: isRiver ? 'middle' : 'bottom',
+                        textAlign: 'center',
+                        placement: isRiver ? 'line' : 'point',
+                        maxResolution: isRiver ? 5 : 10
                     }, config)
                 }));
             }
@@ -263,20 +284,39 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
             return styles;
         }
         
-        // Landuse
+        // Landuse (OpenMapTiles schema)
         if (layer === 'landuse') {
-            const fillColor = colors.landuse[cls] || colors.landuse.residential;
+            const landuseClass = feature.get('class') || 'residential';
             const name = feature.get('name');
             const styles = [];
             
+            // Define landuse colors based on OpenMapTiles classes
+            const landuseColors = {
+                'residential': 'rgba(240, 238, 235, 0.7)',
+                'commercial': 'rgba(240, 235, 240, 0.5)',
+                'industrial': 'rgba(230, 230, 220, 0.6)',
+                'retail': 'rgba(245, 235, 235, 0.6)',
+                'park': 'rgba(210, 250, 210, 0.7)',
+                'forest': 'rgba(190, 220, 190, 0.8)',
+                'grass': 'rgba(200, 250, 200, 0.6)',
+                'cemetery': 'rgba(200, 230, 200, 0.7)',
+                'hospital': 'rgba(255, 220, 220, 0.7)',
+                'school': 'rgba(235, 235, 250, 0.7)',
+                'university': 'rgba(235, 235, 250, 0.7)',
+                'military': 'rgba(240, 220, 200, 0.7)',
+                'beach': 'rgba(255, 250, 200, 0.7)'
+            };
+            
+            const fillColor = landuseColors[landuseClass] || landuseColors.residential;
+            
             // Only show landuse at appropriate zoom levels
-            const showLanduse = resolution < (cls === 'park' || cls === 'forest' ? 100 : 50);
+            const showLanduse = resolution < (['park', 'forest', 'cemetery'].includes(landuseClass) ? 100 : 50);
             if (!showLanduse) {
                 return [];
             }
             
             // Base fill with z-index based on landuse type
-            const zIndex = cls === 'park' || cls === 'forest' ? 1 : 0;
+            const zIndex = ['park', 'forest', 'cemetery', 'hospital', 'school', 'university'].includes(landuseClass) ? 1 : 0;
             styles.push(new ol.style.Style({
                 fill: new ol.style.Fill({
                     color: fillColor
@@ -285,20 +325,28 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
             }));
             
             // Add stroke for certain landuse types
-            if (cls === 'park' || cls === 'forest' || cls === 'cemetery') {
+            if (['park', 'forest', 'cemetery', 'hospital', 'school', 'university'].includes(landuseClass)) {
                 styles[0].setStroke(new ol.style.Stroke({
                     color: adjustColor(fillColor, -10),
-                    width: 0.5
+                    width: 0.5,
+                    lineDash: landuseClass === 'cemetery' ? [2, 2] : null
                 }));
             }
             
             // Get label for any landuse with name, ref, or address
             const label = getFeatureLabel(feature, '{name}');
             if (label) {
-                const fontSize = cls === 'park' || cls === 'forest' || cls === 'cemetery' ? 10 : 9;
-                const textColor = cls === 'cemetery' ? '#666666' : 
-                                 cls === 'park' || cls === 'forest' ? '#2d5f2d' : '#333333';
-                const showLabel = resolution < 20; // Only show labels when zoomed in
+                const isSignificant = ['park', 'forest', 'cemetery', 'hospital', 'school', 'university'].includes(landuseClass);
+                const fontSize = isSignificant ? 10 : 9;
+                
+                // Different text colors based on landuse type
+                let textColor = '#333333';
+                if (landuseClass === 'park' || landuseClass === 'forest') textColor = '#2d5f2d';
+                else if (landuseClass === 'cemetery') textColor = '#666666';
+                else if (landuseClass === 'hospital') textColor = '#8b0000';
+                else if (landuseClass === 'school' || landuseClass === 'university') textColor = '#000080';
+                
+                const showLabel = resolution < (isSignificant ? 20 : 10); // Only show labels when zoomed in
                 
                 if (showLabel) {
                     styles.push(new ol.style.Style({
@@ -306,8 +354,8 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
                             text: label,
                             font: {
                                 size: fontSize,
-                                weight: 'normal',
-                                style: cls === 'park' || cls === 'forest' ? 'italic' : 'normal'
+                                weight: isSignificant ? 'bold' : 'normal',
+                                style: ['park', 'forest'].includes(landuseClass) ? 'italic' : 'normal'
                             },
                             color: textColor,
                             haloColor: 'rgba(255, 255, 255, 0.7)',
@@ -316,7 +364,7 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
                             textAlign: 'center',
                             placement: 'point',
                             maxAngle: 0.7,
-                            maxResolution: 10,
+                            maxResolution: isSignificant ? 10 : 5,
                             padding: [2, 4, 2, 4],
                             backgroundFill: {
                                 color: 'rgba(255, 255, 255, 0.5)'
@@ -333,17 +381,41 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
             return styles;
         }
         
-        // Buildings
+        // Buildings (OpenMapTiles schema)
         if (layer === 'building') {
-            const height = parseFloat(feature.get('height') || '0');
-            const levels = parseInt(feature.get('building:levels') || '1', 10);
-            const buildingType = feature.get('building');
+            const height = parseFloat(feature.get('render_height') || feature.get('height') || '0');
+            const minHeight = parseFloat(feature.get('min_height') || '0');
+            const levels = parseInt(feature.get('building:levels') || 
+                                 feature.get('render_height') ? Math.round(parseFloat(feature.get('render_height')) / 3) : '1', 10);
+            const buildingType = feature.get('class') || feature.get('building') || 'yes';
             
             // Calculate building color based on height/levels/type
-            let buildingColor = colors.building;
-            if (height > 20 || levels > 5) {
-                buildingColor = adjustColor(colors.building, -15); // Darker for taller buildings
+            let buildingColor = '#e0dcd8'; // Default light gray
+            
+            // Different colors based on building type
+            if (buildingType === 'commercial' || buildingType === 'retail') {
+                buildingColor = '#e8d8d8'; // Light red
+            } else if (buildingType === 'industrial' || buildingType === 'warehouse') {
+                buildingColor = '#d8e0e8'; // Light blue
+            } else if (buildingType === 'apartments' || buildingType === 'residential') {
+                buildingColor = '#e0dcd8'; // Light gray
+            } else if (buildingType === 'school' || buildingType === 'university') {
+                buildingColor = '#e0d8e8'; // Light purple
+            } else if (buildingType === 'hospital' || buildingType === 'clinic') {
+                buildingColor = '#f0e0e0'; // Very light red
             }
+            
+            // Darken based on height
+            if (height > 50) {
+                buildingColor = adjustColor(buildingColor, -25);
+            } else if (height > 20 || levels > 5) {
+                buildingColor = adjustColor(buildingColor, -15);
+            } else if (height > 0) {
+                buildingColor = adjustColor(buildingColor, -5);
+            }
+            
+            // Adjust for 3D effect
+            const roofColor = adjustColor(buildingColor, -10);
             
             const styles = [new ol.style.Style({
                 fill: new ol.style.Fill({
@@ -396,56 +468,92 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
             return styles;
         }
 
-        // Transportation (roads, paths, etc.)
+        // Transportation (roads, paths, etc.) - OpenMapTiles schema
         if (layer === 'transportation') {
-            const roadType = cls || 'tertiary';
-            const roadStyle = colors.highway[roadType] || colors.highway.tertiary;
-            const name = feature.get('name');
-            const ref = feature.get('ref');
+            const roadClass = feature.get('class') || 'minor';
+            const roadSubclass = feature.get('subclass') || '';
+            const isLink = roadSubclass.endsWith('_link');
+            const isTunnel = feature.get('brunnel') === 'tunnel';
+            const isBridge = feature.get('brunnel') === 'bridge';
+            const layerValue = parseInt(feature.get('layer') || '0', 10);
             
-            // Skip rendering tunnels for now
-            if (isTunnel) {
+            // Skip rendering tunnels if not enabled in config
+            if (isTunnel && !(config.showTunnels === true)) {
                 return [];
+            }
+            
+            // Define road styles based on OpenMapTiles classes
+            const roadStyles = {
+                'motorway': { color: '#4a80f5', width: 3.0, casing: 4.0, zIndex: 10, label: true },
+                'trunk': { color: '#a8cef7', width: 2.8, casing: 3.8, zIndex: 9, label: true },
+                'primary': { color: '#f7a8a8', width: 2.5, casing: 3.5, zIndex: 8, label: true },
+                'secondary': { color: '#f7d0a8', width: 2.2, casing: 3.0, zIndex: 7, label: true },
+                'tertiary': { color: '#f7f7a8', width: 2.0, casing: 2.5, zIndex: 6, label: true },
+                'minor': { color: '#f7f7f7', width: 1.5, casing: 0, zIndex: 5, label: false },
+                'service': { color: '#f0f0f0', width: 1.0, casing: 0, zIndex: 4, label: false },
+                'track': { color: '#e0e0a0', width: 1.0, casing: 0, zIndex: 3, label: false, dash: [2, 2] },
+                'path': { color: '#d0d0d0', width: 0.8, casing: 0, zIndex: 2, label: false, dash: [3, 3] },
+                'pedestrian': { color: '#e0e0e0', width: 0.8, casing: 0, zIndex: 1, label: false, dash: [5, 3] }
+            };
+            
+            // Get the appropriate style for this road
+            let roadStyle = roadStyles[roadClass] || roadStyles.minor;
+            
+            // Adjust for link roads (ramps)
+            if (isLink) {
+                roadStyle = {
+                    ...roadStyle,
+                    width: Math.max(1.0, roadStyle.width * 0.8),
+                    casing: Math.max(0, (roadStyle.casing || 0) * 0.8)
+                };
             }
             
             const styles = [];
             
-            // Main road casing (wider, slightly transparent)
-            if (['motorway', 'trunk', 'primary', 'secondary'].includes(roadType)) {
+            // Add road casing (for major roads)
+            if (roadStyle.casing > 0) {
                 styles.push(new ol.style.Style({
                     stroke: new ol.style.Stroke({
                         color: 'rgba(0, 0, 0, 0.3)',
-                        width: roadStyle.width * 1.5,
+                        width: roadStyle.casing,
                         lineCap: 'round',
                         lineJoin: 'round'
                     }),
-                    zIndex: 1
+                    zIndex: roadStyle.zIndex * 10 + 1
                 }));
             }
             
             // Main road fill
             styles.push(new ol.style.Style({
                 stroke: new ol.style.Stroke({
-                    color: roadStyle.color,
+                    color: isTunnel ? adjustColor(roadStyle.color, 20) : roadStyle.color,
                     width: roadStyle.width,
                     lineCap: 'round',
-                    lineJoin: 'round'
+                    lineJoin: 'round',
+                    lineDash: isTunnel ? [2, 2] : (roadStyle.dash || null)
                 }),
-                zIndex: 2
+                zIndex: roadStyle.zIndex * 10 + 2
             }));
             
-            // For bridges, make the line slightly wider and lighter
+            // For bridges, add a highlight effect
             if (isBridge) {
-                styles[styles.length - 1].getStroke().setWidth(roadStyle.width * 1.1);
-                styles[styles.length - 1].getStroke().setColor(adjustColor(roadStyle.color, 15));
+                styles.push(new ol.style.Style({
+                    stroke: new ol.style.Stroke({
+                        color: adjustColor(roadStyle.color, 20),
+                        width: roadStyle.width * 1.2,
+                        lineCap: 'round',
+                        lineJoin: 'round'
+                    }),
+                    zIndex: roadStyle.zIndex * 10 + 3
+                }));
             }
             
             // Add road labels for named or numbered roads
             const label = getFeatureLabel(feature, '{name} {ref}');
-            if (label) {
-                const isMajorRoad = ['motorway', 'trunk', 'primary', 'secondary'].includes(roadType);
+            if (label && roadStyle.label) {
+                const isMajorRoad = ['motorway', 'trunk', 'primary', 'secondary'].includes(roadClass);
                 const fontSize = isMajorRoad ? 10 : 9;
-                const textColor = isMajorRoad ? '#ffffff' : roadStyle.textColor || '#000000';
+                const textColor = isMajorRoad ? '#ffffff' : '#000000';
                 const haloColor = isMajorRoad ? 'rgba(0, 0, 0, 0.7)' : 'rgba(255, 255, 255, 0.8)';
                 
                 // Only show labels at appropriate zoom levels
@@ -475,7 +583,8 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
                                 color: 'rgba(0, 0, 0, 0.2)',
                                 width: 1
                             } : null
-                        }, config)
+                        }, config),
+                        zIndex: roadStyle.zIndex * 10 + 4
                     }));
                 }
             }
@@ -483,41 +592,43 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
             return styles;
         }
         
-        // Boundaries
+        // Boundaries (OpenMapTiles schema)
         if (layer === 'boundary') {
-            const name = feature.get('name');
             const adminLevel = parseInt(feature.get('admin_level') || '0', 10);
             const boundaryType = feature.get('boundary') || '';
+            const maritime = feature.get('maritime') === '1' || feature.get('maritime') === 1;
+            const disputed = feature.get('disputed') === '1' || feature.get('disputed') === 1 || 
+                           feature.get('dispute') === '1' || feature.get('dispute') === 1;
             const styles = [];
             
             // Define boundary style based on type and admin level
             let boundaryStyle = {
                 stroke: new ol.style.Stroke({
-                    color: colors.boundary.administrative,
+                    color: maritime ? '#4a80f5' : '#777777',
                     width: 0.8,
-                    lineDash: [4, 2]
+                    lineDash: maritime ? [4, 2] : [5, 3]
                 }),
                 zIndex: 1
             };
             
-            // National boundaries
-            if (cls === 'national' || adminLevel <= 2) {
-                boundaryStyle.stroke.color = colors.boundary.national;
-                boundaryStyle.stroke.width = 1.5;
-                boundaryStyle.stroke.lineDash = [6, 3];
+            // National boundaries (admin_level 2)
+            if (adminLevel <= 2) {
+                boundaryStyle.stroke.color = maritime ? '#4a80f5' : (disputed ? '#ff0000' : '#000000');
+                boundaryStyle.stroke.width = disputed ? 2.0 : 1.5;
+                boundaryStyle.stroke.lineDash = maritime ? [4, 2] : (disputed ? [8, 4] : [6, 3]);
                 boundaryStyle.zIndex = 3;
             } 
-            // State/regional boundaries
+            // State/regional boundaries (admin_level 3-4)
             else if (adminLevel <= 4) {
-                boundaryStyle.stroke.color = '#666666';
-                boundaryStyle.stroke.width = 1;
-                boundaryStyle.stroke.lineDash = [5, 3];
+                boundaryStyle.stroke.color = maritime ? '#4a80f5' : (disputed ? '#ff0000' : '#666666');
+                boundaryStyle.stroke.width = disputed ? 1.5 : 1.0;
+                boundaryStyle.stroke.lineDash = maritime ? [4, 2] : (disputed ? [6, 3] : [5, 3]);
                 boundaryStyle.zIndex = 2;
             }
-            // Protected areas
-            else if (boundaryType === 'protected_area' || cls === 'protected_area') {
-                boundaryStyle.stroke.color = colors.boundary.protected_area;
-                boundaryStyle.stroke.width = 1;
+            // Protected areas and other boundaries
+            else if (boundaryType === 'protected_area' || boundaryType === 'national_park') {
+                boundaryStyle.stroke.color = '#2d5f2d'; // Dark green
+                boundaryStyle.stroke.width = 1.0;
                 boundaryStyle.stroke.lineDash = [3, 3];
                 boundaryStyle.zIndex = 1;
             }
