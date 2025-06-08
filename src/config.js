@@ -50,18 +50,24 @@ var config = {
 			visible: false,
 			opacity: 1.0,
 			source: new ol.source.VectorTile({
-				projection: 'EPSG:3857',
+				url: function(tileCoord) {
+					const z = tileCoord[0];
+					const x = tileCoord[1];
+					const y = -tileCoord[2] - 1;
+					return `https://api.maptiler.com/tiles/v3/${z}/${x}/${y}.pbf?key=tKDOqJGURiimBRaaKrDJ`;
+				},
 				format: new ol.format.MVT(),
-				url: 'https://api.maptiler.com/tiles/v3/{z}/{x}/{y}.pbf?key=tKDOqJGURiimBRaaKrDJ',
 				tileGrid: ol.tilegrid.createXYZ({
+					extent: ol.proj.get('EPSG:3857').getExtent(),
 					minZoom: 0,
-					maxZoom: 14
+					maxZoom: 14,
+					tileSize: 512
 				}),
 				attributions: [
-						'<a href="https://www.maptiler.com/copyright/" target="_blank">MapTiler</a>',
-						'<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>'
-					]
-				}),
+					'<a href="https://www.maptiler.com/copyright/" target="_blank">MapTiler</a>',
+					'<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>'
+				]
+			}),
 				style: (function() {
 				// Initialize style configuration with glyphs and sprites
 				window.maptilerStyleConfig = {
@@ -88,17 +94,32 @@ var config = {
 					});
 				});
 
-				// Return the style function with access to the config
+				const styleCache = {};
 				return function(feature, resolution) {
-					if (window.vectorTileStyle) {
-						try {
-							return window.vectorTileStyle(feature, resolution, window.maptilerStyleConfig);
-						} catch (e) {
-							console.error('Error in vectorTileStyle:', e);
-							return [];
+					const layer = feature.get('layer');
+					const type = feature.getGeometry().getType();
+					const key = `${layer}-${type}`;
+					
+					if (!styleCache[key]) {
+						let style;
+						if (window.vectorTileStyle) {
+							try {
+								style = window.vectorTileStyle(feature, resolution, window.maptilerStyleConfig || {});
+							} catch (e) {
+								console.error('Error in vectorTileStyle:', e);
+							}
 						}
+						styleCache[key] = style || new ol.style.Style({
+							fill: new ol.style.Fill({
+								color: 'rgba(200, 200, 200, 0.4)'
+							}),
+							stroke: new ol.style.Stroke({
+								color: '#3399CC',
+								width: 1.25
+							})
+						});
 					}
-					return [];
+					return styleCache[key];
 				};
 			})()
 		}),
@@ -109,19 +130,19 @@ var config = {
 			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
 			visible: true,
 			source: new ol.source.VectorTile({
-				projection: 'EPSG:3857',
-				format: new ol.format.MVT(),
-				tileGrid: ol.tilegrid.createXYZ({
-					minZoom: 0,
-					maxZoom: 14,
-					tileSize: 512
-				}),
-				tileUrlFunction: function(tileCoord) {
+				url: function(tileCoord) {
 					const z = tileCoord[0];
 					const x = tileCoord[1];
 					const y = -tileCoord[2] - 1;
 					return `https://tile${1 + (x + y) % 4}.openfreemap.org/tiles/v1/${z}/${x}/${y}.pbf`;
 				},
+				format: new ol.format.MVT(),
+				tileGrid: ol.tilegrid.createXYZ({
+					extent: ol.proj.get('EPSG:3857').getExtent(),
+					minZoom: 0,
+					maxZoom: 14,
+					tileSize: 512
+				}),
 				attributions: [
 					'<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>',
 					'<a href="https://openfreemap.org/" target="_blank">OpenFreeMap</a>'
