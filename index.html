@@ -41,39 +41,52 @@
 	<!-- Core Libraries -->
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo3dQ5yXthFCf6WTqjO1U=" crossorigin="anonymous"></script>
-	<!-- OpenLayers -->
-	<script src="https://cdn.jsdelivr.net/npm/ol@10.5.0/dist/ol.js"></script>
-	<!-- Vector Tiles are now included in the main bundle in v10.5.0 -->
-	<!-- osmtogeojson for data conversion -->
+	
+	<!-- External Libraries with Global Scope -->
 	<script src="https://unpkg.com/osmtogeojson@3.0.0-beta.5/osmtogeojson.js"></script>
-	<!-- Proj4 for coordinate transformations -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.8.0/proj4.js"></script>
-	<!-- MapTiler GL JS for vector tile styling -->
 	<script src="https://unpkg.com/@maptiler/sdk/dist/maptiler-sdk.umd.min.js"></script>
 
-	<!-- Vector Tile Style -->
-	<script src="src/assets/styles/vector-tile-style.js"></script>
+	<!-- OpenLayers ES Module Configuration -->
+	<script type="importmap">
+	{
+		"imports": {
+			"ol": "https://cdn.jsdelivr.net/npm/ol@10.5.0/dist/ol.js",
+			"ol/layer": "https://cdn.jsdelivr.net/npm/ol@10.5.0/dist/ol/layer.js",
+			"ol/source": "https://cdn.jsdelivr.net/npm/ol@10.5.0/dist/ol/source.js",
+			"ol/format": "https://cdn.jsdelivr.net/npm/ol@10.5.0/dist/ol/format.js",
+			"ol/tilegrid": "https://cdn.jsdelivr.net/npm/ol@10.5.0/dist/ol/tilegrid.js"
+		}
+	}
+	</script>
 
-	<!-- Configuration -->
-	<script src="src/config.js"></script>
-
-	<!-- Modules -->
+	<!-- Application Modules (in dependency order) -->
 	<script type="module" src="src/i18n/index.js"></script>
 	<script type="module" src="src/components/LanguageSelector.js"></script>
 	<script type="module" src="src/language_init.js"></script>
+	
+	<!-- Vector Tile Style (must be loaded before config) -->
+	<script type="module" src="src/assets/styles/vector-tile-style.js"></script>
+	
+	<!-- Configuration (depends on vector-tile-style) -->
+	<script type="module" src="src/config.js"></script>
+
+	<!-- Overlay Modules -->
 	<script type="module" src="src/overlays/translated_overlays.js"></script>
 	<script type="module" src="src/overlays/external/loader.js"></script>
 	<script type="module" src="src/overlays/index.js"></script>
 	<script type="module" src="src/overlay_integration.js"></script>
+
+	<!-- Main Application -->
 	<script type="module" src="src/init.js"></script>
 
-	<!-- Application Logic -->
-	<script src="src/layer_search.js"></script>
-	<script src="src/overlay_search.js"></script>
-	<script src="src/nominatim_search.js"></script>
-	<script src="src/panoramax_viewer.js"></script>
-	<script src="src/mapillary_viewer.js"></script>
-	<script src="src/router.js"></script>
-	<script src="src/index.js"></script>
+	<!-- Legacy Scripts (to be converted to modules) -->
+	<script type="module" src="src/layer_search.js"></script>
+	<script type="module" src="src/overlay_search.js"></script>
+	<script type="module" src="src/nominatim_search.js"></script>
+	<script type="module" src="src/panoramax_viewer.js"></script>
+	<script type="module" src="src/mapillary_viewer.js"></script>
+	<script type="module" src="src/router.js"></script>
+	<script type="module" src="src/index.js"></script>
 </body>
 </html>

@@ -1,6 +1,11 @@
+import {Icon, Style, Fill, Stroke, Text, Circle} from 'ol/style.js';
+
+// Make the style function available globally
+window.vectorTileStyle = vectorTileStyle;
+
 /**
  * Gets the best label text for a feature according to Mapbox GL Style Spec
- * @param {ol/Feature} feature - The feature to get label for
+ * @param {import('ol/Feature').default} feature - The feature to get label for
  * @param {string} [textField] - Field specification (e.g., '{name} {ref}')
  * @returns {string|null} The formatted label or null if none found
  */
@@ -79,11 +84,11 @@ function createTextStyle(options, config) {
     const fontStyle = font.style || 'normal';
     const fontWeight = font.weight || 'normal';
     
-    return new ol.style.Text({
+    return new Text({
         text: text || '',
         font: `${fontStyle} ${fontWeight} ${fontSize}px ${fontStack}`,
-        fill: new ol.style.Fill({ color }),
-        stroke: new ol.style.Stroke({
+        fill: new Fill({ color }),
+        stroke: new Stroke({
             color: haloColor,
             width: haloWidth
         }),
@@ -129,7 +134,7 @@ function getIconStyle(iconName, config, options = {}) {
     // In a real implementation, you would need to have the sprite metadata
     // to get the correct position and size of the icon in the sprite sheet
     // This is a simplified version
-    return new ol.style.Icon({
+    return new Icon({
         src: spriteUrl.replace('{icon}', iconName),
         scale: size,
         opacity,
@@ -143,8 +148,12 @@ function getIconStyle(iconName, config, options = {}) {
 /**
  * Vector Tile Style Configuration
  * Implements a style function following Mapbox GL Style Specification patterns
+ * @param {import('ol/Feature').default} feature - The feature to style
+ * @param {number} resolution - Current map resolution
+ * @param {Object} [config={}] - Style configuration
+ * @returns {import('ol/style/Style').default|Array<import('ol/style/Style').default>} Style or array of styles
  */
-window.vectorTileStyle = function(feature, resolution, config = {}) {
+function vectorTileStyle(feature, resolution, config = {}) {
     // Common colors following Mapbox GL Style Specification naming
     const colors = {
         // POI colors
@@ -492,7 +501,7 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
             
             // Define boundary style based on type and admin level
             let boundaryStyle = {
-                stroke: new ol.style.Stroke({
+                stroke: new Stroke({
                     color: colors.boundary.administrative,
                     width: 0.8,
                     lineDash: [4, 2]
@@ -525,7 +534,7 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
             // Only show boundaries at appropriate zoom levels
             const showBoundary = resolution < (adminLevel <= 2 ? 100 : adminLevel <= 4 ? 50 : 10);
             if (showBoundary) {
-                styles.push(new ol.style.Style(boundaryStyle));
+                styles.push(new Style(boundaryStyle));
                 
                 // Add label for named boundaries (countries, states, etc.)
                 if (name && (adminLevel <= 4 || boundaryType === 'protected_area')) {
@@ -595,7 +604,7 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
             } else {
                 // Fallback to circle if no icon available
                 styles.push(new ol.style.Style({
-                    image: new ol.style.Circle({
+                    image: new Circle({
                         radius: 5,
                         fill: new ol.style.Fill({
                             color: poiColor

@@ -4,11 +4,19 @@
  * OSM Cat config
  */
 
+import {VectorTile as VectorTileLayer} from 'ol/layer.js';
+import VectorTileSource from 'ol/source/VectorTile.js';
+import MVT from 'ol/format/MVT.js';
+import {createXYZ} from 'ol/tilegrid.js';
+import {Tile as TileLayer, Vector as VectorLayer} from 'ol/layer.js';
+import {OSM, Vector as VectorSource, XYZ, TileWMS, TileJSON} from 'ol/source.js';
+import TopoJSON from 'ol/format/TopoJSON.js';
+
 //@@ Ruta de imágenes
-var imgSrc = 'src/img/';
+export const imgSrc = 'src/img/';
 
 //@@Coordenadas LONgitud LATitud Rotación Zoom, Zoom de la geolocalización, unidades
-var config = {
+export const config = {
 	initialConfig: {
 		lon: 1.59647,
 		lat: 41.69689,
@@ -44,7 +52,7 @@ var config = {
 	//@@ Mapas de fondo
 	layers: [
 		// Option 1: MapTiler Vector Tiles (MVT format)
-		new ol.layer.VectorTile({
+		new VectorTileLayer({
 			title: 'MapTiler Vector (MVT)',
 			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
 			visible: false,
@@ -316,7 +324,7 @@ var config = {
 			source: new ol.source.VectorTile({
         tilePixelRatio: 1, // oversampling when > 1
         tileGrid: ol.tilegrid.createXYZ({maxZoom: 19}),
-        format: new ol.format.TopoJSON(),
+        format: new TopoJSON(),
         url: 'https://basemaps.arcgis.com/arcgis/rest/services/World_Basemap_v2/VectorTileServer/tile/{z}/{y}/{x}.pbf',
 		crossOrigin: 'anonymous'
       }),
