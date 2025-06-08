@@ -646,7 +646,7 @@
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "poi",
-      "minzoom": 14,
+      "minzoom": 17,
       "filter": ["all", ["==", "$type", "Point"], ["==", "rank", 1]],
       "layout": {
         "icon-size": 1,
