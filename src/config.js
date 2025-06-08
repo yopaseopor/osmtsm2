@@ -43,16 +43,16 @@ var config = {
 	},
 	//@@ Mapas de fondo
 	layers: [
-		// MapTiler Vector Tile Layer with standard OpenStreetMap style
+		// MapTiler Vector Tile Layer with Basic GL Style
 		new ol.layer.VectorTile({
-			title: 'MapTiler Vector',
+			title: 'MapTiler Basic',
 			iconSrc: imgSrc + 'icones_web/maptiler_logo.png',
 			visible: true,
 			opacity: 1.0,
 			source: new ol.source.VectorTile({
 				projection: 'EPSG:3857',
 				format: new ol.format.MVT(),
-				url: 'https://api.maptiler.com/tiles/v3/{z}/{x}/{y}.pbf?key=tKDOqJGURiimBRaaKrDJ',
+				url: 'https://api.maptiler.com/tiles/v3-openmaptiles/{z}/{x}/{y}.pbf?key=tKDOqJGURiimBRaaKrDJ',
 				tileGrid: ol.tilegrid.createXYZ({
 					minZoom: 0,
 					maxZoom: 22
@@ -63,16 +63,17 @@ var config = {
 				]
 			}),
 			style: (function() {
-				// Initialize style configuration with glyphs and sprites
+				// Initialize style configuration with glyphs and sprites for Basic GL Style
 				window.maptilerStyleConfig = {
-					spriteBaseUrl: 'https://api.maptiler.com/maps/streets/sprite',
+					spriteBaseUrl: 'https://openmaptiles.github.io/maptiler-basic-gl-style/sprite',
 					glyphs: 'https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=tKDOqJGURiimBRaaKrDJ',
 					fontStacks: {
 						regular: ['Noto Sans Regular', 'Arial Unicode MS Regular'],
 						bold: ['Noto Sans Bold', 'Arial Unicode MS Bold'],
 						italic: ['Noto Sans Italic', 'Arial Unicode MS Italic'],
 						bolditalic: ['Noto Sans Bold Italic', 'Arial Unicode MS Bold Italic']
-					}
+					},
+					source: 'openmaptiles' // Match the source name in the style
 				};
 
 				// Preload fonts
