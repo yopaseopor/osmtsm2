@@ -107,19 +107,44 @@ var config = {
 		new ol.layer.VectorTile({
 			title: 'OpenFreeMap Vector',
 			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
-			visible: false,
+			visible: true,
 			source: new ol.source.VectorTile({
 				projection: 'EPSG:3857',
 				format: new ol.format.MVT(),
 				tileGrid: ol.tilegrid.createXYZ({
 					minZoom: 0,
-					maxZoom: 14
+					maxZoom: 14,
+					tileSize: 512
 				}),
-				tileUrlFunction: function(tileCoord) {
-					const z = tileCoord[0];
-					const x = tileCoord[1];
-					const y = -tileCoord[2] - 1;
-					return `https://tile${1 + (x + y) % 4}.openfreemap.org/tiles/v1/${z}/${x}/${y}.pbf`;
+				tileLoadFunction: function(tile, url) {
+					tile.setLoader(function(extent, resolution, projection) {
+						const tileCoord = this.getTileCoordForExtentAndResolution(
+							extent,
+							resolution,
+							projection
+						);
+						const z = tileCoord[0];
+						const x = tileCoord[1];
+						const y = -tileCoord[2] - 1;
+						const tileUrl = `https://tile${1 + (x + y) % 4}.openfreemap.org/tiles/v1/${z}/${x}/${y}.pbf`;
+						
+						fetch(tileUrl)
+							.then(response => response.arrayBuffer())
+							.then(buffer => {
+								const format = tile.getFormat();
+								const features = format.readFeatures(new Uint8Array(buffer), {
+									extent: extent,
+									featureProjection: projection
+								});
+								tile.setFeatures(features);
+								tile.setProjection(projection);
+								tile.setExtent(extent);
+							})
+							.catch(error => {
+								console.error('Error loading tile:', error);
+								tile.setFeatures([]);
+							});
+					}.bind(this));
 				},
 				attributions: [
 					'<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>',
@@ -127,16 +152,32 @@ var config = {
 				]
 			}),
 			style: (function() {
+				const styleCache = {};
 				return function(feature, resolution) {
-					if (window.vectorTileStyle) {
-						try {
-							return window.vectorTileStyle(feature, resolution, window.maptilerStyleConfig || {});
-						} catch (e) {
-							console.error('Error in vectorTileStyle:', e);
-							return [];
+					const layer = feature.get('layer');
+					const type = feature.getGeometry().getType();
+					const key = `${layer}-${type}`;
+					
+					if (!styleCache[key]) {
+						let style;
+						if (window.vectorTileStyle) {
+							try {
+								style = window.vectorTileStyle(feature, resolution, window.maptilerStyleConfig || {});
+							} catch (e) {
+								console.error('Error in vectorTileStyle:', e);
+							}
 						}
+						styleCache[key] = style || new ol.style.Style({
+							fill: new ol.style.Fill({
+								color: 'rgba(200, 200, 200, 0.4)'
+							}),
+							stroke: new ol.style.Stroke({
+								color: '#3399CC',
+								width: 1.25
+							})
+						});
 					}
-					return [];
+					return styleCache[key];
 				};
 			})()
 		}),
