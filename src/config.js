@@ -284,7 +284,7 @@ var config = {
 			visible: false
 		}),
 
-		// Vector Positron Style
+		// Vector Positron Style - Pre-loaded style
 		new ol.layer.VectorTile({
 			title: 'Vector Positron',
 			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
@@ -294,25 +294,54 @@ var config = {
 				attributions: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Style: <a href="https://github.com/yopaseopor/osmtsm2">Positron</a>',
 				maxZoom: 14
 			}),
-			style: function(feature, resolution) {
+			style: (function() {
+				// Create a simple style function as a fallback
+				const fallbackStyle = new ol.style.Style({
+					fill: new ol.style.Fill({
+						color: '#f8f9fa'
+					}),
+					stroke: new ol.style.Stroke({
+						color: '#dee2e6',
+						width: 1
+					})
+				});
+
 				// Load the style asynchronously
+				let styleFunction = function() { return [fallbackStyle]; };
+
+				// Load the style in the background
 				fetch('https://raw.githubusercontent.com/yopaseopor/osmtsm2/main/src/assets/styles/stylepositron.json')
 					.then(response => response.json())
 					.then(styleJson => {
-						// Apply the style to the layer
-						const styleFunc = olms.stylefunction(
-							feature,
-							styleJson,
-							'openmaptiles',
-							{resolutions: [156543.03390625, 78271.516953125, 39135.7584765625, 19567.879238281254, 9783.939619140627, 4891.9698095703135, 2445.9849047851562, 1222.9924523925781, 611.4962261962891, 305.74811309814453, 152.87405654907226, 76.43702827453613, 38.218514137268066, 19.109257068634033, 9.554628534317017, 4.777314267158508, 2.388657133579254, 1.194328566789627, 0.5971642833948135, 0.2985821416974068, 0.1492910708487034, 0.0746455354243517]}
-						);
-						return styleFunc(feature, resolution);
+						// Create a temporary layer to apply the style
+						const tempLayer = new ol.layer.VectorTile({
+							source: new ol.source.VectorTile({
+								format: new ol.format.MVT(),
+								url: ''
+							})
+						});
+
+						// Apply the style using ol-mapbox-style
+						olms.applyStyle(tempLayer, styleJson, 'openmaptiles')
+							.then(() => {
+								// Get the style function from the temporary layer
+								if (tempLayer.getStyle()) {
+									styleFunction = tempLayer.getStyle();
+								}
+							})
+							.catch(error => {
+								console.error('Error applying style:', error);
+							});
 					})
 					.catch(error => {
-						console.error('Error loading Positron style:', error);
-						return [];
+						console.error('Error loading style:', error);
 					});
-			},
+
+				// Return the style function
+				return function(feature, resolution) {
+					return styleFunction(feature, resolution) || [fallbackStyle];
+				};
+			})(),
 			visible: false
 		})
 	],
