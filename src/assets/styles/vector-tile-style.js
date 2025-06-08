@@ -714,19 +714,67 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
             
             // Get icon name based on class and subclass
             let iconName = 'marker';
-            // Create icon mapping with bracket notation to avoid linter issues
-            const iconMapping = {};
-            // Food and drink
-            iconMapping.cafe = 'cafe';
-            iconMapping.fast_food = 'fast-food';
-            iconMapping.restaurant = 'restaurant';
-            iconMapping.bar = 'bar';
-            iconMapping.pub = 'beer';
-            iconMapping.ice_cream = 'ice-cream';
-            iconMapping.food_court = 'restaurant';
-            iconMapping.biergarten = 'beer';
             
-            // Restaurant types
+            // Create icon mapping with all POI types
+            const iconMapping = {
+                // Food and drink
+                cafe: 'cafe',
+                fast_food: 'fast-food',
+                restaurant: 'restaurant',
+                bar: 'bar',
+                pub: 'beer',
+                ice_cream: 'ice-cream',
+                food_court: 'restaurant',
+                biergarten: 'beer',
+                // Add other POI mappings here
+                bank: 'bank',
+                'atm': 'atm',
+                'hospital': 'hospital',
+                'pharmacy': 'pharmacy',
+                'dentist': 'dentist',
+                'doctors': 'doctors',
+                'veterinary': 'veterinary',
+                'post_office': 'post',
+                'library': 'library',
+                'townhall': 'town-hall',
+                'courthouse': 'courthouse',
+                'embassy': 'embassy',
+                'police': 'police',
+                'fire_station': 'fire-station',
+                'prison': 'prison',
+                'recycling': 'recycling',
+                'waste_basket': 'waste-basket',
+                'waste_disposal': 'waste-disposal',
+                'car_wash': 'car-wash',
+                'car_rental': 'car-rental',
+                'bicycle_rental': 'bicycle-rental',
+                'taxi': 'taxi',
+                'parking': 'parking',
+                'charging_station': 'charging-station',
+                'cinema': 'cinema',
+                'theatre': 'theatre',
+                'nightclub': 'nightclub',
+                'casino': 'casino',
+                'arts_centre': 'art-gallery',
+                'gallery': 'art-gallery',
+                'museum': 'museum',
+                'information': 'information',
+                'toilets': 'toilets',
+                'fountain': 'fountain',
+                'hunting_stand': 'hunting-stand',
+                'telephone': 'telephone',
+                'clock': 'clock',
+                'emergency_phone': 'emergency-phone',
+                'fire_extinguisher': 'fire-extinguisher',
+                'defibrillator': 'defibrillator',
+                'drinking_water': 'drinking-water',
+                'water_point': 'water-point',
+                shower: 'shower',
+                bench: 'bench',
+                post_box: 'post-box'
+            };
+
+            // Add restaurant types to icon mapping
             [
                 'chinese', 'indian', 'italian', 'japanese', 'mexican', 'pizza', 'thai',
                 'vietnamese', 'sushi', 'barbecue', 'steak_house', 'seafood', 'breakfast',
@@ -736,10 +784,10 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
                 'caribbean', 'english', 'ethiopian', 'fish_and_chips', 'indonesian',
                 'international', 'korean', 'mediterranean', 'middle_eastern', 'persian',
                 'portuguese', 'russian', 'scandinavian', 'tapas'
-            ].forEach(type => {
+            ].forEach(function(type) {
                 iconMapping[`restaurant_${type}`] = 'restaurant';
             });
-            
+
             // Set icon name based on class and subclass
             if (poiClass && iconMapping[poiClass]) {
                 iconName = iconMapping[poiClass];
@@ -841,172 +889,113 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
             let boundaryStyle = {
                 stroke: new ol.style.Stroke({
                     color: maritime ? '#4a80f5' : '#777777',
-                    width: 0.8,
-                    lineDash: maritime ? [4, 2] : [5, 3]
+                    width: 0.8
                 }),
-                zIndex: 1
+                zIndex: 10
             };
-            
-            // National boundaries (admin_level 2)
-            if (adminLevel <= 2) {
-                boundaryStyle.stroke.color = maritime ? '#4a80f5' : (disputed ? '#ff0000' : '#000000');
-                boundaryStyle.stroke.width = disputed ? 2.0 : 1.5;
-                boundaryStyle.stroke.lineDash = maritime ? [4, 2] : (disputed ? [8, 4] : [6, 3]);
-                boundaryStyle.zIndex = 3;
-            } 
-            // State/regional boundaries (admin_level 3-4)
-            else if (adminLevel <= 4) {
-                boundaryStyle.stroke.color = maritime ? '#4a80f5' : (disputed ? '#ff0000' : '#666666');
-                boundaryStyle.stroke.width = disputed ? 1.5 : 1.0;
-                boundaryStyle.stroke.lineDash = maritime ? [4, 2] : (disputed ? [6, 3] : [5, 3]);
-                boundaryStyle.zIndex = 2;
+
+            // Adjust style based on admin level and type
+            if (adminLevel > 0) {
+                boundaryStyle.stroke.width = adminLevel / 2;
+                boundaryStyle.stroke.lineDash = disputed ? [4, 2] : [];
             }
-            // Protected areas and other boundaries
-            else if (boundaryType === 'protected_area' || boundaryType === 'national_park') {
-                boundaryStyle.stroke.color = '#2d5f2d'; // Dark green
-                boundaryStyle.stroke.width = 1.0;
-                boundaryStyle.stroke.lineDash = [3, 3];
-                boundaryStyle.zIndex = 1;
-            }
-            
-            // Only show boundaries at appropriate zoom levels
-            const showBoundary = resolution < (adminLevel <= 2 ? 100 : adminLevel <= 4 ? 50 : 10);
-            if (showBoundary) {
-                styles.push(new ol.style.Style(boundaryStyle));
-                
-                // Add label for named boundaries (countries, states, etc.)
-                if (name && (adminLevel <= 4 || boundaryType === 'protected_area')) {
-                    const isNational = adminLevel <= 2;
-                    const textColor = boundaryType === 'protected_area' ? colors.boundary.protected_area : '#666666';
-                    
-                    styles.push(new ol.style.Style({
-                        text: createTextStyle({
-                            text: name,
-                            font: {
-                                size: isNational ? 11 : 10,
-                                weight: isNational ? 'bold' : 'normal'
-                            },
-                            color: textColor,
-                            haloColor: 'rgba(255, 255, 255, 0.7)',
-                            haloWidth: isNational ? 3 : 2,
-                            placement: 'line',
-                            maxAngle: 0.7,
-                            maxResolution: isNational ? 20 : 10,
-                            textBaseline: 'middle',
-                            textAlign: 'center'
-                        }, config)
-                    }));
-                }
-            }
-        
-        // Services
-        'bank': 'bank',
-        'atm': 'atm',
-        'hospital': 'hospital',
-        'pharmacy': 'pharmacy',
-        'dentist': 'dentist',
-        'doctors': 'doctors',
-        'veterinary': 'veterinary',
-        'post_office': 'post',
-        'library': 'library',
-        'townhall': 'town-hall',
-        'courthouse': 'courthouse',
-        'embassy': 'embassy',
-        'police': 'police',
-        'fire_station': 'fire-station',
-        'prison': 'prison',
-        'recycling': 'recycling',
-        'waste_basket': 'waste-basket',
-        'waste_disposal': 'waste-disposal',
-        'car_wash': 'car-wash',
-        'car_rental': 'car-rental',
-        'bicycle_rental': 'bicycle-rental',
-        'taxi': 'taxi',
-        'parking': 'parking',
-        'charging_station': 'charging-station',
-        'cinema': 'cinema',
-        'theatre': 'theatre',
-        'nightclub': 'nightclub',
-        'casino': 'casino',
-        'arts_centre': 'art-gallery',
-        'gallery': 'art-gallery',
-        'museum': 'museum',
-        'information': 'information',
-        'toilets': 'toilets',
-        'fountain': 'fountain',
-        'hunting_stand': 'hunting-stand',
-        'telephone': 'telephone',
-        'clock': 'clock',
-        'emergency_phone': 'emergency-phone',
-        'fire_extinguisher': 'fire-extinguisher',
-        'defibrillator': 'defibrillator',
-        'drinking_water': 'drinking-water',
-        'water_point': 'water-point',
-        'shower': 'shower',
-        'bench': 'bench',
-        'post_box': 'post-box'
-    };
-    
-    iconName = iconMapping[poiSubclass] || iconMapping[poiClass] || 'marker';
-    
-    // Add icon style
-    const iconStyle = getIconStyle(iconName, config, {
-        size: 1,
-        color: poiColor,
-        opacity: 0.9
-    });
-    
-    if (iconStyle) {
-        styles.push(new ol.style.Style({
-            image: iconStyle,
-            zIndex: 1000 + poiRank
-        }));
-    } else {
-        // Fallback to circle if no icon available
-        styles.push(new ol.style.Style({
-            image: new ol.style.Circle({
-                radius: 5,
-                fill: new ol.style.Fill({
-                    color: poiColor
-                }),
-                stroke: new ol.style.Stroke({
-                    color: '#fff',
-                    width: 1
-                })
+
+            styles.push(new ol.style.Style(boundaryStyle));
+            return styles;
+        }
+
+        // POI icon mapping
+        const iconMapping = {
+            // Default icon names based on OpenMapTiles schema
+            'restaurant': 'restaurant',
+            'cafe': 'cafe',
+            'bar': 'bar',
+            'pub': 'beer',
+            'fast_food': 'fast-food',
+            'food_court': 'fast-food',
+            'biergarten': 'beer',
+            'school': 'school',
+            'university': 'college',
+            'college': 'college',
+            'kindergarten': 'kindergarten',
+            'library': 'library',
+            'hospital': 'hospital',
+            'pharmacy': 'pharmacy',
+            'doctors': 'doctor',
+            'dentist': 'dentist',
+            'veterinary': 'veterinary',
+            'bank': 'bank',
+            'atm': 'atm',
+            'police': 'police',
+            'fire_station': 'fire-station',
+            'post_office': 'post',
+            'courthouse': 'courthouse',
+            'embassy': 'embassy',
+            'townhall': 'town-hall',
+            'prison': 'prison',
+            'theatre': 'theatre',
+            'cinema': 'cinema',
+            'nightclub': 'night-club',
+            'arts_centre': 'art-gallery',
+            'casino': 'casino',
+            'music': 'music',
+            'stadium': 'stadium',
+            'art_gallery': 'art-gallery',
+            'clothing_store': 'clothing-store',
+            'swimming': 'swimming',
+            'castle': 'castle',
+            'fuel': 'fuel',
+            'emergency_phone': 'emergency-phone',
+            'fire_extinguisher': 'fire-extinguisher',
+            'defibrillator': 'defibrillator',
+            'drinking_water': 'drinking-water',
+            'water_point': 'water-point'
+        };
+
+        // Default style (fallback) - with label if available
+        const styles = [new ol.style.Style({
+            fill: new ol.style.Fill({
+                color: 'rgba(200, 200, 200, 0.3)'
             }),
-            zIndex: 1000 + poiRank
-        }));
-        
-        // Add label for POI if name exists
-        if (poiName) {
+            stroke: new ol.style.Stroke({
+                color: 'rgba(100, 100, 100, 0.5)',
+                width: 0.5
+            })
+        })];
+
+        // Add label for any feature with a name or ref
+        const label = getFeatureLabel(feature);
+        if (label) {
             styles.push(new ol.style.Style({
                 text: createTextStyle({
-                    text: poiName,
+                    text: label,
                     font: {
-                        size: 10,
-                        weight: 'bold'
+                        size: 9,
+                        weight: 'normal'
                     },
-                    color: '#000',
+                    color: '#333',
                     haloColor: 'rgba(255, 255, 255, 0.7)',
                     haloWidth: 2,
                     offsetY: 10,
                     textBaseline: 'middle',
                     textAlign: 'center',
-                    maxResolution: 5, // Only show at higher zoom levels
-                    padding: [2, 4, 2, 4],
-                    backgroundFill: {
-                        color: 'rgba(255, 255, 255, 0.7)'
-                    },
-                    backgroundStroke: {
-                        color: 'rgba(200, 200, 200, 0.5)',
-                        width: 1
-                    }
-                }, config),
-                zIndex: 1001 + poiRank // Slightly higher than icon
+                    maxResolution: 10
+                }, config)
             }));
         }
         
         return styles;
+    } catch (error) {
+        console.error('Error in vector tile style function:', error);
+        return [new ol.style.Style({
+            fill: new ol.style.Fill({
+                color: 'rgba(200, 200, 200, 0.3)'
+            }),
+            stroke: new ol.style.Stroke({
+                color: 'rgba(255, 0, 0, 0.5)',
+                width: 1
+            })
+        })];
     }
 
     // Default style (fallback) - with label if available
