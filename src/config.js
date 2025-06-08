@@ -284,19 +284,18 @@ var config = {
 			visible: false
 		}),
 
-		// Vector Positron Style - Pre-loaded style
+		// Vector Positron Style - Simple implementation
 		new ol.layer.VectorTile({
 			title: 'Vector Positron',
 			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
 			source: new ol.source.VectorTile({
 				format: new ol.format.MVT(),
 				url: 'https://tiles.openfreemap.org/planet/{z}/{x}/{y}.pbf',
-				attributions: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Style: <a href="https://github.com/yopaseopor/osmtsm2">Positron</a>',
+				attributions: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 				maxZoom: 14
 			}),
-			style: (function() {
-				// Create a simple style function as a fallback
-				const fallbackStyle = new ol.style.Style({
+			style: function(feature) {
+				const style = new ol.style.Style({
 					fill: new ol.style.Fill({
 						color: '#f8f9fa'
 					}),
@@ -305,43 +304,136 @@ var config = {
 						width: 1
 					})
 				});
+				return [style];
+			},
+			visible: false
+		}),
+		new ol.layer.Tile({
+			title: 'ES_IGN - PNOA - Actual',
+			iconSrc: imgSrc + 'icones_web/logo_ign.png',
+			source: new ol.source.TileWMS({
+				attributions: 'Map data &copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap Contributors</a>,Tiles &copy; IGN &mdash; Source: IGN',
+				url: 'http://www.ign.es/wms-inspire/pnoa-ma?',
+				params: {'LAYERS': 'OI.OrthoimageCoverage', 'VERSION': '1.3.0'}
+			}),
+			visible: false
+		}),
+		
+				new ol.layer.Tile({
+			title: 'ES_CAT_ICGC - Actual',
+			iconSrc: imgSrc + 'icones_web/logo_icgc.png',
+			source: new ol.source.TileWMS({
+				attributions: 'Map data &copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap Contributors</a>,Tiles &copy; ICGC &mdash; Source: ICGC',
+				url: 'https://geoserveis.icgc.cat/servei/catalunya/orto-territorial/wms?',
+				params: {'LAYERS': 'ortofoto_color_vigent', 'VERSION': '1.3.0'}
+			}),
+			visible: false
 
-				// Load the style asynchronously
-				let styleFunction = function() { return [fallbackStyle]; };
+		}),
+				new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
+			title: 'Vector Tile4',
+			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
+			source: new ol.source.VectorTile({
+        tilePixelRatio: 1, // oversampling when > 1
+        tileGrid: ol.tilegrid.createXYZ({maxZoom: 19}),
+        format: new ol.format.MVT(),
+		attributions: '&copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>',
+        url: 'https://{a-c}.tile.custom-osm-tiles.org/{z}/{x}/{y}.mvt',
+				crossOrigin: 'anonymous'
+      }),
+			visible: false
+		}),
+		
+		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
+			title: 'Vector Tile3',
+			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
+			source: new ol.source.VectorTile({
+        tilePixelRatio: 1, // oversampling when > 1
+        tileGrid: ol.tilegrid.createXYZ({maxZoom: 19}),
+        format: new ol.format.MVT(),
+		crossOrigin: 'anonymous',
+		attributions: '&copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>',
+        url: 'https://vector.openstreetmap.org/shortbread_v1/{z}/{x}/{y}.mvt'
+      }),
+			visible: false
+		}),
+		
+		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
+			title: 'Vector Tile',
+			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
+			source: new ol.source.VectorTile({
+        tilePixelRatio: 1, // oversampling when > 1
+        tileGrid: ol.tilegrid.createXYZ({maxZoom: 19}),
+        format: new ol.format.TopoJSON(),
+        url: 'https://basemaps.arcgis.com/arcgis/rest/services/World_Basemap_v2/VectorTileServer/tile/{z}/{y}/{x}.pbf',
+		crossOrigin: 'anonymous'
+      }),
+			visible: false
+		}),
+		
+		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
+			title: 'Vector Tilekiln2',
+			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
+			source: new ol.source.TileJSON({
+        tileSize: 512,
+        crossOrigin: 'anonymous',
+        url: 'https://pnorman.github.io/tilekiln-shortbread-demo/colorful.json'
+      }),
+			visible: false
+		}),
+		
+		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
+			title: 'Vector OSM',
+			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
+			source: new ol.source.TileJSON({
+        tileSize: 512,
+        crossOrigin: 'anonymous',
+        url: 'https://vector.openstreetmap.org/shortbread_v1/tilejson.json'
+      }),
+			visible: false
+		}),
 
-				// Load the style in the background
-				fetch('https://raw.githubusercontent.com/yopaseopor/osmtsm2/main/src/assets/styles/stylepositron.json')
-					.then(response => response.json())
-					.then(styleJson => {
-						// Create a temporary layer to apply the style
-						const tempLayer = new ol.layer.VectorTile({
-							source: new ol.source.VectorTile({
-								format: new ol.format.MVT(),
-								url: ''
-							})
-						});
+		new ol.layer.Tile({
+			title: 'Google Maps',
+			iconSrc: imgSrc + 'icones_web/gmaps_logo_layer.png',
+			source: new ol.source.XYZ({
+				attributions: 'Map data &copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap Contributors</a>,&copy; <a href="https://www.google.com/maps/" target="_blank">Google Maps</a>',
+				url: 'https://mt{0-3}.google.com/vt/lyrs=m&z={z}&x={x}&y={y}'
+			}),
+			visible: false
+		}),
+		new ol.layer.Tile({// Google Sat
+			title: 'Google Sat',
+			iconSrc: imgSrc + 'icones_web/gmaps_logo_layer.png',
+			source: new ol.source.XYZ({
+				attributions: 'Map data &copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap Contributors</a>,&copy; <a href="https://www.google.com/maps/" target="_blank">Google Maps</a>',
+				url: 'https://mt{0-3}.google.com/vt/lyrs=s&z={z}&x={x}&y={y}'
+			}),
+			visible: false
+		}),
 
-						// Apply the style using ol-mapbox-style
-						olms.applyStyle(tempLayer, styleJson, 'openmaptiles')
-							.then(() => {
-								// Get the style function from the temporary layer
-								if (tempLayer.getStyle()) {
-									styleFunction = tempLayer.getStyle();
-								}
-							})
-							.catch(error => {
-								console.error('Error applying style:', error);
-							});
+		// Vector Positron Style - Simple implementation
+		new ol.layer.VectorTile({
+			title: 'Vector Positron',
+			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
+			source: new ol.source.VectorTile({
+				format: new ol.format.MVT(),
+				url: 'https://tiles.openfreemap.org/planet/{z}/{x}/{y}.pbf',
+				attributions: '  <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+				maxZoom: 14
+			}),
+			style: function(feature) {
+				const style = new ol.style.Style({
+					fill: new ol.style.Fill({
+						color: '#f8f9fa'
+					}),
+					stroke: new ol.style.Stroke({
+						color: '#dee2e6',
+						width: 1
 					})
-					.catch(error => {
-						console.error('Error loading style:', error);
-					});
-
-				// Return the style function
-				return function(feature, resolution) {
-					return styleFunction(feature, resolution) || [fallbackStyle];
-				};
-			})(),
+				});
+				return [style];
+			},
 			visible: false
 		})
 	],
