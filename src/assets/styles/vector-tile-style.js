@@ -560,76 +560,76 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
         
     } catch (error) {
         console.error('Error styling feature:', error, feature);
-        // POI (Point of Interest) styling
+        // POI (Point of Interest) styling - only process if feature has a name
+        const name = getFeatureLabel(feature, '{name}');
+        if (!name) return [];
+        
         const poiTypes = ['amenity', 'shop', 'tourism', 'office', 'building'];
         const poiType = poiTypes.find(type => feature.get(type));
+        if (!poiType) return [];
         
-        if (poiType) {
-            const poiColor = colors.poi[poiType] || colors.poi.default;
-            
-            const styles = [];
-            
-            // Get icon name based on POI type
-            let iconName = 'marker';
-            if (feature.get('amenity') === 'cafe') iconName = 'cafe';
-            else if (feature.get('amenity') === 'restaurant') iconName = 'restaurant';
-            else if (feature.get('shop')) iconName = 'shop';
-            else if (feature.get('tourism') === 'hotel') iconName = 'lodging';
-            else if (feature.get('office')) iconName = 'commercial';
-            
-            // Add icon style if available
-            const iconStyle = getIconStyle(iconName, config, {
-                size: 1,
-                color: poiColor,
-                opacity: 0.9
-            });
-            
-            if (iconStyle) {
-                styles.push(new ol.style.Style({
-                    image: iconStyle
-                }));
-            } else {
-                // Fallback to circle if no icon available
-                styles.push(new ol.style.Style({
-                    image: new ol.style.Circle({
-                        radius: 5,
-                        fill: new ol.style.Fill({
-                            color: poiColor
-                        }),
-                        stroke: new ol.style.Stroke({
-                            color: '#fff',
-                            width: 1
-                        })
-                    })
-                }));
+        const poiColor = colors.poi[poiType] || colors.poi.default;
+        const styles = [];
+        
+        // Get icon based on POI type
+        const iconMap = {
+            'cafe': 'cafe',
+            'restaurant': 'restaurant',
+            'hotel': 'lodging',
+            'shop': 'shop',
+            'office': 'commercial'
+        };
+        
+        let iconName = 'marker';
+        for (const [type, icon] of Object.entries(iconMap)) {
+            if (feature.get(type) || (type === 'hotel' && feature.get('tourism') === 'hotel')) {
+                iconName = icon;
+                break;
             }
-            
-            // Add label for POI - only show at zoom level 17 and above
-            // Convert resolution to zoom level (approximate)
-            const zoom = Math.round(Math.log2(156543.03390625 / resolution));
-            if (zoom >= 17) {
-                const label = getFeatureLabel(feature, '{name}');
-                if (label) {
-                    styles.push(new ol.style.Style({
-                        text: createTextStyle({
-                            text: label,
-                            font: {
-                                size: 10,
-                                weight: 'normal'
-                            },
-                            color: '#000',
-                            haloColor: '#fff',
-                            haloWidth: 2,
-                            offsetY: 12,
-                            textBaseline: 'top',
-                            textAlign: 'center'
-                        }, config)
-                    }));
-                }
-            }
-            
-            return styles;
         }
+        
+        // Add icon style
+        const iconStyle = getIconStyle(iconName, config, {
+            size: 1,
+            color: poiColor,
+            opacity: 0.9
+        });
+        
+        if (iconStyle) {
+            styles.push(new ol.style.Style({
+                image: iconStyle,
+                // Add declutter to prevent overlapping icons
+                declutter: true
+            }));
+        }
+        
+        // Add label only at zoom level 17+ with decluttering
+        const zoom = Math.round(Math.log2(156543.03390625 / resolution));
+        if (zoom >= 17) {
+            styles.push(new ol.style.Style({
+                text: createTextStyle({
+                    text: name,
+                    font: {
+                        size: 10,
+                        weight: 'normal'
+                    },
+                    color: '#000',
+                    haloColor: '#fff',
+                    haloWidth: 2,
+                    offsetY: 12,
+                    textBaseline: 'top',
+                    textAlign: 'center',
+                    // Enable decluttering for labels
+                    declutter: true,
+                    // Add a small buffer to prevent label overlap
+                    overflow: false,
+                    // Only show if there's enough space
+                    maxResolution: 0.5
+                }, config)
+            }));
+        }
+        
+        return styles;
     }
 
     // Default style (fallback) - with label if available
