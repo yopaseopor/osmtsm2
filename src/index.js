@@ -413,6 +413,12 @@ $(function () {
 		view: view
 	});
 
+	// Initialize OpenFreeMap layer
+	const openFreeMapLayer = config.layers.find(layer => layer.get('title') === 'OpenFreeMap (Liberty)');
+	if (openFreeMapLayer && window.olms) {
+		olms.apply(openFreeMapLayer, 'https://tiles.openfreemap.org/styles/liberty');
+	}
+
 	// Initialize Nominatim search
 	initNominatimSearch(map);
 

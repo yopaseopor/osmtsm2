@@ -139,47 +139,11 @@ var config = {
 		}),
 
 		// OpenFreeMap Vector Tiles (Liberty style)
-		new ol.layer.VectorTile({
+		new ol.layer.Group({
 			title: 'OpenFreeMap (Liberty)',
 			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
 			visible: false,
-			opacity: 1.0,
-			source: new ol.source.VectorTile({
-				projection: 'EPSG:3857',
-				format: new ol.format.MVT(),
-				url: 'https://tiles.openfreemap.org/data/v3/{z}/{x}/{y}.pbf',
-				tileGrid: ol.tilegrid.createXYZ({
-					minZoom: 0,
-					maxZoom: 20
-				}),
-				attributions: [
-					'<a href="https://openfreemap.org/" target="_blank">OpenFreeMap</a>',
-					'<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>'
-				]
-			}),
-			style: (function() {
-				// Use ol-mapbox-style for OpenFreeMap
-				const style = new ol.style.Style({
-					fill: new ol.style.Fill({
-						color: '#f8f4f0'
-					})
-				});
-
-				// Load the style asynchronously
-				const stylePromise = fetch('https://tiles.openfreemap.org/styles/liberty')
-					.then(response => response.json())
-					.then(styleJson => {
-						return olms.applyStyle(style, styleJson, 'openmaptiles');
-					})
-					.catch(error => {
-						console.error('Error loading OpenFreeMap style:', error);
-						return style;
-					});
-
-				return function(feature, resolution) {
-					return stylePromise.then(style => [style]);
-				};
-			})()
+			opacity: 1.0
 		}),
 
 		new ol.layer.Tile({
