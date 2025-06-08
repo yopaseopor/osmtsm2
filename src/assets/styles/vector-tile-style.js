@@ -823,20 +823,24 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
                                     weight: 'bold'
                                 },
                                 color: '#000',
-                                haloColor: 'rgba(255, 255, 255, 0.7)',
+                                haloColor: 'rgba(255, 255, 255, 0.8)',
                                 haloWidth: 2,
-                                offsetY: 10,
-                                textBaseline: 'middle',
+                                offsetY: 16, // Increased offset to place label below icon
+                                offsetX: 0,
+                                textBaseline: 'hanging', // Align to top of text
                                 textAlign: 'center',
                                 maxResolution: 5, // Only show at higher zoom levels
-                                padding: [2, 4, 2, 4],
+                                padding: [3, 6, 3, 6], // Slightly larger padding
                                 backgroundFill: {
-                                    color: 'rgba(255, 255, 255, 0.7)'
+                                    color: 'rgba(255, 255, 255, 0.9)'
                                 },
                                 backgroundStroke: {
-                                    color: 'rgba(200, 200, 200, 0.5)',
+                                    color: 'rgba(200, 200, 200, 0.7)',
                                     width: 1
-                                }
+                                },
+                                placement: 'point',
+                                maxAngle: 0, // Keep text horizontal
+                                overflow: true
                             }, config),
                             zIndex: 1001 + poiRank // Slightly higher than icon
                         }));
