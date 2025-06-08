@@ -611,25 +611,28 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
                 }));
             }
             
-            // Add label for POI
-            const label = getFeatureLabel(feature, '{name}');
-            if (label) {
-                styles.push(new ol.style.Style({
-                    text: createTextStyle({
-                        text: label,
-                        font: {
-                            size: 10,
-                            weight: 'normal'
-                        },
-                        color: '#000',
-                        haloColor: '#fff',
-                        haloWidth: 2,
-                        offsetY: 12,
-                        textBaseline: 'top',
-                        textAlign: 'center',
-                        maxResolution: 0.5 // Only show at zoom level 17 and above
-                    }, config)
-                }));
+            // Add label for POI - only show at zoom level 17 and above
+            // Convert resolution to zoom level (approximate)
+            const zoom = Math.round(Math.log2(156543.03390625 / resolution));
+            if (zoom >= 17) {
+                const label = getFeatureLabel(feature, '{name}');
+                if (label) {
+                    styles.push(new ol.style.Style({
+                        text: createTextStyle({
+                            text: label,
+                            font: {
+                                size: 10,
+                                weight: 'normal'
+                            },
+                            color: '#000',
+                            haloColor: '#fff',
+                            haloWidth: 2,
+                            offsetY: 12,
+                            textBaseline: 'top',
+                            textAlign: 'center'
+                        }, config)
+                    }));
+                }
             }
             
             return styles;
