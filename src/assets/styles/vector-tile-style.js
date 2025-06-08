@@ -157,9 +157,8 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
             default: '#7f8c8d'
         },
         // Base colors
-        water: 'rgba(173, 216, 230, 0.9)',  // light blue
-        waterIntermittent: 'rgba(173, 216, 230, 0.6)',  // light blue with lower opacity
-        waterTransport: 'rgba(173, 216, 230, 0.7)',  // light blue for transport
+        water: 'rgba(170, 210, 255, 0.9)',
+        waterIntermittent: 'rgba(170, 210, 255, 0.6)',
         residential: 'rgba(240, 238, 235, 0.7)',
         park: 'rgba(210, 250, 210, 0.7)',
         forest: 'rgba(190, 220, 190, 0.8)',
@@ -168,20 +167,16 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
         
         // Road colors and widths
         highway: {
-            motorway: { color: '#00008b', width: 4.0 },  // dark blue
-            trunk: { color: '#8b0000', width: 3.5 },      // dark red
-            primary: { color: '#ff0000', width: 3.0 },    // red
-            secondary: { color: '#ffa500', width: 2.5 },   // orange
-            tertiary: { color: '#ffd700', width: 2.0 },    // yellow-orange
-            unclassified: { color: '#ffff00', width: 1.8 }, // yellow
-            residential: { color: '#000000', width: 1.5 }, // black
-            living_street: { color: '#a9a9a9', width: 1.2 }, // dark grey
-            pedestrian: { color: '#d3d3d3', width: 1.0 },  // light grey
-            sidewalk: { color: '#f0f0f0', width: 0.8 },    // very light grey
-            service: { color: '#ffffff', width: 0.8 },      // white
-            track: { color: '#8b4513', width: 0.6 },       // brown
-            path: { color: '#d2b48c', width: 0.5 },        // tan (will be dotted)
-            railway: { color: '#000000', width: 1.0 }       // black (will be dotted white)
+            motorway: { color: '#00008b', width: 3.0, textColor: '#0000ff' },  // dark blue
+            trunk: { color: '#8b0000', width: 2.8, textColor: '#8b0000' },      // dark red
+            primary: { color: '#ff0000', width: 2.5, textColor: '#ff0000' },    // red
+            secondary: { color: '#006400', width: 2.0, textColor: '#006400' },  // dark green
+            tertiary: { color: '#ffa500', width: 1.8, textColor: '#ff8c00' },   // orange
+            unclassified: { color: '#ff00ff', width: 1.5, textColor: '#ff00ff' }, // magenta
+            residential: { color: '#666666', width: 1.2, textColor: '#666666' },
+            service: { color: '#999999', width: 0.8, textColor: '#999999' },
+            path: { color: '#aaaaaa', width: 0.6, textColor: '#666666' },
+            pedestrian: { color: '#cccccc', width: 0.8, textColor: '#666666' }
         },
         
         // Text styles
@@ -235,24 +230,24 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
                 })
             })];
             
-            // Add stroke for intermittent water with slashed pattern
+            // Add stroke for intermittent water
             if (isIntermittent) {
                 styles[0].setStroke(new ol.style.Stroke({
                     color: colors.water,
                     width: 1,
-                    lineDash: [8, 4, 1, 4]  // Slashed pattern
+                    lineDash: [4, 4]
                 }));
             }
             
-            // Water labels - only show at appropriate zoom levels
+            // Add water label if name exists
             const name = getFeatureLabel(feature, '{name}');
-            if (layer === 'water' && name && resolution < 20) {
+            if (name) {
                 styles.push(new ol.style.Style({
                     text: createTextStyle({
                         text: name,
                         font: {
                             style: 'italic',
-                            size: 10,
+                            size: 11,
                             weight: 'normal'
                         },
                         color: 'rgba(0, 0, 128, 0.8)',
@@ -260,8 +255,7 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
                         haloWidth: 2,
                         offsetY: -10,
                         textBaseline: 'bottom',
-                        textAlign: 'center',
-                        maxResolution: 10  // Don't show labels when too zoomed out
+                        textAlign: 'center'
                     }, config)
                 }));
             }
@@ -429,48 +423,15 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
                 }));
             }
             
-            // Handle different road types with special styling
-            let lineDash = null;
-            let strokeColor = roadStyle.color;
-            let strokeWidth = roadStyle.width;
-            
-            // Special styling for different road types
-            if (roadType === 'track') {
-                const tracktype = parseInt(feature.get('tracktype') || '1', 10);
-                const dashLength = Math.max(1, Math.min(5, tracktype));
-                lineDash = [dashLength, 2];
-            } else if (roadType === 'path') {
-                lineDash = [1, 2];  // Dotted pattern for paths
-            } else if (roadType === 'railway') {
-                strokeColor = '#ffffff';  // White dashes on black
-                strokeWidth = 1.5;
-                lineDash = [2, 2];
-            }
-            
-            // For railways, add a black dashed line first
-            if (roadType === 'railway') {
-                styles.push(new ol.style.Style({
-                    stroke: new ol.style.Stroke({
-                        color: '#000000',
-                        width: 2.5,
-                        lineCap: 'round',
-                        lineJoin: 'round',
-                        lineDash: [2, 2]
-                    }),
-                    zIndex: 1
-                }));
-            }
-            
-            // Add the main road/railway line
+            // Main road fill
             styles.push(new ol.style.Style({
                 stroke: new ol.style.Stroke({
-                    color: strokeColor,
-                    width: strokeWidth,
+                    color: roadStyle.color,
+                    width: roadStyle.width,
                     lineCap: 'round',
-                    lineJoin: 'round',
-                    lineDash: lineDash
+                    lineJoin: 'round'
                 }),
-                zIndex: roadType === 'railway' ? 2 : 2
+                zIndex: 2
             }));
             
             // For bridges, make the line slightly wider and lighter
@@ -479,25 +440,43 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
                 styles[styles.length - 1].getStroke().setColor(adjustColor(roadStyle.color, 15));
             }
             
-            // Add road labels only for major roads and at appropriate zoom levels
+            // Add road labels for named or numbered roads
             const label = getFeatureLabel(feature, '{name} {ref}');
-            if (label && resolution < 20) {
+            if (label) {
                 const isMajorRoad = ['motorway', 'trunk', 'primary', 'secondary'].includes(roadType);
-                if (isMajorRoad) {
+                const fontSize = isMajorRoad ? 10 : 9;
+                const textColor = isMajorRoad ? '#ffffff' : roadStyle.textColor || '#000000';
+                const haloColor = isMajorRoad ? 'rgba(0, 0, 0, 0.7)' : 'rgba(255, 255, 255, 0.8)';
+                
+                // Only show labels at appropriate zoom levels
+                // For major roads, only show labels at higher zoom levels (lower resolution values)
+                // For minor roads, show labels at even higher zoom levels
+                const showLabel = resolution < (isMajorRoad ? 15 : 5);
+                
+                if (showLabel) {
                     styles.push(new ol.style.Style({
                         text: createTextStyle({
                             text: label,
                             font: {
-                                size: 10,
-                                weight: 'bold'
+                                size: fontSize,
+                                weight: isMajorRoad ? 'bold' : 'normal'
                             },
-                            color: '#ffffff',
-                            haloColor: 'rgba(0, 0, 0, 0.7)',
-                            haloWidth: 2,
-                            offsetY: -10,
-                            textBaseline: 'bottom',
+                            color: textColor,
+                            haloColor: haloColor,
+                            haloWidth: isMajorRoad ? 3 : 2,
+                            placement: 'line',
+                            maxAngle: 0.5, // ~28.6 degrees in radians
+                            maxResolution: isMajorRoad ? 10 : 5,
+                            textBaseline: 'alphabetic',
                             textAlign: 'center',
-                            maxResolution: 20
+                            padding: isMajorRoad ? [2, 4, 2, 4] : [1, 2, 1, 2],
+                            backgroundFill: isMajorRoad ? {
+                                color: 'rgba(0, 0, 0, 0.3)'
+                            } : null,
+                            backgroundStroke: isMajorRoad ? {
+                                color: 'rgba(0, 0, 0, 0.2)',
+                                width: 1
+                            } : null
                         }, config)
                     }));
                 }
@@ -545,8 +524,8 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
                 boundaryStyle.zIndex = 1;
             }
             
-            // Only show major boundaries at higher zoom levels
-            const showBoundary = resolution < (adminLevel <= 2 ? 50 : adminLevel <= 4 ? 25 : 5);
+            // Only show boundaries at appropriate zoom levels
+            const showBoundary = resolution < (adminLevel <= 2 ? 100 : adminLevel <= 4 ? 50 : 10);
             if (showBoundary) {
                 styles.push(new ol.style.Style(boundaryStyle));
                 
@@ -580,9 +559,82 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
         
     } catch (error) {
         console.error('Error styling feature:', error, feature);
-        return []; // Return empty styles array on error
+        // POI (Point of Interest) styling
+        const poiType = feature.get('amenity') || feature.get('shop') || 
+                       feature.get('tourism') || feature.get('office') || 
+                       feature.get('building') ? 'poi' : null;
+        
+        if (poiType) {
+            const poiColor = colors.poi[
+                feature.get('amenity') ? 'amenity' : 
+                feature.get('shop') ? 'shop' :
+                feature.get('tourism') ? 'tourism' :
+                feature.get('office') ? 'office' :
+                feature.get('building') ? 'building' : 'default'
+            ];
+            
+            const styles = [];
+            
+            // Get icon name based on POI type
+            let iconName = 'marker';
+            if (feature.get('amenity') === 'cafe') iconName = 'cafe';
+            else if (feature.get('amenity') === 'restaurant') iconName = 'restaurant';
+            else if (feature.get('shop')) iconName = 'shop';
+            else if (feature.get('tourism') === 'hotel') iconName = 'lodging';
+            else if (feature.get('office')) iconName = 'commercial';
+            
+            // Add icon style if available
+            const iconStyle = getIconStyle(iconName, config, {
+                size: 1,
+                color: poiColor,
+                opacity: 0.9
+            });
+            
+            if (iconStyle) {
+                styles.push(new ol.style.Style({
+                    image: iconStyle
+                }));
+            } else {
+                // Fallback to circle if no icon available
+                styles.push(new ol.style.Style({
+                    image: new ol.style.Circle({
+                        radius: 5,
+                        fill: new ol.style.Fill({
+                            color: poiColor
+                        }),
+                        stroke: new ol.style.Stroke({
+                            color: '#fff',
+                            width: 1
+                        })
+                    })
+                }));
+            }
+            
+            // Add label for POI
+            const label = getFeatureLabel(feature, '{name}');
+            if (label) {
+                styles.push(new ol.style.Style({
+                    text: createTextStyle({
+                        text: label,
+                        font: {
+                            size: 10,
+                            weight: 'normal'
+                        },
+                        color: '#000',
+                        haloColor: '#fff',
+                        haloWidth: 2,
+                        offsetY: 12,
+                        textBaseline: 'top',
+                        textAlign: 'center',
+                        maxResolution: 5 // Only show at higher zoom levels
+                    }, config)
+                }));
+            }
+            
+            return styles;
+        }
     }
-    
+
     // Default style (fallback) - with label if available
     const styles = [new ol.style.Style({
         fill: new ol.style.Fill({
