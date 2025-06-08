@@ -46,7 +46,7 @@ var config = {
 		// Option 1: MapTiler Vector Tiles (MVT format)
 		new ol.layer.VectorTile({
 			title: 'MapTiler Vector (MVT)',
-			iconSrc: imgSrc + 'icones_web/maptiler_logo.png',
+			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
 			visible: false,
 			opacity: 1.0,
 			source: new ol.source.VectorTile({
@@ -116,35 +116,11 @@ var config = {
 					maxZoom: 14,
 					tileSize: 512
 				}),
-				tileLoadFunction: function(tile, url) {
-					tile.setLoader(function(extent, resolution, projection) {
-						const tileCoord = this.getTileCoordForExtentAndResolution(
-							extent,
-							resolution,
-							projection
-						);
-						const z = tileCoord[0];
-						const x = tileCoord[1];
-						const y = -tileCoord[2] - 1;
-						const tileUrl = 'https://tile${1 + (x + y) % 4}.openfreemap.org/tiles/v1/${z}/${x}/${y}.pbf';
-						
-						fetch(tileUrl)
-							.then(response => response.arrayBuffer())
-							.then(buffer => {
-								const format = tile.getFormat();
-								const features = format.readFeatures(new Uint8Array(buffer), {
-									extent: extent,
-									featureProjection: projection
-								});
-								tile.setFeatures(features);
-								tile.setProjection(projection);
-								tile.setExtent(extent);
-							})
-							.catch(error => {
-								console.error('Error loading tile:', error);
-								tile.setFeatures([]);
-							});
-					}.bind(this));
+				tileUrlFunction: function(tileCoord) {
+					const z = tileCoord[0];
+					const x = tileCoord[1];
+					const y = -tileCoord[2] - 1;
+					return `https://tile${1 + (x + y) % 4}.openfreemap.org/tiles/v1/${z}/${x}/${y}.pbf`;
 				},
 				attributions: [
 					'<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>',
