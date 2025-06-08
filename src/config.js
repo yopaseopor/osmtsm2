@@ -73,7 +73,19 @@ var config = {
 						italic: ['Noto Sans Italic', 'Arial Unicode MS Italic'],
 						bolditalic: ['Noto Sans Bold Italic', 'Arial Unicode MS Bold Italic']
 					},
-					source: 'openmaptiles' // Match the source name in the style
+					source: 'openmaptiles', // Match the source name in the style
+					style: {
+						version: 8,
+						name: 'Basic',
+						sources: {
+							openmaptiles: {
+								type: 'vector',
+								url: 'https://api.maptiler.com/tiles/v3-openmaptiles/tiles.json?key=tKDOqJGURiimBRaaKrDJ'
+							}
+						},
+						sprite: 'https://openmaptiles.github.io/maptiler-basic-gl-style/sprite',
+						glyphs: 'https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=tKDOqJGURiimBRaaKrDJ'
+					}
 				};
 
 				// Preload fonts
