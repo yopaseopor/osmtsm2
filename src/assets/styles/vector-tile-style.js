@@ -481,36 +481,23 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
             
             // Add road labels only for major roads and at appropriate zoom levels
             const label = getFeatureLabel(feature, '{name} {ref}');
-            if (label && resolution < 20) {  // Only show labels when zoomed in
+            if (label && resolution < 20) {
                 const isMajorRoad = ['motorway', 'trunk', 'primary', 'secondary'].includes(roadType);
-                if (!isMajorRoad) return styles;  // Skip labels for minor roads
-                
-                const fontSize = 10;
-                const textColor = '#ffffff';
-                const haloColor = 'rgba(0, 0, 0, 0.7)';
+                if (isMajorRoad) {
                     styles.push(new ol.style.Style({
                         text: createTextStyle({
                             text: label,
                             font: {
-                                size: fontSize,
-                                weight: isMajorRoad ? 'bold' : 'normal'
+                                size: 10,
+                                weight: 'bold'
                             },
-                            color: textColor,
-                            haloColor: haloColor,
-                            haloWidth: isMajorRoad ? 3 : 2,
-                            placement: 'line',
-                            maxAngle: 0.5, // ~28.6 degrees in radians
-                            maxResolution: isMajorRoad ? 10 : 5,
-                            textBaseline: 'alphabetic',
+                            color: '#ffffff',
+                            haloColor: 'rgba(0, 0, 0, 0.7)',
+                            haloWidth: 2,
+                            offsetY: -10,
+                            textBaseline: 'bottom',
                             textAlign: 'center',
-                            padding: isMajorRoad ? [2, 4, 2, 4] : [1, 2, 1, 2],
-                            backgroundFill: isMajorRoad ? {
-                                color: 'rgba(0, 0, 0, 0.3)'
-                            } : null,
-                            backgroundStroke: isMajorRoad ? {
-                                color: 'rgba(0, 0, 0, 0.2)',
-                                width: 1
-                            } : null
+                            maxResolution: 20
                         }, config)
                     }));
                 }
