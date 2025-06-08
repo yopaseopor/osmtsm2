@@ -117,179 +117,6 @@ var config = {
 								}),
 /*@@ visible de inicio */		visible: false
 /*@@ final de copia */			}),
-		new ol.layer.VectorTile({
-			title: 'Positron Vector',
-			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
-			visible: false,
-			opacity: 1.0,
-			source: new ol.source.VectorTile({
-				projection: 'EPSG:3857',
-				format: new ol.format.MVT(),
-				url: 'https://tiles.openfreemap.org/planet/{z}/{x}/{y}.pbf',
-				tileGrid: ol.tilegrid.createXYZ({
-					minZoom: 0,
-					maxZoom: 14
-				}),
-				attributions: [
-					'<a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a>',
-					'<a href="https://openfreemap.org/" target="_blank">© OpenFreeMap</a>',
-					'Style: <a href="https://github.com/yopaseopor/osmtsm2" target="_blank">Positron</a>'
-				]
-			}),
-			style: (function() {
-				// Predefined styles for common layer types
-				const defaultStyles = {
-					'background': new ol.style.Style({
-						fill: new ol.style.Fill({
-							color: '#f2f3f0' // Light gray background
-						})
-					}),
-					'water': new ol.style.Style({
-						fill: new ol.style.Fill({
-							color: 'rgba(194, 200, 202, 0.9)' // Light blue water
-						})
-					}),
-					'road': new ol.style.Style({
-						stroke: new ol.style.Stroke({
-							color: '#ffffff',
-							width: 2,
-							lineCap: 'round',
-							lineJoin: 'round'
-						}),
-						zIndex: 1
-					}),
-					'road-casing': new ol.style.Style({
-						stroke: new ol.style.Stroke({
-							color: '#d5d5d5',
-							width: 4,
-							lineCap: 'round',
-							lineJoin: 'round'
-						}),
-						zIndex: 0
-					}),
-					'building': new ol.style.Style({
-						fill: new ol.style.Fill({
-							color: 'rgba(234, 234, 229, 0.8)'
-						}),
-						stroke: new ol.style.Stroke({
-							color: 'rgba(219, 219, 218, 0.8)',
-							width: 0.5
-						})
-					}),
-					'park': new ol.style.Style({
-						fill: new ol.style.Fill({
-							color: 'rgba(230, 233, 229, 0.8)'
-						})
-					})
-				};
-
-				// Function to get style for a feature
-				function getStyleForFeature(feature) {
-					const layer = feature.get('layer');
-					const cls = feature.get('class');
-					
-					switch (layer) {
-						case 'water':
-							return defaultStyles.water;
-												
-						case 'landcover':
-							if (feature.get('class') === 'wood') {
-								return new ol.style.Style({
-									fill: new ol.style.Fill({
-										color: 'rgba(220, 224, 220, 0.7)'
-									})
-								});
-							}
-							break;
-												
-						case 'landuse':
-							if (cls === 'residential') {
-								return new ol.style.Style({
-									fill: new ol.style.Fill({
-										color: 'rgba(234, 234, 230, 0.8)'
-									})
-								});
-							}
-							break;
-												
-						case 'transportation':
-							const roadClass = feature.get('class');
-							if (['motorway', 'trunk', 'primary', 'secondary', 'tertiary'].includes(roadClass)) {
-								return [
-									defaultStyles['road-casing'],
-									defaultStyles['road']
-								];
-							} else if (['path', 'footway', 'pedestrian', 'service', 'track'].includes(roadClass)) {
-								return new ol.style.Style({
-									stroke: new ol.style.Stroke({
-										color: 'rgba(200, 200, 200, 0.8)',
-										width: 1,
-										lineCap: 'round',
-										lineJoin: 'round'
-									})
-								});
-							}
-							break;
-												
-						case 'building':
-							return defaultStyles.building;
-												
-						case 'park':
-							return defaultStyles.park;
-					}
-
-					// Default style for unknown features
-					return null;
-				}
-
-				// Return the style function
-				return function(feature, resolution) {
-					try {
-						const styles = [];
-						const style = getStyleForFeature(feature);
-						
-						if (Array.isArray(style)) {
-							styles.push(...style);
-						} else if (style) {
-							styles.push(style);
-						}
-
-						// Add labels for named features
-						const name = feature.get('name');
-						if (name && resolution < 100) {
-							const layer = feature.get('layer');
-							let textStyle = new ol.style.Text({
-								text: name,
-								font: '12px Noto Sans',
-								fill: new ol.style.Fill({
-									color: '#333333'
-								}),
-								stroke: new ol.style.Stroke({
-									color: 'rgba(255,255,255,0.7)',
-									width: 2
-								}),
-								overflow: true
-							});
-
-							if (layer === 'transportation') {
-								textStyle.setTextAlign('center');
-								textStyle.setTextBaseline('middle');
-							}
-
-							styles.push(new ol.style.Style({
-								text: textStyle,
-								zIndex: 10
-							}));
-						}
-
-						return styles.length > 0 ? styles : null;
-					} catch (e) {
-						console.error('Error styling feature:', e);
-						return null;
-					}
-				};
-			})()
-		}),
 		new ol.layer.Tile({// OpenStreetMap France https://openstreetmap.fr
 			title: 'OpenStreetMap FR',
 			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
@@ -454,6 +281,20 @@ var config = {
 				attributions: 'Map data &copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap Contributors</a>,&copy; <a href="https://www.google.com/maps/" target="_blank">Google Maps</a>',
 				url: 'https://mt{0-3}.google.com/vt/lyrs=s&z={z}&x={x}&y={y}'
 			}),
+			visible: false
+		}),
+
+		// Vector Positron Style
+		new ol.layer.VectorTile({
+			title: 'Vector Positron',
+			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
+			source: new ol.source.VectorTile({
+				format: new ol.format.MVT(),
+				url: 'https://tiles.openfreemap.org/planet/{z}/{x}/{y}.pbf',
+				attributions: '  <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Style: <a href="https://github.com/yopaseopor/osmtsm2">Positron</a>',
+				maxZoom: 14
+			}),
+			styleUrl: 'https://raw.githubusercontent.com/yopaseopor/osmtsm2/main/src/assets/styles/stylepositron.json',
 			visible: false
 		})
 	],
