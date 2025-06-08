@@ -165,18 +165,21 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
         building: 'rgba(220, 217, 210, 0.9)',
         buildingOutline: 'rgba(180, 177, 170, 0.8)',
         
-        // Road colors and widths - widths represent the visual hierarchy from widest to thinnest
+        // Road colors and widths - Standard OpenStreetMap style
         highway: {
-            motorway: { color: '#00008b', width: 6.0, textColor: '#0000ff' },  // widest - major highways
-            trunk: { color: '#8b0000', width: 5.0, textColor: '#8b0000' },      // major roads
-            primary: { color: '#ff0000', width: 4.0, textColor: '#ff0000' },    // main roads
-            secondary: { color: '#006400', width: 3.0, textColor: '#006400' },  // secondary roads
-            tertiary: { color: '#ffa500', width: 2.5, textColor: '#ff8c00' },   // local connecting roads
-            unclassified: { color: '#ff00ff', width: 2.0, textColor: '#ff00ff' }, // minor roads
-            residential: { color: '#000000', width: 1.8, textColor: '#000000' }, // residential streets
-            service: { color: '#999999', width: 1.2, textColor: '#999999' },    // service roads
-            path: { color: '#aaaaaa', width: 0.8, textColor: '#666666' },       // paths and trails
-            pedestrian: { color: '#cccccc', width: 1.0, textColor: '#666666' }  // pedestrian ways
+            motorway: { color: '#5b7de5', width: 2.0, textColor: '#2e3b4e' },     // blue
+            trunk: { color: '#5b7de5', width: 1.8, textColor: '#2e3b4e' },       // blue
+            primary: { color: '#f5c76c', width: 1.6, textColor: '#5e5e5e' },     // yellow
+            secondary: { color: '#f5d1a9', width: 1.4, textColor: '#5e5e5e' },   // light orange
+            tertiary: { color: '#f8f8f8', width: 1.2, textColor: '#5e5e5e' },   // white
+            unclassified: { color: '#f8f8f8', width: 1.0, textColor: '#5e5e5e' },// white
+            residential: { color: '#f8f8f8', width: 1.0, textColor: '#5e5e5e' }, // white
+            service: { color: '#f8f8f8', width: 0.8, textColor: '#5e5e5e' },    // white
+            path: { color: '#e9e9e9', width: 0.6, textColor: '#5e5e5e' },       // light gray
+            pedestrian: { color: '#e9e9e9', width: 0.6, textColor: '#5e5e5e' }, // light gray
+            footway: { color: '#e9e9e9', width: 0.4, textColor: '#5e5e5e' },    // light gray
+            track: { color: '#e9e9e9', width: 0.6, textColor: '#5e5e5e' },      // light gray
+            cycleway: { color: '#b3d1ff', width: 0.6, textColor: '#2e3b4e' }    // light blue
         },
         
         // Text styles
