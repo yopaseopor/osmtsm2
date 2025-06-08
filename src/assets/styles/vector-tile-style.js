@@ -451,7 +451,8 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
                 // Only show labels at appropriate zoom levels
                 // For major roads, only show labels at higher zoom levels (lower resolution values)
                 // For minor roads, show labels at even higher zoom levels
-                const showLabel = resolution < (isMajorRoad ? 15 : 5);
+                // Reduced the resolution thresholds to show fewer labels at lower zoom levels
+                const showLabel = resolution < (isMajorRoad ? 8 : 3);
                 
                 if (showLabel) {
                     styles.push(new ol.style.Style({
