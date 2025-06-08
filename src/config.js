@@ -117,6 +117,96 @@ var config = {
 								}),
 /*@@ visible de inicio */		visible: false
 /*@@ final de copia */			}),
+		new ol.layer.VectorTile({
+			title: 'Positron Vector',
+			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
+			visible: false,
+			opacity: 1.0,
+			source: new ol.source.VectorTile({
+				projection: 'EPSG:3857',
+				format: new ol.format.MVT(),
+				url: 'https://tiles.openfreemap.org/planet/{z}/{x}/{y}.pbf',
+				tileGrid: ol.tilegrid.createXYZ({
+					minZoom: 0,
+					maxZoom: 14
+				}),
+				attributions: [
+					'<a href="https://www.openstreetmap.org/copyright" target="_blank"> OpenStreetMap contributors</a>',
+					'<a href="https://openfreemap.org/" target="_blank"> OpenFreeMap</a>',
+					'Style: <a href="https://github.com/yopaseopor/osmtsm2" target="_blank">Positron</a>'
+				]
+			}),
+			style: (function() {
+				// Load the style JSON
+				const styleUrl = 'https://raw.githubusercontent.com/yopaseopor/osmtsm2/main/src/assets/styles/stylepositron.json';
+				let styleJson = null;
+
+				// Preload the style
+				fetch(styleUrl)
+					.then(response => response.json())
+					.then(style => {
+						styleJson = style;
+					})
+					.catch(error => console.error('Error loading style:', error));
+
+				// Return style function
+				return function(feature, resolution) {
+					if (!styleJson) return [];
+
+					try {
+						const layerId = feature.get('layer');
+						const layer = styleJson.layers.find(l => l.id === layerId);
+						if (!layer) return [];
+
+						// Basic style based on layer type
+						switch (layer.type) {
+							case 'fill':
+								return [new ol.style.Style({
+									fill: new ol.style.Fill({
+										color: layer.paint['fill-color'] || 'rgba(0,0,0,0.1)'
+									}),
+									stroke: new ol.style.Stroke({
+										color: layer.paint['fill-outline-color'] || 'rgba(0,0,0,0.3)',
+										width: 1
+									})
+								})];
+
+							case 'line':
+								return [new ol.style.Style({
+									stroke: new ol.style.Stroke({
+										color: layer.paint['line-color'] || '#000',
+										width: layer.paint['line-width'] || 1,
+										lineDash: layer.paint['line-dasharray'] || undefined
+									})
+								})];
+
+							case 'symbol':
+								const text = feature.get('name') || '';
+								if (!text) return [];
+								return [new ol.style.Style({
+									text: new ol.style.Text({
+										text: text,
+										font: '12px Noto Sans',
+										fill: new ol.style.Fill({
+											color: layer.paint?.['text-color'] || '#000'
+										}),
+										stroke: new ol.style.Stroke({
+											color: layer.paint?.['text-halo-color'] || '#fff',
+											width: layer.paint?.['text-halo-width'] || 0
+										})
+									})
+								})];
+
+							default:
+								return [];
+						}
+					} catch (e) {
+						console.error('Error applying style:', e);
+						return [];
+					}
+				};
+			})()
+		}),
 		new ol.layer.Tile({// OpenStreetMap France https://openstreetmap.fr
 			title: 'OpenStreetMap FR',
 			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
