@@ -1,5 +1,5 @@
 import { setLanguage, getCurrentLanguage } from './i18n/index.js';
-import { config } from './config.js';
+import config from './config.js';
 import { overlayConfig } from './config_overlay.js';
 import './overlay_integration.js';
 
@@ -7,14 +7,7 @@ import './overlay_integration.js';
 window.config = config;
 
 // Initialize overlays
-if (overlayConfig && overlayConfig.overlays) {
-    window.config.overlays = overlayConfig.overlays;
-}
-
-// Initialize i18n if available
-if (typeof setLanguage === 'function') {
-    setLanguage(navigator.language || 'en');
-}
+window.config.overlays = overlayConfig.overlays;
 
 // Dispatch config loaded event after everything is initialized
 window.dispatchEvent(new CustomEvent('configLoaded', {
@@ -24,14 +17,11 @@ window.dispatchEvent(new CustomEvent('configLoaded', {
 // Notify overlay searcher that overlays are ready
 window.dispatchEvent(new CustomEvent('overlaySearchUpdate', {
     detail: {
-        overlays: window.config.overlays || []
+        overlays: window.config.overlays
     }
 }));
 
 // Initialize map when document is ready
 $(document).ready(function() {
-    // Import and initialize the main application
-    import('./index.js').catch(error => {
-        console.error('Failed to initialize application:', error);
-    });
+    // Map initialization will be handled by index.js
 }); 

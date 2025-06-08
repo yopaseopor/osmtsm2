@@ -8,8 +8,8 @@
 	<!--@@ Título a modificar para la descripción -->
 	<meta content="OpenStreetMap POIs Map" name="description"/>
 
-	<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" type="text/css"/>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@10.5.0/ol.min.css" type="text/css"/>
+	<link rel="stylesheet" href="src/api/jquery-ui-1.12.1.custom/jquery-ui.min.css" type="text/css"/>
+	<link rel="stylesheet" href="src/api/openlayers/v6.2.2-custom/ol.css" type="text/css"/>
 	<link rel="stylesheet" href="src/css/font-awesome.css" type="text/css"/>
 	<link rel="stylesheet" href="src/css/index.css" type="text/css"/>
 	<link rel="stylesheet" href="src/css/language-selector.css" type="text/css"/>
@@ -39,37 +39,44 @@
 		</div>
 	</div>
 	<!-- Core Libraries -->
-	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo3dQ5yXthFCf6WTqjO1U=" crossorigin="anonymous"></script>
-	
-	<!-- External Libraries with Global Scope -->
-	<script>
-	// Make these libraries available globally
-	window.osmtogeojson = window.osmtogeojson || {};
-	window.proj4 = window.proj4 || {};
-	window.maptilersdk = window.maptilersdk || {};
-	</script>
+	<script src="src/api/jquery/3.4.1/jquery.min.js"></script>
+	<script src="src/api/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+	<!-- OpenLayers -->
+	<script src="src/api/openlayers/v6.2.2-custom/ol.js"></script>
+	<!-- Required for Vector Tiles -->
+	<script src="https://cdn.jsdelivr.net/npm/ol@v6.15.1/ol/format/MVT.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/ol@v6.15.1/ol/source/VectorTile.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/ol@v6.15.1/ol/layer/VectorTile.js"></script>
+	<!-- osmtogeojson for data conversion -->
 	<script src="https://unpkg.com/osmtogeojson@3.0.0-beta.5/osmtogeojson.js"></script>
+	<!-- Proj4 for coordinate transformations -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.8.0/proj4.js"></script>
+	<!-- MapTiler GL JS for vector tile styling -->
 	<script src="https://unpkg.com/@maptiler/sdk/dist/maptiler-sdk.umd.min.js"></script>
 
-	<!-- OpenLayers ES Module Configuration -->
-	<script type="importmap">
-	{
-		"imports": {
-			"ol": "https://cdn.jsdelivr.net/npm/ol@10.5.0/dist/ol.js",
-			"ol/layer": "https://cdn.jsdelivr.net/npm/ol@10.5.0/dist/ol/layer.js",
-			"ol/source": "https://cdn.jsdelivr.net/npm/ol@10.5.0/dist/ol/source.js",
-			"ol/format": "https://cdn.jsdelivr.net/npm/ol@10.5.0/dist/ol/format.js",
-			"ol/tilegrid": "https://cdn.jsdelivr.net/npm/ol@10.5.0/dist/ol/tilegrid.js",
-			"ol/proj": "https://cdn.jsdelivr.net/npm/ol@10.5.0/dist/ol/proj.js",
-			"ol/control": "https://cdn.jsdelivr.net/npm/ol@10.5.0/dist/ol/control.js",
-			"ol/loadingstrategy": "https://cdn.jsdelivr.net/npm/ol@10.5.0/dist/ol/loadingstrategy.js"
-		}
-	}
-	</script>
+	<!-- Vector Tile Style -->
+	<script src="src/assets/styles/vector-tile-style.js"></script>
 
-	<!-- Application Entry Point -->
-	<script type="module" src="src/index.js"></script>
+	<!-- Configuration -->
+	<script src="src/config.js"></script>
+
+	<!-- Modules -->
+	<script type="module" src="src/i18n/index.js"></script>
+	<script type="module" src="src/components/LanguageSelector.js"></script>
+	<script type="module" src="src/language_init.js"></script>
+	<script type="module" src="src/overlays/translated_overlays.js"></script>
+	<script type="module" src="src/overlays/external/loader.js"></script>
+	<script type="module" src="src/overlays/index.js"></script>
+	<script type="module" src="src/overlay_integration.js"></script>
+	<script type="module" src="src/init.js"></script>
+
+	<!-- Application Logic -->
+	<script src="src/layer_search.js"></script>
+	<script src="src/overlay_search.js"></script>
+	<script src="src/nominatim_search.js"></script>
+	<script src="src/panoramax_viewer.js"></script>
+	<script src="src/mapillary_viewer.js"></script>
+	<script src="src/router.js"></script>
+	<script src="src/index.js"></script>
 </body>
 </html>
