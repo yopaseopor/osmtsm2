@@ -629,17 +629,20 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
                             haloColor: haloColor,
                             haloWidth: isMajorRoad ? 3 : 2,
                             placement: 'line',
-                            maxAngle: 0.5, // ~28.6 degrees in radians
+                            maxAngle: 0.8, // ~45 degrees in radians (allows more curve following)
                             textBaseline: 'middle',
                             textAlign: 'center',
-                            padding: isMajorRoad ? [2, 4, 2, 4] : [1, 2, 1, 2],
+                            padding: isMajorRoad ? [2, 6, 2, 6] : [1, 3, 1, 3],
                             maxResolution: isMajorRoad ? 10 : 5,
+                            offsetY: 0, // Keep text centered on the line
+                            overflow: true, // Allow text to extend beyond the line
+                            spacing: 1.2, // Slight spacing between characters for better readability on curves
                             backgroundFill: isMajorRoad ? {
-                                color: 'rgba(0, 0, 0, 0.3)'
+                                color: 'rgba(0, 0, 0, 0.4)'
                             } : null,
                             backgroundStroke: isMajorRoad ? {
-                                color: 'rgba(0, 0, 0, 0.2)',
-                                width: 1
+                                color: 'rgba(0, 0, 0, 0.3)',
+                                width: 0.5
                             } : null
                         }, config),
                         zIndex: roadStyle.zIndex * 10 + 4
