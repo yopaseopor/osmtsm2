@@ -173,7 +173,7 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
             secondary: { color: '#006400', width: 3.0, textColor: '#006400' },  // secondary roads
             tertiary: { color: '#ffa500', width: 2.5, textColor: '#ff8c00' },   // local connecting roads
             unclassified: { color: '#ff00ff', width: 2.0, textColor: '#ff00ff' }, // minor roads
-            residential: { color: '#666666', width: 1.8, textColor: '#666666' }, // residential streets
+            residential: { color: '#000000', width: 1.8, textColor: '#000000' }, // residential streets
             service: { color: '#999999', width: 1.2, textColor: '#999999' },    // service roads
             path: { color: '#aaaaaa', width: 0.8, textColor: '#666666' },       // paths and trails
             pedestrian: { color: '#cccccc', width: 1.0, textColor: '#666666' }  // pedestrian ways
