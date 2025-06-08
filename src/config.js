@@ -112,33 +112,15 @@ var config = {
 			source: new ol.source.VectorTile({
 				projection: 'EPSG:3857',
 				format: new ol.format.MVT(),
-				url: 'https://api.maptiler.com/tiles/v3/tiles.json?key=tKDOqJGURiimBRaaKrDJ',
-				tileJSON: {
-					attribution: [
-						'<a href="https://www.maptiler.com/copyright/" target="_blank">MapTiler</a>',
-						'<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>'
-					],
-					bounds: [-180, -85.0511, 180, 85.0511],
-					center: [0, 0, 2],
-					minzoom: 0,
-					maxzoom: 14,
-					tiles: [
-						'https://api.maptiler.com/tiles/v3/{z}/{x}/{y}.pbf?key=tKDOqJGURiimBRaaKrDJ'
-					],
-					vector_layers: [
-						{ id: 'water' },
-						{ id: 'landuse' },
-						{ id: 'building' },
-						{ id: 'transportation' },
-						{ id: 'boundary' },
-						{ id: 'place' },
-						{ id: 'housenumber' },
-						{ id: 'waterway' },
-						{ id: 'aeroway' },
-						{ id: 'mountain_peak' },
-						{ id: 'poi' }
-					]
-				}
+				url: 'https://api.maptiler.com/tiles/v3/{z}/{x}/{y}.pbf?key=tKDOqJGURiimBRaaKrDJ',
+				tileGrid: ol.tilegrid.createXYZ({
+					minZoom: 0,
+					maxZoom: 14
+				}),
+				attributions: [
+					'<a href="https://www.maptiler.com/copyright/" target="_blank">MapTiler</a>',
+					'<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>'
+				]
 			}),
 			style: (function() {
 				// Reuse the same style configuration as the MVT layer
@@ -152,6 +134,50 @@ var config = {
 						}
 					}
 					return [];
+				};
+			})()
+		}),
+
+		// OpenFreeMap Vector Tiles (Liberty style)
+		new ol.layer.VectorTile({
+			title: 'OpenFreeMap (Liberty)',
+			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
+			visible: false,
+			opacity: 1.0,
+			source: new ol.source.VectorTile({
+				projection: 'EPSG:3857',
+				format: new ol.format.MVT(),
+				url: 'https://tiles.openfreemap.org/data/v3/{z}/{x}/{y}.pbf',
+				tileGrid: ol.tilegrid.createXYZ({
+					minZoom: 0,
+					maxZoom: 20
+				}),
+				attributions: [
+					'<a href="https://openfreemap.org/" target="_blank">OpenFreeMap</a>',
+					'<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>'
+				]
+			}),
+			style: (function() {
+				// Use ol-mapbox-style for OpenFreeMap
+				const style = new ol.style.Style({
+					fill: new ol.style.Fill({
+						color: '#f8f4f0'
+					})
+				});
+
+				// Load the style asynchronously
+				const stylePromise = fetch('https://tiles.openfreemap.org/styles/liberty')
+					.then(response => response.json())
+					.then(styleJson => {
+						return olms.applyStyle(style, styleJson, 'openmaptiles');
+					})
+					.catch(error => {
+						console.error('Error loading OpenFreeMap style:', error);
+						return style;
+					});
+
+				return function(feature, resolution) {
+					return stylePromise.then(style => [style]);
 				};
 			})()
 		}),
