@@ -1,5 +1,3 @@
-// Vector Tile Style Configuration for OpenLayers using OpenMapTiles schema
-
 /**
  * Gets the best label text for a feature according to Mapbox GL Style Spec
  * @param {ol/Feature} feature - The feature to get label for
@@ -148,116 +146,83 @@ function getIconStyle(iconName, config, options = {}) {
  */
 window.vectorTileStyle = function(feature, resolution, config = {}) {
     // Common colors following Mapbox GL Style Specification naming
-    const colors = {};
-    
-    // POI colors
-    colors.poi = {
-        amenity: '#3498db',
-        shop: '#9b59b6',
-        tourism: '#e74c3c',
-        office: '#2ecc71',
-        building: '#e67e22',
-        default: '#7f8c8d'
-    };
-    
-    // Base colors
-    colors.water = 'rgba(170, 210, 255, 0.9)';
-    colors.waterIntermittent = 'rgba(170, 210, 255, 0.6)';
-    colors.residential = 'rgba(240, 238, 235, 0.7)';
-    colors.park = 'rgba(210, 250, 210, 0.7)';
-    colors.forest = 'rgba(190, 220, 190, 0.8)';
-    colors.building = 'rgba(220, 217, 210, 0.9)';
-    colors.buildingOutline = 'rgba(180, 177, 170, 0.8)';
-    
-    // Highway colors and widths
-    colors.highway = {};
-    colors.highway.motorway = { color: '#0000ff', width: 3.0, textColor: '#0000ff' };  // blue
-    colors.highway.trunk = { color: '#8b0000', width: 2.8, textColor: '#8b0000' };      // dark red
-    colors.highway.primary = { color: '#ff0000', width: 2.5, textColor: '#ff0000' };    // red
-    colors.highway.secondary = { color: '#006400', width: 2.0, textColor: '#006400' };  // dark green
-    colors.highway.tertiary = { color: '#ffa500', width: 1.8, textColor: '#ff8c00' };   // orange
-    colors.highway.unclassified = { color: '#ff00ff', width: 1.5, textColor: '#ff00ff' }; // magenta
-    colors.highway.residential = { color: '#666666', width: 1.2, textColor: '#666666' };
-    colors.highway.service = { color: '#999999', width: 0.8, textColor: '#999999' };
-    colors.highway.path = { color: '#aaaaaa', width: 0.6, textColor: '#666666' };
-    colors.highway.pedestrian = { color: '#cccccc', width: 0.8, textColor: '#666666' };
-    
-    // Text styles
-    colors.text = {
-        fill: '#000000',
-        stroke: '#ffffff',
-        strokeWidth: 2,
-        font: '12px Arial, sans-serif',
-        offsetY: 0,
-        padding: [2, 4],
-        maxAngle: 30,
-        overflow: true
-    };
-    
-    // Landuse colors
-    colors.landuse = {};
-    colors.landuse.residential = 'rgba(240, 238, 235, 0.7)';
-    colors.landuse.commercial = 'rgba(240, 235, 240, 0.5)';
-    colors.landuse.industrial = 'rgba(230, 230, 220, 0.6)';
-    colors.landuse.retail = 'rgba(245, 235, 235, 0.6)';
-    colors.landuse.park = 'rgba(210, 250, 210, 0.7)';
-    colors.landuse.forest = 'rgba(190, 220, 190, 0.8)';
-    colors.landuse.grass = 'rgba(200, 250, 200, 0.6)';
-    colors.landuse.cemetery = 'rgba(200, 230, 200, 0.7)';
-    
-    // Boundary colors
-    colors.boundary = {};
-    colors.boundary.national = '#000000';
-    colors.boundary.administrative = '#777777';
-    colors.boundary.protected_area = '#2d5f2d';
-
-    // Debug logging
-    const debug = false;
-    const featureId = feature.getId() || 'unknown';
-    
-    try {
-        // Get feature properties - handle different schema formats
-        const layer = feature.get('layer') || 
-                     feature.get('_layer') || 
-                     (feature.get('source-layer') || 'unknown');
+    const colors = {
+        // POI colors
+        poi: {
+            amenity: '#3498db',
+            shop: '#9b59b6',
+            tourism: '#e74c3c',
+            office: '#2ecc71',
+            building: '#e67e22',
+            default: '#7f8c8d'
+        },
+        // Base colors
+        water: 'rgba(170, 210, 255, 0.9)',
+        waterIntermittent: 'rgba(170, 210, 255, 0.6)',
+        residential: 'rgba(240, 238, 235, 0.7)',
+        park: 'rgba(210, 250, 210, 0.7)',
+        forest: 'rgba(190, 220, 190, 0.8)',
+        building: 'rgba(220, 217, 210, 0.9)',
+        buildingOutline: 'rgba(180, 177, 170, 0.8)',
         
-        const cls = feature.get('class') || '';
-        const type = feature.getGeometry() ? feature.getGeometry().getType() : 'unknown';
-        const brunnel = feature.get('brunnel');
-        const isBridge = brunnel === 'bridge' || feature.get('bridge') === 'yes';
-        const isTunnel = brunnel === 'tunnel' || feature.get('tunnel') === 'yes';
+        // Road colors and widths
+        highway: {
+            motorway: { color: '#0000ff', width: 3.0, textColor: '#0000ff' },  // blue
+            trunk: { color: '#8b0000', width: 2.8, textColor: '#8b0000' },      // dark red
+            primary: { color: '#ff0000', width: 2.5, textColor: '#ff0000' },    // red
+            secondary: { color: '#006400', width: 2.0, textColor: '#006400' },  // dark green
+            tertiary: { color: '#ffa500', width: 1.8, textColor: '#ff8c00' },   // orange
+            unclassified: { color: '#ff00ff', width: 1.5, textColor: '#ff00ff' }, // magenta
+            residential: { color: '#666666', width: 1.2, textColor: '#666666' },
+            service: { color: '#999999', width: 0.8, textColor: '#999999' },
+            path: { color: '#aaaaaa', width: 0.6, textColor: '#666666' },
+            pedestrian: { color: '#cccccc', width: 0.8, textColor: '#666666' }
+        },
         
-        if (debug) {
-            console.group('Feature Styling');
-            console.log('Feature ID:', featureId);
-            console.log('Layer:', layer);
-            console.log('Class:', cls);
-            console.log('Type:', type);
-            console.log('Properties:', Object.fromEntries(
-                Object.entries(feature.getProperties())
-                    .filter(([key]) => !key.startsWith('_'))
-            ));
+        // Text styles
+        text: {
+            fill: '#000000',
+            stroke: '#ffffff',
+            strokeWidth: 2,
+            font: '12px Arial, sans-serif',
+            offsetY: 0,
+            padding: [2, 4],
+            maxAngle: 30,
+            overflow: true
+        },
+        landuse: {
+            residential: 'rgba(240, 238, 235, 0.7)',
+            commercial: 'rgba(240, 235, 240, 0.5)',
+            industrial: 'rgba(230, 230, 220, 0.6)',
+            retail: 'rgba(245, 235, 235, 0.6)',
+            park: 'rgba(210, 250, 210, 0.7)',
+            forest: 'rgba(190, 220, 190, 0.8)',
+            grass: 'rgba(200, 250, 200, 0.6)',
+            cemetery: 'rgba(200, 230, 200, 0.7)'
+        },
+        boundary: {
+            national: '#000000',
+            administrative: '#777777',
+            protected_area: '#2d5f2d'
         }
+    };
 
-        // Water (OpenMapTiles schema)
+    try {
+        // Get feature properties
+        const layer = feature.get('layer') || 'unknown';
+        const cls = feature.get('class') || '';
+        const type = feature.getGeometry().getType();
+        const brunnel = feature.get('brunnel');
+        const isBridge = brunnel === 'bridge';
+        const isTunnel = brunnel === 'tunnel';
+        
+        // Debug logging (uncomment if needed)
+        // console.log(`Layer: ${layer}, Class: ${cls}, Type: ${type}`);
+
+        // Water
         if (layer === 'water') {
-            const waterClass = feature.get('class') || 'ocean';
             const isIntermittent = feature.get('intermittent') === 1 || feature.get('intermittent') === '1';
-            
-            // Different water colors based on class
-            const waterColors = {
-                'ocean': 'rgba(170, 210, 255, 0.9)',
-                'lake': 'rgba(170, 210, 255, 0.9)',
-                'reservoir': 'rgba(170, 210, 255, 0.9)',
-                'river': 'rgba(170, 210, 255, 0.9)',
-                'canal': 'rgba(170, 210, 255, 0.9)',
-                'basin': 'rgba(200, 230, 255, 0.9)',
-                'pond': 'rgba(200, 230, 255, 0.9)'
-            };
-            
-            const waterColor = isIntermittent ? 
-                adjustColor(waterColors[waterClass] || waterColors.ocean, 10) : 
-                waterColors[waterClass] || waterColors.ocean;
+            const waterColor = isIntermittent ? colors.waterIntermittent : colors.water;
             
             const styles = [new ol.style.Style({
                 fill: new ol.style.Fill({
@@ -265,116 +230,53 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
                 })
             })];
             
-            // Add stroke for intermittent water or rivers/canals
-            if (isIntermittent || waterClass === 'river' || waterClass === 'canal') {
+            // Add stroke for intermittent water
+            if (isIntermittent) {
                 styles[0].setStroke(new ol.style.Stroke({
-                    color: adjustColor(waterColor, -15),
-                    width: waterClass === 'river' || waterClass === 'canal' ? 1.5 : 1,
-                    lineDash: isIntermittent ? [4, 4] : null
+                    color: colors.water,
+                    width: 1,
+                    lineDash: [4, 4]
                 }));
             }
             
-            // Add water label if name exists (for named water bodies)
+            // Add water label if name exists
             const name = getFeatureLabel(feature, '{name}');
-            if (name && waterClass !== 'ocean') {  // Don't label the ocean
-                const isRiver = waterClass === 'river' || waterClass === 'canal';
-                const fontSize = isRiver ? 10 : 11;
-                const textColor = isRiver ? 'rgba(0, 0, 128, 0.9)' : 'rgba(0, 0, 128, 0.8)';
-                
-                // For rivers, align text along the line
-                if (isRiver) {
-                    styles.push(new ol.style.Style({
-                        text: createTextStyle({
-                            text: name,
-                            font: {
-                                style: 'italic',
-                                size: fontSize,
-                                weight: 'normal'
-                            },
-                            color: textColor,
-                            haloColor: 'rgba(255, 255, 255, 0.7)',
-                            haloWidth: 2,
-                            placement: 'line',
-                            maxAngle: 0.5, // ~28.6 degrees in radians
-                            textBaseline: 'middle',
-                            textAlign: 'center',
-                            repeat: 200, // Repeat label every 200px
-                            maxResolution: 5,
-                            backgroundFill: {
-                                color: 'rgba(255, 255, 255, 0.5)'
-                            },
-                            backgroundStroke: {
-                                color: 'rgba(200, 200, 200, 0.3)',
-                                width: 0.5
-                            }
-                        }, config)
-                    }));
-                } else {
-                    // For lakes and other water bodies, use point placement
-                    styles.push(new ol.style.Style({
-                        text: createTextStyle({
-                            text: name,
-                            font: {
-                                style: 'italic',
-                                size: fontSize,
-                                weight: 'bold'
-                            },
-                            color: textColor,
-                            haloColor: 'rgba(255, 255, 255, 0.7)',
-                            haloWidth: 2,
-                            offsetY: -10,
-                            textBaseline: 'bottom',
-                            textAlign: 'center',
-                            placement: 'point',
-                            maxResolution: 10,
-                            backgroundFill: {
-                                color: 'rgba(255, 255, 255, 0.5)'
-                            },
-                            backgroundStroke: {
-                                color: 'rgba(200, 200, 200, 0.3)',
-                                width: 0.5
-                            }
-                        }, config)
-                    }));
-                }
+            if (name) {
+                styles.push(new ol.style.Style({
+                    text: createTextStyle({
+                        text: name,
+                        font: {
+                            style: 'italic',
+                            size: 11,
+                            weight: 'normal'
+                        },
+                        color: 'rgba(0, 0, 128, 0.8)',
+                        haloColor: 'rgba(255, 255, 255, 0.7)',
+                        haloWidth: 2,
+                        offsetY: -10,
+                        textBaseline: 'bottom',
+                        textAlign: 'center'
+                    }, config)
+                }));
             }
             
             return styles;
         }
         
-        // Landuse (OpenMapTiles schema)
+        // Landuse
         if (layer === 'landuse') {
-            const landuseClass = feature.get('class') || 'residential';
+            const fillColor = colors.landuse[cls] || colors.landuse.residential;
             const name = feature.get('name');
             const styles = [];
             
-            // Define landuse colors based on OpenMapTiles classes
-            const landuseColors = {
-                'residential': 'rgba(240, 238, 235, 0.7)',
-                'commercial': 'rgba(240, 235, 240, 0.5)',
-                'industrial': 'rgba(230, 230, 220, 0.6)',
-                'retail': 'rgba(245, 235, 235, 0.6)',
-                'park': 'rgba(210, 250, 210, 0.7)',
-                'forest': 'rgba(190, 220, 190, 0.8)',
-                'grass': 'rgba(200, 250, 200, 0.6)',
-                'cemetery': 'rgba(200, 230, 200, 0.7)',
-                'hospital': 'rgba(255, 220, 220, 0.7)',
-                'school': 'rgba(235, 235, 250, 0.7)',
-                'university': 'rgba(235, 235, 250, 0.7)',
-                'military': 'rgba(240, 220, 200, 0.7)',
-                'beach': 'rgba(255, 250, 200, 0.7)'
-            };
-            
-            const fillColor = landuseColors[landuseClass] || landuseColors.residential;
-            
             // Only show landuse at appropriate zoom levels
-            const showLanduse = resolution < (['park', 'forest', 'cemetery'].includes(landuseClass) ? 100 : 50);
+            const showLanduse = resolution < (cls === 'park' || cls === 'forest' ? 100 : 50);
             if (!showLanduse) {
                 return [];
             }
             
             // Base fill with z-index based on landuse type
-            const zIndex = ['park', 'forest', 'cemetery', 'hospital', 'school', 'university'].includes(landuseClass) ? 1 : 0;
+            const zIndex = cls === 'park' || cls === 'forest' ? 1 : 0;
             styles.push(new ol.style.Style({
                 fill: new ol.style.Fill({
                     color: fillColor
@@ -383,28 +285,20 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
             }));
             
             // Add stroke for certain landuse types
-            if (['park', 'forest', 'cemetery', 'hospital', 'school', 'university'].includes(landuseClass)) {
+            if (cls === 'park' || cls === 'forest' || cls === 'cemetery') {
                 styles[0].setStroke(new ol.style.Stroke({
                     color: adjustColor(fillColor, -10),
-                    width: 0.5,
-                    lineDash: landuseClass === 'cemetery' ? [2, 2] : null
+                    width: 0.5
                 }));
             }
             
             // Get label for any landuse with name, ref, or address
             const label = getFeatureLabel(feature, '{name}');
             if (label) {
-                const isSignificant = ['park', 'forest', 'cemetery', 'hospital', 'school', 'university'].includes(landuseClass);
-                const fontSize = isSignificant ? 10 : 9;
-                
-                // Different text colors based on landuse type
-                let textColor = '#333333';
-                if (landuseClass === 'park' || landuseClass === 'forest') textColor = '#2d5f2d';
-                else if (landuseClass === 'cemetery') textColor = '#666666';
-                else if (landuseClass === 'hospital') textColor = '#8b0000';
-                else if (landuseClass === 'school' || landuseClass === 'university') textColor = '#000080';
-                
-                const showLabel = resolution < (isSignificant ? 20 : 10); // Only show labels when zoomed in
+                const fontSize = cls === 'park' || cls === 'forest' || cls === 'cemetery' ? 10 : 9;
+                const textColor = cls === 'cemetery' ? '#666666' : 
+                                 cls === 'park' || cls === 'forest' ? '#2d5f2d' : '#333333';
+                const showLabel = resolution < 20; // Only show labels when zoomed in
                 
                 if (showLabel) {
                     styles.push(new ol.style.Style({
@@ -412,8 +306,8 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
                             text: label,
                             font: {
                                 size: fontSize,
-                                weight: isSignificant ? 'bold' : 'normal',
-                                style: ['park', 'forest'].includes(landuseClass) ? 'italic' : 'normal'
+                                weight: 'normal',
+                                style: cls === 'park' || cls === 'forest' ? 'italic' : 'normal'
                             },
                             color: textColor,
                             haloColor: 'rgba(255, 255, 255, 0.7)',
@@ -422,7 +316,7 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
                             textAlign: 'center',
                             placement: 'point',
                             maxAngle: 0.7,
-                            maxResolution: isSignificant ? 10 : 5,
+                            maxResolution: 10,
                             padding: [2, 4, 2, 4],
                             backgroundFill: {
                                 color: 'rgba(255, 255, 255, 0.5)'
@@ -439,41 +333,17 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
             return styles;
         }
         
-        // Buildings (OpenMapTiles schema)
+        // Buildings
         if (layer === 'building') {
-            const height = parseFloat(feature.get('render_height') || feature.get('height') || '0');
-            const minHeight = parseFloat(feature.get('min_height') || '0');
-            const levels = parseInt(feature.get('building:levels') || 
-                                 feature.get('render_height') ? Math.round(parseFloat(feature.get('render_height')) / 3) : '1', 10);
-            const buildingType = feature.get('class') || feature.get('building') || 'yes';
+            const height = parseFloat(feature.get('height') || '0');
+            const levels = parseInt(feature.get('building:levels') || '1', 10);
+            const buildingType = feature.get('building');
             
             // Calculate building color based on height/levels/type
-            let buildingColor = '#e0dcd8'; // Default light gray
-            
-            // Different colors based on building type
-            if (buildingType === 'commercial' || buildingType === 'retail') {
-                buildingColor = '#e8d8d8'; // Light red
-            } else if (buildingType === 'industrial' || buildingType === 'warehouse') {
-                buildingColor = '#d8e0e8'; // Light blue
-            } else if (buildingType === 'apartments' || buildingType === 'residential') {
-                buildingColor = '#e0dcd8'; // Light gray
-            } else if (buildingType === 'school' || buildingType === 'university') {
-                buildingColor = '#e0d8e8'; // Light purple
-            } else if (buildingType === 'hospital' || buildingType === 'clinic') {
-                buildingColor = '#f0e0e0'; // Very light red
+            let buildingColor = colors.building;
+            if (height > 20 || levels > 5) {
+                buildingColor = adjustColor(colors.building, -15); // Darker for taller buildings
             }
-            
-            // Darken based on height
-            if (height > 50) {
-                buildingColor = adjustColor(buildingColor, -25);
-            } else if (height > 20 || levels > 5) {
-                buildingColor = adjustColor(buildingColor, -15);
-            } else if (height > 0) {
-                buildingColor = adjustColor(buildingColor, -5);
-            }
-            
-            // Adjust for 3D effect
-            const roofColor = adjustColor(buildingColor, -10);
             
             const styles = [new ol.style.Style({
                 fill: new ol.style.Fill({
@@ -526,92 +396,56 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
             return styles;
         }
 
-        // Transportation (roads, paths, etc.) - OpenMapTiles schema
+        // Transportation (roads, paths, etc.)
         if (layer === 'transportation') {
-            const roadClass = feature.get('class') || 'minor';
-            const roadSubclass = feature.get('subclass') || '';
-            const isLink = roadSubclass.endsWith('_link');
-            const isTunnel = feature.get('brunnel') === 'tunnel';
-            const isBridge = feature.get('brunnel') === 'bridge';
-            const layerValue = parseInt(feature.get('layer') || '0', 10);
+            const roadType = cls || 'tertiary';
+            const roadStyle = colors.highway[roadType] || colors.highway.tertiary;
+            const name = feature.get('name');
+            const ref = feature.get('ref');
             
-            // Skip rendering tunnels if not enabled in config
-            if (isTunnel && !(config.showTunnels === true)) {
+            // Skip rendering tunnels for now
+            if (isTunnel) {
                 return [];
-            }
-            
-            // Define road styles based on OpenMapTiles classes
-            const roadStyles = {
-                'motorway': { color: '#4a80f5', width: 3.0, casing: 4.0, zIndex: 10, label: true },
-                'trunk': { color: '#a8cef7', width: 2.8, casing: 3.8, zIndex: 9, label: true },
-                'primary': { color: '#f7a8a8', width: 2.5, casing: 3.5, zIndex: 8, label: true },
-                'secondary': { color: '#f7d0a8', width: 2.2, casing: 3.0, zIndex: 7, label: true },
-                'tertiary': { color: '#f7f7a8', width: 2.0, casing: 2.5, zIndex: 6, label: true },
-                'minor': { color: '#f7f7f7', width: 1.5, casing: 0, zIndex: 5, label: false },
-                'service': { color: '#f0f0f0', width: 1.0, casing: 0, zIndex: 4, label: false },
-                'track': { color: '#e0e0a0', width: 1.0, casing: 0, zIndex: 3, label: false, dash: [2, 2] },
-                'path': { color: '#d0d0d0', width: 0.8, casing: 0, zIndex: 2, label: false, dash: [3, 3] },
-                'pedestrian': { color: '#e0e0e0', width: 0.8, casing: 0, zIndex: 1, label: false, dash: [5, 3] }
-            };
-            
-            // Get the appropriate style for this road
-            let roadStyle = roadStyles[roadClass] || roadStyles.minor;
-            
-            // Adjust for link roads (ramps)
-            if (isLink) {
-                roadStyle = {
-                    ...roadStyle,
-                    width: Math.max(1.0, roadStyle.width * 0.8),
-                    casing: Math.max(0, (roadStyle.casing || 0) * 0.8)
-                };
             }
             
             const styles = [];
             
-            // Add road casing (for major roads)
-            if (roadStyle.casing > 0) {
+            // Main road casing (wider, slightly transparent)
+            if (['motorway', 'trunk', 'primary', 'secondary'].includes(roadType)) {
                 styles.push(new ol.style.Style({
                     stroke: new ol.style.Stroke({
                         color: 'rgba(0, 0, 0, 0.3)',
-                        width: roadStyle.casing,
+                        width: roadStyle.width * 1.5,
                         lineCap: 'round',
                         lineJoin: 'round'
                     }),
-                    zIndex: roadStyle.zIndex * 10 + 1
+                    zIndex: 1
                 }));
             }
             
             // Main road fill
             styles.push(new ol.style.Style({
                 stroke: new ol.style.Stroke({
-                    color: isTunnel ? adjustColor(roadStyle.color, 20) : roadStyle.color,
+                    color: roadStyle.color,
                     width: roadStyle.width,
                     lineCap: 'round',
-                    lineJoin: 'round',
-                    lineDash: isTunnel ? [2, 2] : (roadStyle.dash || null)
+                    lineJoin: 'round'
                 }),
-                zIndex: roadStyle.zIndex * 10 + 2
+                zIndex: 2
             }));
             
-            // For bridges, add a highlight effect
+            // For bridges, make the line slightly wider and lighter
             if (isBridge) {
-                styles.push(new ol.style.Style({
-                    stroke: new ol.style.Stroke({
-                        color: adjustColor(roadStyle.color, 20),
-                        width: roadStyle.width * 1.2,
-                        lineCap: 'round',
-                        lineJoin: 'round'
-                    }),
-                
-                }));
+                styles[styles.length - 1].getStroke().setWidth(roadStyle.width * 1.1);
+                styles[styles.length - 1].getStroke().setColor(adjustColor(roadStyle.color, 15));
             }
             
             // Add road labels for named or numbered roads
             const label = getFeatureLabel(feature, '{name} {ref}');
-            if (label && roadStyle.label) {
-                const isMajorRoad = ['motorway', 'trunk', 'primary', 'secondary'].includes(roadClass);
+            if (label) {
+                const isMajorRoad = ['motorway', 'trunk', 'primary', 'secondary'].includes(roadType);
                 const fontSize = isMajorRoad ? 10 : 9;
-                const textColor = isMajorRoad ? '#ffffff' : '#000000';
+                const textColor = isMajorRoad ? '#ffffff' : roadStyle.textColor || '#000000';
                 const haloColor = isMajorRoad ? 'rgba(0, 0, 0, 0.7)' : 'rgba(255, 255, 255, 0.8)';
                 
                 // Only show labels at appropriate zoom levels
@@ -622,260 +456,25 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
                         text: createTextStyle({
                             text: label,
                             font: {
-                                size: isMajorRoad ? 11 : 10,
-                                weight: isMajorRoad ? 'bold' : 'normal',
-                                family: 'Arial, sans-serif'
+                                size: fontSize,
+                                weight: isMajorRoad ? 'bold' : 'normal'
                             },
-                            color: isMajorRoad ? '#ffffff' : '#333333',
-                            haloColor: isMajorRoad ? '#000000' : 'rgba(255, 255, 255, 0.8)',
-                            haloWidth: isMajorRoad ? 2 : 1.5,
-                            placement: isMajorRoad ? 'line' : 'point',
-                            maxAngle: isMajorRoad ? 0.8 : 0.3,
-                            textBaseline: 'middle',
-                            textAlign: 'center',
-                            padding: isMajorRoad ? [1, 1, 1, 1] : [2, 4, 2, 4],
+                            color: textColor,
+                            haloColor: haloColor,
+                            haloWidth: isMajorRoad ? 3 : 2,
+                            placement: 'line',
+                            maxAngle: 0.5, // ~28.6 degrees in radians
                             maxResolution: isMajorRoad ? 10 : 5,
-                            offsetY: isMajorRoad ? 0 : 12,
-                            overflow: true,
-                            spacing: isMajorRoad ? 1.1 : 1,
-                            backgroundFill: isMajorRoad ? null : {
-                                color: 'rgba(255, 255, 255, 0.7)'
-                            },
-                            backgroundStroke: isMajorRoad ? null : {
-                                color: 'rgba(200, 200, 200, 0.5)',
-                                width: 0.5
-                            }
-                        }, config),
-                        zIndex: roadStyle.zIndex * 10 + 4
-                    }));
-                }
-            }
-            
-            return styles;
-        }
-        
-        // POI (Point of Interest) styling - OpenMapTiles schema
-        if (layer === 'poi') {
-            const poiClass = feature.get('class');
-            const poiSubclass = feature.get('subclass');
-            const poiRank = parseInt(feature.get('rank') || '0', 10);
-            const name = getFeatureLabel(feature, '{name}');
-            
-            if (!poiClass) return [];
-            
-            const styles = [];
-            const minZoom = 14 + Math.min(3, Math.floor(poiRank / 10));
-            
-            // Only show POIs at appropriate zoom levels based on their rank
-            if (resolution > 19.1 / Math.pow(2, minZoom)) {
-                return [];
-            }
-            
-            // Define POI colors by class
-            const poiColors = {};
-            poiColors.restaurant = '#ff6b6b';
-            poiColors.cafe = '#ff9f43';
-            poiColors.bar = '#feca57';
-            poiColors.pub = '#feca57';
-            poiColors.fast_food = '#ff9f43';
-            poiColors.food_court = '#ff9f43';
-            poiColors.biergarten = '#feca57';
-            poiColors.school = '#54a0ff';
-            poiColors.university = '#54a0ff';
-            poiColors.college = '#54a0ff';
-            poiColors.kindergarten = '#5f27cd';
-            poiColors.library = '#54a0ff';
-            poiColors.hospital = '#ff6b6b';
-            poiColors.pharmacy = '#ff9f43';
-            poiColors.doctors = '#ff9f43';
-            poiColors.dentist = '#54a0ff';
-            poiColors.veterinary = '#54a0ff';
-            poiColors.bank = '#1dd1a1';
-            poiColors.atm = '#1dd1a1';
-            poiColors.police = '#2e86de';
-            poiColors.fire_station = '#ee5253';
-            poiColors.post_office = '#5f27cd';
-            poiColors.courthouse = '#5f27cd';
-            poiColors.embassy = '#5f27cd';
-            poiColors.townhall = '#5f27cd';
-            poiColors.prison = '#5f27cd';
-            poiColors.theatre = '#5f27cd';
-            poiColors.cinema = '#5f27cd';
-            poiColors.nightclub = '#5f27cd';
-            poiColors.arts_centre = '#5f27cd';
-            poiColors.casino = '#5f27cd';
-            poiColors.music = '#9e9ac8';
-            poiColors.stadium = '#e6550d';
-            poiColors.art_gallery = '#9e9ac8';
-            poiColors.clothing_store = '#7bccc8';
-            poiColors.swimming = '#6baed6';
-            poiColors.castle = '#bdbdbd';
-            poiColors.atm = '#969696';
-            poiColors.fuel = '#636363';
-            poiColors.default = '#969696';
-            
-            const poiColor = poiColors[poiClass] || poiColors.default;
-            
-            // Get icon name based on class and subclass
-            let iconName = 'marker';
-            
-            // Create icon mapping with all POI types
-            const iconMapping = {
-                // Food and drink
-                cafe: 'cafe',
-                fast_food: 'fast-food',
-                restaurant: 'restaurant',
-                bar: 'bar',
-                pub: 'beer',
-                ice_cream: 'ice-cream',
-                food_court: 'restaurant',
-                biergarten: 'beer',
-                // Add other POI mappings here
-                bank: 'bank',
-                'atm': 'atm',
-                'hospital': 'hospital',
-                'pharmacy': 'pharmacy',
-                'dentist': 'dentist',
-                'doctors': 'doctors',
-                'veterinary': 'veterinary',
-                'post_office': 'post',
-                'library': 'library',
-                'townhall': 'town-hall',
-                'courthouse': 'courthouse',
-                'embassy': 'embassy',
-                'police': 'police',
-                'fire_station': 'fire-station',
-                'prison': 'prison',
-                'recycling': 'recycling',
-                'waste_basket': 'waste-basket',
-                'waste_disposal': 'waste-disposal',
-                'car_wash': 'car-wash',
-                'car_rental': 'car-rental',
-                'bicycle_rental': 'bicycle-rental',
-                'taxi': 'taxi',
-                'parking': 'parking',
-                'charging_station': 'charging-station',
-                'cinema': 'cinema',
-                'theatre': 'theatre',
-                'nightclub': 'nightclub',
-                'casino': 'casino',
-                'arts_centre': 'art-gallery',
-                'gallery': 'art-gallery',
-                'museum': 'museum',
-                'information': 'information',
-                'toilets': 'toilets',
-                'fountain': 'fountain',
-                'hunting_stand': 'hunting-stand',
-                'telephone': 'telephone',
-                'clock': 'clock',
-                'emergency_phone': 'emergency-phone',
-                'fire_extinguisher': 'fire-extinguisher',
-                'defibrillator': 'defibrillator',
-                'drinking_water': 'drinking-water',
-                'water_point': 'water-point',
-                shower: 'shower',
-                bench: 'bench',
-                post_box: 'post-box'
-            };
-
-            // Add restaurant types to icon mapping
-            [
-                'chinese', 'indian', 'italian', 'japanese', 'mexican', 'pizza', 'thai',
-                'vietnamese', 'sushi', 'barbecue', 'steak_house', 'seafood', 'breakfast',
-                'burger', 'chicken', 'grill', 'noodle', 'sandwich', 'vegetarian', 'kebab',
-                'french', 'greek', 'spanish', 'turkish', 'lebanese', 'moroccan', 'african',
-                'american', 'argentinian', 'asian', 'austrian', 'belgian', 'brazilian',
-                'caribbean', 'english', 'ethiopian', 'fish_and_chips', 'indonesian',
-                'international', 'korean', 'mediterranean', 'middle_eastern', 'persian',
-                'portuguese', 'russian', 'scandinavian', 'tapas'
-            ].forEach(function(type) {
-                iconMapping[`restaurant_${type}`] = 'restaurant';
-            });
-
-            // Set icon name based on class and subclass
-            if (poiClass && iconMapping[poiClass]) {
-                iconName = iconMapping[poiClass];
-            } else if (poiSubclass && iconMapping[poiSubclass]) {
-                iconName = iconMapping[poiSubclass];
-            }
-            
-            // Create POI icon style
-            try {
-                const iconStyle = getIconStyle(iconName, config, {
-                    color: poiColor,
-                    scale: 0.7,
-                    anchor: [0.5, 1],
-                    anchorXUnits: 'fraction',
-                    anchorYUnits: 'fraction',
-                    opacity: 0.9
-                });
-                
-                styles.push(new ol.style.Style({
-                    image: iconStyle,
-                    zIndex: 50 + poiRank // Higher z-index for more important POIs
-                }));
-                
-                // Add text label for POI if name exists
-                if (name && resolution < 10) {
-                    const label = getFeatureLabel(feature, '{name}');
-                    if (label) {
-                        styles.push(new ol.style.Style({
-                            text: createTextStyle({
-                                text: label,
-                                font: {
-                                    size: 10,
-                                    weight: 'bold'
-                                },
-                                color: '#000',
-                                haloColor: 'rgba(255, 255, 255, 0.8)',
-                                haloWidth: 2,
-                                offsetY: 16, // Increased offset to place label below icon
-                                offsetX: 0,
-                                textBaseline: 'hanging', // Align to top of text
-                                textAlign: 'center',
-                                maxResolution: 5, // Only show at higher zoom levels
-                                padding: [3, 6, 3, 6], // Slightly larger padding
-                                backgroundFill: {
-                                    color: 'rgba(255, 255, 255, 0.9)'
-                                },
-                                backgroundStroke: {
-                                    color: 'rgba(200, 200, 200, 0.7)',
-                                    width: 1
-                                },
-                                placement: 'point',
-                                maxAngle: 0, // Keep text horizontal
-                                overflow: true
-                            }, config),
-                            zIndex: 1001 + poiRank // Slightly higher than icon
-                        }));
-                    }
-                }
-            } catch (e) {
-                console.warn(`Failed to create icon style for POI: ${poiClass}/${poiSubclass}`, e);
-                
-                // Fallback to simple circle and text if icon loading fails
-                styles.push(new ol.style.Style({
-                    image: new ol.style.Circle({
-                        radius: 5,
-                        fill: new ol.style.Fill({
-                            color: poiColor
-                        }),
-                        stroke: new ol.style.Stroke({
-                            color: '#ffffff',
-                            width: 1
-                        })
-                    }),
-                    zIndex: 50 + poiRank
-                }));
-                
-                if (name && resolution < 10) {
-                    styles.push(new ol.style.Style({
-                        text: createTextStyle({
-                            text: name,
-                            font: { size: 10 },
-                            color: '#000000',
-                            offsetY: -12,
-                            maxResolution: 5
+                            textBaseline: 'alphabetic',
+                            textAlign: 'center',
+                            padding: isMajorRoad ? [2, 4, 2, 4] : [1, 2, 1, 2],
+                            backgroundFill: isMajorRoad ? {
+                                color: 'rgba(0, 0, 0, 0.3)'
+                            } : null,
+                            backgroundStroke: isMajorRoad ? {
+                                color: 'rgba(0, 0, 0, 0.2)',
+                                width: 1
+                            } : null
                         }, config)
                     }));
                 }
@@ -884,126 +483,154 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
             return styles;
         }
         
-        // Boundaries (OpenMapTiles schema)
+        // Boundaries
         if (layer === 'boundary') {
+            const name = feature.get('name');
             const adminLevel = parseInt(feature.get('admin_level') || '0', 10);
             const boundaryType = feature.get('boundary') || '';
-            const maritime = feature.get('maritime') === '1' || feature.get('maritime') === 1;
-            const disputed = feature.get('disputed') === '1' || feature.get('disputed') === 1 || 
-                           feature.get('dispute') === '1' || feature.get('dispute') === 1;
             const styles = [];
             
             // Define boundary style based on type and admin level
             let boundaryStyle = {
                 stroke: new ol.style.Stroke({
-                    color: maritime ? '#4a80f5' : '#777777',
-                    width: 0.8
+                    color: colors.boundary.administrative,
+                    width: 0.8,
+                    lineDash: [4, 2]
                 }),
-                zIndex: 10
+                zIndex: 1
             };
-
-            // Adjust style based on admin level and type
-            if (adminLevel > 0) {
-                boundaryStyle.stroke.width = adminLevel / 2;
-                boundaryStyle.stroke.lineDash = disputed ? [4, 2] : [];
+            
+            // National boundaries
+            if (cls === 'national' || adminLevel <= 2) {
+                boundaryStyle.stroke.color = colors.boundary.national;
+                boundaryStyle.stroke.width = 1.5;
+                boundaryStyle.stroke.lineDash = [6, 3];
+                boundaryStyle.zIndex = 3;
+            } 
+            // State/regional boundaries
+            else if (adminLevel <= 4) {
+                boundaryStyle.stroke.color = '#666666';
+                boundaryStyle.stroke.width = 1;
+                boundaryStyle.stroke.lineDash = [5, 3];
+                boundaryStyle.zIndex = 2;
             }
-
-            styles.push(new ol.style.Style(boundaryStyle));
+            // Protected areas
+            else if (boundaryType === 'protected_area' || cls === 'protected_area') {
+                boundaryStyle.stroke.color = colors.boundary.protected_area;
+                boundaryStyle.stroke.width = 1;
+                boundaryStyle.stroke.lineDash = [3, 3];
+                boundaryStyle.zIndex = 1;
+            }
+            
+            // Only show boundaries at appropriate zoom levels
+            const showBoundary = resolution < (adminLevel <= 2 ? 100 : adminLevel <= 4 ? 50 : 10);
+            if (showBoundary) {
+                styles.push(new ol.style.Style(boundaryStyle));
+                
+                // Add label for named boundaries (countries, states, etc.)
+                if (name && (adminLevel <= 4 || boundaryType === 'protected_area')) {
+                    const isNational = adminLevel <= 2;
+                    const textColor = boundaryType === 'protected_area' ? colors.boundary.protected_area : '#666666';
+                    
+                    styles.push(new ol.style.Style({
+                        text: createTextStyle({
+                            text: name,
+                            font: {
+                                size: isNational ? 11 : 10,
+                                weight: isNational ? 'bold' : 'normal'
+                            },
+                            color: textColor,
+                            haloColor: 'rgba(255, 255, 255, 0.7)',
+                            haloWidth: isNational ? 3 : 2,
+                            placement: 'line',
+                            maxAngle: 0.7,
+                            maxResolution: isNational ? 20 : 10,
+                            textBaseline: 'middle',
+                            textAlign: 'center'
+                        }, config)
+                    }));
+                }
+            }
+            
             return styles;
         }
-
-        // POI icon mapping
-        const iconMapping = {
-            // Default icon names based on OpenMapTiles schema
-            'restaurant': 'restaurant',
-            'cafe': 'cafe',
-            'bar': 'bar',
-            'pub': 'beer',
-            'fast_food': 'fast-food',
-            'food_court': 'fast-food',
-            'biergarten': 'beer',
-            'school': 'school',
-            'university': 'college',
-            'college': 'college',
-            'kindergarten': 'kindergarten',
-            'library': 'library',
-            'hospital': 'hospital',
-            'pharmacy': 'pharmacy',
-            'doctors': 'doctor',
-            'dentist': 'dentist',
-            'veterinary': 'veterinary',
-            'bank': 'bank',
-            'atm': 'atm',
-            'police': 'police',
-            'fire_station': 'fire-station',
-            'post_office': 'post',
-            'courthouse': 'courthouse',
-            'embassy': 'embassy',
-            'townhall': 'town-hall',
-            'prison': 'prison',
-            'theatre': 'theatre',
-            'cinema': 'cinema',
-            'nightclub': 'night-club',
-            'arts_centre': 'art-gallery',
-            'casino': 'casino',
-            'music': 'music',
-            'stadium': 'stadium',
-            'art_gallery': 'art-gallery',
-            'clothing_store': 'clothing-store',
-            'swimming': 'swimming',
-            'castle': 'castle',
-            'fuel': 'fuel',
-            'emergency_phone': 'emergency-phone',
-            'fire_extinguisher': 'fire-extinguisher',
-            'defibrillator': 'defibrillator',
-            'drinking_water': 'drinking-water',
-            'water_point': 'water-point'
-        };
-
-        // Default style (fallback) - with label if available
-        const styles = [new ol.style.Style({
-            fill: new ol.style.Fill({
-                color: 'rgba(200, 200, 200, 0.3)'
-            }),
-            stroke: new ol.style.Stroke({
-                color: 'rgba(100, 100, 100, 0.5)',
-                width: 0.5
-            })
-        })];
-
-        // Add label for any feature with a name or ref
-        const label = getFeatureLabel(feature);
-        if (label) {
-            styles.push(new ol.style.Style({
-                text: createTextStyle({
-                    text: label,
-                    font: {
-                        size: 9,
-                        weight: 'normal'
-                    },
-                    color: '#333',
-                    haloColor: 'rgba(255, 255, 255, 0.7)',
-                    haloWidth: 2,
-                    offsetY: 10,
-                    textBaseline: 'middle',
-                    textAlign: 'center',
-                    maxResolution: 10
-                }, config)
-            }));
-        }
         
-        return styles;
     } catch (error) {
-        console.error('Error in vector tile style function:', error);
-        return [new ol.style.Style({
-            fill: new ol.style.Fill({
-                color: 'rgba(200, 200, 200, 0.3)'
-            }),
-            stroke: new ol.style.Stroke({
-                color: 'rgba(255, 0, 0, 0.5)',
-                width: 1
-            })
-        })];
+        console.error('Error styling feature:', error, feature);
+        // POI (Point of Interest) styling
+        const poiType = feature.get('amenity') || feature.get('shop') || 
+                       feature.get('tourism') || feature.get('office') || 
+                       feature.get('building') ? 'poi' : null;
+        
+        if (poiType) {
+            const poiColor = colors.poi[
+                feature.get('amenity') ? 'amenity' : 
+                feature.get('shop') ? 'shop' :
+                feature.get('tourism') ? 'tourism' :
+                feature.get('office') ? 'office' :
+                feature.get('building') ? 'building' : 'default'
+            ];
+            
+            const styles = [];
+            
+            // Get icon name based on POI type
+            let iconName = 'marker';
+            if (feature.get('amenity') === 'cafe') iconName = 'cafe';
+            else if (feature.get('amenity') === 'restaurant') iconName = 'restaurant';
+            else if (feature.get('shop')) iconName = 'shop';
+            else if (feature.get('tourism') === 'hotel') iconName = 'lodging';
+            else if (feature.get('office')) iconName = 'commercial';
+            
+            // Add icon style if available
+            const iconStyle = getIconStyle(iconName, config, {
+                size: 1,
+                color: poiColor,
+                opacity: 0.9
+            });
+            
+            if (iconStyle) {
+                styles.push(new ol.style.Style({
+                    image: iconStyle
+                }));
+            } else {
+                // Fallback to circle if no icon available
+                styles.push(new ol.style.Style({
+                    image: new ol.style.Circle({
+                        radius: 5,
+                        fill: new ol.style.Fill({
+                            color: poiColor
+                        }),
+                        stroke: new ol.style.Stroke({
+                            color: '#fff',
+                            width: 1
+                        })
+                    })
+                }));
+            }
+            
+            // Add label for POI
+            const label = getFeatureLabel(feature, '{name}');
+            if (label) {
+                styles.push(new ol.style.Style({
+                    text: createTextStyle({
+                        text: label,
+                        font: {
+                            size: 10,
+                            weight: 'normal'
+                        },
+                        color: '#000',
+                        haloColor: '#fff',
+                        haloWidth: 2,
+                        offsetY: 12,
+                        textBaseline: 'top',
+                        textAlign: 'center',
+                        maxResolution: 5 // Only show at higher zoom levels
+                    }, config)
+                }));
+            }
+            
+            return styles;
+        }
     }
 
     // Default style (fallback) - with label if available
