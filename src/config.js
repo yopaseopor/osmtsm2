@@ -126,7 +126,7 @@ var config = {
 						const z = tileCoord[0];
 						const x = tileCoord[1];
 						const y = -tileCoord[2] - 1;
-						const tileUrl = `https://tile${1 + (x + y) % 4}.openfreemap.org/tiles/v1/${z}/${x}/${y}.pbf`;
+						const tileUrl = 'https://tile${1 + (x + y) % 4}.openfreemap.org/tiles/v1/${z}/${x}/${y}.pbf';
 						
 						fetch(tileUrl)
 							.then(response => response.arrayBuffer())
