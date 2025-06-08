@@ -103,47 +103,41 @@ var config = {
 			})()
 		}),
 
-		// MapTiler Vector Tiles (TileJSON format)
+		// OpenFreeMap Vector Tiles (TileJSON)
 		new ol.layer.VectorTile({
-			title: 'MapTiler Vector (TileJSON)',
+			title: 'OpenFreeMap Vector',
 			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
 			visible: true,
 			opacity: 1.0,
 			source: new ol.source.VectorTile({
-				projection: 'EPSG:3857',
 				format: new ol.format.MVT(),
-				url: 'https://api.maptiler.com/tiles/v3/{z}/{x}/{y}.pbf?key=tKDOqJGURiimBRaaKrDJ',
+				url: 'https://tile{1-4}.openfreemap.org/tiles/v1/{z}/{x}/{y}.pbf',
 				tileGrid: ol.tilegrid.createXYZ({
 					minZoom: 0,
 					maxZoom: 14
 				}),
 				attributions: [
-					'<a href="https://www.maptiler.com/copyright/" target="_blank">MapTiler</a>',
-					'<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>'
+					'<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>',
+					'<a href="https://openfreemap.org/" target="_blank">OpenFreeMap</a>',
+					'<a href="https://www.maptiler.com/copyright/" target="_blank">MapTiler</a>'
 				]
 			}),
 			style: (function() {
-				// Reuse the same style configuration as the MVT layer
+				// Use the vector tile style function with OpenFreeMap configuration
 				return function(feature, resolution) {
 					if (window.vectorTileStyle) {
 						try {
-							return window.vectorTileStyle(feature, resolution, window.maptilerStyleConfig);
+							// Use existing style config or fallback to default
+							const styleConfig = window.maptilerStyleConfig || {};
+							return window.vectorTileStyle(feature, resolution, styleConfig);
 						} catch (e) {
-							console.error('Error in vectorTileStyle (TileJSON):', e);
+							console.error('Error in vectorTileStyle (OpenFreeMap):', e);
 							return [];
 						}
 					}
 					return [];
 				};
 			})()
-		}),
-
-		// OpenFreeMap Vector Tiles (Liberty style)
-		new ol.layer.Group({
-			title: 'OpenFreeMap (Liberty)',
-			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
-			visible: false,
-			opacity: 1.0
 		}),
 
 		new ol.layer.Tile({
