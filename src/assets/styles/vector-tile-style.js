@@ -398,7 +398,11 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
 
         // Transportation (roads, paths, etc.)
         if (layer === 'transportation') {
-            const roadType = cls || 'tertiary';
+            // Get the highway type from the feature properties
+            const highwayType = feature.get('highway');
+            // Use the highway type if available, otherwise fall back to cls or 'tertiary'
+            const roadType = highwayType || cls || 'tertiary';
+            // Get the style for this road type, defaulting to tertiary if not found
             const roadStyle = colors.highway[roadType] || colors.highway.tertiary;
             const name = feature.get('name');
             const ref = feature.get('ref');
