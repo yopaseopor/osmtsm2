@@ -561,18 +561,11 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
     } catch (error) {
         console.error('Error styling feature:', error, feature);
         // POI (Point of Interest) styling
-        const poiType = feature.get('amenity') || feature.get('shop') || 
-                       feature.get('tourism') || feature.get('office') || 
-                       feature.get('building') ? 'poi' : null;
+        const poiTypes = ['amenity', 'shop', 'tourism', 'office', 'building'];
+        const poiType = poiTypes.find(type => feature.get(type));
         
         if (poiType) {
-            const poiColor = colors.poi[
-                feature.get('amenity') ? 'amenity' : 
-                feature.get('shop') ? 'shop' :
-                feature.get('tourism') ? 'tourism' :
-                feature.get('office') ? 'office' :
-                feature.get('building') ? 'building' : 'default'
-            ];
+            const poiColor = colors.poi[poiType] || colors.poi.default;
             
             const styles = [];
             
