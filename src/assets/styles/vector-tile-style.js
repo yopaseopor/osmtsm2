@@ -261,24 +261,62 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
                 const fontSize = isRiver ? 10 : 11;
                 const textColor = isRiver ? 'rgba(0, 0, 128, 0.9)' : 'rgba(0, 0, 128, 0.8)';
                 
-                styles.push(new ol.style.Style({
-                    text: createTextStyle({
-                        text: name,
-                        font: {
-                            style: 'italic',
-                            size: fontSize,
-                            weight: isRiver ? 'normal' : 'bold'
-                        },
-                        color: textColor,
-                        haloColor: 'rgba(255, 255, 255, 0.7)',
-                        haloWidth: 2,
-                        offsetY: isRiver ? 0 : -10,
-                        textBaseline: isRiver ? 'middle' : 'bottom',
-                        textAlign: 'center',
-                        placement: isRiver ? 'line' : 'point',
-                        maxResolution: isRiver ? 5 : 10
-                    }, config)
-                }));
+                // For rivers, align text along the line
+                if (isRiver) {
+                    styles.push(new ol.style.Style({
+                        text: createTextStyle({
+                            text: name,
+                            font: {
+                                style: 'italic',
+                                size: fontSize,
+                                weight: 'normal'
+                            },
+                            color: textColor,
+                            haloColor: 'rgba(255, 255, 255, 0.7)',
+                            haloWidth: 2,
+                            placement: 'line',
+                            maxAngle: 0.5, // ~28.6 degrees in radians
+                            textBaseline: 'middle',
+                            textAlign: 'center',
+                            repeat: 200, // Repeat label every 200px
+                            maxResolution: 5,
+                            backgroundFill: {
+                                color: 'rgba(255, 255, 255, 0.5)'
+                            },
+                            backgroundStroke: {
+                                color: 'rgba(200, 200, 200, 0.3)',
+                                width: 0.5
+                            }
+                        }, config)
+                    }));
+                } else {
+                    // For lakes and other water bodies, use point placement
+                    styles.push(new ol.style.Style({
+                        text: createTextStyle({
+                            text: name,
+                            font: {
+                                style: 'italic',
+                                size: fontSize,
+                                weight: 'bold'
+                            },
+                            color: textColor,
+                            haloColor: 'rgba(255, 255, 255, 0.7)',
+                            haloWidth: 2,
+                            offsetY: -10,
+                            textBaseline: 'bottom',
+                            textAlign: 'center',
+                            placement: 'point',
+                            maxResolution: 10,
+                            backgroundFill: {
+                                color: 'rgba(255, 255, 255, 0.5)'
+                            },
+                            backgroundStroke: {
+                                color: 'rgba(200, 200, 200, 0.3)',
+                                width: 0.5
+                            }
+                        }, config)
+                    }));
+                }
             }
             
             return styles;
@@ -544,7 +582,7 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
                         lineCap: 'round',
                         lineJoin: 'round'
                     }),
-                    zIndex: roadStyle.zIndex * 10 + 3
+                
                 }));
             }
             
@@ -572,10 +610,10 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
                             haloWidth: isMajorRoad ? 3 : 2,
                             placement: 'line',
                             maxAngle: 0.5, // ~28.6 degrees in radians
-                            maxResolution: isMajorRoad ? 10 : 5,
-                            textBaseline: 'alphabetic',
+                            textBaseline: 'middle',
                             textAlign: 'center',
                             padding: isMajorRoad ? [2, 4, 2, 4] : [1, 2, 1, 2],
+                            maxResolution: isMajorRoad ? 10 : 5,
                             backgroundFill: isMajorRoad ? {
                                 color: 'rgba(0, 0, 0, 0.3)'
                             } : null,
@@ -585,6 +623,223 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
                             } : null
                         }, config),
                         zIndex: roadStyle.zIndex * 10 + 4
+                    }));
+                }
+            }
+            
+            return styles;
+        }
+        
+        // POI (Point of Interest) styling - OpenMapTiles schema
+        if (layer === 'poi') {
+            const poiClass = feature.get('class');
+            const poiSubclass = feature.get('subclass');
+            const poiRank = parseInt(feature.get('rank') || '0', 10);
+            const name = getFeatureLabel(feature, '{name}');
+            
+            if (!poiClass) return [];
+            
+            const styles = [];
+            const minZoom = 14 + Math.min(3, Math.floor(poiRank / 10));
+            
+            // Only show POIs at appropriate zoom levels based on their rank
+            if (resolution > 19.1 / Math.pow(2, minZoom)) {
+                return [];
+            }
+            
+            // Get POI color based on class
+            const poiColors = {
+                'shop': '#7bccc8',
+                'office': '#7bccc8',
+                'town_hall': '#bdbdbd',
+                'golf': '#74c476',
+                'fast_food': '#fd8d3c',
+                'park': '#74c476',
+                'bus': '#6a51a3',
+                'railway': '#6a51a3',
+                'aerialway': '#6a51a3',
+                'entrance': '#969696',
+                'campsite': '#74c476',
+                'laundry': '#9e9ac8',
+                'grocery': '#a1d99b',
+                'library': '#9ecae1',
+                'college': '#9ecae1',
+                'lodging': '#e6550d',
+                'ice_cream': '#fd8d3c',
+                'post': '#9e9ac8',
+                'cafe': '#fd8d3c',
+                'school': '#9ecae1',
+                'alcohol_shop': '#8c6bb1',
+                'bar': '#8c6bb1',
+                'harbor': '#6baed6',
+                'car': '#3182bd',
+                'hospital': '#e6550d',
+                'cemetery': '#74c476',
+                'attraction': '#fd8d3c',
+                'beer': '#8c6bb1',
+                'music': '#9e9ac8',
+                'stadium': '#e6550d',
+                'art_gallery': '#9e9ac8',
+                'clothing_store': '#7bccc8',
+                'swimming': '#6baed6',
+                'castle': '#bdbdbd',
+                'atm': '#969696',
+                'fuel': '#636363',
+                'default': '#969696'
+            };
+            
+            const poiColor = poiColors[poiClass] || poiColors.default;
+            
+            // Get icon name based on class and subclass
+            let iconName = 'marker';
+            const iconMapping = {
+                // Food and drink
+                'cafe': 'cafe',
+                'fast_food': 'fast-food',
+                'restaurant': 'restaurant',
+                'bar': 'bar',
+                'pub': 'beer',
+                'ice_cream': 'ice-cream',
+                'food_court': 'restaurant',
+                'biergarten': 'beer',
+                'restaurant': 'restaurant',
+                'restaurant_chinese': 'restaurant',
+                'restaurant_indian': 'restaurant',
+                'restaurant_italian': 'restaurant',
+                'restaurant_japanese': 'restaurant',
+                'restaurant_mexican': 'restaurant',
+                'restaurant_pizza': 'restaurant',
+                'restaurant_thai': 'restaurant',
+                'restaurant_vietnamese': 'restaurant',
+                'restaurant_sushi': 'restaurant',
+                'restaurant_barbecue': 'restaurant',
+                'restaurant_steak_house': 'restaurant',
+                'restaurant_seafood': 'restaurant',
+                'restaurant_breakfast': 'restaurant',
+                'restaurant_burger': 'restaurant',
+                'restaurant_chicken': 'restaurant',
+                'restaurant_grill': 'restaurant',
+                'restaurant_noodle': 'restaurant',
+                'restaurant_sandwich': 'restaurant',
+                'restaurant_vegetarian': 'restaurant',
+                'restaurant_kebab': 'restaurant',
+                'restaurant_sushi': 'restaurant',
+                'restaurant_french': 'restaurant',
+                'restaurant_greek': 'restaurant',
+                'restaurant_spanish': 'restaurant',
+                'restaurant_turkish': 'restaurant',
+                'restaurant_lebanese': 'restaurant',
+                'restaurant_moroccan': 'restaurant',
+                'restaurant_african': 'restaurant',
+                'restaurant_american': 'restaurant',
+                'restaurant_argentinian': 'restaurant',
+                'restaurant_asian': 'restaurant',
+                'restaurant_austrian': 'restaurant',
+                'restaurant_belgian': 'restaurant',
+                'restaurant_brazilian': 'restaurant',
+                'restaurant_caribbean': 'restaurant',
+                'restaurant_english': 'restaurant',
+                'restaurant_ethiopian': 'restaurant',
+                'restaurant_fish_and_chips': 'restaurant',
+                'restaurant_indian': 'restaurant',
+                'restaurant_indonesian': 'restaurant',
+                'restaurant_international': 'restaurant',
+                'restaurant_italian': 'restaurant',
+                'restaurant_japanese': 'restaurant',
+                'restaurant_korean': 'restaurant',
+                'restaurant_mediterranean': 'restaurant',
+                'restaurant_middle_eastern': 'restaurant',
+                'restaurant_persian': 'restaurant',
+                'restaurant_portuguese': 'restaurant',
+                'restaurant_russian': 'restaurant',
+                'restaurant_scandinavian': 'restaurant',
+                'restaurant_spanish': 'restaurant',
+                'restaurant_steak_house': 'restaurant',
+                'restaurant_sushi': 'restaurant',
+                'restaurant_tapas': 'restaurant',
+                'restaurant_thai': 'restaurant',
+                'restaurant_turkish': 'restaurant',
+                'restaurant_vietnamese': 'restaurant'
+            };
+            
+            // Set icon name based on class and subclass
+            if (poiClass && iconMapping[poiClass]) {
+                iconName = iconMapping[poiClass];
+            } else if (poiSubclass && iconMapping[poiSubclass]) {
+                iconName = iconMapping[poiSubclass];
+            }
+            
+            // Create POI icon style
+            try {
+                const iconStyle = getIconStyle(iconName, config, {
+                    color: poiColor,
+                    scale: 0.7,
+                    anchor: [0.5, 1],
+                    anchorXUnits: 'fraction',
+                    anchorYUnits: 'fraction',
+                    opacity: 0.9
+                });
+                
+                styles.push(new ol.style.Style({
+                    image: iconStyle,
+                    zIndex: 50 + poiRank // Higher z-index for more important POIs
+                }));
+                
+                // Add text label for POI if name exists
+                if (name && resolution < 10) {
+                    const textStyle = createTextStyle({
+                        text: name,
+                        font: {
+                            size: 10,
+                            weight: 'normal'
+                        },
+                        color: '#000000',
+                        haloColor: 'rgba(255, 255, 255, 0.8)',
+                        haloWidth: 2,
+                        offsetY: -20,
+                        padding: [2, 4],
+                        backgroundFill: {
+                            color: 'rgba(255, 255, 255, 0.7)'
+                        },
+                        backgroundStroke: {
+                            color: 'rgba(0, 0, 0, 0.2)',
+                            width: 1
+                        },
+                        maxResolution: 5
+                    }, config);
+                    
+                    styles.push(new ol.style.Style({
+                        text: textStyle,
+                        zIndex: 51 + poiRank // Slightly higher than icon
+                    }));
+                }
+            } catch (e) {
+                console.warn(`Failed to create icon style for POI: ${poiClass}/${poiSubclass}`, e);
+                
+                // Fallback to simple circle and text if icon loading fails
+                styles.push(new ol.style.Style({
+                    image: new ol.style.Circle({
+                        radius: 5,
+                        fill: new ol.style.Fill({
+                            color: poiColor
+                        }),
+                        stroke: new ol.style.Stroke({
+                            color: '#ffffff',
+                            width: 1
+                        })
+                    }),
+                    zIndex: 50 + poiRank
+                }));
+                
+                if (name && resolution < 10) {
+                    styles.push(new ol.style.Style({
+                        text: createTextStyle({
+                            text: name,
+                            font: { size: 10 },
+                            color: '#000000',
+                            offsetY: -12,
+                            maxResolution: 5
+                        }, config)
                     }));
                 }
             }
@@ -662,82 +917,98 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
                     }));
                 }
             }
-            
-            return styles;
-        }
         
-    } catch (error) {
-        console.error('Error styling feature:', error, feature);
-        // POI (Point of Interest) styling
-        const poiType = feature.get('amenity') || feature.get('shop') || 
-                       feature.get('tourism') || feature.get('office') || 
-                       feature.get('building') ? 'poi' : null;
-        
-        if (poiType) {
-            const poiColor = colors.poi[
-                feature.get('amenity') ? 'amenity' : 
-                feature.get('shop') ? 'shop' :
-                feature.get('tourism') ? 'tourism' :
-                feature.get('office') ? 'office' :
-                feature.get('building') ? 'building' : 'default'
-            ];
-            
-            const styles = [];
-            
-            // Get icon name based on POI type
-            let iconName = 'marker';
-            if (feature.get('amenity') === 'cafe') iconName = 'cafe';
-            else if (feature.get('amenity') === 'restaurant') iconName = 'restaurant';
-            else if (feature.get('shop')) iconName = 'shop';
-            else if (feature.get('tourism') === 'hotel') iconName = 'lodging';
-            else if (feature.get('office')) iconName = 'commercial';
-            
-            // Add icon style if available
-            const iconStyle = getIconStyle(iconName, config, {
-                size: 1,
-                color: poiColor,
-                opacity: 0.9
-            });
-            
-            if (iconStyle) {
-                styles.push(new ol.style.Style({
-                    image: iconStyle
-                }));
-            } else {
-                // Fallback to circle if no icon available
-                styles.push(new ol.style.Style({
-                    image: new ol.style.Circle({
-                        radius: 5,
-                        fill: new ol.style.Fill({
-                            color: poiColor
-                        }),
-                        stroke: new ol.style.Stroke({
-                            color: '#fff',
-                            width: 1
-                        })
-                    })
-                }));
-            }
-            
-            // Add label for POI
-            const label = getFeatureLabel(feature, '{name}');
-            if (label) {
-                styles.push(new ol.style.Style({
-                    text: createTextStyle({
-                        text: label,
-                        font: {
-                            size: 10,
-                            weight: 'normal'
-                        },
-                        color: '#000',
-                        haloColor: '#fff',
-                        haloWidth: 2,
-                        offsetY: 12,
-                        textBaseline: 'top',
-                        textAlign: 'center',
-                        maxResolution: 5 // Only show at higher zoom levels
-                    }, config)
-                }));
+        // Services
+        'bank': 'bank',
+        'atm': 'atm',
+        'hospital': 'hospital',
+        'pharmacy': 'pharmacy',
+        'dentist': 'dentist',
+        'doctors': 'doctors',
+        'veterinary': 'veterinary',
+        'post_office': 'post',
+        'library': 'library',
+        'townhall': 'town-hall',
+        'courthouse': 'courthouse',
+        'embassy': 'embassy',
+        'police': 'police',
+        'fire_station': 'fire-station',
+        'prison': 'prison',
+        'recycling': 'recycling',
+        'waste_basket': 'waste-basket',
+        'waste_disposal': 'waste-disposal',
+        'car_wash': 'car-wash',
+        'car_rental': 'car-rental',
+        'bicycle_rental': 'bicycle-rental',
+        'taxi': 'taxi',
+        'parking': 'parking',
+        'charging_station': 'charging-station',
+        'cinema': 'cinema',
+        'theatre': 'theatre',
+        'nightclub': 'nightclub',
+        'casino': 'casino',
+        'arts_centre': 'art-gallery',
+        'gallery': 'art-gallery',
+        'museum': 'museum',
+        'information': 'information',
+        'toilets': 'toilets',
+        'fountain': 'fountain',
+        'hunting_stand': 'hunting-stand',
+        'telephone': 'telephone',
+        'clock': 'clock',
+        'emergency_phone': 'emergency-phone',
+        'fire_extinguisher': 'fire-extinguisher',
+        'defibrillator': 'defibrillator',
+        'drinking_water': 'drinking-water',
+        'water_point': 'water-point',
+        'shower': 'shower',
+        'bench': 'bench',
+        'post_box': 'post-box'
+    };
+    
+    iconName = iconMapping[poiSubclass] || iconMapping[poiClass] || 'marker';
+    
+    // Add icon style
+    const iconStyle = getIconStyle(iconName, config, {
+        size: 1,
+        color: poiColor,
+        opacity: 0.9
+    });
+    
+    if (iconStyle) {
+        styles.push(new ol.style.Style({
+            image: iconStyle,
+            zIndex: 1000 + poiRank
+        }));
+    } else {
+        // Fallback to circle if no icon available
+        styles.push(new ol.style.Style({
+            image: new ol.style.Circle({
+                radius: 5,
+                fill: new ol.style.Fill({
+                    color: poiColor
+                }),
+                stroke: new ol.style.Stroke({
+                    color: '#fff',
+                    width: 1
+                })
+            }),
+            zIndex: 1000 + poiRank
+        }));
+                            textAlign: 'center',
+                            maxResolution: 5, // Only show at higher zoom levels
+                            padding: [2, 4, 2, 4],
+                            backgroundFill: {
+                                color: 'rgba(255, 255, 255, 0.7)'
+                            },
+                            backgroundStroke: {
+                                color: 'rgba(200, 200, 200, 0.5)',
+                                width: 1
+                            }
+                        }, config),
+                        zIndex: 1001 + poiRank // Slightly higher than icon
+                    }));
+                }
             }
             
             return styles;
