@@ -4,19 +4,28 @@
  * OSM Cat config
  */
 
-import {VectorTile as VectorTileLayer} from 'ol/layer.js';
+import VectorTileLayer from 'ol/layer/VectorTile.js';
 import VectorTileSource from 'ol/source/VectorTile.js';
 import MVT from 'ol/format/MVT.js';
 import {createXYZ} from 'ol/tilegrid.js';
-import {Tile as TileLayer, Vector as VectorLayer} from 'ol/layer.js';
-import {OSM, Vector as VectorSource, XYZ, TileWMS, TileJSON} from 'ol/source.js';
+import TileLayer from 'ol/layer/Tile.js';
+import VectorLayer from 'ol/layer/Vector.js';
+import OSM from 'ol/source/OSM.js';
+import VectorSource from 'ol/source/Vector.js';
+import XYZ from 'ol/source/XYZ.js';
+import TileWMS from 'ol/source/TileWMS.js';
+import TileJSON from 'ol/source/TileJSON.js';
 import TopoJSON from 'ol/format/TopoJSON.js';
+import {fromLonLat} from 'ol/proj.js';
+
+// Export the config object
+export { config };
 
 //@@ Ruta de imágenes
 export const imgSrc = 'src/img/';
 
-//@@Coordenadas LONgitud LATitud Rotación Zoom, Zoom de la geolocalización, unidades
-export const config = {
+// Create a configuration object
+const config = {
 	initialConfig: {
 		lon: 1.59647,
 		lat: 41.69689,

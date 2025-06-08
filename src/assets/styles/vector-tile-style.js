@@ -541,7 +541,7 @@ function vectorTileStyle(feature, resolution, config = {}) {
                     const isNational = adminLevel <= 2;
                     const textColor = boundaryType === 'protected_area' ? colors.boundary.protected_area : '#666666';
                     
-                    styles.push(new ol.style.Style({
+                    styles.push(new Style({
                         text: createTextStyle({
                             text: name,
                             font: {

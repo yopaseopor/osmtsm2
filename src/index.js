@@ -1,4 +1,10 @@
-/* global config, ol */
+import {Map, View} from 'ol';
+import {defaults as defaultControls, ScaleLine, ZoomSlider, Control} from 'ol/control.js';
+import {bbox as bboxStrategy} from 'ol/loadingstrategy.js';
+import {fromLonLat} from 'ol/proj.js';
+import {config} from './config.js';
+
+// Initialize jQuery when DOM is ready
 $(function () {
     // --- Layer Searcher Integration ---
     // Remove early addition of 'Translated' overlay group here. It will be added after all overlays are loaded.
@@ -324,7 +330,7 @@ $(function () {
 				};
 				client.send(query);
 			},
-			strategy: ol.loadingstrategy.bbox
+			strategy: bboxStrategy
 		});
 	}
 		vectorProperties['source'] = vectorSource;
@@ -401,17 +407,33 @@ $(function () {
 
 	}
 
-	var view = new ol.View({
-		center: ol.proj.fromLonLat([config.initialConfig.lon, config.initialConfig.lat]), // Transform coordinate from EPSG:3857 to EPSG:4326
-		rotation: config.initialConfig.rotation,
-		zoom: config.initialConfig.zoom
-	});
+	// Create map view
+var view = new View({
+    center: fromLonLat([config.initialConfig.lon, config.initialConfig.lat]),
+    rotation: config.initialConfig.rotation,
+    zoom: config.initialConfig.zoom
+});
 
-	const map = new ol.Map({
-		layers: config.layers,
-		target: 'map',
-		view: view
-	});
+// Create map instance
+const map = new Map({
+    layers: config.layers || [],
+    target: 'map',
+    view: view,
+    controls: defaultControls({
+        zoom: true,
+        rotate: true,
+        attribution: true
+    })
+});
+
+// Initialize layers
+if (config.layers && config.layers.length > 0) {
+    // Set first layer as visible by default if none are visible
+    const hasVisibleLayer = config.layers.some(layer => layer.getVisible && layer.getVisible());
+    if (!hasVisibleLayer && config.layers[0]) {
+        config.layers[0].setVisible(true);
+    }
+}
 
 	// Initialize Nominatim search
 	initNominatimSearch(map);
@@ -560,8 +582,8 @@ $(function () {
 		},
 		projection: 'EPSG:4326'
 	}));
-	map.addControl(new ol.control.ScaleLine({units: config.initialConfig.units}));
-	map.addControl(new ol.control.ZoomSlider());
+	map.addControl(new ScaleLine({units: config.initialConfig.units}));
+	map.addControl(new ZoomSlider());
 	
 
 
@@ -648,7 +670,7 @@ $(function () {
 		}));
 		return container[0];
 	};
-	map.addControl(new ol.control.Control({
+	map.addControl(new Control({
 		element: infoControlBuild()
 	}));
 	
@@ -680,7 +702,7 @@ $(function () {
 		}));
 		return container[0];
 	};
-	map.addControl(new ol.control.Control({
+	map.addControl(new Control({
 		element: permalinkControlBuild()
 	}));
 
@@ -697,7 +719,7 @@ $(function () {
 		}));
 		return container[0];
 	};
-	map.addControl(new ol.control.Control({
+	map.addControl(new Control({
 		element: rotateleftControlBuild()
 	}));
 
@@ -713,7 +735,7 @@ $(function () {
 		}));
 		return container[0];
 	};
-	map.addControl(new ol.control.Control({
+	map.addControl(new Control({
 		element: rotaterightControlBuild()
 	}));
 
