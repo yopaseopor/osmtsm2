@@ -167,16 +167,16 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
         
         // Road colors and widths - widths represent the visual hierarchy from widest to thinnest
         highway: {
-            motorway: { color: '#00008b', width: 4.0, textColor: '#0000ff' },  // widest - major highways
-            trunk: { color: '#8b0000', width: 3.5, textColor: '#8b0000' },      // major roads
-            primary: { color: '#ff0000', width: 3.0, textColor: '#ff0000' },    // main roads
-            secondary: { color: '#006400', width: 2.5, textColor: '#006400' },  // secondary roads
-            tertiary: { color: '#ffa500', width: 2.0, textColor: '#ff8c00' },   // local connecting roads
-            unclassified: { color: '#ff00ff', width: 1.5, textColor: '#ff00ff' }, // minor roads
-            residential: { color: '#666666', width: 1.2, textColor: '#666666' }, // residential streets
-            service: { color: '#999999', width: 0.8, textColor: '#999999' },    // service roads
-            path: { color: '#aaaaaa', width: 0.5, textColor: '#666666' },       // paths and trails
-            pedestrian: { color: '#cccccc', width: 0.6, textColor: '#666666' }  // pedestrian ways
+            motorway: { color: '#00008b', width: 6.0, textColor: '#0000ff' },  // widest - major highways
+            trunk: { color: '#8b0000', width: 5.0, textColor: '#8b0000' },      // major roads
+            primary: { color: '#ff0000', width: 4.0, textColor: '#ff0000' },    // main roads
+            secondary: { color: '#006400', width: 3.0, textColor: '#006400' },  // secondary roads
+            tertiary: { color: '#ffa500', width: 2.5, textColor: '#ff8c00' },   // local connecting roads
+            unclassified: { color: '#ff00ff', width: 2.0, textColor: '#ff00ff' }, // minor roads
+            residential: { color: '#666666', width: 1.8, textColor: '#666666' }, // residential streets
+            service: { color: '#999999', width: 1.2, textColor: '#999999' },    // service roads
+            path: { color: '#aaaaaa', width: 0.8, textColor: '#666666' },       // paths and trails
+            pedestrian: { color: '#cccccc', width: 1.0, textColor: '#666666' }  // pedestrian ways
         },
         
         // Text styles
