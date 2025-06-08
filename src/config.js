@@ -103,35 +103,36 @@ var config = {
 			})()
 		}),
 
-		// OpenFreeMap Vector Tiles (TileJSON)
+		// OpenFreeMap Vector Tiles
 		new ol.layer.VectorTile({
 			title: 'OpenFreeMap Vector',
 			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
 			visible: true,
-			opacity: 1.0,
 			source: new ol.source.VectorTile({
+				projection: 'EPSG:3857',
 				format: new ol.format.MVT(),
-				url: 'https://tile{1-4}.openfreemap.org/tiles/v1/{z}/{x}/{y}.pbf',
 				tileGrid: ol.tilegrid.createXYZ({
 					minZoom: 0,
 					maxZoom: 14
 				}),
+				tileUrlFunction: function(tileCoord) {
+					const z = tileCoord[0];
+					const x = tileCoord[1];
+					const y = -tileCoord[2] - 1;
+					return `https://tile${1 + (x + y) % 4}.openfreemap.org/tiles/v1/${z}/${x}/${y}.pbf`;
+				},
 				attributions: [
 					'<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>',
-					'<a href="https://openfreemap.org/" target="_blank">OpenFreeMap</a>',
-					'<a href="https://www.maptiler.com/copyright/" target="_blank">MapTiler</a>'
+					'<a href="https://openfreemap.org/" target="_blank">OpenFreeMap</a>'
 				]
 			}),
 			style: (function() {
-				// Use the vector tile style function with OpenFreeMap configuration
 				return function(feature, resolution) {
 					if (window.vectorTileStyle) {
 						try {
-							// Use existing style config or fallback to default
-							const styleConfig = window.maptilerStyleConfig || {};
-							return window.vectorTileStyle(feature, resolution, styleConfig);
+							return window.vectorTileStyle(feature, resolution, window.maptilerStyleConfig || {});
 						} catch (e) {
-							console.error('Error in vectorTileStyle (OpenFreeMap):', e);
+							console.error('Error in vectorTileStyle:', e);
 							return [];
 						}
 					}
