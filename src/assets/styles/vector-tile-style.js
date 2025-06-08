@@ -623,27 +623,24 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
                             text: label,
                             font: {
                                 size: fontSize,
-                                weight: isMajorRoad ? 'bold' : 'normal'
+                                weight: 'bold',
+                                family: 'Arial, sans-serif'
                             },
-                            color: textColor,
-                            haloColor: haloColor,
-                            haloWidth: isMajorRoad ? 3 : 2,
+                            color: '#ffffff', // White text
+                            haloColor: '#000000', // Black halo for contrast
+                            haloWidth: 2,
                             placement: 'line',
-                            maxAngle: 0.8, // ~45 degrees in radians (allows more curve following)
+                            maxAngle: 0.8, // ~45 degrees in radians for smooth curves
                             textBaseline: 'middle',
                             textAlign: 'center',
-                            padding: isMajorRoad ? [2, 6, 2, 6] : [1, 3, 1, 3],
+                            padding: [1, 1, 1, 1],
                             maxResolution: isMajorRoad ? 10 : 5,
-                            offsetY: 0, // Keep text centered on the line
-                            overflow: true, // Allow text to extend beyond the line
-                            spacing: 1.2, // Slight spacing between characters for better readability on curves
-                            backgroundFill: isMajorRoad ? {
-                                color: 'rgba(0, 0, 0, 0.4)'
-                            } : null,
-                            backgroundStroke: isMajorRoad ? {
-                                color: 'rgba(0, 0, 0, 0.3)',
-                                width: 0.5
-                            } : null
+                            offsetY: 0,
+                            overflow: true,
+                            spacing: 1.1, // Slightly tighter letter spacing
+                            // Remove background fill and stroke for cleaner look
+                            backgroundFill: null,
+                            backgroundStroke: null
                         }, config),
                         zIndex: roadStyle.zIndex * 10 + 4
                     }));
