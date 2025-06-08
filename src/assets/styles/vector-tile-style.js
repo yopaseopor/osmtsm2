@@ -622,25 +622,29 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
                         text: createTextStyle({
                             text: label,
                             font: {
-                                size: fontSize,
-                                weight: 'bold',
+                                size: isMajorRoad ? 11 : 10,
+                                weight: isMajorRoad ? 'bold' : 'normal',
                                 family: 'Arial, sans-serif'
                             },
-                            color: '#ffffff', // White text
-                            haloColor: '#000000', // Black halo for contrast
-                            haloWidth: 2,
-                            placement: 'line',
-                            maxAngle: 0.8, // ~45 degrees in radians for smooth curves
+                            color: isMajorRoad ? '#ffffff' : '#333333',
+                            haloColor: isMajorRoad ? '#000000' : 'rgba(255, 255, 255, 0.8)',
+                            haloWidth: isMajorRoad ? 2 : 1.5,
+                            placement: isMajorRoad ? 'line' : 'point',
+                            maxAngle: isMajorRoad ? 0.8 : 0.3,
                             textBaseline: 'middle',
                             textAlign: 'center',
-                            padding: [1, 1, 1, 1],
+                            padding: isMajorRoad ? [1, 1, 1, 1] : [2, 4, 2, 4],
                             maxResolution: isMajorRoad ? 10 : 5,
-                            offsetY: 0,
+                            offsetY: isMajorRoad ? 0 : 12,
                             overflow: true,
-                            spacing: 1.1, // Slightly tighter letter spacing
-                            // Remove background fill and stroke for cleaner look
-                            backgroundFill: null,
-                            backgroundStroke: null
+                            spacing: isMajorRoad ? 1.1 : 1,
+                            backgroundFill: isMajorRoad ? null : {
+                                color: 'rgba(255, 255, 255, 0.7)'
+                            },
+                            backgroundStroke: isMajorRoad ? null : {
+                                color: 'rgba(200, 200, 200, 0.5)',
+                                width: 0.5
+                            }
                         }, config),
                         zIndex: roadStyle.zIndex * 10 + 4
                     }));
