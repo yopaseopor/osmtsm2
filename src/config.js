@@ -48,6 +48,8 @@ var config = {
 			title: 'MapTiler Custom Style',
 			iconSrc: imgSrc + 'icones_web/maptiler_logo.png',
 			visible: false,
+			opacity: 1.0,
+			ratio: 1,
 			source: new ol.source.VectorTile({
 				tilePixelRatio: 1,
 				tileGrid: ol.tilegrid.createXYZ({ 
@@ -59,9 +61,20 @@ var config = {
 				attributions: [
 					'<a href="https://www.maptiler.com/copyright/" target="_blank">MapTiler</a>',
 					'<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>'
-				]
+				],
+				crossOrigin: 'anonymous',
+				projection: 'EPSG:3857'
 			}),
-			style: new ol.style.Style() // Will be set by ol-mapbox-style
+			// Basic style as fallback
+			style: new ol.style.Style({
+				fill: new ol.style.Fill({
+					color: 'rgba(200, 200, 200, 0.5)'
+				}),
+				stroke: new ol.style.Stroke({
+					color: '#3399CC',
+					width: 1.25
+				})
+			})
 		}),
 		
 		// MapTiler Vector Tile Layer with enhanced glyph and sprite support

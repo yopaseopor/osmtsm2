@@ -433,6 +433,8 @@ function applyMapTilerStyle() {
         // Only apply style if the layer is visible
         const checkAndApplyStyle = () => {
             if (maptilerLayer.getVisible()) {
+                console.log('Applying MapTiler style...');
+                
                 // Apply the style using the global olms object
                 olms.applyStyle(
                     maptilerLayer,
@@ -440,21 +442,46 @@ function applyMapTilerStyle() {
                     'https://api.maptiler.com/tiles/v3-openmaptiles',
                     { 
                         transformRequest: (url) => {
+                            console.log('Requesting:', url);
                             // Add API key to all requests if needed
                             if (url.includes('api.maptiler.com') && !url.includes('key=')) {
-                                return { url: `${url}${url.includes('?') ? '&' : '?'}key=zPfUiHM0YgsZAlrKRPNg` };
+                                const newUrl = `${url}${url.includes('?') ? '&' : '?'}key=zPfUiHM0YgsZAlrKRPNg`;
+                                console.log('Modified URL to:', newUrl);
+                                return { url: newUrl };
                             }
                             return { url };
                         },
                         // Get the sprite and glyphs from the style
                         getFonts: (fontStack) => {
+                            console.log('Getting fonts for:', fontStack);
                             return ['Noto Sans Regular', 'Arial Unicode MS Regular'];
-                        }
+                        },
+                        // Ensure CORS is handled
+                        crossOrigin: 'anonymous'
                     }
-                ).then(() => {
-                    console.log('MapTiler style applied successfully');
+                ).then((style) => {
+                    console.log('MapTiler style applied successfully', style);
+                    // Force a re-render
+                    maptilerLayer.changed();
+                    map.renderSync();
                 }).catch(error => {
                     console.error('Error applying MapTiler style:', error);
+                    // Try to apply a basic style as fallback
+                    try {
+                        const style = new ol.style.Style({
+                            fill: new ol.style.Fill({
+                                color: 'rgba(200, 200, 200, 0.5)'
+                            }),
+                            stroke: new ol.style.Stroke({
+                                color: '#3399CC',
+                                width: 1.25
+                            })
+                        });
+                        maptilerLayer.setStyle(style);
+                        console.log('Applied fallback style');
+                    } catch (fallbackError) {
+                        console.error('Failed to apply fallback style:', fallbackError);
+                    }
                 });
             }
         };
