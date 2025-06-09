@@ -43,11 +43,11 @@ var config = {
 	},
 	//@@ Mapas de fondo
 	layers: [
-		// Shortbread Vector Tile Layer with OpenMapTiles
+		// Shortbread Vector Tile Layer with OpenMapTiles - Basic configuration
 		new ol.layer.VectorTile({
 			title: 'Shortbread Style',
 			iconSrc: imgSrc + 'icones_web/maptiler_logo.png',
-			visible: true, // Make visible by default
+			visible: false, // Start with layer hidden until we apply the style
 			opacity: 1.0,
 			type: 'base',
 			source: new ol.source.VectorTile({
