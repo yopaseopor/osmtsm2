@@ -43,6 +43,41 @@ var config = {
 	},
 	//@@ Mapas de fondo
 	layers: [
+		// OSMF Vector Tile Layer - Official OSM vector tiles
+		new ol.layer.VectorTile({
+			title: 'OSMF Vector',
+			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
+			visible: false,
+			opacity: 1.0,
+			source: new ol.source.VectorTile({
+				projection: 'EPSG:3857',
+				format: new ol.format.MVT(),
+				url: 'https://tile.openstreetmap.org/data/v3/{z}/{x}/{y}.pbf',
+				tileGrid: ol.tilegrid.createXYZ({
+					minZoom: 0,
+					maxZoom: 20
+				}),
+				attributions: [
+					'<a href="https://www.openstreetmap.org/copyright" target="_blank"> OpenStreetMap contributors</a>',
+					'<a href="https://www.openstreetmap.org/fixthemap" target="_blank"> Fix the Map</a>',
+					'<a href="https://donate.openstreetmap.org/" target="_blank"> Donate</a>'
+				]
+			}),
+			style: function(feature, resolution) {
+				// Basic style for OSMF vector tiles
+				const style = new ol.style.Style({
+					stroke: new ol.style.Stroke({
+						color: '#666',
+						width: 1
+					}),
+					fill: new ol.style.Fill({
+						color: 'rgba(255, 255, 255, 0.6)'
+					})
+				});
+				return style;
+			}
+		}),
+
 		// Shortbread Vector Tile Layer - Clean, minimalist style
 		new ol.layer.VectorTile({
 			title: 'Shortbread',
