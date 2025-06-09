@@ -81,7 +81,7 @@ var config = {
 		new ol.layer.VectorTile({
 			title: 'MapTiler Vector',
 			iconSrc: imgSrc + 'icones_web/maptiler_logo.png',
-			visible: true,
+			visible: false,
 			opacity: 1.0,
 			source: new ol.source.VectorTile({
 				projection: 'EPSG:3857',
