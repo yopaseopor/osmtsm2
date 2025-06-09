@@ -43,6 +43,40 @@ var config = {
 	},
 	//@@ Mapas de fondo
 	layers: [
+		// Shortbread Vector Tile Layer - Clean, minimalist style
+		new ol.layer.VectorTile({
+			title: 'Shortbread',
+			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
+			visible: false,
+			opacity: 1.0,
+			source: new ol.source.VectorTile({
+				projection: 'EPSG:3857',
+				format: new ol.format.MVT(),
+				url: 'https://tiles.leisure.place/data/shortbread/{z}/{x}/{y}.pbf',
+				tileGrid: ol.tilegrid.createXYZ({
+					minZoom: 0,
+					maxZoom: 20
+				}),
+				attributions: [
+					'<a href="https://github.com/geofabrik/shortbread-mapnik" target="_blank">Shortbread</a>',
+					'<a href="https://www.openstreetmap.org/copyright" target="_blank"> OpenStreetMap contributors</a>'
+				]
+			}),
+			style: function(feature, resolution) {
+				// Simple style function for Shortbread
+				const style = new ol.style.Style({
+					stroke: new ol.style.Stroke({
+						color: '#666',
+						width: 1
+					}),
+					fill: new ol.style.Fill({
+						color: 'rgba(255, 255, 255, 0.6)'
+					})
+				});
+				return style;
+			}
+		}),
+
 		// MapTiler Vector Tile Layer with enhanced glyph and sprite support
 		new ol.layer.VectorTile({
 			title: 'MapTiler Vector',
