@@ -5364,7 +5364,151 @@ export function leisureOverlays() {
             stroke: stroke
         });
         return style;
- 
+     }
+},
+{
+    group: getTranslation('dance'),
+	title: "Arthur Murray Dance Center",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Arthur Murray Dance Center\"][\"brand:wikidata\"=\"Q110718332\"][\"dance:teaching\"=\"yes\"][\"leisure\"=\"dance\"][\"name\"=\"Arthur Murray Dance Center\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('dance'),
+	title: "Fred Astaire Dance Studios",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Fred Astaire Dance Studios\"][\"brand:wikidata\"=\"Q5494489\"][\"dance:teaching\"=\"yes\"][\"leisure\"=\"dance\"][\"name\"=\"Fred Astaire Dance Studios\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Fred_Astaire_Dance_Studios_(5424897022).jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Fred_Astaire_Dance_Studios_(5424897022).jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('dog_park'),
+	title: "Kamp K9",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"KOA\"][\"brand:wikidata\"=\"Q16988635\"][\"leisure\"=\"dog_park\"][\"name\"=\"Kamp K9\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/KOA_campgrounds_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/KOA_campgrounds_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('escape_game'),
+	title: "Escapology",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Escapology\"][\"brand:wikidata\"=\"Q64137163\"][\"leisure\"=\"escape_game\"][\"name\"=\"Escapology\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+
  }
         }
     ];
