@@ -318,20 +318,19 @@ var config = {
 			}),
 			visible: false
 		}),
-		
-				new ol.layer.Tile({
+		new ol.layer.Tile({
 			title: 'ES_CAT_ICGC - Actual',
 			iconSrc: imgSrc + 'icones_web/logo_icgc.png',
 			source: new ol.source.TileWMS({
-				attributions: 'Map data &copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap Contributors</a>,Tiles &copy; ICGC &mdash; Source: ICGC',
+				attributions: 'Map data &copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap Contributors</a>, Tiles &copy; ICGC &mdash; Source: ICGC',
 				url: 'https://geoserveis.icgc.cat/servei/catalunya/orto-territorial/wms?',
-				params: {'LAYERS': 'ortofoto_color_vigent', 'VERSION': '1.3.0'}
+				params: {'LAYERS': 'ortofoto_color_vigent', 'VERSION': '1.3.0'},
+				transition: 0
 			}),
 			visible: false
-
 		}),
-				new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
-				title: 'OSM Vector Tiles',
+		new ol.layer.VectorTile({
+			title: 'OSM Vector Tiles',
 			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
 			source: new ol.source.VectorTile({
 				tilePixelRatio: 1,
@@ -397,43 +396,16 @@ var config = {
 			},
 			visible: false
 		}),
-
-		// ArcGIS Vector Tile Layer
 		new ol.layer.VectorTile({
-			title: 'Vector Tile',
-			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
-			source: new ol.source.VectorTile({
-        tilePixelRatio: 1, // oversampling when > 1
-        tileGrid: ol.tilegrid.createXYZ({maxZoom: 19}),
-        format: new ol.format.TopoJSON(),
-        url: 'https://basemaps.arcgis.com/arcgis/rest/services/World_Basemap_v2/VectorTileServer/tile/{z}/{y}/{x}.pbf',
-		crossOrigin: 'anonymous'
-      }),
-			visible: false
-		}),
-		
-		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
-			title: 'Vector Tilekiln2',
-			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
-			source: new ol.source.TileJSON({
-        tileSize: 512,
-        crossOrigin: 'anonymous',
-        url: 'https://pnorman.github.io/tilekiln-shortbread-demo/colorful.json'
-      }),
-			visible: false
-		}),
-		
-		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
 			title: 'Vector OSM',
 			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
 			source: new ol.source.TileJSON({
-        tileSize: 512,
-        crossOrigin: 'anonymous',
-        url: 'https://vector.openstreetmap.org/shortbread_v1/tilejson.json'
-      }),
+				tileSize: 512,
+				crossOrigin: 'anonymous',
+				url: 'https://vector.openstreetmap.org/shortbread_v1/tilejson.json'
+			}),
 			visible: false
 		}),
-
 		new ol.layer.Tile({
 			title: 'Google Maps',
 			iconSrc: imgSrc + 'icones_web/gmaps_logo_layer.png',
