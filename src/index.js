@@ -436,8 +436,8 @@ function applyMapTilerStyle() {
                 // Apply the style using the global olms object
                 olms.applyStyle(
                     maptilerLayer,
-                    'https://api.maptiler.com/maps/01974bfb-e42c-7989-8c6c-77a0369aba23/style.json?key=zPfUiHM0YgsZAlrKRPNg',
-                    'https://api.maptiler.com/maps/vt',
+                    'https://api.maptiler.com/maps/streets/style.json?key=zPfUiHM0YgsZAlrKRPNg',
+                    'https://api.maptiler.com/tiles/v3-openmaptiles',
                     { 
                         transformRequest: (url) => {
                             // Add API key to all requests if needed

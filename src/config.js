@@ -43,16 +43,19 @@ var config = {
 	},
 	//@@ Mapas de fondo
 	layers: [
-		// MapTiler Vector Tile Layer with custom style URL
+		// MapTiler Vector Tile Layer with custom style URL using v3-openmaptiles
 		new ol.layer.VectorTile({
 			title: 'MapTiler Custom Style',
 			iconSrc: imgSrc + 'icones_web/maptiler_logo.png',
 			visible: false,
 			source: new ol.source.VectorTile({
 				tilePixelRatio: 1,
-				tileGrid: ol.tilegrid.createXYZ({ maxZoom: 22 }),
+				tileGrid: ol.tilegrid.createXYZ({ 
+                    minZoom: 0,
+                    maxZoom: 22 
+                }),
 				format: new ol.format.MVT(),
-				url: 'https://api.maptiler.com/maps/01974bfb-e42c-7989-8c6c-77a0369aba23/tiles/{z}/{x}/{y}/tile.vector.pbf?key=zPfUiHM0YgsZAlrKRPNg',
+				url: 'https://api.maptiler.com/tiles/v3-openmaptiles/{z}/{x}/{y}.pbf?key=zPfUiHM0YgsZAlrKRPNg',
 				attributions: [
 					'<a href="https://www.maptiler.com/copyright/" target="_blank">MapTiler</a>',
 					'<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>'
