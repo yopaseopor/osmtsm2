@@ -409,9 +409,33 @@ $(function () {
 
 	const map = new ol.Map({
 		layers: config.layers,
+		// Store the map in the window for access in style functions
 		target: 'map',
 		view: view
 	});
+
+	// Store map in window for style functions
+	window.map = map;
+
+	// Load MapTiler style for the custom style layer
+	try {
+		// Find the MapTiler Custom Style layer
+		const maptilerLayer = config.layers.find(layer => 
+			layer.get('title') === 'MapTiler Custom Style'
+		);
+
+		if (maptilerLayer) {
+			// Import and use the style loader
+			import('./assets/styles/maptiler-style-loader.js')
+				.then(module => {
+					const styleUrl = 'https://api.maptiler.com/maps/01974bfb-e42c-7989-8c6c-77a0369aba23/style.json?key=zPfUiHM0YgsZAlrKRPNg';
+					module.loadMapTilerStyle(styleUrl, maptilerLayer);
+				})
+				.catch(err => console.error('Error loading MapTiler style loader:', err));
+		}
+	} catch (error) {
+		console.error('Error initializing MapTiler style:', error);
+	}
 
 	// Initialize Nominatim search
 	initNominatimSearch(map);

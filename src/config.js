@@ -53,17 +53,15 @@ var config = {
 				tilePixelRatio: 1,
 				tileGrid: ol.tilegrid.createXYZ({ maxZoom: 22 }),
 				format: new ol.format.MVT(),
-				url: 'https://api.maptiler.com/tiles/v3/{z}/{x}/{y}.pbf?key=zPfUiHM0YgsZAlrKRPNg',
+				url: 'https://api.maptiler.com/maps/01974bfb-e42c-7989-8c6c-77a0369aba23/tiles/{z}/{x}/{y}/tile.vector.pbf?key=zPfUiHM0YgsZAlrKRPNg',
 				transition: 0
 			}),
-			styleUrl: 'https://api.maptiler.com/maps/01974bfb-e42c-7989-8c6c-77a0369aba23/style.json?key=zPfUiHM0YgsZAlrKRPNg',
 			style: function(feature, resolution) {
-				// Use the vector tile style function from the assets
-				return window.vectorTileStyle(feature, resolution, {
-					// You can add custom style overrides here if needed
-					spriteBaseUrl: 'https://api.maptiler.com/maps/01974bfb-e42c-7989-8c6c-77a0369aba23/sprite',
-					glyphsUrl: 'https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=zPfUiHM0YgsZAlrKRPNg',
-				});
+				// This will be set when we load the style
+				if (window.maptilerCustomStyle) {
+					return window.maptilerCustomStyle(feature, resolution);
+				}
+				return [];
 			}
 		}),
 		
