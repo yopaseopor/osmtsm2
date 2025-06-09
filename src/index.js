@@ -438,17 +438,11 @@ function applyMapTilerStyle() {
                 // Apply the style using the global olms object
                 olms.applyStyle(
                     maptilerLayer,
-                    'https://raw.githubusercontent.com/openmaptiles/maptiler-basic-gl-style/master/style.json',
-                    'https://api.maptiler.com/tiles/v3-openmaptiles',
+                    'https://vectortiles.geo.admin.ch/styles/ch.swisstopo.leichte-basiskarte_world.vt/style.json',
+                    'https://vectortiles.geo.admin.ch/tiles/ch.swisstopo.leichte-basiskarte.vt/v003/3857/{z}/{x}/{y}.pbf',
                     { 
                         transformRequest: (url) => {
                             console.log('Requesting:', url);
-                            // Add API key to all requests if needed
-                            if (url.includes('api.maptiler.com') && !url.includes('key=')) {
-                                const newUrl = `${url}${url.includes('?') ? '&' : '?'}key=zPfUiHM0YgsZAlrKRPNg`;
-                                console.log('Modified URL to:', newUrl);
-                                return { url: newUrl };
-                            }
                             return { url };
                         },
                         // Get the sprite and glyphs from the style
