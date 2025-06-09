@@ -4356,7 +4356,1016 @@ export function leisureOverlays() {
             stroke: stroke
         });
         return style;
-            }
+    }
+},
+{
+    group: getTranslation('adult_gaming_centre'),
+	title: "Admiral",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Admiral\"][\"brand:wikidata\"=\"Q25205850\"][\"gambling\"=\"slot_machines\"][\"leisure\"=\"adult_gaming_centre\"][\"name\"=\"Admiral\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('adult_gaming_centre'),
+	title: "L\u00f6wen Play",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"L\u00f6wen Play\"][\"brand:wikidata\"=\"Q22674625\"][\"gambling\"=\"slot_machines\"][\"leisure\"=\"adult_gaming_centre\"][\"name\"=\"L\u00f6wen Play\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/L\u00f6wen_Play,_Aurich_(2019)_04.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/L\u00f6wen_Play,_Aurich_(2019)_04.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('adult_gaming_centre'),
+	title: "MERKUR Slots",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"MERKUR Slots\"][\"brand:wikidata\"=\"Q22000565\"][\"gambling\"=\"slot_machines\"][\"leisure\"=\"adult_gaming_centre\"][\"name\"=\"MERKUR Slots\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('adult_gaming_centre'),
+	title: "P ARK",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"P ARK\"][\"brand:en\"=\"P ARK\"][\"brand:ja\"=\"\u30d4\u30fc\u30a2\u30fc\u30af\"][\"brand:wikidata\"=\"Q11331699\"][\"gambling\"=\"pachinko\"][\"leisure\"=\"adult_gaming_centre\"][\"name\"=\"P ARK\"][\"name:en\"=\"P ARK\"][\"name:ja\"=\"\u30d4\u30fc\u30a2\u30fc\u30af\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('adult_gaming_centre'),
+	title: "\u30ac\u30a4\u30a2",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u30ac\u30a4\u30a2\"][\"brand:en\"=\"GAIA\"][\"brand:ja\"=\"\u30ac\u30a4\u30a2\"][\"brand:wikidata\"=\"Q11295831\"][\"gambling\"=\"pachinko\"][\"leisure\"=\"adult_gaming_centre\"][\"name\"=\"\u30ac\u30a4\u30a2\"][\"name:en\"=\"GAIA\"][\"name:ja\"=\"\u30ac\u30a4\u30a2\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('adult_gaming_centre'),
+	title: "\u30c0\u30a4\u30ca\u30e0",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u30c0\u30a4\u30ca\u30e0\"][\"brand:en\"=\"Dynam\"][\"brand:ja\"=\"\u30c0\u30a4\u30ca\u30e0\"][\"brand:wikidata\"=\"Q10846977\"][\"gambling\"=\"pachinko\"][\"leisure\"=\"adult_gaming_centre\"][\"name\"=\"\u30c0\u30a4\u30ca\u30e0\"][\"name:en\"=\"Dynam\"][\"name:ja\"=\"\u30c0\u30a4\u30ca\u30e0\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('adult_gaming_centre'),
+	title: "\u30de\u30eb\u30cf\u30f3",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u30de\u30eb\u30cf\u30f3\"][\"brand:en\"=\"Maruhan\"][\"brand:ja\"=\"\u30de\u30eb\u30cf\u30f3\"][\"brand:wikidata\"=\"Q1905948\"][\"gambling\"=\"pachinko\"][\"leisure\"=\"adult_gaming_centre\"][\"name\"=\"\u30de\u30eb\u30cf\u30f3\"][\"name:en\"=\"Maruhan\"][\"name:ja\"=\"\u30de\u30eb\u30cf\u30f3\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('amusement_arcade'),
+	title: "Four Quarters",
+    query: "[out:json][timeout:25];(nwr[\"bar\"=\"yes\"][\"brand\"=\"Four Quarters\"][\"brand:wikidata\"=\"Q119701878\"][\"dog\"=\"leashed\"][\"leisure\"=\"amusement_arcade\"][\"name\"=\"Four Quarters\"][\"reservation\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('amusement_arcade'),
+	title: "Laser Game Evolution",
+    query: "[out:json][timeout:25];(nwr[\"bar\"=\"yes\"][\"brand\"=\"Laser Game Evolution\"][\"brand:wikidata\"=\"Q130214296\"][\"leisure\"=\"amusement_arcade\"][\"name\"=\"Laser Game Evolution\"][\"sport\"=\"laser_tag\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Laser_Game_Evolution.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Laser_Game_Evolution.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('amusement_arcade'),
+	title: "Maquinitas",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Maquinitas\"][\"leisure\"=\"amusement_arcade\"][\"name\"=\"Maquinitas\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('amusement_arcade'),
+	title: "NAMCO",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"NAMCO\"][\"brand:en\"=\"NAMCO\"][\"brand:ja\"=\"\u30ca\u30e0\u30b3\"][\"brand:wikidata\"=\"Q111516144\"][\"leisure\"=\"amusement_arcade\"][\"name\"=\"NAMCO\"][\"name:en\"=\"NAMCO\"][\"name:ja\"=\"\u30ca\u30e0\u30b3\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Namco_HQ_at_Shibaura.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Namco_HQ_at_Shibaura.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('amusement_arcade'),
+	title: "Taito Station",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Taito Station\"][\"brand:en\"=\"Taito Station\"][\"brand:ja\"=\"\u30bf\u30a4\u30c8\u30fc\u30b9\u30c6\u30fc\u30b7\u30e7\u30f3\"][\"brand:wikidata\"=\"Q1054844\"][\"leisure\"=\"amusement_arcade\"][\"name\"=\"Taito Station\"][\"name:en\"=\"Taito Station\"][\"name:ja\"=\"\u30bf\u30a4\u30c8\u30fc\u30b9\u30c6\u30fc\u30b7\u30e7\u30f3\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Taito_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Taito_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('amusement_arcade'),
+	title: "Timezone",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Timezone\"][\"brand:wikidata\"=\"Q12521502\"][\"leisure\"=\"amusement_arcade\"][\"name\"=\"Timezone\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Timezone_Arcade_Australia_Old_Logo.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Timezone_Arcade_Australia_Old_Logo.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('amusement_arcade'),
+	title: "Tom's World",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Tom's World\"][\"brand:wikidata\"=\"Q15952961\"][\"leisure\"=\"amusement_arcade\"][\"name\"=\"Tom's World\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Keelung_East_Coast_Store,_Tom's_World_20190112.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Keelung_East_Coast_Store,_Tom's_World_20190112.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('amusement_arcade'),
+	title: "Warpoint",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Warpoint\"][\"leisure\"=\"amusement_arcade\"][\"name\"=\"Warpoint\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('amusement_arcade'),
+	title: "\u30a2\u30c9\u30a2\u30fc\u30ba",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u30a2\u30c9\u30a2\u30fc\u30ba\"][\"brand:en\"=\"Adores\"][\"brand:ja\"=\"\u30a2\u30c9\u30a2\u30fc\u30ba\"][\"brand:wikidata\"=\"Q54843532\"][\"leisure\"=\"amusement_arcade\"][\"name\"=\"\u30a2\u30c9\u30a2\u30fc\u30ba\"][\"name:en\"=\"Adores\"][\"name:ja\"=\"\u30a2\u30c9\u30a2\u30fc\u30ba\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('amusement_arcade'),
+	title: "\u30a2\u30d4\u30ca",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u30a2\u30d4\u30ca\"][\"brand:en\"=\"Apina\"][\"brand:ja\"=\"\u30a2\u30d4\u30ca\"][\"brand:wikidata\"=\"Q55385192\"][\"leisure\"=\"amusement_arcade\"][\"name\"=\"\u30a2\u30d4\u30ca\"][\"name:en\"=\"Apina\"][\"name:ja\"=\"\u30a2\u30d4\u30ca\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('amusement_arcade'),
+	title: "\u30af\u30e9\u30d6\u30bb\u30ac",
+    query: "[out:json][timeout:25];(nwr[\"alt_name\"=\"\u30bb\u30ac\u30ef\u30fc\u30eb\u30c9\"][\"alt_name:en\"=\"Sega World\"][\"alt_name:ja\"=\"\u30bb\u30ac\u30ef\u30fc\u30eb\u30c9\"][\"brand\"=\"\u30af\u30e9\u30d6\u30bb\u30ac\"][\"brand:en\"=\"Club Sega\"][\"brand:ja\"=\"\u30af\u30e9\u30d6\u30bb\u30ac\"][\"brand:wikidata\"=\"Q7446141\"][\"leisure\"=\"amusement_arcade\"][\"name\"=\"\u30af\u30e9\u30d6\u30bb\u30ac\"][\"name:en\"=\"Club Sega\"][\"name:ja\"=\"\u30af\u30e9\u30d6\u30bb\u30ac\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/GENDA_GiGO_Entertainment_Logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/GENDA_GiGO_Entertainment_Logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('amusement_arcade'),
+	title: "\u30bf\u30a4\u30c8\u30fc\u30b9\u30c6\u30fc\u30b7\u30e7\u30f3",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u30bf\u30a4\u30c8\u30fc\u30b9\u30c6\u30fc\u30b7\u30e7\u30f3\"][\"brand:en\"=\"Taito Station\"][\"brand:ja\"=\"\u30bf\u30a4\u30c8\u30fc\u30b9\u30c6\u30fc\u30b7\u30e7\u30f3\"][\"brand:wikidata\"=\"Q1054844\"][\"leisure\"=\"amusement_arcade\"][\"name\"=\"\u30bf\u30a4\u30c8\u30fc\u30b9\u30c6\u30fc\u30b7\u30e7\u30f3\"][\"name:en\"=\"Taito Station\"][\"name:ja\"=\"\u30bf\u30a4\u30c8\u30fc\u30b9\u30c6\u30fc\u30b7\u30e7\u30f3\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Taito_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Taito_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('amusement_arcade'),
+	title: "\u30ca\u30e0\u30b3",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u30ca\u30e0\u30b3\"][\"brand:en\"=\"NAMCO\"][\"brand:ja\"=\"\u30ca\u30e0\u30b3\"][\"brand:wikidata\"=\"Q111516144\"][\"leisure\"=\"amusement_arcade\"][\"name\"=\"\u30ca\u30e0\u30b3\"][\"name:en\"=\"NAMCO\"][\"name:ja\"=\"\u30ca\u30e0\u30b3\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Namco_HQ_at_Shibaura.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Namco_HQ_at_Shibaura.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('amusement_arcade'),
+	title: "\u6e6f\u59c6\u718a\u6b61\u6a02\u4e16\u754c",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u6e6f\u59c6\u718a\u6b61\u6a02\u4e16\u754c\"][\"brand:en\"=\"Tom's World\"][\"brand:wikidata\"=\"Q15952961\"][\"brand:zh\"=\"\u6e6f\u59c6\u718a\u6b61\u6a02\u4e16\u754c\"][\"leisure\"=\"amusement_arcade\"][\"name\"=\"\u6e6f\u59c6\u718a\u6b61\u6a02\u4e16\u754c\"][\"name:en\"=\"Tom's World\"][\"name:zh\"=\"\u6e6f\u59c6\u718a\u6b61\u6a02\u4e16\u754c\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Keelung_East_Coast_Store,_Tom's_World_20190112.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Keelung_East_Coast_Store,_Tom's_World_20190112.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('bowling_alley'),
+	title: "Bowlero",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Bowlero\"][\"brand:wikidata\"=\"Q17102967\"][\"leisure\"=\"bowling_alley\"][\"name\"=\"Bowlero\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('bowling_alley'),
+	title: "Hollywood Bowl",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Hollywood Bowl\"][\"brand:wikidata\"=\"Q80971952\"][\"leisure\"=\"bowling_alley\"][\"name\"=\"Hollywood Bowl\"][\"sport\"=\"10pin\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('bowling_alley'),
+	title: "Round1",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Round1\"][\"brand:wikidata\"=\"Q11346634\"][\"leisure\"=\"bowling_alley\"][\"name\"=\"Round1\"][\"sport\"=\"10pin\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Round1_logo.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Round1_logo.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('bowling_alley'),
+	title: "Strike Bowling Bar",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Strike Bowling Bar\"][\"brand:wikidata\"=\"Q7623769\"][\"leisure\"=\"bowling_alley\"][\"name\"=\"Strike Bowling Bar\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('bowling_alley'),
+	title: "tenpin",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"tenpin\"][\"brand:wikidata\"=\"Q6808144\"][\"leisure\"=\"bowling_alley\"][\"name\"=\"tenpin\"][\"sport\"=\"10pin\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('bowling_alley'),
+	title: "Zone Bowling",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Zone Bowling\"][\"brand:wikidata\"=\"Q85817146\"][\"leisure\"=\"bowling_alley\"][\"name\"=\"Zone Bowling\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('bowling_alley'),
+	title: "\u30e9\u30a6\u30f3\u30c9\u30ef\u30f3",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u30e9\u30a6\u30f3\u30c9\u30ef\u30f3\"][\"brand:en\"=\"ROUND1\"][\"brand:ja\"=\"\u30e9\u30a6\u30f3\u30c9\u30ef\u30f3\"][\"brand:wikidata\"=\"Q11346634\"][\"leisure\"=\"bowling_alley\"][\"name\"=\"\u30e9\u30a6\u30f3\u30c9\u30ef\u30f3\"][\"name:en\"=\"ROUND1\"][\"name:ja\"=\"\u30e9\u30a6\u30f3\u30c9\u30ef\u30f3\"][\"sport\"=\"10pin\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Round1_logo.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Round1_logo.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+ 
+ }
         }
     ];
 }
