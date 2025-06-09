@@ -331,34 +331,75 @@ var config = {
 
 		}),
 				new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
-			title: 'Vector Tile4',
-			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
+				title: 'OSM Vector Tiles',
+			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
 			source: new ol.source.VectorTile({
-        tilePixelRatio: 1, // oversampling when > 1
-        tileGrid: ol.tilegrid.createXYZ({maxZoom: 19}),
-        format: new ol.format.MVT(),
-		attributions: '&copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>',
-        url: 'https://{a-c}.tile.custom-osm-tiles.org/{z}/{x}/{y}.mvt',
-				crossOrigin: 'anonymous'
-      }),
+				tilePixelRatio: 1,
+				tileGrid: ol.tilegrid.createXYZ({
+					minZoom: 0,
+					maxZoom: 19
+				}),
+				format: new ol.format.MVT(),
+				attributions: [
+					'&copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> contributors',
+					'<a href="https://www.openstreetmap.org/copyright" target="_blank">Terms</a>'
+				],
+				url: 'https://{a-c}.tile.openstreetmap.org/data/v3/{z}/{x}/{y}.pbf',
+				tileLoadFunction: function(tile, url) {
+					// Add cache busting to avoid CORS issues
+					const cacheBuster = '?t=' + new Date().getTime();
+					tile.setLoader(function(extent, resolution, projection) {
+						const tileUrl = url + cacheBuster;
+						fetch(tileUrl)
+							.then(response => response.arrayBuffer())
+							.then(buffer => {
+								const format = tile.getFormat();
+								const features = format.readFeatures(buffer, {
+									extent: extent,
+									featureProjection: projection
+								});
+								tile.setFeatures(features);
+								tile.setProjection(projection);
+							})
+							.catch(error => {
+								console.error('Error loading tile:', error);
+								tile.setFeatures([]);
+							});
+					});
+				}
+			}),
+			style: function(feature, resolution) {
+				const layerName = feature.get('layer');
+				const style = new ol.style.Style({
+					fill: new ol.style.Fill({
+						color: 'rgba(255, 255, 255, 0.6)'
+					}),
+					stroke: new ol.style.Stroke({
+						color: '#666',
+						width: 1
+					})
+				});
+
+				// Apply different styles based on layer type
+				switch (layerName) {
+					case 'water':
+						style.getFill().setColor('#a5bfdd');
+						break;
+					case 'landcover':
+						style.getFill().setColor('#f2efe9');
+						break;
+					case 'building':
+						style.getFill().setColor('#e0dcd6');
+						break;
+				}
+
+				return style;
+			},
 			visible: false
 		}),
-		
-		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
-			title: 'Vector Tile3',
-			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
-			source: new ol.source.VectorTile({
-        tilePixelRatio: 1, // oversampling when > 1
-        tileGrid: ol.tilegrid.createXYZ({maxZoom: 19}),
-        format: new ol.format.MVT(),
-		crossOrigin: 'anonymous',
-		attributions: '&copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>',
-        url: 'https://vector.openstreetmap.org/shortbread_v1/{z}/{x}/{y}.mvt'
-      }),
-			visible: false
-		}),
-		
-		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
+
+		// ArcGIS Vector Tile Layer
+		new ol.layer.VectorTile({
 			title: 'Vector Tile',
 			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
 			source: new ol.source.VectorTile({
