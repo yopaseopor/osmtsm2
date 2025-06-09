@@ -43,9 +43,9 @@ var config = {
 	},
 	//@@ Mapas de fondo
 	layers: [
-		// MapTiler Vector Tile Layer with custom style URL using v3-openmaptiles
+		// Shortbread Vector Tile Layer with OpenMapTiles
 		new ol.layer.VectorTile({
-			title: 'MapTiler Custom Style',
+			title: 'Shortbread Style',
 			iconSrc: imgSrc + 'icones_web/maptiler_logo.png',
 			visible: false,
 			opacity: 1.0,

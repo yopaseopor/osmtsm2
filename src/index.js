@@ -417,49 +417,93 @@ const map = new ol.Map({
 // Store map in window for debugging
 window.map = map;
 
-// Function to apply MapTiler style to the custom style layer
-function applyMapTilerStyle() {
+// Function to apply Shortbread style to the vector tile layer
+function applyVectorTileStyle() {
     try {
-        // Find the MapTiler Custom Style layer
-        const maptilerLayer = config.layers.find(layer => 
-            layer.get('title') === 'MapTiler Custom Style'
+        // Find the Shortbread Style layer
+        const vectorLayer = config.layers.find(layer => 
+            layer.get('title') === 'Shortbread Style'
         );
 
-        if (!maptilerLayer) {
-            console.error('MapTiler Custom Style layer not found');
+        if (!vectorLayer) {
+            console.error('Shortbread Style layer not found');
             return;
         }
         
+        // Available Shortbread styles
+        const shortbreadStyles = {
+            'light': 'https://shortbread-tiles.org/styles/shortbread/light/style.json',
+            'dark': 'https://shortbread-tiles.org/styles/shortbread/dark/style.json',
+            'blue-print': 'https://shortbread-tiles.org/styles/shortbread/blue-print/style.json',
+            'blue-print-dark': 'https://shortbread-tiles.org/styles/shortbread/blue-print-dark/style.json',
+            'color-blind': 'https://shortbread-tiles.org/styles/shortbread/color-blind/style.json',
+            'color-blind-dark': 'https://shortbread-tiles.org/styles/shortbread/color-blind-dark/style.json'
+        };
+
+        // Default to light style
+        const selectedStyle = 'light';
+        const styleUrl = shortbreadStyles[selectedStyle];
+        
         // Only apply style if the layer is visible
         const checkAndApplyStyle = () => {
-            if (maptilerLayer.getVisible()) {
-                console.log('Applying MapTiler style...');
+            if (vectorLayer.getVisible()) {
+                console.log(`Applying Shortbread ${selectedStyle} style...`);
                 
                 // Apply the style using the global olms object
                 olms.applyStyle(
-                    maptilerLayer,
-                    'https://vectortiles.geo.admin.ch/styles/ch.swisstopo.leichte-basiskarte_world.vt/style.json',
-                    'https://vectortiles.geo.admin.ch/tiles/ch.swisstopo.leichte-basiskarte.vt/v003/3857/{z}/{x}/{y}.pbf',
+                    vectorLayer,
+                    styleUrl,
+                    'https://api.maptiler.com/tiles/v3-openmaptiles/{z}/{x}/{y}.pbf?key=zPfUiHM0YgsZAlrKRPNg',
                     { 
                         transformRequest: (url) => {
                             console.log('Requesting:', url);
+                            // Add API key to MapTiler requests if needed
+                            if (url.includes('api.maptiler.com') && !url.includes('key=')) {
+                                const newUrl = `${url}${url.includes('?') ? '&' : '?'}key=zPfUiHM0YgsZAlrKRPNg`;
+                                return { url: newUrl };
+                            }
                             return { url };
                         },
                         // Get the sprite and glyphs from the style
                         getFonts: (fontStack) => {
                             console.log('Getting fonts for:', fontStack);
-                            return ['Noto Sans Regular', 'Arial Unicode MS Regular'];
+                            return ['Noto Sans Regular', 'Arial Unicode MS Regular', 'Open Sans Regular'];
                         },
                         // Ensure CORS is handled
                         crossOrigin: 'anonymous'
                     }
                 ).then((style) => {
-                    console.log('MapTiler style applied successfully', style);
+                    console.log('Shortbread style applied successfully', style);
                     // Force a re-render
-                    maptilerLayer.changed();
+                    vectorLayer.changed();
                     map.renderSync();
+                    
+                    // Add style selector to the layer control
+                    addStyleSelector(shortbreadStyles, selectedStyle, (newStyle) => {
+                        if (newStyle !== selectedStyle) {
+                            const newStyleUrl = shortbreadStyles[newStyle];
+                            olms.applyStyle(
+                                vectorLayer,
+                                newStyleUrl,
+                                'https://api.maptiler.com/tiles/v3-openmaptiles/{z}/{x}/{y}.pbf?key=zPfUiHM0YgsZAlrKRPNg',
+                                {
+                                    transformRequest: (url) => ({
+                                        url: url.includes('api.maptiler.com') && !url.includes('key=') 
+                                            ? `${url}${url.includes('?') ? '&' : '?'}key=zPfUiHM0YgsZAlrKRPNg`
+                                            : url
+                                    }),
+                                    getFonts: () => ['Noto Sans Regular', 'Arial Unicode MS Regular', 'Open Sans Regular'],
+                                    crossOrigin: 'anonymous'
+                                }
+                            ).then(() => {
+                                console.log(`Changed to ${newStyle} style`);
+                                vectorLayer.changed();
+                                map.renderSync();
+                            });
+                        }
+                    });
                 }).catch(error => {
-                    console.error('Error applying MapTiler style:', error);
+                    console.error('Error applying Shortbread style:', error);
                     // Try to apply a basic style as fallback
                     try {
                         const style = new ol.style.Style({
@@ -471,7 +515,7 @@ function applyMapTilerStyle() {
                                 width: 1.25
                             })
                         });
-                        maptilerLayer.setStyle(style);
+                        vectorLayer.setStyle(style);
                         console.log('Applied fallback style');
                     } catch (fallbackError) {
                         console.error('Failed to apply fallback style:', fallbackError);
@@ -481,8 +525,8 @@ function applyMapTilerStyle() {
         };
 
         // Apply style when the layer becomes visible
-        maptilerLayer.on('change:visible', () => {
-            if (maptilerLayer.getVisible()) {
+        vectorLayer.on('change:visible', () => {
+            if (vectorLayer.getVisible()) {
                 checkAndApplyStyle();
             }
         });
@@ -490,12 +534,61 @@ function applyMapTilerStyle() {
         // Initial style application
         checkAndApplyStyle();
     } catch (error) {
-        console.error('Error initializing MapTiler style:', error);
+        console.error('Error initializing Shortbread style:', error);
     }
 }
 
-// Apply MapTiler style after a short delay to ensure everything is loaded
-setTimeout(applyMapTilerStyle, 1000);
+// Add style selector to the layer control
+function addStyleSelector(styles, currentStyle, onChange) {
+    // Check if selector already exists
+    if (document.getElementById('style-selector-container')) {
+        return;
+    }
+    
+    const container = document.createElement('div');
+    container.id = 'style-selector-container';
+    container.style.marginTop = '10px';
+    container.style.padding = '5px';
+    container.style.backgroundColor = 'rgba(255, 255, 255, 0.8)';
+    container.style.borderRadius = '4px';
+    
+    const label = document.createElement('label');
+    label.htmlFor = 'style-selector';
+    label.textContent = 'Map Style: ';
+    label.style.marginRight = '5px';
+    
+    const select = document.createElement('select');
+    select.id = 'style-selector';
+    select.style.padding = '3px';
+    select.style.borderRadius = '3px';
+    select.style.border = '1px solid #ccc';
+    
+    // Add style options
+    Object.keys(styles).forEach(styleKey => {
+        const option = document.createElement('option');
+        option.value = styleKey;
+        option.textContent = styleKey.charAt(0).toUpperCase() + styleKey.slice(1).replace(/-/g, ' ');
+        option.selected = styleKey === currentStyle;
+        select.appendChild(option);
+    });
+    
+    // Handle style change
+    select.addEventListener('change', (e) => {
+        onChange(e.target.value);
+    });
+    
+    container.appendChild(label);
+    container.appendChild(select);
+    
+    // Add to the layer control
+    const layerControl = document.querySelector('.layers-control');
+    if (layerControl) {
+        layerControl.appendChild(container);
+    }
+}
+
+// Apply vector tile style after a short delay to ensure everything is loaded
+setTimeout(applyVectorTileStyle, 1000);
 
 	// Initialize Nominatim search
 	initNominatimSearch(map);
