@@ -43,12 +43,13 @@ var config = {
 	},
 	//@@ Mapas de fondo
 	layers: [
-		// OSMF Vector Tile Layer - Official OSM vector tiles
+		// OSMF Vector Tile Layer - Official OSM vector tiles with comprehensive styling
 		new ol.layer.VectorTile({
 			title: 'OSMF Vector',
 			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
-			visible: false,
+			visible: true,  // Set to true to make it visible by default
 			opacity: 1.0,
+			declutter: true,
 			source: new ol.source.VectorTile({
 				projection: 'EPSG:3857',
 				format: new ol.format.MVT(),
@@ -63,19 +64,156 @@ var config = {
 					'<a href="https://donate.openstreetmap.org/" target="_blank"> Donate</a>'
 				]
 			}),
-			style: function(feature, resolution) {
-				// Basic style for OSMF vector tiles
-				const style = new ol.style.Style({
-					stroke: new ol.style.Stroke({
-						color: '#666',
-						width: 1
+			style: (function() {
+				// Create style cache
+				const styleCache = {};
+				const textCache = {};
+
+				// Common styles
+				const styles = {
+					water: new ol.style.Style({
+						fill: new ol.style.Fill({
+							color: '#a5bfdd'
+						})
 					}),
-					fill: new ol.style.Fill({
-						color: 'rgba(255, 255, 255, 0.6)'
-					})
-				});
-				return style;
-			}
+					landcover: new ol.style.Style({
+						fill: new ol.style.Fill({
+							color: '#f2efe9'
+						})
+					}),
+					building: new ol.style.Style({
+						fill: new ol.style.Fill({
+							color: '#e0dcd6'
+						}),
+						stroke: new ol.style.Stroke({
+							color: '#d6d2cc',
+							width: 0.5
+						})
+					}),
+					road: function(resolution) {
+						return new ol.style.Style({
+							stroke: new ol.style.Stroke({
+								color: '#ffffff',
+								width: 1
+							}),
+							zIndex: 1
+						});
+					},
+					major_road: function(resolution) {
+						const width = resolution > 40 ? 1 : resolution > 10 ? 1.5 : 2;
+						return new ol.style.Style({
+							stroke: new ol.style.Stroke({
+								color: '#ffffff',
+								width: width,
+								lineCap: 'round',
+								lineJoin: 'round'
+							}),
+							zIndex: 2
+						});
+					},
+					highway: function(resolution) {
+						const width = resolution > 20 ? 1.5 : resolution > 10 ? 2 : 3;
+						return new ol.style.Style({
+							stroke: new ol.style.Stroke({
+								color: '#ffffff',
+								width: width,
+								lineCap: 'round',
+								lineJoin: 'round'
+							}),
+							zIndex: 3
+						});
+					},
+					label: function(feature, resolution) {
+						const name = feature.get('name');
+						if (!name) return null;
+
+						const key = name + '|' + resolution;
+						if (textCache[key]) return textCache[key];
+
+						const style = new ol.style.Style({
+							text: new ol.style.Text({
+								text: name,
+								font: '12px Arial, sans-serif',
+								fill: new ol.style.Fill({
+									color: '#333'
+								}),
+								stroke: new ol.style.Stroke({
+									color: 'rgba(255,255,255,0.7)',
+									width: 3
+								}),
+								overflow: true,
+								offsetY: -10,
+								padding: [2, 2, 2, 2]
+							}),
+							zIndex: 10
+						});
+
+						textCache[key] = style;
+						return style;
+					}
+				};
+
+				return function(feature, resolution) {
+					const type = feature.get('layer');
+					const layer = feature.get('layer');
+					const kind = feature.get('class');
+					const name = feature.get('name');
+					const geometry = feature.getGeometry().getType();
+
+					// Create a key for the style cache
+					const key = [type, kind, geometry, resolution].join('|');
+
+					// Return cached style if available
+					if (styleCache[key]) {
+						return styleCache[key];
+					}
+
+					let style;
+
+					switch (layer) {
+						case 'water':
+							style = [styles.water];
+							break;
+						case 'landcover':
+							style = [styles.landcover];
+							break;
+						case 'building':
+							style = [styles.building];
+							break;
+						case 'road':
+							style = [styles.road(resolution)];
+							break;
+						case 'major_road':
+							style = [styles.major_road(resolution)];
+							break;
+						case 'highway':
+							style = [styles.highway(resolution)];
+							break;
+						default:
+							style = [new ol.style.Style({
+								fill: new ol.style.Fill({
+									color: 'rgba(255, 255, 255, 0.6)'
+								}),
+								stroke: new ol.style.Stroke({
+									color: '#666',
+									width: 1
+								})
+							})];
+					}
+
+					// Add label if feature has a name and we're zoomed in enough
+					if (name && resolution < 20) {
+						const labelStyle = styles.label(feature, resolution);
+						if (labelStyle) {
+							style.push(labelStyle);
+						}
+					}
+
+					// Cache the style
+					styleCache[key] = style;
+					return style;
+				};
+			})()
 		}),
 
 		// Shortbread Vector Tile Layer - Clean, minimalist style
