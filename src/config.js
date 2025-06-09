@@ -43,147 +43,16 @@ var config = {
 	},
 	//@@ Mapas de fondo
 	layers: [
-		// Shortbread Vector Tile Layer with OpenMapTiles - Basic configuration
-		new ol.layer.VectorTile({
-			title: 'Shortbread Style',
-			iconSrc: imgSrc + 'icones_web/maptiler_logo.png',
-			visible: false, // Start with layer hidden until we apply the style
-			opacity: 1.0,
-			type: 'base',
-			source: new ol.source.VectorTile({
-				projection: 'EPSG:3857',
-				format: new ol.format.MVT(),
-				url: 'https://api.maptiler.com/tiles/v3-openmaptiles/{z}/{x}/{y}.pbf?key=zPfUiHM0YgsZAlrKRPNg',
-				tileGrid: ol.tilegrid.createXYZ({
-					minZoom: 0,
-					maxZoom: 14,
-					tileSize: 512
-				}),
-				attributions: [
-					'<a href="https://www.maptiler.com/copyright/" target="_blank">MapTiler</a>',
-					'<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>',
-					'<a href="https://shortbread-tiles.org/" target="_blank">Shortbread Tiles</a>'
-				],
-				crossOrigin: 'anonymous',
-				tileLoadFunction: function(tile, url) {
-					console.log('Loading tile:', url);
-					
-					// Add API key if needed
-					let tileUrl = url;
-					if (tileUrl.includes('api.maptiler.com') && !tileUrl.includes('key=')) {
-						tileUrl = `${tileUrl}${tileUrl.includes('?') ? '&' : '?'}key=zPfUiHM0YgsZAlrKRPNg`;
-					}
-					
-					// Use CORS proxy for the request
-					const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-					
-					fetch(proxyUrl + tileUrl, { 
-						headers: {
-							'X-Requested-With': 'XMLHttpRequest'
-						}
-					})
-					.then(response => {
-						if (!response.ok) {
-							throw new Error(`HTTP error! status: ${response.status}`);
-						}
-						return response.arrayBuffer();
-					})
-					.then(buffer => {
-						console.log('Successfully loaded tile buffer, size:', buffer.byteLength, 'bytes');
-						const format = tile.getFormat();
-						try {
-							const features = format.readFeatures(buffer, {
-								featureProjection: 'EPSG:3857',
-								dataProjection: 'EPSG:3857',
-								featureClass: ol.Feature
-							});
-							console.log(`Parsed ${features.length} features from tile`);
-							tile.setFeatures(features);
-							tile.setLoader(() => {}); // Mark as loaded
-						} catch (e) {
-							console.error('Error parsing tile features:', e);
-							throw e;
-						}
-					})
-					.catch(error => {
-						console.error('Error loading tile:', error);
-						tile.setLoader(() => {}); // Prevent retries
-						tile.set('error', true);
-					});
-				}
-			}),
-			// Initial simple style - will be replaced by olms.applyStyle
-			style: function(feature, resolution) {
-				const type = feature.getGeometry().getType();
-				console.log('Applying default style to feature type:', type);
-				
-				// Simple style based on geometry type
-				switch (type) {
-					case 'Polygon':
-					case 'MultiPolygon':
-						return new ol.style.Style({
-							fill: new ol.style.Fill({
-								color: 'rgba(200, 200, 200, 0.5)'
-							}),
-							stroke: new ol.style.Stroke({
-								color: '#3399CC',
-								width: 1
-							})
-						});
-					case 'LineString':
-					case 'MultiLineString':
-						return new ol.style.Style({
-							stroke: new ol.style.Stroke({
-								color: '#666',
-								width: 1.5
-							})
-						});
-					case 'Point':
-					case 'MultiPoint':
-						return new ol.style.Style({
-							image: new ol.style.Circle({
-								radius: 3,
-								fill: new ol.style.Fill({
-									color: '#FF0000'
-								}),
-								stroke: new ol.style.Stroke({
-									color: '#FFFFFF',
-									width: 1
-								})
-							})
-						});
-					default:
-						return new ol.style.Style({
-							fill: new ol.style.Fill({
-								color: 'rgba(200, 200, 200, 0.5)'
-							}),
-							stroke: new ol.style.Stroke({
-								color: '#3399CC',
-								width: 1
-							})
-						});
-				}
-			},
-			// Additional layer properties
-			preload: 0,
-			useInterimTilesOnError: true,
-			// Add metadata for style application
-			metadata: {
-				'shortbread-style': true,
-				'style-url': 'https://shortbread-tiles.org/styles/shortbread/light/style.json'
-			}
-		}),
-		
 		// MapTiler Vector Tile Layer with enhanced glyph and sprite support
 		new ol.layer.VectorTile({
 			title: 'MapTiler Vector',
-			iconSrc: imgSrc + 'icones_web/maptiler_logo.png',
+			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
 			visible: true,
 			opacity: 1.0,
 			source: new ol.source.VectorTile({
 				projection: 'EPSG:3857',
 				format: new ol.format.MVT(),
-				url: 'https://api.maptiler.com/tiles/v3/{z}/{x}/{y}.pbf?key=Faz9gJu55zrWejNF55oZ',
+				url: 'https://api.maptiler.com/tiles/v3/{z}/{x}/{y}.pbf?key=tKDOqJGURiimBRaaKrDJ',
 				tileGrid: ol.tilegrid.createXYZ({
 					minZoom: 0,
 					maxZoom: 14
@@ -197,7 +66,7 @@ var config = {
 				// Initialize style configuration with glyphs and sprites
 				window.maptilerStyleConfig = {
 					spriteBaseUrl: 'https://api.maptiler.com/maps/streets/sprite',
-					glyphs: 'https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=Faz9gJu55zrWejNF55oZ',
+					glyphs: 'https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=tKDOqJGURiimBRaaKrDJ',
 					fontStacks: {
 						regular: ['Noto Sans Regular', 'Arial Unicode MS Regular'],
 						bold: ['Noto Sans Bold', 'Arial Unicode MS Bold'],
