@@ -419,6 +419,14 @@ window.map = map;
 
 // Function to apply Shortbread style to the vector tile layer
 function applyVectorTileStyle() {
+    console.log('Starting applyVectorTileStyle function');
+    
+    // Check if olms is available
+    if (typeof olms === 'undefined') {
+        console.error('olms (ol-mapbox-style) library is not loaded. Make sure it is included before this script.');
+        return;
+    }
+    
     try {
         // Find the Shortbread Style layer
         const vectorLayer = config.layers.find(layer => 
@@ -430,14 +438,27 @@ function applyVectorTileStyle() {
             return;
         }
         
+        console.log('Found vector layer:', vectorLayer);
+        
+        // Simple style for testing
+        const simpleStyle = new ol.style.Style({
+            fill: new ol.style.Fill({
+                color: 'rgba(200, 200, 200, 0.5)'
+            }),
+            stroke: new ol.style.Stroke({
+                color: '#3399CC',
+                width: 1.25
+            })
+        });
+        
+        // Apply the simple style immediately
+        vectorLayer.setStyle(simpleStyle);
+        console.log('Applied simple style to vector layer');
+        
         // Available Shortbread styles
         const shortbreadStyles = {
             'light': 'https://shortbread-tiles.org/styles/shortbread/light/style.json',
-            'dark': 'https://shortbread-tiles.org/styles/shortbread/dark/style.json',
-            'blue-print': 'https://shortbread-tiles.org/styles/shortbread/blue-print/style.json',
-            'blue-print-dark': 'https://shortbread-tiles.org/styles/shortbread/blue-print-dark/style.json',
-            'color-blind': 'https://shortbread-tiles.org/styles/shortbread/color-blind/style.json',
-            'color-blind-dark': 'https://shortbread-tiles.org/styles/shortbread/color-blind-dark/style.json'
+            'dark': 'https://shortbread-tiles.org/styles/shortbread/dark/style.json'
         };
 
         // Default to light style
@@ -447,80 +468,309 @@ function applyVectorTileStyle() {
         // Only apply style if the layer is visible
         const checkAndApplyStyle = () => {
             if (vectorLayer.getVisible()) {
-                console.log(`Applying Shortbread ${selectedStyle} style...`);
+                console.log(`Applying Shortbread ${selectedStyle} style from: ${styleUrl}`);
                 
-                // Apply the style using the global olms object
-                olms.applyStyle(
-                    vectorLayer,
-                    styleUrl,
-                    'https://api.maptiler.com/tiles/v3-openmaptiles/{z}/{x}/{y}.pbf?key=zPfUiHM0YgsZAlrKRPNg',
-                    { 
-                        transformRequest: (url) => {
-                            console.log('Requesting:', url);
-                            // Add API key to MapTiler requests if needed
-                            if (url.includes('api.maptiler.com') && !url.includes('key=')) {
-                                const newUrl = `${url}${url.includes('?') ? '&' : '?'}key=zPfUiHM0YgsZAlrKRPNg`;
+                // First, fetch the style JSON directly using a CORS proxy
+                const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+                fetch(proxyUrl + styleUrl, { 
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest'
+                    }
+                })
+                .then(response => {
+                    console.log('Style fetch response status:', response.status);
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                    .then(styleJson => {
+                        console.log('Successfully fetched style JSON');
+                        
+                        // Create a deep copy of the style to avoid modifying the original
+                        const style = JSON.parse(JSON.stringify(styleJson));
+                        
+                        // Modify the sprite and glyphs URLs to use CORS proxy
+                        if (style.sprite) {
+                            style.sprite = `https://cors-anywhere.herokuapp.com/${style.sprite}`.replace('//', '/');
+                            console.log('Updated sprite URL:', style.sprite);
+                        }
+                        
+                        if (style.glyphs) {
+                            style.glyphs = `https://cors-anywhere.herokuapp.com/${style.glyphs}`.replace('//', '/');
+                            console.log('Updated glyphs URL:', style.glyphs);
+                        }
+                        
+                        // Define the transformRequest function
+                        const transformRequest = (url, resourceType) => {
+                            console.log(`Transform request for ${resourceType || 'resource'} URL:`, url);
+                            
+                            // Skip processing for data URLs
+                            if (url.startsWith('data:')) {
+                                console.log('Skipping data URL');
+                                return { url };
+                            }
+                            
+                            // Handle MapTiler tiles and resources
+                            if (url.includes('api.maptiler.com')) {
+                                const separator = url.includes('?') ? '&' : '?';
+                                const newUrl = `${url}${separator}key=zPfUiHM0YgsZAlrKRPNg`;
+                                console.log('Transformed MapTiler URL:', newUrl);
+                                
+                                // For sprites and fonts, we need to use the CORS proxy
+                                if (resourceType === 'SpriteImage' || resourceType === 'Glyphs') {
+                                    const proxyUrl = `https://cors-anywhere.herokuapp.com/${newUrl}`.replace('//', '/');
+                                    console.log(`Proxying ${resourceType} URL:`, proxyUrl);
+                                    return { 
+                                        url: proxyUrl,
+                                        headers: {
+                                            'X-Requested-With': 'XMLHttpRequest'
+                                        }
+                                    };
+                                }
+                                
                                 return { url: newUrl };
                             }
-                            return { url };
-                        },
-                        // Get the sprite and glyphs from the style
-                        getFonts: (fontStack) => {
-                            console.log('Getting fonts for:', fontStack);
-                            return ['Noto Sans Regular', 'Arial Unicode MS Regular', 'Open Sans Regular'];
-                        },
-                        // Ensure CORS is handled
-                        crossOrigin: 'anonymous'
-                    }
-                ).then((style) => {
-                    console.log('Shortbread style applied successfully', style);
-                    // Force a re-render
-                    vectorLayer.changed();
-                    map.renderSync();
-                    
-                    // Add style selector to the layer control
-                    addStyleSelector(shortbreadStyles, selectedStyle, (newStyle) => {
-                        if (newStyle !== selectedStyle) {
-                            const newStyleUrl = shortbreadStyles[newStyle];
-                            olms.applyStyle(
-                                vectorLayer,
-                                newStyleUrl,
-                                'https://api.maptiler.com/tiles/v3-openmaptiles/{z}/{x}/{y}.pbf?key=zPfUiHM0YgsZAlrKRPNg',
-                                {
-                                    transformRequest: (url) => ({
-                                        url: url.includes('api.maptiler.com') && !url.includes('key=') 
-                                            ? `${url}${url.includes('?') ? '&' : '?'}key=zPfUiHM0YgsZAlrKRPNg`
-                                            : url
-                                    }),
-                                    getFonts: () => ['Noto Sans Regular', 'Arial Unicode MS Regular', 'Open Sans Regular'],
-                                    crossOrigin: 'anonymous'
+                            
+                            // Handle other HTTP/HTTPS URLs with CORS proxy
+                            if (url.startsWith('http')) {
+                                // Don't proxy URLs that are already using the proxy
+                                if (url.includes('cors-anywhere.herokuapp.com')) {
+                                    console.log('URL already uses CORS proxy, using as-is');
+                                    return { url };
                                 }
-                            ).then(() => {
-                                console.log(`Changed to ${newStyle} style`);
-                                vectorLayer.changed();
-                                map.renderSync();
+                                
+                                const proxyUrl = `https://cors-anywhere.herokuapp.com/${url}`.replace('//', '/');
+                                console.log(`Proxying ${resourceType || 'resource'} URL:`, proxyUrl);
+                                return { 
+                                    url: proxyUrl,
+                                    headers: {
+                                        'X-Requested-With': 'XMLHttpRequest',
+                                        'Accept': resourceType === 'Glyphs' ? 'application/octet-stream' : '*/*'
+                                    }
+                                };
+                            }
+                            
+                            console.log('Returning URL as-is');
+                            return { url };
+                        };
+                        
+                        console.log('Applying style with olms.applyStyle...');
+                        
+                        // Make sure the layer is visible before applying the style
+                        if (!vectorLayer.getVisible()) {
+                            console.log('Making vector layer visible before applying style');
+                            vectorLayer.setVisible(true);
+                        }
+                        
+                        // Apply the style with transformRequest
+                        return new Promise((resolve, reject) => {
+                            try {
+                                console.log('Starting olms.applyStyle with style:', styleJson);
+                                
+                                olms.applyStyle(
+                                    vectorLayer, 
+                                    styleJson, 
+                                    'openmaptiles', 
+                                    {
+                                        transformRequest: transformRequest,
+                                        getFonts: (fontStack) => {
+                                            console.log('Getting fonts for:', fontStack);
+                                            return ['Noto Sans Regular', 'Arial Unicode MS Regular', 'Open Sans Regular'];
+                                        }
+                                    }
+                                ).then(() => {
+                                    console.log('Successfully applied Shortbread style');
+                                    
+                                    // Force a refresh of the layer
+                                    vectorLayer.changed();
+                                    if (map) {
+                                        console.log('Triggering map render after style application');
+                                        map.renderSync();
+                                    }
+                                    
+                                    // Update the style URL in the layer's metadata
+                                    const metadata = vectorLayer.get('metadata') || {};
+                                    metadata['style-url'] = styleUrl;
+                                    vectorLayer.set('metadata', metadata);
+                                    
+                                    resolve();
+                                }).catch(error => {
+                                    console.error('Error in olms.applyStyle:', error);
+                                    reject(error);
+                                });
+                                
+                            } catch (error) {
+                                console.error('Error setting up olms.applyStyle:', error);
+                                reject(error);
+                            }
+                        }).then(() => {
+                            console.log('Style application completed successfully');
+                            
+                            // Add style selector to the layer control (only once)
+                            if (!window.styleSelectorAdded) {
+                                addStyleSelector(shortbreadStyles, selectedStyle, (newStyle) => {
+                                    if (newStyle !== selectedStyle) {
+                                        console.log(`Changing to ${newStyle} style...`);
+                                        const newStyleUrl = shortbreadStyles[newStyle];
+                                        
+                                        // Update the selected style
+                                        selectedStyle = newStyle;
+                                        
+                                        // Update the style URL in the layer's metadata
+                                        const metadata = vectorLayer.get('metadata') || {};
+                                        metadata['style-url'] = newStyleUrl;
+                                        vectorLayer.set('metadata', metadata);
+                                        
+                                        // Re-apply the style with the new URL
+                                        applyVectorTileStyle();
+                                    }
+                                });
+                                window.styleSelectorAdded = true;
+                            }
+                                
+                                fetch(`https://cors-anywhere.herokuapp.com/${newStyleUrl}`, {
+                                    headers: {
+                                        'X-Requested-With': 'XMLHttpRequest'
+                                    }
+                                })
+                                .then(response => response.json())
+                                .then(styleJson => {
+                                    console.log(`Fetched ${newStyle} style`);
+                                    
+                                    // Create a deep copy of the style
+                                    const style = JSON.parse(JSON.stringify(styleJson));
+                                    
+                                    // Update URLs with CORS proxy
+                                    if (style.sprite) {
+                                        style.sprite = `https://cors-anywhere.herokuapp.com/${style.sprite}`.replace('//', '/');
+                                    }
+                                    if (style.glyphs) {
+                                        style.glyphs = `https://cors-anywhere.herokuapp.com/${style.glyphs}`.replace('//', '/');
+                                    }
+                                    
+                                    // Re-apply the style
+                                    return olms.applyStyle(
+                                        vectorLayer,
+                                        style,
+                                        'https://api.maptiler.com/tiles/v3-openmaptiles/{z}/{x}/{y}.pbf?key=zPfUiHM0YgsZAlrKRPNg',
+                                        {
+                                            transformRequest: (url) => {
+                                                if (url.includes('api.maptiler.com') && !url.includes('key=')) {
+                                                    return { 
+                                                        url: `${url}${url.includes('?') ? '&' : '?'}key=zPfUiHM0YgsZAlrKRPNg`
+                                                    };
+                                                }
+                                                if (url.startsWith('http')) {
+                                                    return { 
+                                                        url: `https://cors-anywhere.herokuapp.com/${url}`.replace('//', '/')
+                                                    };
+                                                }
+                                                return { url };
+                                            },
+                                            getFonts: () => ['Noto Sans Regular', 'Arial Unicode MS Regular', 'Open Sans Regular']
+                                        }
+                                    );
+                                })
+                                .then(() => {
+                                    console.log(`Successfully changed to ${newStyle} style`);
+                                    vectorLayer.changed();
+                                    map.renderSync();
+                                })
+                                .catch(error => {
+                                    console.error(`Error changing to ${newStyle} style:`, error);
+                                    applyFallbackStyle(vectorLayer);
+                                });
+                            }
+                        });
+                    })
+                    .catch(error => {
+                        console.error('Error applying Shortbread style:', error);
+        
+                        // Log additional debugging information
+                        if (error.response) {
+                            console.error('Error response:', {
+                                status: error.response.status,
+                                statusText: error.response.statusText,
+                                url: error.response.url,
+                                headers: error.response.headers
                             });
+            
+                            // Try to get the response text for more details
+                            error.response.text().then(text => {
+                                console.error('Error response body:', text);
+                            }).catch(e => {
+                                console.error('Could not read error response body:', e);
+                            });
+                        } else if (error.request) {
+                            console.error('No response received for request:', error.request);
+                        } else {
+                            console.error('Error details:', error.message);
+                        }
+        
+                        // Try to apply a basic style as fallback
+                        if (vectorLayer) {
+                            console.log('Applying fallback style due to error');
+                            applyFallbackStyle(vectorLayer);
+                        } else {
+                            console.error('Vector layer not available for fallback style');
                         }
                     });
-                }).catch(error => {
-                    console.error('Error applying Shortbread style:', error);
-                    // Try to apply a basic style as fallback
-                    try {
-                        const style = new ol.style.Style({
-                            fill: new ol.style.Fill({
-                                color: 'rgba(200, 200, 200, 0.5)'
-                            }),
-                            stroke: new ol.style.Stroke({
-                                color: '#3399CC',
-                                width: 1.25
-                            })
-                        });
-                        vectorLayer.setStyle(style);
-                        console.log('Applied fallback style');
-                    } catch (fallbackError) {
-                        console.error('Failed to apply fallback style:', fallbackError);
-                    }
+            }
+        };
+
+        // Simple fallback style
+        const applyFallbackStyle = (layer) => {
+            console.log('Applying fallback style');
+            try {
+                const style = new ol.style.Style({
+                    fill: new ol.style.Fill({
+                        color: 'rgba(200, 200, 200, 0.5)'
+                    }),
+                    stroke: new ol.style.Stroke({
+                        color: '#3399CC',
+                        width: 1.25
+                    }),
+                    text: new ol.style.Text({
+                        font: '12px Arial',
+                        fill: new ol.style.Fill({
+                            color: '#000000'
+                        }),
+                        stroke: new ol.style.Stroke({
+                            color: '#FFFFFF',
+                            width: 2
+                        })
+                    })
                 });
+                
+                // Create a style function that applies the same style to all features
+                const styleFunction = function(feature, resolution) {
+                    console.log('Applying style to feature in fallback');
+                    return style;
+                };
+                
+                layer.setStyle(styleFunction);
+                console.log('Successfully applied fallback style');
+                
+                // Force a re-render
+                layer.changed();
+                if (map) {
+                    map.renderSync();
+                }
+            } catch (fallbackError) {
+                console.error('Failed to apply fallback style:', fallbackError);
+                
+                // Last resort - try setting a minimal style directly
+                try {
+                    layer.setStyle(new ol.style.Style({
+                        fill: new ol.style.Fill({
+                            color: 'rgba(150, 150, 150, 0.5)'
+                        })
+                    }));
+                    console.log('Applied minimal fallback style');
+                } catch (e) {
+                    console.error('Completely failed to apply any style:', e);
+                }
             }
         };
 
@@ -540,55 +790,140 @@ function applyVectorTileStyle() {
 
 // Add style selector to the layer control
 function addStyleSelector(styles, currentStyle, onChange) {
+    console.log('Adding style selector with styles:', Object.keys(styles));
+    
     // Check if selector already exists
-    if (document.getElementById('style-selector-container')) {
-        return;
+    const existingContainer = document.getElementById('style-selector-container');
+    if (existingContainer) {
+        console.log('Style selector already exists, updating...');
+        existingContainer.remove();
     }
     
+    // Create container
     const container = document.createElement('div');
     container.id = 'style-selector-container';
-    container.style.marginTop = '10px';
-    container.style.padding = '5px';
-    container.style.backgroundColor = 'rgba(255, 255, 255, 0.8)';
+    container.style.margin = '10px 0';
+    container.style.padding = '8px';
+    container.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
     container.style.borderRadius = '4px';
+    container.style.boxShadow = '0 1px 5px rgba(0,0,0,0.2)';
     
+    // Create label
     const label = document.createElement('label');
     label.htmlFor = 'style-selector';
     label.textContent = 'Map Style: ';
-    label.style.marginRight = '5px';
+    label.style.display = 'block';
+    label.style.marginBottom = '5px';
+    label.style.fontWeight = 'bold';
+    label.style.fontSize = '14px';
+    label.style.color = '#333';
     
+    // Create select element
     const select = document.createElement('select');
     select.id = 'style-selector';
-    select.style.padding = '3px';
-    select.style.borderRadius = '3px';
-    select.style.border = '1px solid #ccc';
+    select.style.width = '100%';
+    select.style.padding = '6px 8px';
+    select.style.borderRadius = '4px';
+    select.style.border = '1px solid #ddd';
+    select.style.backgroundColor = '#fff';
+    select.style.fontSize = '13px';
+    select.style.cursor = 'pointer';
+    select.style.boxSizing = 'border-box';
+    
+    // Add a default option
+    const defaultOption = document.createElement('option');
+    defaultOption.value = '';
+    defaultOption.textContent = 'Select a style...';
+    defaultOption.disabled = true;
+    defaultOption.selected = !currentStyle;
+    select.appendChild(defaultOption);
     
     // Add style options
-    Object.keys(styles).forEach(styleKey => {
+    Object.entries(styles).forEach(([key, value]) => {
         const option = document.createElement('option');
-        option.value = styleKey;
-        option.textContent = styleKey.charAt(0).toUpperCase() + styleKey.slice(1).replace(/-/g, ' ');
-        option.selected = styleKey === currentStyle;
+        option.value = key;
+        option.textContent = key.charAt(0).toUpperCase() + key.slice(1).replace(/-/g, ' ');
+        option.selected = key === currentStyle;
         select.appendChild(option);
     });
     
     // Handle style change
     select.addEventListener('change', (e) => {
-        onChange(e.target.value);
+        const newStyle = e.target.value;
+        if (newStyle) {
+            console.log('Style changed to:', newStyle);
+            onChange(newStyle);
+        }
     });
     
+    // Add elements to container
     container.appendChild(label);
     container.appendChild(select);
     
     // Add to the layer control
     const layerControl = document.querySelector('.layers-control');
     if (layerControl) {
-        layerControl.appendChild(container);
+        // Try to insert after the layer list
+        const layerList = layerControl.querySelector('.layers-list');
+        if (layerList && layerList.nextSibling) {
+            layerControl.insertBefore(container, layerList.nextSibling);
+        } else {
+            // Fallback to appending to the end
+            layerControl.appendChild(container);
+        }
+        console.log('Added style selector to layer control');
+    } else {
+        console.error('Could not find layer control to add style selector');
     }
+    
+    return container;
 }
 
-// Apply vector tile style after a short delay to ensure everything is loaded
-setTimeout(applyVectorTileStyle, 1000);
+// Function to initialize the map with Shortbread style
+function initializeMapWithShortbread() {
+    console.log('Initializing map with Shortbread style...');
+    
+    // Find the Shortbread Style layer
+    const vectorLayer = config.layers.find(layer => 
+        layer.get('title') === 'Shortbread Style'
+    );
+
+    if (!vectorLayer) {
+        console.error('Shortbread Style layer not found during initialization');
+        return;
+    }
+    
+    // Show the layer if it's not visible
+    if (!vectorLayer.getVisible()) {
+        vectorLayer.setVisible(true);
+    }
+    
+    // Apply the style
+    applyVectorTileStyle();
+    
+    // Set up a listener for layer visibility changes
+    vectorLayer.on('change:visible', function() {
+        if (vectorLayer.getVisible()) {
+            console.log('Shortbread layer became visible, applying style...');
+            applyVectorTileStyle();
+        }
+    });
+    
+    // Set up a one-time postrender event to ensure style is applied after initial render
+    map.once('postrender', function() {
+        console.log('Map initial render complete, ensuring Shortbread style is applied...');
+        setTimeout(() => {
+            if (vectorLayer.getVisible()) {
+                applyVectorTileStyle();
+            }
+        }, 500);
+    });
+}
+
+// Initialize the map with Shortbread style after a short delay to ensure everything is loaded
+setTimeout(() => {
+    initializeMapWithShortbread();
+}, 1000);
 
 	// Initialize Nominatim search
 	initNominatimSearch(map);
