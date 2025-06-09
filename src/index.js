@@ -407,9 +407,9 @@ $(function () {
 		zoom: config.initialConfig.zoom
 	});
 
-	// Create map with all layers except the MapTiler custom style
+	// Create map with all layers
 const map = new ol.Map({
-    layers: config.layers.filter(layer => layer.get('title') !== 'MapTiler Custom Style'),
+    layers: config.layers,
     target: 'map',
     view: view
 });
@@ -417,47 +417,57 @@ const map = new ol.Map({
 // Store map in window for debugging
 window.map = map;
 
-// Function to load and apply MapTiler style
+// Function to apply MapTiler style to the custom style layer
 function applyMapTilerStyle() {
     try {
-        // Create a new vector tile layer for MapTiler
-        const maptilerLayer = new ol.layer.VectorTile({
-            title: 'MapTiler Custom Style',
-            source: new ol.source.VectorTile({
-                tilePixelRatio: 1,
-                tileGrid: ol.tilegrid.createXYZ({ maxZoom: 22 }),
-                format: new ol.format.MVT(),
-                url: 'https://api.maptiler.com/maps/01974bfb-e42c-7989-8c6c-77a0369aba23/tiles/{z}/{x}/{y}/tile.vector.pbf?key=zPfUiHM0YgsZAlrKRPNg',
-                transition: 0
-            })
+        // Find the MapTiler Custom Style layer
+        const maptilerLayer = config.layers.find(layer => 
+            layer.get('title') === 'MapTiler Custom Style'
+        );
+
+        if (!maptilerLayer) {
+            console.error('MapTiler Custom Style layer not found');
+            return;
+        }
+        
+        // Only apply style if the layer is visible
+        const checkAndApplyStyle = () => {
+            if (maptilerLayer.getVisible()) {
+                // Apply the style using the global olms object
+                olms.applyStyle(
+                    maptilerLayer,
+                    'https://api.maptiler.com/maps/01974bfb-e42c-7989-8c6c-77a0369aba23/style.json?key=zPfUiHM0YgsZAlrKRPNg',
+                    'https://api.maptiler.com/maps/vt',
+                    { 
+                        transformRequest: (url) => {
+                            // Add API key to all requests if needed
+                            if (url.includes('api.maptiler.com') && !url.includes('key=')) {
+                                return { url: `${url}${url.includes('?') ? '&' : '?'}key=zPfUiHM0YgsZAlrKRPNg` };
+                            }
+                            return { url };
+                        },
+                        // Get the sprite and glyphs from the style
+                        getFonts: (fontStack) => {
+                            return ['Noto Sans Regular', 'Arial Unicode MS Regular'];
+                        }
+                    }
+                ).then(() => {
+                    console.log('MapTiler style applied successfully');
+                }).catch(error => {
+                    console.error('Error applying MapTiler style:', error);
+                });
+            }
+        };
+
+        // Apply style when the layer becomes visible
+        maptilerLayer.on('change:visible', () => {
+            if (maptilerLayer.getVisible()) {
+                checkAndApplyStyle();
+            }
         });
 
-        // Add the layer to the map
-        map.addLayer(maptilerLayer);
-        
-        // Apply the style using the global olms object
-        olms.applyStyle(
-            maptilerLayer,
-            'https://api.maptiler.com/maps/01974bfb-e42c-7989-8c6c-77a0369aba23/style.json?key=zPfUiHM0YgsZAlrKRPNg',
-            'https://api.maptiler.com/maps/vt',
-            { 
-                transformRequest: (url) => {
-                    // Add API key to all requests if needed
-                    if (url.includes('api.maptiler.com') && !url.includes('key=')) {
-                        return { url: `${url}${url.includes('?') ? '&' : '?'}key=zPfUiHM0YgsZAlrKRPNg` };
-                    }
-                    return { url };
-                },
-                // Get the sprite and glyphs from the style
-                getFonts: (fontStack) => {
-                    return ['Noto Sans Regular', 'Arial Unicode MS Regular'];
-                }
-            }
-        ).then(() => {
-            console.log('MapTiler style applied successfully');
-        }).catch(error => {
-            console.error('Error applying MapTiler style:', error);
-        });
+        // Initial style application
+        checkAndApplyStyle();
     } catch (error) {
         console.error('Error initializing MapTiler style:', error);
     }
