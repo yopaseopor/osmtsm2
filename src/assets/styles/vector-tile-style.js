@@ -156,57 +156,49 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
             building: '#e67e22',
             default: '#7f8c8d'
         },
-        // Base colors - Standard OpenStreetMap style
-        water: '#a5bfdd',
-        waterIntermittent: '#c0d8e8',
-        residential: '#f2e9e1',
-        park: '#d6e7d5',
-        forest: '#c8e9c3',
-        building: '#e0e0e0',
-        buildingOutline: '#cccccc',
+        // Base colors
+        water: 'rgba(170, 210, 255, 0.9)',
+        waterIntermittent: 'rgba(170, 210, 255, 0.6)',
+        residential: 'rgba(240, 238, 235, 0.7)',
+        park: 'rgba(210, 250, 210, 0.7)',
+        forest: 'rgba(190, 220, 190, 0.8)',
+        building: 'rgba(220, 217, 210, 0.9)',
+        buildingOutline: 'rgba(180, 177, 170, 0.8)',
         
-        // Road colors and widths - Standard OpenStreetMap style
+        // Road colors and widths
         highway: {
-            motorway: { color: '#5b7de5', width: 2.0, textColor: '#2e3b4e' },     // blue
-            trunk: { color: '#5b7de5', width: 1.8, textColor: '#2e3b4e' },       // blue
-            primary: { color: '#f5c76c', width: 1.6, textColor: '#5e5e5e' },     // yellow
-            secondary: { color: '#f5d1a9', width: 1.4, textColor: '#5e5e5e' },   // light orange
-            tertiary: { color: '#f8f8f8', width: 1.2, textColor: '#5e5e5e' },   // white
-            unclassified: { color: '#f8f8f8', width: 1.0, textColor: '#5e5e5e' },// white
-            residential: { color: '#f8f8f8', width: 1.0, textColor: '#5e5e5e' }, // white
-            service: { color: '#f8f8f8', width: 0.8, textColor: '#5e5e5e' },    // white
-            path: { color: '#e9e9e9', width: 0.6, textColor: '#5e5e5e' },       // light gray
-            pedestrian: { color: '#e9e9e9', width: 0.6, textColor: '#5e5e5e' }, // light gray
-            footway: { color: '#e9e9e9', width: 0.4, textColor: '#5e5e5e' },    // light gray
-            track: { color: '#e9e9e9', width: 0.6, textColor: '#5e5e5e' },      // light gray
-            cycleway: { color: '#b3d1ff', width: 0.6, textColor: '#2e3b4e' }    // light blue
+            motorway: { color: '#0000ff', width: 3.0, textColor: '#0000ff' },  // blue
+            trunk: { color: '#8b0000', width: 2.8, textColor: '#8b0000' },      // dark red
+            primary: { color: '#ff0000', width: 2.5, textColor: '#ff0000' },    // red
+            secondary: { color: '#006400', width: 2.0, textColor: '#006400' },  // dark green
+            tertiary: { color: '#ffa500', width: 1.8, textColor: '#ff8c00' },   // orange
+            unclassified: { color: '#ff00ff', width: 1.5, textColor: '#ff00ff' }, // magenta
+            residential: { color: '#666666', width: 1.2, textColor: '#666666' },
+            service: { color: '#999999', width: 0.8, textColor: '#999999' },
+            path: { color: '#aaaaaa', width: 0.6, textColor: '#666666' },
+            pedestrian: { color: '#cccccc', width: 0.8, textColor: '#666666' }
         },
         
-        // Text styles - Standard OpenStreetMap style
+        // Text styles
         text: {
-            fill: '#2e3b4e',
-            stroke: 'rgba(255, 255, 255, 0.8)',
+            fill: '#000000',
+            stroke: '#ffffff',
             strokeWidth: 2,
-            font: '12px Noto Sans, Arial, sans-serif',
+            font: '12px Arial, sans-serif',
             offsetY: 0,
             padding: [2, 4],
             maxAngle: 30,
             overflow: true
         },
         landuse: {
-            residential: '#f2e9e1',
-            commercial: '#f2e9e1',
-            industrial: '#e8e8e8',
-            retail: '#f2e9e1',
-            park: '#d6e7d5',
-            forest: '#c8e9c3',
-            grass: '#d6e7d5',
-            cemetery: '#c8e9c3',
-            school: '#f2e9e1',
-            hospital: '#f2e9e1',
-            military: '#e8e8e8',
-            industrial: '#e8e8e8',
-            construction: '#e8e8e8'
+            residential: 'rgba(240, 238, 235, 0.7)',
+            commercial: 'rgba(240, 235, 240, 0.5)',
+            industrial: 'rgba(230, 230, 220, 0.6)',
+            retail: 'rgba(245, 235, 235, 0.6)',
+            park: 'rgba(210, 250, 210, 0.7)',
+            forest: 'rgba(190, 220, 190, 0.8)',
+            grass: 'rgba(200, 250, 200, 0.6)',
+            cemetery: 'rgba(200, 230, 200, 0.7)'
         },
         boundary: {
             national: '#000000',
@@ -406,11 +398,7 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
 
         // Transportation (roads, paths, etc.)
         if (layer === 'transportation') {
-            // Get the highway type from the feature properties
-            const highwayType = feature.get('highway');
-            // Use the highway type if available, otherwise fall back to cls or 'tertiary'
-            const roadType = highwayType || cls || 'tertiary';
-            // Get the style for this road type, defaulting to tertiary if not found
+            const roadType = cls || 'tertiary';
             const roadStyle = colors.highway[roadType] || colors.highway.tertiary;
             const name = feature.get('name');
             const ref = feature.get('ref');
@@ -461,10 +449,7 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
                 const haloColor = isMajorRoad ? 'rgba(0, 0, 0, 0.7)' : 'rgba(255, 255, 255, 0.8)';
                 
                 // Only show labels at appropriate zoom levels
-                // For major roads, only show labels at higher zoom levels (lower resolution values)
-                // For minor roads, show labels at even higher zoom levels
-                // Adjusted to show fewer labels at higher zoom levels
-                const showLabel = resolution < (isMajorRoad ? 3 : 0.8);
+                const showLabel = resolution < (isMajorRoad ? 20 : 10);
                 
                 if (showLabel) {
                     styles.push(new ol.style.Style({
@@ -479,7 +464,7 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
                             haloWidth: isMajorRoad ? 3 : 2,
                             placement: 'line',
                             maxAngle: 0.5, // ~28.6 degrees in radians
-                            maxResolution: isMajorRoad ? 7 : 3,
+                            maxResolution: isMajorRoad ? 10 : 5,
                             textBaseline: 'alphabetic',
                             textAlign: 'center',
                             padding: isMajorRoad ? [2, 4, 2, 4] : [1, 2, 1, 2],
@@ -572,76 +557,80 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
         
     } catch (error) {
         console.error('Error styling feature:', error, feature);
-        // POI (Point of Interest) styling - only process if feature has a name
-        const name = getFeatureLabel(feature, '{name}');
-        if (!name) return [];
+        // POI (Point of Interest) styling
+        const poiType = feature.get('amenity') || feature.get('shop') || 
+                       feature.get('tourism') || feature.get('office') || 
+                       feature.get('building') ? 'poi' : null;
         
-        const poiTypes = ['amenity', 'shop', 'tourism', 'office', 'building'];
-        const poiType = poiTypes.find(type => feature.get(type));
-        if (!poiType) return [];
-        
-        const poiColor = colors.poi[poiType] || colors.poi.default;
-        const styles = [];
-        
-        // Get icon based on POI type
-        const iconMap = {
-            'cafe': 'cafe',
-            'restaurant': 'restaurant',
-            'hotel': 'lodging',
-            'shop': 'shop',
-            'office': 'commercial'
-        };
-        
-        let iconName = 'marker';
-        for (const [type, icon] of Object.entries(iconMap)) {
-            if (feature.get(type) || (type === 'hotel' && feature.get('tourism') === 'hotel')) {
-                iconName = icon;
-                break;
+        if (poiType) {
+            const poiColor = colors.poi[
+                feature.get('amenity') ? 'amenity' : 
+                feature.get('shop') ? 'shop' :
+                feature.get('tourism') ? 'tourism' :
+                feature.get('office') ? 'office' :
+                feature.get('building') ? 'building' : 'default'
+            ];
+            
+            const styles = [];
+            
+            // Get icon name based on POI type
+            let iconName = 'marker';
+            if (feature.get('amenity') === 'cafe') iconName = 'cafe';
+            else if (feature.get('amenity') === 'restaurant') iconName = 'restaurant';
+            else if (feature.get('shop')) iconName = 'shop';
+            else if (feature.get('tourism') === 'hotel') iconName = 'lodging';
+            else if (feature.get('office')) iconName = 'commercial';
+            
+            // Add icon style if available
+            const iconStyle = getIconStyle(iconName, config, {
+                size: 1,
+                color: poiColor,
+                opacity: 0.9
+            });
+            
+            if (iconStyle) {
+                styles.push(new ol.style.Style({
+                    image: iconStyle
+                }));
+            } else {
+                // Fallback to circle if no icon available
+                styles.push(new ol.style.Style({
+                    image: new ol.style.Circle({
+                        radius: 5,
+                        fill: new ol.style.Fill({
+                            color: poiColor
+                        }),
+                        stroke: new ol.style.Stroke({
+                            color: '#fff',
+                            width: 1
+                        })
+                    })
+                }));
             }
+            
+            // Add label for POI
+            const label = getFeatureLabel(feature, '{name}');
+            if (label) {
+                styles.push(new ol.style.Style({
+                    text: createTextStyle({
+                        text: label,
+                        font: {
+                            size: 10,
+                            weight: 'normal'
+                        },
+                        color: '#000',
+                        haloColor: '#fff',
+                        haloWidth: 2,
+                        offsetY: 12,
+                        textBaseline: 'top',
+                        textAlign: 'center',
+                        maxResolution: 5 // Only show at higher zoom levels
+                    }, config)
+                }));
+            }
+            
+            return styles;
         }
-        
-        // Add icon style
-        const iconStyle = getIconStyle(iconName, config, {
-            size: 1,
-            color: poiColor,
-            opacity: 0.9
-        });
-        
-        if (iconStyle) {
-            styles.push(new ol.style.Style({
-                image: iconStyle,
-                // Add declutter to prevent overlapping icons
-                declutter: true
-            }));
-        }
-        
-        // Add label only at zoom level 17+ with decluttering
-        const zoom = Math.round(Math.log2(156543.03390625 / resolution));
-        if (zoom >= 17) {
-            styles.push(new ol.style.Style({
-                text: createTextStyle({
-                    text: name,
-                    font: {
-                        size: 10,
-                        weight: 'normal'
-                    },
-                    color: '#000',
-                    haloColor: '#fff',
-                    haloWidth: 2,
-                    offsetY: 12,
-                    textBaseline: 'top',
-                    textAlign: 'center',
-                    // Enable decluttering for labels
-                    declutter: true,
-                    // Add a small buffer to prevent label overlap
-                    overflow: false,
-                    // Only show if there's enough space
-                    maxResolution: 0.5
-                }, config)
-            }));
-        }
-        
-        return styles;
     }
 
     // Default style (fallback) - with label if available
