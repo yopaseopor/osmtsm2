@@ -407,35 +407,64 @@ $(function () {
 		zoom: config.initialConfig.zoom
 	});
 
-	const map = new ol.Map({
-		layers: config.layers,
-		// Store the map in the window for access in style functions
-		target: 'map',
-		view: view
-	});
+	// Create map with all layers except the MapTiler custom style
+const map = new ol.Map({
+    layers: config.layers.filter(layer => layer.get('title') !== 'MapTiler Custom Style'),
+    target: 'map',
+    view: view
+});
 
-	// Store map in window for style functions
-	window.map = map;
+// Store map in window for debugging
+window.map = map;
 
-	// Load MapTiler style for the custom style layer
-	try {
-		// Find the MapTiler Custom Style layer
-		const maptilerLayer = config.layers.find(layer => 
-			layer.get('title') === 'MapTiler Custom Style'
-		);
+// Function to load and apply MapTiler style
+function applyMapTilerStyle() {
+    try {
+        // Create a new vector tile layer for MapTiler
+        const maptilerLayer = new ol.layer.VectorTile({
+            title: 'MapTiler Custom Style',
+            source: new ol.source.VectorTile({
+                tilePixelRatio: 1,
+                tileGrid: ol.tilegrid.createXYZ({ maxZoom: 22 }),
+                format: new ol.format.MVT(),
+                url: 'https://api.maptiler.com/maps/01974bfb-e42c-7989-8c6c-77a0369aba23/tiles/{z}/{x}/{y}/tile.vector.pbf?key=zPfUiHM0YgsZAlrKRPNg',
+                transition: 0
+            })
+        });
 
-		if (maptilerLayer) {
-			// Import and use the style loader
-			import('./assets/styles/maptiler-style-loader.js')
-				.then(module => {
-					const styleUrl = 'https://api.maptiler.com/maps/01974bfb-e42c-7989-8c6c-77a0369aba23/style.json?key=zPfUiHM0YgsZAlrKRPNg';
-					module.loadMapTilerStyle(styleUrl, maptilerLayer);
-				})
-				.catch(err => console.error('Error loading MapTiler style loader:', err));
-		}
-	} catch (error) {
-		console.error('Error initializing MapTiler style:', error);
-	}
+        // Add the layer to the map
+        map.addLayer(maptilerLayer);
+        
+        // Apply the style using the global olms object
+        olms.applyStyle(
+            maptilerLayer,
+            'https://api.maptiler.com/maps/01974bfb-e42c-7989-8c6c-77a0369aba23/style.json?key=zPfUiHM0YgsZAlrKRPNg',
+            'https://api.maptiler.com/maps/vt',
+            { 
+                transformRequest: (url) => {
+                    // Add API key to all requests if needed
+                    if (url.includes('api.maptiler.com') && !url.includes('key=')) {
+                        return { url: `${url}${url.includes('?') ? '&' : '?'}key=zPfUiHM0YgsZAlrKRPNg` };
+                    }
+                    return { url };
+                },
+                // Get the sprite and glyphs from the style
+                getFonts: (fontStack) => {
+                    return ['Noto Sans Regular', 'Arial Unicode MS Regular'];
+                }
+            }
+        ).then(() => {
+            console.log('MapTiler style applied successfully');
+        }).catch(error => {
+            console.error('Error applying MapTiler style:', error);
+        });
+    } catch (error) {
+        console.error('Error initializing MapTiler style:', error);
+    }
+}
+
+// Apply MapTiler style after a short delay to ensure everything is loaded
+setTimeout(applyMapTilerStyle, 1000);
 
 	// Initialize Nominatim search
 	initNominatimSearch(map);

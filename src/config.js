@@ -43,28 +43,7 @@ var config = {
 	},
 	//@@ Mapas de fondo
 	layers: [
-		// MapTiler Vector Tile Layer with custom style
-		new ol.layer.VectorTile({
-			title: 'MapTiler Custom Style',
-			iconSrc: imgSrc + 'icones_web/maptiler_logo.png',
-			visible: false,
-			opacity: 1.0,
-			source: new ol.source.VectorTile({
-				tilePixelRatio: 1,
-				tileGrid: ol.tilegrid.createXYZ({ maxZoom: 22 }),
-				format: new ol.format.MVT(),
-				url: 'https://api.maptiler.com/tiles/v3-openmaptiles/{z}/{x}/{y}.pbf?key=zPfUiHM0YgsZAlrKRPNg',
-				transition: 0
-			}),
-			style: function(feature, resolution) {
-				// This will be set when we load the style
-				if (window.maptilerCustomStyle) {
-					return window.maptilerCustomStyle(feature, resolution);
-				}
-				return [];
-			}
-		}),
-		
+	
 		// MapTiler Vector Tile Layer with enhanced glyph and sprite support
 		new ol.layer.VectorTile({
 			title: 'MapTiler Vector',
@@ -74,7 +53,7 @@ var config = {
 			source: new ol.source.VectorTile({
 				projection: 'EPSG:3857',
 				format: new ol.format.MVT(),
-				url: 'https://api.maptiler.com/tiles/v3-openmaptiles/{z}/{x}/{y}.pbf?key=zPfUiHM0YgsZAlrKRPNg',
+				url: 'https://api.maptiler.com/tiles/v3/{z}/{x}/{y}.pbf?key=Faz9gJu55zrWejNF55oZ',
 				tileGrid: ol.tilegrid.createXYZ({
 					minZoom: 0,
 					maxZoom: 14
