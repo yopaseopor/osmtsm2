@@ -202,20 +202,21 @@ var config = {
 						var fillColor = 'rgba(224, 224, 224, 0.6)';
 						if (feature.get('class') === 'park') fillColor = 'rgba(180, 220, 160, 0.6)';
 						if (feature.get('class') === 'grass') fillColor = 'rgba(200, 230, 180, 0.6)';
-						if (feature.get('class') === 'forest') fillColor = 'rgba(160, 200, 140, 0.6)';
 
-						var style = new ol.style.Style({
-							fill: new ol.style.Fill({
-								color: fillColor
-							})
-						}));
-					}
+                        var style = new ol.style.Style({
+                            fill: new ol.style.Fill({
+                                color: fillColor
+                            }),
+                            zIndex: 2
+                        });
+                        styles.push(style);
+                    }
 
-					// Roads
-					if (layer === 'transportation') {
-						var width = 1;
-						var color = '#ffffff';
-						var zIndex = 1;
+                    // Roads
+                    if (layer === 'transportation') {
+                        var width = 1;
+                        var color = '#ffffff';
+                        var zIndex = 1;
 
 						switch(feature.get('class')) {
 							case 'motorway':
