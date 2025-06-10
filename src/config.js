@@ -152,6 +152,7 @@ var config = {
 		new ol.layer.VectorTile({
 			title: 'OSM Vector Tiles',
 			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
+			visible: false,
 			source: new ol.source.VectorTile({
 				tilePixelRatio: 1,
 				tileGrid: ol.tilegrid.createXYZ({
@@ -173,7 +174,7 @@ var config = {
 					var styles = [];
 					var type = feature.getGeometry().getType();
 					var layer = feature.get('layer');
-					var zoom = this.getMap().getView().getZoom();
+					var zoom = this.getMap() ? this.getMap().getView().getZoom() : 12; // Default zoom if map not available
 
 					// Generate a cache key for this feature
 					var cacheKey = type + '|' + zoom + '|' + (layer || '');
@@ -183,21 +184,27 @@ var config = {
 
 					// Water
 					if (layer === 'water') {
-						styles.push(new ol.style.Style({
+						var style = new ol.style.Style({
 							fill: new ol.style.Fill({
-								color: '#aad3df'
-							})
-						}));
+								color: 'rgba(170, 211, 223, 0.8)'
+							}),
+							stroke: new ol.style.Stroke({
+								color: 'rgba(100, 150, 180, 0.8)',
+								width: 0.5
+							}),
+							zIndex: 1
+						});
+						styles.push(style);
 					}
 
 					// Landuse
-					if (layer === 'landuse') {
-						var fillColor = '#e0e0e0';
-						if (feature.get('class') === 'park') fillColor = '#d1e9c3';
-						if (feature.get('class') === 'grass') fillColor = '#d1e9c3';
-						if (feature.get('class') === 'forest') fillColor = '#b8d9a9';
+					if (layer === 'landuse' && zoom > 10) {
+						var fillColor = 'rgba(224, 224, 224, 0.6)';
+						if (feature.get('class') === 'park') fillColor = 'rgba(180, 220, 160, 0.6)';
+						if (feature.get('class') === 'grass') fillColor = 'rgba(200, 230, 180, 0.6)';
+						if (feature.get('class') === 'forest') fillColor = 'rgba(160, 200, 140, 0.6)';
 
-						styles.push(new ol.style.Style({
+						var style = new ol.style.Style({
 							fill: new ol.style.Fill({
 								color: fillColor
 							})
@@ -318,11 +325,12 @@ var config = {
 		new ol.layer.VectorTile({
 			title: 'MapTiler Basic',
 			iconSrc: imgSrc + 'icones_web/maptiler_logo.png',
+			visible: false,
 			source: new ol.source.VectorTile({
 				tilePixelRatio: 1,
 				tileGrid: ol.tilegrid.createXYZ({
 					minZoom: 0,
-					maxZoom: 14
+					maxZoom: 20
 				}),
 				format: new ol.format.MVT(),
 				url: 'https://api.maptiler.com/tiles/v3/{z}/{x}/{y}.pbf?key=zPfUiHM0YgsZAlrKRPNg',
