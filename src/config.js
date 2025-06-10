@@ -9,28 +9,69 @@ var imgSrc = 'src/img/';
 
 //@@Coordenadas LONgitud LATitud Rotación Zoom, Zoom de la geolocalización, unidades
 // Vector tile style function
-// Simple vector tile style function as fallback
+// Vector tile style function
 function vectorTileStyle(feature) {
-    var style = new ol.style.Style({
-        stroke: new ol.style.Stroke({
-            color: 'rgba(0, 60, 136, 0.5)',
-            width: 1
-        }),
-        fill: new ol.style.Fill({
-            color: 'rgba(0, 60, 136, 0.1)'
-        })
-    });
+    var styles = [];
+    var type = feature.getGeometry().getType();
     
-    // Add basic text style if feature has a name
-    if (feature.get('name')) {
-        style.setText(new ol.style.Text({
-            text: feature.get('name'),
-            fill: new ol.style.Fill({color: '#333'}),
-            stroke: new ol.style.Stroke({color: '#fff', width: 2})
+    // Style for polygons
+    if (type === 'Polygon' || type === 'MultiPolygon') {
+        styles.push(new ol.style.Style({
+            fill: new ol.style.Fill({
+                color: 'rgba(240, 240, 240, 0.5)'
+            }),
+            stroke: new ol.style.Stroke({
+                color: '#666',
+                width: 1
+            })
         }));
     }
     
-    return [style];
+    // Style for lines
+    if (type === 'LineString' || type === 'MultiLineString') {
+        styles.push(new ol.style.Style({
+            stroke: new ol.style.Stroke({
+                color: '#666',
+                width: 1
+            })
+        }));
+    }
+    
+    // Style for points
+    if (type === 'Point' || type === 'MultiPoint') {
+        styles.push(new ol.style.Style({
+            image: new ol.style.Circle({
+                radius: 4,
+                fill: new ol.style.Fill({
+                    color: '#3399CC'
+                }),
+                stroke: new ol.style.Stroke({
+                    color: '#fff',
+                    width: 1
+                })
+            })
+        }));
+    }
+    
+    // Add label if feature has a name
+    if (feature.get('name')) {
+        styles.push(new ol.style.Style({
+            text: new ol.style.Text({
+                text: feature.get('name'),
+                font: '12px Arial',
+                fill: new ol.style.Fill({
+                    color: '#000'
+                }),
+                stroke: new ol.style.Stroke({
+                    color: '#fff',
+                    width: 2
+                }),
+                offsetY: -15
+            })
+        }));
+    }
+    
+    return styles;
 }
 
 var config = {
@@ -68,11 +109,10 @@ var config = {
 	},
 	//@@ Mapas de fondo
 	layers: [
-		// OSM Vector Tiles with MVT format
+		// Vector Tiles - OSM
 		new ol.layer.VectorTile({
 			title: 'OSM Vector Tiles',
 			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
-			visible: false,
 			source: new ol.source.VectorTile({
 				tilePixelRatio: 1,
 				tileGrid: ol.tilegrid.createXYZ({
@@ -81,19 +121,16 @@ var config = {
 				}),
 				format: new ol.format.MVT(),
 				url: 'https://{a-c}.tile.openstreetmap.org/data/v3/{z}/{x}/{y}.pbf',
-				attributions: [
-					'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-				],
+				attributions: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 				crossOrigin: 'anonymous'
 			}),
-			style: vectorTileStyle
+			style: vectorTileStyle,
+			visible: false
 		}),
-		// MapTiler Vector Tile Layer with custom style URL using v3-openmaptiles
+		// Vector Tiles - MapTiler
 		new ol.layer.VectorTile({
-			title: 'MapTiler Vector Tiles',
+			title: 'MapTiler Vector',
 			iconSrc: imgSrc + 'icones_web/maptiler_logo.png',
-			visible: false,
-			opacity: 1.0,
 			source: new ol.source.VectorTile({
 				tilePixelRatio: 1,
 				tileGrid: ol.tilegrid.createXYZ({
@@ -108,10 +145,10 @@ var config = {
 				],
 				crossOrigin: 'anonymous'
 			}),
-			style: vectorTileStyle
+			style: vectorTileStyle,
+			visible: false
 		}),
-		
-		// MapTiler Vector Tile Layer with enhanced glyph and sprite support
+		// Vector Tiles - MapTiler with advanced styling
 		new ol.layer.VectorTile({
 			title: 'MapTiler Vector',
 			iconSrc: imgSrc + 'icones_web/maptiler_logo.png',
