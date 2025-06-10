@@ -201,14 +201,73 @@ var config = {
 						})
 					}));
 				}
+
+				// Add label if feature has a name
+				if (feature.get('name')) {
+					styles.push(new ol.style.Style({
+						text: new ol.style.Text({
+							text: feature.get('name'),
+							font: '12px Arial',
+							fill: new ol.style.Fill({ color: '#000' }),
+							stroke: new ol.style.Stroke({ 
+								color: '#fff', 
+								width: 2 
+							}),
+							offsetY: -15
+						})
+					}));
+				}
 				
+				return styles;
+			},
+			visible: false
+		}),
+
+		// OSM Mapnik (Raster Tiles)
+		new ol.layer.Tile({
+			title: 'OSM Mapnik',
+			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
+			source: new ol.source.OSM(),
+			visible: false
+		}),
+
+		// Vector Tiles - MapTiler Basic
+		new ol.layer.VectorTile({
+			title: 'MapTiler Basic',
+			iconSrc: imgSrc + 'icones_web/maptiler_logo.png',
+			source: new ol.source.VectorTile({
+				tilePixelRatio: 1,
+				tileGrid: ol.tilegrid.createXYZ({
+					minZoom: 0,
+					maxZoom: 14
+				}),
+				format: new ol.format.MVT(),
+				url: 'https://api.maptiler.com/tiles/v3/{z}/{x}/{y}.pbf?key=zPfUiHM0YgsZAlrKRPNg',
+				attributions: [
+					'<a href="https://www.maptiler.com/copyright/" target="_blank">MapTiler</a>',
+					'<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>'
+				],
+				crossOrigin: 'anonymous'
+			}),
+			style: function(feature) {
+				var styles = [];
+				var type = feature.getGeometry().getType();
+
+				// Style for polygons
+				if (type === 'Polygon' || type === 'MultiPolygon') {
+					styles.push(new ol.style.Style({
+						fill: new ol.style.Fill({ color: 'rgba(200, 220, 240, 0.5)' }),
+						stroke: new ol.style.Stroke({ color: '#446', width: 1 })
+					}));
+				}
+
 				// Style for lines
 				if (type === 'LineString' || type === 'MultiLineString') {
 					styles.push(new ol.style.Style({
 						stroke: new ol.style.Stroke({ color: '#446', width: 1 })
 					}));
 				}
-				
+
 				// Style for points
 				if (type === 'Point' || type === 'MultiPoint') {
 					styles.push(new ol.style.Style({
