@@ -1,5 +1,3 @@
-
-
 /**
  * OSM Cat config
  */
@@ -139,19 +137,18 @@ var config = {
 		noNodesFound: 'No se ha encontrado información.',
 		wayLabel: 'Vía:'
 	},
-	overpassApi: function(){
+		overpassApi: function(){
 		//@@posibilidad de cambiar el servidor de overpass https://overpass-turbo.eu/
 		var proxyOverpassApi = true;
 		var overpassApi = 'https://overpass-api.de/api/interpreter';
-		if (proxyOverpassApi)
-		{
+		if (proxyOverpassApi) {
 			overpassApi = 'https://overpass.kumi.systems/api/interpreter';
 		}
 		return overpassApi;
 	},
 	//@@ Mapas de fondo
 	layers: [
-		// Vector Tiles - OSM
+		// OSM Vector Tiles
 		new ol.layer.VectorTile({
 			title: 'OSM Vector Tiles',
 			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
@@ -162,73 +159,150 @@ var config = {
 					maxZoom: 14
 				}),
 				format: new ol.format.MVT(),
-				url: 'https://{a-c}.tile.openstreetmap.org/data/v3/{z}/{x}/{y}.pbf',
-				attributions: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+				url: 'https://api.maptiler.com/tiles/v3/{z}/{x}/{y}.pbf?key=zPfUiHM0YgsZAlrKRPNg',
+				attributions: [
+					'<a href="https://www.maptiler.com/copyright/" target="_blank">MapTiler</a>',
+					'<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>'
+				],
 				crossOrigin: 'anonymous'
 			}),
-			style: function(feature) {
-				var styles = [];
-				var type = feature.getGeometry().getType();
-				
-				// Style for polygons
-				if (type === 'Polygon' || type === 'MultiPolygon') {
-					styles.push(new ol.style.Style({
-						fill: new ol.style.Fill({ color: 'rgba(240, 240, 240, 0.5)' }),
-						stroke: new ol.style.Stroke({ color: '#666', width: 1 })
-					}));
-				}
-				
-				// Style for lines
-				if (type === 'LineString' || type === 'MultiLineString') {
-					styles.push(new ol.style.Style({
-						stroke: new ol.style.Stroke({ 
-							color: '#666', 
-							width: 1 
+			style: (function() {
+				var cache = {};
 
-                // Style for points
-                if (type === 'Point' || type === 'MultiPoint') {
-                    styles.push(new ol.style.Style({
-                        image: new ol.style.Circle({
-                            radius: 5,
-                            fill: new ol.style.Fill({ color: '#336699' }),
-                            stroke: new ol.style.Stroke({ color: '#fff', width: 1 })
-                        })
-                    }));
-                }
+				return function(feature, resolution) {
+					var styles = [];
+					var type = feature.getGeometry().getType();
+					var layer = feature.get('layer');
+					var zoom = this.getMap().getView().getZoom();
 
-                // Add label if feature has a name
-                if (feature.get('name')) {
-                    styles.push(new ol.style.Style({
-                        text: new ol.style.Text({
-                            text: feature.get('name'),
-                            font: '12px Arial',
-                            fill: new ol.style.Fill({ color: '#000' }),
-                            stroke: new ol.style.Stroke({ color: '#fff', width: 2 }),
-                            offsetY: -15
-                        })
-                    }));
-                }
-                
-                return styles;
-            },
-            visible: false
-        }),
-					styles.push(new ol.style.Style({
-						text: new ol.style.Text({
-							text: feature.get('name'),
-							font: '12px Arial',
-							fill: new ol.style.Fill({ color: '#000' }),
-							stroke: new ol.style.Stroke({ 
-								color: '#fff', 
-								width: 2 
+					// Generate a cache key for this feature
+					var cacheKey = type + '|' + zoom + '|' + (layer || '');
+					if (cache[cacheKey]) {
+						return cache[cacheKey];
+					}
+
+					// Water
+					if (layer === 'water') {
+						styles.push(new ol.style.Style({
+							fill: new ol.style.Fill({
+								color: '#aad3df'
+							})
+						}));
+					}
+
+					// Landuse
+					if (layer === 'landuse') {
+						var fillColor = '#e0e0e0';
+						if (feature.get('class') === 'park') fillColor = '#d1e9c3';
+						if (feature.get('class') === 'grass') fillColor = '#d1e9c3';
+						if (feature.get('class') === 'forest') fillColor = '#b8d9a9';
+
+						styles.push(new ol.style.Style({
+							fill: new ol.style.Fill({
+								color: fillColor
+							})
+						}));
+					}
+
+					// Roads
+					if (layer === 'transportation') {
+						var width = 1;
+						var color = '#ffffff';
+						var zIndex = 1;
+
+						switch(feature.get('class')) {
+							case 'motorway':
+								width = Math.min(3, 0.5 + (zoom - 5) * 0.3);
+								color = '#ff8753';
+								zIndex = 10;
+								break;
+							case 'trunk':
+							case 'primary':
+								width = Math.min(2.5, 0.4 + (zoom - 7) * 0.25);
+								color = '#ffb77d';
+								zIndex = 9;
+								break;
+							case 'secondary':
+								width = Math.min(2, 0.3 + (zoom - 9) * 0.2);
+								color = '#ffffff';
+								zIndex = 8;
+								break;
+							default:
+								if (zoom < 11) break;
+								width = Math.min(1.5, 0.2 + (zoom - 11) * 0.15);
+								color = '#ffffff';
+								zIndex = 7;
+						}
+
+						if (width) {
+							styles.push(new ol.style.Style({
+								stroke: new ol.style.Stroke({
+									color: color,
+									width: width,
+									lineCap: 'round',
+									lineJoin: 'round'
+								}),
+								zIndex: zIndex
+							}));
+						}
+					}
+
+					// Buildings
+					if (layer === 'building' && zoom >= 15) {
+						styles.push(new ol.style.Style({
+							fill: new ol.style.Fill({
+								color: 'rgba(200, 200, 200, 0.6)'
 							}),
-							offsetY: -15
-						})
-					}));
-				}
-				
-				return styles;
-			},
+							stroke: new ol.style.Stroke({
+								color: 'rgba(150, 150, 150, 0.7)',
+								width: 0.5
+							}),
+							zIndex: 100 + zoom
+						}));
+					}
+
+					// Points of interest
+					if (layer === 'poi' && feature.get('name')) {
+						if (zoom >= 14) {
+							styles.push(new ol.style.Style({
+								image: new ol.style.Circle({
+									radius: 5,
+									fill: new ol.style.Fill({
+										color: '#336699'
+									}),
+									stroke: new ol.style.Stroke({
+										color: '#fff',
+										width: 1
+									})
+								}),
+								text: new ol.style.Text({
+									text: feature.get('name'),
+									font: '12px Arial',
+									overflow: true,
+									fill: new ol.style.Fill({
+										color: '#333'
+									}),
+									stroke: new ol.style.Stroke({
+										color: '#fff',
+										width: 3
+									}),
+									offsetY: -15,
+									textBaseline: 'bottom',
+									textAlign: 'center'
+								}),
+								zIndex: 200
+							}));
+						}
+					}
+
+					// Cache the style for this feature at this zoom level
+					if (styles.length > 0) {
+						cache[cacheKey] = styles;
+					}
+
+					return styles;
+				};
+			})(),
 			visible: false
 		}),
 
