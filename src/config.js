@@ -7,72 +7,114 @@
 //@@ Ruta de imágenes
 var imgSrc = 'src/img/';
 
-//@@Coordenadas LONgitud LATitud Rotación Zoom, Zoom de la geolocalización, unidades
-// Vector tile style function
-// Vector tile style function
-function vectorTileStyle(feature) {
-    var styles = [];
-    var type = feature.getGeometry().getType();
-    
-    // Style for polygons
-    if (type === 'Polygon' || type === 'MultiPolygon') {
-        styles.push(new ol.style.Style({
-            fill: new ol.style.Fill({
-                color: 'rgba(240, 240, 240, 0.5)'
-            }),
-            stroke: new ol.style.Stroke({
-                color: '#666',
-                width: 1
-            })
-        }));
-    }
-    
-    // Style for lines
-    if (type === 'LineString' || type === 'MultiLineString') {
-        styles.push(new ol.style.Style({
-            stroke: new ol.style.Stroke({
-                color: '#666',
-                width: 1
-            })
-        }));
-    }
-    
-    // Style for points
-    if (type === 'Point' || type === 'MultiPoint') {
-        styles.push(new ol.style.Style({
-            image: new ol.style.Circle({
-                radius: 4,
+// Vector Tile Style Functions
+var vectorTileStyles = {
+    // Basic style for OSM vector tiles
+    basic: function(feature) {
+        var styles = [];
+        var type = feature.getGeometry().getType();
+        
+        // Style for polygons
+        if (type === 'Polygon' || type === 'MultiPolygon') {
+            styles.push(new ol.style.Style({
                 fill: new ol.style.Fill({
-                    color: '#3399CC'
+                    color: 'rgba(240, 240, 240, 0.5)'
                 }),
                 stroke: new ol.style.Stroke({
-                    color: '#fff',
+                    color: '#666',
                     width: 1
                 })
-            })
-        }));
-    }
-    
-    // Add label if feature has a name
-    if (feature.get('name')) {
-        styles.push(new ol.style.Style({
-            text: new ol.style.Text({
-                text: feature.get('name'),
-                font: '12px Arial',
-                fill: new ol.style.Fill({
-                    color: '#000'
-                }),
+            }));
+        }
+        
+        // Style for lines
+        if (type === 'LineString' || type === 'MultiLineString') {
+            styles.push(new ol.style.Style({
                 stroke: new ol.style.Stroke({
-                    color: '#fff',
-                    width: 2
-                }),
-                offsetY: -15
-            })
-        }));
-    }
+                    color: '#666',
+                    width: 1
+                })
+            }));
+        }
+        
+        // Style for points
+        if (type === 'Point' || type === 'MultiPoint') {
+            styles.push(new ol.style.Style({
+                image: new ol.style.Circle({
+                    radius: 4,
+                    fill: new ol.style.Fill({
+                        color: '#3399CC'
+                    }),
+                    stroke: new ol.style.Stroke({
+                        color: '#fff',
+                        width: 1
+                    })
+                })
+            }));
+        }
+        
+        // Add label if feature has a name
+        if (feature.get('name')) {
+            styles.push(new ol.style.Style({
+                text: new ol.style.Text({
+                    text: feature.get('name'),
+                    font: '12px Arial',
+                    fill: new ol.style.Fill({
+                        color: '#000'
+                    }),
+                    stroke: new ol.style.Stroke({
+                        color: '#fff',
+                        width: 2
+                    }),
+                    offsetY: -15
+                })
+            }));
+        }
+        
+        return styles;
+    },
     
-    return styles;
-}
+    // Advanced style for MapTiler vector tiles with sprite support
+    maptilerAdvanced: (function() {
+        // Initialize style configuration with glyphs and sprites
+        window.maptilerStyleConfig = {
+            spriteBaseUrl: 'https://api.maptiler.com/maps/streets/sprite',
+            glyphs: 'https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=Faz9gJu55zrWejNF55oZ',
+            fontStacks: {
+                regular: ['Noto Sans Regular', 'Arial Unicode MS Regular'],
+                bold: ['Noto Sans Bold', 'Arial Unicode MS Bold'],
+                italic: ['Noto Sans Italic', 'Arial Unicode MS Italic'],
+                bolditalic: ['Noto Sans Bold Italic', 'Arial Unicode MS Bold Italic']
+            }
+        };
+
+        // Preload fonts
+        const fontPromises = [];
+        Object.values(window.maptilerStyleConfig.fontStacks).forEach(fonts => {
+            fonts.forEach(font => {
+                const fontUrl = window.maptilerStyleConfig.glyphs
+                    .replace('{fontstack}', encodeURIComponent(font))
+                    .replace('{range}', '0-255');
+                fontPromises.push(
+                    fetch(fontUrl).catch(e => console.warn('Failed to load font:', font, e))
+                );
+            });
+        });
+
+        // Return the style function with access to the config
+        return function(feature, resolution) {
+            if (window.vectorTileStyle) {
+                try {
+                    return window.vectorTileStyle(feature, resolution, window.maptilerStyleConfig);
+                } catch (e) {
+                    console.error('Error in vectorTileStyle:', e);
+                    return [];
+                }
+            }
+            return [];
+        };
+    })()
+};
 
 var config = {
 	initialConfig: {
@@ -124,12 +166,56 @@ var config = {
 				attributions: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 				crossOrigin: 'anonymous'
 			}),
-			style: vectorTileStyle,
+			style: function(feature) {
+				var styles = [];
+				var type = feature.getGeometry().getType();
+				
+				// Style for polygons
+				if (type === 'Polygon' || type === 'MultiPolygon') {
+					styles.push(new ol.style.Style({
+						fill: new ol.style.Fill({ color: 'rgba(240, 240, 240, 0.5)' }),
+						stroke: new ol.style.Stroke({ color: '#666', width: 1 })
+					}));
+				}
+				
+				// Style for lines
+				if (type === 'LineString' || type === 'MultiLineString') {
+					styles.push(new ol.style.Style({
+						stroke: new ol.style.Stroke({ color: '#666', width: 1 })
+					}));
+				}
+				
+				// Style for points
+				if (type === 'Point' || type === 'MultiPoint') {
+					styles.push(new ol.style.Style({
+						image: new ol.style.Circle({
+							radius: 4,
+							fill: new ol.style.Fill({ color: '#3399CC' }),
+							stroke: new ol.style.Stroke({ color: '#fff', width: 1 })
+						})
+					}));
+				}
+				
+				// Add label if feature has a name
+				if (feature.get('name')) {
+					styles.push(new ol.style.Style({
+						text: new ol.style.Text({
+							text: feature.get('name'),
+							font: '12px Arial',
+							fill: new ol.style.Fill({ color: '#000' }),
+							stroke: new ol.style.Stroke({ color: '#fff', width: 2 }),
+							offsetY: -15
+						})
+					}));
+				}
+				
+				return styles;
+			},
 			visible: false
 		}),
-		// Vector Tiles - MapTiler
+		// Vector Tiles - MapTiler Basic
 		new ol.layer.VectorTile({
-			title: 'MapTiler Vector',
+			title: 'MapTiler Basic',
 			iconSrc: imgSrc + 'icones_web/maptiler_logo.png',
 			source: new ol.source.VectorTile({
 				tilePixelRatio: 1,
@@ -145,73 +231,53 @@ var config = {
 				],
 				crossOrigin: 'anonymous'
 			}),
-			style: vectorTileStyle,
+			style: function(feature) {
+				var styles = [];
+				var type = feature.getGeometry().getType();
+				
+				// Style for polygons
+				if (type === 'Polygon' || type === 'MultiPolygon') {
+					styles.push(new ol.style.Style({
+						fill: new ol.style.Fill({ color: 'rgba(200, 220, 240, 0.5)' }),
+						stroke: new ol.style.Stroke({ color: '#446', width: 1 })
+					}));
+				}
+				
+				// Style for lines
+				if (type === 'LineString' || type === 'MultiLineString') {
+					styles.push(new ol.style.Style({
+						stroke: new ol.style.Stroke({ color: '#446', width: 1 })
+					}));
+				}
+				
+				// Style for points
+				if (type === 'Point' || type === 'MultiPoint') {
+					styles.push(new ol.style.Style({
+						image: new ol.style.Circle({
+							radius: 5,
+							fill: new ol.style.Fill({ color: '#336699' }),
+							stroke: new ol.style.Stroke({ color: '#fff', width: 1 })
+						})
+					}));
+				}
+				
+				// Add label if feature has a name
+				if (feature.get('name')) {
+					styles.push(new ol.style.Style({
+						text: new ol.style.Text({
+							text: feature.get('name'),
+							font: '12px Arial',
+							fill: new ol.style.Fill({ color: '#224466' }),
+							stroke: new ol.style.Stroke({ color: '#fff', width: 2 }),
+							offsetY: -15
+						})
+					}));
+				}
+				
+				return styles;
+			},
 			visible: false
 		}),
-		// Vector Tiles - MapTiler with advanced styling
-		new ol.layer.VectorTile({
-			title: 'MapTiler Vector',
-			iconSrc: imgSrc + 'icones_web/maptiler_logo.png',
-			visible: false,
-			opacity: 1.0,
-			source: new ol.source.VectorTile({
-				projection: 'EPSG:3857',
-				format: new ol.format.MVT(),
-				url: 'https://api.maptiler.com/tiles/v3/{z}/{x}/{y}.pbf?key=Faz9gJu55zrWejNF55oZ',
-				tileGrid: ol.tilegrid.createXYZ({
-					minZoom: 0,
-					maxZoom: 14
-				}),
-				attributions: [
-					'<a href="https://www.maptiler.com/copyright/" target="_blank"> MapTiler</a>',
-					'<a href="https://www.openstreetmap.org/copyright" target="_blank"> OpenStreetMap contributors</a>'
-				]
-			}),
-			style: (function() {
-				// Initialize style configuration with glyphs and sprites
-				window.maptilerStyleConfig = {
-					spriteBaseUrl: 'https://api.maptiler.com/maps/streets/sprite',
-					glyphs: 'https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=Faz9gJu55zrWejNF55oZ',
-					fontStacks: {
-						regular: ['Noto Sans Regular', 'Arial Unicode MS Regular'],
-						bold: ['Noto Sans Bold', 'Arial Unicode MS Bold'],
-						italic: ['Noto Sans Italic', 'Arial Unicode MS Italic'],
-						bolditalic: ['Noto Sans Bold Italic', 'Arial Unicode MS Bold Italic']
-					}
-				};
-
-				// Preload fonts
-				const fontPromises = [];
-				Object.values(window.maptilerStyleConfig.fontStacks).forEach(fonts => {
-					fonts.forEach(font => {
-						const fontUrl = window.maptilerStyleConfig.glyphs
-							.replace('{fontstack}', encodeURIComponent(font))
-							.replace('{range}', '0-255');
-						fontPromises.push(
-							fetch(fontUrl).catch(e => console.warn('Failed to load font:', font, e))
-						);
-					});
-				});
-
-				// Return the style function with access to the config
-				return function(feature, resolution) {
-					if (window.vectorTileStyle) {
-						try {
-							return window.vectorTileStyle(feature, resolution, window.maptilerStyleConfig);
-						} catch (e) {
-							console.error('Error in vectorTileStyle:', e);
-							return [];
-						}
-					}
-					return [];
-				};
-			})()
-		}),
-		new ol.layer.Tile({
-			title: 'OpenStreetMap',
-			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
-			source: new ol.source.OSM()
-/*@@ inicio de copia */			}),
 								new ol.layer.Tile({
 /*@@ título */					title: 'OpenStreetMap DE',
 /*@@ icono */					iconSrc: imgSrc + 'icones_web/osmbw_logo-layer.png',
