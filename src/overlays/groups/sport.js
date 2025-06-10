@@ -5544,6 +5544,114 @@ export function sportOverlays() {
             stroke: stroke
         });
         return style;
+}
+},
+{
+    group: getTranslation('fitness_centre'),
+	title: "\u6210\u5409\u601d\u6c57\u5065\u8eab\u4ff1\u6a02\u90e8",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u6210\u5409\u601d\u6c57\u5065\u8eab\u4ff1\u6a02\u90e8\"][\"brand:en\"=\"Genghis Khan Fitness Club\"][\"brand:wikidata\"=\"Q109345206\"][\"brand:zh\"=\"\u6210\u5409\u601d\u6c57\u5065\u8eab\u4ff1\u6a02\u90e8\"][\"leisure\"=\"fitness_centre\"][\"name\"=\"\u6210\u5409\u601d\u6c57\u5065\u8eab\u4ff1\u6a02\u90e8\"][\"name:en\"=\"Genghis Khan Fitness Club\"][\"name:zh\"=\"\u6210\u5409\u601d\u6c57\u5065\u8eab\u4ff1\u6a02\u90e8\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('fitness_centre'),
+	title: "\u8212\u9069\u5821 Physical Fitness & Beauty",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u8212\u9069\u5821 Physical Fitness & Beauty\"][\"brand:en\"=\"Physical Fitness & Beauty\"][\"brand:wikidata\"=\"Q15897842\"][\"brand:zh\"=\"\u8212\u9069\u5821\"][\"brand:zh-Hans\"=\"\u8212\u9002\u5821\"][\"brand:zh-Hant\"=\"\u8212\u9069\u5821\"][\"leisure\"=\"fitness_centre\"][\"name\"=\"\u8212\u9069\u5821 Physical Fitness & Beauty\"][\"name:en\"=\"Physical Fitness & Beauty\"][\"name:zh\"=\"\u8212\u9069\u5821\"][\"name:zh-Hans\"=\"\u8212\u9002\u5821\"][\"name:zh-Hant\"=\"\u8212\u9069\u5821\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('fitness_station'),
+	title: "Fitness Court",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Fitness Court\"][\"brand:wikidata\"=\"Q116211382\"][\"leisure\"=\"fitness_station\"][\"name\"=\"Fitness Court\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
 		
 			}
         }

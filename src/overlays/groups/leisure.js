@@ -5508,6 +5508,366 @@ export function leisureOverlays() {
             stroke: stroke
         });
         return style;
+    }
+},
+{
+    group: getTranslation('indoor_play'),
+	title: "IKEA Sm\u00e5land",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"IKEA\"][\"brand:wikidata\"=\"Q54078\"][\"leisure\"=\"indoor_play\"][\"name\"=\"Sm\u00e5land\"][\"supervised\"=\"yes\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Ikea_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Ikea_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('indoor_play'),
+	title: "My Gym",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"My Gym\"][\"brand:wikidata\"=\"Q6945604\"][\"leisure\"=\"indoor_play\"][\"name\"=\"My Gym\"][\"official_name\"=\"My Gym Children's Fitness Center\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('indoor_play'),
+	title: "The Little Gym",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"The Little Gym\"][\"brand:wikidata\"=\"Q7747618\"][\"leisure\"=\"indoor_play\"][\"name\"=\"The Little Gym\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('indoor_play'),
+	title: "Wacky Warehouse",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Wacky Warehouse\"][\"brand:wikidata\"=\"Q104215014\"][\"leisure\"=\"indoor_play\"][\"name\"=\"Wacky Warehouse\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('miniature_golf'),
+	title: "Holey Moley",
+    query: "[out:json][timeout:25];(nwr[\"bar\"=\"yes\"][\"brand\"=\"Holey Moley\"][\"brand:wikidata\"=\"Q85766991\"][\"food\"=\"yes\"][\"leisure\"=\"miniature_golf\"][\"name\"=\"Holey Moley\"][\"sport\"=\"miniature_golf\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('playground'),
+	title: "Biba Smart Playground",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Biba\"][\"brand:wikidata\"=\"Q116211938\"][\"leisure\"=\"playground\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('playground'),
+	title: "Lollipops Playland",
+    query: "[out:json][timeout:25];(nwr[\"access\"=\"customers\"][\"brand\"=\"Lollipops Playland\"][\"brand:wikidata\"=\"Q116825053\"][\"leisure\"=\"playground\"][\"name\"=\"Lollipops Playland\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('playground'),
+	title: "McDonald's PlayPlace",
+    query: "[out:json][timeout:25];(nwr[\"access\"=\"customers\"][\"brand\"=\"McDonald's\"][\"brand:wikidata\"=\"Q38076\"][\"leisure\"=\"playground\"][\"name\"=\"McDonald's PlayPlace\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/McDonald's_with_slogan_2020.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/McDonald's_with_slogan_2020.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('playground'),
+	title: "\u017dihadielko",
+    query: "[out:json][timeout:25];(nwr[\"access\"=\"yes\"][\"brand\"=\"\u017dihadielko\"][\"brand:wikidata\"=\"Q116898441\"][\"leisure\"=\"playground\"][\"name\"=\"\u017dihadielko\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Detsk\u00e9_ihrisko_\u017dihadielko_Doln\u00fd_Kub\u00edn.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Detsk\u00e9_ihrisko_\u017dihadielko_Doln\u00fd_Kub\u00edn.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('playground'),
+	title: "\u30e2\u30fc\u30ea\u30fc\u30d5\u30a1\u30f3\u30bf\u30b8\u30fc",
+    query: "[out:json][timeout:25];(nwr[\"access\"=\"customers\"][\"brand\"=\"\u30e2\u30fc\u30ea\u30fc\u30d5\u30a1\u30f3\u30bf\u30b8\u30fc\"][\"brand:en\"=\"Molly Fantasy\"][\"brand:ja\"=\"\u30e2\u30fc\u30ea\u30fc\u30d5\u30a1\u30f3\u30bf\u30b8\u30fc\"][\"brand:wikidata\"=\"Q92437201\"][\"leisure\"=\"playground\"][\"name\"=\"\u30e2\u30fc\u30ea\u30fc\u30d5\u30a1\u30f3\u30bf\u30b8\u30fc\"][\"name:en\"=\"Molly Fantasy\"][\"name:ja\"=\"\u30e2\u30fc\u30ea\u30fc\u30d5\u30a1\u30f3\u30bf\u30b8\u30fc\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
 
  }
         }
