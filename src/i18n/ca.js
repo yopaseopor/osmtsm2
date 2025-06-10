@@ -97,6 +97,8 @@ export const ca = {
 		dance: 'Ball',
 	dog_park: 'Parc per a gossos',
 	escape_game: 'Escaperoom',
+		sport: 'Esport',
+	fitness_centre: 'Gimnàs',
 	signmaker: 'Rètols',
 	social_centre: 'Centre social',
 	social_facility: 'Caire social',

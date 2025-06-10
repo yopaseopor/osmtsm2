@@ -98,6 +98,8 @@ export const es = {
 	dance: 'Baile',
 	dog_park: 'Parque para perros',
 	escape_game: 'Escaperoom',
+		sport: 'Deporte',
+	fitness_centre: 'Gimnasio',
 	signmaker: 'Rótulos',
 	social_centre: 'Centro social',
 	social_facility: 'Social',

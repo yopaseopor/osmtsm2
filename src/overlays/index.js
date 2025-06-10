@@ -9,6 +9,7 @@ import { mobilityOverlays } from './groups/mobility.js';
 import { cultureOverlays } from './groups/culture.js';
 import { othersOverlays } from './groups/others.js';
 import { transportOverlays } from './groups/transport.js';
+import { sportOverlays } from './groups/sport.js';
 import { healthOverlays } from './groups/health.js';
 import { educationOverlays } from './groups/education.js';
 import { loadExternalOverlays } from './external/loader.js';
@@ -32,6 +33,7 @@ export function getAllOverlays() {
 		health: healthOverlays(),
 		others: othersOverlays(),
         transport: transportOverlays,
+		sport: sportOverlays,
         translated: translatedOverlays || [],
         external: []
     };

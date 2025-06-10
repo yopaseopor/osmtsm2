@@ -98,6 +98,8 @@ export const en = {
 	dance: 'Dance',
 	dog_park: 'Dog park',
 	escape_game: 'Escape game',
+	sport: 'Sport',
+	fitness_centre: 'Fitness centre',
 	signmaker: 'Signmaker',
 	social_centre: 'Social centre',
 	social_facility: 'Social facility',
