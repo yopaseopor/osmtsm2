@@ -103,7 +103,7 @@ export const ca = {
 	indoor_play: 'Joc d\'interior',
 	playground: 'Zona de joc',
 	miniature_golf: 'Minigolf',
-		sport_centre: 'Centre d\'esports',
+		sports_centre: 'Centre d\'esports',
 	trampoline_park: 'Parc d\'aventura',
 		charge_point: 'Punt de recàrrega',
 	signmaker: 'Rètols',

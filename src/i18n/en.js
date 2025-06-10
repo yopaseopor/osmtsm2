@@ -104,7 +104,7 @@ export const en = {
 	indoor_play: 'Indoor play',
 	playground: 'Playground',
 	miniature_golf: 'Miniature golf',
-	sport_centre: 'Sport centre',
+	sports_centre: 'Sport centre',
 	trampoline_park: 'Trampoline park',
 		charge_point: 'Charge point',
 	signmaker: 'Signmaker',
