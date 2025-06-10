@@ -9,16 +9,28 @@ var imgSrc = 'src/img/';
 
 //@@Coordenadas LONgitud LATitud Rotación Zoom, Zoom de la geolocalización, unidades
 // Vector tile style function
+// Simple vector tile style function as fallback
 function vectorTileStyle(feature) {
-    return new ol.style.Style({
+    var style = new ol.style.Style({
         stroke: new ol.style.Stroke({
-            color: 'rgba(0, 0, 255, 0.5)',
+            color: 'rgba(0, 60, 136, 0.5)',
             width: 1
         }),
         fill: new ol.style.Fill({
-            color: 'rgba(0, 0, 255, 0.1)'
+            color: 'rgba(0, 60, 136, 0.1)'
         })
     });
+    
+    // Add basic text style if feature has a name
+    if (feature.get('name')) {
+        style.setText(new ol.style.Text({
+            text: feature.get('name'),
+            fill: new ol.style.Fill({color: '#333'}),
+            stroke: new ol.style.Stroke({color: '#fff', width: 2})
+        }));
+    }
+    
+    return [style];
 }
 
 var config = {
@@ -56,32 +68,17 @@ var config = {
 	},
 	//@@ Mapas de fondo
 	layers: [
-		// Vector tile layer with MVT format
+		// OSM Vector Tiles with MVT format
 		new ol.layer.VectorTile({
 			title: 'OSM Vector Tiles',
 			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
-			source: new ol.source.VectorTile({
-				tilePixelRatio: 1,
-				tileGrid: ol.tilegrid.createXYZ({maxZoom: 19}),
-				format: new ol.format.MVT(),
-				url: 'https://{a-c}.tile.openstreetmap.org/data/v3/{z}/{x}/{y}.pbf',
-				attributions: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-				crossOrigin: 'anonymous'
-			}),
-			style: vectorTileStyle,
-			visible: false
-		}),
-		// Simplified Vector Tile Layer with OpenStreetMap data
-		new ol.layer.VectorTile({
-			title: 'OSM Vector Tiles (Simplified)',
-			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
 			visible: false,
 			source: new ol.source.VectorTile({
 				tilePixelRatio: 1,
 				tileGrid: ol.tilegrid.createXYZ({
-                    minZoom: 0,
-                    maxZoom: 19
-                }),
+					minZoom: 0,
+					maxZoom: 14
+				}),
 				format: new ol.format.MVT(),
 				url: 'https://{a-c}.tile.openstreetmap.org/data/v3/{z}/{x}/{y}.pbf',
 				attributions: [
@@ -89,138 +86,85 @@ var config = {
 				],
 				crossOrigin: 'anonymous'
 			}),
-			style: function(feature) {
-				var style = new ol.style.Style({
-					fill: new ol.style.Fill({
-						color: 'rgba(200, 200, 200, 0.5)'
-					}),
-					stroke: new ol.style.Stroke({
-						color: '#3399CC',
-						width: 1.25
-					})
+			style: vectorTileStyle
+		}),
+		// MapTiler Vector Tile Layer with custom style URL using v3-openmaptiles
+		new ol.layer.VectorTile({
+			title: 'MapTiler Vector Tiles',
+			iconSrc: imgSrc + 'icones_web/maptiler_logo.png',
+			visible: false,
+			opacity: 1.0,
+			source: new ol.source.VectorTile({
+				tilePixelRatio: 1,
+				tileGrid: ol.tilegrid.createXYZ({
+					minZoom: 0,
+					maxZoom: 14
+				}),
+				format: new ol.format.MVT(),
+				url: 'https://api.maptiler.com/tiles/v3/{z}/{x}/{y}.pbf?key=zPfUiHM0YgsZAlrKRPNg',
+				attributions: [
+					'<a href="https://www.maptiler.com/copyright/" target="_blank">MapTiler</a>',
+					'<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>'
+				],
+				crossOrigin: 'anonymous'
+			}),
+			style: vectorTileStyle
+		}),
+		
+		// MapTiler Vector Tile Layer with enhanced glyph and sprite support
+		new ol.layer.VectorTile({
+			title: 'MapTiler Vector',
+			iconSrc: imgSrc + 'icones_web/maptiler_logo.png',
+			visible: false,
+			opacity: 1.0,
+			source: new ol.source.VectorTile({
+				projection: 'EPSG:3857',
+				format: new ol.format.MVT(),
+				url: 'https://api.maptiler.com/tiles/v3/{z}/{x}/{y}.pbf?key=Faz9gJu55zrWejNF55oZ',
+				tileGrid: ol.tilegrid.createXYZ({
+					minZoom: 0,
+					maxZoom: 14
+				}),
+				attributions: [
+					'<a href="https://www.maptiler.com/copyright/" target="_blank"> MapTiler</a>',
+					'<a href="https://www.openstreetmap.org/copyright" target="_blank"> OpenStreetMap contributors</a>'
+				]
+			}),
+			style: (function() {
+				// Initialize style configuration with glyphs and sprites
+				window.maptilerStyleConfig = {
+					spriteBaseUrl: 'https://api.maptiler.com/maps/streets/sprite',
+					glyphs: 'https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=Faz9gJu55zrWejNF55oZ',
+					fontStacks: {
+						regular: ['Noto Sans Regular', 'Arial Unicode MS Regular'],
+						bold: ['Noto Sans Bold', 'Arial Unicode MS Bold'],
+						italic: ['Noto Sans Italic', 'Arial Unicode MS Italic'],
+						bolditalic: ['Noto Sans Bold Italic', 'Arial Unicode MS Bold Italic']
+					}
+				};
+
+				// Preload fonts
+				const fontPromises = [];
+				Object.values(window.maptilerStyleConfig.fontStacks).forEach(fonts => {
+					fonts.forEach(font => {
+						const fontUrl = window.maptilerStyleConfig.glyphs
+							.replace('{fontstack}', encodeURIComponent(font))
+							.replace('{range}', '0-255');
+						fontPromises.push(
+							fetch(fontUrl).catch(e => console.warn('Failed to load font:', font, e))
+						);
+					});
 				});
 
-				try {
-					var layer = feature.get('layer');
-					if (layer) {
-						switch(layer) {
-							case 'water':
-								style.getFill().setColor('rgba(170, 210, 255, 0.5)');
-								break;
-							case 'landuse':
-								style.getFill().setColor('rgba(200, 250, 200, 0.3)');
-								break;
-							case 'road':
-								style.getStroke().setColor('#666');
-								style.getStroke().setWidth(1);
-								break;
+				// Return the style function with access to the config
+				return function(feature, resolution) {
+					if (window.vectorTileStyle) {
+						try {
+							return window.vectorTileStyle(feature, resolution, window.maptilerStyleConfig);
+						} catch (e) {
+							console.error('Error in vectorTileStyle:', e);
+							return [];
 						}
-					}
-				} catch (e) {
-					console.warn('Error styling feature:', e);
-				}
-
-				return style;
-			}
-        }),
-        new ol.layer.Tile({
-            title: 'OpenStreetMap',
-            iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
-            source: new ol.source.OSM()
-/*@@ inicio de copia */        }),
-        new ol.layer.Tile({
-/*@@ título */            title: 'OpenStreetMap DE',
-/*@@ icono */            iconSrc: imgSrc + 'icones_web/osmbw_logo-layer.png',
-/*@@ zoom máximo */            maxZoom: 18,
-            source: new ol.source.XYZ({
-/*@@ atribución */            attributions: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-/*@@ url */                url: 'https://{a-c}.tile.openstreetmap.de/{z}/{x}/{y}.png'
-            }),
-/*@@ visible de inicio */        visible: false
-/*@@ final de copia */        }),
-        new ol.layer.Tile({// OpenStreetMap France https://openstreetmap.fr
-            title: 'OpenStreetMap FR',
-            iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
-            source: new ol.source.OSM({
-                attributions: '&copy; <a href="https://www.openstreetmap.fr/" target="_blank">OpenStreetMap France</a>',
-                url: 'https://{a-c}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png'
-            }),
-            visible: false
-        }),
-        new ol.layer.Tile({
-            title: 'OpenCycleMap',
-            iconSrc: imgSrc + 'icones_web/opencycle_logo_layer.png',
-            source: new ol.source.XYZ({
-                attributions: 'Map data &copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>, powered by &copy; <a href="http://www.thunderforest.com/" target="_blank">Thunderforest</a>',
-                url: 'https://{a-c}.tile.thunderforest.com/cycle/{z}/{x}/{y}.png?apikey=a5dd6a2f1c934394bce6b0fb077203eb'
-            }),
-            visible: false
-        }),
-        new ol.layer.Tile({
-            title: 'Topotresc',
-            iconSrc: imgSrc + 'icones_web/topotresc_layer.png',
-            source: new ol.source.XYZ({
-                attributions: 'Map data <a href="https://www.topotresc.com/" target="_blank">TopoTresk</a> by <a href="https://github.com/aresta/topotresc" target="_blank">aresta</a>',
-                url: 'https://api.topotresc.com/tiles/{z}/{x}/{y}'
-            }),
-            visible: false
-        }),
-        new ol.layer.Tile({
-            title: 'ArcGIS World Topo',
-            iconSrc: imgSrc + 'icones_web/worldtopomap_logo_layer.png',
-            source: new ol.source.XYZ({
-                attributions: 'Map data &copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> contributors, &copy; <a href="https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer" target="_blank">ArcGIS</a>',
-                url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}'
-            }),
-            visible: false
-        }),
-        new ol.layer.Tile({
-            title: 'Positron (CartoDB)',
-            iconSrc: imgSrc + 'icones_web/cartodb_logo_layer.png',
-            source: new ol.source.XYZ({
-                attributions: 'Map data &copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> contributors, &copy; <a href="https://cartodb.com/attributions" target="_blank">CartoDB</a>',
-                url: 'https://s.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png'
-            }),
-            visible: false
-        }),
-        new ol.layer.Tile({
-            title: 'Dark Matter (CartoDB)',
-            iconSrc: imgSrc + 'icones_web/cartodb_logo_layer.png',
-            source: new ol.source.XYZ({
-                attributions: 'Map data &copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> contributors, &copy; <a href="https://cartodb.com/attributions" target="_blank">CartoDB</a>',
-                url: 'https://s.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png'
-            }),
-            visible: false
-        }),
-        new ol.layer.Tile({
-            title: 'Esri Sat',
-            iconSrc: imgSrc + 'icones_web/esri_logo_layer.png',
-            source: new ol.source.XYZ({
-                attributions: 'Map data &copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap Contributors</a>,Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community',
-                url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
-            }),
-            visible: false
-        }),
-        new ol.layer.Tile({
-            title: 'ES_IGN - PNOA - Actual',
-            iconSrc: imgSrc + 'icones_web/logo_ign.png',
-            source: new ol.source.TileWMS({
-                attributions: 'Map data &copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap Contributors</a>,Tiles &copy; IGN &mdash; Source: IGN',
-                url: 'http://www.ign.es/wms-inspire/pnoa-ma?',
-                params: {'LAYERS': 'OI.OrthoimageCoverage', 'VERSION': '1.3.0'}
-            }),
-            visible: false
-        }),
-        
-        new ol.layer.Tile({
-            title: 'ES_CAT_ICGC - Actual',
-            iconSrc: imgSrc + 'icones_web/logo_icgc.png',
-            source: new ol.source.TileWMS({
-                attributions: 'Map data &copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap Contributors</a>,Tiles &copy; ICGC &mdash; Source: ICGC',
-                url: 'https://geoserveis.icgc.cat/servei/catalunya/orto-territorial/wms?',
-                params: {'LAYERS': 'ortofoto_color_vigent', 'VERSION': '1.3.0'}
-            }),
-            visible: false
 					}
 					return [];
 				};
