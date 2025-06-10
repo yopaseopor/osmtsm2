@@ -32,8 +32,8 @@ export function getAllOverlays() {
 		education: educationOverlays(),
 		health: healthOverlays(),
 		others: othersOverlays(),
-        transport: transportOverlays,
-		sport: sportOverlays,
+        transport: transportOverlays(),
+		sport: sportOverlays(),
         translated: translatedOverlays || [],
         external: []
     };
