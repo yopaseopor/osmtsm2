@@ -184,26 +184,35 @@ var config = {
 						stroke: new ol.style.Stroke({ 
 							color: '#666', 
 							width: 1 
-						})
-					}));
-				}
 
-				// Style for points
-				if (type === 'Point' || type === 'MultiPoint') {
-					styles.push(new ol.style.Style({
-						image: new ol.style.Circle({
-							radius: 5,
-							fill: new ol.style.Fill({ color: '#336699' }),
-							stroke: new ol.style.Stroke({ 
-								color: '#fff', 
-								width: 1 
-							})
-						})
-					}));
-				}
+                // Style for points
+                if (type === 'Point' || type === 'MultiPoint') {
+                    styles.push(new ol.style.Style({
+                        image: new ol.style.Circle({
+                            radius: 5,
+                            fill: new ol.style.Fill({ color: '#336699' }),
+                            stroke: new ol.style.Stroke({ color: '#fff', width: 1 })
+                        })
+                    }));
+                }
 
-				// Add label if feature has a name
-				if (feature.get('name')) {
+                // Add label if feature has a name
+                if (feature.get('name')) {
+                    styles.push(new ol.style.Style({
+                        text: new ol.style.Text({
+                            text: feature.get('name'),
+                            font: '12px Arial',
+                            fill: new ol.style.Fill({ color: '#000' }),
+                            stroke: new ol.style.Stroke({ color: '#fff', width: 2 }),
+                            offsetY: -15
+                        })
+                    }));
+                }
+                
+                return styles;
+            },
+            visible: false
+        }),
 					styles.push(new ol.style.Style({
 						text: new ol.style.Text({
 							text: feature.get('name'),
@@ -249,51 +258,171 @@ var config = {
 				],
 				crossOrigin: 'anonymous'
 			}),
-			style: function(feature) {
-				var styles = [];
-				var type = feature.getGeometry().getType();
+			style: (function() {
+				var cache = {};
+				var renderIntent = 'default';
 
-				// Style for polygons
-				if (type === 'Polygon' || type === 'MultiPolygon') {
-					styles.push(new ol.style.Style({
-						fill: new ol.style.Fill({ color: 'rgba(200, 220, 240, 0.5)' }),
-						stroke: new ol.style.Stroke({ color: '#446', width: 1 })
-					}));
-				}
+				// Style function with zoom-based rendering
+				return function(feature, resolution) {
+					var styles = [];
+					var type = feature.getGeometry().getType();
+					var zoom = this.getMap().getView().getZoom();
+					var name = feature.get('name');
+					var place = feature.get('place');
+					var highway = feature.get('highway');
+					var layer = feature.get('layer');
 
-				// Style for lines
-				if (type === 'LineString' || type === 'MultiLineString') {
-					styles.push(new ol.style.Style({
-						stroke: new ol.style.Stroke({ color: '#446', width: 1 })
-					}));
-				}
+					// Generate a cache key for this feature
+					var cacheKey = type + '|' + zoom + '|' + (name || '') + '|' + (place || '') + '|' + (highway || '') + '|' + (layer || '');
+					if (cache[cacheKey]) {
+						return cache[cacheKey];
+					}
 
-				// Style for points
-				if (type === 'Point' || type === 'MultiPoint') {
-					styles.push(new ol.style.Style({
-						image: new ol.style.Circle({
-							radius: 5,
-							fill: new ol.style.Fill({ color: '#336699' }),
-							stroke: new ol.style.Stroke({ color: '#fff', width: 1 })
-						})
-					}));
-				}
-				
-				// Add label if feature has a name
-				if (feature.get('name')) {
-					styles.push(new ol.style.Style({
-						text: new ol.style.Text({
-							text: feature.get('name'),
-							font: '12px Arial',
-							fill: new ol.style.Fill({ color: '#224466' }),
-							stroke: new ol.style.Stroke({ color: '#fff', width: 2 }),
-							offsetY: -15
-						})
-					}));
-				}
-				
-				return styles;
-			},
+					// Base styles for polygons (buildings, landuse, etc.)
+					if ((type === 'Polygon' || type === 'MultiPolygon') && zoom >= 12) {
+						var fillOpacity = Math.min(0.7, 0.3 + (zoom - 12) * 0.1);
+						styles.push(new ol.style.Style({
+							fill: new ol.style.Fill({ 
+								color: 'rgba(200, 220, 240, ' + fillOpacity + ')' 
+							}),
+							stroke: new ol.style.Stroke({ 
+								color: 'rgba(68, 68, 102, 0.7)',
+								width: zoom > 14 ? 1.5 : 1 
+							}),
+							zIndex: 1
+						}));
+					}
+
+					// Style for roads and paths
+					if ((type === 'LineString' || type === 'MultiLineString') && highway) {
+						var width, color, zIndex;
+						
+						switch(highway) {
+							case 'motorway':
+								if (zoom < 5) break;
+								width = Math.min(3, 0.5 + (zoom - 5) * 0.3);
+								color = '#4a4a7d';
+								zIndex = 10;
+								break;
+							case 'trunk':
+							case 'primary':
+								if (zoom < 7) break;
+								width = Math.min(2.5, 0.4 + (zoom - 7) * 0.25);
+								color = '#5a5a8d';
+								zIndex = 9;
+								break;
+							case 'secondary':
+								if (zoom < 9) break;
+								width = Math.min(2, 0.3 + (zoom - 9) * 0.2);
+								color = '#6a6a9d';
+								zIndex = 8;
+								break;
+							case 'tertiary':
+							case 'unclassified':
+								if (zoom < 11) break;
+								width = Math.min(1.5, 0.2 + (zoom - 11) * 0.15);
+								color = '#7a7aad';
+								zIndex = 7;
+								break;
+							default:
+								if (zoom < 13) break;
+								width = Math.min(1, 0.1 + (zoom - 13) * 0.1);
+								color = '#8a8abd';
+								zIndex = 6;
+						}
+
+						if (width) {
+							styles.push(new ol.style.Style({
+								stroke: new ol.style.Stroke({ 
+									color: color, 
+									width: width,
+									lineCap: 'round',
+									lineJoin: 'round'
+								}),
+								zIndex: zIndex
+							}));
+						}
+					}
+
+					// Style for points of interest
+					if ((type === 'Point' || type === 'MultiPoint') && name) {
+						var minZoom = 14; // Default minimum zoom for points
+						var fontSize, pointSize, textOffsetY;
+						
+						// Adjust visibility based on place type
+						switch(place) {
+							case 'city':
+								minZoom = 4;
+								fontSize = Math.min(14, 10 + (zoom - 4) * 0.5);
+								pointSize = Math.min(8, 4 + (zoom - 4) * 0.5);
+								textOffsetY = -pointSize - 8;
+								break;
+							case 'town':
+								minZoom = 6;
+								fontSize = Math.min(13, 9 + (zoom - 6) * 0.5);
+								pointSize = Math.min(7, 3.5 + (zoom - 6) * 0.5);
+								textOffsetY = -pointSize - 7;
+								break;
+							case 'village':
+								minZoom = 8;
+								fontSize = Math.min(12, 8 + (zoom - 8) * 0.5);
+								pointSize = Math.min(6, 3 + (zoom - 8) * 0.5);
+								textOffsetY = -pointSize - 6;
+								break;
+							case 'hamlet':
+							case 'suburb':
+								minZoom = 10;
+								fontSize = Math.min(11, 7 + (zoom - 10) * 0.5);
+								pointSize = Math.min(5, 2.5 + (zoom - 10) * 0.5);
+								textOffsetY = -pointSize - 5;
+								break;
+							default:
+								minZoom = 12;
+								fontSize = Math.min(10, 6 + (zoom - 12) * 0.5);
+								pointSize = Math.min(4, 2 + (zoom - 12) * 0.5);
+								textOffsetY = -pointSize - 4;
+						}
+
+						// Only show label if we're zoomed in enough
+						if (zoom >= minZoom) {
+							var textStyle = new ol.style.Text({
+								text: name,
+								font: fontSize + 'px Arial',
+								overflow: true,
+								fill: new ol.style.Fill({ color: '#224466' }),
+								stroke: new ol.style.Stroke({ 
+									color: 'rgba(255,255,255,0.7)', 
+									width: 3 
+								}),
+								padding: [2, 5],
+								offsetY: textOffsetY,
+								textBaseline: 'bottom',
+								textAlign: 'center'
+							});
+
+							styles.push(new ol.style.Style({
+								image: new ol.style.Circle({
+									radius: pointSize,
+									fill: new ol.style.Fill({ color: '#336699' }),
+									stroke: new ol.style.Stroke({ 
+										color: '#fff', 
+										width: 1 
+									})
+								}),
+								text: textStyle,
+								zIndex: 20
+							}));
+						}
+					}
+
+					// Cache the style for this feature at this zoom level
+					if (styles.length > 0) {
+						cache[cacheKey] = styles;
+					}
+
+					return styles;
+				};
+			})(),
 			visible: false
 		}),
 								new ol.layer.Tile({
