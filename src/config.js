@@ -191,7 +191,7 @@ var config = {
 						image: new ol.style.Circle({
 							radius: 4,
 							fill: new ol.style.Fill({ color: '#3399CC' }),
-								stroke: new ol.style.Stroke({ color: '#fff', width: 1 })
+							stroke: new ol.style.Stroke({ color: '#fff', width: 1 })
 						})
 					}));
 				}
@@ -208,7 +208,6 @@ var config = {
 						})
 					}));
 				}
-				
 				return styles;
 			},
 			visible: false
@@ -243,7 +242,7 @@ var config = {
 			style: function(feature) {
 				var styles = [];
 				var type = feature.getGeometry().getType();
-				
+
 				// Style for polygons
 				if (type === 'Polygon' || type === 'MultiPolygon') {
 					styles.push(new ol.style.Style({
