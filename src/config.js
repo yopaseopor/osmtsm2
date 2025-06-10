@@ -191,7 +191,7 @@ var config = {
 						image: new ol.style.Circle({
 							radius: 4,
 							fill: new ol.style.Fill({ color: '#3399CC' }),
-							stroke: new ol.style.Stroke({ color: '#fff', width: 1 })
+								stroke: new ol.style.Stroke({ color: '#fff', width: 1 })
 						})
 					}));
 				}
@@ -213,6 +213,15 @@ var config = {
 			},
 			visible: false
 		}),
+
+		// OSM Mapnik (Raster Tiles)
+		new ol.layer.Tile({
+			title: 'OSM Mapnik',
+			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
+			source: new ol.source.OSM(),
+			visible: false
+		}),
+
 		// Vector Tiles - MapTiler Basic
 		new ol.layer.VectorTile({
 			title: 'MapTiler Basic',
