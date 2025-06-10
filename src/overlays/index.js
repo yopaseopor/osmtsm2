@@ -31,9 +31,9 @@ export function getAllOverlays() {
 		culture: cultureOverlays(), // static for this example
 		education: educationOverlays(),
 		health: healthOverlays(),
-		others: othersOverlays(),
-        transport: transportOverlays(),
 		sport: sportOverlays(),
+		others: othersOverlays(),
+        transport: transportOverlays,
         translated: translatedOverlays || [],
         external: []
     };
