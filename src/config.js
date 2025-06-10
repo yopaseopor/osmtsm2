@@ -148,16 +148,16 @@ var config = {
 	},
 	//@@ Mapas de fondo
 	layers: [
-		// OSM Vector Tiles
+		// OSM Vector Tiles - Simplified Version
 		new ol.layer.VectorTile({
 			title: 'OSM Vector Tiles',
 			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
-			visible: false,
+			visible: true, // Make it visible by default for testing
 			source: new ol.source.VectorTile({
 				tilePixelRatio: 1,
 				tileGrid: ol.tilegrid.createXYZ({
 					minZoom: 0,
-					maxZoom: 14
+					maxZoom: 20
 				}),
 				format: new ol.format.MVT(),
 				url: 'https://api.maptiler.com/tiles/v3/{z}/{x}/{y}.pbf?key=zPfUiHM0YgsZAlrKRPNg',
@@ -167,150 +167,78 @@ var config = {
 				],
 				crossOrigin: 'anonymous'
 			}),
-			style: (function() {
-				var cache = {};
+			style: function(feature) {
+				var style = new ol.style.Style({
+					fill: new ol.style.Fill({
+						color: 'rgba(200, 200, 200, 0.4)'
+					}),
+					stroke: new ol.style.Stroke({
+						color: 'rgba(100, 100, 100, 0.6)',
+						width: 0.5
+					})
+				});
 
-				return function(feature, resolution) {
-					var styles = [];
-					var type = feature.getGeometry().getType();
-					var layer = feature.get('layer');
-					var zoom = this.getMap() ? this.getMap().getView().getZoom() : 12; // Default zoom if map not available
-
-					// Generate a cache key for this feature
-					var cacheKey = type + '|' + zoom + '|' + (layer || '');
-					if (cache[cacheKey]) {
-						return cache[cacheKey];
+				var layer = feature.get('layer');
+				
+				// Water
+				if (layer === 'water') {
+					style.setFill(new ol.style.Fill({
+						color: 'rgba(170, 211, 223, 0.8)'
+					}));
+					style.setStroke(new ol.style.Stroke({
+						color: 'rgba(100, 150, 180, 0.8)',
+						width: 0.5
+					}));
+				}
+				// Landuse
+				else if (layer === 'landuse') {
+					var fillColor = 'rgba(224, 224, 224, 0.4)';
+					if (feature.get('class') === 'park') fillColor = 'rgba(180, 220, 160, 0.5)';
+					if (feature.get('class') === 'grass') fillColor = 'rgba(200, 230, 180, 0.5)';
+					style.setFill(new ol.style.Fill({color: fillColor}));
+				}
+				// Roads
+				else if (layer === 'transportation') {
+					var width = 1;
+					var color = '#ffffff';
+					
+					switch(feature.get('class')) {
+						case 'motorway':
+							width = 3;
+							color = '#ff8753';
+							break;
+						case 'trunk':
+						case 'primary':
+							width = 2.5;
+							color = '#ffb77d';
+							break;
+						case 'secondary':
+							width = 2;
+							color = '#ffffff';
+							break;
 					}
+					
+					style.setFill(null);
+					style.setStroke(new ol.style.Stroke({
+						color: color,
+						width: width,
+						lineCap: 'round',
+						lineJoin: 'round'
+					}));
+				}
+				// Buildings
+				else if (layer === 'building') {
+					style.setFill(new ol.style.Fill({
+						color: 'rgba(200, 200, 200, 0.6)'
+					}));
+					style.setStroke(new ol.style.Stroke({
+						color: 'rgba(150, 150, 150, 0.7)',
+						width: 0.5
+					}));
+				}
 
-					// Water
-					if (layer === 'water') {
-						var style = new ol.style.Style({
-							fill: new ol.style.Fill({
-								color: 'rgba(170, 211, 223, 0.8)'
-							}),
-							stroke: new ol.style.Stroke({
-								color: 'rgba(100, 150, 180, 0.8)',
-								width: 0.5
-							}),
-							zIndex: 1
-						});
-						styles.push(style);
-					}
-
-					// Landuse
-					if (layer === 'landuse' && zoom > 10) {
-						var fillColor = 'rgba(224, 224, 224, 0.6)';
-						if (feature.get('class') === 'park') fillColor = 'rgba(180, 220, 160, 0.6)';
-						if (feature.get('class') === 'grass') fillColor = 'rgba(200, 230, 180, 0.6)';
-
-                        var style = new ol.style.Style({
-                            fill: new ol.style.Fill({
-                                color: fillColor
-                            }),
-                            zIndex: 2
-                        });
-                        styles.push(style);
-                    }
-
-                    // Roads
-                    if (layer === 'transportation') {
-                        var width = 1;
-                        var color = '#ffffff';
-                        var zIndex = 1;
-
-						switch(feature.get('class')) {
-							case 'motorway':
-								width = Math.min(3, 0.5 + (zoom - 5) * 0.3);
-								color = '#ff8753';
-								zIndex = 10;
-								break;
-							case 'trunk':
-							case 'primary':
-								width = Math.min(2.5, 0.4 + (zoom - 7) * 0.25);
-								color = '#ffb77d';
-								zIndex = 9;
-								break;
-							case 'secondary':
-								width = Math.min(2, 0.3 + (zoom - 9) * 0.2);
-								color = '#ffffff';
-								zIndex = 8;
-								break;
-							default:
-								if (zoom < 11) break;
-								width = Math.min(1.5, 0.2 + (zoom - 11) * 0.15);
-								color = '#ffffff';
-								zIndex = 7;
-						}
-
-						if (width) {
-							styles.push(new ol.style.Style({
-								stroke: new ol.style.Stroke({
-									color: color,
-									width: width,
-									lineCap: 'round',
-									lineJoin: 'round'
-								}),
-								zIndex: zIndex
-							}));
-						}
-					}
-
-					// Buildings
-					if (layer === 'building' && zoom >= 15) {
-						styles.push(new ol.style.Style({
-							fill: new ol.style.Fill({
-								color: 'rgba(200, 200, 200, 0.6)'
-							}),
-							stroke: new ol.style.Stroke({
-								color: 'rgba(150, 150, 150, 0.7)',
-								width: 0.5
-							}),
-							zIndex: 100 + zoom
-						}));
-					}
-
-					// Points of interest
-					if (layer === 'poi' && feature.get('name')) {
-						if (zoom >= 14) {
-							styles.push(new ol.style.Style({
-								image: new ol.style.Circle({
-									radius: 5,
-									fill: new ol.style.Fill({
-										color: '#336699'
-									}),
-									stroke: new ol.style.Stroke({
-										color: '#fff',
-										width: 1
-									})
-								}),
-								text: new ol.style.Text({
-									text: feature.get('name'),
-									font: '12px Arial',
-									overflow: true,
-									fill: new ol.style.Fill({
-										color: '#333'
-									}),
-									stroke: new ol.style.Stroke({
-										color: '#fff',
-										width: 3
-									}),
-									offsetY: -15,
-									textBaseline: 'bottom',
-									textAlign: 'center'
-								}),
-								zIndex: 200
-							}));
-						}
-					}
-
-					// Cache the style for this feature at this zoom level
-					if (styles.length > 0) {
-						cache[cacheKey] = styles;
-					}
-
-					return styles;
-				};
-			})(),
+				return style;
+			},
 			visible: false
 		}),
 
