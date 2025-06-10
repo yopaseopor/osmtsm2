@@ -440,8 +440,8 @@ $(function () {
 
 
 	var layersControlBuild = function () {
-		var visibleLayer,
-			previousLayer,
+		var visibleLayer = null,
+			previousLayer = null,
 			layerIndex = 0,
 			overlayIndex = 0,
 			container = $('<div>').addClass('osmcat-menu'),
@@ -519,15 +519,26 @@ $(function () {
 						updatePermalink();
 					});
 
-					layer.set('layerIndex', layerIndex);
+						layer.set('layerIndex', layerIndex);
 
-					// Add checkbox for enabling/disabling layer
-					var checkbox = $('<input type="checkbox">').css({marginRight:'6px'});
-					checkbox.prop('checked', layer.getVisible());
-					checkbox.on('change', function() {
-						layer.setVisible(this.checked);
-					});
-					layerButton.prepend(checkbox);
+						// Set the first visible layer as the default visibleLayer
+						if (layer.getVisible() && visibleLayer === null) {
+							visibleLayer = layer;
+						}
+
+						// Add checkbox for enabling/disabling layer
+						var checkbox = $('<input type="checkbox">').css({marginRight:'6px'});
+						checkbox.prop('checked', layer.getVisible());
+						checkbox.on('change', function() {
+							layer.setVisible(this.checked);
+							// Update visibleLayer if needed
+							if (this.checked && visibleLayer === null) {
+								visibleLayer = layer;
+							} else if (!this.checked && visibleLayer === layer) {
+								visibleLayer = null;
+							}
+						});
+						layerButton.prepend(checkbox);
 
 					content.append(layerButton);
 					layer.on('change:visible', function () {
