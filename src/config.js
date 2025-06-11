@@ -173,7 +173,7 @@ var config = {
 				// The config parameter will be handled by the function's default value
 				return window.vectorTileStyle(feature, resolution);
 			},
-			visible: false
+			visible: true  // Enable this layer by default
 		}),
 		
 		// MapTiler Vector Tile Layer with enhanced glyph and sprite support

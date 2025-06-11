@@ -1,421 +1,74 @@
 /**
- * Default configuration for feature limits per zoom level
- * These values represent the maximum number of features to show per tile at each zoom level
- * The values should increase as you zoom in (higher zoom = more features)
+ * Minimal vector tile style function for testing
+ * This is a simplified version to help diagnose issues
  */
-const DEFAULT_FEATURE_LIMITS = {
-    // Zoom level: max features per tile
-    // Reduced limits to prevent overcrowding
-    0: 2,
-    1: 2,
-    2: 3,
-    3: 3,
-    4: 4,
-    5: 5,
-    6: 8,
-    7: 12,
-    8: 18,
-    9: 25,
-    10: 35,
-    11: 50,
-    12: 70,
-    13: 100,
-    14: 150,
-    15: 200,
-    16: 300,
-    17: 450,
-    18: 600,
-    19: 800,
-    20: 1000
-};
 
-// Global counter for features per tile and zoom level
-const featureCounters = new Map();
+console.log('Vector tile style script loaded');
 
-/**
- * Get the current zoom level based on resolution
- * @param {number} resolution - Map resolution
- * @returns {number} Zoom level
- */
-function getZoomLevel(resolution) {
-    // This is a simplified calculation - adjust based on your map's zoom levels
-    return Math.round(Math.log2(156543.03390625 / resolution));
-}
-
-/**
- * Check if a feature should be shown based on current feature counts
- * @param {string} layer - Feature layer
- * @param {number} zoom - Current zoom level
- * @param {string} tileKey - Unique key for the current tile
- * @returns {boolean} True if the feature should be shown
- */
-function shouldShowFeature(layer, zoom, tileKey) {
+// Simple style function that returns basic styles for testing
+function vectorTileStyle(feature, resolution) {
     try {
-        const config = window.vectorTileConfig || {};
-        const limits = config.featureLimits || DEFAULT_FEATURE_LIMITS;
+        // Get basic feature info
+        const layer = feature.get('layer') || 'unknown';
         
-        // Skip limiting for certain high-priority layers
-        const noLimitLayers = ['water', 'boundary', 'transportation', 'place'];
-        if (noLimitLayers.includes(layer)) {
-            debugLog(`Skipping limit for high-priority layer: ${layer}`);
-            return true;
+        // Simple style based on layer type
+        switch(layer) {
+            case 'water':
+                return [new ol.style.Style({
+                    fill: new ol.style.Fill({
+                        color: 'rgba(170, 210, 255, 0.5)'
+                    })
+                })];
+                
+            case 'road':
+            case 'highway':
+            case 'transportation':
+                return [new ol.style.Style({
+                    stroke: new ol.style.Stroke({
+                        color: '#ffffff',
+                        width: 2
+                    })
+                })];
+                
+            case 'building':
+                return [new ol.style.Style({
+                    fill: new ol.style.Fill({
+                        color: 'rgba(200, 200, 200, 0.5)'
+                    })
+                })];
+                
+            case 'landuse':
+                return [new ol.style.Style({
+                    fill: new ol.style.Fill({
+                        color: 'rgba(200, 250, 200, 0.5)'
+                    })
+                })];
+                
+            default:
+                // Default style for any other features
+                return [new ol.style.Style({
+                    stroke: new ol.style.Stroke({
+                        color: '#3399CC',
+                        width: 1
+                    }),
+                    fill: new ol.style.Fill({
+                        color: 'rgba(51, 153, 204, 0.1)'
+                    })
+                })];
         }
-        
-        // Get the maximum features for this zoom level
-        let maxFeatures = limits[zoom] || 1000; // Default to 1000 if zoom level not specified
-        
-        // Adjust max features based on layer importance
-        const layerImportance = {
-            'water': 1.0,    // High priority
-            'boundary': 0.9, // High priority
-            'transportation': 0.8, // Medium-high priority
-            'building': 0.7, // Medium priority
-            'landuse': 0.5,  // Medium-low priority
-            'poi': 0.3,     // Low priority
-            'place': 1.0,    // High priority for place labels
-            'water_name': 1.0 // High priority for water labels
-        };
-        
-        // Scale max features based on layer importance
-        const importance = layerImportance[layer] || 0.5;
-        maxFeatures = Math.max(1, Math.round(maxFeatures * importance));
-        
-        // Create a counter key that includes the layer and zoom level
-        const counterKey = `${tileKey}-${layer}-${Math.floor(zoom)}`;
-        
-        debugLog(`Layer: ${layer}, Zoom: ${zoom}, Max Features: ${maxFeatures}, Importance: ${importance}`);
-        
-        // Initialize counters if needed
-        if (!featureCounters.has(counterKey)) {
-            featureCounters.set(counterKey, {
-                count: 0,
-                zoom: zoom,
-                lastAccess: Date.now(),
-                layer: layer
-            });
-        }
-        
-        const counter = featureCounters.get(counterKey);
-        
-        // Update last access time
-        counter.lastAccess = Date.now();
-        
-        // Check if we can show this feature
-        if (counter.count < maxFeatures) {
-            counter.count++;
-            debugLog(`Feature ${counter.count}/${maxFeatures} shown for ${layer} at zoom ${zoom}`);
-            return true;
-        }
-        
-        debugLog(`Feature limit reached for ${layer} at zoom ${zoom} (${counter.count}/${maxFeatures})`);
-        return false;
     } catch (error) {
-        console.error('Error in shouldShowFeature:', error);
-        return true; // Default to showing the feature if there's an error
+        console.error('Error in vectorTileStyle:', error);
+        return []; // Return empty array on error
     }
 }
 
-// Clean up old counters periodically
-setInterval(() => {
-    const now = Date.now();
-    const maxAge = 5 * 60 * 1000; // 5 minutes
-    
-    for (const [key, { lastAccess }] of featureCounters.entries()) {
-        if (now - lastAccess > maxAge) {
-            featureCounters.delete(key);
-        }
-    }
-}, 60000); // Run every minute
-
-/**
- * Vector Tile Style Configuration
- * This object provides configuration options for the vector tile styling
- */
-window.vectorTileConfig = {
-    // Allow overriding default feature limits
-    setFeatureLimits: function(limits) {
-        this.featureLimits = { ...DEFAULT_FEATURE_LIMITS, ...limits };
-    },
-    // Reset to default limits
-    resetFeatureLimits: function() {
-        this.featureLimits = { ...DEFAULT_FEATURE_LIMITS };
-    },
-    // Get current feature limits
-    getFeatureLimits: function() {
-        return { ...(this.featureLimits || DEFAULT_FEATURE_LIMITS) };
-    }
-};
-
-// Initialize with default limits
-window.vectorTileConfig.resetFeatureLimits();
-
-// Enable debug mode by default in development
-window.debugVectorTiles = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-
-// Debug logging function
-function debugLog(...args) {
-    if (window.debugVectorTiles) {
-        console.log('[VectorTiles]', ...args);
-    }
+// Export the vector tile style function
+if (typeof window !== 'undefined') {
+    window.vectorTileStyle = vectorTileStyle;
+    console.log('Vector tile style function exported');
+} else {
+    console.error('Window object not available for vectorTileStyle export');
 }
-
-/**
- * Gets the best label text for a feature according to Mapbox GL Style Spec
- * @param {ol/Feature} feature - The feature to get label for
- * @param {string} [textField] - Field specification (e.g., '{name} {ref}')
- * @returns {string|null} The formatted label or null if none found
- */
-function getFeatureLabel(feature, textField) {
-    if (!textField) {
-        // Default to name, then ref, then other common fields
-        return (
-            feature.get('name') ||
-            feature.get('ref') ||
-            feature.get('name_en') ||
-            feature.get('name:en') ||
-            feature.get('int_name') ||
-            feature.get('loc_name') ||
-            feature.get('alt_name') ||
-            feature.get('addr:housename') ||
-            feature.get('addr:housenumber') ||
-            null
-        );
-    }
-
-    // Handle field formatting like {name} {ref}
-    return textField.replace(/\{([^}]+)\}/g, (match, p1) => {
-        // Handle nested properties like {name:latin}
-        const field = p1.split(':')[0];
-        return feature.get(field) || '';
-    }).trim() || null;
-}
-
-/**
- * Gets the appropriate font stack based on style properties
- * @param {Object} style - Style properties
- * @param {Object} config - Configuration with fontStacks
- * @returns {string} Font stack string
- */
-function getFontStack(style, config) {
-    if (!config || !config.fontStacks) return 'Arial, sans-serif';
-    
-    const weight = style.fontWeight === 'bold' ? 'bold' : 'regular';
-    const styleType = style.fontStyle === 'italic' ? 'italic' : 'normal';
-    
-    let fontKey = weight;
-    if (style.fontStyle === 'italic') {
-        fontKey = weight === 'bold' ? 'bolditalic' : 'italic';
-    }
-    
-    const stack = config.fontStacks[fontKey] || config.fontStacks.regular;
-    return stack.map(font => `"${font}"`).concat('Arial, sans-serif').join(', ');
-}
-
-/**
- * Creates a text style with proper font handling
- * @param {Object} options - Text style options
- * @param {Object} config - Style configuration
- * @returns {ol/style/Text} OpenLayers text style
- */
-function createTextStyle(options, config) {
-    const {
-        text,
-        font = {},
-        color = '#000000',
-        haloColor = '#ffffff',
-        haloWidth = 1,
-        offsetX = 0,
-        offsetY = 0,
-        maxAngle = 0.785, // 45 degrees in radians
-        placement = 'point',
-        maxResolution,
-        padding = [0, 0, 0, 0],
-        textAlign = 'center',
-        textBaseline = 'middle',
-        rotation = 0
-    } = options;
-    
-    const fontStack = getFontStack(font, config);
-    const fontSize = font.size || 12;
-    const fontStyle = font.style || 'normal';
-    const fontWeight = font.weight || 'normal';
-    
-    return new ol.style.Text({
-        text: text || '',
-        font: `${fontStyle} ${fontWeight} ${fontSize}px ${fontStack}`,
-        fill: new ol.style.Fill({ color }),
-        stroke: new ol.style.Stroke({
-            color: haloColor,
-            width: haloWidth
-        }),
-        offsetX,
-        offsetY,
-        maxAngle,
-        placement,
-        maxResolution,
-        padding,
-        textAlign,
-        textBaseline,
-        rotation,
-        overflow: true
-    });
-}
-
-/**
- * Gets an icon style with sprite support
- * @param {string} iconName - Name of the icon in the sprite
- * @param {Object} config - Style configuration
- * @param {Object} options - Additional options
- * @returns {ol/style/Icon} Icon style
- */
-function getIconStyle(iconName, config, options = {}) {
-    const {
-        size = 1,
-        opacity = 1,
-        rotation = 0,
-        color,
-        haloColor,
-        haloWidth = 0
-    } = options;
-    
-    const spriteUrl = config && config.spriteBaseUrl 
-        ? `${config.spriteBaseUrl}?key=${config.apiKey || ''}`
-        : null;
-    
-    if (!spriteUrl) {
-        console.warn('Sprite base URL not configured');
-        return null;
-    }
-    
-    // In a real implementation, you would need to have the sprite metadata
-    // to get the correct position and size of the icon in the sprite sheet
-    // This is a simplified version
-    return new ol.style.Icon({
-        src: spriteUrl.replace('{icon}', iconName),
-        scale: size,
-        opacity,
-        rotation,
-        color,
-        // Additional properties would be needed for proper sprite sheet handling
-        // This is a simplified version
-    });
-}
-
-/**
- * Vector Tile Style Configuration
- * Implements a style function following Mapbox GL Style Specification patterns
- */
-function vectorTileStyle(feature, resolution, config = {}) {
-    // Initialize styles array
-    const styles = [];
-    
-    // Calculate current zoom level
-    const zoom = getZoomLevel(resolution);
-    
-    // Generate a unique key for this tile based on feature ID and zoom level
-    const featureId = feature.get('__fid') || Math.random().toString(36).substr(2, 9);
-    const tileKey = `tile-${zoom}-${Math.floor(featureId / 1000)}`;
-    
-    // Get the layer for feature limiting
-    const layer = feature.get('layer') || 'unknown';
-    
-    // We use a different counter for labels by appending '-label' to the tile key
-    const labelTileKey = `${tileKey}-label`;
-    const showFeature = shouldShowFeature(layer, zoom, tileKey);
-    if (!showFeature) {
-        return []; // Skip rendering this feature if we've hit our limit
-    }
-    
-    // Common colors following Mapbox GL Style Specification naming
-    const colors = {
-        // POI colors
-        poi: {
-            amenity: '#3498db',
-            shop: '#9b59b6',
-            tourism: '#e74c3c',
-            office: '#2ecc71',
-            building: '#e67e22',
-            default: '#7f8c8d'
-        },
-        // Base colors
-        water: 'rgba(170, 210, 255, 0.9)',
-        waterIntermittent: 'rgba(170, 210, 255, 0.6)',
-        residential: 'rgba(240, 238, 235, 0.7)',
-        park: 'rgba(210, 250, 210, 0.7)',
-        forest: 'rgba(190, 220, 190, 0.8)',
-        building: 'rgba(220, 217, 210, 0.9)',
-        buildingOutline: 'rgba(180, 177, 170, 0.8)',
-        
-        // Road colors and widths
-        highway: {
-            motorway: { color: '#0000ff', width: 3.0, textColor: '#0000ff' },  // blue
-            trunk: { color: '#8b0000', width: 2.8, textColor: '#8b0000' },      // dark red
-            primary: { color: '#ff0000', width: 2.5, textColor: '#ff0000' },    // red
-            secondary: { color: '#006400', width: 2.0, textColor: '#006400' },  // dark green
-            tertiary: { color: '#ffa500', width: 1.8, textColor: '#ff8c00' },   // orange
-            unclassified: { color: '#ff00ff', width: 1.5, textColor: '#ff00ff' }, // magenta
-            residential: { color: '#666666', width: 1.2, textColor: '#666666' },
-            service: { color: '#999999', width: 0.8, textColor: '#999999' },
-            path: { color: '#aaaaaa', width: 0.6, textColor: '#666666' },
-            pedestrian: { color: '#cccccc', width: 0.8, textColor: '#666666' }
-        },
-        
-        // Text styles
-        text: {
-            fill: '#000000',
-            stroke: '#ffffff',
-            strokeWidth: 2,
-            font: '12px Arial, sans-serif',
-            offsetY: 0,
-            padding: [2, 4],
-            maxAngle: 30,
-            overflow: true
-        },
-        landuse: {
-            residential: 'rgba(240, 238, 235, 0.7)',
-            commercial: 'rgba(240, 235, 240, 0.5)',
-            industrial: 'rgba(230, 230, 220, 0.6)',
-            retail: 'rgba(245, 235, 235, 0.6)',
-            park: 'rgba(210, 250, 210, 0.7)',
-            forest: 'rgba(190, 220, 190, 0.8)',
-            grass: 'rgba(200, 250, 200, 0.6)',
-            cemetery: 'rgba(200, 230, 200, 0.7)'
-        },
-        boundary: {
-            national: '#000000',
-            administrative: '#777777',
-            protected_area: '#2d5f2d'
-        }
-    };
-
-        // Get feature properties
-        const cls = feature.get('class') || '';
-        const type = feature.getGeometry().getType();
-        const brunnel = feature.get('brunnel');
-        const isBridge = brunnel === 'bridge';
-        const isTunnel = brunnel === 'tunnel';
-        
-        // Debug logging (uncomment if needed)
-        // console.log(`Layer: ${layer}, Class: ${cls}, Type: ${type}`);
-
-        // Water
-        if (layer === 'water') {
-            const isIntermittent = feature.get('intermittent') === 1 || feature.get('intermittent') === '1';
-            const waterColor = isIntermittent ? colors.waterIntermittent : colors.water;
-            
-            const styles = [new ol.style.Style({
-                fill: new ol.style.Fill({
-                    color: waterColor
-                })
-            })];
-            
-            // Add stroke for intermittent water
-            if (isIntermittent) {
-                styles[0].setStroke(new ol.style.Stroke({
-                    color: colors.water,
-                    width: 1,
-                    lineDash: [4, 4]
-                }));
             }
             
             // Add water label if name exists and we're not at feature limit
