@@ -236,7 +236,7 @@ var config = {
 			})()
 		}),
 
-		// Vector Tiles - MapTiler Basic
+		// Vector Tiles - MapTiler Basic with style.json
 		new ol.layer.VectorTile({
 			title: 'MapTiler Basic',
 			iconSrc: imgSrc + 'icones_web/maptiler_logo.png',
@@ -252,208 +252,233 @@ var config = {
 				attributions: [
 					'<a href="https://www.maptiler.com/copyright/" target="_blank">MapTiler</a>',
 					'<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>'
-				],
-				crossOrigin: 'anonymous'
+				]
 			}),
 			style: (function() {
-				var cache = {};
-				var renderIntent = 'default';
+				// Load style.json
+				var styleJson = {};
+				var xhr = new XMLHttpRequest();
+				xhr.open('GET', 'src/style.json', false); // Synchronous request
+				xhr.send();
 
-				// Style function with zoom-based rendering
-				return function(feature, resolution) {
+				if (xhr.status === 200) {
 					try {
-						var styles = [];
-						var type = feature.getGeometry().getType();
-						
-						// Get feature properties with fallbacks
-						var name = feature.get('name') || '';
-						var place = feature.get('place') || '';
-						var highway = feature.get('highway') || '';
-						var layer = feature.get('layer') || '';
-						
-						// Get the map view's zoom level safely
-						var map = this && this.getMap ? this.getMap() : null;
-						var zoom = map && map.getView() ? map.getView().getZoom() : 10; // Default zoom if map not available
-
-						// Generate a cache key for this feature
-						var cacheKey = type + '|' + zoom + '|' + name + '|' + place + '|' + highway + '|' + layer;
-						if (cache[cacheKey]) {
-							return cache[cacheKey];
+						styleJson = JSON.parse(xhr.responseText);
+						// Update sprite and glyphs URLs with API key
+						if (styleJson.sprite) {
+							styleJson.sprite = styleJson.sprite.replace('{key}', 'zPfUiHM0YgsZAlrKRPNg');
 						}
-
-						// Base styles for polygons (buildings, landuse, etc.)
-						if ((type === 'Polygon' || type === 'MultiPolygon') && zoom >= 12) {
-							var fillOpacity = Math.min(0.7, 0.3 + (zoom - 12) * 0.1);
-							styles.push(new ol.style.Style({
-								fill: new ol.style.Fill({ 
-									color: 'rgba(200, 220, 240, ' + fillOpacity + ')' 
-								}),
-								stroke: new ol.style.Stroke({ 
-									color: 'rgba(68, 68, 102, 0.7)',
-									width: zoom > 14 ? 1.5 : 1 
-								}),
-								zIndex: 1
-							}));
+						if (styleJson.glyphs) {
+							styleJson.glyphs = styleJson.glyphs.replace('{key}', 'zPfUiHM0YgsZAlrKRPNg');
 						}
+					} catch (e) {
+						console.error('Error parsing style.json:', e);
+					}
+				} else {
+					console.error('Failed to load style.json:', xhr.statusText);
+				}
 
-						// Style for roads and paths
-						if ((type === 'LineString' || type === 'MultiLineString') && highway) {
-							var roadWidth = 1;
-							var roadColor = '#ffffff';
-							
-							switch(highway) {
-								case 'motorway':
-									roadWidth = Math.min(4, 0.5 + (zoom - 10) * 0.5);
-									roadColor = '#ff6b6b';
-									break;
-								case 'trunk':
-								case 'primary':
-									roadWidth = Math.min(3, 0.4 + (zoom - 12) * 0.3);
-									roadColor = '#ff9e7d';
-									break;
-								case 'secondary':
-								case 'tertiary':
-									roadWidth = Math.min(2, 0.3 + (zoom - 13) * 0.2);
-									roadColor = '#ffd166';
-									break;
-								default:
-									roadWidth = Math.max(0.5, (zoom - 14) * 0.2);
-									roadColor = '#ffffff';
-							}
+				// Create style function from style.json
+				return function(feature, resolution) {
+					var layer = feature.get('layer');
+					var styles = [];
 
-							styles.push(new ol.style.Style({
-								stroke: new ol.style.Stroke({
-									color: roadColor,
-									width: roadWidth,
-									lineCap: 'round',
-									lineJoin: 'round'
-								}),
-								zIndex: 2
-							}));
-
-							// Add road labels
-							if (name && zoom > 12) {
+					try {
+						// Apply styles based on layer type
+						switch(layer) {
+							case 'water':
 								styles.push(new ol.style.Style({
-									text: new ol.style.Text({
-										text: name,
-										font: 'bold 12px Arial, sans-serif',
-										fill: new ol.style.Fill({
-											color: '#333333'
-										}),
-										stroke: new ol.style.Stroke({
-											color: 'rgba(255, 255, 255, 0.8)',
-											width: 3
-										}),
-										offsetY: -10,
-										overflow: true
-									}),
-									zIndex: 3
-								}));
-							}
-						}
-
-						// Style for points of interest
-						if (type === 'Point' && (place || name)) {
-							var fontSize = 12;
-							if (place) {
-								switch(place) {
-									case 'city':
-										fontSize = Math.min(16, 10 + zoom * 0.8);
-										break;
-									case 'town':
-										fontSize = Math.min(14, 8 + zoom * 0.6);
-										break;
-									case 'village':
-										fontSize = Math.min(12, 6 + zoom * 0.4);
-										break;
-								}
-							}
-
-							styles.push(new ol.style.Style({
-								text: new ol.style.Text({
-									text: name,
-									font: 'bold ' + fontSize + 'px Arial, sans-serif',
 									fill: new ol.style.Fill({
-										color: '#333333'
+										color: 'rgba(170, 210, 255, 0.5)'
+									})
+								}));
+								break;
+
+							case 'road':
+							case 'highway':
+								var highway = feature.get('class') || 'road';
+								var width = 1;
+								var color = '#ffffff';
+
+								switch(highway) {
+									case 'motorway':
+										width = 3; color = '#4a4a7d'; break;
+									case 'trunk':
+									case 'primary':
+										width = 2.5; color = '#5a5a8d'; break;
+									case 'secondary':
+										width = 2; color = '#6a6a9d'; break;
+								}
+
+								styles.push(new ol.style.Style({
+									stroke: new ol.style.Stroke({
+										color: color,
+										width: width,
+										lineCap: 'round',
+										lineJoin: 'round'
+									})
+								}));
+								break;
+
+							case 'building':
+								styles.push(new ol.style.Style({
+									fill: new ol.style.Fill({
+										color: 'rgba(200, 200, 200, 0.7)'
 									}),
 									stroke: new ol.style.Stroke({
-										color: 'rgba(255, 255, 255, 0.8)',
-										width: 3
-									}),
-									offsetY: -fontSize * 0.6,
-									overflow: true
-								}),
-								zIndex: 4
-							}));
+										color: '#999999',
+										width: 0.5
+									})
+								}));
+								break;
+
+							// Add labels for places and POIs
+							case 'place':
+							case 'poi':
+								var name = feature.get('name');
+								if (name) {
+									styles.push(new ol.style.Style({
+										text: new ol.style.Text({
+											text: name,
+											font: '12px Arial',
+											fill: new ol.style.Fill({
+												color: '#333333'
+											}),
+											stroke: new ol.style.Stroke({
+												color: 'rgba(255, 255, 255, 0.7)',
+												width: 2
+											}),
+											offsetY: -15
+										})
+									}));
+								}
+								break;
 						}
 
-						// Cache the styles for this feature
-						if (styles.length > 0) {
-							cache[cacheKey] = styles;
-							return styles;
-						}
-
-						// Default style if no other styles apply
-						return null;
-
+						return styles.length > 0 ? styles : null;
 					} catch (error) {
 						console.error('Error in vector tile style function:', error);
 						return null;
 					}
+				};
+			})()
+        }),
+        new ol.layer.Tile({
+            /*@@ título */title: 'OpenStreetMap DE',
+            /*@@ icono */iconSrc: imgSrc + 'icones_web/osmbw_logo-layer.png',
+            /*@@ zoom máximo */maxZoom: 18,
+            source: new ol.source.XYZ({
+                /*@@ atribución */attributions: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                /*@@ url */url: 'https://{a-c}.tile.openstreetmap.de/{z}/{x}/{y}.png'
+            }),
+            /*@@ visible de inicio */visible: false
+            /*@@ final de copia */}),
+        new ol.layer.Tile({// OpenStreetMap France https://openstreetmap.fr
+            title: 'OpenStreetMap FR',
+            iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
+            source: new ol.source.OSM({
+                attributions: '&copy; <a href="https://www.openstreetmap.fr/" target="_blank">OpenStreetMap France</a>',
+                url: 'https://{a-c}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png'
+            }),
+            visible: false
+        }),
 
-					// Style for roads and paths
-					if ((type === 'LineString' || type === 'MultiLineString') && highway) {
-						var width, color, zIndex;
-						
-						switch(highway) {
-							case 'motorway':
-								if (zoom < 5) break;
-								width = Math.min(3, 0.5 + (zoom - 5) * 0.3);
-								color = '#4a4a7d';
-								zIndex = 10;
+        // OSM Mapnik (Raster Tiles)
+        new ol.layer.Tile({
+            title: 'OSM Mapnik',
+            iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
+            source: new ol.source.OSM(),
+            visible: false
+        }),
+
+        new ol.layer.Tile({
+            title: 'OpenCycleMap',
+            iconSrc: imgSrc + 'icones_web/opencycle_logo_layer.png',
+            source: new ol.source.XYZ({
+                attributions: 'Map data &copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>, powered by &copy; <a href="http://www.thunderforest.com/" target="_blank">Thunderforest</a>',
+                url: 'https://{a-c}.tile.thunderforest.com/cycle/{z}/{x}/{y}.png?apikey=a5dd6a2f1c934394bce6b0fb077203eb'
+            }),
+            visible: false
+        }),
+        new ol.layer.Tile({
+            title: 'Topotresc',
+            iconSrc: imgSrc + 'icones_web/topotresc_layer.png',
+            source: new ol.source.XYZ({
+                attributions: 'Map data <a href="https://www.topotresc.com/" target="_blank">TopoTresk</a> by <a href="https://github.com/aresta/topotresc" target="_blank">aresta</a>',
+                url: 'https://api.topotresc.com/tiles/{z}/{x}/{y}'
+            }),
+            visible: false
+        }),
+        new ol.layer.Tile({
+            title: 'ArcGIS World Topo',
+            iconSrc: imgSrc + 'icones_web/worldtopomap_logo_layer.png',
+            source: new ol.source.XYZ({
+                attributions: 'Map data &copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> contributors, &copy; <a href="https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer" target="_blank">ArcGIS</a>',
+                url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}'
+            }),
+            visible: false
+        }),
+        new ol.layer.Tile({
+            title: 'Positron (CartoDB)',
+            iconSrc: imgSrc + 'icones_web/cartodb_logo_layer.png',
+            source: new ol.source.XYZ({
+                attributions: 'Map data &copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> contributors, &copy; <a href="https://cartodb.com/attributions" target="_blank">CartoDB</a>',
+                url: 'https://s.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png'
+            }),
+            visible: false
+        }),
+        new ol.layer.Tile({
+            title: 'Dark Matter (CartoDB)',
+            iconSrc: imgSrc + 'icones_web/cartodb_logo_layer.png',
+            source: new ol.source.XYZ({
+                attributions: 'Map data &copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> contributors, &copy; <a href="https://cartodb.com/attributions" target="_blank">CartoDB</a>',
+                url: 'https://s.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png'
+            }),
+            visible: false
+        }),
+        new ol.layer.Tile({
+            title: 'Esri Sat',
+            iconSrc: imgSrc + 'icones_web/esri_logo_layer.png',
+            source: new ol.source.XYZ({
+                attributions: 'Map data &copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap Contributors</a>,Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community',
+                url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
+            }),
+            visible: false
+        }),
+        new ol.layer.Tile({
+            title: 'ES_IGN - PNOA - Actual',
+            iconSrc: imgSrc + 'icones_web/logo_ign.png',
+            source: new ol.source.TileWMS({
+                attributions: 'Map data &copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap Contributors</a>,Tiles &copy; IGN &mdash; Source: IGN',
+                url: 'http://www.ign.es/wms-inspire/pnoa-ma?',
+                params: {'LAYERS': 'OI.OrthoimageCoverage', 'VERSION': '1.3.0'}
+            }),
+            visible: false
+        }),
+        
+        new ol.layer.Tile({
+										text: new ol.style.Text({
+											text: name,
+											font: 'bold ' + fontSize + 'px Arial, sans-serif',
+											fill: new ol.style.Fill({
+												color: '#333333'
+											}),
+											stroke: new ol.style.Stroke({
+												color: 'rgba(255, 255, 255, 0.8)',
+												width: 3
+											})
+										})
+									}));
+								}
 								break;
-							case 'trunk':
-							case 'primary':
-								if (zoom < 7) break;
-								width = Math.min(2.5, 0.4 + (zoom - 7) * 0.25);
-								color = '#5a5a8d';
-								zIndex = 9;
-								break;
-							case 'secondary':
-								if (zoom < 9) break;
-								width = Math.min(2, 0.3 + (zoom - 9) * 0.2);
-								color = '#6a6a9d';
-								zIndex = 8;
-								break;
-							case 'tertiary':
-							case 'unclassified':
-								if (zoom < 11) break;
-								width = Math.min(1.5, 0.2 + (zoom - 11) * 0.15);
-								color = '#7a7aad';
-								zIndex = 7;
-								break;
-							default:
-								if (zoom < 13) break;
-								width = Math.min(1, 0.1 + (zoom - 13) * 0.1);
-								color = '#8a8abd';
-								zIndex = 6;
 						}
 
-						if (width) {
-							styles.push(new ol.style.Style({
-								stroke: new ol.style.Stroke({ 
-									color: color, 
-									width: width,
-									lineCap: 'round',
-									lineJoin: 'round'
-								}),
-								zIndex: zIndex
-							}));
-						}
+						return styles.length > 0 ? styles : null;
+					} catch (error) {
+						console.error('Error in vector tile style function:', error);
+						return null;
 					}
-
-					// Style for points of interest
-					if ((type === 'Point' || type === 'MultiPoint') && name) {
+				};
 						var minZoom = 14; // Default minimum zoom for points
 						var fontSize, pointSize, textOffsetY;
 						
