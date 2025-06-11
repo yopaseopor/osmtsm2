@@ -440,8 +440,8 @@ $(function () {
 
 
 	var layersControlBuild = function () {
-		var visibleLayer = null,
-			previousLayer = null,
+		var visibleLayer,
+			previousLayer,
 			layerIndex = 0,
 			overlayIndex = 0,
 			container = $('<div>').addClass('osmcat-menu'),
@@ -512,35 +512,22 @@ $(function () {
 						} else { //Active the selected layer and hide the current layer
 							baseLayerIndex = layer.get('layerIndex');
 							layer.setVisible(!visible);
-							if (visibleLayer) {
-								visibleLayer.setVisible(visible);
-							}
-							previousLayer = visibleLayer || layer;
+							visibleLayer.setVisible(visible);
+							previousLayer = visibleLayer;
 							visibleLayer = layer;
 						}
 						updatePermalink();
 					});
 
-						layer.set('layerIndex', layerIndex);
+					layer.set('layerIndex', layerIndex);
 
-						// Set the first visible layer as the default visibleLayer
-						if (layer.getVisible() && visibleLayer === null) {
-							visibleLayer = layer;
-						}
-
-						// Add checkbox for enabling/disabling layer
-						var checkbox = $('<input type="checkbox">').css({marginRight:'6px'});
-						checkbox.prop('checked', layer.getVisible());
-						checkbox.on('change', function() {
-							layer.setVisible(this.checked);
-							// Update visibleLayer if needed
-							if (this.checked && visibleLayer === null) {
-								visibleLayer = layer;
-							} else if (!this.checked && visibleLayer === layer) {
-								visibleLayer = null;
-							}
-						});
-						layerButton.prepend(checkbox);
+					// Add checkbox for enabling/disabling layer
+					var checkbox = $('<input type="checkbox">').css({marginRight:'6px'});
+					checkbox.prop('checked', layer.getVisible());
+					checkbox.on('change', function() {
+						layer.setVisible(this.checked);
+					});
+					layerButton.prepend(checkbox);
 
 					content.append(layerButton);
 					layer.on('change:visible', function () {
@@ -824,23 +811,15 @@ $(function () {
 	var selectedFeature = null;
 	map.on('pointermove', function (evt) {
 		if (selectedFeature !== null) {
-			// Only call setStyle if it's a vector feature
-			if (selectedFeature.setStyle) {
-				selectedFeature.setStyle(undefined);
-			}
+			selectedFeature.setStyle(undefined);
 			selectedFeature = null;
 			$('#map').css('cursor', 'grab');
 		}
-		
-		// Check if we're over a feature
-		var feature = map.forEachFeatureAtPixel(evt.pixel, function(feature) {
-			return feature;
-		});
-		
-		if (feature) {
+		map.forEachFeatureAtPixel(evt.pixel, function (feature) {
 			selectedFeature = feature;
 			$('#map').css('cursor', 'pointer');
-		}
+			return true;
+		});
 	});
 
 	map.on('singleclick', function (evt) {

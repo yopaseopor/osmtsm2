@@ -48,24 +48,15 @@
 	<!-- Proj4 for coordinate transformations -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.8.0/proj4.js"></script>
 
+	<!-- Vector Tile Style -->
+	<script src="src/assets/styles/vector-tile-style.js"></script>
 	<!-- ol-mapbox-style for MapTiler styles -->
 	<script src="https://unpkg.com/ol-mapbox-style@9.3.0/dist/olms.js"></script>
 
-	<!-- Vector Tile Style (must be loaded before config) -->
-	<script src="src/assets/styles/vector-tile-style-clean.js"></script>
-	
 	<!-- Configuration -->
 	<script src="src/config.js"></script>
 
-	<!-- Application Logic (depends on config) -->
-	<script src="src/layer_search.js"></script>
-	<script src="src/overlay_search.js"></script>
-	<script src="src/nominatim_search.js"></script>
-	<script src="src/panoramax_viewer.js"></script>
-	<script src="src/mapillary_viewer.js"></script>
-	<script src="src/router.js"></script>
-
-	<!-- Modules (loaded after core application logic) -->
+	<!-- Modules -->
 	<script type="module" src="src/components/LanguageSelector.js"></script>
 	<script type="module" src="src/language_init.js"></script>
 	<script type="module" src="src/overlays/translated_overlays.js"></script>
@@ -74,7 +65,13 @@
 	<script type="module" src="src/overlay_integration.js"></script>
 	<script type="module" src="src/init.js"></script>
 
-	<!-- Main application (load last) -->
+	<!-- Application Logic -->
+	<script src="src/layer_search.js"></script>
+	<script src="src/overlay_search.js"></script>
+	<script src="src/nominatim_search.js"></script>
+	<script src="src/panoramax_viewer.js"></script>
+	<script src="src/mapillary_viewer.js"></script>
+	<script src="src/router.js"></script>
 	<script src="src/index.js"></script>
 </body>
 </html>

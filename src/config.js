@@ -1,8 +1,5 @@
-// Create a global config object if it doesn't exist
-var config = window.config || {};
 
-// Self-executing function to avoid polluting global scope
-(function() {
+
 /**
  * OSM Cat config
  */
@@ -10,115 +7,7 @@ var config = window.config || {};
 //@@ Ruta de imágenes
 var imgSrc = 'src/img/';
 
-// Vector Tile Style Functions
-var vectorTileStyles = {
-    // Basic style for OSM vector tiles
-    basic: function(feature) {
-        var styles = [];
-        var type = feature.getGeometry().getType();
-        
-        // Style for polygons
-        if (type === 'Polygon' || type === 'MultiPolygon') {
-            styles.push(new ol.style.Style({
-                fill: new ol.style.Fill({
-                    color: 'rgba(240, 240, 240, 0.5)'
-                }),
-                stroke: new ol.style.Stroke({
-                    color: '#666',
-                    width: 1
-                })
-            }));
-        }
-        
-        // Style for lines
-        if (type === 'LineString' || type === 'MultiLineString') {
-            styles.push(new ol.style.Style({
-                stroke: new ol.style.Stroke({
-                    color: '#666',
-                    width: 1
-                })
-            }));
-        }
-        
-        // Style for points
-        if (type === 'Point' || type === 'MultiPoint') {
-            styles.push(new ol.style.Style({
-                image: new ol.style.Circle({
-                    radius: 4,
-                    fill: new ol.style.Fill({
-                        color: '#3399CC'
-                    }),
-                    stroke: new ol.style.Stroke({
-                        color: '#fff',
-                        width: 1
-                    })
-                })
-            }));
-        }
-        
-        // Add label if feature has a name
-        if (feature.get('name')) {
-            styles.push(new ol.style.Style({
-                text: new ol.style.Text({
-                    text: feature.get('name'),
-                    font: '12px Arial',
-                    fill: new ol.style.Fill({
-                        color: '#000'
-                    }),
-                    stroke: new ol.style.Stroke({
-                        color: '#fff',
-                        width: 2
-                    }),
-                    offsetY: -15
-                })
-            }));
-        }
-        
-        return styles;
-    },
-    
-    // Advanced style for MapTiler vector tiles with sprite support
-    maptilerAdvanced: (function() {
-        // Initialize style configuration with glyphs and sprites
-        window.maptilerStyleConfig = {
-            spriteBaseUrl: 'https://api.maptiler.com/maps/streets/sprite',
-            glyphs: 'https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=Faz9gJu55zrWejNF55oZ',
-            fontStacks: {
-                regular: ['Noto Sans Regular', 'Arial Unicode MS Regular'],
-                bold: ['Noto Sans Bold', 'Arial Unicode MS Bold'],
-                italic: ['Noto Sans Italic', 'Arial Unicode MS Italic'],
-                bolditalic: ['Noto Sans Bold Italic', 'Arial Unicode MS Bold Italic']
-            }
-        };
-
-        // Preload fonts
-        const fontPromises = [];
-        Object.values(window.maptilerStyleConfig.fontStacks).forEach(fonts => {
-            fonts.forEach(font => {
-                const fontUrl = window.maptilerStyleConfig.glyphs
-                    .replace('{fontstack}', encodeURIComponent(font))
-                    .replace('{range}', '0-255');
-                fontPromises.push(
-                    fetch(fontUrl).catch(e => console.warn('Failed to load font:', font, e))
-                );
-            });
-        });
-
-        // Return the style function with access to the config
-        return function(feature, resolution) {
-            if (window.vectorTileStyle) {
-                try {
-                    return window.vectorTileStyle(feature, resolution, window.maptilerStyleConfig);
-                } catch (e) {
-                    console.error('Error in vectorTileStyle:', e);
-                    return [];
-                }
-            }
-            return [];
-        };
-    })()
-};
-
+//@@Coordenadas LONgitud LATitud Rotación Zoom, Zoom de la geolocalización, unidades
 var config = {
 	initialConfig: {
 		lon: 1.59647,
@@ -142,104 +31,51 @@ var config = {
 		noNodesFound: 'No se ha encontrado información.',
 		wayLabel: 'Vía:'
 	},
-		overpassApi: function(){
+	overpassApi: function(){
 		//@@posibilidad de cambiar el servidor de overpass https://overpass-turbo.eu/
 		var proxyOverpassApi = true;
 		var overpassApi = 'https://overpass-api.de/api/interpreter';
-		if (proxyOverpassApi) {
+		if (proxyOverpassApi)
+		{
 			overpassApi = 'https://overpass.kumi.systems/api/interpreter';
 		}
 		return overpassApi;
 	},
 	//@@ Mapas de fondo
 	layers: [
-		// OSM Vector Tiles - Simplified Version
+		// MapTiler Vector Tile Layer with custom style URL using v3-openmaptiles
 		new ol.layer.VectorTile({
-			title: 'OSM Vector Tiles',
-			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
-			visible: true, // Make it visible by default for testing
+			title: 'MapTiler Custom Style',
+			iconSrc: imgSrc + 'icones_web/maptiler_logo.png',
+			visible: false,
+			opacity: 1.0,
+			ratio: 1,
 			source: new ol.source.VectorTile({
 				tilePixelRatio: 1,
-				tileGrid: ol.tilegrid.createXYZ({
-					minZoom: 0,
-					maxZoom: 20  // Increased from 25 to ensure tiles load at higher zoom levels
-				}),
+				tileGrid: ol.tilegrid.createXYZ({ 
+                    minZoom: 0,
+                    maxZoom: 22 
+                }),
 				format: new ol.format.MVT(),
-				url: 'https://api.maptiler.com/tiles/v3/{z}/{x}/{y}.pbf?key=zPfUiHM0YgsZAlrKRPNg',
+				url: 'https://api.maptiler.com/tiles/v3-openmaptiles/{z}/{x}/{y}.pbf?key=zPfUiHM0YgsZAlrKRPNg',
 				attributions: [
 					'<a href="https://www.maptiler.com/copyright/" target="_blank">MapTiler</a>',
 					'<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>'
 				],
-				crossOrigin: 'anonymous'
+				crossOrigin: 'anonymous',
+				projection: 'EPSG:3857'
 			}),
-			// Use the global vectorTileStyle function with resolution parameter
-			style: function(feature, resolution) {
-				// Pass the feature and resolution to our vector tile style function
-				// The config parameter will be handled by the function's default value
-				return window.vectorTileStyle(feature, resolution);
-			},
-			visible: true  // Enable this layer by default
-		}),
-		
-		// MapTiler Vector Tile Layer with enhanced glyph and sprite support
-		new ol.layer.VectorTile({
-			title: 'MapTiler Vector',
-			iconSrc: imgSrc + 'icones_web/maptiler_logo.png',
-			visible: false,
-			opacity: 1.0,
-			source: new ol.source.VectorTile({
-				projection: 'EPSG:3857',
-				format: new ol.format.MVT(),
-				url: 'https://api.maptiler.com/tiles/v3/{z}/{x}/{y}.pbf?key=Faz9gJu55zrWejNF55oZ',
-				tileGrid: ol.tilegrid.createXYZ({
-					minZoom: 0,
-					maxZoom: 14
+			// Basic style as fallback
+			style: new ol.style.Style({
+				fill: new ol.style.Fill({
+					color: 'rgba(200, 200, 200, 0.5)'
 				}),
-				attributions: [
-					'<a href="https://www.maptiler.com/copyright/" target="_blank"> MapTiler</a>',
-					'<a href="https://www.openstreetmap.org/copyright" target="_blank"> OpenStreetMap contributors</a>'
-				]
-			}),
-			style: (function() {
-				// Initialize style configuration with glyphs and sprites
-				window.maptilerStyleConfig = {
-					spriteBaseUrl: 'https://api.maptiler.com/maps/streets/sprite',
-					glyphs: 'https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=Faz9gJu55zrWejNF55oZ',
-					fontStacks: {
-						regular: ['Noto Sans Regular', 'Arial Unicode MS Regular'],
-						bold: ['Noto Sans Bold', 'Arial Unicode MS Bold'],
-						italic: ['Noto Sans Italic', 'Arial Unicode MS Italic'],
-						bolditalic: ['Noto Sans Bold Italic', 'Arial Unicode MS Bold Italic']
-					}
-				};
-
-				// Preload fonts
-				const fontPromises = [];
-				Object.values(window.maptilerStyleConfig.fontStacks).forEach(fonts => {
-					fonts.forEach(font => {
-						const fontUrl = window.maptilerStyleConfig.glyphs
-							.replace('{fontstack}', encodeURIComponent(font))
-							.replace('{range}', '0-255');
-						fontPromises.push(
-							fetch(fontUrl).catch(e => console.warn('Failed to load font:', font, e))
-						);
-					});
-				});
-
-				// Return the style function with access to the config
-				return function(feature, resolution) {
-					if (window.vectorTileStyle) {
-						try {
-							return window.vectorTileStyle(feature, resolution, window.maptilerStyleConfig);
-						} catch (e) {
-							console.error('Error in vectorTileStyle:', e);
-							return [];
-						}
-					}
-					return [];
-				};
-			})()
-		}),
+				stroke: new ol.style.Stroke({
+					color: '#3399CC',
+					width: 1.25
+				})
+			})
+				}),
 
 		// Vector Tiles - MapTiler Basic with style.json
 		new ol.layer.VectorTile({
@@ -368,201 +204,71 @@ var config = {
 				};
 			})()
 		}),
-        new ol.layer.Tile({
-            /*@@ título */title: 'OpenStreetMap DE',
-            /*@@ icono */iconSrc: imgSrc + 'icones_web/osmbw_logo-layer.png',
-            /*@@ zoom máximo */maxZoom: 18,
-            source: new ol.source.XYZ({
-                /*@@ atribución */attributions: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-                /*@@ url */url: 'https://{a-c}.tile.openstreetmap.de/{z}/{x}/{y}.png'
-            }),
-            /*@@ visible de inicio */visible: false
-            /*@@ final de copia */}),
-        new ol.layer.Tile({// OpenStreetMap France https://openstreetmap.fr
-            title: 'OpenStreetMap FR',
-            iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
-            source: new ol.source.OSM({
-                attributions: '&copy; <a href="https://www.openstreetmap.fr/" target="_blank">OpenStreetMap France</a>',
-                url: 'https://{a-c}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png'
-            }),
-            visible: false
-        }),
-
-        // OSM Mapnik (Raster Tiles)
-        new ol.layer.Tile({
-            title: 'OSM Mapnik',
-            iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
-            source: new ol.source.OSM(),
-            visible: false
-        }),
-
-        new ol.layer.Tile({
-            title: 'OpenCycleMap',
-            iconSrc: imgSrc + 'icones_web/opencycle_logo_layer.png',
-            source: new ol.source.XYZ({
-                attributions: 'Map data &copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>, powered by &copy; <a href="http://www.thunderforest.com/" target="_blank">Thunderforest</a>',
-                url: 'https://{a-c}.tile.thunderforest.com/cycle/{z}/{x}/{y}.png?apikey=a5dd6a2f1c934394bce6b0fb077203eb'
-            }),
-            visible: false
-        }),
-        new ol.layer.Tile({
-            title: 'Topotresc',
-            iconSrc: imgSrc + 'icones_web/topotresc_layer.png',
-            source: new ol.source.XYZ({
-                attributions: 'Map data <a href="https://www.topotresc.com/" target="_blank">TopoTresk</a> by <a href="https://github.com/aresta/topotresc" target="_blank">aresta</a>',
-                url: 'https://api.topotresc.com/tiles/{z}/{x}/{y}'
-            }),
-            visible: false
-        }),
-        new ol.layer.Tile({
-            title: 'ArcGIS World Topo',
-            iconSrc: imgSrc + 'icones_web/worldtopomap_logo_layer.png',
-            source: new ol.source.XYZ({
-                attributions: 'Map data &copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> contributors, &copy; <a href="https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer" target="_blank">ArcGIS</a>',
-                url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}'
-            }),
-            visible: false
-        }),
-        new ol.layer.Tile({
-            title: 'Positron (CartoDB)',
-            iconSrc: imgSrc + 'icones_web/cartodb_logo_layer.png',
-            source: new ol.source.XYZ({
-                attributions: 'Map data &copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> contributors, &copy; <a href="https://cartodb.com/attributions" target="_blank">CartoDB</a>',
-                url: 'https://s.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png'
-            }),
-            visible: false
-        }),
-        new ol.layer.Tile({
-            title: 'Dark Matter (CartoDB)',
-            iconSrc: imgSrc + 'icones_web/cartodb_logo_layer.png',
-            source: new ol.source.XYZ({
-                attributions: 'Map data &copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> contributors, &copy; <a href="https://cartodb.com/attributions" target="_blank">CartoDB</a>',
-                url: 'https://s.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png'
-            }),
-            visible: false
-        }),
-        new ol.layer.Tile({
-            title: 'Esri Sat',
-            iconSrc: imgSrc + 'icones_web/esri_logo_layer.png',
-            source: new ol.source.XYZ({
-                attributions: 'Map data &copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap Contributors</a>,Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community',
-                url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
-            }),
-            visible: false
-        }),
-        new ol.layer.Tile({
-            title: 'ES_IGN - PNOA - Actual',
-            iconSrc: imgSrc + 'icones_web/logo_ign.png',
-            source: new ol.source.TileWMS({
-                attributions: 'Map data &copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap Contributors</a>,Tiles &copy; IGN &mdash; Source: IGN',
-                url: 'http://www.ign.es/wms-inspire/pnoa-ma?',
-                params: {'LAYERS': 'OI.OrthoimageCoverage', 'VERSION': '1.3.0'}
-            }),
-            visible: false
-        }),
-        
-        new ol.layer.Tile({
-										text: new ol.style.Text({
-											text: name,
-											font: 'bold ' + fontSize + 'px Arial, sans-serif',
-											fill: new ol.style.Fill({
-												color: '#333333'
-											}),
-											stroke: new ol.style.Stroke({
-												color: 'rgba(255, 255, 255, 0.8)',
-												width: 3
-											})
-										})
-									}));
-								}
-								break;
-						}
-
-						return styles.length > 0 ? styles : null;
-					} catch (error) {
-						console.error('Error in vector tile style function:', error);
-						return null;
+		
+		// MapTiler Vector Tile Layer with enhanced glyph and sprite support
+		new ol.layer.VectorTile({
+			title: 'MapTiler Vector',
+			iconSrc: imgSrc + 'icones_web/maptiler_logo.png',
+			visible: false,
+			opacity: 1.0,
+			source: new ol.source.VectorTile({
+				projection: 'EPSG:3857',
+				format: new ol.format.MVT(),
+				url: 'https://api.maptiler.com/tiles/v3/{z}/{x}/{y}.pbf?key=Faz9gJu55zrWejNF55oZ',
+				tileGrid: ol.tilegrid.createXYZ({
+					minZoom: 0,
+					maxZoom: 14
+				}),
+				attributions: [
+					'<a href="https://www.maptiler.com/copyright/" target="_blank"> MapTiler</a>',
+					'<a href="https://www.openstreetmap.org/copyright" target="_blank"> OpenStreetMap contributors</a>'
+				]
+			}),
+			style: (function() {
+				// Initialize style configuration with glyphs and sprites
+				window.maptilerStyleConfig = {
+					spriteBaseUrl: 'https://api.maptiler.com/maps/streets/sprite',
+					glyphs: 'https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=Faz9gJu55zrWejNF55oZ',
+					fontStacks: {
+						regular: ['Noto Sans Regular', 'Arial Unicode MS Regular'],
+						bold: ['Noto Sans Bold', 'Arial Unicode MS Bold'],
+						italic: ['Noto Sans Italic', 'Arial Unicode MS Italic'],
+						bolditalic: ['Noto Sans Bold Italic', 'Arial Unicode MS Bold Italic']
 					}
 				};
-						var minZoom = 14; // Default minimum zoom for points
-						var fontSize, pointSize, textOffsetY;
-						
-						// Adjust visibility based on place type
-						switch(place) {
-							case 'city':
-								minZoom = 4;
-								fontSize = Math.min(14, 10 + (zoom - 4) * 0.5);
-								pointSize = Math.min(8, 4 + (zoom - 4) * 0.5);
-								textOffsetY = -pointSize - 8;
-								break;
-							case 'town':
-								minZoom = 6;
-								fontSize = Math.min(13, 9 + (zoom - 6) * 0.5);
-								pointSize = Math.min(7, 3.5 + (zoom - 6) * 0.5);
-								textOffsetY = -pointSize - 7;
-								break;
-							case 'village':
-								minZoom = 8;
-								fontSize = Math.min(12, 8 + (zoom - 8) * 0.5);
-								pointSize = Math.min(6, 3 + (zoom - 8) * 0.5);
-								textOffsetY = -pointSize - 6;
-								break;
-							case 'hamlet':
-							case 'suburb':
-								minZoom = 10;
-								fontSize = Math.min(11, 7 + (zoom - 10) * 0.5);
-								pointSize = Math.min(5, 2.5 + (zoom - 10) * 0.5);
-								textOffsetY = -pointSize - 5;
-								break;
-							default:
-								minZoom = 12;
-								fontSize = Math.min(10, 6 + (zoom - 12) * 0.5);
-								pointSize = Math.min(4, 2 + (zoom - 12) * 0.5);
-								textOffsetY = -pointSize - 4;
-						}
 
-						// Only show label if we're zoomed in enough
-						if (zoom >= minZoom) {
-							var textStyle = new ol.style.Text({
-								text: name,
-								font: fontSize + 'px Arial',
-								overflow: true,
-								fill: new ol.style.Fill({ color: '#224466' }),
-								stroke: new ol.style.Stroke({ 
-									color: 'rgba(255,255,255,0.7)', 
-									width: 3 
-								}),
-								padding: [2, 5],
-								offsetY: textOffsetY,
-								textBaseline: 'bottom',
-								textAlign: 'center'
-							});
+				// Preload fonts
+				const fontPromises = [];
+				Object.values(window.maptilerStyleConfig.fontStacks).forEach(fonts => {
+					fonts.forEach(font => {
+						const fontUrl = window.maptilerStyleConfig.glyphs
+							.replace('{fontstack}', encodeURIComponent(font))
+							.replace('{range}', '0-255');
+						fontPromises.push(
+							fetch(fontUrl).catch(e => console.warn('Failed to load font:', font, e))
+						);
+					});
+				});
 
-							styles.push(new ol.style.Style({
-								image: new ol.style.Circle({
-									radius: pointSize,
-									fill: new ol.style.Fill({ color: '#336699' }),
-									stroke: new ol.style.Stroke({ 
-										color: '#fff', 
-										width: 1 
-									})
-								}),
-								text: textStyle,
-								zIndex: 20
-							}));
+				// Return the style function with access to the config
+				return function(feature, resolution) {
+					if (window.vectorTileStyle) {
+						try {
+							return window.vectorTileStyle(feature, resolution, window.maptilerStyleConfig);
+						} catch (e) {
+							console.error('Error in vectorTileStyle:', e);
+							return [];
 						}
 					}
-
-					// Cache the style for this feature at this zoom level
-					if (styles.length > 0) {
-						cache[cacheKey] = styles;
-					}
-
-					return styles;
+					return [];
 				};
-			})(),
-			visible: false
+			})()
 		}),
+		new ol.layer.Tile({
+			title: 'OpenStreetMap',
+			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
+			source: new ol.source.OSM()
+/*@@ inicio de copia */			}),
 								new ol.layer.Tile({
 /*@@ título */					title: 'OpenStreetMap DE',
 /*@@ icono */					iconSrc: imgSrc + 'icones_web/osmbw_logo-layer.png',
@@ -582,15 +288,6 @@ var config = {
 			}),
 			visible: false
 		}),
-
-		// OSM Mapnik (Raster Tiles)
-		new ol.layer.Tile({
-			title: 'OSM Mapnik',
-			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
-			source: new ol.source.OSM(),
-			visible: false
-		}),
-
 		new ol.layer.Tile({
 			title: 'OpenCycleMap',
 			iconSrc: imgSrc + 'icones_web/opencycle_logo_layer.png',
@@ -667,6 +364,69 @@ var config = {
 			visible: false
 
 		}),
+				new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
+			title: 'Vector Tile4',
+			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
+			source: new ol.source.VectorTile({
+        tilePixelRatio: 1, // oversampling when > 1
+        tileGrid: ol.tilegrid.createXYZ({maxZoom: 19}),
+        format: new ol.format.MVT(),
+		attributions: '&copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>',
+        url: 'https://{a-c}.tile.custom-osm-tiles.org/{z}/{x}/{y}.mvt',
+				crossOrigin: 'anonymous'
+      }),
+			visible: false
+		}),
+		
+		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
+			title: 'Vector Tile3',
+			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
+			source: new ol.source.VectorTile({
+        tilePixelRatio: 1, // oversampling when > 1
+        tileGrid: ol.tilegrid.createXYZ({maxZoom: 19}),
+        format: new ol.format.MVT(),
+		crossOrigin: 'anonymous',
+		attributions: '&copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>',
+        url: 'https://vector.openstreetmap.org/shortbread_v1/{z}/{x}/{y}.mvt'
+      }),
+			visible: false
+		}),
+		
+		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
+			title: 'Vector Tile',
+			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
+			source: new ol.source.VectorTile({
+        tilePixelRatio: 1, // oversampling when > 1
+        tileGrid: ol.tilegrid.createXYZ({maxZoom: 19}),
+        format: new ol.format.TopoJSON(),
+        url: 'https://basemaps.arcgis.com/arcgis/rest/services/World_Basemap_v2/VectorTileServer/tile/{z}/{y}/{x}.pbf',
+		crossOrigin: 'anonymous'
+      }),
+			visible: false
+		}),
+		
+		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
+			title: 'Vector Tilekiln2',
+			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
+			source: new ol.source.TileJSON({
+        tileSize: 512,
+        crossOrigin: 'anonymous',
+        url: 'https://pnorman.github.io/tilekiln-shortbread-demo/colorful.json'
+      }),
+			visible: false
+		}),
+		
+		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
+			title: 'Vector OSM',
+			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
+			source: new ol.source.TileJSON({
+        tileSize: 512,
+        crossOrigin: 'anonymous',
+        url: 'https://vector.openstreetmap.org/shortbread_v1/tilejson.json'
+      }),
+			visible: false
+		}),
+
 		new ol.layer.Tile({
 			title: 'Google Maps',
 			iconSrc: imgSrc + 'icones_web/gmaps_logo_layer.png',
@@ -22017,9 +21777,3 @@ style: function (feature) {
 		return {};
 	}
 };
-
-// Expose config to the global scope
-window.config = config;
-
-// End of IIFE
-})();
