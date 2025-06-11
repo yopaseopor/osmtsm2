@@ -119,6 +119,7 @@ export const es = {
 	waste_basket: 'Papelera',
 	weighbridge: 'Báscula',
 	window_construction: 'Ventanas',
+	association: 'Asociación',
     leisure: 'Ocio',
     food: 'Comida y Bebida',
     shopping: 'Compras',

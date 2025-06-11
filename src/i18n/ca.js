@@ -119,6 +119,7 @@ export const ca = {
 	waste_basket: 'Paperera',
 	weighbridge: 'Bàscula',
 	window_construction: 'Finestres',
+	association: 'Associació',
 	leisure: 'Oci',
     food: 'Menjar i Beguda',
     shopping: 'Botigues',
