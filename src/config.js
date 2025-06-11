@@ -157,7 +157,7 @@ var config = {
 				tilePixelRatio: 1,
 				tileGrid: ol.tilegrid.createXYZ({
 					minZoom: 0,
-					maxZoom: 20
+					maxZoom: 25
 				}),
 				format: new ol.format.MVT(),
 				url: 'https://api.maptiler.com/tiles/v3/{z}/{x}/{y}.pbf?key=zPfUiHM0YgsZAlrKRPNg',
@@ -241,13 +241,65 @@ var config = {
 			},
 			visible: false
 		}),
+		
+		// MapTiler Vector Tile Layer with enhanced glyph and sprite support
+		new ol.layer.VectorTile({
+			title: 'MapTiler Vector',
+			iconSrc: imgSrc + 'icones_web/maptiler_logo.png',
+			visible: false,
+			opacity: 1.0,
+			source: new ol.source.VectorTile({
+				projection: 'EPSG:3857',
+				format: new ol.format.MVT(),
+				url: 'https://api.maptiler.com/tiles/v3/{z}/{x}/{y}.pbf?key=Faz9gJu55zrWejNF55oZ',
+				tileGrid: ol.tilegrid.createXYZ({
+					minZoom: 0,
+					maxZoom: 14
+				}),
+				attributions: [
+					'<a href="https://www.maptiler.com/copyright/" target="_blank"> MapTiler</a>',
+					'<a href="https://www.openstreetmap.org/copyright" target="_blank"> OpenStreetMap contributors</a>'
+				]
+			}),
+			style: (function() {
+				// Initialize style configuration with glyphs and sprites
+				window.maptilerStyleConfig = {
+					spriteBaseUrl: 'https://api.maptiler.com/maps/streets/sprite',
+					glyphs: 'https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=Faz9gJu55zrWejNF55oZ',
+					fontStacks: {
+						regular: ['Noto Sans Regular', 'Arial Unicode MS Regular'],
+						bold: ['Noto Sans Bold', 'Arial Unicode MS Bold'],
+						italic: ['Noto Sans Italic', 'Arial Unicode MS Italic'],
+						bolditalic: ['Noto Sans Bold Italic', 'Arial Unicode MS Bold Italic']
+					}
+				};
 
-		// OSM Mapnik (Raster Tiles)
-		new ol.layer.Tile({
-			title: 'OSM Mapnik',
-			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
-			source: new ol.source.OSM(),
-			visible: false
+				// Preload fonts
+				const fontPromises = [];
+				Object.values(window.maptilerStyleConfig.fontStacks).forEach(fonts => {
+					fonts.forEach(font => {
+						const fontUrl = window.maptilerStyleConfig.glyphs
+							.replace('{fontstack}', encodeURIComponent(font))
+							.replace('{range}', '0-255');
+						fontPromises.push(
+							fetch(fontUrl).catch(e => console.warn('Failed to load font:', font, e))
+						);
+					});
+				});
+
+				// Return the style function with access to the config
+				return function(feature, resolution) {
+					if (window.vectorTileStyle) {
+						try {
+							return window.vectorTileStyle(feature, resolution, window.maptilerStyleConfig);
+						} catch (e) {
+							console.error('Error in vectorTileStyle:', e);
+							return [];
+						}
+					}
+					return [];
+				};
+			})()
 		}),
 
 		// Vector Tiles - MapTiler Basic
@@ -455,6 +507,15 @@ var config = {
 			}),
 			visible: false
 		}),
+
+		// OSM Mapnik (Raster Tiles)
+		new ol.layer.Tile({
+			title: 'OSM Mapnik',
+			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
+			source: new ol.source.OSM(),
+			visible: false
+		}),
+
 		new ol.layer.Tile({
 			title: 'OpenCycleMap',
 			iconSrc: imgSrc + 'icones_web/opencycle_logo_layer.png',
