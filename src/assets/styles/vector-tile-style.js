@@ -1,4 +1,137 @@
 /**
+ * Default configuration for feature limits per zoom level
+ * These values represent the maximum number of features to show per tile at each zoom level
+ * The values should increase as you zoom in (higher zoom = more features)
+ */
+const DEFAULT_FEATURE_LIMITS = {
+    // Zoom level: max features per tile
+    0: 5,
+    1: 5,
+    2: 5,
+    3: 5,
+    4: 5,
+    5: 10,
+    6: 15,
+    7: 20,
+    8: 30,
+    9: 50,
+    10: 80,
+    11: 120,
+    12: 180,
+    13: 250,
+    14: 350,
+    15: 500,
+    16: 700,
+    17: 1000,
+    18: 1500,
+    19: 2000,
+    20: 3000
+};
+
+// Global counter for features per tile and zoom level
+const featureCounters = new Map();
+
+/**
+ * Get the current zoom level based on resolution
+ * @param {number} resolution - Map resolution
+ * @returns {number} Zoom level
+ */
+function getZoomLevel(resolution) {
+    // This is a simplified calculation - adjust based on your map's zoom levels
+    return Math.round(Math.log2(156543.03390625 / resolution));
+}
+
+/**
+ * Check if a feature should be shown based on current feature counts
+ * @param {string} layer - Feature layer
+ * @param {number} zoom - Current zoom level
+ * @param {string} tileKey - Unique key for the current tile
+ * @returns {boolean} True if the feature should be shown
+ */
+function shouldShowFeature(layer, zoom, tileKey) {
+    const config = window.vectorTileConfig || {};
+    const limits = config.featureLimits || DEFAULT_FEATURE_LIMITS;
+    
+    // Get the maximum features for this zoom level
+    let maxFeatures = limits[zoom] || 1000; // Default to 1000 if zoom level not specified
+    
+    // Adjust max features based on layer importance
+    const layerImportance = {
+        'water': 1.0,    // High priority
+        'boundary': 0.9, // High priority
+        'transportation': 0.8, // Medium-high priority
+        'building': 0.7, // Medium priority
+        'landuse': 0.5,  // Medium-low priority
+        'poi': 0.3      // Low priority
+    };
+    
+    // Scale max features based on layer importance
+    maxFeatures = Math.round(maxFeatures * (layerImportance[layer] || 0.5));
+    
+    // Initialize counters if needed
+    if (!featureCounters.has(tileKey)) {
+        featureCounters.set(tileKey, {
+            count: 0,
+            zoom: zoom,
+            lastAccess: Date.now()
+        });
+    }
+    
+    const counter = featureCounters.get(tileKey);
+    
+    // Reset counter if zoom level changed
+    if (counter.zoom !== zoom) {
+        counter.count = 0;
+        counter.zoom = zoom;
+    }
+    
+    // Update last access time
+    counter.lastAccess = Date.now();
+    
+    // Check if we can show this feature
+    if (counter.count < maxFeatures) {
+        counter.count++;
+        return true;
+    }
+    
+    return false;
+}
+
+// Clean up old counters periodically
+setInterval(() => {
+    const now = Date.now();
+    const maxAge = 5 * 60 * 1000; // 5 minutes
+    
+    for (const [key, { lastAccess }] of featureCounters.entries()) {
+        if (now - lastAccess > maxAge) {
+            featureCounters.delete(key);
+        }
+    }
+}, 60000); // Run every minute
+
+/**
+ * Vector Tile Style Configuration
+ * This object provides configuration options for the vector tile styling
+ */
+window.vectorTileConfig = {
+    // Allow overriding default feature limits
+    setFeatureLimits: function(limits) {
+        this.featureLimits = { ...DEFAULT_FEATURE_LIMITS, ...limits };
+    },
+    // Reset to default limits
+    resetFeatureLimits: function() {
+        this.featureLimits = { ...DEFAULT_FEATURE_LIMITS };
+    },
+    // Get current feature limits
+    getFeatureLimits: function() {
+        return { ...(this.featureLimits || DEFAULT_FEATURE_LIMITS) };
+    }
+};
+
+// Initialize with default limits
+window.vectorTileConfig.resetFeatureLimits();
+
+/**
  * Gets the best label text for a feature according to Mapbox GL Style Spec
  * @param {ol/Feature} feature - The feature to get label for
  * @param {string} [textField] - Field specification (e.g., '{name} {ref}')
@@ -145,6 +278,27 @@ function getIconStyle(iconName, config, options = {}) {
  * Implements a style function following Mapbox GL Style Specification patterns
  */
 window.vectorTileStyle = function(feature, resolution, config = {}) {
+    // Initialize styles array
+    const styles = [];
+    
+    try {
+        // Calculate current zoom level
+        const zoom = getZoomLevel(resolution);
+        
+        // Generate a unique key for this tile based on feature ID and zoom level
+        const featureId = feature.get('__fid') || Math.random().toString(36).substr(2, 9);
+        const tileKey = `tile-${zoom}-${Math.floor(featureId / 1000)}`;
+        
+        // Get the layer for feature limiting
+        const layer = feature.get('layer') || 'unknown';
+        
+        // We use a different counter for labels by appending '-label' to the tile key
+        const labelTileKey = `${tileKey}-label`;
+        const showFeature = shouldShowFeature(layer, zoom, tileKey);
+        if (!showFeature) {
+            return []; // Skip rendering this feature if we've hit our limit
+        }
+
     // Common colors following Mapbox GL Style Specification naming
     const colors = {
         // POI colors
@@ -207,9 +361,7 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
         }
     };
 
-    try {
         // Get feature properties
-        const layer = feature.get('layer') || 'unknown';
         const cls = feature.get('class') || '';
         const type = feature.getGeometry().getType();
         const brunnel = feature.get('brunnel');
@@ -239,9 +391,9 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
                 }));
             }
             
-            // Add water label if name exists
+            // Add water label if name exists and we're not at feature limit
             const name = getFeatureLabel(feature, '{name}');
-            if (name) {
+            if (name && shouldShowFeature('water', zoom, labelTileKey)) {
                 styles.push(new ol.style.Style({
                     text: createTextStyle({
                         text: name,
@@ -294,7 +446,7 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
             
             // Get label for any landuse with name, ref, or address
             const label = getFeatureLabel(feature, '{name}');
-            if (label) {
+            if (label && shouldShowFeature('landuse', zoom, labelTileKey)) {
                 const fontSize = cls === 'park' || cls === 'forest' || cls === 'cemetery' ? 10 : 9;
                 const textColor = cls === 'cemetery' ? '#666666' : 
                                  cls === 'park' || cls === 'forest' ? '#2d5f2d' : '#333333';
@@ -358,7 +510,7 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
             
             // Get label for building (name, ref, or address)
             const label = getFeatureLabel(feature);
-            if (label) {
+            if (label && shouldShowFeature('building', zoom, labelTileKey)) {
                 // Only show labels for significant buildings or when zoomed in
                 const showLabel = resolution < 10; // Adjust this value based on your needs
                 if (showLabel) {
@@ -441,8 +593,8 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
             }
             
             // Add road labels for named or numbered roads
-            const label = getFeatureLabel(feature, '{name} {ref}');
-            if (label) {
+            const roadLabel = getFeatureLabel(feature, '{name} {ref}');
+            if (roadLabel && shouldShowFeature('transportation', zoom, labelTileKey)) {
                 const isMajorRoad = ['motorway', 'trunk', 'primary', 'secondary'].includes(roadType);
                 const fontSize = isMajorRoad ? 10 : 9;
                 const textColor = isMajorRoad ? '#ffffff' : roadStyle.textColor || '#000000';
@@ -454,7 +606,7 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
                 if (showLabel) {
                     styles.push(new ol.style.Style({
                         text: createTextStyle({
-                            text: label,
+                            text: roadLabel,
                             font: {
                                 size: fontSize,
                                 weight: isMajorRoad ? 'bold' : 'normal'
@@ -478,6 +630,7 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
                         }, config)
                     }));
                 }
+            }
             }
             
             return styles;
@@ -528,7 +681,8 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
                 styles.push(new ol.style.Style(boundaryStyle));
                 
                 // Add label for named boundaries (countries, states, etc.)
-                if (name && (adminLevel <= 4 || boundaryType === 'protected_area')) {
+                if (name && (adminLevel <= 4 || boundaryType === 'protected_area') && 
+                    shouldShowFeature('boundary', zoom, labelTileKey)) {
                     const isNational = adminLevel <= 2;
                     const textColor = boundaryType === 'protected_area' ? colors.boundary.protected_area : '#666666';
                     
@@ -555,8 +709,6 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
             return styles;
         }
         
-    } catch (error) {
-        console.error('Error styling feature:', error, feature);
         // POI (Point of Interest) styling
         const poiType = feature.get('amenity') || feature.get('shop') || 
                        feature.get('tourism') || feature.get('office') || 
@@ -608,9 +760,9 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
                 }));
             }
             
-            // Add label for POI
+            // Add label for POI if we haven't hit the limit
             const label = getFeatureLabel(feature, '{name}');
-            if (label) {
+            if (label && shouldShowFeature('poi', zoom, labelTileKey)) {
                 styles.push(new ol.style.Style({
                     text: createTextStyle({
                         text: label,
@@ -644,28 +796,37 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
         })
     })];
 
-    // Add label for any feature with a name or ref
-    const label = getFeatureLabel(feature);
-    if (label) {
-        styles.push(new ol.style.Style({
-            text: createTextStyle({
-                text: label,
-                font: {
-                    size: 9,
-                    weight: 'normal'
-                },
-                color: '#333',
-                haloColor: 'rgba(255, 255, 255, 0.7)',
-                haloWidth: 2,
-                offsetY: 10,
-                textBaseline: 'middle',
-                textAlign: 'center',
-                maxResolution: 10
-            }, config)
-        }));
+        // Add label for any feature with a name or ref if we haven't hit the limit
+        const label = getFeatureLabel(feature);
+        if (label && shouldShowFeature('default', zoom, labelTileKey)) {
+            styles.push(new ol.style.Style({
+                text: createTextStyle({
+                    text: label,
+                    font: {
+                        size: 9,
+                        weight: 'normal'
+                    },
+                    color: '#333',
+                    haloColor: 'rgba(255, 255, 255, 0.7)',
+                    haloWidth: 2,
+                    offsetY: 10,
+                    textBaseline: 'middle',
+                    textAlign: 'center',
+                    maxResolution: 10
+                }, config)
+            }));
+        }
+    
+    } catch (error) {
+        console.error('Error styling feature:', error, feature);
+        return [];
     }
     
-    return styles;
+        return styles;
+    } catch (error) {
+        console.error('Error styling feature:', error, feature);
+        return [];
+    }
 };
 
 /**
