@@ -50,52 +50,69 @@ function getZoomLevel(resolution) {
  * @returns {boolean} True if the feature should be shown
  */
 function shouldShowFeature(layer, zoom, tileKey) {
-    const config = window.vectorTileConfig || {};
-    const limits = config.featureLimits || DEFAULT_FEATURE_LIMITS;
-    
-    // Get the maximum features for this zoom level
-    let maxFeatures = limits[zoom] || 1000; // Default to 1000 if zoom level not specified
-    
-    // Adjust max features based on layer importance
-    const layerImportance = {
-        'water': 1.0,    // High priority
-        'boundary': 0.9, // High priority
-        'transportation': 0.8, // Medium-high priority
-        'building': 0.7, // Medium priority
-        'landuse': 0.5,  // Medium-low priority
-        'poi': 0.3      // Low priority
-    };
-    
-    // Scale max features based on layer importance
-    maxFeatures = Math.round(maxFeatures * (layerImportance[layer] || 0.5));
-    
-    // Initialize counters if needed
-    if (!featureCounters.has(tileKey)) {
-        featureCounters.set(tileKey, {
-            count: 0,
-            zoom: zoom,
-            lastAccess: Date.now()
-        });
+    try {
+        const config = window.vectorTileConfig || {};
+        const limits = config.featureLimits || DEFAULT_FEATURE_LIMITS;
+        
+        // Skip limiting for certain high-priority layers
+        const noLimitLayers = ['water', 'boundary', 'transportation', 'place'];
+        if (noLimitLayers.includes(layer)) {
+            debugLog(`Skipping limit for high-priority layer: ${layer}`);
+            return true;
+        }
+        
+        // Get the maximum features for this zoom level
+        let maxFeatures = limits[zoom] || 1000; // Default to 1000 if zoom level not specified
+        
+        // Adjust max features based on layer importance
+        const layerImportance = {
+            'water': 1.0,    // High priority
+            'boundary': 0.9, // High priority
+            'transportation': 0.8, // Medium-high priority
+            'building': 0.7, // Medium priority
+            'landuse': 0.5,  // Medium-low priority
+            'poi': 0.3,     // Low priority
+            'place': 1.0,    // High priority for place labels
+            'water_name': 1.0 // High priority for water labels
+        };
+        
+        // Scale max features based on layer importance
+        const importance = layerImportance[layer] || 0.5;
+        maxFeatures = Math.max(1, Math.round(maxFeatures * importance));
+        
+        // Create a counter key that includes the layer and zoom level
+        const counterKey = `${tileKey}-${layer}-${Math.floor(zoom)}`;
+        
+        debugLog(`Layer: ${layer}, Zoom: ${zoom}, Max Features: ${maxFeatures}, Importance: ${importance}`);
+        
+        // Initialize counters if needed
+        if (!featureCounters.has(counterKey)) {
+            featureCounters.set(counterKey, {
+                count: 0,
+                zoom: zoom,
+                lastAccess: Date.now(),
+                layer: layer
+            });
+        }
+        
+        const counter = featureCounters.get(counterKey);
+        
+        // Update last access time
+        counter.lastAccess = Date.now();
+        
+        // Check if we can show this feature
+        if (counter.count < maxFeatures) {
+            counter.count++;
+            debugLog(`Feature ${counter.count}/${maxFeatures} shown for ${layer} at zoom ${zoom}`);
+            return true;
+        }
+        
+        debugLog(`Feature limit reached for ${layer} at zoom ${zoom} (${counter.count}/${maxFeatures})`);
+        return false;
+    } catch (error) {
+        console.error('Error in shouldShowFeature:', error);
+        return true; // Default to showing the feature if there's an error
     }
-    
-    const counter = featureCounters.get(tileKey);
-    
-    // Reset counter if zoom level changed
-    if (counter.zoom !== zoom) {
-        counter.count = 0;
-        counter.zoom = zoom;
-    }
-    
-    // Update last access time
-    counter.lastAccess = Date.now();
-    
-    // Check if we can show this feature
-    if (counter.count < maxFeatures) {
-        counter.count++;
-        return true;
-    }
-    
-    return false;
 }
 
 // Clean up old counters periodically
@@ -131,6 +148,16 @@ window.vectorTileConfig = {
 
 // Initialize with default limits
 window.vectorTileConfig.resetFeatureLimits();
+
+// Enable debug mode by default in development
+window.debugVectorTiles = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+
+// Debug logging function
+function debugLog(...args) {
+    if (window.debugVectorTiles) {
+        console.log('[VectorTiles]', ...args);
+    }
+}
 
 /**
  * Gets the best label text for a feature according to Mapbox GL Style Spec
@@ -278,28 +305,27 @@ function getIconStyle(iconName, config, options = {}) {
  * Vector Tile Style Configuration
  * Implements a style function following Mapbox GL Style Specification patterns
  */
-window.vectorTileStyle = function(feature, resolution, config = {}) {
+function vectorTileStyle(feature, resolution, config = {}) {
     // Initialize styles array
     const styles = [];
     
-    try {
-        // Calculate current zoom level
-        const zoom = getZoomLevel(resolution);
-        
-        // Generate a unique key for this tile based on feature ID and zoom level
-        const featureId = feature.get('__fid') || Math.random().toString(36).substr(2, 9);
-        const tileKey = `tile-${zoom}-${Math.floor(featureId / 1000)}`;
-        
-        // Get the layer for feature limiting
-        const layer = feature.get('layer') || 'unknown';
-        
-        // We use a different counter for labels by appending '-label' to the tile key
-        const labelTileKey = `${tileKey}-label`;
-        const showFeature = shouldShowFeature(layer, zoom, tileKey);
-        if (!showFeature) {
-            return []; // Skip rendering this feature if we've hit our limit
-        }
-
+    // Calculate current zoom level
+    const zoom = getZoomLevel(resolution);
+    
+    // Generate a unique key for this tile based on feature ID and zoom level
+    const featureId = feature.get('__fid') || Math.random().toString(36).substr(2, 9);
+    const tileKey = `tile-${zoom}-${Math.floor(featureId / 1000)}`;
+    
+    // Get the layer for feature limiting
+    const layer = feature.get('layer') || 'unknown';
+    
+    // We use a different counter for labels by appending '-label' to the tile key
+    const labelTileKey = `${tileKey}-label`;
+    const showFeature = shouldShowFeature(layer, zoom, tileKey);
+    if (!showFeature) {
+        return []; // Skip rendering this feature if we've hit our limit
+    }
+    
     // Common colors following Mapbox GL Style Specification naming
     const colors = {
         // POI colors
@@ -818,13 +844,14 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
     }
     
     return styles;
-} catch (error) {
-    console.error('Error styling feature:', error, feature);
-    return [];
 }
 
 // Export the vector tile style function
 window.vectorTileStyle = vectorTileStyle;
+
+// Debug log to verify the function is properly exported
+console.log('Vector tile style function loaded and exported:', typeof window.vectorTileStyle === 'function');
+console.log('Vector tile config:', window.vectorTileConfig);
 
 /**
  * Helper function to lighten or darken a color
