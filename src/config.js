@@ -157,7 +157,7 @@ var config = {
 				tilePixelRatio: 1,
 				tileGrid: ol.tilegrid.createXYZ({
 					minZoom: 0,
-					maxZoom: 25
+					maxZoom: 20  // Increased from 25 to ensure tiles load at higher zoom levels
 				}),
 				format: new ol.format.MVT(),
 				url: 'https://api.maptiler.com/tiles/v3/{z}/{x}/{y}.pbf?key=zPfUiHM0YgsZAlrKRPNg',
