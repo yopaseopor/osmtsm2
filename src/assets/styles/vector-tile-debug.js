@@ -165,19 +165,32 @@ class VectorTileDebugPanel {
     }
 }
 
-// Initialize debug panel
-window.vectorTileDebugPanel = new VectorTileDebugPanel();
-
-// Override debugLog to also log to the debug panel
-const originalDebugLog = window.debugLog || (() => {});
-window.debugLog = (...args) => {
-    originalDebugLog(...args);
-    if (window.vectorTileDebugPanel) {
-        window.vectorTileDebugPanel.log(args.join(' '));
+// Initialize debug panel when DOM is ready
+function initDebugPanel() {
+    try {
+        window.vectorTileDebugPanel = new VectorTileDebugPanel();
+        
+        // Override debugLog to also log to the debug panel
+        const originalDebugLog = window.debugLog || (() => {});
+        window.debugLog = (...args) => {
+            originalDebugLog(...args);
+            if (window.vectorTileDebugPanel) {
+                window.vectorTileDebugPanel.log(args.join(' '));
+            }
+        };
+        
+        // Add debug toggle to window for easy access
+        window.toggleVectorTileDebug = () => window.vectorTileDebugPanel.toggle();
+        
+        console.log('Vector Tile Debug Panel initialized. Use toggleVectorTileDebug() to show/hide.');
+    } catch (error) {
+        console.error('Failed to initialize Vector Tile Debug Panel:', error);
     }
-};
+}
 
-// Add debug toggle to window for easy access
-window.toggleVectorTileDebug = () => window.vectorTileDebugPanel.toggle();
-
-console.log('Vector Tile Debug Panel initialized. Use toggleVectorTileDebug() to show/hide.');
+// Initialize when DOM is fully loaded
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initDebugPanel);
+} else {
+    initDebugPanel();
+}

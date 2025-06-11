@@ -847,7 +847,19 @@ function vectorTileStyle(feature, resolution, config = {}) {
 }
 
 // Export the vector tile style function
-window.vectorTileStyle = vectorTileStyle;
+if (typeof window !== 'undefined') {
+    // Only set window.vectorTileStyle if window is defined (browser environment)
+    window.vectorTileStyle = function(feature, resolution) {
+        try {
+            return vectorTileStyle(feature, resolution);
+        } catch (error) {
+            console.error('Error in vectorTileStyle:', error);
+            return []; // Return empty styles array on error to prevent breaking the map
+        }
+    };
+    
+    console.log('Vector tile style function initialized');
+}
 
 // Debug log to verify the function is properly exported
 console.log('Vector tile style function loaded and exported:', typeof window.vectorTileStyle === 'function');
