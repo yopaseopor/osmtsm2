@@ -1,3 +1,8 @@
+// Create a global config object if it doesn't exist
+var config = window.config || {};
+
+// Self-executing function to avoid polluting global scope
+(function() {
 /**
  * OSM Cat config
  */
@@ -22012,3 +22017,9 @@ style: function (feature) {
 		return {};
 	}
 };
+
+// Expose config to the global scope
+window.config = config;
+
+// End of IIFE
+})();
