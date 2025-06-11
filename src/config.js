@@ -362,7 +362,7 @@ var config = {
 					}
 				};
 			})()
-        }),
+		}),
         new ol.layer.Tile({
             /*@@ título */title: 'OpenStreetMap DE',
             /*@@ icono */iconSrc: imgSrc + 'icones_web/osmbw_logo-layer.png',
