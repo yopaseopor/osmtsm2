@@ -261,33 +261,144 @@ var config = {
 
 				// Style function with zoom-based rendering
 				return function(feature, resolution) {
-					var styles = [];
-					var type = feature.getGeometry().getType();
-					var zoom = this.getMap().getView().getZoom();
-					var name = feature.get('name');
-					var place = feature.get('place');
-					var highway = feature.get('highway');
-					var layer = feature.get('layer');
+					try {
+						var styles = [];
+						var type = feature.getGeometry().getType();
+						
+						// Get feature properties with fallbacks
+						var name = feature.get('name') || '';
+						var place = feature.get('place') || '';
+						var highway = feature.get('highway') || '';
+						var layer = feature.get('layer') || '';
+						
+						// Get the map view's zoom level safely
+						var map = this && this.getMap ? this.getMap() : null;
+						var zoom = map && map.getView() ? map.getView().getZoom() : 10; // Default zoom if map not available
 
-					// Generate a cache key for this feature
-					var cacheKey = type + '|' + zoom + '|' + (name || '') + '|' + (place || '') + '|' + (highway || '') + '|' + (layer || '');
-					if (cache[cacheKey]) {
-						return cache[cacheKey];
-					}
+						// Generate a cache key for this feature
+						var cacheKey = type + '|' + zoom + '|' + name + '|' + place + '|' + highway + '|' + layer;
+						if (cache[cacheKey]) {
+							return cache[cacheKey];
+						}
 
-					// Base styles for polygons (buildings, landuse, etc.)
-					if ((type === 'Polygon' || type === 'MultiPolygon') && zoom >= 12) {
-						var fillOpacity = Math.min(0.7, 0.3 + (zoom - 12) * 0.1);
-						styles.push(new ol.style.Style({
-							fill: new ol.style.Fill({ 
-								color: 'rgba(200, 220, 240, ' + fillOpacity + ')' 
-							}),
-							stroke: new ol.style.Stroke({ 
-								color: 'rgba(68, 68, 102, 0.7)',
-								width: zoom > 14 ? 1.5 : 1 
-							}),
-							zIndex: 1
-						}));
+						// Base styles for polygons (buildings, landuse, etc.)
+						if ((type === 'Polygon' || type === 'MultiPolygon') && zoom >= 12) {
+							var fillOpacity = Math.min(0.7, 0.3 + (zoom - 12) * 0.1);
+							styles.push(new ol.style.Style({
+								fill: new ol.style.Fill({ 
+									color: 'rgba(200, 220, 240, ' + fillOpacity + ')' 
+								}),
+								stroke: new ol.style.Stroke({ 
+									color: 'rgba(68, 68, 102, 0.7)',
+									width: zoom > 14 ? 1.5 : 1 
+								}),
+								zIndex: 1
+							}));
+						}
+
+						// Style for roads and paths
+						if ((type === 'LineString' || type === 'MultiLineString') && highway) {
+							var roadWidth = 1;
+							var roadColor = '#ffffff';
+							
+							switch(highway) {
+								case 'motorway':
+									roadWidth = Math.min(4, 0.5 + (zoom - 10) * 0.5);
+									roadColor = '#ff6b6b';
+									break;
+								case 'trunk':
+								case 'primary':
+									roadWidth = Math.min(3, 0.4 + (zoom - 12) * 0.3);
+									roadColor = '#ff9e7d';
+									break;
+								case 'secondary':
+								case 'tertiary':
+									roadWidth = Math.min(2, 0.3 + (zoom - 13) * 0.2);
+									roadColor = '#ffd166';
+									break;
+								default:
+									roadWidth = Math.max(0.5, (zoom - 14) * 0.2);
+									roadColor = '#ffffff';
+							}
+
+							styles.push(new ol.style.Style({
+								stroke: new ol.style.Stroke({
+									color: roadColor,
+									width: roadWidth,
+									lineCap: 'round',
+									lineJoin: 'round'
+								}),
+								zIndex: 2
+							}));
+
+							// Add road labels
+							if (name && zoom > 12) {
+								styles.push(new ol.style.Style({
+									text: new ol.style.Text({
+										text: name,
+										font: 'bold 12px Arial, sans-serif',
+										fill: new ol.style.Fill({
+											color: '#333333'
+										}),
+										stroke: new ol.style.Stroke({
+											color: 'rgba(255, 255, 255, 0.8)',
+											width: 3
+										}),
+										offsetY: -10,
+										overflow: true
+									}),
+									zIndex: 3
+								}));
+							}
+						}
+
+						// Style for points of interest
+						if (type === 'Point' && (place || name)) {
+							var fontSize = 12;
+							if (place) {
+								switch(place) {
+									case 'city':
+										fontSize = Math.min(16, 10 + zoom * 0.8);
+										break;
+									case 'town':
+										fontSize = Math.min(14, 8 + zoom * 0.6);
+										break;
+									case 'village':
+										fontSize = Math.min(12, 6 + zoom * 0.4);
+										break;
+								}
+							}
+
+							styles.push(new ol.style.Style({
+								text: new ol.style.Text({
+									text: name,
+									font: 'bold ' + fontSize + 'px Arial, sans-serif',
+									fill: new ol.style.Fill({
+										color: '#333333'
+									}),
+									stroke: new ol.style.Stroke({
+										color: 'rgba(255, 255, 255, 0.8)',
+										width: 3
+									}),
+									offsetY: -fontSize * 0.6,
+									overflow: true
+								}),
+								zIndex: 4
+							}));
+						}
+
+						// Cache the styles for this feature
+						if (styles.length > 0) {
+							cache[cacheKey] = styles;
+							return styles;
+						}
+
+						// Default style if no other styles apply
+						return null;
+
+					} catch (error) {
+						console.error('Error in vector tile style function:', error);
+						return null;
 					}
 
 					// Style for roads and paths
