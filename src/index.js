@@ -824,15 +824,23 @@ $(function () {
 	var selectedFeature = null;
 	map.on('pointermove', function (evt) {
 		if (selectedFeature !== null) {
-			selectedFeature.setStyle(undefined);
+			// Only call setStyle if it's a vector feature
+			if (selectedFeature.setStyle) {
+				selectedFeature.setStyle(undefined);
+			}
 			selectedFeature = null;
 			$('#map').css('cursor', 'grab');
 		}
-		map.forEachFeatureAtPixel(evt.pixel, function (feature) {
+		
+		// Check if we're over a feature
+		var feature = map.forEachFeatureAtPixel(evt.pixel, function(feature) {
+			return feature;
+		});
+		
+		if (feature) {
 			selectedFeature = feature;
 			$('#map').css('cursor', 'pointer');
-			return true;
-		});
+		}
 	});
 
 	map.on('singleclick', function (evt) {
