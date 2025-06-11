@@ -512,8 +512,10 @@ $(function () {
 						} else { //Active the selected layer and hide the current layer
 							baseLayerIndex = layer.get('layerIndex');
 							layer.setVisible(!visible);
-							visibleLayer.setVisible(visible);
-							previousLayer = visibleLayer;
+							if (visibleLayer) {
+								visibleLayer.setVisible(visible);
+							}
+							previousLayer = visibleLayer || layer;
 							visibleLayer = layer;
 						}
 						updatePermalink();
