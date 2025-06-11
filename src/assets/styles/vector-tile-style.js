@@ -5,27 +5,28 @@
  */
 const DEFAULT_FEATURE_LIMITS = {
     // Zoom level: max features per tile
-    0: 5,
-    1: 5,
-    2: 5,
-    3: 5,
-    4: 5,
-    5: 10,
-    6: 15,
-    7: 20,
-    8: 30,
-    9: 50,
-    10: 80,
-    11: 120,
-    12: 180,
-    13: 250,
-    14: 350,
-    15: 500,
-    16: 700,
-    17: 1000,
-    18: 1500,
-    19: 2000,
-    20: 3000
+    // Reduced limits to prevent overcrowding
+    0: 2,
+    1: 2,
+    2: 3,
+    3: 3,
+    4: 4,
+    5: 5,
+    6: 8,
+    7: 12,
+    8: 18,
+    9: 25,
+    10: 35,
+    11: 50,
+    12: 70,
+    13: 100,
+    14: 150,
+    15: 200,
+    16: 300,
+    17: 450,
+    18: 600,
+    19: 800,
+    20: 1000
 };
 
 // Global counter for features per tile and zoom level
@@ -631,7 +632,6 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
                     }));
                 }
             }
-            }
             
             return styles;
         }
@@ -786,7 +786,7 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
     }
 
     // Default style (fallback) - with label if available
-    const styles = [new ol.style.Style({
+    styles.push(new ol.style.Style({
         fill: new ol.style.Fill({
             color: 'rgba(200, 200, 200, 0.3)'
         }),
@@ -794,40 +794,37 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
             color: 'rgba(100, 100, 100, 0.5)',
             width: 0.5
         })
-    })];
+    }));
 
-        // Add label for any feature with a name or ref if we haven't hit the limit
-        const label = getFeatureLabel(feature);
-        if (label && shouldShowFeature('default', zoom, labelTileKey)) {
-            styles.push(new ol.style.Style({
-                text: createTextStyle({
-                    text: label,
-                    font: {
-                        size: 9,
-                        weight: 'normal'
-                    },
-                    color: '#333',
-                    haloColor: 'rgba(255, 255, 255, 0.7)',
-                    haloWidth: 2,
-                    offsetY: 10,
-                    textBaseline: 'middle',
-                    textAlign: 'center',
-                    maxResolution: 10
-                }, config)
-            }));
-        }
-    
-    } catch (error) {
-        console.error('Error styling feature:', error, feature);
-        return [];
+    // Add label for any feature with a name or ref if we haven't hit the limit
+    const label = getFeatureLabel(feature);
+    if (label && shouldShowFeature('default', zoom, labelTileKey)) {
+        styles.push(new ol.style.Style({
+            text: createTextStyle({
+                text: label,
+                font: {
+                    size: 9,
+                    weight: 'normal'
+                },
+                color: '#333',
+                haloColor: 'rgba(255, 255, 255, 0.7)',
+                haloWidth: 2,
+                offsetY: 10,
+                textBaseline: 'middle',
+                textAlign: 'center',
+                maxResolution: 10
+            }, config)
+        }));
     }
     
-        return styles;
-    } catch (error) {
-        console.error('Error styling feature:', error, feature);
-        return [];
-    }
-};
+    return styles;
+} catch (error) {
+    console.error('Error styling feature:', error, feature);
+    return [];
+}
+
+// Export the vector tile style function
+window.vectorTileStyle = vectorTileStyle;
 
 /**
  * Helper function to lighten or darken a color

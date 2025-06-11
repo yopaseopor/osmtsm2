@@ -167,77 +167,11 @@ var config = {
 				],
 				crossOrigin: 'anonymous'
 			}),
-			style: function(feature) {
-				var style = new ol.style.Style({
-					fill: new ol.style.Fill({
-						color: 'rgba(200, 200, 200, 0.4)'
-					}),
-					stroke: new ol.style.Stroke({
-						color: 'rgba(100, 100, 100, 0.6)',
-						width: 0.5
-					})
-				});
-
-				var layer = feature.get('layer');
-				
-				// Water
-				if (layer === 'water') {
-					style.setFill(new ol.style.Fill({
-						color: 'rgba(170, 211, 223, 0.8)'
-					}));
-					style.setStroke(new ol.style.Stroke({
-						color: 'rgba(100, 150, 180, 0.8)',
-						width: 0.5
-					}));
-				}
-				// Landuse
-				else if (layer === 'landuse') {
-					var fillColor = 'rgba(224, 224, 224, 0.4)';
-					if (feature.get('class') === 'park') fillColor = 'rgba(180, 220, 160, 0.5)';
-					if (feature.get('class') === 'grass') fillColor = 'rgba(200, 230, 180, 0.5)';
-					style.setFill(new ol.style.Fill({color: fillColor}));
-				}
-				// Roads
-				else if (layer === 'transportation') {
-					var width = 1;
-					var color = '#ffffff';
-					
-					switch(feature.get('class')) {
-						case 'motorway':
-							width = 3;
-							color = '#ff8753';
-							break;
-						case 'trunk':
-						case 'primary':
-							width = 2.5;
-							color = '#ffb77d';
-							break;
-						case 'secondary':
-							width = 2;
-							color = '#ffffff';
-							break;
-					}
-					
-					style.setFill(null);
-					style.setStroke(new ol.style.Stroke({
-						color: color,
-						width: width,
-						lineCap: 'round',
-						lineJoin: 'round'
-					}));
-				}
-				// Buildings
-				else if (layer === 'building') {
-					style.setFill(new ol.style.Fill({
-						color: 'rgba(200, 200, 200, 0.6)'
-					}));
-					style.setStroke(new ol.style.Stroke({
-						color: 'rgba(150, 150, 150, 0.7)',
-						width: 0.5
-					}));
-				}
-
-				return style;
+			// Use the global vectorTileStyle function with resolution parameter
+			style: function(feature, resolution) {
+				// Pass the feature and resolution to our vector tile style function
+				// The config parameter will be handled by the function's default value
+				return window.vectorTileStyle(feature, resolution);
 			},
 			visible: false
 		}),
