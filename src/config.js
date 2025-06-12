@@ -65,17 +65,27 @@ var config = {
 				crossOrigin: 'anonymous',
 				projection: 'EPSG:3857'
 			}),
-			// Basic style as fallback
-			style: new ol.style.Style({
-				fill: new ol.style.Fill({
-					color: 'rgba(200, 200, 200, 0.5)'
-				}),
-				stroke: new ol.style.Stroke({
-					color: '#3399CC',
-					width: 1.25
-				})
-			})
-				}),
+			// Use the custom vector tile style function for label filtering
+			style: function(feature, resolution) {
+				if (typeof window.vectorTileStyle === 'function') {
+					try {
+						return window.vectorTileStyle(feature, resolution);
+					} catch (error) {
+						console.error('Error in vector tile style function:', error);
+					}
+				}
+				// Fallback basic style
+				return [new ol.style.Style({
+					fill: new ol.style.Fill({
+						color: 'rgba(200, 200, 200, 0.5)'
+					}),
+					stroke: new ol.style.Stroke({
+						color: '#3399CC',
+						width: 1.25
+					})
+				})];
+			}
+		}),
 
 		// Vector Tiles - MapTiler Basic with style.json
 		new ol.layer.VectorTile({
@@ -93,7 +103,9 @@ var config = {
 				attributions: [
 					'<a href="https://www.maptiler.com/copyright/" target="_blank">MapTiler</a>',
 					'<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>'
-				]
+				],
+				crossOrigin: 'anonymous',
+				projection: 'EPSG:3857'
 			}),
 			// Use the custom vector tile style function
 			style: function(feature, resolution) {
@@ -115,12 +127,6 @@ var config = {
 					})
 				})];
 			}
-					} catch (error) {
-						console.error('Error in vector tile style function:', error);
-						return null;
-					}
-				};
-			})()
 		}),
 		
 		// MapTiler Vector Tile Layer with enhanced glyph and sprite support
