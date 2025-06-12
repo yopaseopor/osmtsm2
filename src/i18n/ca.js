@@ -130,6 +130,8 @@ export const ca = {
 		employment_agency: 'Oficina d\'ocupació',
 	engineer: 'Enginyeria',
 	estate_agent: 'Inmobiliària',
+		insurance: 'Asseguradora',
+	insurance_adjuster: 'Ajust d\'assegurances',
 	leisure: 'Oci',
     food: 'Menjar i Beguda',
     shopping: 'Botigues',

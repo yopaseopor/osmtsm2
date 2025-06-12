@@ -131,6 +131,8 @@ export const en = {
 		employment_agency: 'Employment agency',
 	engineer: 'Engineer',
 	estate_agent: 'Estate agent',
+	insurance: 'Insurance',
+	insurance_adjuster: 'Insurance adjuster',
     leisure: 'Leisure',
     food: 'Food & Drink',
     shopping: 'Shopping',

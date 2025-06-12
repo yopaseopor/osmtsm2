@@ -130,6 +130,8 @@ export const es = {
 	employment_agency: 'Oficina de empleo',
 	engineer: 'Ingeniería',
 	estate_agent: 'Inmobiliaria',
+	insurance: 'Aseguradora',
+	insurance_adjuster: 'Ajuste de seguros',
     leisure: 'Ocio',
     food: 'Comida y Bebida',
     shopping: 'Compras',
