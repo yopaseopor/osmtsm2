@@ -4,7 +4,7 @@ import { getTranslation } from '../i18n/index.js';
 // Create overlay configuration
 // Helper to merge overlays from group folders
 function mergeGroupOverlays(baseOverlays, allOverlays) {
-    const groupKeys = ['animal', 'business', 'culture', 'economy', 'mobility', 'education', 'food_drink', 'health', 'leisure', 'logistics', 'office', 'shopping', 'sport', 'transport', 'others', 'translated'];
+    const groupKeys = ['animal', 'business', 'culture', 'economy', 'mobility', 'education', 'food_drink', 'government', 'health', 'leisure', 'logistics', 'office', 'shopping', 'sport', 'transport', 'others', 'translated'];
     let overlays = baseOverlays.slice();
     groupKeys.forEach(groupName => {
         if (Array.isArray(allOverlays[groupName])) {

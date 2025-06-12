@@ -76,6 +76,7 @@ export const ca = {
 	payment_terminal: 'Terminal de pagament',
 		financial: 'Financera',
 	financial_advisor: 'Assessor financer',
+	government: 'Govern',
 	pharmacy: 'Farmàcia',
 	photo_booth: 'Cabina de fotos',	
 		physiotherapist: 'Fisioteràpia',

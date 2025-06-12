@@ -3,6 +3,7 @@ import { businessOverlays } from './groups/business.js';
 import { food_drinkOverlays } from './groups/food_drink.js';
 import { shoppingOverlays } from './groups/shopping.js';
 import { economyOverlays } from './groups/economy.js';
+import {governmentOverlays } from './groups/government.js';
 import { leisureOverlays } from './groups/leisure.js';
 import { logisticsOverlays } from './groups/logistics.js';
 import { mobilityOverlays } from './groups/mobility.js';
@@ -30,6 +31,7 @@ export function getAllOverlays() {
 		logistics: logisticsOverlays(), // static for this example
 		mobility: mobilityOverlays(), // static for this example
 		culture: cultureOverlays(), // static for this example
+				government: governmentOverlays(), // static for this example
 		office: officeOverlays(), // static for this example
 		education: educationOverlays(),
 		health: healthOverlays(),

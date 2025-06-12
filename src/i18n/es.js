@@ -77,6 +77,7 @@ export const es = {
 	payment_terminal: 'Terminal de pago',
 	financial: 'Financiera',
 	financial_advisor: 'Asesor financiero',
+	government: 'Gobierno',
 	pharmacy: 'Farmacia',
 	photo_booth: 'Cabina de fotos',	
 	physiotherapist: 'Fisioterapia',

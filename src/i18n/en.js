@@ -77,6 +77,7 @@ export const en = {
 	payment_terminal: 'Payment terminal',
 		financial: 'Financial',
 	financial_advisor: 'Financial advisor',
+	government: 'Government',
 	pharmacy: 'Pharmacy',
 	photo_booth: 'Photo booth',	
 	physiotherapist: 'Physiotherapist',
