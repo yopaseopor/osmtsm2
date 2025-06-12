@@ -18,24 +18,39 @@ function shouldShowLabel(feature, resolution) {
     // Skip features without names
     if (!name) return false;
     
-    // Keep important POIs at higher zoom levels
-    if (feature.get('place') || feature.get('tourism') || feature.get('shop') || 
-        feature.get('amenity') || feature.get('leisure')) {
+    // Always show important POIs at all zoom levels
+    const importantPOIs = [
+        'place', 'tourism', 'shop', 'amenity', 'leisure', 'aeroway',
+        'aerialway', 'military', 'natural', 'waterway', 'landuse',
+        'railway', 'highway', 'public_transport', 'building', 'office'
+    ];
+    
+    // Check if this is an important POI
+    const isImportantPOI = importantPOIs.some(prop => feature.get(prop));
+    if (isImportantPOI) {
         return true;
     }
     
     // For other features, show only a percentage of labels based on zoom level
-    // This creates a hash of the name to get consistent results
+    // Create a consistent hash of the name for deterministic filtering
     const nameHash = name.split('').reduce((hash, char) => {
         return ((hash << 5) - hash) + char.charCodeAt(0);
     }, 0);
     
-    // Adjust the percentage based on zoom level
-    const zoomFactor = Math.max(0, 1 - (zoom - 13) * 0.15); // Reduce labels by 15% per zoom level
-    const threshold = 0.3 * zoomFactor; // Start with 30% of labels at z13, decreasing
+    // More aggressive label reduction at higher zoom levels
+    const zoomLevel = Math.min(22, Math.max(13, zoom)); // Cap at zoom 22
+    const zoomFactor = Math.pow(0.7, zoomLevel - 13); // Exponential reduction
+    
+    // Start with 40% of labels at z13, decreasing more aggressively
+    const threshold = 0.4 * zoomFactor;
     
     // Use the hash to determine if this label should be shown
-    return (Math.abs(nameHash) % 1000) / 1000 < threshold;
+    const normalizedHash = (Math.abs(nameHash) % 1000) / 1000;
+    
+    // Debug output (uncomment for testing)
+    // console.log(`Zoom: ${zoom}, Threshold: ${threshold.toFixed(3)}, Hash: ${normalizedHash.toFixed(3)}, Show: ${normalizedHash < threshold}`);
+    
+    return normalizedHash < threshold;
 }
 
 /**

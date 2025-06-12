@@ -86,7 +86,7 @@ var config = {
 				tilePixelRatio: 1,
 				tileGrid: ol.tilegrid.createXYZ({
 					minZoom: 0,
-					maxZoom: 25
+					maxZoom: 20
 				}),
 				format: new ol.format.MVT(),
 				url: 'https://api.maptiler.com/tiles/v3/{z}/{x}/{y}.pbf?key=zPfUiHM0YgsZAlrKRPNg',
@@ -95,108 +95,26 @@ var config = {
 					'<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>'
 				]
 			}),
-			style: (function() {
-				// Load style.json
-				var styleJson = {};
-				var xhr = new XMLHttpRequest();
-				xhr.open('GET', 'src/style.json', false); // Synchronous request
-				xhr.send();
-
-				if (xhr.status === 200) {
+			// Use the custom vector tile style function
+			style: function(feature, resolution) {
+				if (typeof window.vectorTileStyle === 'function') {
 					try {
-						styleJson = JSON.parse(xhr.responseText);
-						// Update sprite and glyphs URLs with API key
-						if (styleJson.sprite) {
-							styleJson.sprite = styleJson.sprite.replace('{key}', 'zPfUiHM0YgsZAlrKRPNg');
-						}
-						if (styleJson.glyphs) {
-							styleJson.glyphs = styleJson.glyphs.replace('{key}', 'zPfUiHM0YgsZAlrKRPNg');
-						}
+						return window.vectorTileStyle(feature, resolution);
 					} catch (e) {
-						console.error('Error parsing style.json:', e);
+						console.error('Error in vectorTileStyle:', e);
 					}
-				} else {
-					console.error('Failed to load style.json:', xhr.statusText);
 				}
-
-				// Create style function from style.json
-				return function(feature, resolution) {
-					var layer = feature.get('layer');
-					var styles = [];
-
-					try {
-						// Apply styles based on layer type
-						switch(layer) {
-							case 'water':
-								styles.push(new ol.style.Style({
-									fill: new ol.style.Fill({
-										color: 'rgba(170, 210, 255, 0.5)'
-									})
-								}));
-								break;
-
-							case 'road':
-							case 'highway':
-								var highway = feature.get('class') || 'road';
-								var width = 1;
-								var color = '#ffffff';
-
-								switch(highway) {
-									case 'motorway':
-										width = 3; color = '#4a4a7d'; break;
-									case 'trunk':
-									case 'primary':
-										width = 2.5; color = '#5a5a8d'; break;
-									case 'secondary':
-										width = 2; color = '#6a6a9d'; break;
-								}
-
-								styles.push(new ol.style.Style({
-									stroke: new ol.style.Stroke({
-										color: color,
-										width: width,
-										lineCap: 'round',
-										lineJoin: 'round'
-									})
-								}));
-								break;
-
-							case 'building':
-								styles.push(new ol.style.Style({
-									fill: new ol.style.Fill({
-										color: 'rgba(200, 200, 200, 0.7)'
-									}),
-									stroke: new ol.style.Stroke({
-										color: '#999999',
-										width: 0.5
-									})
-								}));
-								break;
-
-							// Add labels for places and POIs
-							case 'place':
-							case 'poi':
-								var name = feature.get('name');
-								if (name) {
-									styles.push(new ol.style.Style({
-										text: new ol.style.Text({
-											text: name,
-											font: '12px Arial',
-											fill: new ol.style.Fill({
-												color: '#333333'
-											}),
-											stroke: new ol.style.Stroke({
-												color: 'rgba(255, 255, 255, 0.7)',
-												width: 2
-											}),
-											offsetY: -15
-										})
-									}));
-								}
-								break;
-						}
-
-						return styles.length > 0 ? styles : null;
+				// Fallback basic style
+				return [new ol.style.Style({
+					fill: new ol.style.Fill({
+						color: 'rgba(200, 200, 200, 0.5)'
+					}),
+					stroke: new ol.style.Stroke({
+						color: '#3399CC',
+						width: 1.25
+					})
+				})];
+			}
 					} catch (error) {
 						console.error('Error in vector tile style function:', error);
 						return null;
