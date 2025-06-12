@@ -41,8 +41,8 @@ function shouldShowLabel(feature, resolution) {
     const zoomLevel = Math.min(22, Math.max(13, zoom)); // Cap at zoom 22
     const zoomFactor = Math.pow(0.7, zoomLevel - 13); // Exponential reduction
     
-    // Start with 40% of labels at z13, decreasing more aggressively
-    const threshold = 0.4 * zoomFactor;
+    // Start with 15% of labels at z13, decreasing more aggressively
+    const threshold = 0.15 * zoomFactor; // Changed from 0.4 to 0.15
     
     // Use the hash to determine if this label should be shown
     const normalizedHash = (Math.abs(nameHash) % 1000) / 1000;
@@ -54,7 +54,7 @@ function shouldShowLabel(feature, resolution) {
 }
 
 /**
- * Gets the best label text for a feature according to Mapbox GL Style Spec
+ * Gets the best label text for a feature according to Mapbox GL Style Specification
  * @param {ol/Feature} feature - The feature to get label for
  * @param {string} [textField] - Field specification (e.g., '{name} {ref}')
  * @param {number} [resolution] - Current map resolution
@@ -619,67 +619,78 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
         
     } catch (error) {
         console.error('Error styling feature:', error, feature);
-        // POI (Point of Interest) styling
-        const poiType = feature.get('amenity') || feature.get('shop') || 
-                       feature.get('tourism') || feature.get('office') || 
-                       feature.get('building') ? 'poi' : null;
+        // Fallback style for debugging
+        return [new ol.style.Style({
+            fill: new ol.style.Fill({
+                color: 'rgba(255, 0, 0, 0.2)'
+            }),
+            stroke: new ol.style.Stroke({
+                color: '#ff0000',
+                width: 1
+            })
+        })];
+    }
+    
+    // POI (Point of Interest) styling
+    const poiType = feature.get('amenity') || feature.get('shop') || 
+                   feature.get('tourism') || feature.get('office') || 
+                   feature.get('building') ? 'poi' : null;
+    
+    if (poiType) {
+        const poiColor = colors.poi[
+            feature.get('amenity') ? 'amenity' : 
+            feature.get('shop') ? 'shop' :
+            feature.get('tourism') ? 'tourism' :
+            feature.get('office') ? 'office' :
+            feature.get('building') ? 'building' : 'default'
+        ];
         
-        if (poiType) {
-            const poiColor = colors.poi[
-                feature.get('amenity') ? 'amenity' : 
-                feature.get('shop') ? 'shop' :
-                feature.get('tourism') ? 'tourism' :
-                feature.get('office') ? 'office' :
-                feature.get('building') ? 'building' : 'default'
-            ];
+        const styles = [];
+        
+        // Get icon name based on POI type
+        let iconName = 'marker';
+        if (feature.get('amenity') === 'cafe') iconName = 'cafe';
+        else if (feature.get('amenity') === 'restaurant') iconName = 'restaurant';
+        else if (feature.get('shop')) iconName = 'shop';
+        else if (feature.get('tourism') === 'hotel') iconName = 'lodging';
+        else if (feature.get('office')) iconName = 'commercial';
+        
+        // Add icon style if available
+        const iconStyle = getIconStyle(iconName, config, {
+            size: 1,
+            color: poiColor,
+            opacity: 0.9
+        });
+        
+        if (iconStyle) {
+            // Add the icon style
+            styles.push(new ol.style.Style({
+                image: iconStyle
+            }));
             
-            const styles = [];
-            
-            // Get icon name based on POI type
-            let iconName = 'marker';
-            if (feature.get('amenity') === 'cafe') iconName = 'cafe';
-            else if (feature.get('amenity') === 'restaurant') iconName = 'restaurant';
-            else if (feature.get('shop')) iconName = 'shop';
-            else if (feature.get('tourism') === 'hotel') iconName = 'lodging';
-            else if (feature.get('office')) iconName = 'commercial';
-            
-            // Add icon style if available
-            const iconStyle = getIconStyle(iconName, config, {
-                size: 1,
-                color: poiColor,
-                opacity: 0.9
-            });
-            
-            if (iconStyle) {
-                // Add the icon style
+            // Add label for POI if it should be shown at this zoom level
+            const label = getFeatureLabel(feature, undefined, resolution);
+            if (label) {
                 styles.push(new ol.style.Style({
-                    image: iconStyle
+                    text: createTextStyle({
+                        text: label,
+                        font: {
+                            size: 10,
+                            weight: 'normal'
+                        },
+                        color: '#000',
+                        haloColor: '#fff',
+                        haloWidth: 2,
+                        offsetY: 12,
+                        textBaseline: 'top',
+                        textAlign: 'center',
+                        maxResolution: 5 // Only show at higher zoom levels
+                    }, config)
                 }));
-                
-                // Add label for POI if it should be shown at this zoom level
-                const label = getFeatureLabel(feature, undefined, resolution);
-                if (label) {
-                    styles.push(new ol.style.Style({
-                        text: createTextStyle({
-                            text: label,
-                            font: {
-                                size: 10,
-                                weight: 'normal'
-                            },
-                            color: '#000',
-                            haloColor: '#fff',
-                            haloWidth: 2,
-                            offsetY: 12,
-                            textBaseline: 'top',
-                            textAlign: 'center',
-                            maxResolution: 5 // Only show at higher zoom levels
-                        }, config)
-                    }));
-                }
             }
-            
-            return styles;
         }
+        
+        return styles;
     }
 
     // Default style (fallback) - with label if available
