@@ -1,10 +1,55 @@
 /**
+ * Determines if a label should be shown based on zoom level and feature properties
+ * @param {ol/Feature} feature - The feature to check
+ * @param {number} resolution - Current map resolution
+ * @returns {boolean} Whether to show the label
+ */
+function shouldShowLabel(feature, resolution) {
+    // Get current zoom level (approximate conversion from resolution)
+    const zoom = Math.round(Math.log2(156543.03390625 / resolution));
+    
+    // If zoom is less than 13, show all labels
+    if (zoom < 13) return true;
+    
+    // For zoom 13 and above, filter out some labels based on feature properties
+    const layer = feature.get('layer');
+    const name = feature.get('name');
+    
+    // Skip features without names
+    if (!name) return false;
+    
+    // Keep important POIs at higher zoom levels
+    if (feature.get('place') || feature.get('tourism') || feature.get('shop') || 
+        feature.get('amenity') || feature.get('leisure')) {
+        return true;
+    }
+    
+    // For other features, show only a percentage of labels based on zoom level
+    // This creates a hash of the name to get consistent results
+    const nameHash = name.split('').reduce((hash, char) => {
+        return ((hash << 5) - hash) + char.charCodeAt(0);
+    }, 0);
+    
+    // Adjust the percentage based on zoom level
+    const zoomFactor = Math.max(0, 1 - (zoom - 13) * 0.15); // Reduce labels by 15% per zoom level
+    const threshold = 0.3 * zoomFactor; // Start with 30% of labels at z13, decreasing
+    
+    // Use the hash to determine if this label should be shown
+    return (Math.abs(nameHash) % 1000) / 1000 < threshold;
+}
+
+/**
  * Gets the best label text for a feature according to Mapbox GL Style Spec
  * @param {ol/Feature} feature - The feature to get label for
  * @param {string} [textField] - Field specification (e.g., '{name} {ref}')
+ * @param {number} [resolution] - Current map resolution
  * @returns {string|null} The formatted label or null if none found
  */
-function getFeatureLabel(feature, textField) {
+function getFeatureLabel(feature, textField, resolution) {
+    // Check if we should show this label based on zoom level
+    if (resolution !== undefined && !shouldShowLabel(feature, resolution)) {
+        return null;
+    }
     if (!textField) {
         // Default to name, then ref, then other common fields
         return (
@@ -145,6 +190,8 @@ function getIconStyle(iconName, config, options = {}) {
  * Implements a style function following Mapbox GL Style Specification patterns
  */
 window.vectorTileStyle = function(feature, resolution, config = {}) {
+    // Store resolution for label filtering
+    const currentResolution = resolution;
     // Common colors following Mapbox GL Style Specification naming
     const colors = {
         // POI colors
@@ -589,44 +636,31 @@ window.vectorTileStyle = function(feature, resolution, config = {}) {
             });
             
             if (iconStyle) {
+                // Add the icon style
                 styles.push(new ol.style.Style({
                     image: iconStyle
                 }));
-            } else {
-                // Fallback to circle if no icon available
-                styles.push(new ol.style.Style({
-                    image: new ol.style.Circle({
-                        radius: 5,
-                        fill: new ol.style.Fill({
-                            color: poiColor
-                        }),
-                        stroke: new ol.style.Stroke({
-                            color: '#fff',
-                            width: 1
-                        })
-                    })
-                }));
-            }
-            
-            // Add label for POI
-            const label = getFeatureLabel(feature, '{name}');
-            if (label) {
-                styles.push(new ol.style.Style({
-                    text: createTextStyle({
-                        text: label,
-                        font: {
-                            size: 10,
-                            weight: 'normal'
-                        },
-                        color: '#000',
-                        haloColor: '#fff',
-                        haloWidth: 2,
-                        offsetY: 12,
-                        textBaseline: 'top',
-                        textAlign: 'center',
-                        maxResolution: 5 // Only show at higher zoom levels
-                    }, config)
-                }));
+                
+                // Add label for POI if it should be shown at this zoom level
+                const label = getFeatureLabel(feature, undefined, resolution);
+                if (label) {
+                    styles.push(new ol.style.Style({
+                        text: createTextStyle({
+                            text: label,
+                            font: {
+                                size: 10,
+                                weight: 'normal'
+                            },
+                            color: '#000',
+                            haloColor: '#fff',
+                            haloWidth: 2,
+                            offsetY: 12,
+                            textBaseline: 'top',
+                            textAlign: 'center',
+                            maxResolution: 5 // Only show at higher zoom levels
+                        }, config)
+                    }));
+                }
             }
             
             return styles;
