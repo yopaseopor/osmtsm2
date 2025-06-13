@@ -82,6 +82,7 @@ var config = {
 			title: 'MapTiler Basic',
 			iconSrc: imgSrc + 'icones_web/maptiler_logo.png',
 			visible: false,
+			maxZoom: 22,
 			source: new ol.source.VectorTile({
 				tilePixelRatio: 1,
 				tileGrid: ol.tilegrid.createXYZ({
