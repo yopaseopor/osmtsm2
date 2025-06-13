@@ -95,7 +95,45 @@ var config = {
 					'<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>'
 				]
 			}),
+			style: (function() {
+				// Initialize style configuration with glyphs and sprites
+				window.maptilerStyleConfig = {
+					spriteBaseUrl: 'https://api.maptiler.com/maps/streets/sprite',
+					glyphs: 'https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=Faz9gJu55zrWejNF55oZ',
+					fontStacks: {
+						regular: ['Noto Sans Regular', 'Arial Unicode MS Regular'],
+						bold: ['Noto Sans Bold', 'Arial Unicode MS Bold'],
+						italic: ['Noto Sans Italic', 'Arial Unicode MS Italic'],
+						bolditalic: ['Noto Sans Bold Italic', 'Arial Unicode MS Bold Italic']
+					}
+				};
 
+				// Preload fonts
+				const fontPromises = [];
+				Object.values(window.maptilerStyleConfig.fontStacks).forEach(fonts => {
+					fonts.forEach(font => {
+						const fontUrl = window.maptilerStyleConfig.glyphs
+							.replace('{fontstack}', encodeURIComponent(font))
+							.replace('{range}', '0-255');
+						fontPromises.push(
+							fetch(fontUrl).catch(e => console.warn('Failed to load font:', font, e))
+						);
+					});
+				});
+
+				// Return the style function with access to the config
+				return function(feature, resolution) {
+					if (window.vectorTileStyle) {
+						try {
+							return window.vectorTileStyle(feature, resolution, window.maptilerStyleConfig);
+						} catch (e) {
+							console.error('Error in vectorTileStyle:', e);
+							return [];
+						}
+					}
+					return [];
+				};
+			})()
 		}),
 		
 		// MapTiler Vector Tile Layer with enhanced glyph and sprite support
