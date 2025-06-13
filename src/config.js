@@ -86,7 +86,7 @@ var config = {
 				tilePixelRatio: 1,
 				tileGrid: ol.tilegrid.createXYZ({
 					minZoom: 0,
-					maxZoom: 20
+					maxZoom: 25
 				}),
 				format: new ol.format.MVT(),
 				url: 'https://api.maptiler.com/tiles/v3/{z}/{x}/{y}.pbf?key=zPfUiHM0YgsZAlrKRPNg',
