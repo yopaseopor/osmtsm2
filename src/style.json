@@ -12,7 +12,7 @@
   "sources": {
     "openmaptiles": {
       "type": "vector",
-            "url": "https://api.maptiler.com/tiles/maptiler-streets-v2/tiles.json?key={key}",
+                  "url": "https://api.maptiler.com/tiles/basic-v2/tiles.json?key={key}",
       "maxzoom": 25
     }
   },
