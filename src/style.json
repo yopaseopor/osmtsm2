@@ -9,16 +9,12 @@
     "openmaptiles:mapbox:owner": "openmaptiles",
     "openmaptiles:mapbox:source:url": "mapbox://openmaptiles.4qljc88t"
   },
-  "sources": {
+"sources": {
     "openmaptiles": {
       "type": "vector",
-     "tiles": [
-  "https://api.maptiler.com/maps/basic-v2/{z}/{x}/{y}.pbf?key={key}"
-],
-      "maxzoom": 20,
-      "attribution": "<a href=\"https://www.maptiler.com/copyright/\" target=\"_blank\">&copy; MapTiler</a> <a href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\">&copy; OpenStreetMap contributors</a>"
+      "url": "https://api.maptiler.com/maps/basic-v2/tiles.json?key={key}"
     }
-  },
+},
   "sprite": "https://api.maptiler.com/maps/basic-v2/sprite?key={key}",
   "glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key={key}",
   "layers": [
