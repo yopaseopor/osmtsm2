@@ -704,24 +704,26 @@
       "layout": {
         "symbol-placement": "line",
         "text-field": "{name:latin}",
-        "text-font": ["Noto Sans Medium"],
-        "text-letter-spacing": 0.05,
+        "text-font": ["Noto Sans SemiBold"],
+        "text-letter-spacing": 0.03,
         "text-rotation-alignment": "map",
         "text-size": {
-          "base": 1.1,
+          "base": 1.2,
           "stops": [
-            [13, 10],
-            [14, 11],
-            [16, 12],
-            [18, 13],
-            [20, 14]
+            [13, 11],
+            [14, 12],
+            [15, 13],
+            [16, 14],
+            [18, 15],
+            [20, 16]
           ]
         },
-        "text-transform": "uppercase",
+        "text-transform": "none",
         "text-allow-overlap": false,
-        "text-ignore-placement": false,
+        "text-ignore-placement": true,
         "text-optional": true,
-        "symbol-spacing": 600,
+        "symbol-spacing": 750,
+        "text-padding": 2,
         "symbol-sort-key": ["case",
           ["has", "ref"], 1,
           0
@@ -729,15 +731,16 @@
         "visibility": "visible"
       },
       "paint": {
-        "text-color": "#222",
-        "text-halo-color": "rgba(255, 255, 255, 0.9)",
-        "text-halo-width": 2,
-        "text-halo-blur": 1,
+        "text-color": "#111",
+        "text-halo-color": "rgba(255, 255, 255, 0.95)",
+        "text-halo-width": 2.5,
+        "text-halo-blur": 0.5,
         "text-opacity": [
           "interpolate",
           ["linear"],
           ["zoom"],
-          13, 0.8,
+          12, 0.7,
+          13, 0.9,
           14, 1
         ]
       }
