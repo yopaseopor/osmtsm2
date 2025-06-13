@@ -15,7 +15,7 @@
       "url": "https://api.maptiler.com/tiles/v3-openmaptiles/tiles.json?key={key}"
     }
   },
-  "sprite": "https://openmaptiles.github.io/maptiler-basic-gl-style/sprite",
+  "sprite": "https://api.maptiler.com/maps/basic-v2/sprite?key={key}",
   "glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key={key}",
   "layers": [
     {
