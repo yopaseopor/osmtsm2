@@ -100,7 +100,7 @@ new ol.layer.VectorTile({
 				url: 'https://api.maptiler.com/tiles/v3/{z}/{x}/{y}.pbf?key=Faz9gJu55zrWejNF55oZ',
 				tileGrid: ol.tilegrid.createXYZ({
 					minZoom: 0,
-					maxZoom: 22
+					maxZoom: 14
 				}),
 				attributions: [
 					'<a href="https://www.maptiler.com/copyright/" target="_blank"> MapTiler</a>',
@@ -110,7 +110,7 @@ new ol.layer.VectorTile({
 			style: (function() {
 				// Initialize style configuration with glyphs and sprites
 				window.maptilerStyleConfig = {
-					spriteBaseUrl: 'https://api.maptiler.com/maps/streets/sprite',
+					spriteBaseUrl: 'https://api.maptiler.com/maps/streets/sprite?key=Faz9gJu55zrWejNF55oZ',
 					glyphs: 'https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=Faz9gJu55zrWejNF55oZ',
 					fontStacks: {
 						regular: ['Noto Sans Regular', 'Arial Unicode MS Regular'],
