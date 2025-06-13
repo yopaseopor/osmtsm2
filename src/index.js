@@ -404,8 +404,7 @@ $(function () {
 	var view = new ol.View({
 		center: ol.proj.fromLonLat([config.initialConfig.lon, config.initialConfig.lat]), // Transform coordinate from EPSG:3857 to EPSG:4326
 		rotation: config.initialConfig.rotation,
-		zoom: config.initialConfig.zoom,
-		maxZoom: 25
+		zoom: config.initialConfig.zoom
 	});
 
 	const map = new ol.Map({
@@ -812,11 +811,7 @@ $(function () {
 	var selectedFeature = null;
 	map.on('pointermove', function (evt) {
 		if (selectedFeature !== null) {
-			// For vector tiles, the feature object is an ol.render.Feature and
-			// does not have a setStyle method. We need to check if it exists.
-			if (typeof selectedFeature.setStyle === 'function') {
-				selectedFeature.setStyle(undefined);
-			}
+			selectedFeature.setStyle(undefined);
 			selectedFeature = null;
 			$('#map').css('cursor', 'grab');
 		}

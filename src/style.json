@@ -7,16 +7,15 @@
     "maputnik:renderer": "mbgljs",
     "openmaptiles:version": "3.x",
     "openmaptiles:mapbox:owner": "openmaptiles",
-    "openmaptiles:mapbox:source:url": "mapbox://maptiler/basic-v2"
+    "openmaptiles:mapbox:source:url": "mapbox://openmaptiles.4qljc88t"
   },
   "sources": {
     "openmaptiles": {
       "type": "vector",
-                  "url": "https://api.maptiler.com/tiles/basic-v2/tiles.json?key={key}",
-      "maxzoom": 25
+      "url": "https://api.maptiler.com/tiles/v3-openmaptiles/tiles.json?key={key}"
     }
   },
-  "sprite": "https://api.maptiler.com/maps/basic-v2/sprite",
+  "sprite": "https://openmaptiles.github.io/maptiler-basic-gl-style/sprite",
   "glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key={key}",
   "layers": [
     {
@@ -671,7 +670,7 @@
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "aerodrome_label",
-      "minzoom": 10,
+      "minzoom": 12,
       "filter": ["all", ["has", "iata"]],
       "layout": {
         "icon-size": 1,
@@ -695,7 +694,7 @@
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "transportation_name",
-      "minzoom": 13,
+      "minzoom": 15,
       "filter": ["==", "$type", "LineString"],
       "layout": {
         "symbol-placement": "line",
@@ -718,7 +717,7 @@
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "place",
-      "minzoom": 8,
+      "minzoom": 14,
       "filter": [
         "all",
         ["==", "$type", "Point"],

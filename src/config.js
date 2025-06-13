@@ -86,10 +86,10 @@ var config = {
 				tilePixelRatio: 1,
 				tileGrid: ol.tilegrid.createXYZ({
 					minZoom: 0,
-					maxZoom: 25
+					maxZoom: 20
 				}),
 				format: new ol.format.MVT(),
-																								url: 'https://api.maptiler.com/tiles/basic-v2/{z}/{x}/{y}.pbf?key=zPfUiHM0YgsZAlrKRPNg',
+				url: 'https://api.maptiler.com/tiles/v3-openmaptiles/{z}/{x}/{y}.pbf?key=zPfUiHM0YgsZAlrKRPNg',
 				attributions: [
 					'<a href="https://www.maptiler.com/copyright/" target="_blank">MapTiler</a>',
 					'<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>'
@@ -405,7 +405,7 @@ var config = {
 			visible: false
 		}),
 		
-/*		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
+		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
 			title: 'Vector Tilekiln2',
 			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
 			source: new ol.source.TileJSON({
@@ -414,7 +414,7 @@ var config = {
         url: 'https://pnorman.github.io/tilekiln-shortbread-demo/colorful.json'
       }),
 			visible: false
-		}),*/
+		}),
 		
 		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
 			title: 'Vector OSM',
