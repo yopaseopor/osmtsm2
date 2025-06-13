@@ -81,7 +81,7 @@ new ol.layer.VectorTile({
 new ol.layer.VectorTile({
     title: 'MapTiler Basic',
     iconSrc: imgSrc + 'icones_web/maptiler_logo.png',
-    visible: false,
+    visible: true,
     maxZoom: 22,
     source: new ol.source.VectorTile({
         format: new ol.format.MVT()

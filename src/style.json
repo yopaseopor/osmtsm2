@@ -12,9 +12,9 @@
   "sources": {
     "openmaptiles": {
       "type": "vector",
-      "tiles": [
-        "https://api.maptiler.com/tiles/v3-openmaptiles/{z}/{x}/{y}.pbf?key={key}"
-      ],
+     "tiles": [
+  "https://api.maptiler.com/maps/basic-v2/{z}/{x}/{y}.pbf?key={key}"
+],
       "maxzoom": 20,
       "attribution": "<a href=\"https://www.maptiler.com/copyright/\" target=\"_blank\">&copy; MapTiler</a> <a href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\">&copy; OpenStreetMap contributors</a>"
     }
