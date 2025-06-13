@@ -7,16 +7,16 @@
     "maputnik:renderer": "mbgljs",
     "openmaptiles:version": "3.x",
     "openmaptiles:mapbox:owner": "openmaptiles",
-    "openmaptiles:mapbox:source:url": "mapbox://openmaptiles.4qljc88t"
+    "openmaptiles:mapbox:source:url": "mapbox://maptiler/basic-v2"
   },
   "sources": {
     "openmaptiles": {
       "type": "vector",
-      "url": "https://api.maptiler.com/tiles/v3-openmaptiles/tiles.json?key={key}",
+      "url": "https://api.maptiler.com/data/v3/tiles.json?key={key}",
       "maxzoom": 25
     }
   },
-  "sprite": "https://openmaptiles.github.io/maptiler-basic-gl-style/sprite",
+  "sprite": "https://api.maptiler.com/maps/basic-v2/sprite",
   "glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key={key}",
   "layers": [
     {
