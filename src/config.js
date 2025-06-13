@@ -147,11 +147,11 @@ new ol.layer.VectorTile({
 				};
 			})()
 		}),
-		new ol.layer.Tile({
-			title: 'OpenStreetMap',
-			iconSrc: imgSrc + 'icones_web/osm_logo.png',
-			visible: true,
-			source: new ol.source.OSM()
+new ol.layer.Tile({
+    title: 'OpenStreetMap',
+    iconSrc: imgSrc + 'icones_web/osm_logo-layer.svgg',
+    visible: true,
+    source: new ol.source.OSM()	
 /*@@ inicio de copia */			}),
 								new ol.layer.Tile({
 /*@@ título */					title: 'OpenStreetMap DE',
