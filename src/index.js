@@ -1,5 +1,19 @@
 /* global config, ol */
 $(function () {
+    // Apply MapTiler style to the vector tile layer on initialization
+    if (config && Array.isArray(config.layers)) {
+        const layer = config.layers.find(l => l.get('title') === 'MapTiler Basic');
+        if (layer) {
+            const styleUrl = 'src/style.json';
+            const apiKey = 'zPfUiHM0YgsZAlrKRPNg';
+            olms.applyStyle(layer, styleUrl, apiKey).then(() => {
+                console.log('MapTiler style applied successfully on init.');
+            }).catch(err => {
+                console.error('Error applying MapTiler style on init:', err);
+            });
+        }
+    }
+
     // --- Layer Searcher Integration ---
     // Remove early addition of 'Translated' overlay group here. It will be added after all overlays are loaded.
 
@@ -44,6 +58,8 @@ $(function () {
             if (isActive) $item.addClass('active').attr('tabindex', 0);
             $item.css({cursor:'pointer'}).on('click', function() {
                 window.activateLayer(layer);
+
+                
             });
             $list.append($item);
             if (isActive) {

@@ -646,7 +646,7 @@
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "poi",
-      "minzoom": 14,
+      "minzoom": 16,
       "filter": ["all", ["==", "$type", "Point"], ["==", "rank", 1]],
       "layout": {
         "icon-size": 1,
@@ -670,7 +670,7 @@
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "aerodrome_label",
-      "minzoom": 12,
+      "minzoom": 14,
       "filter": ["all", ["has", "iata"]],
       "layout": {
         "icon-size": 1,
@@ -694,7 +694,7 @@
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "transportation_name",
-      "minzoom": 15,
+      "minzoom": 16,
       "filter": ["==", "$type", "LineString"],
       "layout": {
         "symbol-placement": "line",
@@ -717,7 +717,7 @@
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "place",
-      "minzoom": 14,
+      "minzoom": 15,
       "filter": [
         "all",
         ["==", "$type", "Point"],
