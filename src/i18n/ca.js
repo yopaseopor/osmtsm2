@@ -137,6 +137,8 @@ export const ca = {
 		logistics: 'Logística',
 	mortgage: 'Hipoteques',
 	moving_company: 'Mudances',
+		political_party: 'Partit polític',
+	security: 'Seguretat',
 	leisure: 'Oci',
     food: 'Menjar i Beguda',
     shopping: 'Botigues',

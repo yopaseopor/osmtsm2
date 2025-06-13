@@ -137,6 +137,8 @@ export const es = {
 	logistics: 'Logística',
 	mortgage: 'Hipotecas',
 	moving_company: 'Mudanzas',
+			political_party: 'Partido político',
+	security: 'Seguridad',
     leisure: 'Ocio',
     food: 'Comida y Bebida',
     shopping: 'Compras',

@@ -138,6 +138,8 @@ export const en = {
 		logistics: 'Logistics',
 	mortgage: 'Mortgage',
 	moving_company: 'Moving company',
+	political_party: 'Political party',
+	security: 'Security',
     leisure: 'Leisure',
     food: 'Food & Drink',
     shopping: 'Shopping',
