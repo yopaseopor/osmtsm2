@@ -405,7 +405,7 @@ var config = {
 			visible: false
 		}),
 		
-		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
+/*		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
 			title: 'Vector Tilekiln2',
 			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
 			source: new ol.source.TileJSON({
@@ -414,7 +414,7 @@ var config = {
         url: 'https://pnorman.github.io/tilekiln-shortbread-demo/colorful.json'
       }),
 			visible: false
-		}),
+		}),*/
 		
 		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
 			title: 'Vector OSM',
