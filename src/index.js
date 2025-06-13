@@ -5,7 +5,7 @@ $(function () {
         const layer = config.layers.find(l => l.get('title') === 'MapTiler Basic');
         if (layer) {
             const styleUrl = 'src/style.json';
-            const apiKey = 'zPfUiHM0YgsZAlrKRPNg';
+            const apiKey = 'Faz9gJu55zrWejNF55oZ';
             fetch(styleUrl)
                 .then(response => response.text())
                 .then(text => {

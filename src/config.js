@@ -57,7 +57,7 @@ var config = {
                     maxZoom: 22 
                 }),
 				format: new ol.format.MVT(),
-				url: 'https://api.maptiler.com/tiles/v3-openmaptiles/{z}/{x}/{y}.pbf?key=zPfUiHM0YgsZAlrKRPNg',
+				url: 'https://api.maptiler.com/tiles/v3-openmaptiles/{z}/{x}/{y}.pbf?key=Faz9gJu55zrWejNF55oZ',
 				attributions: [
 					'<a href="https://www.maptiler.com/copyright/" target="_blank">MapTiler</a>',
 					'<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>'
@@ -83,6 +83,7 @@ var config = {
 			iconSrc: imgSrc + 'icones_web/maptiler_logo.png',
 			visible: false,
 			maxZoom: 22,
+			source: new ol.source.VectorTile(),
 
 		}),
 		
