@@ -132,6 +132,8 @@ export const ca = {
 	estate_agent: 'Inmobiliària',
 		insurance: 'Asseguradora',
 	insurance_adjuster: 'Ajust d\'assegurances',
+		it: 'Informàtica',
+	lawyer: 'Despatx d\'advocats',
 	leisure: 'Oci',
     food: 'Menjar i Beguda',
     shopping: 'Botigues',

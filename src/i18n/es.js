@@ -132,6 +132,8 @@ export const es = {
 	estate_agent: 'Inmobiliaria',
 	insurance: 'Aseguradora',
 	insurance_adjuster: 'Ajuste de seguros',
+		it: 'Informática',
+	lawyer: 'Despacho de abogados',
     leisure: 'Ocio',
     food: 'Comida y Bebida',
     shopping: 'Compras',

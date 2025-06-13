@@ -133,6 +133,8 @@ export const en = {
 	estate_agent: 'Estate agent',
 	insurance: 'Insurance',
 	insurance_adjuster: 'Insurance adjuster',
+	it: 'IT',
+	lawyer: 'Lawyer',
     leisure: 'Leisure',
     food: 'Food & Drink',
     shopping: 'Shopping',
