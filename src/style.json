@@ -12,7 +12,8 @@
   "sources": {
     "openmaptiles": {
       "type": "vector",
-      "url": "https://api.maptiler.com/tiles/v3-openmaptiles/tiles.json?key={key}"
+      "url": "https://api.maptiler.com/tiles/v3-openmaptiles/tiles.json?key={key}",
+      "maxzoom": 25
     }
   },
   "sprite": "https://openmaptiles.github.io/maptiler-basic-gl-style/sprite",
@@ -728,7 +729,7 @@
         "text-field": "{name:latin}\n{name:nonlatin}",
         "text-font": ["Noto Sans Regular"],
         "text-max-width": 6,
-        "text-size": {"stops": [[6, 10], [12, 14], [16, 10]]},
+        "text-size": {"stops": [[6, 10], [12, 14]]},
         "visibility": "visible"
       },
       "paint": {
