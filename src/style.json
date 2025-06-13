@@ -728,7 +728,7 @@
         "text-field": "{name:latin}\n{name:nonlatin}",
         "text-font": ["Noto Sans Regular"],
         "text-max-width": 6,
-        "text-size": {"stops": [[6, 10], [12, 14]]},
+        "text-size": {"stops": [[6, 10], [12, 14], [16, 10]]},
         "visibility": "visible"
       },
       "paint": {
