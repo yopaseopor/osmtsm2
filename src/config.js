@@ -44,47 +44,48 @@ var config = {
 	//@@ Mapas de fondo
 	layers: [
 		// MapTiler Vector Tile Layer with custom style URL using v3-openmaptiles
-		new ol.layer.VectorTile({
-			title: 'MapTiler Custom Style',
-			iconSrc: imgSrc + 'icones_web/maptiler_logo.png',
-			visible: false,
-			opacity: 1.0,
-			ratio: 1,
-			source: new ol.source.VectorTile({
-				tilePixelRatio: 1,
-				tileGrid: ol.tilegrid.createXYZ({ 
-                    minZoom: 0,
-                    maxZoom: 22 
-                }),
-				format: new ol.format.MVT(),
-				url: 'https://api.maptiler.com/tiles/v3-openmaptiles/{z}/{x}/{y}.pbf?key=Faz9gJu55zrWejNF55oZ',
-				attributions: [
-					'<a href="https://www.maptiler.com/copyright/" target="_blank">MapTiler</a>',
-					'<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>'
-				],
-				crossOrigin: 'anonymous',
-				projection: 'EPSG:3857'
-			}),
-			// Basic style as fallback
-			style: new ol.style.Style({
-				fill: new ol.style.Fill({
-					color: 'rgba(200, 200, 200, 0.5)'
-				}),
-				stroke: new ol.style.Stroke({
-					color: '#3399CC',
-					width: 1.25
-				})
-			})
-		}),
+new ol.layer.VectorTile({
+    title: 'MapTiler Custom Style',
+    iconSrc: imgSrc + 'icones_web/maptiler_logo.png',
+    visible: false,
+    opacity: 1.0,
+    ratio: 1,
+    source: new ol.source.VectorTile({
+        tilePixelRatio: 1,
+        tileGrid: ol.tilegrid.createXYZ({
+            minZoom: 0,
+            maxZoom: 22
+        }),
+        format: new ol.format.MVT(),
+        url: 'https://api.maptiler.com/tiles/v3-openmaptiles/{z}/{x}/{y}.pbf?key=Faz9gJu55zrWejNF55oZ',
+        attributions: [
+            '<a href="https://www.maptiler.com/copyright/" target="_blank">MapTiler</a>',
+            '<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>'
+        ],
+        crossOrigin: 'anonymous',
+        projection: 'EPSG:3857'
+    }),
+    // Basic style as fallback
+    style: new ol.style.Style({
+        fill: new ol.style.Fill({
+            color: 'rgba(200, 200, 200, 0.5)'
+        }),
+        stroke: new ol.style.Stroke({
+            color: '#3399CC',
+            width: 1.25
+        })
+    })
+}),
 
-		// Vector Tiles - MapTiler Basic with style.json
-		new ol.layer.VectorTile({
-			title: 'MapTiler Basic',
-			iconSrc: imgSrc + 'icones_web/maptiler_logo.png',
-			visible: false,
-			maxZoom: 22,
-			source: new ol.source.VectorTile({
-    format: new ol.format.MVT()
+// Vector Tiles - MapTiler Basic with style.json
+new ol.layer.VectorTile({
+    title: 'MapTiler Basic',
+    iconSrc: imgSrc + 'icones_web/maptiler_logo.png',
+    visible: false,
+    maxZoom: 22,
+    source: new ol.source.VectorTile({
+        format: new ol.format.MVT()
+    })
 }),
 
 		// MapTiler Vector Tile Layer with enhanced glyph and sprite support
