@@ -698,25 +698,30 @@
       "maxzoom": 22,
       "filter": ["all",
         ["==", "$type", "LineString"],
-        ["!", ["has", "ref"]]
+        ["!", ["has", "ref"]],
+        [">=", "length", 500]
       ],
       "layout": {
         "symbol-placement": "line",
-        "text-field": "{name:latin} {name:nonlatin}",
-        "text-font": ["Noto Sans Regular"],
-        "text-letter-spacing": 0.1,
+        "text-field": "{name:latin}",
+        "text-font": ["Noto Sans Medium"],
+        "text-letter-spacing": 0.05,
         "text-rotation-alignment": "map",
-        "text-size": {"base": 1.2, "stops": [
-          [13, 10],
-          [16, 12],
-          [18, 14],
-          [20, 16]
-        ]},
+        "text-size": {
+          "base": 1.1,
+          "stops": [
+            [13, 10],
+            [14, 11],
+            [16, 12],
+            [18, 13],
+            [20, 14]
+          ]
+        },
         "text-transform": "uppercase",
         "text-allow-overlap": false,
         "text-ignore-placement": false,
         "text-optional": true,
-        "symbol-spacing": 500,
+        "symbol-spacing": 600,
         "symbol-sort-key": ["case",
           ["has", "ref"], 1,
           0
@@ -724,9 +729,9 @@
         "visibility": "visible"
       },
       "paint": {
-        "text-color": "#333",
-        "text-halo-color": "rgba(255, 255, 255, 0.8)",
-        "text-halo-width": 1.5,
+        "text-color": "#222",
+        "text-halo-color": "rgba(255, 255, 255, 0.9)",
+        "text-halo-width": 2,
         "text-halo-blur": 1,
         "text-opacity": [
           "interpolate",
@@ -742,42 +747,44 @@
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "place",
-      "minzoom": 10,
+      "minzoom": 12,
       "maxzoom": 22,
       "filter": [
         "all",
         ["==", "$type", "Point"],
         ["!in", "class", "city", "state", "country", "continent"],
-        [">=", "rank", 10]
+        [">=", "rank", 15]
       ],
       "layout": {
         "text-anchor": "center",
-        "text-field": "{name:latin}\n{name:nonlatin}",
+        "text-field": "{name:latin}",
         "text-font": ["Noto Sans Regular"],
-        "text-max-width": 8,
-        "text-size": {"stops": [
-          [10, 10],
-          [14, 11],
-          [16, 12],
-          [18, 13]
-        ]},
+        "text-max-width": 7,
+        "text-size": {
+          "stops": [
+            [12, 9],
+            [14, 10],
+            [16, 11],
+            [18, 12]
+          ]
+        },
         "text-allow-overlap": false,
         "text-ignore-placement": true,
         "text-optional": true,
         "visibility": "visible"
       },
       "paint": {
-        "text-color": "hsl(0, 0%, 30%)",
-        "text-halo-blur": 0.5,
-        "text-halo-color": "rgba(255, 255, 255, 0.8)",
-        "text-halo-width": 1.5,
+        "text-color": "hsl(0, 0%, 25%)",
+        "text-halo-blur": 0.8,
+        "text-halo-color": "rgba(255, 255, 255, 0.9)",
+        "text-halo-width": 1.8,
         "text-opacity": [
           "interpolate",
           ["linear"],
           ["zoom"],
-          10, 0.7,
-          12, 0.9,
-          14, 1
+          12, 0.7,
+          14, 0.9,
+          16, 1
         ]
       }
     },
