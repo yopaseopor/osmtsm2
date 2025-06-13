@@ -75,7 +75,7 @@ var config = {
 					width: 1.25
 				})
 			})
-				}),
+		}),
 
 		// Vector Tiles - MapTiler Basic with style.json
 		new ol.layer.VectorTile({
