@@ -6,11 +6,16 @@ $(function () {
         if (layer) {
             const styleUrl = 'src/style.json';
             const apiKey = 'zPfUiHM0YgsZAlrKRPNg';
-            olms.applyStyle(layer, styleUrl, apiKey).then(() => {
-                console.log('MapTiler style applied successfully on init.');
-            }).catch(err => {
-                console.error('Error applying MapTiler style on init:', err);
-            });
+            fetch(styleUrl)
+                .then(response => response.text())
+                .then(text => {
+                    const style = JSON.parse(text.replace(/{key}/g, apiKey));
+                    olms.applyStyle(layer, style, 'openmaptiles')
+                        .then(() => console.log('MapTiler style applied successfully on init.'))
+                        .catch(err => console.error('Error applying MapTiler style on init:', err));
+                }).catch(err => {
+                    console.error('Failed to load or apply style.json:', err);
+                });
         }
     }
 
