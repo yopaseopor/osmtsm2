@@ -83,10 +83,10 @@ var config = {
 			iconSrc: imgSrc + 'icones_web/maptiler_logo.png',
 			visible: false,
 			maxZoom: 22,
-			source: new ol.source.VectorTile(),
+			source: new ol.source.VectorTile({
+    format: new ol.format.MVT()
+}),
 
-		}),
-		
 		// MapTiler Vector Tile Layer with enhanced glyph and sprite support
 		new ol.layer.VectorTile({
 			title: 'MapTiler Vector',
