@@ -160,7 +160,7 @@ var config = {
 		}),
 		new ol.layer.Tile({
 			title: 'OpenStreetMap',
-			iconSrc: imgSrc + 'icones_web/osm_logo.png',
+			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
 			visible: true,
 			source: new ol.source.OSM()
 /*@@ inicio de copia */			}),
