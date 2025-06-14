@@ -182,22 +182,39 @@ var config = {
 				tileGrid: ol.tilegrid.createXYZ({maxZoom: 14}),
 				format: new ol.format.MVT(),
 				attributions: '&copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap contributors</a>',
-				url: 'https://vector.openstreetmap.org/shortbread_v1/{z}/{x}/{y}.mvt'
+				url: 'https://vector.openstreetmap.org/shortbread_v1/{z}/{x}/{y}.mvt',
+				transformRequest: function(url) {
+					// Ensure CORS headers are set for the vector tiles
+					return {
+						url: url,
+						headers: {
+							'Accept': '*/*',
+							'Cache-Control': 'no-cache',
+							'Pragma': 'no-cache'
+						}
+					};
+				}
 			}),
-			// Style will be set after layer creation
-			style: function(feature) {
-				// Default style while loading
-				return new ol.style.Style({
-					fill: new ol.style.Fill({
-						color: 'rgba(240, 240, 240, 0.8)'
-					}),
-					stroke: new ol.style.Stroke({
-						color: 'rgba(0, 0, 0, 0.1)',
-						width: 1
-					})
-				});
-			},
-			visible: false
+			// Simple default style - will be replaced by olms
+			style: new ol.style.Style({
+				fill: new ol.style.Fill({
+					color: 'rgba(240, 240, 240, 0.8)'
+				}),
+				stroke: new ol.style.Stroke({
+					color: 'rgba(0, 0, 0, 0.1)',
+					width: 1
+				})
+			}),
+			visible: false,
+			// Add metadata for olms
+			'ol-layers': true,
+			'ol-layer-metadata': {
+				'olms': {
+					'source': 'openmaptiles',
+					'sprite': 'https://maps.tilehosting.com/c/5e25e0c4-0f3c-4dff-b725-9ec3d1a2ac2d/sprite/sprite',
+					'glyphs': 'https://tileserver.maptiler.com/glyphs/{fontstack}/{range}.pbf'
+				}
+			}
 		}),
 		
 		new ol.layer.Tile({
