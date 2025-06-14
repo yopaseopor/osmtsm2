@@ -173,43 +173,20 @@ var config = {
 				};
 			})()
 		}),
-
-		// Vector Tiles - MapTiler Basic with style.json
-		(function() {
-			const layer = new ol.layer.VectorTile({
-				title: 'OSM Vector tiles',
-				iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
-				visible: false,
-				opacity: 1.0,
-				source: new ol.source.VectorTile({
-					tilePixelRatio: 1,
-					tileGrid: ol.tilegrid.createXYZ({
-						minZoom: 0,
-						maxZoom: 14 // Preserving this zoom for this layer
-					}),
-					format: new ol.format.MVT(),
-					url: 'https://vector.openstreetmap.org/shortbread_v1/{z}/{x}/{y}.mvt',
-					attributions: [
-						'&copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> Maptiler'
-					]
-				})
-			});
-
-			const styleUrl = 'src/style.json';
-			const apiKey = 'Faz9gJu55zrWejNF55oZ';
-			fetch(styleUrl)
-				.then(response => response.text())
-				.then(text => {
-					const style = JSON.parse(text.replace(/{key}/g, apiKey));
-					olms.applyStyle(layer, style, 'openmaptiles')
-						.then(() => console.log('MapTiler style applied successfully for MapTiler Basic.'))
-						.catch(err => console.error('Error applying MapTiler style for MapTiler Basic:', err));
-				}).catch(err => {
-					console.error('Failed to load or apply style.json for MapTiler Basic:', err);
-				});
-			return layer;
-		})(),
-
+		
+		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
+			title: 'Vector Tile3',
+			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
+			source: new ol.source.VectorTile({
+        tilePixelRatio: 1, // oversampling when > 1
+        tileGrid: ol.tilegrid.createXYZ({maxZoom: 19}),
+        format: new ol.format.MVT(),
+		crossOrigin: 'anonymous',
+		attributions: '&copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>',
+        url: 'https://vector.openstreetmap.org/shortbread_v1/{z}/{x}/{y}.mvt'
+      }),
+			visible: false
+		}),
 		new ol.layer.Tile({
 			title: 'OpenStreetMap',
 			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
