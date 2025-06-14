@@ -91,7 +91,7 @@ var config = {
 						maxZoom: 20
 					}),
 					format: new ol.format.MVT(),
-					url: 'https://api.maptiler.com/tiles/v3-openmaptiles/{z}/{x}/{y}.pbf?key=Faz9gJu55zrWejNF55oZ',
+					url: 'https://api.maptiler.com/tiles/v3/{z}/{x}/{y}.pbf?key=Faz9gJu55zrWejNF55oZ',
 					attributions: [
 						'<a href="https://www.maptiler.com/copyright/" target="_blank">MapTiler</a>',
 						'<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>'
