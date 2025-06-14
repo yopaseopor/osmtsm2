@@ -174,21 +174,31 @@ var config = {
 			})()
 		}),
 		
-		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
-			title: 'Vector Tile13',
+		new ol.layer.VectorTile({
+			title: 'Vector Tile 13',
 			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
 			source: new ol.source.VectorTile({
-        tilePixelRatio: 1, // oversampling when > 1
-        tileGrid: ol.tilegrid.createXYZ({maxZoom: 19}),
-        format: new ol.format.MVT(),
-		crossOrigin: 'anonymous',
-		attributions: '&copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>',
-        url: 'https://vector.openstreetmap.org/shortbread_v1/{z}/{x}/{y}.mvt'
-      }),
+				tilePixelRatio: 1,
+				tileGrid: ol.tilegrid.createXYZ({maxZoom: 14}),
+				format: new ol.format.MVT(),
+				attributions: '&copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap contributors</a>',
+				url: 'https://vector.openstreetmap.org/shortbread_v1/{z}/{x}/{y}.mvt'
+			}),
+			// Style will be set after layer creation
+			style: function(feature) {
+				// Default style while loading
+				return new ol.style.Style({
+					fill: new ol.style.Fill({
+						color: 'rgba(240, 240, 240, 0.8)'
+					}),
+					stroke: new ol.style.Stroke({
+						color: 'rgba(0, 0, 0, 0.1)',
+						width: 1
+					})
+				});
+			},
 			visible: false
 		}),
-		
-		
 		
 		new ol.layer.Tile({
 			title: 'OpenStreetMap',
