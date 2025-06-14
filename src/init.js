@@ -21,52 +21,75 @@ window.dispatchEvent(new CustomEvent('overlaySearchUpdate', {
     }
 }));
 
+// Load and apply the colorful.json style
+async function applyColorfulStyle() {
+    try {
+        console.log('Loading colorful.json style...');
+        const response = await fetch('src/colorful.json');
+        if (!response.ok) {
+            throw new Error(`Failed to load style: ${response.status} ${response.statusText}`);
+        }
+        const style = await response.json();
+        
+        console.log('Style loaded, finding Vector Tile 13 layer...');
+        const vectorTileLayer = window.config.layers.find(layer => layer.get('title') === 'Vector Tile 13');
+        if (!vectorTileLayer) {
+            throw new Error('Vector Tile 13 layer not found');
+        }
+        
+        console.log('Applying style to Vector Tile 13 layer...');
+        
+        // Apply the style using olms
+        await olms.applyStyle(
+            vectorTileLayer,
+            style,
+            'versatiles-shortbread'  // This must match the source name in the style file
+        );
+        
+        console.log('Style applied successfully');
+        
+        // Force a redraw of the layer
+        if (vectorTileLayer.getSource()) {
+            vectorTileLayer.getSource().changed();
+        }
+        
+        // Log when the layer's visibility changes
+        vectorTileLayer.on('change:visible', function() {
+            console.log(`Vector Tile 13 layer visibility changed to: ${vectorTileLayer.getVisible()}`);
+        });
+        
+    } catch (error) {
+        console.error('Error applying colorful style:', error);
+    }
+}
+
 // Initialize map when document is ready
 $(document).ready(function() {
     console.log('Document ready, initializing map...');
     
-    // Debug function to log feature properties
-    function logFeatureProperties(layerTitle) {
-        const layer = window.config.layers.find(l => l.get('title') === layerTitle);
-        if (layer) {
-            layer.getSource().on('tileloadend', function(event) {
-                const features = event.tile.getFeatures();
-                console.log(`Loaded ${features.length} features in ${layerTitle}`);
-                if (features.length > 0) {
-                    console.log('Sample feature properties:', features[0].getProperties());
-                }
-            });
-        }
-    }
-    
-    // Log when the Vector Tile 13 layer is loaded
+    // Wait for the window to load and then apply the style
     $(window).on('load', function() {
-        console.log('Window loaded, checking for Vector Tile 13 layer...');
+        console.log('Window loaded, waiting for OpenLayers to be ready...');
         
-        const maxAttempts = 10;
+        const maxAttempts = 20;
         let attempts = 0;
         
-        const checkLayer = setInterval(function() {
+        const checkOL = setInterval(function() {
             attempts++;
-            console.log(`Checking for Vector Tile 13 layer (attempt ${attempts}/${maxAttempts})`);
+            console.log(`Checking for OpenLayers (attempt ${attempts}/${maxAttempts})`);
             
-            if (window.config && window.config.layers) {
-                const vectorTileLayer = window.config.layers.find(layer => layer.get('title') === 'Vector Tile 13');
-                if (vectorTileLayer) {
-                    clearInterval(checkLayer);
-                    console.log('Found Vector Tile 13 layer, setting up debug logging...');
-                    logFeatureProperties('Vector Tile 13');
-                    
-                    // Log when the layer's visibility changes
-                    vectorTileLayer.on('change:visible', function() {
-                        console.log(`Vector Tile 13 layer visibility changed to: ${vectorTileLayer.getVisible()}`);
-                    });
-                }
-            }
-            
-            if (attempts >= maxAttempts) {
-                clearInterval(checkLayer);
-                console.error('Vector Tile 13 layer not found after maximum attempts');
+            if (window.ol && window.olms && window.config) {
+                clearInterval(checkOL);
+                console.log('OpenLayers and olms are ready, applying style...');
+                applyColorfulStyle();
+            } else if (attempts >= maxAttempts) {
+                clearInterval(checkOL);
+                console.error('OpenLayers or olms not available after maximum attempts');
+                console.log('Available globals:', {
+                    ol: !!window.ol,
+                    olms: !!window.olms,
+                    config: !!window.config
+                });
             }
         }, 500);
     });

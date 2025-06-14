@@ -194,71 +194,9 @@ var config = {
 					};
 				}
 			}),
-			style: function(feature, resolution) {
-				// Simple style function that applies different styles based on feature properties
-				const layer = feature.get('layer');
-				const kind = feature.get('kind');
-				
-				// Water
-				if (layer === 'water') {
-					return new ol.style.Style({
-						fill: new ol.style.Fill({
-							color: '#a5bfdd'
-						})
-					});
-				}
-				
-				// Landuse
-				if (layer === 'landuse') {
-					if (kind === 'park' || kind === 'nature_reserve' || kind === 'protected_area') {
-						return new ol.style.Style({
-							fill: new ol.style.Fill({
-								color: '#d6f0c3'
-							})
-						});
-					}
-				}
-				
-				// Roads
-				if (layer === 'roads') {
-					if (kind === 'highway') {
-						return new ol.style.Style({
-							stroke: new ol.style.Stroke({
-								color: '#ff0000',
-								width: 2
-							})
-						});
-					} else if (kind === 'major_road') {
-						return new ol.style.Style({
-							stroke: new ol.style.Stroke({
-								color: '#ff7f00',
-								width: 1.5
-							})
-						});
-					} else {
-						return new ol.style.Style({
-							stroke: new ol.style.Stroke({
-								color: '#999999',
-								width: 1
-							})
-						});
-					}
-				}
-				
-				// Buildings
-				if (layer === 'buildings') {
-					return new ol.style.Style({
-						fill: new ol.style.Fill({
-							color: '#e0dcd1'
-						}),
-						stroke: new ol.style.Stroke({
-							color: '#c0b8a8',
-							width: 0.5
-						})
-					});
-				}
-				
-				// Default style
+			// Style will be set by olms
+			style: function() {
+				// This is a placeholder - the actual style will be set by olms
 				return new ol.style.Style({
 					fill: new ol.style.Fill({
 						color: 'rgba(240, 240, 240, 0.8)'
@@ -269,7 +207,17 @@ var config = {
 					})
 				});
 			},
-			visible: false
+			visible: false,
+			// Add metadata for olms
+			'ol-layers': true,
+			'ol-layer-metadata': {
+				'olms': {
+					'source': 'versatiles-shortbread',
+					'sprite': 'https://tiles.versatiles.org/assets/sprites/basics/sprites',
+					'glyphs': 'https://tiles.versatiles.org/assets/glyphs/{fontstack}/{range}.pbf',
+					'styleUrl': 'src/colorful.json'
+				}
+			}
 		}),
 		
 		new ol.layer.Tile({
