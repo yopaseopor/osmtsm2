@@ -308,14 +308,60 @@ var config = {
 		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
 			title: 'Vector Tile3',
 			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
-			source: new ol.source.VectorTile({
-        tilePixelRatio: 1, // oversampling when > 1
-        tileGrid: ol.tilegrid.createXYZ({maxZoom: 19}),
-        format: new ol.format.MVT(),
-		crossOrigin: 'anonymous',
-		attributions: '&copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>',
-        url: 'https://vector.openstreetmap.org/shortbread_v1/{z}/{x}/{y}.mvt'
+			source: new ol.source.TileJSON({
+        tileSize: 512,
+        crossOrigin: 'anonymous',
+        url: 'https://pnorman.github.io/tilekiln-shortbread-demo/colorful.json'
       }),
+			style: function(feature, resolution) {
+				// Create a default style
+				const style = new ol.style.Style({
+					fill: new ol.style.Fill({
+						color: '#f9f4ee' // Default background color from colorful.json
+					})
+				});
+
+				// Get feature properties
+				const layer = feature.get('layer');
+				const kind = feature.get('kind');
+
+				// Apply styles based on feature properties
+				switch(layer) {
+					case 'water':
+						style.setFill(new ol.style.Fill({
+							color: '#beddf3' // Water color from colorful.json
+						}));
+						break;
+					case 'landuse':
+						if (kind === 'residential') {
+							style.setFill(new ol.style.Fill({
+								color: 'rgba(228, 221, 221, 0.6)' // Residential area color
+							}));
+						} else if (kind === 'park' || kind === 'grass' || kind === 'garden' || kind === 'greenfield') {
+							style.setFill(new ol.style.Fill({
+								color: '#d1e9c3' // Park/Green area color
+							}));
+						} else if (kind === 'commercial' || kind === 'retail') {
+							style.setFill(new ol.style.Fill({
+								color: 'rgba(247, 222, 237, 0.25)' // Commercial/Retail color from colorful.json
+							}));
+						}
+						break;
+					case 'building':
+						style.setFill(new ol.style.Fill({
+							color: 'rgba(200, 200, 200, 0.7)' // Building color
+						}));
+						break;
+					case 'road':
+						style.setStroke(new ol.style.Stroke({
+							color: '#ffffff',
+							width: 2
+						}));
+						break;
+				}
+
+				return style;
+			},
 			visible: false
 		}),
 		
