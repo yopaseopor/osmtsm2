@@ -78,41 +78,26 @@ var config = {
 				}),
 
 		// Vector Tiles - MapTiler Basic with style.json
-		(function() {
-			const layer = new ol.layer.VectorTile({
-				title: 'MapTiler Basic',
-				iconSrc: imgSrc + 'icones_web/maptiler_logo.png',
-				visible: false,
-				source: new ol.source.VectorTile({
-					tilePixelRatio: 1,
-					tileGrid: ol.tilegrid.createXYZ({
-						minZoom: 0,
-						maxZoom: 20
-					}),
-					format: new ol.format.MVT(),
-					url: 'https://api.maptiler.com/tiles/v3-openmaptiles/{z}/{x}/{y}.pbf?key=zPfUiHM0YgsZAlrKRPNg',
-					attributions: [
-						'<a href="https://www.maptiler.com/copyright/" target="_blank">MapTiler</a>',
-						'<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>'
-					]
-				})
-			});
+		new ol.layer.VectorTile({
+			title: 'MapTiler Basic',
+			iconSrc: imgSrc + 'icones_web/maptiler_logo.png',
+			visible: false,
+			maxZoom: 22,
+			source: new ol.source.VectorTile({
+				tilePixelRatio: 1,
+				tileGrid: ol.tilegrid.createXYZ({
+					minZoom: 0,
+					maxZoom: 20
+				}),
+				format: new ol.format.MVT(),
+				url: 'https://api.maptiler.com/tiles/v3-openmaptiles/{z}/{x}/{y}.pbf?key=zPfUiHM0YgsZAlrKRPNg',
+				attributions: [
+					'<a href="https://www.maptiler.com/copyright/" target="_blank">MapTiler</a>',
+					'<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>'
+				]
+			}),
 
-			const styleUrl = 'src/style.json';
-			const apiKey = 'Faz9gJu55zrWejNF55oZ';
-			fetch(styleUrl)
-				.then(response => response.text())
-				.then(text => {
-					const style = JSON.parse(text.replace(/{key}/g, apiKey));
-					olms.applyStyle(layer, style, 'openmaptiles')
-						.then(() => console.log('MapTiler style applied successfully.'))
-						.catch(err => console.error('Error applying MapTiler style:', err));
-				}).catch(err => {
-					console.error('Failed to load or apply style.json:', err);
-				});
-
-			return layer;
-		})(),
+		}),
 		
 		// MapTiler Vector Tile Layer with enhanced glyph and sprite support
 		new ol.layer.VectorTile({
