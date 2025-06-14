@@ -209,8 +209,7 @@ var config = {
 				});
 			return layer;
 		})(),
-			visible: false
-		}),
+
 		new ol.layer.Tile({
 			title: 'OpenStreetMap',
 			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
