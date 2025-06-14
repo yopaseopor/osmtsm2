@@ -15,7 +15,7 @@
       "url": "https://api.maptiler.com/tiles/v3/{z}/{x}/{y}.pbf?key={key}"
     }
   },
-  "sprite": "https://api.maptiler.com/maps/basic-v2/sprite?key={key}",
+  "sprite": "https://api.maptiler.com/maps/streets/sprite?key={key}",
   "glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key={key}",
   "layers": [
     {
