@@ -187,8 +187,6 @@ var config = {
       }),
 			visible: false
 		}),
-}),	
-		// MapTiler Vector Tile Layer with enhanced glyph and sprite support
 		new ol.layer.Tile({
 			title: 'OpenStreetMap',
 			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
