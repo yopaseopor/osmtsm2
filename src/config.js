@@ -187,13 +187,10 @@ var config = {
       }),
 			visible: false
 		}),
-		
-		
 }),
-
-		// Vector Tiles - MapTiler Basic with style.json
+	// Vector Tiles - MapTiler Basic with style.json
 		(function() {
-			const layer2 = new ol.layer.VectorTile({
+			const layer = new ol.layer.VectorTile({
 				title: 'MapTiler Basic2',
 				iconSrc: imgSrc + 'icones_web/maptiler_logo.png',
 				visible: false,
@@ -213,19 +210,19 @@ var config = {
 				})
 			});
 
-			const styleUrl2 = 'src/style.json';
-			const apiKey2 = 'Faz9gJu55zrWejNF55oZ';
-			fetch(styleUrl2)
+			const styleUrl = 'src/style.json';
+			const apiKey = 'Faz9gJu55zrWejNF55oZ';
+			fetch(styleUrl)
 				.then(response => response.text())
 				.then(text => {
-					const style2 = JSON.parse(text.replace(/{key}/g, apiKey2));
-					olms.applyStyle(layer2, style2, 'openmaptiles')
+					const style = JSON.parse(text.replace(/{key}/g, apiKey));
+					olms.applyStyle(layer, style, 'openmaptiles')
 						.then(() => console.log('MapTiler style applied successfully for MapTiler Basic.'))
 						.catch(err => console.error('Error applying MapTiler style for MapTiler Basic:', err));
 				}).catch(err => {
 					console.error('Failed to load or apply style.json for MapTiler Basic:', err);
 				});
-			return layer2;
+			return layer;
 		})(),
 		
 		// MapTiler Vector Tile Layer with enhanced glyph and sprite support
