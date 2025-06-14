@@ -23,7 +23,7 @@ window.dispatchEvent(new CustomEvent('overlaySearchUpdate', {
 
 // Initialize map when document is ready
 $(document).ready(function() {
-    // Map initialization will be handled by index.js
+    console.log('Document ready, initializing map...');
     
     // Function to apply colorful style
     function applyColorfulStyle() {
@@ -43,24 +43,46 @@ $(document).ready(function() {
             return false;
         }
         
-        console.log('Found Vector Tile 13 layer, applying style...');
+        console.log('Found Vector Tile 13 layer, checking for olms...');
         
-        // Apply the style using olms
-        olms.applyStyle(
-            vectorTileLayer,
-            'src/colorful.json',
-            'openmaptiles'
-        ).then(() => {
-            console.log('Colorful style applied successfully to Vector Tile 13');
-            // Force a refresh of the layer
-            if (vectorTileLayer.getSource()) {
-                vectorTileLayer.getSource().changed();
-            }
-            return true;
-        }).catch(error => {
-            console.error('Error applying style with olms:', error);
+        // Make sure olms is available
+        if (!window.olms) {
+            console.error('olms is not available');
             return false;
-        });
+        }
+        
+        console.log('Loading style from src/colorful.json...');
+        
+        // Load the style file first
+        fetch('src/colorful.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(style => {
+                console.log('Style loaded, applying to layer...');
+                
+                // Apply the style using olms
+                return olms.applyStyle(
+                    vectorTileLayer,
+                    style,
+                    'versatiles-shortbread'  // Match the source name in the style file
+                );
+            })
+            .then(() => {
+                console.log('Colorful style applied successfully to Vector Tile 13');
+                // Force a refresh of the layer
+                if (vectorTileLayer.getSource()) {
+                    vectorTileLayer.getSource().changed();
+                }
+                return true;
+            })
+            .catch(error => {
+                console.error('Error loading or applying style:', error);
+                return false;
+            });
     }
     
     // Try to apply the style when the window loads
@@ -68,20 +90,30 @@ $(document).ready(function() {
         console.log('Window loaded, waiting for map initialization...');
         
         // Give some time for the map to initialize
-        const maxAttempts = 10;
+        const maxAttempts = 20; // Increased number of attempts
         let attempts = 0;
         
         const tryApplyStyle = setInterval(function() {
             attempts++;
             console.log(`Style application attempt ${attempts}/${maxAttempts}`);
             
+            // Check if OpenLayers and olms are available
             if (window.ol && window.olms && window.config) {
                 clearInterval(tryApplyStyle);
                 console.log('OpenLayers and olms are ready, applying style...');
-                applyColorfulStyle();
+                applyColorfulStyle().then(success => {
+                    if (!success) {
+                        console.error('Failed to apply style, check console for errors');
+                    }
+                });
             } else if (attempts >= maxAttempts) {
                 clearInterval(tryApplyStyle);
                 console.error('Failed to apply style: OpenLayers or olms not available after maximum attempts');
+                console.log('Available globals:', {
+                    ol: !!window.ol,
+                    olms: !!window.olms,
+                    config: !!window.config
+                });
             }
         }, 500);
     });

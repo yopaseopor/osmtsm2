@@ -210,9 +210,10 @@ var config = {
 			'ol-layers': true,
 			'ol-layer-metadata': {
 				'olms': {
-					'source': 'openmaptiles',
-					'sprite': 'https://maps.tilehosting.com/c/5e25e0c4-0f3c-4dff-b725-9ec3d1a2ac2d/sprite/sprite',
-					'glyphs': 'https://tileserver.maptiler.com/glyphs/{fontstack}/{range}.pbf'
+					'source': 'versatiles-shortbread',  // Match the source name in the style file
+					'sprite': 'https://tiles.versatiles.org/assets/sprites/basics/sprites',
+					'glyphs': 'https://tiles.versatiles.org/assets/glyphs/{fontstack}/{range}.pbf',
+					'styleUrl': 'src/colorful.json'  // Explicitly point to the style file
 				}
 			}
 		}),
