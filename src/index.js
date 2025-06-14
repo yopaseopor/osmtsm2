@@ -1,5 +1,23 @@
 /* global config, ol */
 $(function () {
+    // Apply MapTiler style to the vector tile layer on initialization
+    if (config && Array.isArray(config.layers)) {
+        const layer = config.layers.find(l => l.get('title') === 'MapTiler Basic');
+        if (layer) {
+            const styleUrl = 'src/style.json';
+            const apiKey = 'Faz9gJu55zrWejNF55oZ';
+            fetch(styleUrl)
+                .then(response => response.text())
+                .then(text => {
+                    const style = JSON.parse(text.replace(/{key}/g, apiKey));
+                    olms.applyStyle(layer, style, 'openmaptiles')
+                        .then(() => console.log('MapTiler style applied successfully on init.'))
+                        .catch(err => console.error('Error applying MapTiler style on init:', err));
+                }).catch(err => {
+                    console.error('Failed to load or apply style.json:', err);
+                });
+        }
+    }
 
     // --- Layer Searcher Integration ---
     // Remove early addition of 'Translated' overlay group here. It will be added after all overlays are loaded.
