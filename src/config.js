@@ -121,7 +121,7 @@ var config = {
 			style: (function() {
 				// Initialize style configuration with glyphs and sprites
 				window.maptilerStyleConfig = {
-					spriteBaseUrl: 'https://api.maptiler.com/maps/streets/sprite',
+					spriteBaseUrl: 'https://api.maptiler.com/maps/basic-v2/sprite?key=Faz9gJu55zrWejNF55oZ',
 					glyphs: 'https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=Faz9gJu55zrWejNF55oZ',
 					fontStacks: {
 						regular: ['Noto Sans Regular', 'Arial Unicode MS Regular'],
