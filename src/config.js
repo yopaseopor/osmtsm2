@@ -8,6 +8,40 @@
 var imgSrc = 'src/img/';
 
 //@@Coordenadas LONgitud LATitud Rotación Zoom, Zoom de la geolocalización, unidades
+
+// ...existing code...
+		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
+			title: 'Vector Tile13',
+			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
+			source: new ol.source.VectorTile({
+				tilePixelRatio: 1, // oversampling when > 1
+				tileGrid: ol.tilegrid.createXYZ({maxZoom: 19}),
+				format: new ol.format.MVT(),
+				crossOrigin: 'anonymous',
+				attributions: '&copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>',
+				url: 'https://vector.openstreetmap.org/shortbread_v1/{z}/{x}/{y}.mvt'
+			}),
+			visible: false
+		}),
+
+// Apply colorful.json style to Vector Tile13
+(function() {
+	const vectorTile13Layer = config.layers.find(l => l && l.get && l.get('title') === 'Vector Tile13');
+	if (vectorTile13Layer) {
+		fetch('src/colorful.json')
+			.then(response => response.json())
+			.then(style => {
+				if (window.olms) {
+					window.olms.applyStyle(vectorTile13Layer, style, 'versatiles-shortbread')
+						.then(() => console.log('colorful.json style applied to Vector Tile13.'))
+						.catch(err => console.error('Error applying colorful.json style:', err));
+				} else {
+					console.warn('olms is not available. Cannot apply colorful.json style.');
+				}
+			});
+	}
+})();
+// ...existing code...
 var config = {
 	initialConfig: {
 		lon: 1.59647,
