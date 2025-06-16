@@ -142,6 +142,8 @@ export const es = {
 	telecommunication: 'Telecomunicaciones',
 	tax_advisor: 'Asesor de impuestos',
 	union: 'Sindicato',
+		agrarian: 'Agraria',
+	alcohol: 'Alcohol',
     leisure: 'Ocio',
     food: 'Comida y Bebida',
     shopping: 'Compras',

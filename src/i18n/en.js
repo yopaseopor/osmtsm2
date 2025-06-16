@@ -143,6 +143,8 @@ export const en = {
 		telecommunication: 'Telecommunication',
 	tax_advisor: 'Tax advisor',
 	union: 'Union',
+	agrarian: 'Agrarian',
+	alcohol: 'Alcohol',
     leisure: 'Leisure',
     food: 'Food & Drink',
     shopping: 'Shopping',

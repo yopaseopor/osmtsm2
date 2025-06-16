@@ -142,6 +142,8 @@ export const ca = {
 		telecommunication: 'Telecomunicacions',
 	tax_advisor: 'Assessor d\'impostos',
 	union: 'Sindicat',
+		agrarian: 'Agrària',
+	alcohol: 'Alcohol',
 	leisure: 'Oci',
     food: 'Menjar i Beguda',
     shopping: 'Botigues',
