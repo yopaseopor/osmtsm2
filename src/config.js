@@ -8,10 +8,6 @@
 var imgSrc = 'src/img/';
 
 //@@Coordenadas LONgitud LATitud Rotación Zoom, Zoom de la geolocalización, unidades
-
-// ...existing code...
-
-// ...existing code...
 var config = {
 	initialConfig: {
 		lon: 1.59647,
@@ -178,19 +174,21 @@ var config = {
 			})()
 		}),
 		
-				new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
+		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
 			title: 'Vector Tile13',
 			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
 			source: new ol.source.VectorTile({
-				tilePixelRatio: 1, // oversampling when > 1
-				tileGrid: ol.tilegrid.createXYZ({maxZoom: 19}),
-				format: new ol.format.MVT(),
-				crossOrigin: 'anonymous',
-				attributions: '&copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>',
-				url: 'https://vector.openstreetmap.org/shortbread_v1/{z}/{x}/{y}.mvt'
-			}),
+        tilePixelRatio: 1, // oversampling when > 1
+        tileGrid: ol.tilegrid.createXYZ({maxZoom: 19}),
+        format: new ol.format.MVT(),
+		crossOrigin: 'anonymous',
+		attributions: '&copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>',
+        url: 'https://vector.openstreetmap.org/shortbread_v1/{z}/{x}/{y}.mvt'
+      }),
 			visible: false
 		}),
+		
+		
 		
 		new ol.layer.Tile({
 			title: 'OpenStreetMap',
