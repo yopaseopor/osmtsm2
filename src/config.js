@@ -208,7 +208,7 @@ var config = {
 				}
 			});
 	}
-})();
+		})(),
 		
 		new ol.layer.Tile({
 			title: 'OpenStreetMap',
