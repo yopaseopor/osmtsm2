@@ -45,7 +45,7 @@ var config = {
 	layers: [
 		// MapTiler Vector Tile Layer with custom style URL using v3-openmaptiles
 		new ol.layer.VectorTile({
-			title: 'MapTiler Custom Style',
+			title: 'MapTiler Openmaptiles',
 			iconSrc: imgSrc + 'icones_web/maptiler_logo.png',
 			visible: false,
 			opacity: 1.0,
@@ -116,7 +116,7 @@ var config = {
 		
 		// MapTiler Vector Tile Layer with enhanced glyph and sprite support
 		new ol.layer.VectorTile({
-			title: 'MapTiler Vector',
+			title: 'MapTiler configured',
 			iconSrc: imgSrc + 'icones_web/maptiler_logo.png',
 			visible: false,
 			opacity: 1.0,
