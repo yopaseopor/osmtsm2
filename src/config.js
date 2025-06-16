@@ -236,11 +236,11 @@ var config = {
 				.then(response => response.text())
 				.then(text => {
 					const style = JSON.parse(text);
-					olms.applyStyle(layer, style, 'versatiles-shortbread')
-						.then(() => console.log('Colorful style applied successfully for OSM Shortbread.'))
-						.catch(err => console.error('Error applying Colorful style for OSM Shortbread:', err));
+					olms.applyStyle(layer, style, 'versatiles-shortbread-neutrino')
+						.then(() => console.log('Neutrino style applied successfully for OSM Shortbread.'))
+						.catch(err => console.error('Error applying Neutrino style for OSM Shortbread:', err));
 				}).catch(err => {
-					console.error('Failed to load or apply colorful.json for OSM Shortbread:', err);
+					console.error('Failed to load or apply neutrino.json for OSM Shortbread:', err);
 				});
 			return layer;
 		})(),
