@@ -210,19 +210,41 @@ var config = {
 			return layer;
 		})(),
 		
-		new ol.layer.VectorTile({// OpenStreetMap France https://openstreetmap.fr
-			title: 'Vector Tile14',
-			iconSrc: imgSrc + 'icones_web/osmfr_logo-layer.png',
-			source: new ol.source.VectorTile({
-        tilePixelRatio: 1, // oversampling when > 1
-        tileGrid: ol.tilegrid.createXYZ({maxZoom: 19}),
-        format: new ol.format.MVT(),
-		crossOrigin: 'anonymous',
-		attributions: '&copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>',
-        url: 'https://vector.openstreetmap.org/shortbread_v1/{z}/{x}/{y}.mvt'
-      }),
-			visible: false
-		}),
+}),
+		
+				(function() {
+			const layer = new ol.layer.VectorTile({
+				title: 'OSM Shortbread Neutrino',
+				iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
+				visible: false,
+				opacity: 1.0,
+				source: new ol.source.VectorTile({
+					tilePixelRatio: 1,
+					tileGrid: ol.tilegrid.createXYZ({
+						minZoom: 0,
+						maxZoom: 14 // Preserving this zoom for this layer
+					}),
+					format: new ol.format.MVT(),
+					url: 'https://vector.openstreetmap.org/shortbread_v1/{z}/{x}/{y}.mvt',
+					attributions: [
+						'<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>'
+					]
+				})
+			});
+
+			const styleUrl = 'src/neutrino.json';
+			fetch(styleUrl)
+				.then(response => response.text())
+				.then(text => {
+					const style = JSON.parse(text);
+					olms.applyStyle(layer, style, 'versatiles-shortbread-neutrino')
+						.then(() => console.log('Neutrino style applied successfully for OSM Shortbread.'))
+						.catch(err => console.error('Error applying Colorful style for OSM Shortbread:', err));
+				}).catch(err => {
+					console.error('Failed to load or apply neutrino.json for OSM Shortbread:', err);
+				});
+			return layer;
+		})(),
 		
 		
 		
