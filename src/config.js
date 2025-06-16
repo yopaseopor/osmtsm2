@@ -191,24 +191,6 @@ var config = {
 			}),
 			visible: false
 		}),
-
-// Apply colorful.json style to Vector Tile13
-(function() {
-	const vectorTile13Layer = config.layers.find(l => l && l.get && l.get('title') === 'Vector Tile13');
-	if (vectorTile13Layer) {
-		fetch('src/colorful.json')
-			.then(response => response.json())
-			.then(style => {
-				if (window.olms) {
-					window.olms.applyStyle(vectorTile13Layer, style, 'versatiles-shortbread')
-						.then(() => console.log('colorful.json style applied to Vector Tile13.'))
-						.catch(err => console.error('Error applying colorful.json style:', err));
-				} else {
-					console.warn('olms is not available. Cannot apply colorful.json style.');
-				}
-			});
-	}
-		})(),
 		
 		new ol.layer.Tile({
 			title: 'OpenStreetMap',
