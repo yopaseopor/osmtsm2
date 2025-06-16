@@ -12,7 +12,7 @@
 		}
 	],
 	"sources": {
-		"versatiles-shortbread-neutrino": {
+		"versatiles-shortbread": {
 			"attribution": "© <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors",
 			"tiles": [
 				"https://tiles.versatiles.org/tiles/osm/{z}/{x}/{y}"
@@ -33,7 +33,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "water-ocean",
 			"type": "fill",
 			"source-layer": "ocean",
@@ -42,7 +42,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "land-glacier",
 			"type": "fill",
 			"source-layer": "water_polygons",
@@ -52,7 +52,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "land-commercial",
 			"type": "fill",
 			"source-layer": "land",
@@ -63,7 +63,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "land-industrial",
 			"type": "fill",
 			"source-layer": "land",
@@ -74,7 +74,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "land-residential",
 			"type": "fill",
 			"source-layer": "land",
@@ -85,7 +85,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "land-agriculture",
 			"type": "fill",
 			"source-layer": "land",
@@ -96,7 +96,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "land-waste",
 			"type": "fill",
 			"source-layer": "land",
@@ -106,7 +106,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "land-park",
 			"type": "fill",
 			"source-layer": "land",
@@ -117,7 +117,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "land-garden",
 			"type": "fill",
 			"source-layer": "land",
@@ -128,7 +128,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "land-burial",
 			"type": "fill",
 			"source-layer": "land",
@@ -138,7 +138,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "land-leisure",
 			"type": "fill",
 			"source-layer": "land",
@@ -148,7 +148,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "land-rock",
 			"type": "fill",
 			"source-layer": "land",
@@ -158,7 +158,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "land-forest",
 			"type": "fill",
 			"source-layer": "land",
@@ -169,7 +169,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "land-grass",
 			"type": "fill",
 			"source-layer": "land",
@@ -180,7 +180,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "land-vegetation",
 			"type": "fill",
 			"source-layer": "land",
@@ -191,7 +191,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "land-sand",
 			"type": "fill",
 			"source-layer": "land",
@@ -201,7 +201,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "land-wetland",
 			"type": "fill",
 			"source-layer": "land",
@@ -211,7 +211,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "water-river",
 			"type": "line",
 			"source-layer": "water_lines",
@@ -221,7 +221,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "water-canal",
 			"type": "line",
 			"source-layer": "water_lines",
@@ -231,7 +231,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "water-stream",
 			"type": "line",
 			"source-layer": "water_lines",
@@ -241,7 +241,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "water-ditch",
 			"type": "line",
 			"source-layer": "water_lines",
@@ -251,7 +251,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "water-area",
 			"type": "fill",
 			"source-layer": "water_polygons",
@@ -262,7 +262,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "water-area-river",
 			"type": "fill",
 			"source-layer": "water_polygons",
@@ -273,7 +273,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "water-area-small",
 			"type": "fill",
 			"source-layer": "water_polygons",
@@ -284,7 +284,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "water-dam-area",
 			"type": "fill",
 			"source-layer": "dam_polygons",
@@ -295,7 +295,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "water-dam",
 			"type": "line",
 			"source-layer": "dam_lines",
@@ -305,7 +305,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "water-pier-area",
 			"type": "fill",
 			"source-layer": "pier_polygons",
@@ -316,7 +316,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "water-pier",
 			"type": "line",
 			"source-layer": "pier_lines",
@@ -326,7 +326,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "site-parking",
 			"type": "fill",
 			"source-layer": "sites",
@@ -336,7 +336,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "site-bicycleparking",
 			"type": "fill",
 			"source-layer": "sites",
@@ -346,7 +346,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "building",
 			"type": "fill",
 			"source-layer": "buildings",
@@ -356,7 +356,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "tunnel-street-pedestrian-zone",
 			"type": "fill",
 			"source-layer": "street_polygons",
@@ -366,7 +366,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "tunnel-street-track:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -383,7 +383,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "tunnel-street-pedestrian:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -400,7 +400,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "tunnel-street-service:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -417,7 +417,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "tunnel-street-livingstreet:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -432,7 +432,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "tunnel-street-residential:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -449,7 +449,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "tunnel-street-unclassified:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -466,7 +466,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "tunnel-street-tertiary-link:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -483,7 +483,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "tunnel-street-secondary-link:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -501,7 +501,7 @@
 			"minzoom": 13
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "tunnel-street-primary-link:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -519,7 +519,7 @@
 			"minzoom": 13
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "tunnel-street-trunk-link:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -537,7 +537,7 @@
 			"minzoom": 13
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "tunnel-street-motorway-link:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -555,7 +555,7 @@
 			"minzoom": 12
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "tunnel-street-tertiary:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -572,7 +572,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "tunnel-street-secondary:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -589,7 +589,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "tunnel-street-primary:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -606,7 +606,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "tunnel-street-trunk:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -623,7 +623,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "tunnel-street-motorway:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -640,7 +640,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "tunnel-street-track",
 			"type": "line",
 			"source-layer": "streets",
@@ -656,7 +656,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "tunnel-street-pedestrian",
 			"type": "line",
 			"source-layer": "streets",
@@ -672,7 +672,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "tunnel-street-service",
 			"type": "line",
 			"source-layer": "streets",
@@ -688,7 +688,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "tunnel-street-livingstreet",
 			"type": "line",
 			"source-layer": "streets",
@@ -703,7 +703,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "tunnel-street-residential",
 			"type": "line",
 			"source-layer": "streets",
@@ -719,7 +719,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "tunnel-street-unclassified",
 			"type": "line",
 			"source-layer": "streets",
@@ -735,7 +735,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "tunnel-street-track-bicycle",
 			"type": "line",
 			"source-layer": "streets",
@@ -750,7 +750,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "tunnel-street-pedestrian-bicycle",
 			"type": "line",
 			"source-layer": "streets",
@@ -765,7 +765,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "tunnel-street-service-bicycle",
 			"type": "line",
 			"source-layer": "streets",
@@ -780,7 +780,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "tunnel-street-livingstreet-bicycle",
 			"type": "line",
 			"source-layer": "streets",
@@ -795,7 +795,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "tunnel-street-residential-bicycle",
 			"type": "line",
 			"source-layer": "streets",
@@ -810,7 +810,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "tunnel-street-unclassified-bicycle",
 			"type": "line",
 			"source-layer": "streets",
@@ -825,7 +825,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "tunnel-street-tertiary-link",
 			"type": "line",
 			"source-layer": "streets",
@@ -841,7 +841,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "tunnel-street-secondary-link",
 			"type": "line",
 			"source-layer": "streets",
@@ -858,7 +858,7 @@
 			"minzoom": 13
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "tunnel-street-primary-link",
 			"type": "line",
 			"source-layer": "streets",
@@ -875,7 +875,7 @@
 			"minzoom": 13
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "tunnel-street-trunk-link",
 			"type": "line",
 			"source-layer": "streets",
@@ -892,7 +892,7 @@
 			"minzoom": 13
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "tunnel-street-motorway-link",
 			"type": "line",
 			"source-layer": "streets",
@@ -909,7 +909,7 @@
 			"minzoom": 12
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "tunnel-street-tertiary",
 			"type": "line",
 			"source-layer": "streets",
@@ -925,7 +925,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "tunnel-street-secondary",
 			"type": "line",
 			"source-layer": "streets",
@@ -941,7 +941,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "tunnel-street-primary",
 			"type": "line",
 			"source-layer": "streets",
@@ -957,7 +957,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "tunnel-street-trunk",
 			"type": "line",
 			"source-layer": "streets",
@@ -973,7 +973,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "tunnel-street-motorway",
 			"type": "line",
 			"source-layer": "streets",
@@ -989,7 +989,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "tunnel-transport-lightrail:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -1001,7 +1001,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "tunnel-transport-rail:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -1013,7 +1013,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "tunnel-transport-lightrail",
 			"type": "line",
 			"source-layer": "streets",
@@ -1026,7 +1026,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "tunnel-transport-rail",
 			"type": "line",
 			"source-layer": "streets",
@@ -1039,7 +1039,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "bridge",
 			"type": "fill",
 			"source-layer": "bridges",
@@ -1048,7 +1048,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "street-pedestrian-zone",
 			"type": "fill",
 			"source-layer": "street_polygons",
@@ -1059,7 +1059,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "way-footway:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -1072,7 +1072,7 @@
 			"minzoom": 17
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "way-steps:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -1085,7 +1085,7 @@
 			"minzoom": 17
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "way-path:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -1098,7 +1098,7 @@
 			"minzoom": 17
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "street-track:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -1114,7 +1114,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "street-pedestrian:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -1130,7 +1130,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "street-service:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -1146,7 +1146,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "street-livingstreet:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -1160,7 +1160,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "street-residential:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -1176,7 +1176,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "street-unclassified:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -1192,7 +1192,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "street-tertiary-link:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -1208,7 +1208,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "street-secondary-link:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -1225,7 +1225,7 @@
 			"minzoom": 13
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "street-primary-link:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -1242,7 +1242,7 @@
 			"minzoom": 13
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "street-trunk-link:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -1259,7 +1259,7 @@
 			"minzoom": 13
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "street-motorway-link:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -1276,7 +1276,7 @@
 			"minzoom": 12
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "street-tertiary:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -1292,7 +1292,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "street-secondary:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -1308,7 +1308,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "street-primary:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -1324,7 +1324,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "street-trunk:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -1340,7 +1340,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "street-motorway:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -1356,7 +1356,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "way-footway",
 			"type": "line",
 			"source-layer": "streets",
@@ -1369,7 +1369,7 @@
 			"minzoom": 17
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "way-steps",
 			"type": "line",
 			"source-layer": "streets",
@@ -1382,7 +1382,7 @@
 			"minzoom": 17
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "way-path",
 			"type": "line",
 			"source-layer": "streets",
@@ -1395,7 +1395,7 @@
 			"minzoom": 17
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "street-track",
 			"type": "line",
 			"source-layer": "streets",
@@ -1411,7 +1411,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "street-pedestrian",
 			"type": "line",
 			"source-layer": "streets",
@@ -1427,7 +1427,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "street-service",
 			"type": "line",
 			"source-layer": "streets",
@@ -1443,7 +1443,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "street-livingstreet",
 			"type": "line",
 			"source-layer": "streets",
@@ -1458,7 +1458,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "street-residential",
 			"type": "line",
 			"source-layer": "streets",
@@ -1474,7 +1474,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "street-unclassified",
 			"type": "line",
 			"source-layer": "streets",
@@ -1490,7 +1490,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "street-track-bicycle",
 			"type": "line",
 			"source-layer": "streets",
@@ -1505,7 +1505,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "street-pedestrian-bicycle",
 			"type": "line",
 			"source-layer": "streets",
@@ -1520,7 +1520,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "street-service-bicycle",
 			"type": "line",
 			"source-layer": "streets",
@@ -1535,7 +1535,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "street-livingstreet-bicycle",
 			"type": "line",
 			"source-layer": "streets",
@@ -1550,7 +1550,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "street-residential-bicycle",
 			"type": "line",
 			"source-layer": "streets",
@@ -1565,7 +1565,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "street-unclassified-bicycle",
 			"type": "line",
 			"source-layer": "streets",
@@ -1580,7 +1580,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "street-tertiary-link",
 			"type": "line",
 			"source-layer": "streets",
@@ -1596,7 +1596,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "street-secondary-link",
 			"type": "line",
 			"source-layer": "streets",
@@ -1613,7 +1613,7 @@
 			"minzoom": 13
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "street-primary-link",
 			"type": "line",
 			"source-layer": "streets",
@@ -1630,7 +1630,7 @@
 			"minzoom": 13
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "street-trunk-link",
 			"type": "line",
 			"source-layer": "streets",
@@ -1647,7 +1647,7 @@
 			"minzoom": 13
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "street-motorway-link",
 			"type": "line",
 			"source-layer": "streets",
@@ -1664,7 +1664,7 @@
 			"minzoom": 12
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "street-tertiary",
 			"type": "line",
 			"source-layer": "streets",
@@ -1680,7 +1680,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "street-secondary",
 			"type": "line",
 			"source-layer": "streets",
@@ -1696,7 +1696,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "street-primary",
 			"type": "line",
 			"source-layer": "streets",
@@ -1712,7 +1712,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "street-trunk",
 			"type": "line",
 			"source-layer": "streets",
@@ -1728,7 +1728,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "street-motorway",
 			"type": "line",
 			"source-layer": "streets",
@@ -1744,7 +1744,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "transport-lightrail:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -1756,7 +1756,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "transport-rail:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -1768,7 +1768,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "transport-lightrail",
 			"type": "line",
 			"source-layer": "streets",
@@ -1781,7 +1781,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "transport-rail",
 			"type": "line",
 			"source-layer": "streets",
@@ -1794,7 +1794,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "bridge-street-pedestrian-zone",
 			"type": "fill",
 			"source-layer": "street_polygons",
@@ -1804,7 +1804,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "bridge-street-track:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -1816,7 +1816,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "bridge-street-pedestrian:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -1828,7 +1828,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "bridge-street-service:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -1840,7 +1840,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "bridge-street-livingstreet:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -1850,7 +1850,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "bridge-street-residential:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -1862,7 +1862,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "bridge-street-unclassified:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -1874,7 +1874,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "bridge-street-tertiary-link:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -1886,7 +1886,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "bridge-street-secondary-link:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -1899,7 +1899,7 @@
 			"minzoom": 13
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "bridge-street-primary-link:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -1912,7 +1912,7 @@
 			"minzoom": 13
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "bridge-street-trunk-link:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -1925,7 +1925,7 @@
 			"minzoom": 13
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "bridge-street-motorway-link:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -1938,7 +1938,7 @@
 			"minzoom": 12
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "bridge-street-tertiary:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -1950,7 +1950,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "bridge-street-secondary:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -1962,7 +1962,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "bridge-street-primary:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -1974,7 +1974,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "bridge-street-trunk:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -1986,7 +1986,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "bridge-street-motorway:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -1998,7 +1998,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "bridge-street-track",
 			"type": "line",
 			"source-layer": "streets",
@@ -2014,7 +2014,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "bridge-street-pedestrian",
 			"type": "line",
 			"source-layer": "streets",
@@ -2030,7 +2030,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "bridge-street-service",
 			"type": "line",
 			"source-layer": "streets",
@@ -2046,7 +2046,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "bridge-street-livingstreet",
 			"type": "line",
 			"source-layer": "streets",
@@ -2061,7 +2061,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "bridge-street-residential",
 			"type": "line",
 			"source-layer": "streets",
@@ -2077,7 +2077,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "bridge-street-unclassified",
 			"type": "line",
 			"source-layer": "streets",
@@ -2093,7 +2093,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "bridge-street-track-bicycle",
 			"type": "line",
 			"source-layer": "streets",
@@ -2108,7 +2108,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "bridge-street-pedestrian-bicycle",
 			"type": "line",
 			"source-layer": "streets",
@@ -2123,7 +2123,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "bridge-street-service-bicycle",
 			"type": "line",
 			"source-layer": "streets",
@@ -2138,7 +2138,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "bridge-street-livingstreet-bicycle",
 			"type": "line",
 			"source-layer": "streets",
@@ -2153,7 +2153,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "bridge-street-residential-bicycle",
 			"type": "line",
 			"source-layer": "streets",
@@ -2168,7 +2168,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "bridge-street-unclassified-bicycle",
 			"type": "line",
 			"source-layer": "streets",
@@ -2183,7 +2183,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "bridge-street-tertiary-link",
 			"type": "line",
 			"source-layer": "streets",
@@ -2199,7 +2199,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "bridge-street-secondary-link",
 			"type": "line",
 			"source-layer": "streets",
@@ -2216,7 +2216,7 @@
 			"minzoom": 13
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "bridge-street-primary-link",
 			"type": "line",
 			"source-layer": "streets",
@@ -2233,7 +2233,7 @@
 			"minzoom": 13
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "bridge-street-trunk-link",
 			"type": "line",
 			"source-layer": "streets",
@@ -2250,7 +2250,7 @@
 			"minzoom": 13
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "bridge-street-motorway-link",
 			"type": "line",
 			"source-layer": "streets",
@@ -2267,7 +2267,7 @@
 			"minzoom": 12
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "bridge-street-tertiary",
 			"type": "line",
 			"source-layer": "streets",
@@ -2283,7 +2283,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "bridge-street-secondary",
 			"type": "line",
 			"source-layer": "streets",
@@ -2299,7 +2299,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "bridge-street-primary",
 			"type": "line",
 			"source-layer": "streets",
@@ -2315,7 +2315,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "bridge-street-trunk",
 			"type": "line",
 			"source-layer": "streets",
@@ -2331,7 +2331,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "bridge-street-motorway",
 			"type": "line",
 			"source-layer": "streets",
@@ -2347,7 +2347,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "bridge-transport-lightrail:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -2359,7 +2359,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "bridge-transport-rail:outline",
 			"type": "line",
 			"source-layer": "streets",
@@ -2371,7 +2371,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "bridge-transport-lightrail",
 			"type": "line",
 			"source-layer": "streets",
@@ -2384,7 +2384,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "bridge-transport-rail",
 			"type": "line",
 			"source-layer": "streets",
@@ -2397,7 +2397,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "boundary-country:outline",
 			"type": "line",
 			"source-layer": "boundaries",
@@ -2410,7 +2410,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "boundary-state:outline",
 			"type": "line",
 			"source-layer": "boundaries",
@@ -2423,7 +2423,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "boundary-country",
 			"type": "line",
 			"source-layer": "boundaries",
@@ -2435,7 +2435,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "boundary-state",
 			"type": "line",
 			"source-layer": "boundaries",
@@ -2452,7 +2452,7 @@
 			}
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "label-motorway-shield",
 			"type": "symbol",
 			"source-layer": "street_labels",
@@ -2474,7 +2474,7 @@
 			"minzoom": 14
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "label-street-pedestrian",
 			"type": "symbol",
 			"source-layer": "street_labels",
@@ -2496,7 +2496,7 @@
 			"minzoom": 12
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "label-street-livingstreet",
 			"type": "symbol",
 			"source-layer": "street_labels",
@@ -2518,7 +2518,7 @@
 			"minzoom": 12
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "label-street-residential",
 			"type": "symbol",
 			"source-layer": "street_labels",
@@ -2540,7 +2540,7 @@
 			"minzoom": 12
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "label-street-unclassified",
 			"type": "symbol",
 			"source-layer": "street_labels",
@@ -2562,7 +2562,7 @@
 			"minzoom": 12
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "label-street-tertiary",
 			"type": "symbol",
 			"source-layer": "street_labels",
@@ -2584,7 +2584,7 @@
 			"minzoom": 12
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "label-street-secondary",
 			"type": "symbol",
 			"source-layer": "street_labels",
@@ -2606,7 +2606,7 @@
 			"minzoom": 12
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "label-street-primary",
 			"type": "symbol",
 			"source-layer": "street_labels",
@@ -2628,7 +2628,7 @@
 			"minzoom": 12
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "label-street-trunk",
 			"type": "symbol",
 			"source-layer": "street_labels",
@@ -2650,7 +2650,7 @@
 			"minzoom": 12
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "label-place-neighbourhood",
 			"type": "symbol",
 			"source-layer": "place_labels",
@@ -2671,7 +2671,7 @@
 			"minzoom": 14
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "label-place-quarter",
 			"type": "symbol",
 			"source-layer": "place_labels",
@@ -2692,7 +2692,7 @@
 			"minzoom": 13
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "label-place-suburb",
 			"type": "symbol",
 			"source-layer": "place_labels",
@@ -2713,7 +2713,7 @@
 			"minzoom": 11
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "label-place-hamlet",
 			"type": "symbol",
 			"source-layer": "place_labels",
@@ -2733,7 +2733,7 @@
 			"minzoom": 10
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "label-place-village",
 			"type": "symbol",
 			"source-layer": "place_labels",
@@ -2753,7 +2753,7 @@
 			"minzoom": 9
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "label-place-town",
 			"type": "symbol",
 			"source-layer": "place_labels",
@@ -2773,7 +2773,7 @@
 			"minzoom": 8
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "label-boundary-state",
 			"type": "symbol",
 			"source-layer": "boundary_labels",
@@ -2794,7 +2794,7 @@
 			"minzoom": 5
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "label-place-city",
 			"type": "symbol",
 			"source-layer": "place_labels",
@@ -2814,7 +2814,7 @@
 			"minzoom": 7
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "label-place-statecapital",
 			"type": "symbol",
 			"source-layer": "place_labels",
@@ -2834,7 +2834,7 @@
 			"minzoom": 6
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "label-place-capital",
 			"type": "symbol",
 			"source-layer": "place_labels",
@@ -2854,7 +2854,7 @@
 			"minzoom": 5
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "label-boundary-country-small",
 			"type": "symbol",
 			"source-layer": "boundary_labels",
@@ -2875,7 +2875,7 @@
 			"minzoom": 4
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "label-boundary-country-medium",
 			"type": "symbol",
 			"source-layer": "boundary_labels",
@@ -2896,7 +2896,7 @@
 			"minzoom": 3
 		},
 		{
-			"source": "versatiles-shortbread-neutrino",
+			"source": "versatiles-shortbread",
 			"id": "label-boundary-country-large",
 			"type": "symbol",
 			"source-layer": "boundary_labels",

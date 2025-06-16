@@ -210,7 +210,7 @@ var config = {
 			return layer;
 		})(),
 		
-}),
+
 		
 				(function() {
 			const layer = new ol.layer.VectorTile({
