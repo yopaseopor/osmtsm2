@@ -1944,6 +1944,1446 @@ export function businessOverlays() {
             stroke: stroke
         });
         return style;
+    }
+},
+{
+    group: getTranslation('telecommunication'),
+	title: "ACTEL",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"ACTEL\"][\"name\"=\"ACTEL\"][\"office\"=\"telecommunication\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('telecommunication'),
+	title: "Antik Telecom",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Antik Telecom\"][\"brand:wikidata\"=\"Q30297477\"][\"name\"=\"Antik Telecom\"][\"office\"=\"telecommunication\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Antik_Telecom_Logo.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Antik_Telecom_Logo.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('telecommunication'),
+	title: "AT&T",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"AT&T\"][\"brand:wikidata\"=\"Q35476\"][\"name\"=\"AT&T\"][\"office\"=\"telecommunication\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/AT&T_logo_2016.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/AT&T_logo_2016.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('telecommunication'),
+	title: "Azercell",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Azercell\"][\"brand:wikidata\"=\"Q2639931\"][\"name\"=\"Azercell\"][\"office\"=\"telecommunication\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('telecommunication'),
+	title: "Beeline",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Beeline\"][\"brand:wikidata\"=\"Q402880\"][\"name\"=\"Beeline\"][\"office\"=\"telecommunication\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BeeLine_logo.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/BeeLine_logo.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('telecommunication'),
+	title: "CH L3T",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"CH L3T\"][\"name\"=\"CH L3T\"][\"office\"=\"telecommunication\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('telecommunication'),
+	title: "du",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"du\"][\"brand:wikidata\"=\"Q3595390\"][\"name\"=\"du\"][\"office\"=\"telecommunication\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Du_Solid_Brandmark_RGB.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Du_Solid_Brandmark_RGB.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('telecommunication'),
+	title: "ETECSA",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"ETECSA\"][\"brand:wikidata\"=\"Q490323\"][\"name\"=\"ETECSA\"][\"office\"=\"telecommunication\"][\"official_name\"=\"Empresa de Telecomunicaciones de Cuba\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logotipo-etecsa-version-piramidal-.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logotipo-etecsa-version-piramidal-.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('telecommunication'),
+	title: "Humans",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Humans\"][\"name\"=\"Humans\"][\"office\"=\"telecommunication\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('telecommunication'),
+	title: "Indosat Ooredoo",
+    query: "[out:json][timeout:25];(nwr[\"alt_name\"=\"Indosat\"][\"brand\"=\"Indosat Ooredoo\"][\"brand:wikidata\"=\"Q2393592\"][\"name\"=\"Indosat Ooredoo\"][\"office\"=\"telecommunication\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Indosat_Ooredoo_Hutchison.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Indosat_Ooredoo_Hutchison.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('telecommunication'),
+	title: "izzi",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"izzi\"][\"brand:wikidata\"=\"Q11680385\"][\"name\"=\"izzi\"][\"office\"=\"telecommunication\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Izzi.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Izzi.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('telecommunication'),
+	title: "Kcell",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Kcell\"][\"brand:wikidata\"=\"Q1737636\"][\"name\"=\"Kcell\"][\"office\"=\"telecommunication\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Kcell_wordmark.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kcell_wordmark.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('telecommunication'),
+	title: "Mega",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Mega\"][\"name\"=\"Mega\"][\"office\"=\"telecommunication\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('telecommunication'),
+	title: "Megacable",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Megacable\"][\"brand:wikidata\"=\"Q6808160\"][\"name\"=\"Megacable\"][\"office\"=\"telecommunication\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('telecommunication'),
+	title: "NTT",
+    query: "[out:json][timeout:25];(nwr[\"alt_name\"=\"\u30a8\u30cc\u30fb\u30c6\u30a3\u30fb\u30c6\u30a3\"][\"brand\"=\"NTT\"][\"brand:wikidata\"=\"Q1054787\"][\"name\"=\"NTT\"][\"office\"=\"telecommunication\"][\"official_name\"=\"\u65e5\u672c\u96fb\u4fe1\u96fb\u8a71\"][\"official_name:en\"=\"Nippon Telegraph and Telephone\"][\"official_name:ja\"=\"\u65e5\u672c\u96fb\u4fe1\u96fb\u8a71\"][\"official_name:ja-Latn\"=\"Nippon Denshin Denwa\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Nippon_Telegraph_and_Telephone_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Nippon_Telegraph_and_Telephone_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('telecommunication'),
+	title: "O!Store",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"O!Store\"][\"name\"=\"O!Store\"][\"office\"=\"telecommunication\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('telecommunication'),
+	title: "One",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"One\"][\"name\"=\"One\"][\"office\"=\"telecommunication\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('telecommunication'),
+	title: "PLDT",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"PLDT\"][\"brand:wikidata\"=\"Q644167\"][\"name\"=\"PLDT\"][\"office\"=\"telecommunication\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('telecommunication'),
+	title: "R",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"R\"][\"brand:wikidata\"=\"Q3326234\"][\"name\"=\"R\"][\"office\"=\"telecommunication\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/R_Cable_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/R_Cable_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('telecommunication'),
+	title: "Rostelecom",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u054c\u0578\u057d\u057f\u0565\u056c\u0565\u056f\u0578\u0574\"][\"brand:en\"=\"Rostelecom\"][\"brand:hy\"=\"\u054c\u0578\u057d\u057f\u0565\u056c\u0565\u056f\u0578\u0574\"][\"brand:ru\"=\"\u0420\u043e\u0441\u0442\u0435\u043b\u0435\u043a\u043e\u043c\"][\"brand:wikidata\"=\"Q1477012\"][\"name\"=\"\u054c\u0578\u057d\u057f\u0565\u056c\u0565\u056f\u0578\u0574\"][\"name:en\"=\"Rostelecom\"][\"name:hy\"=\"\u054c\u0578\u057d\u057f\u0565\u056c\u0565\u056f\u0578\u0574\"][\"name:ru\"=\"\u0420\u043e\u0441\u0442\u0435\u043b\u0435\u043a\u043e\u043c\"][\"office\"=\"telecommunication\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Rostelecom_logo_English_2018.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Rostelecom_logo_English_2018.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('telecommunication'),
+	title: "Team Telecom Armenia",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u0539\u056b\u0574 \u054f\u0565\u056c\u0565\u056f\u0578\u0574 \u0531\u0580\u0574\u0565\u0576\u056b\u0561\"][\"brand:en\"=\"Team Telecom Armenia\"][\"brand:hy\"=\"\u0539\u056b\u0574 \u054f\u0565\u056c\u0565\u056f\u0578\u0574 \u0531\u0580\u0574\u0565\u0576\u056b\u0561\"][\"brand:ru\"=\"\u0422\u0438\u043c \u0422\u0435\u043b\u0435\u043a\u043e\u043c \u0410\u0440\u043c\u0435\u043d\u0438\u044f\"][\"brand:wikidata\"=\"Q97125249\"][\"name\"=\"\u0539\u056b\u0574 \u054f\u0565\u056c\u0565\u056f\u0578\u0574 \u0531\u0580\u0574\u0565\u0576\u056b\u0561\"][\"name:en\"=\"Team Telecom Armenia\"][\"name:hy\"=\"\u0539\u056b\u0574 \u054f\u0565\u056c\u0565\u056f\u0578\u0574 \u0531\u0580\u0574\u0565\u0576\u056b\u0561\"][\"name:ru\"=\"\u0422\u0438\u043c \u0422\u0435\u043b\u0435\u043a\u043e\u043c \u0410\u0440\u043c\u0435\u043d\u0438\u044f\"][\"office\"=\"telecommunication\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Team_Telecom_Armenia.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Team_Telecom_Armenia.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('telecommunication'),
+	title: "Telecomm-Tel\u00e9grafos",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Telecomm-Tel\u00e9grafos\"][\"brand:wikidata\"=\"Q9082442\"][\"name\"=\"Telecomm-Tel\u00e9grafos\"][\"office\"=\"telecommunication\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Telecommmexico_0_0.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Telecommmexico_0_0.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('telecommunication'),
+	title: "Telkomsel",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Telkomsel\"][\"brand:wikidata\"=\"Q1786124\"][\"name\"=\"Telkomsel\"][\"office\"=\"telecommunication\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Telkomsel_(2021).svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Telkomsel_(2021).svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('telecommunication'),
+	title: "Telmex",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Telmex\"][\"brand:wikidata\"=\"Q1420164\"][\"name\"=\"Telmex\"][\"office\"=\"telecommunication\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Telmex_Logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Telmex_Logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('telecommunication'),
+	title: "Totalplay",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Totalplay\"][\"brand:wikidata\"=\"Q6151102\"][\"name\"=\"Totalplay\"][\"office\"=\"telecommunication\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Totalplay.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Totalplay.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('telecommunication'),
+	title: "Ucell",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Ucell\"][\"name\"=\"Ucell\"][\"office\"=\"telecommunication\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('telecommunication'),
+	title: "Ucom",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u0545\u0578\u0582\u0584\u0578\u0574\"][\"brand:en\"=\"Ucom\"][\"brand:hy\"=\"\u0545\u0578\u0582\u0584\u0578\u0574\"][\"brand:ru\"=\"\u042e\u043a\u043e\u043c\"][\"brand:wikidata\"=\"Q13054189\"][\"name\"=\"\u0545\u0578\u0582\u0584\u0578\u0574\"][\"name:en\"=\"Ucom\"][\"name:hy\"=\"\u0545\u0578\u0582\u0584\u0578\u0574\"][\"name:ru\"=\"\u042e\u043a\u043e\u043c\"][\"office\"=\"telecommunication\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Ucom_Armenia_Logo.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Ucom_Armenia_Logo.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('telecommunication'),
+	title: "Viva MTS",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u054e\u056b\u057e\u0561 \u0544\u054f\u054d\"][\"brand:en\"=\"Viva MTS\"][\"brand:hy\"=\"\u054e\u056b\u057e\u0561 \u0544\u054f\u054d\"][\"brand:ru\"=\"\u0412\u0438\u0432\u0430 \u041c\u0422\u0421\"][\"brand:wikidata\"=\"Q16486896\"][\"name\"=\"\u054e\u056b\u057e\u0561 \u0544\u054f\u054d\"][\"name:en\"=\"Viva MTS\"][\"name:hy\"=\"\u054e\u056b\u057e\u0561 \u0544\u054f\u054d\"][\"name:ru\"=\"\u0412\u0438\u0432\u0430 \u041c\u0422\u0421\"][\"office\"=\"telecommunication\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Vivacell.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Vivacell.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('telecommunication'),
+	title: "XL Axiata",
+    query: "[out:json][timeout:25];(nwr[\"alt_name\"=\"XL\"][\"brand\"=\"XL Axiata\"][\"brand:wikidata\"=\"Q3482752\"][\"name\"=\"XL Axiata\"][\"office\"=\"telecommunication\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/XL_Axiata_2014.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/XL_Axiata_2014.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('telecommunication'),
+	title: "\u0411\u0438\u043b\u0430\u0439\u043d",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u0411\u0438\u043b\u0430\u0439\u043d\"][\"brand:en\"=\"Beeline\"][\"brand:ru\"=\"\u0411\u0438\u043b\u0430\u0439\u043d\"][\"brand:wikidata\"=\"Q402880\"][\"name\"=\"\u0411\u0438\u043b\u0430\u0439\u043d\"][\"name:en\"=\"Beeline\"][\"name:ru\"=\"\u0411\u0438\u043b\u0430\u0439\u043d\"][\"office\"=\"telecommunication\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BeeLine_logo.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/BeeLine_logo.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('telecommunication'),
+	title: "\u041a\u0430\u0437\u0430\u0445\u0442\u0435\u043b\u0435\u043a\u043e\u043c",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u041a\u0430\u0437\u0430\u0445\u0442\u0435\u043b\u0435\u043a\u043e\u043c\"][\"name\"=\"\u041a\u0430\u0437\u0430\u0445\u0442\u0435\u043b\u0435\u043a\u043e\u043c\"][\"office\"=\"telecommunication\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('telecommunication'),
+	title: "\u0422\u0422\u041a",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u0422\u0422\u041a\"][\"name\"=\"\u0422\u0422\u041a\"][\"office\"=\"telecommunication\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('telecommunication'),
+	title: "\u10db\u10d0\u10d2\u10d7\u10d8",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u10db\u10d0\u10d2\u10d7\u10d8\"][\"brand:en\"=\"Magti\"][\"brand:ka\"=\"\u10db\u10d0\u10d2\u10d7\u10d8\"][\"brand:ru\"=\"\u041c\u0430\u0433\u0442\u0438\"][\"name\"=\"\u10db\u10d0\u10d2\u10d7\u10d8\"][\"name:en\"=\"Magti\"][\"name:ka\"=\"\u10db\u10d0\u10d2\u10d7\u10d8\"][\"name:ru\"=\"\u041c\u0430\u0433\u0442\u0438\"][\"office\"=\"telecommunication\"][\"operator\"=\"\u10db\u10d0\u10d2\u10d7\u10d8\"][\"operator:ka\"=\"\u10db\u10d0\u10d2\u10d7\u10d8\"][\"operator:wikidata\"=\"Q6732495\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('telecommunication'),
+	title: "\u10e1\u10d4\u10da\u10e4\u10d8",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u10e1\u10d4\u10da\u10e4\u10d8\"][\"brand:en\"=\"Cellfie\"][\"brand:ka\"=\"\u10e1\u10d4\u10da\u10e4\u10d8\"][\"brand:ru\"=\"\u0421\u0435\u043b\u0444\u0438\"][\"name\"=\"\u10e1\u10d4\u10da\u10e4\u10d8\"][\"name:en\"=\"Cellfie\"][\"name:ka\"=\"\u10e1\u10d4\u10da\u10e4\u10d8\"][\"name:ru\"=\"\u0421\u0435\u043b\u0444\u0438\"][\"office\"=\"telecommunication\"][\"operator\"=\"\u10d5\u10d8\u10dd\u10dc\u10d8 \u10e1\u10d0\u10e5\u10d0\u10e0\u10d7\u10d5\u10d4\u10da\u10dd\"][\"operator:ka\"=\"\u10d5\u10d8\u10dd\u10dc\u10d8 \u10e1\u10d0\u10e5\u10d0\u10e0\u10d7\u10d5\u10d4\u10da\u10dd\"][\"operator:wikidata\"=\"Q4044421\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('telecommunication'),
+	title: "\u10e1\u10d8\u10da\u10e5\u10dc\u10d4\u10e2\u10d8",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u10e1\u10d8\u10da\u10e5\u10dc\u10d4\u10e2\u10d8\"][\"brand:en\"=\"Silknet\"][\"brand:ka\"=\"\u10e1\u10d8\u10da\u10e5\u10dc\u10d4\u10e2\u10d8\"][\"brand:ru\"=\"\u0421\u0438\u043b\u043a\u043d\u0435\u0442\"][\"brand:wikidata\"=\"Q12869272\"][\"name\"=\"\u10e1\u10d8\u10da\u10e5\u10dc\u10d4\u10e2\u10d8\"][\"name:en\"=\"Silknet\"][\"name:ka\"=\"\u10e1\u10d8\u10da\u10e5\u10dc\u10d4\u10e2\u10d8\"][\"name:ru\"=\"\u0421\u0438\u043b\u043a\u043d\u0435\u0442\"][\"office\"=\"telecommunication\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Silknet_Logo_2018.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Silknet_Logo_2018.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('telecommunication'),
+	title: "\u0632\u064a\u0646 \u0627\u0644\u0633\u0639\u0648\u062f\u064a\u0629",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u0632\u064a\u0646 \u0627\u0644\u0633\u0639\u0648\u062f\u064a\u0629\"][\"brand:ar\"=\"\u0632\u064a\u0646 \u0627\u0644\u0633\u0639\u0648\u062f\u064a\u0629\"][\"brand:en\"=\"Zain Saudi Arabia\"][\"brand:ja\"=\"\u0632\u064a\u0646 \u0627\u0644\u0633\u0639\u0648\u062f\u064a\u0629\"][\"brand:wikidata\"=\"Q12218575\"][\"name\"=\"\u0632\u064a\u0646 \u0627\u0644\u0633\u0639\u0648\u062f\u064a\u0629\"][\"name:ar\"=\"\u0632\u064a\u0646 \u0627\u0644\u0633\u0639\u0648\u062f\u064a\u0629\"][\"name:en\"=\"Zain Saudi Arabia\"][\"office\"=\"telecommunication\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('telecommunication'),
+	title: "\u0634\u0631\u0643\u0629 \u0627\u062a\u062d\u0627\u062f \u0639\u0630\u064a\u0628 \u0644\u0644\u0627\u062a\u0635\u0627\u0644\u0627\u062a",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u0634\u0631\u0643\u0629 \u0627\u062a\u062d\u0627\u062f \u0639\u0630\u064a\u0628 \u0644\u0644\u0627\u062a\u0635\u0627\u0644\u0627\u062a\"][\"brand:ar\"=\"\u0634\u0631\u0643\u0629 \u0627\u062a\u062d\u0627\u062f \u0639\u0630\u064a\u0628 \u0644\u0644\u0627\u062a\u0635\u0627\u0644\u0627\u062a\"][\"brand:en\"=\"Etihad Atheeb Telecom\"][\"brand:ja\"=\"\u0634\u0631\u0643\u0629 \u0627\u062a\u062d\u0627\u062f \u0639\u0630\u064a\u0628 \u0644\u0644\u0627\u062a\u0635\u0627\u0644\u0627\u062a\"][\"brand:wikidata\"=\"Q5404584\"][\"name\"=\"\u0634\u0631\u0643\u0629 \u0627\u062a\u062d\u0627\u062f \u0639\u0630\u064a\u0628 \u0644\u0644\u0627\u062a\u0635\u0627\u0644\u0627\u062a\"][\"name:ar\"=\"\u0634\u0631\u0643\u0629 \u0627\u062a\u062d\u0627\u062f \u0639\u0630\u064a\u0628 \u0644\u0644\u0627\u062a\u0635\u0627\u0644\u0627\u062a\"][\"name:en\"=\"Etihad Atheeb Telecom\"][\"office\"=\"telecommunication\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('telecommunication'),
+	title: "\u0634\u0631\u0643\u0629 \u0627\u0644\u0627\u062a\u0635\u0627\u0644\u0627\u062a \u0627\u0644\u0633\u0639\u0648\u062f\u064a\u0629",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u0634\u0631\u0643\u0629 \u0627\u0644\u0627\u062a\u0635\u0627\u0644\u0627\u062a \u0627\u0644\u0633\u0639\u0648\u062f\u064a\u0629\"][\"brand:ar\"=\"\u0634\u0631\u0643\u0629 \u0627\u0644\u0627\u062a\u0635\u0627\u0644\u0627\u062a \u0627\u0644\u0633\u0639\u0648\u062f\u064a\u0629\"][\"brand:en\"=\"Saudi Telecom Company\"][\"brand:wikidata\"=\"Q1535171\"][\"name\"=\"\u0634\u0631\u0643\u0629 \u0627\u0644\u0627\u062a\u0635\u0627\u0644\u0627\u062a \u0627\u0644\u0633\u0639\u0648\u062f\u064a\u0629\"][\"name:ar\"=\"\u0634\u0631\u0643\u0629 \u0627\u0644\u0627\u062a\u0635\u0627\u0644\u0627\u062a \u0627\u0644\u0633\u0639\u0648\u062f\u064a\u0629\"][\"name:en\"=\"Saudi Telecom Company\"][\"office\"=\"telecommunication\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/STC-01.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/STC-01.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('telecommunication'),
+	title: "\u0645\u0648\u0628\u0627\u064a\u0644\u064a",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u0645\u0648\u0628\u0627\u064a\u0644\u064a\"][\"brand:ar\"=\"\u0645\u0648\u0628\u0627\u064a\u0644\u064a\"][\"brand:en\"=\"Mobily\"][\"brand:wikidata\"=\"Q6887331\"][\"name\"=\"\u0645\u0648\u0628\u0627\u064a\u0644\u064a\"][\"name:ar\"=\"\u0645\u0648\u0628\u0627\u064a\u0644\u064a\"][\"name:en\"=\"Mobily\"][\"office\"=\"telecommunication\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/MobilyLogo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/MobilyLogo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('telecommunication'),
+	title: "\u0645\u0648\u0628\u064a\u0644\u064a\u0633",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u0645\u0648\u0628\u064a\u0644\u064a\u0633\"][\"brand:ar\"=\"\u0645\u0648\u0628\u064a\u0644\u064a\u0633\"][\"brand:en\"=\"Mobilis\"][\"brand:wikidata\"=\"Q2819545\"][\"name\"=\"\u0645\u0648\u0628\u064a\u0644\u064a\u0633\"][\"name:ar\"=\"\u0645\u0648\u0628\u064a\u0644\u064a\u0633\"][\"name:en\"=\"Mobilis\"][\"office\"=\"telecommunication\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Mobilis_\u0645\u0648\u0628\u064a\u0644\u064a\u0633_-_panoramio_(1).jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Mobilis_\u0645\u0648\u0628\u064a\u0644\u064a\u0633_-_panoramio_(1).jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
 		
 			}
         }
