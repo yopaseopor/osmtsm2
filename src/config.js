@@ -211,8 +211,7 @@ var config = {
 		})(),
 		
 
-		
-				(function() {
+						(function() {
 			const layer = new ol.layer.VectorTile({
 				title: 'OSM Shortbread Neutrino',
 				iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
@@ -237,16 +236,14 @@ var config = {
 				.then(response => response.text())
 				.then(text => {
 					const style = JSON.parse(text);
-					olms.applyStyle(layer, style, 'versatiles-shortbread-neutrino')
-						.then(() => console.log('Neutrino style applied successfully for OSM Shortbread.'))
+					olms.applyStyle(layer, style, 'versatiles-shortbread')
+						.then(() => console.log('Colorful style applied successfully for OSM Shortbread.'))
 						.catch(err => console.error('Error applying Colorful style for OSM Shortbread:', err));
 				}).catch(err => {
-					console.error('Failed to load or apply neutrino.json for OSM Shortbread:', err);
+					console.error('Failed to load or apply colorful.json for OSM Shortbread:', err);
 				});
 			return layer;
 		})(),
-		
-		
 		
 		new ol.layer.Tile({
 			title: 'OpenStreetMap',
