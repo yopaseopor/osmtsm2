@@ -201,7 +201,7 @@ var config = {
 				.then(response => response.text())
 				.then(text => {
 					const style = JSON.parse(text);
-					olms.applyStyle(layer, style, 'openmaptiles')
+					olms.applyStyle(layer, style, 'versatiles-shortbread')
 						.then(() => console.log('Colorful style applied successfully for OSM Shortbread.'))
 						.catch(err => console.error('Error applying Colorful style for OSM Shortbread:', err));
 				}).catch(err => {
