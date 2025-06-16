@@ -180,7 +180,7 @@ var config = {
 			const layer = new ol.layer.VectorTile({
 				title: 'OSM Shortbread Colorful',
 				iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
-				visible: false,
+				visible: true,
 				opacity: 1.0,
 				source: new ol.source.VectorTile({
 					tilePixelRatio: 1,
@@ -248,7 +248,7 @@ var config = {
 		new ol.layer.Tile({
 			title: 'OpenStreetMap',
 			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
-			visible: true,
+			visible: false,
 			source: new ol.source.OSM()
 /*@@ inicio de copia */			}),
 								new ol.layer.Tile({
