@@ -831,58 +831,73 @@ $(function () {
 		updatePermalink();
 	});
 
-	// Add hover highlight style and layer
-	var highlightStyle = new ol.style.Style({
-		fill: new ol.style.Fill({
-			color: 'rgba(255,255,255,0.3)'
-		}),
-		stroke: new ol.style.Stroke({
-			color: '#3399CC',
-			width: 3
-		}),
-		image: new ol.style.Circle({
-			radius: 10,
+	// Add hover highlight functionality
+	var selectedFeatureId = null;
+	var hoveredFeatures = [];
+
+	// Function to create highlight style for a feature
+	function createHighlightStyle(originalStyle) {
+		if (!originalStyle || !originalStyle[0]) return null;
+		
+		return new ol.style.Style({
 			fill: new ol.style.Fill({
-				color: '#3399CC'
+				color: 'rgba(255,255,255,0.4)'
+			}),
+			stroke: new ol.style.Stroke({
+				color: '#3399CC',
+				width: originalStyle[0].getStroke() ? 
+					   originalStyle[0].getStroke().getWidth() + 2 : 3
 			})
-		})
-	});
+		});
+	}
 
-	// Create a vector layer for the highlight feature
-	var highlightLayer = new ol.layer.Vector({
-		source: new ol.source.Vector(),
-		style: highlightStyle,
-		zIndex: 1000 // Ensure it's on top
-	});
-	map.addLayer(highlightLayer);
-
-	var selectedFeature = null;
 	map.on('pointermove', function(evt) {
 		if (evt.dragging) {
 			return;
 		}
 
-		var hit = false;
-		map.forEachFeatureAtPixel(evt.pixel, function(feature, layer) {
-			if (feature && layer && layer instanceof ol.layer.VectorTile) {
-				// Clear previous highlight
-				highlightLayer.getSource().clear();
-				
-				// Create a clone of the feature for highlighting
-				if (feature !== selectedFeature) {
-					var clone = feature.clone();
-					highlightLayer.getSource().addFeature(clone);
-					selectedFeature = feature;
-				}
+		const pixel = evt.pixel;
+		const coordinate = evt.coordinate;
+		let hit = false;
+
+		// Reset styles of previously hovered features
+		hoveredFeatures.forEach(function(hoveredFeature) {
+			if (hoveredFeature.layer && hoveredFeature.feature) {
+				hoveredFeature.layer.changed();
+			}
+		});
+		hoveredFeatures = [];
+
+		map.forEachFeatureAtPixel(pixel, function(feature, layer) {
+			if (feature && layer) {
 				hit = true;
+				
+				// Store the feature ID if it has one
+				const featureId = feature.getId ? feature.getId() : null;
+				if (featureId !== selectedFeatureId) {
+					selectedFeatureId = featureId;
+
+					// For vector tile layers, we trigger a style change
+					if (layer instanceof ol.layer.VectorTile) {
+						const originalStyle = feature.getStyle ? feature.getStyle() : layer.getStyle();
+						const highlightStyle = createHighlightStyle(Array.isArray(originalStyle) ? originalStyle : [originalStyle]);
+						
+						if (highlightStyle) {
+							hoveredFeatures.push({
+								feature: feature,
+								layer: layer
+							});
+							layer.changed(); // Trigger style refresh
+						}
+					}
+				}
 				return true;
 			}
 			return false;
 		});
 
 		if (!hit) {
-			highlightLayer.getSource().clear();
-			selectedFeature = null;
+			selectedFeatureId = null;
 		}
 
 		map.getTargetElement().style.cursor = hit ? 'pointer' : 'grab';
