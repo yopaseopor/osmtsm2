@@ -8,6 +8,53 @@
 var imgSrc = 'src/img/';
 
 //@@Coordenadas LONgitud LATitud Rotación Zoom, Zoom de la geolocalización, unidades
+
+// Utility to create a fresh OSM Shortbread base layer with the correct style
+window.createShortbreadBaseLayer = function(type) {
+	// type: 'colorful' or 'neutrino'
+	return new Promise(function(resolve, reject) {
+		var title, styleUrl, styleName;
+		if (type === 'colorful') {
+			title = 'OSM Shortbread Colorful';
+			styleUrl = 'src/assets/colorful.json';
+			styleName = 'versatiles-shortbread';
+		} else if (type === 'neutrino') {
+			title = 'OSM Shortbread Neutrino';
+			styleUrl = 'src/assets/neutrino.json';
+			styleName = 'versatiles-shortbread-neutrino';
+		} else {
+			reject('Unknown type for Shortbread base layer');
+			return;
+		}
+		var layer = new ol.layer.VectorTile({
+			title: title,
+			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
+			visible: true,
+			opacity: 1.0,
+			source: new ol.source.VectorTile({
+				tilePixelRatio: 1,
+				tileGrid: ol.tilegrid.createXYZ({
+					minZoom: 0,
+					maxZoom: 14
+				}),
+				format: new ol.format.MVT(),
+				url: 'https://vector.openstreetmap.org/shortbread_v1/{z}/{x}/{y}.mvt',
+				attributions: [
+					'<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>'
+				]
+			})
+		});
+		fetch(styleUrl)
+			.then(response => response.text())
+			.then(text => {
+				const style = JSON.parse(text);
+				olms.applyStyle(layer, style, styleName)
+					.then(() => resolve(layer))
+					.catch(err => reject(err));
+			})
+			.catch(err => reject(err));
+	});
+};
 var config = {
 	initialConfig: {
 		lon: 1.59647,
