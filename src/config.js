@@ -276,7 +276,7 @@ var config = {
 				}).catch(err => {
 					console.error('Failed to load or apply customyopaseopor.json for OSM Shortbread:', err);
 				});
-			return neutrinoLayer;
+			return customLayer;
 		})(),
 		
 		new ol.layer.Tile({
