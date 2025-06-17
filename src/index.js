@@ -225,6 +225,25 @@ $(function () {
         }
     };
 
+    // Ensure only one base layer is visible at a time
+    window.activateLayer = function(layerObj) {
+        $.each(config.layers, function(indexLayer, layerGroup) {
+            if (layerGroup.get && layerGroup.get('type') !== 'overlay') {
+                // Hide all base layers
+                layerGroup.setVisible(false);
+            }
+        });
+        // Show the selected base layer
+        if (layerObj._olLayerGroup && layerObj._olLayerGroup.setVisible) {
+            layerObj._olLayerGroup.setVisible(true);
+        }
+        // Optionally, re-render the layer list to update UI
+        if (window.renderLayerList && window.layers) {
+            window.renderLayerList(window.layers);
+        }
+    };
+
+
     // Render all overlays initially
     $(document).ready(function() {
         window.renderOverlayList(window.overlays);
