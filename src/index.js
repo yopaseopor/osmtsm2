@@ -225,11 +225,11 @@ $(function () {
         }
     };
 
-    // Ensure only one base layer is visible at a time
+    // Ensure only one base layer is visible at a time and update UI state
     window.activateLayer = function(layerObj) {
+        // Hide all base layers
         $.each(config.layers, function(indexLayer, layerGroup) {
             if (layerGroup.get && layerGroup.get('type') !== 'overlay') {
-                // Hide all base layers
                 layerGroup.setVisible(false);
             }
         });
@@ -237,9 +237,16 @@ $(function () {
         if (layerObj._olLayerGroup && layerObj._olLayerGroup.setVisible) {
             layerObj._olLayerGroup.setVisible(true);
         }
-        // Optionally, re-render the layer list to update UI
-        if (window.renderLayerList && window.layers) {
-            window.renderLayerList(window.layers);
+        // Update the UI to reflect the active layer
+        var $list = $('#layer-list');
+        if ($list.length) {
+            $list.children('.layer-list-item').removeClass('active');
+            $list.children('.layer-list-item').each(function(idx, el) {
+                var $el = $(el);
+                if (layerObj.title && $el.text().includes(layerObj.title)) {
+                    $el.addClass('active');
+                }
+            });
         }
     };
 
