@@ -236,7 +236,7 @@ var config = {
 			fetch(styleUrl)
 				.then(response => response.json())
 				.then(style => {
-					return olms.applyStyle(neutrinoLayer, style, 'versatiles-shortbread-neutrino')
+					return olms.applyStyle(neutrinoLayer, style, 'versatiles-neutrino')
 						.then(() => console.log('Neutrino style applied successfully for OSM Shortbread.'))
 						.catch(err => console.error('Error applying Neutrino style for OSM Shortbread:', err));
 				}).catch(err => {
