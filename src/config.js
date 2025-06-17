@@ -99,7 +99,7 @@ var config = {
 				})
 			});
 
-			const styleUrl = 'src/style.json';
+			const styleUrl = 'src/assets/style.json';
 			const apiKey = 'Faz9gJu55zrWejNF55oZ';
 			fetch(styleUrl)
 				.then(response => response.text())
@@ -196,7 +196,7 @@ var config = {
 				})
 			});
 
-			const styleUrl = 'src/colorful.json';
+			const styleUrl = 'src/assets/colorful.json';
 			fetch(styleUrl)
 				.then(response => response.text())
 				.then(text => {
@@ -231,7 +231,7 @@ var config = {
 				})
 			});
 
-			const styleUrl = 'src/neutrino.json';
+			const styleUrl = 'src/assets/neutrino.json';
 			fetch(styleUrl)
 				.then(response => response.text())
 				.then(text => {
