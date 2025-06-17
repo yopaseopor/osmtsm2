@@ -236,21 +236,28 @@ $(function () {
         // Show the selected base layer
         if (layerObj._olLayerGroup && layerObj._olLayerGroup.setVisible) {
             layerObj._olLayerGroup.setVisible(true);
-            // Re-apply the correct style if it's Colorful or Neutrino
             var title = layerObj.title || (layerObj._olLayerGroup.get && layerObj._olLayerGroup.get('title'));
+            console.log('Activating base layer:', title);
             if (title === 'OSM Shortbread Colorful') {
                 fetch('src/assets/colorful.json')
                     .then(response => response.text())
                     .then(text => {
                         const style = JSON.parse(text);
-                        olms.applyStyle(layerObj._olLayerGroup, style, 'versatiles-shortbread');
+                        olms.applyStyle(layerObj._olLayerGroup, style, 'versatiles-shortbread').then(() => {
+                            // Force refresh
+                            if (layerObj._olLayerGroup.changed) layerObj._olLayerGroup.changed();
+                            console.log('Colorful style re-applied.');
+                        });
                     });
             } else if (title === 'OSM Shortbread Neutrino') {
                 fetch('src/assets/neutrino.json')
                     .then(response => response.text())
                     .then(text => {
                         const style = JSON.parse(text);
-                        olms.applyStyle(layerObj._olLayerGroup, style, 'versatiles-shortbread-neutrino');
+                        olms.applyStyle(layerObj._olLayerGroup, style, 'versatiles-shortbread-neutrino').then(() => {
+                            if (layerObj._olLayerGroup.changed) layerObj._olLayerGroup.changed();
+                            console.log('Neutrino style re-applied.');
+                        });
                     });
             }
         }
