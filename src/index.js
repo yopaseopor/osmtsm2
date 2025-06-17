@@ -831,6 +831,63 @@ $(function () {
 		updatePermalink();
 	});
 
+	// Add hover highlight style and layer
+	var highlightStyle = new ol.style.Style({
+		fill: new ol.style.Fill({
+			color: 'rgba(255,255,255,0.3)'
+		}),
+		stroke: new ol.style.Stroke({
+			color: '#3399CC',
+			width: 3
+		}),
+		image: new ol.style.Circle({
+			radius: 10,
+			fill: new ol.style.Fill({
+				color: '#3399CC'
+			})
+		})
+	});
+
+	// Create a vector layer for the highlight feature
+	var highlightLayer = new ol.layer.Vector({
+		source: new ol.source.Vector(),
+		style: highlightStyle,
+		zIndex: 1000 // Ensure it's on top
+	});
+	map.addLayer(highlightLayer);
+
+	var selectedFeature = null;
+	map.on('pointermove', function(evt) {
+		if (evt.dragging) {
+			return;
+		}
+
+		var hit = false;
+		map.forEachFeatureAtPixel(evt.pixel, function(feature, layer) {
+			if (feature && layer && layer instanceof ol.layer.VectorTile) {
+				// Clear previous highlight
+				highlightLayer.getSource().clear();
+				
+				// Create a clone of the feature for highlighting
+				if (feature !== selectedFeature) {
+					var clone = feature.clone();
+					highlightLayer.getSource().addFeature(clone);
+					selectedFeature = feature;
+				}
+				hit = true;
+				return true;
+			}
+			return false;
+		});
+
+		if (!hit) {
+			highlightLayer.getSource().clear();
+			selectedFeature = null;
+		}
+
+		map.getTargetElement().style.cursor = hit ? 'pointer' : 'grab';
+	});
+
 	var selectedFeature = null;
 	map.on('pointermove', function (evt) {
 		if (selectedFeature !== null) {
