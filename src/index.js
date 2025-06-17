@@ -443,10 +443,10 @@ $(function () {
 
 
 	var layersControlBuild = function () {
-		var visibleLayer,
-			previousLayer,
+		var overlayIndex = 0,
 			layerIndex = 0,
-			overlayIndex = 0,
+			previousLayer = null,
+			visibleLayer = null, // Initialize visibleLayer
 			container = $('<div>').addClass('osmcat-menu'),
 			layerDiv = $('<div>').addClass('osmcat-layer'),
 			overlaySelect = $('<select>').addClass('osmcat-select').on('change', function () {
@@ -460,6 +460,24 @@ $(function () {
 				content.toggle();
 			}),
 			content = $('<div>').addClass('osmcat-content');
+
+		// Find initially visible layer
+		config.layers.forEach(layer => {
+			if (layer.get('type') !== 'overlay' && layer.getVisible()) {
+				visibleLayer = layer;
+			}
+		});
+
+		// If no layer is visible, make the first non-overlay layer visible
+		if (!visibleLayer) {
+			for (let layer of config.layers) {
+				if (layer.get('type') !== 'overlay') {
+					layer.setVisible(true);
+					visibleLayer = layer;
+					break;
+				}
+			}
+		}
 
 		config.layers.forEach(layer => {
 			if (layer.get('type') === 'overlay') {
@@ -507,16 +525,18 @@ $(function () {
 						if (visible) { //Show the previous layer
 							if (previousLayer) {
 								baseLayerIndex = previousLayer.get('layerIndex');
-								layer.setVisible(!visible);
-								previousLayer.setVisible(visible);
+								layer.setVisible(false);
+								previousLayer.setVisible(true);
 								visibleLayer = previousLayer;
 								previousLayer = layer;
 							}
 						} else { //Active the selected layer and hide the current layer
 							baseLayerIndex = layer.get('layerIndex');
-							layer.setVisible(!visible);
-							visibleLayer.setVisible(visible);
-							previousLayer = visibleLayer;
+							if (visibleLayer) {
+								visibleLayer.setVisible(false);
+								previousLayer = visibleLayer;
+							}
+							layer.setVisible(true);
 							visibleLayer = layer;
 						}
 						updatePermalink();
