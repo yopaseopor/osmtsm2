@@ -201,13 +201,8 @@ var config = {
 			fetch(styleUrl)
 				.then(response => response.json())
 				.then(style => {
-					// Store original style for hover effect
-					colorfulLayer.set('originalStyle', style);
-					return olms.applyStyle(colorfulLayer, style)
-						.then(() => {
-							console.log('Colorful style applied successfully for OSM Shortbread.');
-							colorfulLayer.changed(); // Trigger a style refresh
-						})
+					return olms.applyStyle(colorfulLayer, style, 'versatiles-shortbread')
+						.then(() => console.log('Colorful style applied successfully for OSM Shortbread.'))
 						.catch(err => console.error('Error applying Colorful style for OSM Shortbread:', err));
 				}).catch(err => {
 					console.error('Failed to load or apply colorful.json for OSM Shortbread:', err);
@@ -241,13 +236,8 @@ var config = {
 			fetch(styleUrl)
 				.then(response => response.json())
 				.then(style => {
-					// Store original style for hover effect
-					neutrinoLayer.set('originalStyle', style);
-					return olms.applyStyle(neutrinoLayer, style)
-						.then(() => {
-							console.log('Neutrino style applied successfully for OSM Shortbread.');
-							neutrinoLayer.changed(); // Trigger a style refresh
-						})
+					return olms.applyStyle(neutrinoLayer, style, 'versatiles-shortbread-neutrino')
+						.then(() => console.log('Neutrino style applied successfully for OSM Shortbread.'))
 						.catch(err => console.error('Error applying Neutrino style for OSM Shortbread:', err));
 				}).catch(err => {
 					console.error('Failed to load or apply neutrino.json for OSM Shortbread:', err);
