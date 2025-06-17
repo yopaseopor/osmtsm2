@@ -8,53 +8,6 @@
 var imgSrc = 'src/img/';
 
 //@@Coordenadas LONgitud LATitud Rotación Zoom, Zoom de la geolocalización, unidades
-
-// Utility to create a fresh OSM Shortbread base layer with the correct style
-window.createShortbreadBaseLayer = function(type) {
-	// type: 'colorful' or 'neutrino'
-	return new Promise(function(resolve, reject) {
-		var title, styleUrl, styleName;
-		if (type === 'colorful') {
-			title = 'OSM Shortbread Colorful';
-			styleUrl = 'src/assets/colorful.json';
-			styleName = 'versatiles-shortbread';
-		} else if (type === 'neutrino') {
-			title = 'OSM Shortbread Neutrino';
-			styleUrl = 'src/assets/neutrino.json';
-			styleName = 'versatiles-shortbread-neutrino';
-		} else {
-			reject('Unknown type for Shortbread base layer');
-			return;
-		}
-		var layer = new ol.layer.VectorTile({
-			title: title,
-			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
-			visible: true,
-			opacity: 1.0,
-			source: new ol.source.VectorTile({
-				tilePixelRatio: 1,
-				tileGrid: ol.tilegrid.createXYZ({
-					minZoom: 0,
-					maxZoom: 14
-				}),
-				format: new ol.format.MVT(),
-				url: 'https://vector.openstreetmap.org/shortbread_v1/{z}/{x}/{y}.mvt',
-				attributions: [
-					'<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>'
-				]
-			})
-		});
-		fetch(styleUrl)
-			.then(response => response.text())
-			.then(text => {
-				const style = JSON.parse(text);
-				olms.applyStyle(layer, style, styleName)
-					.then(() => resolve(layer))
-					.catch(err => reject(err));
-			})
-			.catch(err => reject(err));
-	});
-};
 var config = {
 	initialConfig: {
 		lon: 1.59647,
@@ -224,7 +177,7 @@ var config = {
 		}),
 		
 				(function() {
-			const layer = new ol.layer.VectorTile({
+			const colorfulLayer = new ol.layer.VectorTile({
 				title: 'OSM Shortbread Colorful',
 				iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
 				visible: true,
@@ -233,33 +186,33 @@ var config = {
 					tilePixelRatio: 1,
 					tileGrid: ol.tilegrid.createXYZ({
 						minZoom: 0,
-						maxZoom: 14 // Preserving this zoom for this layer
+						maxZoom: 14
 					}),
 					format: new ol.format.MVT(),
 					url: 'https://vector.openstreetmap.org/shortbread_v1/{z}/{x}/{y}.mvt',
 					attributions: [
 						'<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>'
 					]
-				})
+				}),
+				declutter: true
 			});
 
 			const styleUrl = 'src/assets/colorful.json';
-			fetch(styleUrl)
-				.then(response => response.text())
-				.then(text => {
-					const style = JSON.parse(text);
-					olms.applyStyle(layer, style, 'versatiles-shortbread')
+			let stylePromise = fetch(styleUrl)
+				.then(response => response.json())
+				.then(style => {
+					return olms.applyStyle(colorfulLayer, style, 'colorful-style')
 						.then(() => console.log('Colorful style applied successfully for OSM Shortbread.'))
 						.catch(err => console.error('Error applying Colorful style for OSM Shortbread:', err));
 				}).catch(err => {
 					console.error('Failed to load or apply colorful.json for OSM Shortbread:', err);
 				});
-			return layer;
+			return colorfulLayer;
 		})(),
 		
 
 						(function() {
-			const layer = new ol.layer.VectorTile({
+			const neutrinoLayer = new ol.layer.VectorTile({
 				title: 'OSM Shortbread Neutrino',
 				iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
 				visible: false,
@@ -268,28 +221,28 @@ var config = {
 					tilePixelRatio: 1,
 					tileGrid: ol.tilegrid.createXYZ({
 						minZoom: 0,
-						maxZoom: 14 // Preserving this zoom for this layer
+						maxZoom: 14
 					}),
 					format: new ol.format.MVT(),
 					url: 'https://vector.openstreetmap.org/shortbread_v1/{z}/{x}/{y}.mvt',
 					attributions: [
 						'<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>'
 					]
-				})
+				}),
+				declutter: true
 			});
 
 			const styleUrl = 'src/assets/neutrino.json';
-			fetch(styleUrl)
-				.then(response => response.text())
-				.then(text => {
-					const style = JSON.parse(text);
-					olms.applyStyle(layer, style, 'versatiles-shortbread-neutrino')
+			let stylePromise = fetch(styleUrl)
+				.then(response => response.json())
+				.then(style => {
+					return olms.applyStyle(neutrinoLayer, style, 'neutrino-style')
 						.then(() => console.log('Neutrino style applied successfully for OSM Shortbread.'))
 						.catch(err => console.error('Error applying Neutrino style for OSM Shortbread:', err));
 				}).catch(err => {
 					console.error('Failed to load or apply neutrino.json for OSM Shortbread:', err);
 				});
-			return layer;
+			return neutrinoLayer;
 		})(),
 		
 		new ol.layer.Tile({
