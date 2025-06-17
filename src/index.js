@@ -236,6 +236,23 @@ $(function () {
         // Show the selected base layer
         if (layerObj._olLayerGroup && layerObj._olLayerGroup.setVisible) {
             layerObj._olLayerGroup.setVisible(true);
+            // Re-apply the correct style if it's Colorful or Neutrino
+            var title = layerObj.title || (layerObj._olLayerGroup.get && layerObj._olLayerGroup.get('title'));
+            if (title === 'OSM Shortbread Colorful') {
+                fetch('src/assets/colorful.json')
+                    .then(response => response.text())
+                    .then(text => {
+                        const style = JSON.parse(text);
+                        olms.applyStyle(layerObj._olLayerGroup, style, 'versatiles-shortbread');
+                    });
+            } else if (title === 'OSM Shortbread Neutrino') {
+                fetch('src/assets/neutrino.json')
+                    .then(response => response.text())
+                    .then(text => {
+                        const style = JSON.parse(text);
+                        olms.applyStyle(layerObj._olLayerGroup, style, 'versatiles-shortbread-neutrino');
+                    });
+            }
         }
         // Update the UI to reflect the active layer
         var $list = $('#layer-list');
