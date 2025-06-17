@@ -245,6 +245,40 @@ var config = {
 			return neutrinoLayer;
 		})(),
 		
+						(function() {
+			const customLayer = new ol.layer.VectorTile({
+				title: 'OSM Customyopaseopor',
+				iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
+				visible: false,
+				opacity: 1.0,
+				source: new ol.source.VectorTile({
+					tilePixelRatio: 1,
+					tileGrid: ol.tilegrid.createXYZ({
+						minZoom: 0,
+						maxZoom: 14
+					}),
+					format: new ol.format.MVT(),
+					url: 'https://vector.openstreetmap.org/shortbread_v1/{z}/{x}/{y}.mvt',
+					attributions: [
+						'<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>'
+					]
+				}),
+				declutter: true
+			});
+
+			const styleUrl = 'src/assets/customyopaseopor.json';
+			fetch(styleUrl)
+				.then(response => response.json())
+				.then(style => {
+					return olms.applyStyle(customLayer, style, 'customyopaseopor')
+						.then(() => console.log('Customyopaseopor style applied successfully for OSM Shortbread.'))
+						.catch(err => console.error('Error applying Customyopaseopor style for OSM Shortbread:', err));
+				}).catch(err => {
+					console.error('Failed to load or apply customyopaseopor.json for OSM Shortbread:', err);
+				});
+			return neutrinoLayer;
+		})(),
+		
 		new ol.layer.Tile({
 			title: 'OpenStreetMap',
 			iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
