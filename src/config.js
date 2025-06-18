@@ -43,6 +43,42 @@ var config = {
 	},
 	//@@ Mapas de fondo
 	layers: [
+			(function() {
+			const layer = new ol.layer.VectorTile({
+				title: 'MapTiler Mapnik',
+				iconSrc: imgSrc + 'icones_web/maptiler_logo.png',
+				visible: false,
+				opacity: 1.0,
+				source: new ol.source.VectorTile({
+					tilePixelRatio: 1,
+					tileGrid: ol.tilegrid.createXYZ({
+						minZoom: 0,
+						maxZoom: 14 // Preserving this zoom for this layer
+					}),
+					format: new ol.format.MVT(),
+					url: 'https://api.maptiler.com/tiles/v3/{z}/{x}/{y}.pbf?key=Faz9gJu55zrWejNF55oZ',
+					attributions: [
+						'<a href="https://www.maptiler.com/copyright/" target="_blank">MapTiler</a>',
+						'<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>'
+					]
+				})
+			});
+
+			const styleUrl = 'src/assets/openstreetmap.json';
+			const apiKey = 'Faz9gJu55zrWejNF55oZ';
+			fetch(styleUrl)
+				.then(response => response.text())
+				.then(text => {
+					const style = JSON.parse(text.replace(/{key}/g, apiKey));
+					olms.applyStyle(layer, style, 'openmaptiles')
+						.then(() => console.log('MapTiler style applied successfully for MapTiler Basic.'))
+						.catch(err => console.error('Error applying MapTiler style for MapTiler Basic:', err));
+				}).catch(err => {
+					console.error('Failed to load or apply style.json for MapTiler Basic:', err);
+				});
+			return layer;
+		})(),
+		
 		// MapTiler Vector Tile Layer with custom style URL using v3-openmaptiles
 		new ol.layer.VectorTile({
 			title: 'MapTiler Openmaptiles',
