@@ -198,7 +198,7 @@ var config = {
 				declutter: true
 			});
 
-			const styleUrl = 'src/assets/colorful.json';
+			const styleUrl = 'src/assets/versatilescolorful.json';
 			fetch(styleUrl)
 				.then(response => response.json())
 				.then(style => {
