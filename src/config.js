@@ -179,7 +179,7 @@ var config = {
 		
 				(function() {
 			const colorfulLayer = new ol.layer.VectorTile({
-				title: 'OSM Shortbread Colorful2',
+				title: 'Versatiles colorful',
 				iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
 				visible: true,
 				opacity: 1.0,
