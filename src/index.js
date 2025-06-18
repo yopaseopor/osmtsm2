@@ -814,7 +814,9 @@ $(function () {
 	var selectedFeature = null;
 	map.on('pointermove', function (evt) {
 		if (selectedFeature !== null) {
-			selectedFeature.setStyle(undefined);
+			if (typeof selectedFeature.setStyle === 'function') {
+                selectedFeature.setStyle(undefined);
+            }
 			selectedFeature = null;
 			$('#map').css('cursor', 'grab');
 		}
