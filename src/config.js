@@ -211,40 +211,7 @@ var config = {
 			return colorfulLayer;
 		})(),
 		
-						(function() {
-			const colorfulLayer = new ol.layer.VectorTile({
-				title: 'OSM Shortbread Colorful',
-				iconSrc: imgSrc + 'icones_web/osm_logo-layer.svg',
-				visible: true,
-				opacity: 1.0,
-				source: new ol.source.VectorTile({
-					tilePixelRatio: 1,
-					tileGrid: ol.tilegrid.createXYZ({
-						minZoom: 0,
-						maxZoom: 14
-					}),
-					format: new ol.format.MVT(),
-					url: 'https://vector.openstreetmap.org/shortbread_v1/{z}/{x}/{y}.mvt',
-					attributions: [
-						'<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>'
-					]
-				}),
-				declutter: true
-			});
-
-			const styleUrl = 'src/assets/versatilescolorful.json';
-			fetch(styleUrl)
-				.then(response => response.json())
-				.then(style => {
-					return olms.applyStyle(colorfulLayer, style, 'versatiles-shortbread')
-						.then(() => console.log('Colorful style applied successfully for OSM Shortbread.'))
-						.catch(err => console.error('Error applying Colorful style for OSM Shortbread:', err));
-				}).catch(err => {
-					console.error('Failed to load or apply colorful.json for OSM Shortbread:', err);
-				});
-			return colorfulLayer;
-		})(),
-		
+	
 
 						(function() {
 			const neutrinoLayer = new ol.layer.VectorTile({
