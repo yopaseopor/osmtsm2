@@ -1071,7 +1071,7 @@
 						"paint": {
 				"line-color": "#C70039",
 				"line-dasharray": [ 1, 0.3 ],
-				"line-width": { "stops": [ [ 5, 0 ], [ 6, 2 ], [ 10, 5 ], [ 14, 5 ], [ 16, 14 ], [ 18, 38 ], [ 19, 84 ], [ 20, 168 ] ] },
+				"line-width": { "stops": [ [9, 2 ], [ 10, 5 ], [ 14, 5 ], [ 16, 14 ], [ 18, 38 ], [ 19, 84 ], [ 20, 168 ] ] },
 				"line-opacity": 0.5
 			},
 			"layout": {
@@ -1088,7 +1088,7 @@
 						"paint": {
 				"line-color": "#C70039",
 				"line-dasharray": [ 1, 0.3 ],
-				"line-width": { "stops": [ [ 5, 0 ], [ 6, 2 ], [ 10, 5 ], [ 14, 5 ], [ 16, 14 ], [ 18, 38 ], [ 19, 84 ], [ 20, 168 ] ] },
+				"line-width": { "stops": [ [9, 2 ], [ 10, 5 ], [ 14, 5 ], [ 16, 14 ], [ 18, 38 ], [ 19, 84 ], [ 20, 168 ] ] },
 				"line-opacity": 0.75
 			},
 			"layout": {
@@ -1104,7 +1104,7 @@
 			"filter": [ "all", [ "!=", "bridge", true ], [ "!=", "tunnel", true ], [ "in", "kind", "primary" ], [ "!=", "link", true ] ],
 			"paint": {
 				"line-color": "#C70039",
-				"line-width": { "stops": [ [ 5, 0 ], [ 6, 1 ], [ 10, 4 ], [ 14, 4 ], [ 16, 12 ], [ 18, 36 ], [ 19, 80 ], [ 20, 160 ] ] },
+				"line-width": { "stops": [ [9, 1 ], [ 10, 4 ], [ 14, 4 ], [ 16, 12 ], [ 18, 36 ], [ 19, 80 ], [ 20, 160 ] ] },
 				"line-opacity": { "stops": [ [ 5, 0 ], [ 6, 1 ] ] }
 			},
 			"layout": {
@@ -1121,7 +1121,7 @@
 						"paint": {
 				"line-color": "#C70039",
 				"line-dasharray": [ 1, 0.3 ],
-				"line-width": { "stops": [ [ 5, 0 ], [ 6, 2 ], [ 10, 5 ], [ 14, 5 ], [ 16, 14 ], [ 18, 38 ], [ 19, 84 ], [ 20, 168 ] ] },
+				"line-width": { "stops": [ [ 9, 2 ], [ 10, 5 ], [ 14, 5 ], [ 16, 14 ], [ 18, 38 ], [ 19, 84 ], [ 20, 168 ] ] },
 				"line-opacity": 0.5
 			},
 			"layout": {
@@ -1138,7 +1138,7 @@
 						"paint": {
 				"line-color": "#C70039",
 				"line-dasharray": [ 1, 0.3 ],
-				"line-width": { "stops": [ [ 5, 0 ], [ 6, 2 ], [ 10, 5 ], [ 14, 5 ], [ 16, 14 ], [ 18, 38 ], [ 19, 84 ], [ 20, 168 ] ] },
+				"line-width": { "stops": [ [ 9, 2 ], [ 10, 5 ], [ 14, 5 ], [ 16, 14 ], [ 18, 38 ], [ 19, 84 ], [ 20, 168 ] ] },
 				"line-opacity": 0.75
 			},
 			"layout": {
@@ -1154,7 +1154,7 @@
 			"filter": [ "all", [ "!=", "bridge", true ], [ "!=", "tunnel", true ], [ "in", "kind", "primary" ], [ "==", "link", true ] ],
 			"paint": {
 				"line-color": "#C70039",
-				"line-width": { "stops": [ [ 5, 0 ], [ 6, 1 ], [ 10, 4 ], [ 14, 4 ], [ 16, 12 ], [ 18, 36 ], [ 19, 80 ], [ 20, 160 ] ] },
+				"line-width": { "stops": [ [9, 1 ], [ 10, 4 ], [ 14, 4 ], [ 16, 12 ], [ 18, 36 ], [ 19, 80 ], [ 20, 160 ] ] },
 				"line-opacity": { "stops": [ [ 5, 0 ], [ 6, 1 ] ] }
 			},
 			"layout": {
@@ -1173,7 +1173,7 @@
 				"text-font": [ "arial" ],
 				"symbol-placement": "line",
 				"text-anchor": "center",
-				"text-size": { "stops": [ [ 11, 8 ],[ 14, 10 ], [ 18, 12 ], [ 20, 16 ] ] }
+				"text-size": { "stops": [ [ 10, 8 ],[ 14, 10 ], [ 18, 12 ], [ 20, 16 ] ] }
 			},
 			"paint": {
 				"icon-color": "#ffffff",
@@ -1184,7 +1184,7 @@
 				"text-background-color": "#C70039",
 				"text-background-shape": "rectangle"
 			},
-			"minzoom": 11
+			"minzoom": 10
 		},
 		{
 			"source": "customyopaseopor",
