@@ -190,7 +190,7 @@ var config = {
 						maxZoom: 14
 					}),
 					format: new ol.format.MVT(),
-					url: 'https://tiles.versatiles.org/tiles/osm/{z}/{x}/{y}',
+					url: 'https://vector.openstreetmap.org/shortbread_v1/{z}/{x}/{y}.mvt',
 					attributions: [
 						'<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>'
 					]
