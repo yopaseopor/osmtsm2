@@ -831,7 +831,9 @@ $(function () {
 					originalStyle = new ol.style.Style(originalStyle);
 				}
 			}
-			feature.setStyle(originalStyle);
+			if (feature && typeof feature.setStyle === 'function') {
+				feature.setStyle(originalStyle);
+			}
 			$('#map').css('cursor', 'pointer');
 			return true;
 		});
