@@ -12,7 +12,7 @@
 			"type": "vector",
 			"url": "https://vector.openstreetmap.org/shortbread_v1/{z}/{x}/{y}.mvt"
 		}
-	}
+	},
   "sprite": [
     {
       "id": "basics",
