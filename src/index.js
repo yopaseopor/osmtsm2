@@ -443,10 +443,10 @@ $(function () {
 
 
 	var layersControlBuild = function () {
-		var overlayIndex = 0,
+		var visibleLayer,
+			previousLayer,
 			layerIndex = 0,
-			previousLayer = null,
-			visibleLayer = null, // Initialize visibleLayer
+			overlayIndex = 0,
 			container = $('<div>').addClass('osmcat-menu'),
 			layerDiv = $('<div>').addClass('osmcat-layer'),
 			overlaySelect = $('<select>').addClass('osmcat-select').on('change', function () {
@@ -460,24 +460,6 @@ $(function () {
 				content.toggle();
 			}),
 			content = $('<div>').addClass('osmcat-content');
-
-		// Find initially visible layer
-		config.layers.forEach(layer => {
-			if (layer.get('type') !== 'overlay' && layer.getVisible()) {
-				visibleLayer = layer;
-			}
-		});
-
-		// If no layer is visible, make the first non-overlay layer visible
-		if (!visibleLayer) {
-			for (let layer of config.layers) {
-				if (layer.get('type') !== 'overlay') {
-					layer.setVisible(true);
-					visibleLayer = layer;
-					break;
-				}
-			}
-		}
 
 		config.layers.forEach(layer => {
 			if (layer.get('type') === 'overlay') {
@@ -525,18 +507,16 @@ $(function () {
 						if (visible) { //Show the previous layer
 							if (previousLayer) {
 								baseLayerIndex = previousLayer.get('layerIndex');
-								layer.setVisible(false);
-								previousLayer.setVisible(true);
+								layer.setVisible(!visible);
+								previousLayer.setVisible(visible);
 								visibleLayer = previousLayer;
 								previousLayer = layer;
 							}
 						} else { //Active the selected layer and hide the current layer
 							baseLayerIndex = layer.get('layerIndex');
-							if (visibleLayer) {
-								visibleLayer.setVisible(false);
-								previousLayer = visibleLayer;
-							}
-							layer.setVisible(true);
+							layer.setVisible(!visible);
+							visibleLayer.setVisible(visible);
+							previousLayer = visibleLayer;
 							visibleLayer = layer;
 						}
 						updatePermalink();
@@ -831,78 +811,6 @@ $(function () {
 		updatePermalink();
 	});
 
-	// Add hover highlight functionality
-	var selectedFeatureId = null;
-	var hoveredFeatures = [];
-
-	// Function to create highlight style for a feature
-	function createHighlightStyle(originalStyle) {
-		if (!originalStyle || !originalStyle[0]) return null;
-		
-		return new ol.style.Style({
-			fill: new ol.style.Fill({
-				color: 'rgba(255,255,255,0.4)'
-			}),
-			stroke: new ol.style.Stroke({
-				color: '#3399CC',
-				width: originalStyle[0].getStroke() ? 
-					   originalStyle[0].getStroke().getWidth() + 2 : 3
-			})
-		});
-	}
-
-	map.on('pointermove', function(evt) {
-		if (evt.dragging) {
-			return;
-		}
-
-		const pixel = evt.pixel;
-		const coordinate = evt.coordinate;
-		let hit = false;
-
-		// Reset styles of previously hovered features
-		hoveredFeatures.forEach(function(hoveredFeature) {
-			if (hoveredFeature.layer && hoveredFeature.feature) {
-				hoveredFeature.layer.changed();
-			}
-		});
-		hoveredFeatures = [];
-
-		map.forEachFeatureAtPixel(pixel, function(feature, layer) {
-			if (feature && layer) {
-				hit = true;
-				
-				// Store the feature ID if it has one
-				const featureId = feature.getId ? feature.getId() : null;
-				if (featureId !== selectedFeatureId) {
-					selectedFeatureId = featureId;
-
-					// For vector tile layers, we trigger a style change
-					if (layer instanceof ol.layer.VectorTile) {
-						const originalStyle = feature.getStyle ? feature.getStyle() : layer.getStyle();
-						const highlightStyle = createHighlightStyle(Array.isArray(originalStyle) ? originalStyle : [originalStyle]);
-						
-						if (highlightStyle) {
-							hoveredFeatures.push({
-								feature: feature,
-								layer: layer
-							});
-							layer.changed(); // Trigger style refresh
-						}
-					}
-				}
-				return true;
-			}
-			return false;
-		});
-
-		if (!hit) {
-			selectedFeatureId = null;
-		}
-
-		map.getTargetElement().style.cursor = hit ? 'pointer' : 'grab';
-	});
-
 	var selectedFeature = null;
 	map.on('pointermove', function (evt) {
 		if (selectedFeature !== null) {
@@ -912,6 +820,18 @@ $(function () {
 		}
 		map.forEachFeatureAtPixel(evt.pixel, function (feature) {
 			selectedFeature = feature;
+			// Get the original style
+			let originalStyle = feature.getStyle ? feature.getStyle() : null;
+			// If the style is a plain object (from JSON), convert it
+			if (originalStyle && !(originalStyle instanceof ol.style.Style)) {
+				// If it's an array, convert each element
+				if (Array.isArray(originalStyle)) {
+					originalStyle = originalStyle.map(s => (s instanceof ol.style.Style) ? s : new ol.style.Style(s));
+				} else {
+					originalStyle = new ol.style.Style(originalStyle);
+				}
+			}
+			feature.setStyle(originalStyle);
 			$('#map').css('cursor', 'pointer');
 			return true;
 		});
