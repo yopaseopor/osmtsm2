@@ -3,12 +3,12 @@
   "name": "versatiles-colorful",
   "metadata": {
     "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-    "maputnik:renderer": "mlgljs"
+    "maputnik:renderer": "mbgljs"
   },
   "sources": {
     "versatiles-shortbread": {
       "attribution": "© <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors",
-      "tiles": ["https://tiles.versatiles.org/tiles/osm/{z}/{x}/{y}"],
+      "tiles": ["https://vector.openstreetmap.org/shortbread_v1/{z}/{x}/{y}.mvt"],
       "type": "vector",
       "scheme": "xyz",
       "bounds": [-180, -85.0511287798066, 180, 85.0511287798066],
