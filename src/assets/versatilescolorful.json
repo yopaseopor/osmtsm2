@@ -3,7 +3,7 @@
   "name": "versatiles-colorful",
   "metadata": {
     "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-    "maputnik:renderer": "mlgljs"
+    "maputnik:renderer": "mbgljs"
   },
   "sources": {
     "versatiles-shortbread": {
