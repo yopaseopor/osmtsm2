@@ -5,6 +5,8 @@
     "license": "https://creativecommons.org/publicdomain/zero/1.0/",
     "maputnik:renderer": "mbgljs"
   },
+    "glyphs": "https://tiles.versatiles.org/assets/glyphs/{fontstack}/{range}.pbf",
+		"sprite": "https://tiles.versatiles.org/assets/sprites/basics/sprites",
   "sources": {
     "versatiles-shortbread": {
       "attribution": "© <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors",
