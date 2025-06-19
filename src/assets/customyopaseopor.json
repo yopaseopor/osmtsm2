@@ -1045,7 +1045,7 @@
 				"text-background-color": "#900C3F",
 				"text-background-shape": "rectangle"
 			},
-			"minzoom": 11
+			"minzoom": 10
 		},
 		{
 			"source": "customyopaseopor",
