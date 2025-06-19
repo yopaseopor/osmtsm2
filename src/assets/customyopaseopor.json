@@ -1469,7 +1469,7 @@
 		{
 			"source": "customyopaseopor",
 			"id": "tunnel-street-unclassified-link:outline",
-			"minzoom": 14,
+			"minzoom": 11,
 			"type": "line",
 			"source-layer": "streets",
 			"filter": [ "all", [ "==", "tunnel", true ], [ "in", "kind", "unclassified" ], [ "==", "link", true ] ],
@@ -1486,7 +1486,7 @@
 		{
 			"source": "customyopaseopor",
 			"id": "tunnel-street-unclassified",
-			"minzoom": 14,
+			"minzoom": 11,
 			"type": "line",
 			"source-layer": "streets",
 			"filter": [ "all", [ "==", "tunnel", true ], [ "in", "kind", "unclassified" ], [ "!=", "link", true ] ],
@@ -1504,7 +1504,7 @@
 		{
 			"source": "customyopaseopor",
 			"id": "bridge-street-unclassified",
-			"minzoom": 14,
+			"minzoom": 11,
 			"type": "line",
 			"source-layer": "streets",
 			"filter": [ "all", [ "==", "bridge", true ], [ "in", "kind", "unclassified" ], [ "!=", "link", true ] ],
@@ -1522,7 +1522,7 @@
 		{
 			"source": "customyopaseopor",
 			"id": "street-unclassified",
-			"minzoom": 14,
+			"minzoom": 11,
 			"type": "line",
 			"source-layer": "streets",
 			"filter": [ "all", [ "!=", "bridge", true ], [ "!=", "tunnel", true ], [ "in", "kind", "unclassified" ], [ "!=", "link", true ] ],
@@ -1539,7 +1539,7 @@
 		{
 			"source": "customyopaseopor",
 			"id": "tunnel-street-unclassifiedlink",
-			"minzoom": 14,
+			"minzoom": 11,
 			"type": "line",
 			"source-layer": "streets",
 			"filter": [ "all", [ "==", "tunnel", true ], [ "in", "kind", "unclassified" ], [ "==", "link", true ] ],
@@ -1557,7 +1557,7 @@
 		{
 			"source": "customyopaseopor",
 			"id": "bridge-street-unclassifiedlink",
-			"minzoom": 14,
+			"minzoom": 11,
 			"type": "line",
 			"source-layer": "streets",
 			"filter": [ "all", [ "==", "bridge", true ], [ "in", "kind", "unclassified" ], [ "==", "link", true ] ],
@@ -1575,7 +1575,7 @@
 		{
 			"source": "customyopaseopor",
 			"id": "street-unclassifiedlink",
-			"minzoom": 14,
+			"minzoom": 11,
 			"type": "line",
 			"source-layer": "streets",
 			"filter": [ "all", [ "!=", "bridge", true ], [ "!=", "tunnel", true ], [ "in", "kind", "unclassified" ], [ "==", "link", true ] ],
