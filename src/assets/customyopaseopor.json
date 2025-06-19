@@ -1074,7 +1074,7 @@
 						"paint": {
 				"line-color": "#C70039",
 				"line-dasharray": [ 1, 0.3 ],
-				"line-width": { "stops": [[ 8, 5 ], [ 14, 5 ], [ 16, 14 ], [ 18, 38 ], [ 19, 84 ], [ 20, 168 ] ] },
+				"line-width": { "stops": [[ 8, 2 ], [ 14, 5 ], [ 16, 14 ], [ 18, 38 ], [ 19, 84 ], [ 20, 168 ] ] },
 				"line-opacity": 0.5
 			},
 			"layout": {
@@ -1092,7 +1092,7 @@
 						"paint": {
 				"line-color": "#C70039",
 				"line-dasharray": [ 1, 0.3 ],
-				"line-width": { "stops": [[ 8, 5 ], [ 14, 5 ], [ 16, 14 ], [ 18, 38 ], [ 19, 84 ], [ 20, 168 ] ] },
+				"line-width": { "stops": [[ 8, 2 ], [ 14, 5 ], [ 16, 14 ], [ 18, 38 ], [ 19, 84 ], [ 20, 168 ] ] },
 				"line-opacity": 0.75
 			},
 			"layout": {
@@ -1109,7 +1109,7 @@
 			"filter": [ "all", [ "!=", "bridge", true ], [ "!=", "tunnel", true ], [ "in", "kind", "primary" ], [ "!=", "link", true ] ],
 			"paint": {
 				"line-color": "#C70039",
-				"line-width": { "stops": [[ 8, 4 ], [ 14, 4 ], [ 16, 12 ], [ 18, 36 ], [ 19, 80 ], [ 20, 160 ] ] },
+				"line-width": { "stops": [[ 8, 2 ], [ 14, 4 ], [ 16, 12 ], [ 18, 36 ], [ 19, 80 ], [ 20, 160 ] ] },
 				"line-opacity": { "stops": [ [ 5, 0 ], [ 6, 1 ] ] }
 			},
 			"layout": {
@@ -1127,7 +1127,7 @@
 						"paint": {
 				"line-color": "#C70039",
 				"line-dasharray": [ 1, 0.3 ],
-				"line-width": { "stops": [[ 8, 5 ], [ 14, 5 ], [ 16, 14 ], [ 18, 38 ], [ 19, 84 ], [ 20, 168 ] ] },
+				"line-width": { "stops": [[ 8, 2 ], [ 14, 5 ], [ 16, 14 ], [ 18, 38 ], [ 19, 84 ], [ 20, 168 ] ] },
 				"line-opacity": 0.5
 			},
 			"layout": {
@@ -1145,7 +1145,7 @@
 						"paint": {
 				"line-color": "#C70039",
 				"line-dasharray": [ 1, 0.3 ],
-				"line-width": { "stops": [[ 8, 5 ], [ 14, 5 ], [ 16, 14 ], [ 18, 38 ], [ 19, 84 ], [ 20, 168 ] ] },
+				"line-width": { "stops": [[ 8, 2 ], [ 14, 5 ], [ 16, 14 ], [ 18, 38 ], [ 19, 84 ], [ 20, 168 ] ] },
 				"line-opacity": 0.75
 			},
 			"layout": {
@@ -1162,7 +1162,7 @@
 			"filter": [ "all", [ "!=", "bridge", true ], [ "!=", "tunnel", true ], [ "in", "kind", "primary" ], [ "==", "link", true ] ],
 			"paint": {
 				"line-color": "#C70039",
-				"line-width": { "stops": [[ 8, 4 ], [ 14, 10 ], [ 16, 12 ], [ 18, 36 ], [ 19, 80 ], [ 20, 160 ] ] },
+				"line-width": { "stops": [[ 8, 2 ], [ 14, 10 ], [ 16, 12 ], [ 18, 36 ], [ 19, 80 ], [ 20, 160 ] ] },
 				"line-opacity": { "stops": [ [ 5, 0 ], [ 6, 1 ] ] }
 			},
 			"layout": {
