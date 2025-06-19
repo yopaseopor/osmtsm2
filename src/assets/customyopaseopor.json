@@ -1321,7 +1321,7 @@
 				"text-font": [ "arial" ],
 				"symbol-placement": "line",
 				"text-anchor": "center",
-				"text-size": { "stops": [[ 12, 8 ], [ 14, 10 ], [ 18, 12 ], [ 20, 16 ] ] }
+				"text-size": { "stops": [[ 9, 8 ], [ 14, 10 ], [ 18, 12 ], [ 20, 16 ] ] }
 			},
 			"paint": {
 				"icon-color": "#ffffff",
