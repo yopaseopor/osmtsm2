@@ -1330,6 +1330,7 @@
 			"source": "customyopaseopor",
 			"id": "tunnel-street-tertiary-link:outline",
 			"type": "line",
+			"minzoom": 11,
 			"source-layer": "streets",
 			"filter": [ "all", [ "==", "tunnel", true ], [ "in", "kind", "tertiary" ], [ "==", "link", true ] ],
 			"paint": {
@@ -1346,6 +1347,7 @@
 			"source": "customyopaseopor",
 			"id": "tunnel-street-tertiary",
 			"type": "line",
+			"minzoom": 11,
 			"source-layer": "streets",
 			"filter": [ "all", [ "==", "tunnel", true ], [ "in", "kind", "tertiary" ], [ "!=", "link", true ] ],
 						"paint": {
@@ -1363,6 +1365,7 @@
 			"source": "customyopaseopor",
 			"id": "bridge-street-tertiary",
 			"type": "line",
+			"minzoom": 11,
 			"source-layer": "streets",
 			"filter": [ "all", [ "==", "bridge", true ], [ "in", "kind", "tertiary" ], [ "!=", "link", true ] ],
 						"paint": {
@@ -1379,6 +1382,7 @@
 		{
 			"source": "customyopaseopor",
 			"id": "street-tertiary",
+			"minzoom": 11,
 			"type": "line",
 			"source-layer": "streets",
 			"filter": [ "all", [ "!=", "bridge", true ], [ "!=", "tunnel", true ], [ "in", "kind", "tertiary" ], [ "!=", "link", true ] ],
@@ -1395,6 +1399,7 @@
 		{
 			"source": "customyopaseopor",
 			"id": "tunnel-street-tertiarylink",
+			"minzoom": 11,
 			"type": "line",
 			"source-layer": "streets",
 			"filter": [ "all", [ "==", "tunnel", true ], [ "in", "kind", "tertiary" ], [ "==", "link", true ] ],
@@ -1412,6 +1417,7 @@
 		{
 			"source": "customyopaseopor",
 			"id": "bridge-street-tertiarylink",
+			"minzoom": 11,
 			"type": "line",
 			"source-layer": "streets",
 			"filter": [ "all", [ "==", "bridge", true ], [ "in", "kind", "tertiary" ], [ "==", "link", true ] ],
@@ -1429,6 +1435,7 @@
 		{
 			"source": "customyopaseopor",
 			"id": "street-tertiarylink",
+			"minzoom": 11,
 			"type": "line",
 			"source-layer": "streets",
 			"filter": [ "all", [ "!=", "bridge", true ], [ "!=", "tunnel", true ], [ "in", "kind", "tertiary" ], [ "==", "link", true ] ],
@@ -1464,7 +1471,7 @@
 				"text-background-color": "#FFC300",
 				"text-background-shape": "rectangle"
 			},
-			"minzoom": 14
+			"minzoom": 12
 		},
 		{
 			"source": "customyopaseopor",
