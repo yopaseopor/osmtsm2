@@ -291,7 +291,7 @@ var config = {
 				tilePixelRatio: 1,
 				tileGrid: ol.tilegrid.createXYZ({ 
                     minZoom: 0,
-                    maxZoom: 22 
+                    maxZoom: 14 
                 }),
 				format: new ol.format.MVT(),
 				url: 'https://vector.openstreetmap.org/shortbread_v1/{z}/{x}/{y}.mvt',
