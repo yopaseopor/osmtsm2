@@ -1328,7 +1328,7 @@
 				"text-font": [ "arial" ],
 				"symbol-placement": "line",
 				"text-anchor": "center",
-				"text-size": { "stops": [[ 9, 8 ], [ 14, 10 ], [ 18, 12 ], [ 20, 16 ] ] }
+				"text-size": { "stops": [[ 8, 8 ], [ 14, 10 ], [ 18, 12 ], [ 20, 16 ] ] }
 			},
 			"paint": {
 				"icon-color": "#ffffff",
@@ -1339,7 +1339,7 @@
 				"text-background-color": "#FF5733",
 				"text-background-shape": "rectangle"
 			},
-			"minzoom": 9
+			"minzoom": 8
 		},
 		{
 			"source": "customyopaseopor",
@@ -1473,7 +1473,7 @@
 			"layout": {
 				"text-field": "{ref}",
 				"text-font": [ "arial" ],
-				"symbol-placement": "line",
+				"symbol-placement": "point",
 				"text-anchor": "center",
 				"text-size": { "stops": [ [ 11, 10 ], [ 18, 12 ], [ 20, 16 ] ] }
 			},
