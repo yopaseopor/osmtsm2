@@ -2225,11 +2225,11 @@
 },
 		{
 			"source": "customyopaseopor",
-			"id": "tunnel-street-sidewalk-link:outline",
+			"id": "tunnel-street-footway-link:outline",
 			"minzoom": 11,
 			"type": "line",
 			"source-layer": "streets",
-			"filter": [ "all", [ "==", "tunnel", true ], [ "in", "kind", "sidewalk" ], [ "==", "link", true ] ],
+			"filter": [ "all", [ "==", "tunnel", true ], [ "in", "kind", "footway" ], [ "==", "link", true ] ],
 			"paint": {
 				"line-color": "#dedede",
 				"line-width": { "stops": [ [ 12, 2 ], [ 14, 3 ], [ 16, 6 ], [ 18, 26 ], [ 19, 64 ], [ 20, 128 ] ] },
@@ -2242,11 +2242,11 @@
 		},
 		{
 			"source": "customyopaseopor",
-			"id": "tunnel-street-sidewalk",
+			"id": "tunnel-street-footway",
 			"minzoom": 13,
 			"type": "line",
 			"source-layer": "streets",
-			"filter": [ "all", [ "==", "tunnel", true ], [ "in", "kind", "sidewalk" ], [ "!=", "link", true ] ],
+			"filter": [ "all", [ "==", "tunnel", true ], [ "in", "kind", "footway" ], [ "!=", "link", true ] ],
 						"paint": {
 				"line-color": "#dfdfdf",
 				"line-dasharray": [ 1, 0.3 ],
@@ -2260,11 +2260,11 @@
 		},
 		{
 			"source": "customyopaseopor",
-			"id": "bridge-street-sidewalk",
+			"id": "bridge-street-footway",
 			"minzoom": 13,
 			"type": "line",
 			"source-layer": "streets",
-			"filter": [ "all", [ "==", "bridge", true ], [ "in", "kind", "sidewalk" ], [ "!=", "link", true ] ],
+			"filter": [ "all", [ "==", "bridge", true ], [ "in", "kind", "footway" ], [ "!=", "link", true ] ],
 						"paint": {
 				"line-color": "#dfdfdf",
 				"line-dasharray": [ 1, 0.3 ],
@@ -2278,11 +2278,11 @@
 			},
 		{
 			"source": "customyopaseopor",
-			"id": "street-sidewalk",
+			"id": "street-footway",
 			"minzoom": 13,
 			"type": "line",
 			"source-layer": "streets",
-			"filter": [ "all", [ "!=", "bridge", true ], [ "!=", "tunnel", true ], [ "in", "kind", "sidewalk" ], [ "!=", "link", true ] ],
+			"filter": [ "all", [ "!=", "bridge", true ], [ "!=", "tunnel", true ], [ "in", "kind", "footway" ], [ "!=", "link", true ] ],
 			"paint": {
 				"line-color": "#dfdfdf",
 				"line-width": { "stops": [ [ 5, 0 ], [ 6, 0 ], [ 10, 2 ], [ 14, 4 ], [ 16, 8 ], [ 18, 24 ], [ 19, 60 ], [ 20, 100 ] ] },
@@ -2295,11 +2295,11 @@
 		},
 		{
 			"source": "customyopaseopor",
-			"id": "tunnel-street-sidewalklink",
+			"id": "tunnel-street-footwaylink",
 			"minzoom": 13,
 			"type": "line",
 			"source-layer": "streets",
-			"filter": [ "all", [ "==", "tunnel", true ], [ "in", "kind", "sidewalk" ], [ "==", "link", true ] ],
+			"filter": [ "all", [ "==", "tunnel", true ], [ "in", "kind", "footway" ], [ "==", "link", true ] ],
 						"paint": {
 				"line-color": "#dfdfdf",
 				"line-dasharray": [ 1, 0.3 ],
@@ -2313,11 +2313,11 @@
 		},
 		{
 			"source": "customyopaseopor",
-			"id": "bridge-street-sidewalklink",
+			"id": "bridge-street-footwaylink",
 			"minzoom": 13,
 			"type": "line",
 			"source-layer": "streets",
-			"filter": [ "all", [ "==", "bridge", true ], [ "in", "kind", "sidewalk" ], [ "==", "link", true ] ],
+			"filter": [ "all", [ "==", "bridge", true ], [ "in", "kind", "footway" ], [ "==", "link", true ] ],
 						"paint": {
 				"line-color": "#dfdfdf",
 				"line-dasharray": [ 1, 0.3 ],
@@ -2331,11 +2331,11 @@
 			},
 		{
 			"source": "customyopaseopor",
-			"id": "street-sidewalklink",
+			"id": "street-footwaylink",
 			"minzoom": 13,
 			"type": "line",
 			"source-layer": "streets",
-			"filter": [ "all", [ "!=", "bridge", true ], [ "!=", "tunnel", true ], [ "in", "kind", "sidewalk" ], [ "==", "link", true ] ],
+			"filter": [ "all", [ "!=", "bridge", true ], [ "!=", "tunnel", true ], [ "in", "kind", "footway" ], [ "==", "link", true ] ],
 			"paint": {
 				"line-color": "#dfdfdf",
 				"line-width": { "stops": [ [ 5, 0 ], [ 6, 0 ], [ 10, 2 ], [ 14, 4 ], [ 16, 8 ], [ 18, 24 ], [ 19, 60 ], [ 20, 100 ] ] },
@@ -2348,10 +2348,10 @@
 		},
 		{
 			"source": "customyopaseopor",
-			"id": "label-sidewalk-shield",
+			"id": "label-footway-shield",
 			"type": "symbol",
 			"source-layer": "street_labels",
-			"filter": [ "==", "kind", "sidewalk" ],
+			"filter": [ "==", "kind", "footway" ],
 			"layout": {
 				"text-field": "{ref}",
 				"text-font": [ "arial" ],
