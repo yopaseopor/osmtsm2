@@ -2075,6 +2075,153 @@
 				"text-background-shape": "rectangle"
 			},
 			"minzoom": 13
+},
+		{
+			"source": "customyopaseopor",
+			"id": "tunnel-street-pedestrian-link:outline",
+			"minzoom": 11,
+			"type": "line",
+			"source-layer": "streets",
+			"filter": [ "all", [ "==", "tunnel", true ], [ "in", "kind", "pedestrian" ], [ "==", "link", true ] ],
+			"paint": {
+				"line-color": "#dedede",
+				"line-width": { "stops": [ [ 12, 2 ], [ 14, 3 ], [ 16, 6 ], [ 18, 26 ], [ 19, 64 ], [ 20, 128 ] ] },
+				"line-opacity": { "stops": [ [ 12, 0 ], [ 13, 1 ] ] }
+			},
+			"layout": {
+				"line-join": "round",
+				"line-cap": "round"
+			}
+		},
+		{
+			"source": "customyopaseopor",
+			"id": "tunnel-street-pedestrian",
+			"minzoom": 13,
+			"type": "line",
+			"source-layer": "streets",
+			"filter": [ "all", [ "==", "tunnel", true ], [ "in", "kind", "pedestrian" ], [ "!=", "link", true ] ],
+						"paint": {
+				"line-color": "#dfdfdf",
+				"line-dasharray": [ 1, 0.3 ],
+				"line-width": { "stops": [ [ 5, 0 ], [ 6, 0 ], [ 10, 2 ], [ 14, 4 ], [ 16, 8 ], [ 18, 24 ], [ 19, 60 ], [ 20, 100 ] ] },
+				"line-opacity": 0.5
+			},
+			"layout": {
+				"line-join": "round",
+				"line-cap": "round"
+			}
+		},
+		{
+			"source": "customyopaseopor",
+			"id": "bridge-street-pedestrian",
+			"minzoom": 13,
+			"type": "line",
+			"source-layer": "streets",
+			"filter": [ "all", [ "==", "bridge", true ], [ "in", "kind", "pedestrian" ], [ "!=", "link", true ] ],
+						"paint": {
+				"line-color": "#dfdfdf",
+				"line-dasharray": [ 1, 0.3 ],
+				"line-width": { "stops": [ [ 5, 0 ], [ 6, 0 ], [ 10, 2 ], [ 14, 4 ], [ 16, 8 ], [ 18, 24 ], [ 19, 60 ], [ 20, 100 ] ] },
+				"line-opacity": 0.75
+			},
+			"layout": {
+				"line-join": "round",
+				"line-cap": "round"
+			}
+			},
+		{
+			"source": "customyopaseopor",
+			"id": "street-pedestrian",
+			"minzoom": 13,
+			"type": "line",
+			"source-layer": "streets",
+			"filter": [ "all", [ "!=", "bridge", true ], [ "!=", "tunnel", true ], [ "in", "kind", "pedestrian" ], [ "!=", "link", true ] ],
+			"paint": {
+				"line-color": "#dfdfdf",
+				"line-width": { "stops": [ [ 5, 0 ], [ 6, 0 ], [ 10, 2 ], [ 14, 4 ], [ 16, 8 ], [ 18, 24 ], [ 19, 60 ], [ 20, 100 ] ] },
+				"line-opacity": { "stops": [ [ 5, 0 ], [ 6, 1 ] ] }
+			},
+			"layout": {
+				"line-join": "round",
+				"line-cap": "round"
+			}
+		},
+		{
+			"source": "customyopaseopor",
+			"id": "tunnel-street-pedestrianlink",
+			"minzoom": 13,
+			"type": "line",
+			"source-layer": "streets",
+			"filter": [ "all", [ "==", "tunnel", true ], [ "in", "kind", "pedestrian" ], [ "==", "link", true ] ],
+						"paint": {
+				"line-color": "#dfdfdf",
+				"line-dasharray": [ 1, 0.3 ],
+				"line-width": { "stops": [ [ 5, 0 ], [ 6, 0 ], [ 10, 2 ], [ 14, 4 ], [ 16, 8 ], [ 18, 24 ], [ 19, 60 ], [ 20, 100 ] ] },
+				"line-opacity": 0.5
+			},
+			"layout": {
+				"line-join": "round",
+				"line-cap": "round"
+			}
+		},
+		{
+			"source": "customyopaseopor",
+			"id": "bridge-street-pedestrianlink",
+			"minzoom": 13,
+			"type": "line",
+			"source-layer": "streets",
+			"filter": [ "all", [ "==", "bridge", true ], [ "in", "kind", "pedestrian" ], [ "==", "link", true ] ],
+						"paint": {
+				"line-color": "#dfdfdf",
+				"line-dasharray": [ 1, 0.3 ],
+				"line-width": { "stops": [ [ 5, 0 ], [ 6, 0 ], [ 10, 2 ], [ 14, 4 ], [ 16, 8 ], [ 18, 24 ], [ 19, 60 ], [ 20, 100 ] ] },
+				"line-opacity": 0.75
+			},
+			"layout": {
+				"line-join": "round",
+				"line-cap": "round"
+			}
+			},
+		{
+			"source": "customyopaseopor",
+			"id": "street-pedestrianlink",
+			"minzoom": 13,
+			"type": "line",
+			"source-layer": "streets",
+			"filter": [ "all", [ "!=", "bridge", true ], [ "!=", "tunnel", true ], [ "in", "kind", "pedestrian" ], [ "==", "link", true ] ],
+			"paint": {
+				"line-color": "#dfdfdf",
+				"line-width": { "stops": [ [ 5, 0 ], [ 6, 0 ], [ 10, 2 ], [ 14, 4 ], [ 16, 8 ], [ 18, 24 ], [ 19, 60 ], [ 20, 100 ] ] },
+				"line-opacity": { "stops": [ [ 5, 0 ], [ 6, 1 ] ] }
+			},
+			"layout": {
+				"line-join": "round",
+				"line-cap": "round"
+			}
+		},
+		{
+			"source": "customyopaseopor",
+			"id": "label-pedestrian-shield",
+			"type": "symbol",
+			"source-layer": "street_labels",
+			"filter": [ "==", "kind", "pedestrian" ],
+			"layout": {
+				"text-field": "{ref}",
+				"text-font": [ "arial" ],
+				"symbol-placement": "line",
+				"text-anchor": "center",
+				"text-size": { "stops": [ [ 14, 10 ], [ 18, 12 ], [ 20, 16 ] ] }
+			},
+			"paint": {
+				"icon-color": "#ffffff",
+				"text-color": "#ffffff",
+				"text-halo-color": "#dfdfdf",
+				"text-halo-width": 2,
+				"text-halo-blur": 1,
+				"text-background-color": "#dfdfdf",
+				"text-background-shape": "rectangle"
+			},
+			"minzoom": 13
 		},
 		{
 			"source": "customyopaseopor",
