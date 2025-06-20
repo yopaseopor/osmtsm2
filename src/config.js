@@ -302,16 +302,7 @@ var config = {
 				crossOrigin: 'anonymous',
 				projection: 'EPSG:3857'
 			}),
-			// Basic style as fallback
-			style: new ol.style.Style({
-				fill: new ol.style.Fill({
-					color: 'rgba(200, 200, 200, 0.5)'
-				}),
-				stroke: new ol.style.Stroke({
-					color: '#3399CC',
-					width: 1.25
-				})
-			})
+			
 				}),
 		
 		new ol.layer.Tile({
