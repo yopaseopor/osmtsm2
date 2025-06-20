@@ -247,6 +247,24 @@ var config = {
 			return neutrinoLayer;
 		})(),
 		
+				new ol.layer.VectorTile({
+			title: 'OSM Shortbread',
+			iconSrc: imgSrc + 'icones_web/maptiler_logo.png',
+			visible: false,
+			opacity: 1.0,
+			source: new ol.source.VectorTile({
+				projection: 'EPSG:3857',
+				format: new ol.format.MVT(),
+				tileGrid: ol.tilegrid.createXYZ({
+					minZoom: 0,
+					maxZoom: 14
+				}),
+				url: 'https://vector.openstreetmap.org/shortbread_v1/{z}/{x}/{y}.mvt',
+					attributions: [
+						'<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>'
+					]
+			}),
+		
 						(function() {
 			const customLayer = new ol.layer.VectorTile({
 				title: 'OSM Customyopaseopor',
