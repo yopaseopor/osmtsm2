@@ -1634,7 +1634,155 @@
 				"text-background-shape": "rectangle"
 			},
 			"minzoom": 14
-		},		{
+				},
+		{
+			"source": "customyopaseopor",
+			"id": "tunnel-street-service-link:outline",
+			"minzoom": 11,
+			"type": "line",
+			"source-layer": "streets",
+			"filter": [ "all", [ "==", "tunnel", true ], [ "in", "kind", "service" ], [ "==", "link", true ] ],
+			"paint": {
+				"line-color": "#dedede",
+				"line-width": { "stops": [ [ 12, 2 ], [ 14, 3 ], [ 16, 6 ], [ 18, 26 ], [ 19, 64 ], [ 20, 128 ] ] },
+				"line-opacity": { "stops": [ [ 12, 0 ], [ 13, 1 ] ] }
+			},
+			"layout": {
+				"line-join": "round",
+				"line-cap": "round"
+			}
+		},
+		{
+			"source": "customyopaseopor",
+			"id": "tunnel-street-service",
+			"minzoom": 11,
+			"type": "line",
+			"source-layer": "streets",
+			"filter": [ "all", [ "==", "tunnel", true ], [ "in", "kind", "service" ], [ "!=", "link", true ] ],
+						"paint": {
+				"line-color": "#c4ff00",
+				"line-dasharray": [ 1, 0.3 ],
+				"line-width": { "stops": [ [ 5, 0 ], [ 6, 2 ], [ 10, 5 ], [ 14, 5 ], [ 16, 14 ], [ 18, 38 ], [ 19, 84 ], [ 20, 168 ] ] },
+				"line-opacity": 0.5
+			},
+			"layout": {
+				"line-join": "round",
+				"line-cap": "round"
+			}
+		},
+		{
+			"source": "customyopaseopor",
+			"id": "bridge-street-service",
+			"minzoom": 11,
+			"type": "line",
+			"source-layer": "streets",
+			"filter": [ "all", [ "==", "bridge", true ], [ "in", "kind", "service" ], [ "!=", "link", true ] ],
+						"paint": {
+				"line-color": "#c4ff00",
+				"line-dasharray": [ 1, 0.3 ],
+				"line-width": { "stops": [ [ 5, 0 ], [ 6, 2 ], [ 10, 5 ], [ 14, 5 ], [ 16, 14 ], [ 18, 38 ], [ 19, 84 ], [ 20, 168 ] ] },
+				"line-opacity": 0.75
+			},
+			"layout": {
+				"line-join": "round",
+				"line-cap": "round"
+			}
+			},
+		{
+			"source": "customyopaseopor",
+			"id": "street-service",
+			"minzoom": 11,
+			"type": "line",
+			"source-layer": "streets",
+			"filter": [ "all", [ "!=", "bridge", true ], [ "!=", "tunnel", true ], [ "in", "kind", "service" ], [ "!=", "link", true ] ],
+			"paint": {
+				"line-color": "#c4ff00",
+				"line-width": { "stops": [ [ 5, 0 ], [ 6, 1 ], [ 10, 3 ], [ 14, 4 ], [ 16, 12 ], [ 18, 36 ], [ 19, 80 ], [ 20, 160 ] ] },
+				"line-opacity": { "stops": [ [ 5, 0 ], [ 6, 1 ] ] }
+			},
+			"layout": {
+				"line-join": "round",
+				"line-cap": "round"
+			}
+		},
+		{
+			"source": "customyopaseopor",
+			"id": "tunnel-street-servicelink",
+			"minzoom": 11,
+			"type": "line",
+			"source-layer": "streets",
+			"filter": [ "all", [ "==", "tunnel", true ], [ "in", "kind", "service" ], [ "==", "link", true ] ],
+						"paint": {
+				"line-color": "#c4ff00",
+				"line-dasharray": [ 1, 0.3 ],
+				"line-width": { "stops": [ [ 5, 0 ], [ 6, 2 ], [ 10, 3 ], [ 14, 5 ], [ 16, 14 ], [ 18, 38 ], [ 19, 84 ], [ 20, 168 ] ] },
+				"line-opacity": 0.5
+			},
+			"layout": {
+				"line-join": "round",
+				"line-cap": "round"
+			}
+		},
+		{
+			"source": "customyopaseopor",
+			"id": "bridge-street-servicelink",
+			"minzoom": 11,
+			"type": "line",
+			"source-layer": "streets",
+			"filter": [ "all", [ "==", "bridge", true ], [ "in", "kind", "service" ], [ "==", "link", true ] ],
+						"paint": {
+				"line-color": "#c4ff00",
+				"line-dasharray": [ 1, 0.3 ],
+				"line-width": { "stops": [ [ 5, 0 ], [ 6, 2 ], [ 10, 3 ], [ 14, 5 ], [ 16, 14 ], [ 18, 38 ], [ 19, 84 ], [ 20, 168 ] ] },
+				"line-opacity": 0.75
+			},
+			"layout": {
+				"line-join": "round",
+				"line-cap": "round"
+			}
+			},
+		{
+			"source": "customyopaseopor",
+			"id": "street-servicelink",
+			"minzoom": 11,
+			"type": "line",
+			"source-layer": "streets",
+			"filter": [ "all", [ "!=", "bridge", true ], [ "!=", "tunnel", true ], [ "in", "kind", "service" ], [ "==", "link", true ] ],
+			"paint": {
+				"line-color": "#c4ff00",
+				"line-width": { "stops": [ [ 5, 0 ], [ 6, 1 ], [ 10, 3 ], [ 14, 5 ], [ 16, 12 ], [ 18, 36 ], [ 19, 80 ], [ 20, 160 ] ] },
+				"line-opacity": { "stops": [ [ 5, 0 ], [ 6, 1 ] ] }
+			},
+			"layout": {
+				"line-join": "round",
+				"line-cap": "round"
+			}
+		},
+		{
+			"source": "customyopaseopor",
+			"id": "label-service-shield",
+			"type": "symbol",
+			"source-layer": "street_labels",
+			"filter": [ "==", "kind", "service" ],
+			"layout": {
+				"text-field": "{ref}",
+				"text-font": [ "arial" ],
+				"symbol-placement": "line",
+				"text-anchor": "center",
+				"text-size": { "stops": [ [ 14, 10 ], [ 18, 12 ], [ 20, 16 ] ] }
+			},
+			"paint": {
+				"icon-color": "#ffffff",
+				"text-color": "#ffffff",
+				"text-halo-color": "#c4ff00",
+				"text-halo-width": 2,
+				"text-halo-blur": 1,
+				"text-background-color": "#c4ff00",
+				"text-background-shape": "rectangle"
+			},
+			"minzoom": 14
+		},
+		{
 			"source": "customyopaseopor",
 			"id": "label-street-pedestrian",
 			"type": "symbol",
