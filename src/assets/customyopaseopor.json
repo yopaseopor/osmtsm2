@@ -1802,7 +1802,7 @@
 		{
 			"source": "customyopaseopor",
 			"id": "tunnel-street-residential",
-			"minzoom": 11,
+			"minzoom": 13,
 			"type": "line",
 			"source-layer": "streets",
 			"filter": [ "all", [ "==", "tunnel", true ], [ "in", "kind", "residential" ], [ "!=", "link", true ] ],
@@ -1820,7 +1820,7 @@
 		{
 			"source": "customyopaseopor",
 			"id": "bridge-street-residential",
-			"minzoom": 11,
+			"minzoom": 13,
 			"type": "line",
 			"source-layer": "streets",
 			"filter": [ "all", [ "==", "bridge", true ], [ "in", "kind", "residential" ], [ "!=", "link", true ] ],
@@ -1838,7 +1838,7 @@
 		{
 			"source": "customyopaseopor",
 			"id": "street-residential",
-			"minzoom": 11,
+			"minzoom": 13,
 			"type": "line",
 			"source-layer": "streets",
 			"filter": [ "all", [ "!=", "bridge", true ], [ "!=", "tunnel", true ], [ "in", "kind", "residential" ], [ "!=", "link", true ] ],
@@ -1855,7 +1855,7 @@
 		{
 			"source": "customyopaseopor",
 			"id": "tunnel-street-residentiallink",
-			"minzoom": 11,
+			"minzoom": 13,
 			"type": "line",
 			"source-layer": "streets",
 			"filter": [ "all", [ "==", "tunnel", true ], [ "in", "kind", "residential" ], [ "==", "link", true ] ],
@@ -1873,7 +1873,7 @@
 		{
 			"source": "customyopaseopor",
 			"id": "bridge-street-residentiallink",
-			"minzoom": 11,
+			"minzoom": 13,
 			"type": "line",
 			"source-layer": "streets",
 			"filter": [ "all", [ "==", "bridge", true ], [ "in", "kind", "residential" ], [ "==", "link", true ] ],
@@ -1891,7 +1891,7 @@
 		{
 			"source": "customyopaseopor",
 			"id": "street-residentiallink",
-			"minzoom": 11,
+			"minzoom": 13,
 			"type": "line",
 			"source-layer": "streets",
 			"filter": [ "all", [ "!=", "bridge", true ], [ "!=", "tunnel", true ], [ "in", "kind", "residential" ], [ "==", "link", true ] ],
@@ -1927,7 +1927,7 @@
 				"text-background-color": "#606060",
 				"text-background-shape": "rectangle"
 			},
-			"minzoom": 14
+			"minzoom": 13
 		},
 		{
 			"source": "customyopaseopor",
