@@ -1660,7 +1660,7 @@
 			"source-layer": "streets",
 			"filter": [ "all", [ "==", "tunnel", true ], [ "in", "kind", "service" ], [ "!=", "link", true ] ],
 						"paint": {
-				"line-color": "#c4ff00",
+				"line-color": "#f0ffbf",
 				"line-dasharray": [ 1, 0.3 ],
 				"line-width": { "stops": [ [ 5, 0 ], [ 6, 0 ], [ 10, 2 ], [ 14, 4 ], [ 16, 8 ], [ 18, 24 ], [ 19, 60 ], [ 20, 100 ] ] },
 				"line-opacity": 0.5
@@ -1678,7 +1678,7 @@
 			"source-layer": "streets",
 			"filter": [ "all", [ "==", "bridge", true ], [ "in", "kind", "service" ], [ "!=", "link", true ] ],
 						"paint": {
-				"line-color": "#c4ff00",
+				"line-color": "#f0ffbf",
 				"line-dasharray": [ 1, 0.3 ],
 				"line-width": { "stops": [ [ 5, 0 ], [ 6, 0 ], [ 10, 2 ], [ 14, 4 ], [ 16, 8 ], [ 18, 24 ], [ 19, 60 ], [ 20, 100 ] ] },
 				"line-opacity": 0.75
@@ -1696,7 +1696,7 @@
 			"source-layer": "streets",
 			"filter": [ "all", [ "!=", "bridge", true ], [ "!=", "tunnel", true ], [ "in", "kind", "service" ], [ "!=", "link", true ] ],
 			"paint": {
-				"line-color": "#c4ff00",
+				"line-color": "#f0ffbf",
 				"line-width": { "stops": [ [ 5, 0 ], [ 6, 0 ], [ 10, 2 ], [ 14, 4 ], [ 16, 8 ], [ 18, 24 ], [ 19, 60 ], [ 20, 100 ] ] },
 				"line-opacity": { "stops": [ [ 5, 0 ], [ 6, 1 ] ] }
 			},
@@ -1713,7 +1713,7 @@
 			"source-layer": "streets",
 			"filter": [ "all", [ "==", "tunnel", true ], [ "in", "kind", "service" ], [ "==", "link", true ] ],
 						"paint": {
-				"line-color": "#c4ff00",
+				"line-color": "#f0ffbf",
 				"line-dasharray": [ 1, 0.3 ],
 				"line-width": { "stops": [ [ 5, 0 ], [ 6, 0 ], [ 10, 2 ], [ 14, 4 ], [ 16, 8 ], [ 18, 24 ], [ 19, 60 ], [ 20, 100 ] ] },
 				"line-opacity": 0.5
@@ -1731,7 +1731,7 @@
 			"source-layer": "streets",
 			"filter": [ "all", [ "==", "bridge", true ], [ "in", "kind", "service" ], [ "==", "link", true ] ],
 						"paint": {
-				"line-color": "#c4ff00",
+				"line-color": "#f0ffbf",
 				"line-dasharray": [ 1, 0.3 ],
 				"line-width": { "stops": [ [ 5, 0 ], [ 6, 0 ], [ 10, 2 ], [ 14, 4 ], [ 16, 8 ], [ 18, 24 ], [ 19, 60 ], [ 20, 100 ] ] },
 				"line-opacity": 0.75
@@ -1749,7 +1749,7 @@
 			"source-layer": "streets",
 			"filter": [ "all", [ "!=", "bridge", true ], [ "!=", "tunnel", true ], [ "in", "kind", "service" ], [ "==", "link", true ] ],
 			"paint": {
-				"line-color": "#c4ff00",
+				"line-color": "#f0ffbf",
 				"line-width": { "stops": [ [ 5, 0 ], [ 6, 0 ], [ 10, 2 ], [ 14, 4 ], [ 16, 8 ], [ 18, 24 ], [ 19, 60 ], [ 20, 100 ] ] },
 				"line-opacity": { "stops": [ [ 5, 0 ], [ 6, 1 ] ] }
 			},
@@ -1774,10 +1774,10 @@
 			"paint": {
 				"icon-color": "#ffffff",
 				"text-color": "#ffffff",
-				"text-halo-color": "#c4ff00",
+				"text-halo-color": "#f0ffbf",
 				"text-halo-width": 2,
 				"text-halo-blur": 1,
-				"text-background-color": "#c4ff00",
+				"text-background-color": "#f0ffbf",
 				"text-background-shape": "rectangle"
 			},
 			"minzoom": 14
