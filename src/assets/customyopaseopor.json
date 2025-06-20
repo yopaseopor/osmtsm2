@@ -2226,7 +2226,7 @@
 		{
 			"source": "customyopaseopor",
 			"id": "tunnel-street-footway-link:outline",
-			"minzoom": 11,
+			"minzoom": 16,
 			"type": "line",
 			"source-layer": "streets",
 			"filter": [ "all", [ "==", "tunnel", true ], [ "in", "kind", "footway" ], [ "==", "link", true ] ],
@@ -2243,7 +2243,7 @@
 		{
 			"source": "customyopaseopor",
 			"id": "tunnel-street-footway",
-			"minzoom": 13,
+			"minzoom": 16,
 			"type": "line",
 			"source-layer": "streets",
 			"filter": [ "all", [ "==", "tunnel", true ], [ "in", "kind", "footway" ], [ "!=", "link", true ] ],
@@ -2261,7 +2261,7 @@
 		{
 			"source": "customyopaseopor",
 			"id": "bridge-street-footway",
-			"minzoom": 13,
+			"minzoom": 16,
 			"type": "line",
 			"source-layer": "streets",
 			"filter": [ "all", [ "==", "bridge", true ], [ "in", "kind", "footway" ], [ "!=", "link", true ] ],
@@ -2279,7 +2279,7 @@
 		{
 			"source": "customyopaseopor",
 			"id": "street-footway",
-			"minzoom": 13,
+			"minzoom": 16,
 			"type": "line",
 			"source-layer": "streets",
 			"filter": [ "all", [ "!=", "bridge", true ], [ "!=", "tunnel", true ], [ "in", "kind", "footway" ], [ "!=", "link", true ] ],
@@ -2296,7 +2296,7 @@
 		{
 			"source": "customyopaseopor",
 			"id": "tunnel-street-footwaylink",
-			"minzoom": 13,
+			"minzoom": 16,
 			"type": "line",
 			"source-layer": "streets",
 			"filter": [ "all", [ "==", "tunnel", true ], [ "in", "kind", "footway" ], [ "==", "link", true ] ],
@@ -2314,7 +2314,7 @@
 		{
 			"source": "customyopaseopor",
 			"id": "bridge-street-footwaylink",
-			"minzoom": 13,
+			"minzoom": 16,
 			"type": "line",
 			"source-layer": "streets",
 			"filter": [ "all", [ "==", "bridge", true ], [ "in", "kind", "footway" ], [ "==", "link", true ] ],
@@ -2332,7 +2332,7 @@
 		{
 			"source": "customyopaseopor",
 			"id": "street-footwaylink",
-			"minzoom": 13,
+			"minzoom": 16,
 			"type": "line",
 			"source-layer": "streets",
 			"filter": [ "all", [ "!=", "bridge", true ], [ "!=", "tunnel", true ], [ "in", "kind", "footway" ], [ "==", "link", true ] ],
