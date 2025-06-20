@@ -1473,7 +1473,7 @@
 			"layout": {
 				"text-field": "{ref}",
 				"text-font": [ "arial" ],
-				"symbol-placement": "line-center",
+				"symbol-placement": "line",
 				"text-anchor": "center",
 				"text-size": { "stops": [ [ 11, 10 ], [ 18, 12 ], [ 20, 16 ] ] }
 			},
