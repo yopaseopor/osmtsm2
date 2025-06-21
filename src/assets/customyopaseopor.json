@@ -212,7 +212,7 @@
 				"line-width": { "stops": [ [ 9, 0 ], [ 10, 3 ], [ 15, 5 ], [ 17, 9 ], [ 18, 20 ], [ 20, 60 ] ] }
 			},
 			"layout": {
-				"line-cap": "bevel",
+				"line-cap": "butt",
 				"line-join": "round"
 			}
 		},
@@ -227,7 +227,7 @@
 				"line-width": { "stops": [ [ 9, 0 ], [ 10, 2 ], [ 15, 4 ], [ 17, 8 ], [ 18, 17 ], [ 20, 50 ] ] }
 			},
 			"layout": {
-				"line-cap": "bevel",
+				"line-cap": "butt",
 				"line-join": "round"
 			}
 		},
@@ -242,7 +242,7 @@
 				"line-width": { "stops": [ [ 13, 0 ], [ 14, 1 ], [ 15, 2 ], [ 17, 6 ], [ 18, 12 ], [ 20, 30 ] ] }
 			},
 			"layout": {
-				"line-cap": "bevel",
+				"line-cap": "butt",
 				"line-join": "round"
 			}
 		},
@@ -257,7 +257,7 @@
 				"line-width": { "stops": [ [ 14, 0 ], [ 15, 1 ], [ 17, 4 ], [ 18, 8 ], [ 20, 20 ] ] }
 			},
 			"layout": {
-				"line-cap": "bevel",
+				"line-cap": "butt",
 				"line-join": "round"
 			}
 		},
@@ -315,7 +315,7 @@
 				"line-color": "#beddf3"
 			},
 			"layout": {
-				"line-cap": "bevel",
+				"line-cap": "butt",
 				"line-join": "round"
 			}
 		},
@@ -340,7 +340,7 @@
 				"line-color": "#beddf3"
 			},
 			"layout": {
-				"line-cap": "bevel",
+				"line-cap": "butt",
 				"line-join": "round"
 			}
 		},
@@ -553,7 +553,7 @@
 			"source-layer": "streets",
 			"filter": [ "all", [ "==", "tunnel", true ], [ "in", "kind", "footway" ] ],
 			"layout": {
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			},
 			"paint": {
 				"line-width": { "stops": [ [ 15, 0 ], [ 16, 5 ], [ 18, 7 ], [ 19, 12 ], [ 20, 22 ] ] },
@@ -568,7 +568,7 @@
 			"source-layer": "streets",
 			"filter": [ "all", [ "==", "tunnel", true ], [ "in", "kind", "steps" ] ],
 			"layout": {
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			},
 			"paint": {
 				"line-width": { "stops": [ [ 15, 0 ], [ 16, 5 ], [ 18, 7 ], [ 19, 12 ], [ 20, 22 ] ] },
@@ -583,7 +583,7 @@
 			"source-layer": "streets",
 			"filter": [ "all", [ "==", "tunnel", true ], [ "in", "kind", "path" ] ],
 			"layout": {
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			},
 			"paint": {
 				"line-width": { "stops": [ [ 15, 0 ], [ 16, 5 ], [ 18, 7 ], [ 19, 12 ], [ 20, 22 ] ] },
@@ -598,7 +598,7 @@
 			"source-layer": "streets",
 			"filter": [ "all", [ "==", "tunnel", true ], [ "in", "kind", "cycleway" ] ],
 			"layout": {
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			},
 			"paint": {
 				"line-width": { "stops": [ [ 15, 0 ], [ 16, 5 ], [ 18, 7 ], [ 19, 12 ], [ 20, 22 ] ] },
@@ -619,7 +619,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -635,7 +635,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -651,7 +651,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -667,7 +667,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -683,7 +683,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -699,7 +699,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -715,7 +715,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -732,7 +732,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -748,7 +748,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -764,7 +764,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -780,7 +780,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -797,7 +797,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -814,7 +814,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 			},
 		{
@@ -830,7 +830,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -847,7 +847,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -864,7 +864,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 			},
 		{
@@ -880,7 +880,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -920,7 +920,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -937,7 +937,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -954,7 +954,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 			},
 		{
@@ -970,7 +970,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -987,7 +987,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -1004,7 +1004,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 			},
 		{
@@ -1020,7 +1020,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -1061,7 +1061,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -1079,7 +1079,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -1097,7 +1097,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 			},
 		{
@@ -1114,7 +1114,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -1132,7 +1132,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -1150,7 +1150,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 			},
 		{
@@ -1167,7 +1167,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -1208,7 +1208,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -1226,7 +1226,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -1244,7 +1244,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 			},
 		{
@@ -1261,7 +1261,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -1279,7 +1279,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -1297,7 +1297,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 			},
 		{
@@ -1314,7 +1314,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -1355,7 +1355,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -1373,7 +1373,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -1391,7 +1391,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 			},
 		{
@@ -1408,7 +1408,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -1426,7 +1426,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -1444,7 +1444,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 			},
 		{
@@ -1461,7 +1461,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -1502,7 +1502,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -1520,7 +1520,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -1538,7 +1538,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 			},
 		{
@@ -1555,7 +1555,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -1573,7 +1573,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -1591,7 +1591,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 			},
 		{
@@ -1608,7 +1608,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -1649,7 +1649,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -1667,7 +1667,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -1685,7 +1685,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 			},
 		{
@@ -1702,7 +1702,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -1720,7 +1720,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -1738,7 +1738,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 			},
 		{
@@ -1755,7 +1755,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -1796,7 +1796,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -1814,7 +1814,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -1832,7 +1832,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 			},
 		{
@@ -1849,7 +1849,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -1867,7 +1867,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -1885,7 +1885,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 			},
 		{
@@ -1902,7 +1902,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -1943,7 +1943,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -1961,7 +1961,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -1979,7 +1979,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 			},
 		{
@@ -1996,7 +1996,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -2014,7 +2014,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -2032,7 +2032,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 			},
 		{
@@ -2049,7 +2049,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -2090,7 +2090,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -2108,7 +2108,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -2126,7 +2126,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 			},
 		{
@@ -2143,7 +2143,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -2161,7 +2161,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -2179,7 +2179,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 			},
 		{
@@ -2196,7 +2196,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -2237,7 +2237,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -2255,7 +2255,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -2273,7 +2273,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 			},
 		{
@@ -2290,7 +2290,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -2308,7 +2308,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -2326,7 +2326,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 			},
 		{
@@ -2343,7 +2343,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -2384,7 +2384,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -2402,7 +2402,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -2420,7 +2420,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 			},
 		{
@@ -2437,7 +2437,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -2455,7 +2455,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -2473,7 +2473,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 			},
 		{
@@ -2490,7 +2490,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -2531,7 +2531,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -2549,7 +2549,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -2567,7 +2567,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 			},
 		{
@@ -2584,7 +2584,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -2602,7 +2602,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -2620,7 +2620,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 			},
 		{
@@ -2637,7 +2637,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -2678,7 +2678,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -2696,7 +2696,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -2714,7 +2714,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 			},
 		{
@@ -2731,7 +2731,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -2749,7 +2749,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -2767,7 +2767,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 			},
 		{
@@ -2784,7 +2784,7 @@
 			},
 			"layout": {
 				"line-join": "bevel",
-				"line-cap": "bevel"
+				"line-cap": "butt"
 			}
 		},
 		{
@@ -3769,7 +3769,7 @@
 				"line-opacity": 0.75
 			},
 			"layout": {
-				"line-cap": "bevel",
+				"line-cap": "butt",
 				"line-join": "round"
 			}
 		},
@@ -3798,7 +3798,7 @@
 				"line-opacity": 0.75
 			},
 			"layout": {
-				"line-cap": "bevel",
+				"line-cap": "butt",
 				"line-join": "round"
 			}
 		},
@@ -3813,7 +3813,7 @@
 				"line-width": { "stops": [ [ 2, 0 ], [ 3, 1 ], [ 10, 4 ] ] }
 			},
 			"layout": {
-				"line-cap": "bevel",
+				"line-cap": "butt",
 				"line-join": "round"
 			}
 		},
@@ -3843,7 +3843,7 @@
 				"line-width": { "stops": [ [ 7, 0 ], [ 8, 1 ], [ 10, 2 ] ] }
 			},
 			"layout": {
-				"line-cap": "bevel",
+				"line-cap": "butt",
 				"line-join": "round"
 			}
 		},
