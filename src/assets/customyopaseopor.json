@@ -1788,7 +1788,7 @@
 			"minzoom": 11,
 			"type": "line",
 			"source-layer": "streets",
-			"filter": [ "all", [ "==", "tunnel", true ], ["==", "tracktype", "grade1"], [ "in", "kind", "track" ], [ "==", "link", true ] ],
+			"filter": [ "all", [ "==", "tunnel", true ], ["in", "tracktype", "grade1"], [ "in", "kind", "track" ], [ "==", "link", true ] ],
 			"paint": {
 				"line-color": "#dedede",
 				"line-width": { "stops": [ [ 12, 2 ], [ 14, 3 ], [ 16, 6 ], [ 18, 26 ], [ 19, 64 ], [ 20, 128 ] ] },
@@ -1805,7 +1805,7 @@
 			"minzoom": 13,
 			"type": "line",
 			"source-layer": "streets",
-			"filter": [ "all", [ "==", "tunnel", true ], ["==", "tracktype", "grade1"], [ "in", "kind", "track" ], [ "!=", "link", true ] ],
+			"filter": [ "all", [ "==", "tunnel", true ], ["in", "tracktype", "grade1"], [ "in", "kind", "track" ], [ "!=", "link", true ] ],
 						"paint": {
 				"line-color": "#beaaa4",
 				"line-dasharray": [ 1, 0.3 ],
@@ -1823,7 +1823,7 @@
 			"minzoom": 13,
 			"type": "line",
 			"source-layer": "streets",
-			"filter": [ "all", [ "==", "bridge", true ], ["==", "tracktype", "grade1"], [ "in", "kind", "track" ], [ "!=", "link", true ] ],
+			"filter": [ "all", [ "==", "bridge", true ], ["in", "tracktype", "grade1"], [ "in", "kind", "track" ], [ "!=", "link", true ] ],
 						"paint": {
 				"line-color": "#beaaa4",
 				"line-dasharray": [ 1, 0.3 ],
@@ -1841,7 +1841,7 @@
 			"minzoom": 13,
 			"type": "line",
 			"source-layer": "streets",
-			"filter": [ "all", [ "!=", "bridge", true ], ["==", "tracktype", "grade1"], [ "!=", "tunnel", true ], [ "in", "kind", "track" ], [ "!=", "link", true ] ],
+			"filter": [ "all", [ "!=", "bridge", true ], ["in", "tracktype", "grade1"], [ "!=", "tunnel", true ], [ "in", "kind", "track" ], [ "!=", "link", true ] ],
 			"paint": {
 				"line-color": "#beaaa4",
 				"line-width": { "stops": [ [ 5, 0 ], [ 6, 0 ], [ 10, 2 ], [ 14, 4 ], [ 16, 8 ], [ 18, 24 ], [ 19, 60 ], [ 20, 100 ] ] },
@@ -1858,7 +1858,7 @@
 			"minzoom": 13,
 			"type": "line",
 			"source-layer": "streets",
-			"filter": [ "all", [ "==", "tunnel", true ], ["==", "tracktype", "grade1"], [ "in", "kind", "track" ], [ "==", "link", true ] ],
+			"filter": [ "all", [ "==", "tunnel", true ], ["in", "tracktype", "grade1"], [ "in", "kind", "track" ], [ "==", "link", true ] ],
 						"paint": {
 				"line-color": "#beaaa4",
 				"line-dasharray": [ 1, 0.3 ],
@@ -1876,7 +1876,7 @@
 			"minzoom": 13,
 			"type": "line",
 			"source-layer": "streets",
-			"filter": [ "all", [ "==", "bridge", true ], ["==", "tracktype", "grade1"], [ "in", "kind", "track" ], [ "==", "link", true ] ],
+			"filter": [ "all", [ "==", "bridge", true ], ["in", "tracktype", "grade1"], [ "in", "kind", "track" ], [ "==", "link", true ] ],
 						"paint": {
 				"line-color": "#beaaa4",
 				"line-dasharray": [ 1, 0.3 ],
@@ -1894,7 +1894,7 @@
 			"minzoom": 13,
 			"type": "line",
 			"source-layer": "streets",
-			"filter": [ "all", [ "!=", "bridge", true ], ["==", "tracktype", "grade1"], [ "!=", "tunnel", true ], [ "in", "kind", "track" ], [ "==", "link", true ] ],
+			"filter": [ "all", [ "!=", "bridge", true ], ["in", "tracktype", "grade1"], [ "!=", "tunnel", true ], [ "in", "kind", "track" ], [ "==", "link", true ] ],
 			"paint": {
 				"line-color": "#beaaa4",
 				"line-width": { "stops": [ [ 5, 0 ], [ 6, 0 ], [ 10, 2 ], [ 14, 4 ], [ 16, 8 ], [ 18, 24 ], [ 19, 60 ], [ 20, 100 ] ] },
@@ -1910,7 +1910,7 @@
 			"id": "label-track-shield",
 			"type": "symbol",
 			"source-layer": "street_labels",
-			"filter": [ "all", ["==", "tracktype", "grade1"], [ "!=", "tunnel", true ], [ "in", "kind", "track" ]] ,
+			"filter": [ "all", ["in", "tracktype", "grade1"], [ "!=", "tunnel", true ], [ "in", "kind", "track" ]] ,
 			"layout": {
 				"text-field": "{ref}",
 				"text-font": [ "arial" ],
