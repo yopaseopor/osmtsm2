@@ -1910,7 +1910,7 @@
 			"id": "label-track-shield",
 			"type": "symbol",
 			"source-layer": "street_labels",
-			"filter": [[["==", "tracktype", "grade1"], [ "!=", "tunnel", true ], [ "in", "kind", "track" ]] ,
+			"filter": [["==", "tracktype", "grade1"], [ "!=", "tunnel", true ], [ "in", "kind", "track" ]] ,
 			"layout": {
 				"text-field": "{ref}",
 				"text-font": [ "arial" ],
