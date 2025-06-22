@@ -3385,13 +3385,13 @@
 			"id": "symbol-transit-bus",
 			"type": "symbol",
 			"source-layer": "public_transport",
-			"filter": [ "==", "kind", "bus_stop" ],
+			"filter": [ "in", "kind", "bus_stop" ],
 			"layout": {
 				"text-field": "{name}",
 				"icon-size": { "stops": [ [ 16, 0.5 ], [ 18, 1 ] ] },
 				"symbol-placement": "point",
 				"icon-keep-upright": true,
-				"text-font": [ "Arial Unicode MS Regular" ],
+				"text-font": [ "Arial" ],
 				"text-size": 10,
 				"icon-anchor": "bottom",
 				"text-anchor": "top",
@@ -4483,33 +4483,6 @@
 				"icon-opacity": { "stops": [ [ 16, 0 ], [ 17, 0.7 ] ] },
 				"text-opacity": { "stops": [ [ 16, 0 ], [ 17, 0.7 ] ] }
 			}
-		},
-		{
-			"source": "customyopaseopor",
-			"id": "symbol-transit-bus",
-			"type": "symbol",
-			"source-layer": "public_transport",
-			"filter": [ "in", "kind", "bus_stop" ],
-			"layout": {
-				"text-field": "{name}",
-				"icon-size": { "stops": [ [ 16, 0.5 ], [ 18, 1 ] ] },
-				"symbol-placement": "point",
-				"icon-keep-upright": true,
-				"text-font": [ "monospace" ],
-				"text-size": 10,
-				"icon-anchor": "bottom",
-				"text-anchor": "top",
-				"icon-image": "icon-bus"
-			},
-			"paint": {
-				"icon-opacity": 0.7,
-				"icon-color": "#66626a",
-				"text-color": "#66626a",
-				"text-halo-color": "rgba(255, 255, 255, 0.8)",
-				"text-halo-width": 2,
-				"text-halo-blur": 1
-			},
-			"minzoom": 16
 		},
 		{
 			"source": "customyopaseopor",
