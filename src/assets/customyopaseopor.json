@@ -3868,6 +3868,72 @@
 				"text-color": "#c7a481"
 			},
 			"minzoom": 17
+		},
+		{
+			"source": "customyopaseopor",
+			"id": "label-address-amenity",
+			"type": "symbol",
+			"source-layer": "pois",
+			"filter": [ "has", "amenity" ],
+			"layout": {
+				"text-field": "{name}",
+				"text-font": [ "monospace" ],
+				"symbol-placement": "point",
+				"text-anchor": "center",
+				"text-size": { "stops": [ [ 17, 8 ], [ 19, 10 ] ] }
+			},
+			"paint": {
+				"text-halo-color": "#f9f6f2",
+				"text-halo-width": 2,
+				"text-halo-blur": 1,
+				"icon-color": "#c7a481",
+				"text-color": "#c7a481"
+			},
+			"minzoom": 17
+		},
+		{
+			"source": "customyopaseopor",
+			"id": "label-address-office",
+			"type": "symbol",
+			"source-layer": "pois",
+			"filter": [ "has", "office" ],
+			"layout": {
+				"text-field": "{name}",
+				"text-font": [ "monospace" ],
+				"symbol-placement": "point",
+				"text-anchor": "center",
+				"text-size": { "stops": [ [ 17, 8 ], [ 19, 10 ] ] }
+			},
+			"paint": {
+				"text-halo-color": "#f9f6f2",
+				"text-halo-width": 2,
+				"text-halo-blur": 1,
+				"icon-color": "#c7a481",
+				"text-color": "#c7a481"
+			},
+			"minzoom": 17
+		},
+		{
+			"source": "customyopaseopor",
+			"id": "label-address-tourism",
+			"type": "symbol",
+			"source-layer": "pois",
+			"filter": [ "has", "tourism" ],
+			"layout": {
+				"text-field": "{name}",
+				"text-font": [ "monospace" ],
+				"symbol-placement": "point",
+				"text-anchor": "center",
+				"text-size": { "stops": [ [ 17, 8 ], [ 19, 10 ] ] }
+			},
+			"paint": {
+				"text-halo-color": "#f9f6f2",
+				"text-halo-width": 2,
+				"text-halo-blur": 1,
+				"icon-color": "#c7a481",
+				"text-color": "#c7a481"
+			},
+			"minzoom": 17
 				},
 		{
 			"source": "customyopaseopor",
