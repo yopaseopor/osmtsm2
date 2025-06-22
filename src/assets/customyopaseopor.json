@@ -6,17 +6,7 @@
 		"license": "https://creativecommons.org/publicdomain/zero/1.0/"
 	},
 	"glyphs": "https://tiles.versatiles.org/assets/glyphs/{fontstack}/{range}.pbf",
-	"sprite": [
-		{
-			"id": "basics",
-			"url": "https://yopaseopor.github.io/osmtsm2/src/assets/sprites/sprites/basics"
-		},
-		{
-			"id": "markers",
-			"url": "https://yopaseopor.github.io/osmtsm2/src/assets/sprites/sprites/markers"
-		}
-		
-	],
+	"sprite": "https://yopaseopor.github.io/osmtsm2/src/assets/sprites/sprites/basics/sprite",
 	"sources": {
 		"customyopaseopor": {
 			"type": "vector",
