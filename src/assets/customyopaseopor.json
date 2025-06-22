@@ -5,8 +5,8 @@
 		"maputnik:renderer": "mbgljs",
 		"license": "https://creativecommons.org/publicdomain/zero/1.0/"
 	},
-	"glyphs": "https://tiles.versatiles.org/assets/fonts/{fontstack}/{range}.pbf",
-	"sprite": "https://tiles.versatiles.org/assets/sprites/basics/sprite",
+	"glyphs": "https://tiles.versatiles.org/assets/glyphs/{fontstack}/{range}.pbf",
+	"sprite": "https://tiles.versatiles.org/assets/sprites/basics/sprites",
 	"sources": {
 		"customyopaseopor": {
 			"type": "vector",
