@@ -268,7 +268,7 @@ var config = {
 				declutter: true
 			});
 
-			const styleUrl = 'src/assets/customyopaseopor3.json';
+			const styleUrl = 'src/assets/customyopaseopor.json';
 			fetch(styleUrl)
 				.then(response => response.json())
 				.then(style => {
