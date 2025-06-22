@@ -3391,7 +3391,7 @@
 				"icon-size": { "stops": [ [ 16, 0.5 ], [ 18, 1 ] ] },
 				"symbol-placement": "point",
 				"icon-keep-upright": true,
-				"text-font": [ "arial" ],
+				"text-font": [ "Arial Unicode MS Regular" ],
 				"text-size": 10,
 				"icon-anchor": "bottom",
 				"text-anchor": "top",
