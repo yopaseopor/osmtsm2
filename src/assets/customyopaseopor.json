@@ -3388,8 +3388,8 @@
 			"filter": [ "in", "kind", "bus_stop" ],
 			"layout": {
 				"text-field": "{name}",
-				"icon-size": { "stops": [ [ 16, 0.5 ], [ 18, 1 ] ] },
-				"symbol-placement": "line",
+				"icon-size": { "stops": [ [ 16, 0.5 ], [ 18, 30 ] ] },
+				"symbol-placement": "point",
 				"icon-keep-upright": true,
 				"text-font": [ "Arial" ],
 				"text-size": 10,
