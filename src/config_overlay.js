@@ -1,5 +1,5 @@
 import { allOverlays } from './overlays/index.js';
-import { getTranslation } from './i18n/index.js';
+import { getTranslation } from '../i18n/index.js';
 
 // Create overlay configuration
 // Helper to merge overlays from group folders
