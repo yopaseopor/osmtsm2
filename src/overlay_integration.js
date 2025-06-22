@@ -1,6 +1,6 @@
 // Import the overlays
-import { allOverlays } from '../overlays/index.js';
-import { getCurrentLanguage } from '../i18n/index.js';
+import { allOverlays } from './overlays/index.js';
+import { getCurrentLanguage } from './i18n/index.js';
 
 // Function to convert overlay to OpenLayers layer
 function createOlLayer(overlay) {
