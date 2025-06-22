@@ -3389,7 +3389,7 @@
 			"layout": {
 				"text-field": "{name}",
 				"icon-size": { "stops": [ [ 16, 0.5 ], [ 18, 1 ] ] },
-				"symbol-placement": "point",
+				"symbol-placement": "line",
 				"icon-keep-upright": true,
 				"text-font": [ "Arial" ],
 				"text-size": 10,
