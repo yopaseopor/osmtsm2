@@ -3349,7 +3349,7 @@
 				"icon-rotation-alignment": "map",
 				"icon-padding": 5,
 				"symbol-avoid-edges": true,
-				"icon-image": "marking-arrow",
+				"icon-image": "icon-bus",
 				"text-font": [ "monospace" ]
 			},
 			"minzoom": 14,
@@ -3388,7 +3388,7 @@
 			"filter": [ "in", "kind", "bus_stop" ],
 			"layout": {
 				"text-field": "{name}",
-				"icon-size": { "stops": [ [ 16, 0.5 ], [ 18, 30 ] ] },
+				"icon-size": { "stops": [ [ 16, 0.5 ], [ 18, 1 ] ] },
 				"symbol-placement": "point",
 				"icon-keep-upright": true,
 				"text-font": [ "Arial" ],
