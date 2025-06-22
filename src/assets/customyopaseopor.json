@@ -3381,7 +3381,7 @@
 			}
 },
 		{
-			"source": "versatiles-shortbread",
+			"source": "customyopaseopor",
 			"id": "symbol-transit-bus",
 			"type": "symbol",
 			"source-layer": "public_transport",
@@ -3391,7 +3391,7 @@
 				"icon-size": { "stops": [ [ 16, 0.5 ], [ 18, 1 ] ] },
 				"symbol-placement": "point",
 				"icon-keep-upright": true,
-				"text-font": [ "noto_sans_regular" ],
+				"text-font": [ "arial" ],
 				"text-size": 10,
 				"icon-anchor": "bottom",
 				"text-anchor": "top",
