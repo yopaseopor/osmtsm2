@@ -6,12 +6,7 @@
 		"license": "https://creativecommons.org/publicdomain/zero/1.0/"
 	},
 	"glyphs": "https://tiles.versatiles.org/assets/glyphs/{fontstack}/{range}.pbf",
-		"sprite": [
-		{
-			"id": "basics",
-			"url": "https://tiles.versatiles.org/assets/sprites/basics/sprites"
-		}
-	],
+	"sprite": "https://tiles.versatiles.org/assets/sprites/basics/sprites",
 	"sources": {
 		"customyopaseopor": {
 			"type": "vector",
@@ -3354,7 +3349,7 @@
 				"icon-rotation-alignment": "map",
 				"icon-padding": 5,
 				"symbol-avoid-edges": true,
-				"icon-image": "basics:marking-arrow",
+				"icon-image": "marking-arrow",
 				"text-font": [ "monospace" ]
 			},
 			"minzoom": 14,
@@ -3376,7 +3371,7 @@
 				"icon-rotation-alignment": "map",
 				"icon-padding": 5,
 				"symbol-avoid-edges": true,
-				"icon-image": "basics:marking-arrow",
+				"icon-image": "marking-arrow",
 				"text-font": [ "monospace" ]
 			},
 			"minzoom": 14,
@@ -3396,7 +3391,7 @@
 				"icon-size": { "stops": [ [ 16, 0.5 ], [ 18, 1 ] ] },
 				"symbol-placement": "point",
 				"icon-keep-upright": true,
-				"text-font": [ "monospace" ],
+				"text-font": [ "arial" ],
 				"text-size": 10,
 				"icon-anchor": "bottom",
 				"text-anchor": "top",
