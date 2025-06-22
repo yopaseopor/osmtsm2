@@ -4489,7 +4489,7 @@
 			"id": "symbol-transit-bus",
 			"type": "symbol",
 			"source-layer": "public_transport",
-			"filter": [ "==", "kind", "bus_stop" ],
+			"filter": [ "in", "kind", "bus_stop" ],
 			"layout": {
 				"text-field": "{name}",
 				"icon-size": { "stops": [ [ 16, 0.5 ], [ 18, 1 ] ] },
