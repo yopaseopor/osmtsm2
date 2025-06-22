@@ -3852,10 +3852,10 @@
 			"id": "label-address-shop",
 			"type": "symbol",
 			"source-layer": "shop",
-			"filter": [ "has", "shop" ],
+			"filter": [ "all", [ "==", "shop", "supermarket" ] ],
 			"layout": {
 				"text-field": "{name}",
-				"text-font": [ "arial" ],
+				"text-font": [ "monospace" ],
 				"symbol-placement": "point",
 				"text-anchor": "center",
 				"text-size": { "stops": [ [ 17, 8 ], [ 19, 10 ] ] }
