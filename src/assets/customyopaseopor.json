@@ -3349,7 +3349,7 @@
 				"icon-rotation-alignment": "map",
 				"icon-padding": 5,
 				"symbol-avoid-edges": true,
-				"icon-image": "icon-bus",
+				"icon-image": "marking-arrow",
 				"text-font": [ "monospace" ]
 			},
 			"minzoom": 14,
@@ -3379,19 +3379,19 @@
 				"icon-opacity": { "stops": [ [ 16, 0 ], [ 17, 0.7 ] ] },
 				"text-opacity": { "stops": [ [ 16, 0 ], [ 17, 0.7 ] ] }
 			}
-		},
+},
 		{
-			"source": "customyopaseopor",
+			"source": "versatiles-shortbread",
 			"id": "symbol-transit-bus",
 			"type": "symbol",
 			"source-layer": "public_transport",
-			"filter": [ "in", "kind", "bus_stop" ],
+			"filter": [ "==", "kind", "bus_stop" ],
 			"layout": {
 				"text-field": "{name}",
 				"icon-size": { "stops": [ [ 16, 0.5 ], [ 18, 1 ] ] },
 				"symbol-placement": "point",
 				"icon-keep-upright": true,
-				"text-font": [ "Arial" ],
+				"text-font": [ "noto_sans_regular" ],
 				"text-size": 10,
 				"icon-anchor": "bottom",
 				"text-anchor": "top",
@@ -3399,9 +3399,9 @@
 			},
 			"paint": {
 				"icon-opacity": 0.7,
-				"icon-color": "#66626a",
-				"text-color": "#66626a",
-				"text-halo-color": "rgba(255, 255, 255, 0.8)",
+				"icon-color": "rgb(102,98,106)",
+				"text-color": "rgb(102,98,106)",
+				"text-halo-color": "rgba(255,255,255,0.8)",
 				"text-halo-width": 2,
 				"text-halo-blur": 1
 			},
