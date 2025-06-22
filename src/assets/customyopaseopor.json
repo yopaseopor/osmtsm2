@@ -3349,7 +3349,7 @@
 				"icon-rotation-alignment": "map",
 				"icon-padding": 5,
 				"symbol-avoid-edges": true,
-				"icon-image": "basics:marking-arrow",
+				"icon-image": "marking-arrow",
 				"text-font": [ "monospace" ]
 			},
 			"minzoom": 14,
@@ -3371,7 +3371,7 @@
 				"icon-rotation-alignment": "map",
 				"icon-padding": 5,
 				"symbol-avoid-edges": true,
-				"icon-image": "basics:marking-arrow",
+				"icon-image": "marking-arrow",
 				"text-font": [ "monospace" ]
 			},
 			"minzoom": 14,
