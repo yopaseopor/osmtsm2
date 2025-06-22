@@ -3851,8 +3851,8 @@
 			"source": "customyopaseopor",
 			"id": "label-address-shop",
 			"type": "symbol",
-			"source-layer": "shop",
-			"filter": [ "all", [ "==", "shop", "supermarket" ] ],
+			"source-layer": "addresses",
+			"filter": [ "has", "shop" ],
 			"layout": {
 				"text-field": "{name}",
 				"text-font": [ "monospace" ],
