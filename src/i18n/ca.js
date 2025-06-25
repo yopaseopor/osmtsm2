@@ -162,6 +162,7 @@ export const ca = {
 		butcher: 'Carnisseria',
 	camera: 'Càmeres',
 	candles: 'Espelmes',
+	clothes: 'Moda/Roba',
 	leisure: 'Oci',
     food: 'Menjar i Beguda',
     shopping: 'Botigues',

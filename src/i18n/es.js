@@ -162,6 +162,7 @@ export const es = {
 		butcher: 'Carnicería',
 	camera: 'Cámara',
 	candles: 'Velas',
+	clothes: 'Moda/Ropa',
     leisure: 'Ocio',
     food: 'Comida y Bebida',
     shopping: 'Compras',

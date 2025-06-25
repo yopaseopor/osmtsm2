@@ -163,6 +163,7 @@ export const en = {
 	butcher: 'Butcher',
 	camera: 'Camera',
 	candles: 'Candles',
+	clothes: 'Clothes',
     leisure: 'Leisure',
     food: 'Food & Drink',
     shopping: 'Shopping',
