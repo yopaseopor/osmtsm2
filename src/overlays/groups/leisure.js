@@ -15194,7 +15194,438 @@ export function leisureOverlays() {
             stroke: stroke
         });
         return style;
-		
+}
+},
+{
+    group: getTranslation('tattoo'),
+	title: "VeAn Tattoo",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"VeAn Tattoo\"][\"brand:wikidata\"=\"Q116871240\"][\"name\"=\"VeAn Tattoo\"][\"shop\"=\"tattoo\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Vean_tattoo.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Vean_tattoo.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+     }
+},
+{
+    group: getTranslation('ticket'),
+	title: "Ticketmaster",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Ticketmaster\"][\"brand:wikidata\"=\"Q2609162\"][\"name\"=\"Ticketmaster\"][\"shop\"=\"ticket\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/TicketMaster_wordmark.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/TicketMaster_wordmark.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('ticket'),
+	title: "\u0410\u0432\u0438\u0430\u043a\u0430\u0441\u0441\u0430",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u0410\u0432\u0438\u0430\u043a\u0430\u0441\u0441\u0430\"][\"name\"=\"\u0410\u0432\u0438\u0430\u043a\u0430\u0441\u0441\u0430\"][\"shop\"=\"ticket\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('ticket'),
+	title: "\u0410\u0432\u0442\u043e\u043b\u044e\u043a\u0441",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u0410\u0432\u0442\u043e\u043b\u044e\u043a\u0441\"][\"brand:en\"=\"Autolux\"][\"brand:uk\"=\"\u0410\u0432\u0442\u043e\u043b\u044e\u043a\u0441\"][\"brand:wikidata\"=\"Q12075972\"][\"name\"=\"\u0410\u0432\u0442\u043e\u043b\u044e\u043a\u0441\"][\"name:en\"=\"Autolux\"][\"name:uk\"=\"\u0410\u0432\u0442\u043e\u043b\u044e\u043a\u0441\"][\"shop\"=\"ticket\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('ticket'),
+	title: "\u041c\u0438\u043d\u0441\u043a\u0442\u0440\u0430\u043d\u0441",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u041c\u0438\u043d\u0441\u043a\u0442\u0440\u0430\u043d\u0441\"][\"name\"=\"\u041c\u0438\u043d\u0441\u043a\u0442\u0440\u0430\u043d\u0441\"][\"name:en\"=\"Minsktrans\"][\"name:mn\"=\"\u041c\u0438\u043d\u0441\u043a\u0442\u0440\u0430\u043d\u0441\"][\"shop\"=\"ticket\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('ticket'),
+	title: "\u0426\u0435\u043d\u0442\u044a\u0440 \u0437\u0430 \u0433\u0440\u0430\u0434\u0441\u043a\u0430 \u043c\u043e\u0431\u0438\u043b\u043d\u043e\u0441\u0442",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u0426\u0435\u043d\u0442\u044a\u0440 \u0437\u0430 \u0433\u0440\u0430\u0434\u0441\u043a\u0430 \u043c\u043e\u0431\u0438\u043b\u043d\u043e\u0441\u0442\"][\"brand:wikidata\"=\"Q7553668\"][\"shop\"=\"ticket\"][\"short_name\"=\"\u0426\u0413\u041c\"][\"short_name:bg\"=\"\u0426\u0413\u041c\"][\"short_name:en\"=\"SUMC\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/SUMC_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/SUMC_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('ticket'),
+	title: "\u307f\u3069\u308a\u306e\u7a93\u53e3",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u307f\u3069\u308a\u306e\u7a93\u53e3\"][\"brand:en\"=\"Midori-no-madoguchi\"][\"brand:ja\"=\"\u307f\u3069\u308a\u306e\u7a93\u53e3\"][\"brand:wikidata\"=\"Q11279064\"][\"name\"=\"\u307f\u3069\u308a\u306e\u7a93\u53e3\"][\"name:en\"=\"JR Ticket Office\"][\"name:ja\"=\"\u307f\u3069\u308a\u306e\u7a93\u53e3\"][\"shop\"=\"ticket\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Midori-no_Madoguchi_(3730654225).jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Midori-no_Madoguchi_(3730654225).jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('ticket'),
+	title: "\u552e\u7968\u5904",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u552e\u7968\u5904\"][\"name\"=\"\u552e\u7968\u5904\"][\"shop\"=\"ticket\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+}
+},
+{
+    group: getTranslation('ticket'),
+	title: "Boutique Grandes Lignes",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Boutique Grandes Lignes\"][\"brand:wikidata\"=\"Q13646\"][\"name\"=\"Boutique Grandes Lignes\"][\"shop\"=\"ticket\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Service_d'hiver_en_gare_de_Chamb\u00e9ry_(2016).JPG",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Service_d'hiver_en_gare_de_Chamb\u00e9ry_(2016).JPG",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('ticket'),
+	title: "DB Reisezentrum",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Deutsche Bahn\"][\"brand:wikidata\"=\"Q9322\"][\"name\"=\"DB Reisezentrum\"][\"shop\"=\"ticket\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Deutsche_Bahn_AG-Logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Deutsche_Bahn_AG-Logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('ticket'),
+	title: "Guichet Transilien",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Guichet Transilien\"][\"brand:wikidata\"=\"Q389554\"][\"name\"=\"Guichet Transilien\"][\"shop\"=\"ticket\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Paris_transit_icons_-_Train.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Paris_transit_icons_-_Train.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('ticket'),
+	title: "Kassir.ru",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Kassir.ru\"][\"name\"=\"Kassir.ru\"][\"shop\"=\"ticket\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;   		
  }
         }
     ];
