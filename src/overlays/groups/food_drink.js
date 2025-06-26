@@ -111312,6 +111312,114 @@ export function food_drinkOverlays() {
             stroke: stroke
         });
         return style;
+    }
+},
+{
+    group: getTranslation('seafood'),
+	title: "Deutsche See",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Deutsche See\"][\"brand:wikidata\"=\"Q1204140\"][\"name\"=\"Deutsche See\"][\"shop\"=\"seafood\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Deutsche_See-Logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Deutsche_See-Logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('seafood'),
+	title: "\u0418\u043a\u043e\u0440\u043d\u044b\u0439",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u0418\u043a\u043e\u0440\u043d\u044b\u0439\"][\"name\"=\"\u0418\u043a\u043e\u0440\u043d\u044b\u0439\"][\"shop\"=\"seafood\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('seafood'),
+	title: "\u041e\u043a\u0435\u0430\u043d \u041a\u0430\u043c\u0447\u0430\u0442\u043a\u0430 \u0421\u0430\u0445\u0430\u043b\u0438\u043d",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u041e\u043a\u0435\u0430\u043d \u041a\u0430\u043c\u0447\u0430\u0442\u043a\u0430 \u0421\u0430\u0445\u0430\u043b\u0438\u043d\"][\"brand:wikidata\"=\"Q111108872\"][\"name\"=\"\u041e\u043a\u0435\u0430\u043d \u041a\u0430\u043c\u0447\u0430\u0442\u043a\u0430 \u0421\u0430\u0445\u0430\u043b\u0438\u043d\"][\"name:en\"=\"Ocean Kamchatka Sahalin\"][\"name:ru\"=\"\u041e\u043a\u0435\u0430\u043d \u041a\u0430\u043c\u0447\u0430\u0442\u043a\u0430 \u0421\u0430\u0445\u0430\u043b\u0438\u043d\"][\"shop\"=\"seafood\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
 		
             }
         }
