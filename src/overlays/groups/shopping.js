@@ -71172,7 +71172,9763 @@ export function shoppingOverlays() {
             stroke: stroke
         });
         return style;
-   			
+    }
+},
+{
+    group: getTranslation('household_linen'),
+	title: "Adairs",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Adairs\"][\"brand:wikidata\"=\"Q109626904\"][\"name\"=\"Adairs\"][\"shop\"=\"household_linen\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('household_linen'),
+	title: "Adairs Kids",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Adairs Kids\"][\"brand:wikidata\"=\"Q109626904\"][\"name\"=\"Adairs Kids\"][\"shop\"=\"household_linen\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('household_linen'),
+	title: "Bytov\u00fd textil \u0160kod\u00e1k",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Bytov\u00fd textil \u0160kod\u00e1k\"][\"brand:wikidata\"=\"Q102265224\"][\"name\"=\"Bytov\u00fd textil \u0160kod\u00e1k\"][\"shop\"=\"household_linen\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('household_linen'),
+	title: "Carr\u00e9 Blanc",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Carr\u00e9 Blanc\"][\"brand:wikidata\"=\"Q55596025\"][\"name\"=\"Carr\u00e9 Blanc\"][\"shop\"=\"household_linen\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Carr\u00e9_Blanc.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Carr\u00e9_Blanc.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('household_linen'),
+	title: "Descamps",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Descamps\"][\"brand:wikidata\"=\"Q91002058\"][\"name\"=\"Descamps\"][\"shop\"=\"household_linen\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('household_linen'),
+	title: "Linvosges",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Linvosges\"][\"brand:wikidata\"=\"Q94359140\"][\"name\"=\"Linvosges\"][\"shop\"=\"household_linen\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('household_linen'),
+	title: "MMartan",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"MMartan\"][\"brand:wikidata\"=\"Q10322532\"][\"name\"=\"MMartan\"][\"shop\"=\"household_linen\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('household_linen'),
+	title: "Pillow Talk",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Pillow Talk\"][\"brand:wikidata\"=\"Q120648495\"][\"name\"=\"Pillow Talk\"][\"shop\"=\"household_linen\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('household_linen'),
+	title: "QE Home",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"QE Home\"][\"brand:wikidata\"=\"Q127914161\"][\"name\"=\"QE Home\"][\"shop\"=\"household_linen\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('household_linen'),
+	title: "SCANquilt",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"SCANquilt\"][\"brand:wikidata\"=\"Q54965259\"][\"name\"=\"SCANquilt\"][\"shop\"=\"household_linen\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/SCANquilt_logo.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/SCANquilt_logo.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('household_linen'),
+	title: "Volpes",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Volpes\"][\"brand:wikidata\"=\"Q116431266\"][\"name\"=\"Volpes\"][\"shop\"=\"household_linen\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('household_linen'),
+	title: "Yves Delorme",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Yves Delorme\"][\"brand:wikidata\"=\"Q131196262\"][\"name\"=\"Yves Delorme\"][\"shop\"=\"household_linen\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('household_linen'),
+	title: "\u042f\u0440\u043e\u0441\u043b\u0430\u0432",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u042f\u0440\u043e\u0441\u043b\u0430\u0432\"][\"brand:wikidata\"=\"Q131912115\"][\"name\"=\"\u042f\u0440\u043e\u0441\u043b\u0430\u0432\"][\"shop\"=\"household_linen\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('household_linen'),
+	title: "\u10db\u10d0\u10dc\u10d0\u10db\u10dd \u10f0\u10dd\u10e3\u10db\u10d8",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u10db\u10d0\u10dc\u10d0\u10db\u10dd \u10f0\u10dd\u10e3\u10db\u10d8\"][\"brand:en\"=\"Manamo Home\"][\"brand:ka\"=\"\u10db\u10d0\u10dc\u10d0\u10db\u10dd \u10f0\u10dd\u10e3\u10db\u10d8\"][\"brand:wikidata\"=\"Q131470017\"][\"name\"=\"\u10db\u10d0\u10dc\u10d0\u10db\u10dd \u10f0\u10dd\u10e3\u10db\u10d8\"][\"name:en\"=\"Manamo Home\"][\"name:ka\"=\"\u10db\u10d0\u10dc\u10d0\u10db\u10dd \u10f0\u10dd\u10e3\u10db\u10d8\"][\"shop\"=\"household_linen\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "@home",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"@home\"][\"brand:wikidata\"=\"Q116429887\"][\"name\"=\"@home\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "@Home Livingspace",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"@Home Livingspace\"][\"brand:wikidata\"=\"Q117406343\"][\"name\"=\"@Home Livingspace\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Adairs",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Adairs\"][\"brand:wikidata\"=\"Q109626904\"][\"name\"=\"Adairs\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Alice D\u00e9lice",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Alice D\u00e9lice\"][\"brand:wikidata\"=\"Q105099543\"][\"name\"=\"Alice D\u00e9lice\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "At Home",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"At Home\"][\"brand:wikidata\"=\"Q5522290\"][\"name\"=\"At Home\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/At-home-logo.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/At-home-logo.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Banquet",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Banquet\"][\"brand:wikidata\"=\"Q130673596\"][\"name\"=\"Banquet\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Bed Bath & Beyond (New Zealand)",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Bed Bath & Beyond\"][\"brand:wikidata\"=\"Q110295215\"][\"name\"=\"Bed Bath & Beyond\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Bed Bath & Beyond (North America)",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Bed Bath & Beyond\"][\"brand:wikidata\"=\"Q813782\"][\"name\"=\"Bed Bath & Beyond\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bedbath&beyond.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bedbath&beyond.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Bed Bath N' Table",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Bed Bath N' Table\"][\"brand:wikidata\"=\"Q118551276\"][\"name\"=\"Bed Bath N' Table\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Blokker",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Blokker\"][\"brand:wikidata\"=\"Q33903645\"][\"name\"=\"Blokker\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Blokker-Logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Blokker-Logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Briscoes",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Briscoes\"][\"brand:wikidata\"=\"Q110190653\"][\"name\"=\"Briscoes\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "BSS Group",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"BSS Group\"][\"brand:wikidata\"=\"Q4836629\"][\"name\"=\"BSS Group\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BSS_Industrial_Logo.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/BSS_Industrial_Logo.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Camicado",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Camicado\"][\"brand:wikidata\"=\"Q108910180\"][\"name\"=\"Camicado\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Cervera",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Cervera\"][\"brand:wikidata\"=\"Q10447179\"][\"name\"=\"Cervera\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Crazy Plastics",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Crazy Plastics\"][\"brand:wikidata\"=\"Q130596652\"][\"name\"=\"Crazy Plastics\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Dille & Kamille",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Dille & Kamille\"][\"brand:wikidata\"=\"Q65154379\"][\"name\"=\"Dille & Kamille\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Dille_&_Kamille_Logo.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Dille_&_Kamille_Logo.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Du Bruit dans la Cuisine",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Du Bruit dans la Cuisine\"][\"brand:wikidata\"=\"Q130278264\"][\"name\"=\"Du Bruit dans la Cuisine\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Duka",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Duka\"][\"brand:wikidata\"=\"Q20354074\"][\"name\"=\"Duka\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Duka_-_Targ\u00f3wek01.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Duka_-_Targ\u00f3wek01.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "EH Smith",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"EH Smith\"][\"brand:wikidata\"=\"Q100299126\"][\"name\"=\"EH Smith\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Enza Home",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Enza Home\"][\"brand:wikidata\"=\"Q116919751\"][\"name\"=\"Enza Home\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Fissler",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Fissler\"][\"brand:wikidata\"=\"Q1420964\"][\"name\"=\"Fissler\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Fissler_Logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Fissler_Logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Fissman",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Fissman\"][\"name\"=\"Fissman\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "FOX Home",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"FOX Home\"][\"brand:wikidata\"=\"Q125796655\"][\"name\"=\"FOX Home\"][\"name:en\"=\"FOX Home\"][\"name:he\"=\"\u05e4\u05d5\u05e7\u05e1 \u05d4\u05d5\u05dd\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Gipfel",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Gipfel\"][\"brand:wikidata\"=\"Q110083748\"][\"name\"=\"Gipfel\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Guy Degrenne",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Guy Degrenne\"][\"brand:wikidata\"=\"Q3121712\"][\"name\"=\"Guy Degrenne\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/DEGRENNEParis.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/DEGRENNEParis.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Happy Casa",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Happy Casa\"][\"brand:wikidata\"=\"Q126901260\"][\"name\"=\"Happy Casa\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Home Store + More",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Home Store + More\"][\"brand:wikidata\"=\"Q113471802\"][\"name\"=\"Home Store + More\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "HomeGoods",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"HomeGoods\"][\"brand:wikidata\"=\"Q5887941\"][\"name\"=\"HomeGoods\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Homegoods_logo.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Homegoods_logo.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "House",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"House\"][\"brand:wikidata\"=\"Q117921987\"][\"name\"=\"House\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "House Bed & Bath",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"House\"][\"brand:wikidata\"=\"Q117921987\"][\"name\"=\"House Bed & Bath\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Howards Storage World",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Howards Storage World\"][\"brand:wikidata\"=\"Q106283555\"][\"name\"=\"Howards Storage World\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Howarth Timber",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Howarth Timber\"][\"brand:wikidata\"=\"Q100298474\"][\"name\"=\"Howarth Timber\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Imerco",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Imerco\"][\"brand:wikidata\"=\"Q12318163\"][\"name\"=\"Imerco\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Imerco.JPG",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Imerco.JPG",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Kasanova",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Kasanova\"][\"brand:wikidata\"=\"Q116214505\"][\"name\"=\"Kasanova\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Kitch'n",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Kitch'n\"][\"brand:wikidata\"=\"Q11980795\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Kitchen Collection",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Kitchen Collection\"][\"brand:wikidata\"=\"Q64149036\"][\"name\"=\"Kitchen Collection\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Kitchen Stuff Plus",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Kitchen Stuff Plus\"][\"brand:wikidata\"=\"Q85850908\"][\"name\"=\"Kitchen Stuff Plus\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "KODi",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"KODi\"][\"brand:wikidata\"=\"Q1778216\"][\"name\"=\"KODi\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/KODi_DerHaushaltsdiscounter_2019_Logo_RGB_300dpi_RZ.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/KODi_DerHaushaltsdiscounter_2019_Logo_RGB_300dpi_RZ.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Kop & Kande",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Kop & Kande\"][\"brand:wikidata\"=\"Q124005159\"][\"name\"=\"Kop & Kande\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Kop_&_Kande,_\u00d8sterbrogade.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kop_&_Kande,_\u00d8sterbrogade.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Kuchenland",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Kuchenland\"][\"name\"=\"Kuchenland\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Lagerhaus (Scandinavia)",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Lagerhaus\"][\"brand:wikidata\"=\"Q10553211\"][\"name\"=\"Lagerhaus\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Lagerhaus.JPG",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Lagerhaus.JPG",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Lakeland",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Lakeland\"][\"brand:wikidata\"=\"Q16256199\"][\"name\"=\"Lakeland\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Le Creuset",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Le Creuset\"][\"brand:wikidata\"=\"Q555861\"][\"name\"=\"Le Creuset\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Le_Creuset_Logo.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Le_Creuset_Logo.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Linen Chest",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Linen Chest\"][\"brand:wikidata\"=\"Q112966601\"][\"name\"=\"Linen Chest\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Madame Coco",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Madame Coco\"][\"brand:wikidata\"=\"Q28605887\"][\"name\"=\"Madame Coco\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Marskramer",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Marskramer\"][\"brand:wikidata\"=\"Q2305917\"][\"name\"=\"Marskramer\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Metalac",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Metalac\"][\"brand:wikidata\"=\"Q116454960\"][\"name\"=\"Metalac\"][\"name:sr\"=\"\u041c\u0435\u0442\u0430\u043b\u0430\u0446\"][\"name:sr-Latn\"=\"Metalac\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Mr Price Home",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Mr Price Home\"][\"brand:wikidata\"=\"Q129561270\"][\"name\"=\"Mr Price Home\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "National Plastics",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"National Plastics\"][\"brand:wikidata\"=\"Q100297552\"][\"name\"=\"National Plastics\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Old Time Pottery",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Old Time Pottery\"][\"brand:wikidata\"=\"Q7085222\"][\"name\"=\"Old Time Pottery\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "ORION",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"ORION\"][\"brand:wikidata\"=\"Q67806141\"][\"name\"=\"ORION\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "PEP Home",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"PEP Home\"][\"brand:wikidata\"=\"Q128802022\"][\"name\"=\"PEP Home\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Plastics Depot",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Plastics Depot\"][\"brand:wikidata\"=\"Q130596634\"][\"name\"=\"Plastics Depot\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Pre\u00e7olandia",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Pre\u00e7olandia\"][\"brand:wikidata\"=\"Q62073183\"][\"name\"=\"Pre\u00e7olandia\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Prince Hypermart",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Prince Hypermart\"][\"brand:wikidata\"=\"Q28405980\"][\"name\"=\"Prince Hypermart\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "ProCook",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"ProCook\"][\"brand:wikidata\"=\"Q101420301\"][\"name\"=\"ProCook\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Risparmio Casa",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Risparmio Casa\"][\"brand:wikidata\"=\"Q125936928\"][\"name\"=\"Risparmio Casa\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Satur",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Satur\"][\"brand:wikidata\"=\"Q133240376\"][\"name\"=\"Satur\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Sheet Street",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Sheet Street\"][\"brand:wikidata\"=\"Q118185878\"][\"name\"=\"Sheet Street\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Soltam",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Soltam\"][\"name\"=\"Soltam\"][\"name:en\"=\"Soltam\"][\"name:he\"=\"\u05e1\u05d5\u05dc\u05ea\u05dd\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Stokes",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Stokes\"][\"brand:wikidata\"=\"Q66481382\"][\"name\"=\"Stokes\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Sur La Table",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Sur La Table\"][\"brand:wikidata\"=\"Q7645220\"][\"name\"=\"Sur La Table\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Seattle,_WA_(2022)_-_198.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Seattle,_WA_(2022)_-_198.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Tescoma",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Tescoma\"][\"brand:wikidata\"=\"Q28962979\"][\"name\"=\"Tescoma\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Tescoma.gif",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Tescoma.gif",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "The Conran Shop",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"The Conran Shop\"][\"brand:wikidata\"=\"Q63959046\"][\"name\"=\"The Conran Shop\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "The Container Store",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"The Container Store\"][\"brand:wikidata\"=\"Q7727445\"][\"name\"=\"The Container Store\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "The Range",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"The Range\"][\"brand:wikidata\"=\"Q7759409\"][\"name\"=\"The Range\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Think Kitchen",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Think Kitchen\"][\"brand:wikidata\"=\"Q66481390\"][\"name\"=\"Think Kitchen\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Tuesday Morning",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Tuesday Morning\"][\"brand:wikidata\"=\"Q7851426\"][\"name\"=\"Tuesday Morning\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Tuesday_Morning_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Tuesday_Morning_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Tupperware",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Tupperware\"][\"brand:wikidata\"=\"Q1129117\"][\"name\"=\"Tupperware\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Tupperware_2024.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Tupperware_2024.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Villeroy & Boch",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Villeroy & Boch\"][\"brand:wikidata\"=\"Q705042\"][\"name\"=\"Villeroy & Boch\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Villeroy_&_Boch_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Villeroy_&_Boch_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Williams-Sonoma",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Williams-Sonoma\"][\"brand:wikidata\"=\"Q2581220\"][\"name\"=\"Williams-Sonoma\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Williams-Sonoma,_Inc._logo.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Williams-Sonoma,_Inc._logo.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "WMF",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"WMF\"][\"brand:wikidata\"=\"Q451423\"][\"name\"=\"WMF\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/WMF_Group_Logo_Silber_RGB.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/WMF_Group_Logo_Silber_RGB.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Xenos",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Xenos\"][\"brand:wikidata\"=\"Q16547960\"][\"name\"=\"Xenos\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo-Xenos-Rubin-Red.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo-Xenos-Rubin-Red.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Yuppiechef",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Yuppiechef\"][\"brand:wikidata\"=\"Q24234053\"][\"name\"=\"Yuppiechef\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "Zwilling",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Zwilling\"][\"brand:wikidata\"=\"Q244736\"][\"name\"=\"Zwilling\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/ZWILLING-Logo-Hystorie.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/ZWILLING-Logo-Hystorie.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "\u0414\u043e\u043c\u043e\u0432\u043e\u0439",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u0414\u043e\u043c\u043e\u0432\u043e\u0439\"][\"brand:wikidata\"=\"Q110086700\"][\"name\"=\"\u0414\u043e\u043c\u043e\u0432\u043e\u0439\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "\u0415\u0432\u0440\u043e\u0447\u0435\u0445\u043e\u043b",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u0415\u0432\u0440\u043e\u0447\u0435\u0445\u043e\u043b\"][\"name\"=\"\u0415\u0432\u0440\u043e\u0447\u0435\u0445\u043e\u043b\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "\u0418\u043c\u043f\u0435\u0440\u0430\u0442\u043e\u0440\u0441\u043a\u0438\u0439 \u0444\u0430\u0440\u0444\u043e\u0440\u043e\u0432\u044b\u0439 \u0437\u0430\u0432\u043e\u0434",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u0418\u043c\u043f\u0435\u0440\u0430\u0442\u043e\u0440\u0441\u043a\u0438\u0439 \u0444\u0430\u0440\u0444\u043e\u0440\u043e\u0432\u044b\u0439 \u0437\u0430\u0432\u043e\u0434\"][\"brand:ar\"=\"\u0645\u0635\u0646\u0639 \u0627\u0644\u062e\u0632\u0641 \u0627\u0644\u0625\u0645\u0628\u0631\u0627\u0637\u0648\u0631\u064a\"][\"brand:be\"=\"\u0406\u043c\u043f\u0435\u0440\u0430\u0442\u0430\u0440\u0441\u043a\u0456 \u0444\u0430\u0440\u0444\u043e\u0440\u0430\u0432\u044b \u0437\u0430\u0432\u043e\u0434\"][\"brand:en\"=\"Imperial Porcelain Factory\"][\"brand:es\"=\"F\u00e1brica Imperial de Porcelana\"][\"brand:fr\"=\"Manufacture de Lomonossov\"][\"brand:he\"=\"\u05d1\u05d9\u05ea \u05d4\u05d7\u05e8\u05d5\u05e9\u05ea \u05d4\u05e7\u05d9\u05e1\u05e8\u05d9 \u05dc\u05d7\u05e8\u05e1\u05d9\u05e0\u05d4\"][\"brand:it\"=\"Porcellana di San Pietroburgo\"][\"brand:ja\"=\"\u5e1d\u56fd\u78c1\u5668\u5de5\u5834\"][\"brand:ru\"=\"\u0418\u043c\u043f\u0435\u0440\u0430\u0442\u043e\u0440\u0441\u043a\u0438\u0439 \u0444\u0430\u0440\u0444\u043e\u0440\u043e\u0432\u044b\u0439 \u0437\u0430\u0432\u043e\u0434\"][\"brand:uk\"=\"\u0406\u043c\u043f\u0435\u0440\u0430\u0442\u043e\u0440\u0441\u044c\u043a\u0438\u0439 \u043f\u043e\u0440\u0446\u0435\u043b\u044f\u043d\u043e\u0432\u0438\u0439 \u0437\u0430\u0432\u043e\u0434\"][\"brand:wikidata\"=\"Q1303887\"][\"name\"=\"\u0418\u043c\u043f\u0435\u0440\u0430\u0442\u043e\u0440\u0441\u043a\u0438\u0439 \u0444\u0430\u0440\u0444\u043e\u0440\u043e\u0432\u044b\u0439 \u0437\u0430\u0432\u043e\u0434\"][\"name:ar\"=\"\u0645\u0635\u0646\u0639 \u0627\u0644\u062e\u0632\u0641 \u0627\u0644\u0625\u0645\u0628\u0631\u0627\u0637\u0648\u0631\u064a\"][\"name:be\"=\"\u0406\u043c\u043f\u0435\u0440\u0430\u0442\u0430\u0440\u0441\u043a\u0456 \u0444\u0430\u0440\u0444\u043e\u0440\u0430\u0432\u044b \u0437\u0430\u0432\u043e\u0434\"][\"name:en\"=\"Imperial Porcelain Factory\"][\"name:es\"=\"F\u00e1brica Imperial de Porcelana\"][\"name:fr\"=\"Manufacture de Lomonossov\"][\"name:he\"=\"\u05d1\u05d9\u05ea \u05d4\u05d7\u05e8\u05d5\u05e9\u05ea \u05d4\u05e7\u05d9\u05e1\u05e8\u05d9 \u05dc\u05d7\u05e8\u05e1\u05d9\u05e0\u05d4\"][\"name:it\"=\"Porcellana di San Pietroburgo\"][\"name:ja\"=\"\u5e1d\u56fd\u78c1\u5668\u5de5\u5834\"][\"name:ru\"=\"\u0418\u043c\u043f\u0435\u0440\u0430\u0442\u043e\u0440\u0441\u043a\u0438\u0439 \u0444\u0430\u0440\u0444\u043e\u0440\u043e\u0432\u044b\u0439 \u0437\u0430\u0432\u043e\u0434\"][\"name:uk\"=\"\u0406\u043c\u043f\u0435\u0440\u0430\u0442\u043e\u0440\u0441\u044c\u043a\u0438\u0439 \u043f\u043e\u0440\u0446\u0435\u043b\u044f\u043d\u043e\u0432\u0438\u0439 \u0437\u0430\u0432\u043e\u0434\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Imperial_porcelain_factory.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Imperial_porcelain_factory.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "\u041d\u0435\u043c\u0441\u043a\u0438 \u0446\u0435\u043d\u0442\u044a\u0440",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u041d\u0435\u043c\u0441\u043a\u0438 \u0446\u0435\u043d\u0442\u044a\u0440\"][\"brand:wikidata\"=\"Q115656593\"][\"name\"=\"\u041d\u0435\u043c\u0441\u043a\u0438 \u0446\u0435\u043d\u0442\u044a\u0440\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "\u10e1\u10e3\u10de\u10d4\u10e0\u10d8",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u10e1\u10e3\u10de\u10d4\u10e0\u10d8\"][\"brand:en\"=\"Super\"][\"brand:ka\"=\"\u10e1\u10e3\u10de\u10d4\u10e0\u10d8\"][\"brand:wikidata\"=\"Q131470015\"][\"name\"=\"\u10e1\u10e3\u10de\u10d4\u10e0\u10d8\"][\"name:en\"=\"Super\"][\"name:ka\"=\"\u10e1\u10e3\u10de\u10d4\u10e0\u10d8\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "\u10f0\u10dd\u10e3\u10db",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u10f0\u10dd\u10e3\u10db\"][\"brand:en\"=\"Home\"][\"brand:ka\"=\"\u10f0\u10dd\u10e3\u10db\"][\"brand:wikidata\"=\"Q131470016\"][\"name\"=\"\u10f0\u10dd\u10e3\u10db\"][\"name:en\"=\"Home\"][\"name:ka\"=\"\u10f0\u10dd\u10e3\u10db\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "\u4eac\u738b\u30a2\u30fc\u30c8\u30de\u30f3",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u4eac\u738b\u30a2\u30fc\u30c8\u30de\u30f3\"][\"brand:en\"=\"Keio Atman\"][\"brand:ja\"=\"\u4eac\u738b\u30a2\u30fc\u30c8\u30de\u30f3\"][\"brand:wikidata\"=\"Q11374580\"][\"name\"=\"\u4eac\u738b\u30a2\u30fc\u30c8\u30de\u30f3\"][\"name:en\"=\"Keio Atman\"][\"name:ja\"=\"\u4eac\u738b\u30a2\u30fc\u30c8\u30de\u30f3\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('houseware'),
+	title: "\u65e5\u672c\u57ce JHC",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u65e5\u672c\u57ce JHC\"][\"brand:en\"=\"JHC\"][\"brand:wikidata\"=\"Q11507765\"][\"brand:zh\"=\"\u65e5\u672c\u57ce\"][\"name\"=\"\u65e5\u672c\u57ce JHC\"][\"name:en\"=\"JHC\"][\"name:zh\"=\"\u65e5\u672c\u57ce\"][\"shop\"=\"houseware\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('interior_decoration'),
+	title: "Bouclair",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Bouclair\"][\"brand:wikidata\"=\"Q20638837\"][\"name\"=\"Bouclair\"][\"shop\"=\"interior_decoration\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bouclair_Home_Latest_Logo.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bouclair_Home_Latest_Logo.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('interior_decoration'),
+	title: "Bouclair Home",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Bouclair\"][\"brand:wikidata\"=\"Q20638837\"][\"name\"=\"Bouclair Home\"][\"shop\"=\"interior_decoration\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bouclair_Home_Latest_Logo.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bouclair_Home_Latest_Logo.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('interior_decoration'),
+	title: "Bouclair Maison",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Bouclair\"][\"brand:wikidata\"=\"Q20638837\"][\"name\"=\"Bouclair Maison\"][\"shop\"=\"interior_decoration\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bouclair_Home_Latest_Logo.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bouclair_Home_Latest_Logo.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('interior_decoration'),
+	title: "Butlers",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Butlers\"][\"brand:wikidata\"=\"Q1017972\"][\"name\"=\"Butlers\"][\"shop\"=\"interior_decoration\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/BUTLERS_Logo_black+claim.tif",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/BUTLERS_Logo_black+claim.tif",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('interior_decoration'),
+	title: "CASA",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"CASA\"][\"brand:wikidata\"=\"Q1991755\"][\"name\"=\"CASA\"][\"shop\"=\"interior_decoration\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Casa_Belgium_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Casa_Belgium_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('interior_decoration'),
+	title: "Centrakor",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Centrakor\"][\"brand:wikidata\"=\"Q64079345\"][\"name\"=\"Centrakor\"][\"shop\"=\"interior_decoration\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/NEW_LOGO_Centrakor_Stores.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/NEW_LOGO_Centrakor_Stores.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('interior_decoration'),
+	title: "Coincasa",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Coin\"][\"brand:wikidata\"=\"Q1107215\"][\"name\"=\"Coincasa\"][\"shop\"=\"interior_decoration\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Coin_logo.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Coin_logo.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('interior_decoration'),
+	title: "Demmoksi",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Demmoksi\"][\"name\"=\"Demmoksi\"][\"shop\"=\"interior_decoration\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('interior_decoration'),
+	title: "Depot",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Depot\"][\"brand:wikidata\"=\"Q1191740\"][\"name\"=\"Depot\"][\"shop\"=\"interior_decoration\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/DEPOT-Deko-Logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/DEPOT-Deko-Logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('interior_decoration'),
+	title: "Dunelm",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Dunelm\"][\"brand:wikidata\"=\"Q5315020\"][\"name\"=\"Dunelm\"][\"shop\"=\"interior_decoration\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('interior_decoration'),
+	title: "English Home",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"English Home\"][\"brand:wikidata\"=\"Q106803513\"][\"name\"=\"English Home\"][\"shop\"=\"interior_decoration\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('interior_decoration'),
+	title: "Feel",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Feel\"][\"brand:wikidata\"=\"Q127920019\"][\"shop\"=\"interior_decoration\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('interior_decoration'),
+	title: "Fired Earth",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Fired Earth\"][\"brand:wikidata\"=\"Q20594569\"][\"name\"=\"Fired Earth\"][\"shop\"=\"interior_decoration\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('interior_decoration'),
+	title: "Gato Preto",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Gato Preto\"][\"brand:wikidata\"=\"Q112673244\"][\"name\"=\"Gato Preto\"][\"shop\"=\"interior_decoration\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/A_loja_do_Gato_Preto.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/A_loja_do_Gato_Preto.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('interior_decoration'),
+	title: "Granit",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Granit\"][\"brand:wikidata\"=\"Q131904693\"][\"name\"=\"Granit\"][\"shop\"=\"interior_decoration\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('interior_decoration'),
+	title: "H&M HOME",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"H&M HOME\"][\"brand:wikidata\"=\"Q110226474\"][\"name\"=\"H&M HOME\"][\"shop\"=\"interior_decoration\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('interior_decoration'),
+	title: "Harry Corry",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Harry Corry\"][\"brand:wikidata\"=\"Q5668069\"][\"name\"=\"Harry Corry\"][\"shop\"=\"interior_decoration\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('interior_decoration'),
+	title: "HAY",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"HAY\"][\"brand:wikidata\"=\"Q124332948\"][\"name\"=\"HAY\"][\"shop\"=\"interior_decoration\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('interior_decoration'),
+	title: "Hemtex",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Hemtex\"][\"brand:wikidata\"=\"Q10521868\"][\"name\"=\"Hemtex\"][\"shop\"=\"interior_decoration\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('interior_decoration'),
+	title: "home&you",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"home&you\"][\"brand:wikidata\"=\"Q116884264\"][\"name\"=\"home&you\"][\"shop\"=\"interior_decoration\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Gda\u0144sk_\u2013_Park_Handlowy_Matarnia.JPG",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Gda\u0144sk_\u2013_Park_Handlowy_Matarnia.JPG",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('interior_decoration'),
+	title: "HomeSense",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"HomeSense\"][\"brand:wikidata\"=\"Q16844433\"][\"name\"=\"HomeSense\"][\"shop\"=\"interior_decoration\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/HomeSense_Logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/HomeSense_Logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('interior_decoration'),
+	title: "Iittala",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Iittala\"][\"brand:wikidata\"=\"Q1658018\"][\"name\"=\"Iittala\"][\"shop\"=\"interior_decoration\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Iittala_Group_Logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Iittala_Group_Logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('interior_decoration'),
+	title: "Kid interi\u00f8r",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Kid interi\u00f8r\"][\"brand:wikidata\"=\"Q109628199\"][\"name\"=\"Kid interi\u00f8r\"][\"shop\"=\"interior_decoration\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('interior_decoration'),
+	title: "Kirkland's",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Kirkland's\"][\"brand:wikidata\"=\"Q6415714\"][\"name\"=\"Kirkland's\"][\"shop\"=\"interior_decoration\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('interior_decoration'),
+	title: "Kremmerhuset",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Kremmerhuset\"][\"brand:wikidata\"=\"Q127921048\"][\"shop\"=\"interior_decoration\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('interior_decoration'),
+	title: "Madura",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Madura\"][\"brand:wikidata\"=\"Q3276259\"][\"name\"=\"Madura\"][\"shop\"=\"interior_decoration\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Madura_Decoration.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Madura_Decoration.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('interior_decoration'),
+	title: "S\u00f8strene Grene",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"S\u00f8strene Grene\"][\"brand:wikidata\"=\"Q10730152\"][\"name\"=\"S\u00f8strene Grene\"][\"shop\"=\"interior_decoration\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/S\u00f8strene_Grene,_Rotterdam_(2018)_02.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/S\u00f8strene_Grene,_Rotterdam_(2018)_02.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('interior_decoration'),
+	title: "Ten Thousand Villages",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Ten Thousand Villages\"][\"brand:wikidata\"=\"Q2403252\"][\"fair_trade\"=\"only\"][\"name\"=\"Ten Thousand Villages\"][\"shop\"=\"interior_decoration\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('interior_decoration'),
+	title: "World Market",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"World Market\"][\"brand:wikidata\"=\"Q5174750\"][\"name\"=\"World Market\"][\"official_name\"=\"Cost Plus World Market\"][\"shop\"=\"interior_decoration\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Cost_Plus_World_Market_HQ.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Cost_Plus_World_Market_HQ.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('interior_decoration'),
+	title: "Zara Home",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Zara Home\"][\"brand:wikidata\"=\"Q3114054\"][\"name\"=\"Zara Home\"][\"shop\"=\"interior_decoration\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logotipo_zh.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logotipo_zh.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "585 Gold",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"585 Gold\"][\"brand:wikidata\"=\"Q125730875\"][\"name\"=\"585 Gold\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "585 \u0417\u043e\u043b\u043e\u0442\u043e\u0439",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"585 \u0417\u043e\u043b\u043e\u0442\u043e\u0439\"][\"brand:en\"=\"585 Zolotoy\"][\"brand:ru\"=\"585 \u0417\u043e\u043b\u043e\u0442\u043e\u0439\"][\"brand:wikidata\"=\"Q4031865\"][\"name\"=\"585 \u0417\u043e\u043b\u043e\u0442\u043e\u0439\"][\"name:en\"=\"585 Zolotoy\"][\"name:ru\"=\"585 \u0417\u043e\u043b\u043e\u0442\u043e\u0439\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "7 \u043a\u0430\u0440\u0430\u0442",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"7 \u043a\u0430\u0440\u0430\u0442\"][\"name\"=\"7 \u043a\u0430\u0440\u0430\u0442\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Agatha",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Agatha\"][\"brand:wikidata\"=\"Q105064006\"][\"name\"=\"Agatha\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Alex and Ani",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Alex and Ani\"][\"brand:wikidata\"=\"Q16198810\"][\"name\"=\"Alex and Ani\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Alex-and-ani-logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Alex-and-ani-logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Alt\u0131nba\u015f",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Alt\u0131nba\u015f\"][\"brand:wikidata\"=\"Q19610501\"][\"name\"=\"Alt\u0131nba\u015f\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Alt\u0131nba\u015f_Holding_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Alt\u0131nba\u015f_Holding_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "American Swiss",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"American Swiss\"][\"brand:wikidata\"=\"Q116430764\"][\"name\"=\"American Swiss\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Angus and Coote",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Angus and Coote\"][\"brand:wikidata\"=\"Q18162112\"][\"name\"=\"Angus and Coote\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Apart",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Apart\"][\"brand:wikidata\"=\"Q11686561\"][\"name\"=\"Apart\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/APART_Suchy_Las.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/APART_Suchy_Las.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "APM Monaco",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"APM Monaco\"][\"brand:wikidata\"=\"Q85738954\"][\"name\"=\"APM Monaco\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Aristocrazy",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Aristocrazy\"][\"brand:wikidata\"=\"Q117802848\"][\"name\"=\"Aristocrazy\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Aristocrazy_logo.webp",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Aristocrazy_logo.webp",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Arthus Bertrand",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Arthus Bertrand\"][\"brand:wikidata\"=\"Q3278594\"][\"name\"=\"Arthus Bertrand\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Atasay",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Atasay\"][\"brand:wikidata\"=\"Q28940710\"][\"name\"=\"Atasay\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Banter by Piercing Pagoda",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Banter by Piercing Pagoda\"][\"brand:wikidata\"=\"Q108410448\"][\"name\"=\"Banter by Piercing Pagoda\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Beaverbrooks",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Beaverbrooks\"][\"brand:wikidata\"=\"Q4878226\"][\"name\"=\"Beaverbrooks\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Beaverbrooks,_Commercial_Street,_Leeds_(11th_April_2011).jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Beaverbrooks,_Commercial_Street,_Leeds_(11th_April_2011).jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Ben Bridge",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Ben Bridge\"][\"brand:wikidata\"=\"Q20708050\"][\"name\"=\"Ben Bridge\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Bevilles Jewellers",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Bevilles Jewellers\"][\"brand:wikidata\"=\"Q117837188\"][\"name\"=\"Bevilles Jewellers\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Bhima Jewellers",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Bhima Jewellers\"][\"brand:wikidata\"=\"Q17004889\"][\"name\"=\"Bhima Jewellers\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Bijou Brigitte",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Bijou Brigitte\"][\"brand:wikidata\"=\"Q599545\"][\"name\"=\"Bijou Brigitte\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Bijou_Brigitte_logo_2013.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Bijou_Brigitte_logo_2013.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Bizzarro",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Bizzarro\"][\"brand:wikidata\"=\"Q131456788\"][\"name\"=\"Bizzarro\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Blue Nile",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Blue Nile\"][\"brand:wikidata\"=\"Q4929570\"][\"name\"=\"Blue Nile\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Bluespirit",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Bluespirit\"][\"brand:wikidata\"=\"Q45117441\"][\"name\"=\"Bluespirit\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Buccellati",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Buccellati\"][\"brand:wikidata\"=\"Q15994135\"][\"name\"=\"Buccellati\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/H\u00f4tel_Heuz\u00e9_de_Vologer.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/H\u00f4tel_Heuz\u00e9_de_Vologer.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Cartier",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Cartier\"][\"brand:wikidata\"=\"Q538587\"][\"name\"=\"Cartier\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Cartier_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Cartier_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Charm Diamond Centres",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Charm Diamond Centres\"][\"brand:wikidata\"=\"Q5086396\"][\"name\"=\"Charm Diamond Centres\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Charm_Diamond_Logo_BLACK5700.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Charm_Diamond_Logo_BLACK5700.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Chaumet",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Chaumet\"][\"brand:wikidata\"=\"Q2961620\"][\"name\"=\"Chaumet\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Chaumet-logo.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Chaumet-logo.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Chemmanur International Jewellers",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Chemmanur International Jewellers\"][\"brand:wikidata\"=\"Q99520996\"][\"name\"=\"Chemmanur International Jewellers\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Chisholm Hunter",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Chisholm Hunter\"][\"brand:wikidata\"=\"Q66662001\"][\"name\"=\"Chisholm Hunter\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Christ",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Christ\"][\"brand:wikidata\"=\"Q1077957\"][\"name\"=\"Christ\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Christ-Logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Christ-Logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Colours & Beauty",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Colours & Beauty\"][\"brand:wikidata\"=\"Q113291420\"][\"name\"=\"Colours & Beauty\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Compro Oro",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Compro Oro\"][\"name\"=\"Compro Oro\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Daniel's",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Daniel's Jewelers\"][\"brand:wikidata\"=\"Q120763875\"][\"name\"=\"Daniel's\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "David Yurman",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"David Yurman\"][\"brand:wikidata\"=\"Q5241390\"][\"name\"=\"David Yurman\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/David-yurman-pic1.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/David-yurman-pic1.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Diamant",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Diamant\"][\"name\"=\"Diamant\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Dinh Van",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Dinh Van\"][\"brand:wikidata\"=\"Q105324937\"][\"name\"=\"Dinh Van\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Dinh_Van.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Dinh_Van.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Don Roberto Jewelers",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Don Roberto Jewelers\"][\"brand:wikidata\"=\"Q109371600\"][\"name\"=\"Don Roberto Jewelers\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Dorotheum Juwelier",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Dorotheum Juwelier\"][\"brand:wikidata\"=\"Q668545\"][\"name\"=\"Dorotheum Juwelier\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Dorotheum_Vienna_2.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Dorotheum_Vienna_2.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "DR\u94bb\u6212",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"DR\u94bb\u6212\"][\"brand:en\"=\"Darry Ring\"][\"brand:wikidata\"=\"Q48919886\"][\"brand:zh\"=\"DR\u94bb\u6212\"][\"name\"=\"DR\u94bb\u6212\"][\"name:en\"=\"Darry Ring\"][\"name:zh\"=\"DR\u94bb\u6212\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Ernest Jones",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Ernest Jones\"][\"brand:wikidata\"=\"Q5393358\"][\"name\"=\"Ernest Jones\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Ernest_Jones,_Putney_Exchange_01.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Ernest_Jones,_Putney_Exchange_01.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "F.Hinds",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"F.Hinds\"][\"brand:wikidata\"=\"Q5423915\"][\"name\"=\"F.Hinds\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Fast-Fix",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Fast-Fix\"][\"brand:wikidata\"=\"Q108411186\"][\"name\"=\"Fast-Fix\"][\"official_name\"=\"Fast-Fix Jewelry and Watch Repairs\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Fred Meyer Jewelers",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Fred Meyer Jewelers\"][\"brand:wikidata\"=\"Q5495935\"][\"name\"=\"Fred Meyer Jewelers\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/FMJ_logo_blk.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/FMJ_logo_blk.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Glitter",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Glitter\"][\"brand:wikidata\"=\"Q10505535\"][\"name\"=\"Glitter\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Goldmark",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Goldmark\"][\"brand:wikidata\"=\"Q17005474\"][\"name\"=\"Goldmark\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/JPG_Goldmark_Broadway_2013.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/JPG_Goldmark_Broadway_2013.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Goldsmiths",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Goldsmiths\"][\"brand:wikidata\"=\"Q16993095\"][\"name\"=\"Goldsmiths\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Gorjana",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Gorjana\"][\"brand:wikidata\"=\"Q115200885\"][\"name\"=\"Gorjana\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Guldfynd",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Guldfynd\"][\"brand:wikidata\"=\"Q49099223\"][\"name\"=\"Guldfynd\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Guldfynd,_Farsta,_2018.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Guldfynd,_Farsta,_2018.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "H. Stern",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"H. Stern\"][\"brand:wikidata\"=\"Q2660388\"][\"name\"=\"H. Stern\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/H-stern-logo.gif",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/H-stern-logo.gif",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "H.Samuel",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"H.Samuel\"][\"brand:wikidata\"=\"Q5628558\"][\"name\"=\"H.Samuel\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/H.Samuel_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/H.Samuel_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Harry Ritchie's",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Harry Ritchie's\"][\"brand:wikidata\"=\"Q108410942\"][\"name\"=\"Harry Ritchie's\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Helzberg Diamonds",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Helzberg Diamonds\"][\"brand:wikidata\"=\"Q16995161\"][\"name\"=\"Helzberg Diamonds\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Helzberg_Diamonds_logo.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Helzberg_Diamonds_logo.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Histoire d'Or",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Histoire d'Or\"][\"brand:wikidata\"=\"Q62529245\"][\"name\"=\"Histoire d'Or\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Icing",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Icing\"][\"brand:wikidata\"=\"Q108410029\"][\"name\"=\"Icing\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "James Avery Jewelry",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"James Avery Jewelry\"][\"brand:wikidata\"=\"Q6129024\"][\"name\"=\"James Avery Jewelry\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Jared",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Jared\"][\"brand:wikidata\"=\"Q62029282\"][\"name\"=\"Jared\"][\"official_name\"=\"Jared The Galleria of Jewelry\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Jared_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Jared_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Jewel Cafe",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Jewel Cafe\"][\"brand:en\"=\"Jewel Cafe\"][\"brand:ja\"=\"\u30b8\u30e5\u30a8\u30eb\u30ab\u30d5\u30a7\"][\"brand:wikidata\"=\"Q126457805\"][\"name\"=\"Jewel Cafe\"][\"name:en\"=\"Jewel Cafe\"][\"name:ja\"=\"\u30b8\u30e5\u30a8\u30eb\u30ab\u30d5\u30a7\"][\"operator\"=\"\u30af\u30ec\u30a4\u30f3\"][\"operator:en\"=\"Crane\"][\"operator:ja\"=\"\u30af\u30ec\u30a4\u30f3\"][\"operator:wikidata\"=\"Q11299557\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Emphasis_store_in_IFC.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Emphasis_store_in_IFC.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Jos Alukkas",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Jos Alukkas\"][\"brand:wikidata\"=\"Q6279093\"][\"name\"=\"Jos Alukkas\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Josco Jewellers",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Josco Jewellers\"][\"brand:wikidata\"=\"Q99521002\"][\"name\"=\"Josco Jewellers\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Joyalukkas",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Joyalukkas\"][\"brand:wikidata\"=\"Q6297357\"][\"name\"=\"Joyalukkas\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Julien d'Orcel",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Julien d'Orcel\"][\"brand:wikidata\"=\"Q62497463\"][\"name\"=\"Julien d'Orcel\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Juwelier Kraemer",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Juwelier Kraemer\"][\"brand:wikidata\"=\"Q1785938\"][\"name\"=\"Juwelier Kraemer\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Kraemer_Logo2.JPG",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kraemer_Logo2.JPG",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Kalyan Jewellers",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Kalyan Jewellers\"][\"brand:wikidata\"=\"Q6354854\"][\"name\"=\"Kalyan Jewellers\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Kay Jewelers",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Kay Jewelers\"][\"brand:wikidata\"=\"Q62029290\"][\"name\"=\"Kay Jewelers\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Kay_Jewelers_Vintage_Faire_Mall_Modesto,_California.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kay_Jewelers_Vintage_Faire_Mall_Modesto,_California.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Kendra Scott",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Kendra Scott\"][\"brand:wikidata\"=\"Q120885584\"][\"name\"=\"Kendra Scott\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Life Vivara",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Life Vivara\"][\"brand:wikidata\"=\"Q72611919\"][\"name\"=\"Life Vivara\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Louis Pion",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Louis Pion\"][\"brand:wikidata\"=\"Q18745303\"][\"name\"=\"Louis Pion\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Lovisa",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Lovisa\"][\"brand:wikidata\"=\"Q106298409\"][\"name\"=\"Lovisa\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Lovisa,_Armadale_Shopping_City.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Lovisa,_Armadale_Shopping_City.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Lucardi",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Lucardi\"][\"brand:wikidata\"=\"Q13774940\"][\"name\"=\"Lucardi\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Lucardi_Logo_2023.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Lucardi_Logo_2023.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Maison Birks",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Maison Birks\"][\"brand:wikidata\"=\"Q123409905\"][\"name\"=\"Maison Birks\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Malabar Gold and Diamonds",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Malabar Gold and Diamonds\"][\"brand:wikidata\"=\"Q60748883\"][\"name\"=\"Malabar Gold and Diamonds\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Man\u00e8ge \u00e0 Bijoux",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Man\u00e8ge \u00e0 Bijoux\"][\"brand:wikidata\"=\"Q1273376\"][\"name\"=\"Man\u00e8ge \u00e0 Bijoux\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/E.Leclerc_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/E.Leclerc_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Marc Orian",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Marc Orian\"][\"brand:wikidata\"=\"Q99848767\"][\"name\"=\"Marc Orian\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "MATY",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"MATY\"][\"brand:wikidata\"=\"Q3300005\"][\"name\"=\"MATY\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_MATY.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_MATY.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Mauboussin",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Mauboussin\"][\"brand:wikidata\"=\"Q3300085\"][\"name\"=\"Mauboussin\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Mauboussin_in_Japan.JPG",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Mauboussin_in_Japan.JPG",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Messika",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Messika\"][\"brand:wikidata\"=\"Q104889722\"][\"name\"=\"Messika\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Michael Hill",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Michael Hill\"][\"brand:wikidata\"=\"Q3308250\"][\"name\"=\"Michael Hill\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Michael_hill_in_Chadstone_Shopping_Centre_2017.JPG",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Michael_hill_in_Chadstone_Shopping_Centre_2017.JPG",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Mimco",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Mimco\"][\"brand:wikidata\"=\"Q106014291\"][\"name\"=\"Mimco\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Morgan Jewelers",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Morgan Jewelers\"][\"brand:wikidata\"=\"Q108413488\"][\"name\"=\"Morgan Jewelers\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "My Jewellery",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"My Jewellery\"][\"brand:wikidata\"=\"Q123655125\"][\"name\"=\"My Jewellery\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/My_Jewellery_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/My_Jewellery_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Na Hoku",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Na Hoku\"][\"brand:wikidata\"=\"Q108410100\"][\"name\"=\"Na Hoku\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "OROVIVO",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"OROVIVO\"][\"brand:wikidata\"=\"Q107064745\"][\"name\"=\"OROVIVO\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Pandora",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Pandora\"][\"brand:wikidata\"=\"Q2241604\"][\"name\"=\"Pandora\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Pandora_Logo_2019.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Pandora_Logo_2019.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "PC Jeweller",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"PC Jeweller\"][\"brand:wikidata\"=\"Q17082520\"][\"name\"=\"PC Jeweller\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Peoples Jewellers",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Peoples Jewellers\"][\"brand:wikidata\"=\"Q64995558\"][\"name\"=\"Peoples Jewellers\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Piaget",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Piaget\"][\"brand:wikidata\"=\"Q658961\"][\"name\"=\"Piaget\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Piaget_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Piaget_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Pletzsch",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Pletzsch\"][\"brand:wikidata\"=\"Q107983094\"][\"name\"=\"Pletzsch\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "PNJ",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"PNJ\"][\"brand:wikidata\"=\"Q61129183\"][\"name\"=\"PNJ\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Prouds",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Prouds\"][\"brand:wikidata\"=\"Q18636715\"][\"name\"=\"Prouds\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Schaap en Citroen",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Schaap en Citroen\"][\"brand:wikidata\"=\"Q1984947\"][\"name\"=\"Schaap en Citroen\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Schaap_en_Citroen_Logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Schaap_en_Citroen_Logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Shane Co.",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Shane Co.\"][\"brand:wikidata\"=\"Q7488019\"][\"name\"=\"Shane Co.\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Shane_Co_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Shane_Co_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "SOFIA",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"SOFIA\"][\"brand:wikidata\"=\"Q116885611\"][\"name\"=\"SOFIA\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Sofia_Jewerly_logo.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Sofia_Jewerly_logo.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Sokolov",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Sokolov\"][\"name\"=\"Sokolov\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Sterns",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Sterns\"][\"brand:wikidata\"=\"Q116430300\"][\"name\"=\"Sterns\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Stroili Oro",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Stroili Oro\"][\"brand:wikidata\"=\"Q106611306\"][\"name\"=\"Stroili Oro\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Sunlight",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Sunlight\"][\"name\"=\"Sunlight\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Swarovski",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Swarovski\"][\"brand:wikidata\"=\"Q611115\"][\"name\"=\"Swarovski\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Swarovski_new_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Swarovski_new_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Tanishq",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Tanishq\"][\"brand:en\"=\"Tanishq\"][\"brand:wikidata\"=\"Q13117711\"][\"name\"=\"Tanishq\"][\"name:en\"=\"Tanishq\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Tanishq_Logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Tanishq_Logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Thomas Sabo",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Thomas Sabo\"][\"brand:wikidata\"=\"Q13415716\"][\"name\"=\"Thomas Sabo\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/THOMAS_SABO_Unternehmenslogo.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/THOMAS_SABO_Unternehmenslogo.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Tiffany & Company",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Tiffany & Company\"][\"brand:wikidata\"=\"Q1066858\"][\"name\"=\"Tiffany & Company\"][\"official_name\"=\"Tiffany & Co.\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Tiffany_&_Co._wordmark_2003.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Tiffany_&_Co._wordmark_2003.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Titan",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Titan\"][\"brand:wikidata\"=\"Q3536932\"][\"name\"=\"Titan\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Titan_Company_Logo.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Titan_Company_Logo.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Tous",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Tous\"][\"brand:wikidata\"=\"Q3815128\"][\"name\"=\"Tous\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Tous.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Tous.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Ur&Penn",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Ur&Penn\"][\"brand:wikidata\"=\"Q10710340\"][\"name\"=\"Ur&Penn\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Ur&Penn.JPG",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Ur&Penn.JPG",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Valmano",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Valmano\"][\"brand:wikidata\"=\"Q116151710\"][\"name\"=\"Valmano\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Valmano_Logo_(2020).svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Valmano_Logo_(2020).svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Vivara",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Vivara\"][\"brand:wikidata\"=\"Q72611919\"][\"name\"=\"Vivara\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "W. Kruk",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"W. Kruk\"][\"brand:wikidata\"=\"Q9369274\"][\"name\"=\"W. Kruk\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Wkruk.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Wkruk.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Wallace Bishop",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Wallace Bishop\"][\"brand:wikidata\"=\"Q18636699\"][\"name\"=\"Wallace Bishop\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/StateLibQld_2_101820_Wallace_Bishop_Arcade,_Brisbane,_Queensland,_1939.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/StateLibQld_2_101820_Wallace_Bishop_Arcade,_Brisbane,_Queensland,_1939.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Warren James",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Warren James\"][\"brand:wikidata\"=\"Q19604616\"][\"name\"=\"Warren James\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Wempe",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Wempe\"][\"brand:wikidata\"=\"Q1483424\"][\"name\"=\"Wempe\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Wempe_Chronometerwerke_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Wempe_Chronometerwerke_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Yes",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Yes\"][\"brand:wikidata\"=\"Q133424269\"][\"name\"=\"Yes\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Zales",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Zales\"][\"brand:wikidata\"=\"Q8065305\"][\"name\"=\"Zales\"][\"official_name\"=\"Zales The Diamond Store\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Original_location_of_first_Zales_Jewelyr_Store_in_Wichita_Falls,_TX_IMG_7035.JPG",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Original_location_of_first_Zales_Jewelyr_Store_in_Wichita_Falls,_TX_IMG_7035.JPG",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Ziko",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Ziko\"][\"name\"=\"Ziko\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "Zlatarna Celje",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Zlatarna Celje\"][\"brand:wikidata\"=\"Q19736656\"][\"name\"=\"Zlatarna Celje\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "\u0410\u0434\u0430\u043c\u0430\u0441",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u0410\u0434\u0430\u043c\u0430\u0441\"][\"brand:en\"=\"Adamas\"][\"brand:ru\"=\"\u0410\u0434\u0430\u043c\u0430\u0441\"][\"brand:wikidata\"=\"Q62393709\"][\"name\"=\"\u0410\u0434\u0430\u043c\u0430\u0441\"][\"name:en\"=\"Adamas\"][\"name:ru\"=\"\u0410\u0434\u0430\u043c\u0430\u0441\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "\u0410\u043b\u043c\u0430\u0437",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u0410\u043b\u043c\u0430\u0437\"][\"name\"=\"\u0410\u043b\u043c\u0430\u0437\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "\u0411\u0440\u043e\u043d\u043d\u0438\u0446\u043a\u0438\u0439 \u044e\u0432\u0435\u043b\u0438\u0440",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u0411\u0440\u043e\u043d\u043d\u0438\u0446\u043a\u0438\u0439 \u044e\u0432\u0435\u043b\u0438\u0440\"][\"name\"=\"\u0411\u0440\u043e\u043d\u043d\u0438\u0446\u043a\u0438\u0439 \u044e\u0432\u0435\u043b\u0438\u0440\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "\u0417\u043e\u043b\u043e\u0442\u0430\u044f \u043c\u0435\u0447\u0442\u0430",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u0417\u043e\u043b\u043e\u0442\u0430\u044f \u043c\u0435\u0447\u0442\u0430\"][\"brand:en\"=\"Gold Dream\"][\"brand:ru\"=\"\u0417\u043e\u043b\u043e\u0442\u0430\u044f \u043c\u0435\u0447\u0442\u0430\"][\"name\"=\"\u0417\u043e\u043b\u043e\u0442\u0430\u044f \u043c\u0435\u0447\u0442\u0430\"][\"name:en\"=\"Gold Dream\"][\"name:ru\"=\"\u0417\u043e\u043b\u043e\u0442\u0430\u044f \u043c\u0435\u0447\u0442\u0430\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "\u0417\u043e\u043b\u043e\u0442\u0438\u0439 \u0412\u0456\u043a",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u0417\u043e\u043b\u043e\u0442\u0438\u0439 \u0412\u0456\u043a\"][\"brand:wikidata\"=\"Q113335928\"][\"name\"=\"\u0417\u043e\u043b\u043e\u0442\u0438\u0439 \u0412\u0456\u043a\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/\u041b\u043e\u0433\u043e\u0442\u0438\u043f_\"\u0417\u043e\u043b\u043e\u0442\u0438\u0439_\u0432\u0456\u043a\".svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/\u041b\u043e\u0433\u043e\u0442\u0438\u043f_\"\u0417\u043e\u043b\u043e\u0442\u0438\u0439_\u0432\u0456\u043a\".svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "\u041a\u0440\u0438\u0441\u0442\u0430\u043b\u043b",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u041a\u0440\u0438\u0441\u0442\u0430\u043b\u043b\"][\"name\"=\"\u041a\u0440\u0438\u0441\u0442\u0430\u043b\u043b\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "\u041b\u0438\u043d\u0438\u0438 \u041b\u044e\u0431\u0432\u0438",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u041b\u0438\u043d\u0438\u0438 \u041b\u044e\u0431\u0432\u0438\"][\"name\"=\"\u041b\u0438\u043d\u0438\u0438 \u041b\u044e\u0431\u0432\u0438\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "\u041d\u0430\u0448\u0435 \u0417\u043e\u043b\u043e\u0442\u043e",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u041d\u0430\u0448\u0435 \u0417\u043e\u043b\u043e\u0442\u043e\"][\"name\"=\"\u041d\u0430\u0448\u0435 \u0417\u043e\u043b\u043e\u0442\u043e\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "\u0423\u043a\u0440\u0437\u043e\u043b\u043e\u0442\u043e",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u0423\u043a\u0440\u0437\u043e\u043b\u043e\u0442\u043e\"][\"brand:en\"=\"Ukrzoloto\"][\"brand:uk\"=\"\u0423\u043a\u0440\u0437\u043e\u043b\u043e\u0442\u043e\"][\"brand:wikidata\"=\"Q12164384\"][\"name\"=\"\u0423\u043a\u0440\u0437\u043e\u043b\u043e\u0442\u043e\"][\"name:en\"=\"Ukrzoloto\"][\"name:uk\"=\"\u0423\u043a\u0440\u0437\u043e\u043b\u043e\u0442\u043e\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/\u0423\u043a\u0440\u0437\u043e\u043b\u043e\u0442\u043e_\u043b\u043e\u0433\u043e.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/\u0423\u043a\u0440\u0437\u043e\u043b\u043e\u0442\u043e_\u043b\u043e\u0433\u043e.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "\u0426\u0430\u0440\u0441\u043a\u043e\u0435 \u0417\u043e\u043b\u043e\u0442\u043e",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u0426\u0430\u0440\u0441\u043a\u043e\u0435 \u0417\u043e\u043b\u043e\u0442\u043e\"][\"name\"=\"\u0426\u0430\u0440\u0441\u043a\u043e\u0435 \u0417\u043e\u043b\u043e\u0442\u043e\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "\u0627\u0644\u0631\u0645\u064a\u0632\u0627\u0646",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u0627\u0644\u0631\u0645\u064a\u0632\u0627\u0646\"][\"name\"=\"\u0627\u0644\u0631\u0645\u064a\u0632\u0627\u0646\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "\u30c4\u30c4\u30df",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u30c4\u30c4\u30df\"][\"brand:en\"=\"Tsutsumi\"][\"brand:ja\"=\"\u30c4\u30c4\u30df\"][\"brand:wikidata\"=\"Q11318759\"][\"name\"=\"\u30c4\u30c4\u30df\"][\"name:en\"=\"Tsutsumi\"][\"name:ja\"=\"\u30c4\u30c4\u30df\"][\"official_name\"=\"\u30b8\u30e5\u30a8\u30ea\u30fc\u30c4\u30c4\u30df\"][\"official_name:en\"=\"Jewelry Tsutsumi\"][\"official_name:ja\"=\"\u30b8\u30e5\u30a8\u30ea\u30fc\u30c4\u30c4\u30df\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "\u4e09\u4e95\u8cb4\u91d1\u5c6c",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u4e09\u4e95\u8cb4\u91d1\u5c6c\"][\"brand:wikidata\"=\"Q130525509\"][\"brand:zh\"=\"\u4e09\u4e95\u8cb4\u91d1\u5c6c\"][\"name\"=\"\u4e09\u4e95\u8cb4\u91d1\u5c6c\"][\"name:zh\"=\"\u4e09\u4e95\u8cb4\u91d1\u5c6c\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "\u4eca\u751f\u91d1\u98fe",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u4eca\u751f\u91d1\u98fe\"][\"brand:en\"=\"GoldenLife\"][\"brand:wikidata\"=\"Q126459819\"][\"brand:zh\"=\"\u4eca\u751f\u91d1\u98fe\"][\"name\"=\"\u4eca\u751f\u91d1\u98fe\"][\"name:en\"=\"GoldenLife\"][\"name:zh\"=\"\u4eca\u751f\u91d1\u98fe\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "\u516d\u798f\u73e0\u5b9d",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u516d\u798f\u73e0\u5b9d\"][\"brand:en\"=\"Lukfook Jewellery\"][\"brand:wikidata\"=\"Q10893397\"][\"brand:zh\"=\"\u516d\u798f\u73e0\u5b9d\"][\"name\"=\"\u516d\u798f\u73e0\u5b9d\"][\"name:en\"=\"Lukfook Jewellery\"][\"name:zh\"=\"\u516d\u798f\u73e0\u5b9d\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/LukFook_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/LukFook_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "\u516d\u798f\u73e0\u5bf6 Lukfook Jewellery",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u516d\u798f\u73e0\u5bf6 Lukfook Jewellery\"][\"brand:en\"=\"Lukfook Jewellery\"][\"brand:wikidata\"=\"Q10893397\"][\"brand:zh\"=\"\u516d\u798f\u73e0\u5bf6\"][\"brand:zh-Hans\"=\"\u516d\u798f\u73e0\u5b9d\"][\"brand:zh-Hant\"=\"\u516d\u798f\u73e0\u5bf6\"][\"name\"=\"\u516d\u798f\u73e0\u5bf6 Lukfook Jewellery\"][\"name:en\"=\"Lukfook Jewellery\"][\"name:zh\"=\"\u516d\u798f\u73e0\u5bf6\"][\"name:zh-Hans\"=\"\u516d\u798f\u73e0\u5b9d\"][\"name:zh-Hant\"=\"\u516d\u798f\u73e0\u5bf6\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/LukFook_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/LukFook_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "\u5468\u5927\u798f",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u5468\u5927\u798f\"][\"brand:en\"=\"Chow Tai Fook\"][\"brand:wikidata\"=\"Q48880993\"][\"brand:zh\"=\"\u5468\u5927\u798f\"][\"name\"=\"\u5468\u5927\u798f\"][\"name:en\"=\"Chow Tai Fook\"][\"name:zh\"=\"\u5468\u5927\u798f\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/ChowTaiFook_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/ChowTaiFook_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "\u5468\u5927\u798f Chow Tai Fook",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u5468\u5927\u798f Chow Tai Fook\"][\"brand:en\"=\"Chow Tai Fook\"][\"brand:wikidata\"=\"Q48880993\"][\"brand:zh\"=\"\u5468\u5927\u798f\"][\"brand:zh-Hans\"=\"\u5468\u5927\u798f\"][\"brand:zh-Hant\"=\"\u5468\u5927\u798f\"][\"name\"=\"\u5468\u5927\u798f Chow Tai Fook\"][\"name:en\"=\"Chow Tai Fook\"][\"name:zh\"=\"\u5468\u5927\u798f\"][\"name:zh-Hans\"=\"\u5468\u5927\u798f\"][\"name:zh-Hant\"=\"\u5468\u5927\u798f\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/ChowTaiFook_logo.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/ChowTaiFook_logo.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "\u5468\u751f\u751f",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u5468\u751f\u751f\"][\"brand:en\"=\"Chow Sang Sang\"][\"brand:wikidata\"=\"Q10920877\"][\"brand:zh\"=\"\u5468\u751f\u751f\"][\"name\"=\"\u5468\u751f\u751f\"][\"name:en\"=\"Chow Sang Sang\"][\"name:zh\"=\"\u5468\u751f\u751f\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "\u5468\u751f\u751f Chow Sang Sang",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u5468\u751f\u751f Chow Sang Sang\"][\"brand:en\"=\"Chow Sang Sang\"][\"brand:wikidata\"=\"Q10920877\"][\"brand:zh\"=\"\u5468\u751f\u751f\"][\"brand:zh-Hans\"=\"\u5468\u751f\u751f\"][\"brand:zh-Hant\"=\"\u5468\u751f\u751f\"][\"name\"=\"\u5468\u751f\u751f Chow Sang Sang\"][\"name:en\"=\"Chow Sang Sang\"][\"name:zh\"=\"\u5468\u751f\u751f\"][\"name:zh-Hans\"=\"\u5468\u751f\u751f\"][\"name:zh-Hant\"=\"\u5468\u751f\u751f\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "\u8001\u51e4\u7965",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u8001\u51e4\u7965\"][\"brand:en\"=\"Lao Feng Xiang\"][\"brand:wikidata\"=\"Q15910313\"][\"brand:zh\"=\"\u8001\u51e4\u7965\"][\"name\"=\"\u8001\u51e4\u7965\"][\"name:en\"=\"Lao Feng Xiang\"][\"name:zh\"=\"\u8001\u51e4\u7965\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Lao_Feng_Xiang_in_Sydney_2017.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Lao_Feng_Xiang_in_Sydney_2017.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "\u8001\u9cf3\u7965\u9280\u6a13 Lao Feng Xiang Jewellery",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u8001\u9cf3\u7965\u9280\u6a13 Lao Feng Xiang Jewellery\"][\"brand:en\"=\"Lao Feng Xiang Jewellery\"][\"brand:wikidata\"=\"Q15910313\"][\"brand:zh\"=\"\u8001\u9cf3\u7965\u9280\u6a13\"][\"brand:zh-Hans\"=\"\u8001\u51e4\u7965\u94f6\u697c\"][\"brand:zh-Hant\"=\"\u8001\u9cf3\u7965\u9280\u6a13\"][\"name\"=\"\u8001\u9cf3\u7965\u9280\u6a13 Lao Feng Xiang Jewellery\"][\"name:en\"=\"Lao Feng Xiang\"][\"name:zh\"=\"\u8001\u9cf3\u7965\u9280\u6a13\"][\"name:zh-Hans\"=\"\u8001\u51e4\u7965\u94f6\u697c\"][\"name:zh-Hant\"=\"\u8001\u9cf3\u7965\u9280\u6a13\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Lao_Feng_Xiang_in_Sydney_2017.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Lao_Feng_Xiang_in_Sydney_2017.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "\u8b1d\u745e\u9e9f\u73e0\u5bf6 TSL Jewellery",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u8b1d\u745e\u9e9f\u73e0\u5bf6 TSL Jewellery\"][\"brand:en\"=\"TSL\"][\"brand:wikidata\"=\"Q13164530\"][\"brand:zh\"=\"\u8b1d\u745e\u9e9f\u73e0\u5bf6\"][\"brand:zh-Hans\"=\"\u8c22\u745e\u9e9f\u73e0\u5b9d\"][\"brand:zh-Hant\"=\"\u8b1d\u745e\u9e9f\u73e0\u5bf6\"][\"name\"=\"\u8b1d\u745e\u9e9f TSL\"][\"name:en\"=\"TSL\"][\"name:zh-Hans\"=\"\u8c22\u745e\u9e9f\"][\"name:zh-Hant\"=\"\u8b1d\u745e\u9e9f\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "\u8c22\u745e\u9e9f\u73e0\u5b9d",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u8c22\u745e\u9e9f\u73e0\u5b9d\"][\"brand:en\"=\"TSL\"][\"brand:wikidata\"=\"Q13164530\"][\"brand:zh\"=\"\u8c22\u745e\u9e9f\u73e0\u5b9d\"][\"brand:zh-Hans\"=\"\u8c22\u745e\u9e9f\u73e0\u5b9d\"][\"brand:zh-Hant\"=\"\u8b1d\u745e\u9e9f\u73e0\u5bf6\"][\"name\"=\"\u8c22\u745e\u9e9f\"][\"name:en\"=\"TSL\"][\"name:zh-Hans\"=\"\u8c22\u745e\u9e9f\"][\"name:zh-Hant\"=\"\u8b1d\u745e\u9e9f\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "\u91d1\u81f3\u5c0a\u73e0\u5bf6 3DG Jewellery",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u91d1\u81f3\u5c0a\u73e0\u5bf6 3DG Jewellery\"][\"brand:en\"=\"3DG Jewellery\"][\"brand:wikidata\"=\"Q15921454\"][\"brand:zh\"=\"\u91d1\u81f3\u5c0a\u73e0\u5bf6\"][\"brand:zh-Hans\"=\"\u91d1\u81f3\u5c0a\u73e0\u5b9d\"][\"brand:zh-Hant\"=\"\u91d1\u81f3\u5c0a\u73e0\u5bf6\"][\"name\"=\"\u91d1\u81f3\u5c0a\u73e0\u5bf6 3DG Jewellery\"][\"name:en\"=\"3DG Jewellery\"][\"name:zh\"=\"\u91d1\u81f3\u5c0a\u73e0\u5bf6\"][\"name:zh-Hans\"=\"\u91d1\u81f3\u5c0a\u73e0\u5b9d\"][\"name:zh-Hant\"=\"\u91d1\u81f3\u5c0a\u73e0\u5bf6\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('jewelry'),
+	title: "\u9ede\u775b\u54c1",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u9ede\u775b\u54c1\"][\"brand:wikidata\"=\"Q126457805\"][\"brand:zh\"=\"\u9ede\u775b\u54c1\"][\"name\"=\"\u9ede\u775b\u54c1\"][\"name:zh\"=\"\u9ede\u775b\u54c1\"][\"operator\"=\"\u5468\u751f\u751f\u96c6\u5718\"][\"operator:wikidata\"=\"Q10920877\"][\"shop\"=\"jewelry\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Emphasis_store_in_IFC.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Emphasis_store_in_IFC.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+     }
+},
+{
+    group: getTranslation('leather'),
+	title: "Aigner",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Aigner\"][\"brand:wikidata\"=\"Q1371521\"][\"name\"=\"Aigner\"][\"shop\"=\"leather\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('leather'),
+	title: "Art-93",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Art-93\"][\"brand:wikidata\"=\"Q122959221\"][\"name\"=\"Art-93\"][\"shop\"=\"leather\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('leather'),
+	title: "Findig",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Findig\"][\"brand:en\"=\"Findig\"][\"brand:th\"=\"\u0e1f\u0e34\u0e19\u0e14\u0e34\u0e08\"][\"brand:wikidata\"=\"Q110958398\"][\"name\"=\"Findig\"][\"name:en\"=\"Findig\"][\"name:th\"=\"\u0e1f\u0e34\u0e19\u0e14\u0e34\u0e08\"][\"shop\"=\"leather\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('leather'),
+	title: "Hidesign",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Hidesign\"][\"brand:wikidata\"=\"Q5752690\"][\"name\"=\"Hidesign\"][\"shop\"=\"leather\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/HIDESIGN_LOGO_withouttag.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/HIDESIGN_LOGO_withouttag.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('leather'),
+	title: "Picard",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Picard\"][\"brand:wikidata\"=\"Q2092055\"][\"name\"=\"Picard\"][\"shop\"=\"leather\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('leather'),
+	title: "V\u00e9lez",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"V\u00e9lez\"][\"brand:wikidata\"=\"Q96246029\"][\"name\"=\"V\u00e9lez\"][\"shop\"=\"leather\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+  			
             }
         }
     ];
