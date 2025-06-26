@@ -13322,6 +13322,511 @@ export function leisureOverlays() {
             stroke: stroke
         });
         return style;
+    }
+},
+{
+    group: getTranslation('lottery'),
+	title: "Loter\u00eda La Neuquina",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Loter\u00eda La Neuquina\"][\"name\"=\"Loter\u00eda La Neuquina\"][\"shop\"=\"lottery\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('lottery'),
+	title: "Loter\u00edas y Apuestas del Estado",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Loter\u00edas y Apuestas del Estado\"][\"brand:wikidata\"=\"Q1311806\"][\"name\"=\"Loter\u00edas y Apuestas del Estado\"][\"shop\"=\"lottery\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logotipo_de_Loter\u00edas_y_Apuestas_del_Estado.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logotipo_de_Loter\u00edas_y_Apuestas_del_Estado.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('lottery'),
+	title: "Lotto (Polska)",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Lotto\"][\"brand:wikidata\"=\"Q132146478\"][\"name\"=\"Lotto\"][\"shop\"=\"lottery\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Lotto_logo_polska.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Lotto_logo_polska.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('lottery'),
+	title: "ONCE",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"ONCE\"][\"brand:wikidata\"=\"Q1750397\"][\"name\"=\"ONCE\"][\"official_name\"=\"Organizaci\u00f3n Nacional de Ciegos Espa\u00f1oles\"][\"shop\"=\"lottery\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Logotipo_ONCE.png",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Logotipo_ONCE.png",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('lottery'),
+	title: "Paga Todo",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Paga Todo\"][\"name\"=\"Paga Todo\"][\"shop\"=\"lottery\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('lottery'),
+	title: "PCSO Lotto",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"PCSO Lotto\"][\"name\"=\"PCSO Lotto\"][\"shop\"=\"lottery\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('lottery'),
+	title: "Sports Toto",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"Sports Toto\"][\"brand:wikidata\"=\"Q17045780\"][\"name\"=\"Sports Toto\"][\"shop\"=\"lottery\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Johor_Bahru_Kwong_Siew_Heritage_Gallery.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Johor_Bahru_Kwong_Siew_Heritage_Gallery.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('lottery'),
+	title: "\u039f\u03a0\u0391\u03a0",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u039f\u03a0\u0391\u03a0\"][\"name\"=\"\u039f\u03a0\u0391\u03a0\"][\"shop\"=\"lottery\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('lottery'),
+	title: "\u0421\u043f\u043e\u0440\u0442 \u0422\u043e\u0442\u043e",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u0421\u043f\u043e\u0440\u0442 \u0422\u043e\u0442\u043e\"][\"brand:wikidata\"=\"Q12274327\"][\"name\"=\"\u0421\u043f\u043e\u0440\u0442 \u0422\u043e\u0442\u043e\"][\"shop\"=\"lottery\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('lottery'),
+	title: "\u0421\u0442\u043e\u043b\u043e\u0442\u043e",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u0421\u0442\u043e\u043b\u043e\u0442\u043e\"][\"brand:wikidata\"=\"Q4146366\"][\"name\"=\"\u0421\u0442\u043e\u043b\u043e\u0442\u043e\"][\"shop\"=\"lottery\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('lottery'),
+	title: "\u4e2d\u56fd\u4f53\u80b2\u5f69\u7968",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u4e2d\u56fd\u4f53\u80b2\u5f69\u7968\"][\"brand:en\"=\"China Sports Lottery\"][\"brand:wikidata\"=\"Q55696773\"][\"brand:zh\"=\"\u4e2d\u56fd\u4f53\u80b2\u5f69\u7968\"][\"name\"=\"\u4e2d\u56fd\u4f53\u80b2\u5f69\u7968\"][\"name:en\"=\"China Sports Lottery\"][\"name:zh\"=\"\u4e2d\u56fd\u4f53\u80b2\u5f69\u7968\"][\"shop\"=\"lottery\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/China_Sports_Lottery_betting_station_at_Fuding_Gucheng_North_Road.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/China_Sports_Lottery_betting_station_at_Fuding_Gucheng_North_Road.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('lottery'),
+	title: "\u4e2d\u56fd\u798f\u5229\u5f69\u7968",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u4e2d\u56fd\u798f\u5229\u5f69\u7968\"][\"brand:en\"=\"China Welfare Lottery\"][\"brand:wikidata\"=\"Q9384250\"][\"brand:zh\"=\"\u4e2d\u56fd\u798f\u5229\u5f69\u7968\"][\"name\"=\"\u4e2d\u56fd\u798f\u5229\u5f69\u7968\"][\"name:en\"=\"China Welfare Lottery\"][\"name:zh\"=\"\u4e2d\u56fd\u798f\u5229\u5f69\u7968\"][\"shop\"=\"lottery\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/\u5357\u4eac\u5e02\u5e94\u5929\u5927\u8857\u6c5f\u82cf\u798f\u5f69\u4e2d\u5fc3_-_panoramio.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/\u5357\u4eac\u5e02\u5e94\u5929\u5927\u8857\u6c5f\u82cf\u798f\u5f69\u4e2d\u5fc3_-_panoramio.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('lottery'),
+	title: "\u53f0\u7063\u5f69\u5238",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u53f0\u7063\u5f69\u5238\"][\"brand:en\"=\"Taiwan Lottery\"][\"brand:wikidata\"=\"Q10915473\"][\"brand:zh-Hans\"=\"\u53f0\u6e7e\u5f69\u5238\"][\"brand:zh-Hant\"=\"\u53f0\u7063\u5f69\u5238\"][\"name\"=\"\u53f0\u7063\u5f69\u5238\"][\"name:en\"=\"Taiwan Lottery\"][\"name:zh-Hans\"=\"\u53f0\u6e7e\u5f69\u5238\"][\"name:zh-Hant\"=\"\u53f0\u7063\u5f69\u5238\"][\"shop\"=\"lottery\"]({{bbox}});node(w););out meta;",
+    iconSrc: "src/img/logos/generic.svg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "src/img/logos/generic.svg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+    }
+},
+{
+    group: getTranslation('lottery'),
+	title: "\u5b9d\u304f\u3058",
+    query: "[out:json][timeout:25];(nwr[\"brand\"=\"\u5b9d\u304f\u3058\"][\"brand:en\"=\"Takarakuji\"][\"brand:ja\"=\"\u5b9d\u304f\u3058\"][\"brand:wikidata\"=\"Q87824893\"][\"name\"=\"\u5b9d\u304f\u3058\"][\"name:en\"=\"Takarakuji\"][\"name:ja\"=\"\u5b9d\u304f\u3058\"][\"official_name\"=\"\u5168\u56fd\u81ea\u6cbb\u5b9d\u304f\u3058\"][\"official_name:en\"=\"National Autonomous Lottery\"][\"official_name:ja\"=\"\u5168\u56fd\u81ea\u6cbb\u5b9d\u304f\u3058\"][\"shop\"=\"lottery\"]({{bbox}});node(w););out meta;",
+    iconSrc: "https://commons.wikimedia.org/wiki/Special:FilePath/Lottery_booth_at_Ueno.jpg",
+    iconStyle: "background-color:rgba(255,255,255,0.4)",
+    style: function (feature) {
+        var key_regex = /^name$/
+        var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+        var name = feature.get(name_key) || '';
+        var fill = new ol.style.Fill({
+            color: 'rgba(255,0,0,0.4)'
+        });
+        var stroke = new ol.style.Stroke({
+            color: 'rgba(255,0,0,1)',
+            width: 1
+        });
+        var style = new ol.style.Style({
+            image: new ol.style.Icon({
+                src: "https://commons.wikimedia.org/wiki/Special:FilePath/Lottery_booth_at_Ueno.jpg",
+                scale:0.30
+            }),
+            text: new ol.style.Text({
+                text: name,
+                offsetX : 7,
+                offsetY : -12,
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,1)'
+                }),
+            }),
+            fill: fill,
+            stroke: stroke
+        });
+        return style;
+		
  }
         }
     ];
