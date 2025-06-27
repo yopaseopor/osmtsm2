@@ -18,14 +18,12 @@ layersLabel: 'Layers',
     moveLayerDown: 'Move layer down',
     searchLayers: 'Search layers...',
     searchOverlays: 'Search overlays...',
-
 // From animal.js
 animal_boarding: 'animal_boarding',
 animal_shelter: 'animal_shelter',
 veterinary: 'veterinary',
 pest_control: 'pest_control',
 pet: 'pet',
-
 // From business.js
 carpenter: 'carpenter',
 cleaning: 'cleaning',
@@ -87,7 +85,6 @@ tiles: 'tiles',
 tool_hire: 'tool_hire',
 vacuum_cleaner: 'vacuum_cleaner',
 window_blind: 'window_blind',
-
 // From culture.js
 public_bookcase: 'public_bookcase',
 freemasonry: 'freemasonry',
@@ -97,7 +94,6 @@ bookmaker: 'bookmaker',
 books: 'books',
 music: 'music',
 musical_instrument: 'musical_instrument',
-
 // From economy.js
 gambling: 'gambling',
 money_transfer: 'money_transfer',
@@ -111,7 +107,6 @@ charity: 'charity',
 gold_buyer: 'gold_buyer',
 money_lender: 'money_lender',
 pawnbroker: 'pawnbroker',
-
 // From education.js
 education: 'education',
 childcare: 'childcare',
@@ -125,7 +120,6 @@ school: 'school',
 scout: 'scout',
 training: 'training',
 university: 'university',
-
 // From food_drink.js
 nightclub: 'nightclub',
 fast_food: 'fast_food',
@@ -153,10 +147,8 @@ pastry: 'pastry',
 seafood: 'seafood',
 tea: 'tea',
 wine: 'wine',
-
 // From government.js
 government: 'government',
-
 // From health.js
 health: 'health',
 pharmacy: 'pharmacy',
@@ -177,7 +169,6 @@ herbalist: 'herbalist',
 massage: 'massage',
 medical_supply: 'medical_supply',
 optician: 'optician',
-
 // From leisure.js
 cinema: 'cinema',
 internet_cafe: 'internet_cafe',
@@ -215,7 +206,6 @@ hostel: 'hostel',
 hotel: 'hotel',
 motel: 'motel',
 theme_park: 'theme_park',
-
 // From logistics.js
 parcel_locker: 'parcel_locker',
 post_depot: 'post_depot',
@@ -226,7 +216,6 @@ outpost: 'outpost',
 storage_rental: 'storage_rental',
 trade: 'trade',
 wholesale: 'wholesale',
-
 // From mobility.js
 driving_school: 'driving_school',
 fuel: 'fuel',
@@ -245,7 +234,6 @@ rental: 'rental',
 truck: 'truck',
 truck_repair: 'truck_repair',
 tyres: 'tyres',
-
 // From office.js
 association: 'association',
 company: 'company',
@@ -263,7 +251,6 @@ security: 'security',
 union: 'union',
 funeral_directors: 'funeral_directors',
 information: 'information',
-
 // From others.js
 community_centre: 'community_centre',
 conference_centre: 'conference_centre',
@@ -279,7 +266,6 @@ bail_bond_agent: 'bail_bond_agent',
 model: 'model',
 plant_hire: 'plant_hire',
 tobacco: 'tobacco',
-
 // From shopping.js
 shopping: 'shopping',
 clothes: 'clothes',
@@ -304,7 +290,6 @@ shoes: 'shoes',
 supermarket: 'supermarket',
 variety_store: 'variety_store',
 watches: 'watches',
-
 // From sport.js
 fitness_centre: 'fitness_centre',
 fitness_station: 'fitness_station',
@@ -315,8 +300,6 @@ outdoor: 'outdoor',
 spices: 'spices',
 sports: 'sports',
 swimming_pool: 'swimming_pool',
-
 // From transport.js
 transport: 'transport'
-
 };
