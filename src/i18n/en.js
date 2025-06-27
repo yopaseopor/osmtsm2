@@ -317,6 +317,6 @@ sports: 'sports',
 swimming_pool: 'swimming_pool',
 
 // From transport.js
-transport: 'transport',
+transport: 'transport'
 
 };
