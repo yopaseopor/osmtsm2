@@ -15,6 +15,9 @@ import { ast } from './ast.js';
 import { an } from './an.js';
 import { eu } from './eu.js';
 import { gl } from './gl.js';
+import { pl } from './pl.js';
+import { uk } from './uk.js';
+import { hi } from './hi.js';
 
 export const languages = {
     en: { name: 'English (AI-IA)', translations: en },
@@ -33,7 +36,10 @@ export const languages = {
     ast: { name: 'Asturianu (AI-IA)', translations: ast },
     an: { name: 'Aragonés (AI-IA)', translations: an },
     eu: { name: 'Euskara (AI-IA)', translations: eu },
-    gl: { name: 'Galego (AI-IA)', translations: gl }
+    gl: { name: 'Galego (AI-IA)', translations: gl },
+    pl: { name: 'Polski (AI-IA)', translations: pl },
+    uk: { name: 'Українська (AI-IA)', translations: uk },
+    hi: { name: 'हिन्दी (AI-IA)', translations: hi }
 };
 
 let currentLanguage = 'en';
