@@ -11,6 +11,14 @@ import { zh } from './zh.js';
 import { ja } from './ja.js';
 import { ko } from './ko.js';
 import { ar } from './ar.js';
+import { eu } from './eu.js';
+import { gl } from './gl.js';
+import { ast } from './ast.js';
+import { an } from './an.js';
+import { pl } from './pl.js';
+import { uk } from './uk.js';
+import { tr } from './tr.js';
+import { vi } from './vi.js';
 
 export const languages = {
     en: { name: 'English (IA-AI)', translations: en },
@@ -25,7 +33,15 @@ export const languages = {
     zh: { name: '中文 (IA-AI)', translations: zh },
     ja: { name: '日本語 (IA-AI)', translations: ja },
     ko: { name: '한국어 (IA-AI)', translations: ko },
-    ar: { name: 'العربية (IA-AI)', translations: ar, rtl: true }
+    ar: { name: 'العربية (IA-AI)', translations: ar, rtl: true },
+    eu: { name: 'Euskara (IA-AI)', translations: eu },
+    gl: { name: 'Galego (IA-AI)', translations: gl },
+    ast: { name: 'Asturianu (IA-AI)', translations: ast },
+    an: { name: 'Aragonés (IA-AI)', translations: an },
+    pl: { name: 'Polski (IA-AI)', translations: pl },
+    uk: { name: 'Українська (IA-AI)', translations: uk },
+    tr: { name: 'Türkçe (IA-AI)', translations: tr },
+    vi: { name: 'Tiếng Việt (IA-AI)', translations: vi }
 };
 
 let currentLanguage = 'en';
