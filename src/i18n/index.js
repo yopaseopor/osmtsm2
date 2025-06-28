@@ -1,11 +1,31 @@
 import { en } from './en.js';
 import { es } from './es.js';
 import { ca } from './ca.js';
+import { fr } from './fr.js';
+import { de } from './de.js';
+import { it } from './it.js';
+import { pt } from './pt.js';
+import { nl } from './nl.js';
+import { ru } from './ru.js';
+import { zh } from './zh.js';
+import { ja } from './ja.js';
+import { ko } from './ko.js';
+import { ar } from './ar.js';
 
 export const languages = {
-    en: { name: 'English', translations: en },
-    es: { name: 'Español', translations: es },
-    ca: { name: 'Català', translations: ca }
+    en: { name: 'English (IA-AI)', translations: en },
+    es: { name: 'Español (IA-AI)', translations: es },
+    ca: { name: 'Català (IA-AI)', translations: ca },
+    fr: { name: 'Français (IA-AI)', translations: fr },
+    de: { name: 'Deutsch (IA-AI)', translations: de },
+    it: { name: 'Italiano (IA-AI)', translations: it },
+    pt: { name: 'Português (IA-AI)', translations: pt },
+    nl: { name: 'Nederlands (IA-AI)', translations: nl },
+    ru: { name: 'Русский (IA-AI)', translations: ru },
+    zh: { name: '中文 (IA-AI)', translations: zh },
+    ja: { name: '日本語 (IA-AI)', translations: ja },
+    ko: { name: '한국어 (IA-AI)', translations: ko },
+    ar: { name: 'العربية (IA-AI)', translations: ar, rtl: true }
 };
 
 let currentLanguage = 'en';
