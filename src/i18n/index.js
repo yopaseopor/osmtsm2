@@ -11,21 +11,29 @@ import { zh } from './zh.js';
 import { ja } from './ja.js';
 import { ko } from './ko.js';
 import { ar } from './ar.js';
+import { ast } from './ast.js';
+import { an } from './an.js';
+import { eu } from './eu.js';
+import { gl } from './gl.js';
 
 export const languages = {
-    en: { name: 'English', translations: en },
-    es: { name: 'Español', translations: es },
-    ca: { name: 'Català', translations: ca },
-    fr: { name: 'Français', translations: fr },
-    de: { name: 'Deutsch', translations: de },
-    it: { name: 'Italiano', translations: it },
-    pt: { name: 'Português', translations: pt },
-    nl: { name: 'Nederlands', translations: nl },
-    ru: { name: 'Русский', translations: ru },
-    zh: { name: '中文', translations: zh },
-    ja: { name: '日本語', translations: ja },
-    ko: { name: '한국어', translations: ko },
-    ar: { name: 'العربية', translations: ar, rtl: true }
+    en: { name: 'English (AI-IA)', translations: en },
+    es: { name: 'Español (AI-IA)', translations: es },
+    ca: { name: 'Català (AI-IA)', translations: ca },
+    fr: { name: 'Français (AI-IA)', translations: fr },
+    de: { name: 'Deutsch (AI-IA)', translations: de },
+    it: { name: 'Italiano (AI-IA)', translations: it },
+    pt: { name: 'Português (AI-IA)', translations: pt },
+    nl: { name: 'Nederlands (AI-IA)', translations: nl },
+    ru: { name: 'Русский (AI-IA)', translations: ru },
+    zh: { name: '中文 (AI-IA)', translations: zh },
+    ja: { name: '日本語 (AI-IA)', translations: ja },
+    ko: { name: '한국어 (AI-IA)', translations: ko },
+    ar: { name: 'العربية (AI-IA)', translations: ar, rtl: true },
+    ast: { name: 'Asturianu (AI-IA)', translations: ast },
+    an: { name: 'Aragonés (AI-IA)', translations: an },
+    eu: { name: 'Euskara (AI-IA)', translations: eu },
+    gl: { name: 'Galego (AI-IA)', translations: gl }
 };
 
 let currentLanguage = 'en';
