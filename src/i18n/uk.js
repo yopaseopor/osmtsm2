@@ -53,7 +53,7 @@ export const uk = {  // (AI-IA)
     carpet: 'Килим',
     catalogue: 'Каталог',
     chemist: 'Аптека',
-    computer: 'Комп'ютер',
+    computer: 'Комп\'ютер',
     copyshop: 'Копіювальний центр',
     country_store: 'Сільський магазин',
     craft: 'Ремесла',
