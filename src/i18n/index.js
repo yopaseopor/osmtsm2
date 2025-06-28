@@ -1,45 +1,53 @@
-import { en } from './en.js';
-import { es } from './es.js';
-import { ca } from './ca.js';
-import { fr } from './fr.js';
-import { de } from './de.js';
-import { it } from './it.js';
-import { pt } from './pt.js';
-import { nl } from './nl.js';
-import { ru } from './ru.js';
-import { zh } from './zh.js';
-import { ja } from './ja.js';
-import { ko } from './ko.js';
+import { an } from './an.js';
 import { ar } from './ar.js';
 import { ast } from './ast.js';
-import { an } from './an.js';
+import { ca } from './ca.js';
+import { da } from './da.js';
+import { de } from './de.js';
+import { en } from './en.js';
+import { es } from './es.js';
 import { eu } from './eu.js';
+import { fi } from './fi.js';
+import { fr } from './fr.js';
 import { gl } from './gl.js';
-import { pl } from './pl.js';
-import { uk } from './uk.js';
 import { hi } from './hi.js';
+import { it } from './it.js';
+import { ja } from './ja.js';
+import { ko } from './ko.js';
+import { nl } from './nl.js';
+import { no } from './no.js';
+import { pl } from './pl.js';
+import { pt } from './pt.js';
+import { ru } from './ru.js';
+import { sv } from './sv.js';
+import { uk } from './uk.js';
+import { zh } from './zh.js';
 
 export const languages = {
-    en: { name: 'English (AI-IA)', translations: en },
-    es: { name: 'Español (AI-IA)', translations: es },
-    ca: { name: 'Català (AI-IA)', translations: ca },
-    fr: { name: 'Français (AI-IA)', translations: fr },
-    de: { name: 'Deutsch (AI-IA)', translations: de },
-    it: { name: 'Italiano (AI-IA)', translations: it },
-    pt: { name: 'Português (AI-IA)', translations: pt },
-    nl: { name: 'Nederlands (AI-IA)', translations: nl },
-    ru: { name: 'Русский (AI-IA)', translations: ru },
-    zh: { name: '中文 (AI-IA)', translations: zh },
-    ja: { name: '日本語 (AI-IA)', translations: ja },
-    ko: { name: '한국어 (AI-IA)', translations: ko },
+    an: { name: 'Aragonés (AI-IA)', translations: an },
     ar: { name: 'العربية (AI-IA)', translations: ar, rtl: true },
     ast: { name: 'Asturianu (AI-IA)', translations: ast },
-    an: { name: 'Aragonés (AI-IA)', translations: an },
+    ca: { name: 'Català (AI-IA)', translations: ca },
+    da: { name: 'Dansk (AI-IA)', translations: da },
+    de: { name: 'Deutsch (AI-IA)', translations: de },
+    en: { name: 'English (AI-IA)', translations: en },
+    es: { name: 'Español (AI-IA)', translations: es },
     eu: { name: 'Euskara (AI-IA)', translations: eu },
+    fi: { name: 'Suomi (AI-IA)', translations: fi },
+    fr: { name: 'Français (AI-IA)', translations: fr },
     gl: { name: 'Galego (AI-IA)', translations: gl },
+    hi: { name: 'हिन्दी (AI-IA)', translations: hi },
+    it: { name: 'Italiano (AI-IA)', translations: it },
+    ja: { name: '日本語 (AI-IA)', translations: ja },
+    ko: { name: '한국어 (AI-IA)', translations: ko },
+    nl: { name: 'Nederlands (AI-IA)', translations: nl },
+    no: { name: 'Norsk (AI-IA)', translations: no },
     pl: { name: 'Polski (AI-IA)', translations: pl },
+    pt: { name: 'Português (AI-IA)', translations: pt },
+    ru: { name: 'Русский (AI-IA)', translations: ru },
+    sv: { name: 'Svenska (AI-IA)', translations: sv },
     uk: { name: 'Українська (AI-IA)', translations: uk },
-    hi: { name: 'हिन्दी (AI-IA)', translations: hi }
+    zh: { name: '中文 (AI-IA)', translations: zh }
 };
 
 let currentLanguage = 'en';
