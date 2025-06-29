@@ -1,7 +1,10 @@
 import { an } from './an.js';
 import { ar } from './ar.js';
 import { ast } from './ast.js';
+import { bg } from './bg.js';
+import { bn } from './bn.js';
 import { ca } from './ca.js';
+import { cs } from './cs.js';
 import { da } from './da.js';
 import { de } from './de.js';
 import { en } from './en.js';
@@ -11,6 +14,7 @@ import { fi } from './fi.js';
 import { fr } from './fr.js';
 import { gl } from './gl.js';
 import { hi } from './hi.js';
+import { hr } from './hr.js';
 import { it } from './it.js';
 import { ja } from './ja.js';
 import { ko } from './ko.js';
@@ -27,7 +31,10 @@ export const languages = {
     an: { name: 'Aragonés (AI-IA)', translations: an },
     ar: { name: 'العربية (AI-IA)', translations: ar, rtl: true },
     ast: { name: 'Asturianu (AI-IA)', translations: ast },
+    bg: { name: 'Български (AI-IA)', translations: bg },
+    bn: { name: 'বাংলা (AI-IA)', translations: bn },
     ca: { name: 'Català (AI-IA)', translations: ca },
+    cs: { name: 'Čeština (AI-IA)', translations: cs },
     da: { name: 'Dansk (AI-IA)', translations: da },
     de: { name: 'Deutsch (AI-IA)', translations: de },
     en: { name: 'English (AI-IA)', translations: en },
@@ -37,6 +44,7 @@ export const languages = {
     fr: { name: 'Français (AI-IA)', translations: fr },
     gl: { name: 'Galego (AI-IA)', translations: gl },
     hi: { name: 'हिन्दी (AI-IA)', translations: hi },
+    hr: { name: 'Hrvatski (AI-IA)', translations: hr },
     it: { name: 'Italiano (AI-IA)', translations: it },
     ja: { name: '日本語 (AI-IA)', translations: ja },
     ko: { name: '한국어 (AI-IA)', translations: ko },
