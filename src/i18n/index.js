@@ -25,171 +25,50 @@ import { uk } from './uk.js';
 import { vi } from './vi.js';
 import { zh } from './zh.js';
 
-export const languages = {
-    // Sorted alphabetically by English name
-    ar: { 
-        name: 'العربية (IA-AI)', 
-        enName: 'Arabic (IA-AI)',
-        translations: ar, 
-        rtl: true 
-    },
-    bn: { 
-        name: 'বাংলা (IA-AI)', 
-        enName: 'Bengali (IA-AI)',
-        translations: bn 
-    },
-    ca: { 
-        name: 'Català (IA-AI)', 
-        enName: 'Catalan (IA-AI)',
-        translations: ca 
-    },
-    zh: { 
-        name: '中文 (IA-AI)', 
-        enName: 'Chinese (IA-AI)',
-        translations: zh 
-    },
-    da: { 
-        name: 'Dansk (IA-AI)', 
-        enName: 'Danish (IA-AI)',
-        translations: da 
-    },
-    nl: { 
-        name: 'Nederlands (IA-AI)', 
-        enName: 'Dutch (IA-AI)',
-        translations: nl 
-    },
-    en: { 
-        name: 'English (IA-AI)', 
-        enName: 'English (IA-AI)',
-        translations: en 
-    },
-    fi: { 
-        name: 'Suomi (IA-AI)', 
-        enName: 'Finnish (IA-AI)',
-        translations: fi 
-    },
-    fr: { 
-        name: 'Français (IA-AI)', 
-        enName: 'French (IA-AI)',
-        translations: fr 
-    },
-    de: { 
-        name: 'Deutsch (IA-AI)', 
-        enName: 'German (IA-AI)',
-        translations: de 
-    },
-    el: { 
-        name: 'Ελληνικά (IA-AI)', 
-        enName: 'Greek (IA-AI)',
-        translations: el 
-    },
-    hi: { 
-        name: 'हिन्दी (IA-AI)', 
-        enName: 'Hindi (IA-AI)',
-        translations: hi 
-    },
-    hu: { 
-        name: 'Magyar (IA-AI)', 
-        enName: 'Hungarian (IA-AI)',
-        translations: hu 
-    },
-    id: { 
-        name: 'Bahasa Indonesia (IA-AI)', 
-        enName: 'Indonesian (IA-AI)',
-        translations: id 
-    },
-    it: { 
-        name: 'Italiano (IA-AI)', 
-        enName: 'Italian (IA-AI)',
-        translations: it 
-    },
-    ja: { 
-        name: '日本語 (IA-AI)', 
-        enName: 'Japanese (IA-AI)',
-        translations: ja 
-    },
-    ko: { 
-        name: '한국어 (IA-AI)', 
-        enName: 'Korean (IA-AI)',
-        translations: ko 
-    },
-    no: { 
-        name: 'Norsk (IA-AI)', 
-        enName: 'Norwegian (IA-AI)',
-        translations: no 
-    },
-    pl: { 
-        name: 'Polski (IA-AI)', 
-        enName: 'Polish (IA-AI)',
-        translations: pl 
-    },
-    pt: { 
-        name: 'Português (IA-AI)', 
-        enName: 'Portuguese (IA-AI)',
-        translations: pt 
-    },
-    ro: { 
-        name: 'Română (IA-AI)', 
-        enName: 'Romanian (IA-AI)',
-        translations: ro 
-    },
-    ru: { 
-        name: 'Русский (IA-AI)', 
-        enName: 'Russian (IA-AI)',
-        translations: ru 
-    },
-    es: { 
-        name: 'Español (IA-AI)', 
-        enName: 'Spanish (IA-AI)',
-        translations: es 
-    },
-    sv: { 
-        name: 'Svenska (IA-AI)', 
-        enName: 'Swedish (IA-AI)',
-        translations: sv 
-    },
-    th: { 
-        name: 'ไทย (IA-AI)', 
-        enName: 'Thai (IA-AI)',
-        translations: th 
-    },
-    tr: { 
-        name: 'Türkçe (IA-AI)', 
-        enName: 'Turkish (IA-AI)',
-        translations: tr 
-    },
-    uk: { 
-        name: 'Українська (IA-AI)', 
-        enName: 'Ukrainian (IA-AI)',
-        translations: uk 
-    },
-    vi: { 
-        name: 'Tiếng Việt (IA-AI)', 
-        enName: 'Vietnamese (IA-AI)',
-        translations: vi 
-    },
-    // Regional languages
-    an: { 
-        name: 'Aragonés (IA-AI)', 
-        enName: 'Aragonese (IA-AI)',
-        translations: an 
-    },
-    ast: { 
-        name: 'Asturianu (IA-AI)', 
-        enName: 'Asturian (IA-AI)',
-        translations: ast 
-    },
-    eu: { 
-        name: 'Euskara (IA-AI)', 
-        enName: 'Basque (IA-AI)',
-        translations: eu 
-    },
-    gl: { 
-        name: 'Galego (IA-AI)', 
-        enName: 'Galician (IA-AI)',
-        translations: gl 
-    }
-};
+// Create a sorted and formatted languages object
+export const languages = (() => {
+    const langEntries = [
+        { code: 'an', native: 'Aragonés', en: 'Aragonese', translations: an },
+        { code: 'ar', native: 'العربية', en: 'Arabic', translations: ar, rtl: true },
+        { code: 'ast', native: 'Asturianu', en: 'Asturian', translations: ast },
+        { code: 'bn', native: 'বাংলা', en: 'Bengali', translations: bn },
+        { code: 'ca', native: 'Català', en: 'Catalan', translations: ca },
+        { code: 'da', native: 'Dansk', en: 'Danish', translations: da },
+        { code: 'de', native: 'Deutsch', en: 'German', translations: de },
+        { code: 'en', native: 'English', en: 'English', translations: en },
+        { code: 'es', native: 'Español', en: 'Spanish', translations: es },
+        { code: 'eu', native: 'Euskara', en: 'Basque', translations: eu },
+        { code: 'fi', native: 'Suomi', en: 'Finnish', translations: fi },
+        { code: 'fr', native: 'Français', en: 'French', translations: fr },
+        { code: 'gl', native: 'Galego', en: 'Galician', translations: gl },
+        { code: 'hi', native: 'हिन्दी', en: 'Hindi', translations: hi },
+        { code: 'it', native: 'Italiano', en: 'Italian', translations: it },
+        { code: 'ja', native: '日本語', en: 'Japanese', translations: ja },
+        { code: 'ko', native: '한국어', en: 'Korean', translations: ko },
+        { code: 'nl', native: 'Nederlands', en: 'Dutch', translations: nl },
+        { code: 'no', native: 'Norsk', en: 'Norwegian', translations: no },
+        { code: 'pl', native: 'Polski', en: 'Polish', translations: pl },
+        { code: 'pt', native: 'Português', en: 'Portuguese', translations: pt },
+        { code: 'ru', native: 'Русский', en: 'Russian', translations: ru },
+        { code: 'sv', native: 'Svenska', en: 'Swedish', translations: sv },
+        { code: 'uk', native: 'Українська', en: 'Ukrainian', translations: uk },
+        { code: 'vi', native: 'Tiếng Việt', en: 'Vietnamese', translations: vi },
+        { code: 'zh', native: '中文', en: 'Chinese', translations: zh }
+    ];
+
+    // Sort by English name
+    langEntries.sort((a, b) => a.en.localeCompare(b.en));
+
+    // Convert to object with formatted names
+    return langEntries.reduce((acc, { code, native, en, translations, rtl }) => {
+        acc[code] = {
+            name: `${native} (${en}) (AI-IA)`,
+            translations,
+            ...(rtl ? { rtl } : {})
+        };
+        return acc;
+    }, {});
+})();
 
 let currentLanguage = 'en';
 
