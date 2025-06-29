@@ -24,6 +24,11 @@ import { sv } from './sv.js';
 import { uk } from './uk.js';
 import { vi } from './vi.js';
 import { zh } from './zh.js';
+import { bg } from './bg.js';
+import { cs } from './cs.js';
+import { el } from './el.js';
+import { hu } from './hu.js';
+import { ro } from './ro.js';
 
 // Create a sorted and formatted languages object
 export const languages = (() => {
@@ -31,10 +36,13 @@ export const languages = (() => {
         { code: 'an', native: 'Aragonés', en: 'Aragonese', translations: an },
         { code: 'ar', native: 'العربية', en: 'Arabic', translations: ar, rtl: true },
         { code: 'ast', native: 'Asturianu', en: 'Asturian', translations: ast },
+        { code: 'bg', native: 'Български', en: 'Bulgarian', translations: bg },
         { code: 'bn', native: 'বাংলা', en: 'Bengali', translations: bn },
         { code: 'ca', native: 'Català', en: 'Catalan', translations: ca },
+        { code: 'cs', native: 'Čeština', en: 'Czech', translations: cs },
         { code: 'da', native: 'Dansk', en: 'Danish', translations: da },
         { code: 'de', native: 'Deutsch', en: 'German', translations: de },
+        { code: 'el', native: 'Ελληνικά', en: 'Greek', translations: el },
         { code: 'en', native: 'English', en: 'English', translations: en },
         { code: 'es', native: 'Español', en: 'Spanish', translations: es },
         { code: 'eu', native: 'Euskara', en: 'Basque', translations: eu },
@@ -42,6 +50,7 @@ export const languages = (() => {
         { code: 'fr', native: 'Français', en: 'French', translations: fr },
         { code: 'gl', native: 'Galego', en: 'Galician', translations: gl },
         { code: 'hi', native: 'हिन्दी', en: 'Hindi', translations: hi },
+        { code: 'hu', native: 'Magyar', en: 'Hungarian', translations: hu },
         { code: 'it', native: 'Italiano', en: 'Italian', translations: it },
         { code: 'ja', native: '日本語', en: 'Japanese', translations: ja },
         { code: 'ko', native: '한국어', en: 'Korean', translations: ko },
@@ -49,6 +58,7 @@ export const languages = (() => {
         { code: 'no', native: 'Norsk', en: 'Norwegian', translations: no },
         { code: 'pl', native: 'Polski', en: 'Polish', translations: pl },
         { code: 'pt', native: 'Português', en: 'Portuguese', translations: pt },
+        { code: 'ro', native: 'Română', en: 'Romanian', translations: ro },
         { code: 'ru', native: 'Русский', en: 'Russian', translations: ru },
         { code: 'sv', native: 'Svenska', en: 'Swedish', translations: sv },
         { code: 'uk', native: 'Українська', en: 'Ukrainian', translations: uk },
