@@ -26,32 +26,169 @@ import { vi } from './vi.js';
 import { zh } from './zh.js';
 
 export const languages = {
-    an: { name: 'Aragonés (AI-IA)', translations: an },
-    ar: { name: 'العربية (AI-IA)', translations: ar, rtl: true },
-    ast: { name: 'Asturianu (AI-IA)', translations: ast },
-    bn: { name: 'বাংলা (AI-IA)', translations: bn },
-    ca: { name: 'Català (AI-IA)', translations: ca },
-    da: { name: 'Dansk (AI-IA)', translations: da },
-    de: { name: 'Deutsch (AI-IA)', translations: de },
-    en: { name: 'English', translations: en },
-    es: { name: 'Español', translations: es },
-    eu: { name: 'Euskara (AI-IA)', translations: eu },
-    fi: { name: 'Suomi (AI-IA)', translations: fi },
-    fr: { name: 'Français', translations: fr },
-    gl: { name: 'Galego (AI-IA)', translations: gl },
-    hi: { name: 'हिन्दी (AI-IA)', translations: hi },
-    it: { name: 'Italiano', translations: it },
-    ja: { name: '日本語', translations: ja },
-    ko: { name: '한국어', translations: ko },
-    nl: { name: 'Nederlands', translations: nl },
-    no: { name: 'Norsk (AI-IA)', translations: no },
-    pl: { name: 'Polski (AI-IA)', translations: pl },
-    pt: { name: 'Português', translations: pt },
-    ru: { name: 'Русский', translations: ru },
-    sv: { name: 'Svenska (AI-IA)', translations: sv },
-    uk: { name: 'Українська (AI-IA)', translations: uk },
-    vi: { name: 'Tiếng Việt (AI-IA)', translations: vi },
-    zh: { name: '中文', translations: zh }
+    // Sorted alphabetically by English name
+    ar: { 
+        name: 'العربية (IA-AI)', 
+        enName: 'Arabic (IA-AI)',
+        translations: ar, 
+        rtl: true 
+    },
+    bn: { 
+        name: 'বাংলা (IA-AI)', 
+        enName: 'Bengali (IA-AI)',
+        translations: bn 
+    },
+    ca: { 
+        name: 'Català (IA-AI)', 
+        enName: 'Catalan (IA-AI)',
+        translations: ca 
+    },
+    zh: { 
+        name: '中文 (IA-AI)', 
+        enName: 'Chinese (IA-AI)',
+        translations: zh 
+    },
+    da: { 
+        name: 'Dansk (IA-AI)', 
+        enName: 'Danish (IA-AI)',
+        translations: da 
+    },
+    nl: { 
+        name: 'Nederlands (IA-AI)', 
+        enName: 'Dutch (IA-AI)',
+        translations: nl 
+    },
+    en: { 
+        name: 'English (IA-AI)', 
+        enName: 'English (IA-AI)',
+        translations: en 
+    },
+    fi: { 
+        name: 'Suomi (IA-AI)', 
+        enName: 'Finnish (IA-AI)',
+        translations: fi 
+    },
+    fr: { 
+        name: 'Français (IA-AI)', 
+        enName: 'French (IA-AI)',
+        translations: fr 
+    },
+    de: { 
+        name: 'Deutsch (IA-AI)', 
+        enName: 'German (IA-AI)',
+        translations: de 
+    },
+    el: { 
+        name: 'Ελληνικά (IA-AI)', 
+        enName: 'Greek (IA-AI)',
+        translations: el 
+    },
+    hi: { 
+        name: 'हिन्दी (IA-AI)', 
+        enName: 'Hindi (IA-AI)',
+        translations: hi 
+    },
+    hu: { 
+        name: 'Magyar (IA-AI)', 
+        enName: 'Hungarian (IA-AI)',
+        translations: hu 
+    },
+    id: { 
+        name: 'Bahasa Indonesia (IA-AI)', 
+        enName: 'Indonesian (IA-AI)',
+        translations: id 
+    },
+    it: { 
+        name: 'Italiano (IA-AI)', 
+        enName: 'Italian (IA-AI)',
+        translations: it 
+    },
+    ja: { 
+        name: '日本語 (IA-AI)', 
+        enName: 'Japanese (IA-AI)',
+        translations: ja 
+    },
+    ko: { 
+        name: '한국어 (IA-AI)', 
+        enName: 'Korean (IA-AI)',
+        translations: ko 
+    },
+    no: { 
+        name: 'Norsk (IA-AI)', 
+        enName: 'Norwegian (IA-AI)',
+        translations: no 
+    },
+    pl: { 
+        name: 'Polski (IA-AI)', 
+        enName: 'Polish (IA-AI)',
+        translations: pl 
+    },
+    pt: { 
+        name: 'Português (IA-AI)', 
+        enName: 'Portuguese (IA-AI)',
+        translations: pt 
+    },
+    ro: { 
+        name: 'Română (IA-AI)', 
+        enName: 'Romanian (IA-AI)',
+        translations: ro 
+    },
+    ru: { 
+        name: 'Русский (IA-AI)', 
+        enName: 'Russian (IA-AI)',
+        translations: ru 
+    },
+    es: { 
+        name: 'Español (IA-AI)', 
+        enName: 'Spanish (IA-AI)',
+        translations: es 
+    },
+    sv: { 
+        name: 'Svenska (IA-AI)', 
+        enName: 'Swedish (IA-AI)',
+        translations: sv 
+    },
+    th: { 
+        name: 'ไทย (IA-AI)', 
+        enName: 'Thai (IA-AI)',
+        translations: th 
+    },
+    tr: { 
+        name: 'Türkçe (IA-AI)', 
+        enName: 'Turkish (IA-AI)',
+        translations: tr 
+    },
+    uk: { 
+        name: 'Українська (IA-AI)', 
+        enName: 'Ukrainian (IA-AI)',
+        translations: uk 
+    },
+    vi: { 
+        name: 'Tiếng Việt (IA-AI)', 
+        enName: 'Vietnamese (IA-AI)',
+        translations: vi 
+    },
+    // Regional languages
+    an: { 
+        name: 'Aragonés (IA-AI)', 
+        enName: 'Aragonese (IA-AI)',
+        translations: an 
+    },
+    ast: { 
+        name: 'Asturianu (IA-AI)', 
+        enName: 'Asturian (IA-AI)',
+        translations: ast 
+    },
+    eu: { 
+        name: 'Euskara (IA-AI)', 
+        enName: 'Basque (IA-AI)',
+        translations: eu 
+    },
+    gl: { 
+        name: 'Galego (IA-AI)', 
+        enName: 'Galician (IA-AI)',
+        translations: gl 
+    }
 };
 
 let currentLanguage = 'en';
