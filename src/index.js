@@ -463,8 +463,11 @@ $(function () {
 
 		config.layers.forEach(layer => {
 			if (layer.get('type') === 'overlay') {
-				var title = layer.get('title'),
-					layerButton = $('<h3>').html(title),
+				// Get the translated title, fallback to original title if translation not available
+				const originalTitle = layer.get('originalTitle') || layer.get('title');
+				const title = window.getTranslation ? window.getTranslation(originalTitle) : originalTitle;
+				
+				var layerButton = $('<h3>').html(title),
 					overlayDivContent = $('<div>').addClass('osmcat-content osmcat-overlay overlay' + overlayIndex);
 
 				overlaySelect.append($('<option>').val('overlay' + overlayIndex).text(title));
@@ -479,13 +482,14 @@ $(function () {
 							updatePermalink();
 						}),
 						checkbox = $('<input type="checkbox">').css({marginRight:'6px'});
+					
 					checkbox.prop('checked', overlay.getVisible());
 					checkbox.on('change', function() {
 						overlay.setVisible(this.checked);
 						updatePermalink();
 					});
 					overlayButton.prepend(checkbox);
-					overlay.on('change:visible', function () {
+					overlay.on('change:visible', function() {
 						checkbox.prop('checked', overlay.getVisible());
 						if (overlay.getVisible()) {
 							overlayButton.addClass('active');
