@@ -130,44 +130,84 @@ $(function () {
     function restoreUIState(state) {
         if (!state) return;
         
-        // Restore layer visibility
+        // Batch layer visibility updates
         if (state.visibleLayers) {
+            // First, collect all layer updates
+            const updates = [];
+            const layerTitles = new Map();
+            
+            // Create a map of layer titles to their translations
             window.config.layers.forEach(layer => {
                 const layerTitle = layer.get('title');
-                const shouldBeVisible = state.visibleLayers.includes(layerTitle);
-                layer.setVisible(shouldBeVisible);
+                if (layerTitle) {
+                    layerTitles.set(layerTitle, layer);
+                    // Also store the translated version for matching
+                    const translatedTitle = window.getTranslation ? window.getTranslation(layerTitle) : layerTitle;
+                    if (translatedTitle !== layerTitle) {
+                        layerTitles.set(translatedTitle, layer);
+                    }
+                }
+            });
+            
+            // Process each visible layer from the state
+            state.visibleLayers.forEach(visibleTitle => {
+                const layer = layerTitles.get(visibleTitle);
+                if (layer) {
+                    updates.push({ layer, visible: true });
+                } else {
+                    // Try to find by translated title
+                    const translatedTitle = window.getTranslation ? window.getTranslation(visibleTitle) : visibleTitle;
+                    const translatedLayer = layerTitles.get(translatedTitle);
+                    if (translatedLayer) {
+                        updates.push({ layer: translatedLayer, visible: true });
+                    }
+                }
+            });
+            
+            // Apply all visibility updates in a single batch
+            updates.forEach(({ layer, visible }) => {
+                layer.setVisible(visible);
             });
         }
         
-        // Restore expanded groups after a short delay to allow DOM to update
+        // Restore expanded groups
         if (state.expandedGroups && state.expandedGroups.length > 0) {
-            setTimeout(() => {
-                $('.osmcat-menu h3').each(function() {
-                    const $h3 = $(this);
-                    const groupTitle = $h3.text().trim();
-                    const $content = $h3.next('.osmcat-content');
-                    
-                    // Check if this group should be expanded
-                    const shouldExpand = state.expandedGroups.some(expandedTitle => 
-                        groupTitle === expandedTitle || 
-                        groupTitle === window.getTranslation(expandedTitle) ||
-                        window.getTranslation(groupTitle) === expandedTitle
-                    );
-                    
-                    if (shouldExpand) {
-                        $content.show();
-                    } else {
-                        $content.hide();
-                    }
-                });
-            }, 100);
+            // Create a set of expanded group titles for faster lookup
+            const expandedGroups = new Set(state.expandedGroups);
+            
+            // Process each group header
+            $('.osmcat-menu h3').each(function() {
+                const $h3 = $(this);
+                const groupTitle = $h3.text().trim();
+                const $content = $h3.next('.osmcat-content');
+                
+                // Check if this group should be expanded
+                const shouldExpand = state.expandedGroups.some(expandedTitle => 
+                    groupTitle === expandedTitle || 
+                    groupTitle === (window.getTranslation ? window.getTranslation(expandedTitle) : expandedTitle) ||
+                    (window.getTranslation ? window.getTranslation(groupTitle) : groupTitle) === expandedTitle
+                );
+                
+                // Use direct DOM manipulation for better performance
+                $content.toggle(shouldExpand);
+                $h3.toggleClass('expanded', shouldExpand);
+            });
         }
     }
     
     // Listen for language changes
     window.addEventListener('languageChanged', function() {
+        // Save current scroll position
+        const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+        
         // Save current UI state
         const uiState = getUIState();
+        
+        // Temporarily hide the menu to prevent jumping
+        const $menu = $('.osmcat-menu');
+        const menuHeight = $menu.outerHeight();
+        const $menuPlaceholder = $('<div>').css('height', menuHeight + 'px').css('visibility', 'hidden');
+        $menu.after($menuPlaceholder);
         
         // Re-initialize overlays with the new language
         if (window.getAllOverlays) {
@@ -179,19 +219,51 @@ $(function () {
                 window.integrateOverlays();
             }
             
-            // Update the UI
-            $('.osmcat-menu').remove();
-            $('#menu').prepend(layersControlBuild());
-            
-            // Update the overlay list if the function exists
-            if (window.renderOverlayList && window.overlays) {
-                window.renderOverlayList(window.overlays);
-            }
-            
-            // Restore the UI state
-            setTimeout(() => {
+            // Update the UI in a way that minimizes jumping
+            requestAnimationFrame(() => {
+                // Remove the old menu
+                $menu.remove();
+                
+                // Create the new menu off-screen
+                const $newMenu = $(layersControlBuild()).css({
+                    position: 'absolute',
+                    left: '-9999px',
+                    top: '0',
+                    visibility: 'hidden'
+                });
+                
+                // Insert the new menu
+                $menuPlaceholder.after($newMenu);
+                
+                // Update the overlay list if the function exists
+                if (window.renderOverlayList && window.overlays) {
+                    window.renderOverlayList(window.overlays);
+                }
+                
+                // Restore the UI state
                 restoreUIState(uiState);
-            }, 200);
+                
+                // Get the new height after all updates
+                const newHeight = $newMenu.outerHeight();
+                
+                // Update the placeholder height to match the new menu
+                $menuPlaceholder.css('height', newHeight + 'px');
+                
+                // Show the new menu and remove the placeholder
+                requestAnimationFrame(() => {
+                    $newMenu.css({
+                        position: '',
+                        left: '',
+                        top: '',
+                        visibility: ''
+                    });
+                    
+                    $menuPlaceholder.remove();
+                    
+                    // Restore scroll position
+                    window.scrollTo(0, scrollPosition);
+                });
+            });
         }
     });
 
