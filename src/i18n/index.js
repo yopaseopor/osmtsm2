@@ -110,6 +110,8 @@ export function setLanguage(lang, updateURL = true) {
         if (updateURL) {
             updateLanguageInURL(lang);
         }
+        // Dispatch language changed event
+        window.dispatchEvent(new CustomEvent('languageChanged', { detail: { language: lang } }));
     }
 }
 

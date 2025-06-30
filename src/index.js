@@ -97,6 +97,17 @@ $(function () {
         if (window.updateTranslations) window.updateTranslations();
         updateWindowOverlays(); // Refresh overlays for searcher
         if (window.renderOverlayList && window.overlays) window.renderOverlayList(window.overlays);
+        
+        // Rebuild the layers control to update group titles
+        $('.osmcat-menu').remove();
+        $('#menu').prepend(layersControlBuild());
+    });
+    
+    // Listen for language changes
+    window.addEventListener('languageChanged', function() {
+        // Rebuild the layers control to update group titles
+        $('.osmcat-menu').remove();
+        $('#menu').prepend(layersControlBuild());
     });
 
     // Initial update
