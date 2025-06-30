@@ -105,26 +105,25 @@ $(function () {
     
     // Listen for language changes
     window.addEventListener('languageChanged', function() {
-        // Update overlay group titles
-        config.layers.forEach(layer => {
-            if (layer.get('type') === 'overlay') {
-                const originalTitle = layer.get('originalTitle');
-                if (originalTitle) {
-                    const title = window.getTranslation ? window.getTranslation(originalTitle) : originalTitle;
-                    layer.set('title', title);
-                    
-                    // Update the title in the DOM if it exists
-                    const layerElement = $(`h3:contains('${layer.get('title')}')`);
-                    if (layerElement.length) {
-                        layerElement.text(title);
-                    }
-                }
+        // Re-initialize overlays with the new language
+        if (window.getAllOverlays) {
+            // Update the overlays with the new language
+            window.allOverlays = window.getAllOverlays();
+            
+            // Recreate all overlay layers
+            if (window.integrateOverlays) {
+                window.integrateOverlays();
             }
-        });
-        
-        // Rebuild the layers control to update group titles
-        $('.osmcat-menu').remove();
-        $('#menu').prepend(layersControlBuild());
+            
+            // Update the UI
+            $('.osmcat-menu').remove();
+            $('#menu').prepend(layersControlBuild());
+            
+            // Update the overlay list if the function exists
+            if (window.renderOverlayList && window.overlays) {
+                window.renderOverlayList(window.overlays);
+            }
+        }
     });
 
     // Initial update
