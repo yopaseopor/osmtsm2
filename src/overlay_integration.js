@@ -56,11 +56,15 @@ function createOlLayer(overlay) {
 
 // Function to create overlay group
 function createOverlayGroup(title, layers) {
+    // Get the translated title using the i18n system
+    const translatedTitle = window.getTranslation ? window.getTranslation(title) : title;
+    
     return new ol.layer.Group({
-        title: title,
+        title: translatedTitle,
         type: 'overlay',
         layers: new ol.Collection(layers),
-        visible: true
+        visible: true,
+        originalTitle: title // Store the original title for reference
     });
 }
 
