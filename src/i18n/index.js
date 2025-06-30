@@ -27,8 +27,11 @@ import { zh } from './zh.js';
 import { bg } from './bg.js';
 import { cs } from './cs.js';
 import { el } from './el.js';
+import { hr } from './hr.js';
 import { hu } from './hu.js';
 import { ro } from './ro.js';
+import { sk } from './sk.js';
+import { sr } from './sr.js';
 
 // Create a sorted and formatted languages object
 export const languages = (() => {
@@ -60,10 +63,13 @@ export const languages = (() => {
         { code: 'pt', native: 'Português', en: 'Portuguese', translations: pt },
         { code: 'ro', native: 'Română', en: 'Romanian', translations: ro },
         { code: 'ru', native: 'Русский', en: 'Russian', translations: ru },
+        { code: 'sk', native: 'Slovenčina', en: 'Slovak', translations: sk },
+        { code: 'sr', native: 'Српски', en: 'Serbian', translations: sr },
         { code: 'sv', native: 'Svenska', en: 'Swedish', translations: sv },
         { code: 'uk', native: 'Українська', en: 'Ukrainian', translations: uk },
         { code: 'vi', native: 'Tiếng Việt', en: 'Vietnamese', translations: vi },
-        { code: 'zh', native: '中文', en: 'Chinese', translations: zh }
+        { code: 'zh', native: '中文', en: 'Chinese', translations: zh },
+        { code: 'hr', native: 'Hrvatski', en: 'Croatian', translations: hr }
     ];
 
     // Sort by English name
