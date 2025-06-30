@@ -108,9 +108,17 @@ $(function () {
         // Update overlay group titles
         config.layers.forEach(layer => {
             if (layer.get('type') === 'overlay') {
-                const originalTitle = layer.get('originalTitle') || layer.get('title');
-                const title = window.getTranslation ? window.getTranslation(originalTitle) : originalTitle;
-                layer.set('title', title);
+                const originalTitle = layer.get('originalTitle');
+                if (originalTitle) {
+                    const title = window.getTranslation ? window.getTranslation(originalTitle) : originalTitle;
+                    layer.set('title', title);
+                    
+                    // Update the title in the DOM if it exists
+                    const layerElement = $(`h3:contains('${layer.get('title')}')`);
+                    if (layerElement.length) {
+                        layerElement.text(title);
+                    }
+                }
             }
         });
         

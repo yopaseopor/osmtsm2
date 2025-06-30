@@ -56,16 +56,27 @@ function createOlLayer(overlay) {
 
 // Function to create overlay group
 function createOverlayGroup(title, layers) {
-    // Get the translated title using the i18n system
+    // Get the translated title
     const translatedTitle = window.getTranslation ? window.getTranslation(title) : title;
     
-    return new ol.layer.Group({
+    // Create the group with the translated title
+    const group = new ol.layer.Group({
         title: translatedTitle,
         type: 'overlay',
+        // Store the original untranslated title for future translations
+        originalTitle: title,
         layers: new ol.Collection(layers),
-        visible: true,
-        originalTitle: title // Store the original title for reference
+        visible: true
     });
+    
+    // Store the original title on each layer for reference
+    layers.forEach(layer => {
+        if (layer.overlay) {
+            layer.overlay._originalGroup = title;
+        }
+    });
+    
+    return group;
 }
 
 // Function to integrate overlays
@@ -92,9 +103,8 @@ function integrateOverlays() {
         const overlayGroups = {};
         Object.entries(groupMap).forEach(([groupName, overlays]) => {
             const layers = overlays.map(overlay => createOlLayer(overlay));
-            // Get the translated group name
-            const translatedGroupName = window.getTranslation ? window.getTranslation(groupName) : groupName;
-            overlayGroups[groupName] = createOverlayGroup(translatedGroupName, layers);
+            // Store the original group name and create the group
+            overlayGroups[groupName] = createOverlayGroup(groupName, layers);
         });
         // Add groups to config layers
         Object.values(overlayGroups).forEach(group => {
