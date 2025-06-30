@@ -186,8 +186,8 @@ $(function () {
                     );
                 }
                 
-                // Add text
-                $item.append($('<span>').text((overlay.group ? overlay.group + ': ' : '') + overlay.title));
+                // Add text - only show the title in the selected language
+                $item.append($('<span>').text(overlay.title));
                 
                 if (isActive) $item.addClass('active').attr('tabindex', 0);
                 $item.on('click', function() {
