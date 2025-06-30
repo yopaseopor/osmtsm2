@@ -105,6 +105,15 @@ $(function () {
     
     // Listen for language changes
     window.addEventListener('languageChanged', function() {
+        // Update overlay group titles
+        config.layers.forEach(layer => {
+            if (layer.get('type') === 'overlay') {
+                const originalTitle = layer.get('originalTitle') || layer.get('title');
+                const title = window.getTranslation ? window.getTranslation(originalTitle) : originalTitle;
+                layer.set('title', title);
+            }
+        });
+        
         // Rebuild the layers control to update group titles
         $('.osmcat-menu').remove();
         $('#menu').prepend(layersControlBuild());
@@ -477,6 +486,11 @@ $(function () {
 				// Get the translated title, fallback to original title if translation not available
 				const originalTitle = layer.get('originalTitle') || layer.get('title');
 				const title = window.getTranslation ? window.getTranslation(originalTitle) : originalTitle;
+				
+				// Ensure the layer's title is up to date
+				if (layer.get('title') !== title) {
+					layer.set('title', title);
+				}
 				
 				var layerButton = $('<h3>').html(title),
 					overlayDivContent = $('<div>').addClass('osmcat-content osmcat-overlay overlay' + overlayIndex);
