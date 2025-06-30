@@ -42,9 +42,11 @@ export const overlayConfig = {
             if (!Array.isArray(groupOverlays)) return [];
             return groupOverlays.map(overlay => {
                 const translatedGroup = overlay.group || getTranslation(groupName);
+                // Translate the title if it exists in the translations, otherwise use the original
+                const translatedTitle = getTranslation(overlay.title) || overlay.title;
                 return {
                     group: translatedGroup,
-                    title: overlay.title,
+                    title: translatedTitle,
                     query: overlay.query,
                     iconSrc: overlay.iconSrc,
                     iconStyle: overlay.iconStyle,
@@ -72,9 +74,11 @@ window.addEventListener('overlaysUpdated', function(event) {
                 if (!Array.isArray(groupOverlays)) return [];
                 return groupOverlays.map(overlay => {
                     const translatedGroup = overlay.group || getTranslation(groupName);
+                    // Translate the title if it exists in the translations, otherwise use the original
+                    const translatedTitle = getTranslation(overlay.title) || overlay.title;
                     return {
                         group: translatedGroup,
-                        title: overlay.title,
+                        title: translatedTitle,
                         query: overlay.query,
                         iconSrc: overlay.iconSrc,
                         iconStyle: overlay.iconStyle,
