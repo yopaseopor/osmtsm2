@@ -92,7 +92,9 @@ function integrateOverlays() {
         const overlayGroups = {};
         Object.entries(groupMap).forEach(([groupName, overlays]) => {
             const layers = overlays.map(overlay => createOlLayer(overlay));
-            overlayGroups[groupName] = createOverlayGroup(groupName, layers);
+            // Get the translated group name
+            const translatedGroupName = window.getTranslation ? window.getTranslation(groupName) : groupName;
+            overlayGroups[groupName] = createOverlayGroup(translatedGroupName, layers);
         });
         // Add groups to config layers
         Object.values(overlayGroups).forEach(group => {
@@ -100,15 +102,19 @@ function integrateOverlays() {
         });
         // Update window.overlays for the search functionality
         console.log('Updating window.overlays...');
-        window.overlays = Object.entries(overlayGroups).flatMap(([groupName, group]) => 
-            group.getLayers().getArray().map(layer => ({
+        window.overlays = Object.entries(overlayGroups).flatMap(([groupName, group]) => {
+            // Get the translated group name
+            const translatedGroupName = window.getTranslation ? window.getTranslation(groupName) : groupName;
+            return group.getLayers().getArray().map(layer => ({
                 title: layer.get('title'),
-                group: groupName,
+                group: translatedGroupName, // Use translated group name
                 id: layer.get('id') || '',
                 _olLayer: layer,
-                ...layer.overlay
-            }))
-        );
+                ...layer.overlay,
+                // Store the original group name for reference
+                _originalGroup: groupName
+            }));
+        });
         // Dispatch event to notify that overlays are ready
         console.log('Dispatching overlaysReady event...');
         window.dispatchEvent(new CustomEvent('overlaysReady', {
