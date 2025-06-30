@@ -104,11 +104,32 @@ function integrateOverlays() {
         groupMap[groupKey].push(overlay);
     });
     
+    // Store current visibility state of layers by title
+    const visibilityState = {};
+    if (window.config && window.config.layers) {
+        window.config.layers.forEach(layer => {
+            if (layer.get('type') === 'overlay') {
+                const title = layer.get('title');
+                if (title) {
+                    visibilityState[title] = layer.getVisible();
+                }
+            }
+        });
+    }
+    
     // Create OpenLayers groups for each unique group name
     const overlayGroups = {};
     Object.entries(groupMap).forEach(([groupName, overlays]) => {
         const layers = overlays.map(overlay => createOlLayer(overlay));
-        overlayGroups[groupName] = createOverlayGroup(groupName, layers);
+        const group = createOverlayGroup(groupName, layers);
+        
+        // Restore visibility state if it exists
+        const groupTitle = group.get('title');
+        if (groupTitle in visibilityState) {
+            group.setVisible(visibilityState[groupTitle]);
+        }
+        
+        overlayGroups[groupName] = group;
     });
     
     // Add groups to config layers

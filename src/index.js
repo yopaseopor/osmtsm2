@@ -103,8 +103,72 @@ $(function () {
         $('#menu').prepend(layersControlBuild());
     });
     
+    // Store the current UI state
+    function getUIState() {
+        const state = {
+            // Store visible layers
+            visibleLayers: window.config.layers
+                .filter(layer => layer.getVisible())
+                .map(layer => layer.get('title')),
+            // Store expanded overlay groups
+            expandedGroups: []
+        };
+        
+        // Store which overlay groups are expanded
+        $('.osmcat-menu h3').each(function() {
+            const $h3 = $(this);
+            const $content = $h3.next('.osmcat-content');
+            if ($content.is(':visible')) {
+                state.expandedGroups.push($h3.text().trim());
+            }
+        });
+        
+        return state;
+    }
+    
+    // Restore the UI state
+    function restoreUIState(state) {
+        if (!state) return;
+        
+        // Restore layer visibility
+        if (state.visibleLayers) {
+            window.config.layers.forEach(layer => {
+                const layerTitle = layer.get('title');
+                const shouldBeVisible = state.visibleLayers.includes(layerTitle);
+                layer.setVisible(shouldBeVisible);
+            });
+        }
+        
+        // Restore expanded groups after a short delay to allow DOM to update
+        if (state.expandedGroups && state.expandedGroups.length > 0) {
+            setTimeout(() => {
+                $('.osmcat-menu h3').each(function() {
+                    const $h3 = $(this);
+                    const groupTitle = $h3.text().trim();
+                    const $content = $h3.next('.osmcat-content');
+                    
+                    // Check if this group should be expanded
+                    const shouldExpand = state.expandedGroups.some(expandedTitle => 
+                        groupTitle === expandedTitle || 
+                        groupTitle === window.getTranslation(expandedTitle) ||
+                        window.getTranslation(groupTitle) === expandedTitle
+                    );
+                    
+                    if (shouldExpand) {
+                        $content.show();
+                    } else {
+                        $content.hide();
+                    }
+                });
+            }, 100);
+        }
+    }
+    
     // Listen for language changes
     window.addEventListener('languageChanged', function() {
+        // Save current UI state
+        const uiState = getUIState();
+        
         // Re-initialize overlays with the new language
         if (window.getAllOverlays) {
             // Update the overlays with the new language
@@ -123,6 +187,11 @@ $(function () {
             if (window.renderOverlayList && window.overlays) {
                 window.renderOverlayList(window.overlays);
             }
+            
+            // Restore the UI state
+            setTimeout(() => {
+                restoreUIState(uiState);
+            }, 200);
         }
     });
 
