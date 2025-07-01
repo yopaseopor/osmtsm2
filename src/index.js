@@ -126,6 +126,37 @@ $(function () {
         return state;
     }
     
+    // Function to attach event listeners to overlay elements
+    function attachOverlayEventListeners() {
+        // Attach click handlers to overlay checkboxes
+        $('.osmcat-menu input[type="checkbox"]').off('change').on('change', function() {
+            const $checkbox = $(this);
+            const layerId = $checkbox.attr('id');
+            const isChecked = $checkbox.is(':checked');
+            
+            // Find and update the corresponding layer
+            if (window.config && window.config.layers) {
+                window.config.layers.forEach(layer => {
+                    if (layer.get('id') === layerId) {
+                        layer.setVisible(isChecked);
+                        // Trigger a map update
+                        if (window.map) {
+                            window.map.renderSync();
+                        }
+                    }
+                });
+            }
+        });
+        
+        // Attach click handlers to group headers for expand/collapse
+        $('.osmcat-menu h3').off('click').on('click', function() {
+            const $h3 = $(this);
+            const $content = $h3.next('.osmcat-content');
+            $content.toggle();
+            $h3.toggleClass('expanded');
+        });
+    }
+    
     // Restore the UI state
     function restoreUIState(state) {
         if (!state) return;
@@ -203,6 +234,21 @@ $(function () {
         // Save current UI state
         const uiState = getUIState();
         
+        // Store references to existing overlay layers
+        const existingLayers = [];
+        if (window.config && window.config.layers) {
+            window.config.layers.forEach(layer => {
+                if (layer.get('type') === 'overlay') {
+                    existingLayers.push({
+                        id: layer.get('id'),
+                        visible: layer.getVisible(),
+                        zIndex: layer.getZIndex(),
+                        source: layer.getSource()
+                    });
+                }
+            });
+        }
+        
         // Temporarily hide the menu to prevent jumping
         const $menu = $('.osmcat-menu');
         const menuHeight = $menu.outerHeight();
@@ -243,6 +289,9 @@ $(function () {
                 // Restore the UI state
                 restoreUIState(uiState);
                 
+                // Reattach event listeners to the new menu
+                attachOverlayEventListeners();
+                
                 // Get the new height after all updates
                 const newHeight = $newMenu.outerHeight();
                 
@@ -262,6 +311,11 @@ $(function () {
                     
                     // Restore scroll position
                     window.scrollTo(0, scrollPosition);
+                    
+                    // Trigger a map update to refresh the overlays
+                    if (window.map) {
+                        window.map.renderSync();
+                    }
                 });
             });
         }
@@ -1055,6 +1109,9 @@ $(function () {
 		});
 
 	});
+    
+    // Attach initial event listeners for overlays
+    attachOverlayEventListeners();
 });
 
 function linearColorInterpolation(colorFrom, colorTo, weight) {

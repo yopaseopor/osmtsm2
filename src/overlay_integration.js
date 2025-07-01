@@ -119,17 +119,49 @@ function integrateOverlays() {
     
     // Create OpenLayers groups for each unique group name
     const overlayGroups = {};
+    const layerIdMap = new Map();
+    
+    // First, store references to existing layers by ID if they exist
+    if (window.config && window.config.layers) {
+        window.config.layers.forEach(layer => {
+            const id = layer.get('id');
+            if (id) {
+                layerIdMap.set(id, layer);
+            }
+        });
+    }
+    
+    // Process each group
     Object.entries(groupMap).forEach(([groupName, overlays]) => {
-        const layers = overlays.map(overlay => createOlLayer(overlay));
+        // Try to reuse existing layers to maintain references and event listeners
+        const layers = overlays.map(overlay => {
+            const existingLayer = overlay.id ? layerIdMap.get(overlay.id) : null;
+            if (existingLayer) {
+                // Update the existing layer's properties
+                const newLayer = createOlLayer(overlay);
+                existingLayer.setSource(newLayer.getSource());
+                existingLayer.setStyle(newLayer.getStyle());
+                existingLayer.setVisible(newLayer.getVisible());
+                existingLayer.setZIndex(newLayer.getZIndex());
+                return existingLayer;
+            }
+            return createOlLayer(overlay);
+        });
+        
+        // Create the group and store it
         const group = createOverlayGroup(groupName, layers);
+        overlayGroups[groupName] = group;
         
         // Restore visibility state if it exists
         const groupTitle = group.get('title');
         if (groupTitle in visibilityState) {
             group.setVisible(visibilityState[groupTitle]);
         }
-        
-        overlayGroups[groupName] = group;
+    });
+    
+    // Add groups to config layers
+    Object.values(overlayGroups).forEach(group => {
+        window.config.layers.push(group);
     });
     
     // Add groups to config layers
