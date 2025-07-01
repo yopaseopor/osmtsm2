@@ -196,55 +196,39 @@ $(function () {
     }
     
     // Listen for language changes
-    window.addEventListener('languageChanged', function() {
-        console.log('Language changed, updating UI...');
-        
+    window.addEventListener('languageChanged', async function() {
         // Save current scroll position
         const scrollPosition = window.scrollY || document.documentElement.scrollTop;
         
-        // Save current UI state including overlay visibility
+        // Save current UI state before any changes
         const uiState = getUIState();
         
-        // Store currently visible overlays and their sources
-        const overlayStates = [];
-        window.config.layers.forEach(layer => {
-            if (layer.get('type') === 'overlay') {
-                const title = layer.get('title');
-                const originalTitle = layer.get('originalTitle') || title;
-                const visible = layer.getVisible();
-                const source = layer.getSource();
-                
-                // For group layers, store the state of each sub-layer
-                if (layer instanceof ol.layer.Group) {
-                    const layers = layer.getLayers().getArray();
-                    layers.forEach(sublayer => {
-                        if (sublayer.overlay) {
-                            overlayStates.push({
-                                originalTitle: sublayer.overlay.originalTitle || sublayer.overlay.title,
-                                title: sublayer.get('title'),
-                                visible: sublayer.getVisible(),
-                                source: sublayer.getSource(),
-                                overlay: sublayer.overlay
-                            });
-                        }
-                    });
-                } else if (layer.overlay) {
-                    // For single overlay layers
-                    overlayStates.push({
-                        originalTitle: originalTitle,
-                        title: title,
-                        visible: visible,
-                        source: source,
-                        overlay: layer.overlay
-                    });
-                }
-            }
-        });
+        // Store current map view and layer states
+        const mapView = window.map.getView();
+        const center = mapView.getCenter();
+        const zoom = mapView.getZoom();
         
-        // Store the current map view
-        const view = map.getView();
-        const center = ol.proj.toLonLat(view.getCenter());
-        const zoom = view.getZoom();
+        // Store current overlay states
+        const overlayStates = new Map();
+        const visibleLayers = [];
+        
+        if (window.config && window.config.layers) {
+            window.config.layers.forEach(layer => {
+                if (layer.get('type') === 'overlay') {
+                    const title = layer.get('title');
+                    if (title) {
+                        overlayStates.set(title, {
+                            visible: layer.getVisible(),
+                            opacity: layer.getOpacity()
+                        });
+                        
+                        if (layer.getVisible()) {
+                            visibleLayers.push(title);
+                        }
+                    }
+                }
+            });
+        }
         
         // Temporarily hide the menu to prevent jumping
         const $menu = $('.osmcat-menu');
@@ -252,21 +236,41 @@ $(function () {
         const $menuPlaceholder = $('<div>').css('height', menuHeight + 'px').css('visibility', 'hidden');
         $menu.after($menuPlaceholder);
         
-        // Store the current overlay states in a global variable for integrateOverlays to access
-        window._overlayStates = overlayStates;
-        
-        // Re-initialize overlays with the new language
-        if (window.getAllOverlays) {
-            try {
+        try {
+            // Re-initialize overlays with the new language
+            if (window.getAllOverlays) {
                 // Update the overlays with the new language
                 window.allOverlays = window.getAllOverlays();
                 
                 // Recreate all overlay layers
                 if (window.integrateOverlays) {
+                    // Clear existing overlays first
+                    if (window.config && window.config.layers) {
+                        window.config.layers = window.config.layers.filter(layer => 
+                            layer.get('type') !== 'overlay'
+                        );
+                    }
+                    
+                    // Reintegrate overlays
                     window.integrateOverlays();
                     
-                    // Clean up
-                    delete window._overlayStates;
+                    // Restore overlay states after a short delay
+                    setTimeout(() => {
+                        if (window.config && window.config.layers) {
+                            window.config.layers.forEach(layer => {
+                                if (layer.get('type') === 'overlay') {
+                                    const title = layer.get('title');
+                                    const state = overlayStates.get(title);
+                                    if (state) {
+                                        layer.setVisible(state.visible);
+                                        if (state.opacity !== undefined) {
+                                            layer.setOpacity(state.opacity);
+                                        }
+                                    }
+                                }
+                            });
+                        }
+                    }, 100);
                 }
                 
                 // Update the UI in a way that minimizes jumping
@@ -290,12 +294,8 @@ $(function () {
                         window.renderOverlayList(window.overlays);
                     }
                     
-                    // Restore the UI state including overlay visibility
+                    // Restore the UI state
                     restoreUIState(uiState);
-                    
-                    // Restore the map view
-                    view.setCenter(ol.proj.fromLonLat(center));
-                    view.setZoom(zoom);
                     
                     // Get the new height after all updates
                     const newHeight = $newMenu.outerHeight();
@@ -317,14 +317,34 @@ $(function () {
                         // Restore scroll position
                         window.scrollTo(0, scrollPosition);
                         
-                        console.log('Language change UI update complete');
+                        // Restore map view
+                        if (center && zoom !== undefined) {
+                            mapView.animate({
+                                center: center,
+                                zoom: zoom,
+                                duration: 0
+                            });
+                        }
+                        
+                        // Trigger a map render to ensure everything is updated
+                        if (window.map) {
+                            window.map.renderSync();
+                        }
                     });
                 });
-            } catch (error) {
-                console.error('Error during language change:', error);
-                // Clean up even if there was an error
-                delete window._overlayStates;
-                $menuPlaceholder.remove();
+            }
+        } catch (error) {
+            console.error('Error during language change:', error);
+            // Make sure to clean up even if there's an error
+            $menuPlaceholder.remove();
+            
+            // Try to restore the map view
+            if (center && zoom !== undefined) {
+                mapView.animate({
+                    center: center,
+                    zoom: zoom,
+                    duration: 0
+                });
             }
         }
     });
