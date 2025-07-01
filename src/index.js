@@ -130,68 +130,50 @@ $(function () {
     function restoreUIState(state) {
         if (!state) return;
         
-        // Helper function to find a layer by title or translation
-        const findLayer = (title) => {
-            // First try exact match
-            let layer = window.config.layers.find(l => l.get('title') === title);
-            if (layer) return layer;
-            
-            // Try with translation
-            if (window.getTranslation) {
-                const translatedTitle = window.getTranslation(title);
-                if (translatedTitle !== title) {
-                    layer = window.config.layers.find(l => l.get('title') === translatedTitle);
-                    if (layer) return layer;
-                }
-            }
-            
-            // Try with original title if available
-            return window.config.layers.find(l => 
-                l.get('originalTitle') === title || 
-                (l.overlay && l.overlay._originalGroup === title)
-            );
-        };
-        
         // Batch layer visibility updates
-        if (state.visibleLayers && state.visibleLayers.length > 0) {
-            console.log('Restoring visibility for layers:', state.visibleLayers);
-            
+        if (state.visibleLayers) {
             // First, collect all layer updates
             const updates = [];
+            const layerTitles = new Map();
+            
+            // Create a map of layer titles to their translations
+            window.config.layers.forEach(layer => {
+                const layerTitle = layer.get('title');
+                if (layerTitle) {
+                    layerTitles.set(layerTitle, layer);
+                    // Also store the translated version for matching
+                    const translatedTitle = window.getTranslation ? window.getTranslation(layerTitle) : layerTitle;
+                    if (translatedTitle !== layerTitle) {
+                        layerTitles.set(translatedTitle, layer);
+                    }
+                }
+            });
             
             // Process each visible layer from the state
             state.visibleLayers.forEach(visibleTitle => {
-                const layer = findLayer(visibleTitle);
+                const layer = layerTitles.get(visibleTitle);
                 if (layer) {
-                    console.log(`Setting visibility for layer ${visibleTitle} to true`);
                     updates.push({ layer, visible: true });
                 } else {
-                    console.warn(`Could not find layer for title: ${visibleTitle}`);
+                    // Try to find by translated title
+                    const translatedTitle = window.getTranslation ? window.getTranslation(visibleTitle) : visibleTitle;
+                    const translatedLayer = layerTitles.get(translatedTitle);
+                    if (translatedLayer) {
+                        updates.push({ layer: translatedLayer, visible: true });
+                    }
                 }
             });
             
             // Apply all visibility updates in a single batch
             updates.forEach(({ layer, visible }) => {
-                try {
-                    layer.setVisible(visible);
-                    
-                    // If this is a group, also update its children
-                    if (layer instanceof ol.layer.Group) {
-                        layer.getLayers().forEach(childLayer => {
-                            childLayer.setVisible(visible);
-                        });
-                    }
-                } catch (e) {
-                    console.error('Error setting layer visibility:', e);
-                }
+                layer.setVisible(visible);
             });
-            
-            console.log('Applied visibility updates to', updates.length, 'layers');
         }
         
         // Restore expanded groups
         if (state.expandedGroups && state.expandedGroups.length > 0) {
-            console.log('Restoring expanded groups:', state.expandedGroups);
+            // Create a set of expanded group titles for faster lookup
+            const expandedGroups = new Set(state.expandedGroups);
             
             // Process each group header
             $('.osmcat-menu h3').each(function() {
@@ -200,21 +182,11 @@ $(function () {
                 const $content = $h3.next('.osmcat-content');
                 
                 // Check if this group should be expanded
-                const shouldExpand = state.expandedGroups.some(expandedTitle => {
-                    // Direct match
-                    if (groupTitle === expandedTitle) return true;
-                    
-                    // Check translation if available
-                    if (window.getTranslation) {
-                        const translatedTitle = window.getTranslation(expandedTitle);
-                        if (groupTitle === translatedTitle) return true;
-                        
-                        const translatedGroupTitle = window.getTranslation(groupTitle);
-                        if (translatedGroupTitle === expandedTitle) return true;
-                    }
-                    
-                    return false;
-                });
+                const shouldExpand = state.expandedGroups.some(expandedTitle => 
+                    groupTitle === expandedTitle || 
+                    groupTitle === (window.getTranslation ? window.getTranslation(expandedTitle) : expandedTitle) ||
+                    (window.getTranslation ? window.getTranslation(groupTitle) : groupTitle) === expandedTitle
+                );
                 
                 // Use direct DOM manipulation for better performance
                 $content.toggle(shouldExpand);
@@ -224,105 +196,61 @@ $(function () {
     }
     
     // Listen for language changes
-    window.addEventListener('languageChanged', async function() {
-        // Add loading class to body
-        $('body').addClass('language-changing');
+    window.addEventListener('languageChanged', function() {
+        // Save current scroll position
+        const scrollPosition = window.scrollY || document.documentElement.scrollTop;
         
-        try {
-            // Save current scroll position
-            const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+        // Save current UI state
+        const uiState = getUIState();
+        
+        // Temporarily hide the menu to prevent jumping
+        const $menu = $('.osmcat-menu');
+        const menuHeight = $menu.outerHeight();
+        const $menuPlaceholder = $('<div>').css('height', menuHeight + 'px').css('visibility', 'hidden');
+        $menu.after($menuPlaceholder);
+        
+        // Re-initialize overlays with the new language
+        if (window.getAllOverlays) {
+            // Update the overlays with the new language
+            window.allOverlays = window.getAllOverlays();
             
-            // Save current UI state
-            const uiState = getUIState();
+            // Recreate all overlay layers
+            if (window.integrateOverlays) {
+                window.integrateOverlays();
+            }
             
-            // Temporarily hide the menu to prevent jumping
-            const $menu = $('.osmcat-menu');
-            const menuHeight = $menu.outerHeight();
-            const $menuPlaceholder = $('<div>').css({
-                'height': menuHeight + 'px',
-                'visibility': 'hidden',
-                'pointer-events': 'none',
-                'min-height': '50px', // Ensure there's always some space
-                'transition': 'height 0.2s ease-in-out'
-            });
-            $menu.after($menuPlaceholder);
-            
-            // Show loading indicator
-            const $loadingIndicator = $('<div class="language-loading">Updating language...</div>').hide();
-            $('body').append($loadingIndicator);
-            $loadingIndicator.fadeIn(200);
-            
-            // Process overlay updates without blocking the UI
-            await new Promise(resolve => {
-                // Use setTimeout to ensure the UI can update
-                setTimeout(async () => {
-                    try {
-                        // Re-initialize overlays with the new language
-                        if (window.getAllOverlays) {
-                            window.allOverlays = window.getAllOverlays();
-                            
-                            if (window.integrateOverlays) {
-                                // Run integrateOverlays in the next tick to prevent blocking
-                                await new Promise(resolveIntegrate => {
-                                    setTimeout(() => {
-                                        window.integrateOverlays();
-                                        resolveIntegrate();
-                                    }, 0);
-                                });
-                                
-                                // Set a timeout to ensure we don't wait forever for overlaysReady
-                                const timeout = setTimeout(() => {
-                                    console.warn('overlaysReady event timed out');
-                                    resolve();
-                                }, 5000);
-                                
-                                // Wait for overlays to be ready, but don't block if it takes too long
-                                const onOverlaysReady = () => {
-                                    clearTimeout(timeout);
-                                    window.removeEventListener('overlaysReady', onOverlaysReady);
-                                    resolve();
-                                };
-                                window.addEventListener('overlaysReady', onOverlaysReady);
-                                return;
-                            }
-                        }
-                        resolve();
-                    } catch (error) {
-                        console.error('Error during language change:', error);
-                        resolve(); // Always resolve to prevent hanging
-                    }
-                }, 0);
-            });
-            
-            // Continue with UI updates in the next tick
-            setTimeout(() => {
-                try {
-                    // Create the new menu off-screen
-                    const $newMenu = $(layersControlBuild()).css({
-                        position: 'absolute',
-                        left: '-9999px',
-                        top: '0',
-                        visibility: 'hidden'
-                    });
-                    
-                    // Insert the new menu
-                    $menuPlaceholder.after($newMenu);
-                    
-                    // Remove the old menu
-                    $menu.remove();
-                    
-                    // Update the overlay list if the function exists
-                    if (window.renderOverlayList && window.overlays) {
-                        window.renderOverlayList(window.overlays);
-                    }
-                    
-                    // Get the new height after all updates
-                    const newHeight = $newMenu.outerHeight();
-                    
-                    // Update the placeholder height to match the new menu
-                    $menuPlaceholder.css('height', Math.max(newHeight, 50) + 'px');
-                    
-                    // Show the new menu and remove the placeholder
+            // Update the UI in a way that minimizes jumping
+            requestAnimationFrame(() => {
+                // Remove the old menu
+                $menu.remove();
+                
+                // Create the new menu off-screen
+                const $newMenu = $(layersControlBuild()).css({
+                    position: 'absolute',
+                    left: '-9999px',
+                    top: '0',
+                    visibility: 'hidden'
+                });
+                
+                // Insert the new menu
+                $menuPlaceholder.after($newMenu);
+                
+                // Update the overlay list if the function exists
+                if (window.renderOverlayList && window.overlays) {
+                    window.renderOverlayList(window.overlays);
+                }
+                
+                // Restore the UI state
+                restoreUIState(uiState);
+                
+                // Get the new height after all updates
+                const newHeight = $newMenu.outerHeight();
+                
+                // Update the placeholder height to match the new menu
+                $menuPlaceholder.css('height', newHeight + 'px');
+                
+                // Show the new menu and remove the placeholder
+                requestAnimationFrame(() => {
                     $newMenu.css({
                         position: '',
                         left: '',
@@ -330,50 +258,12 @@ $(function () {
                         visibility: ''
                     });
                     
-                    // Restore the UI state
-                    restoreUIState(uiState);
-                    
-                    // Clean up
-                    $loadingIndicator.fadeOut(200, function() {
-                        $(this).remove();
-                    });
-                    
-                    // Restore scroll position after a short delay to ensure DOM is ready
-                    setTimeout(() => {
-                        window.scrollTo(0, scrollPosition);
-                        $menuPlaceholder.remove();
-                        
-                        // Remove loading class after a short delay to ensure all animations are complete
-                        setTimeout(() => {
-                            $('body').removeClass('language-changing');
-                        }, 100);
-                    }, 50);
-                    
-                } catch (error) {
-                    console.error('Error updating UI after language change:', error);
-                    $loadingIndicator.fadeOut(200, function() {
-                        $(this).remove();
-                    });
                     $menuPlaceholder.remove();
-                    $('body').removeClass('language-changing');
                     
-                    // Show error message to user
-                    const $errorMsg = $('<div class="language-loading" style="background-color: #d9534f;">Error updating language. Please try again.</div>');
-                    $('body').append($errorMsg);
-                    setTimeout(() => {
-                        $errorMsg.fadeOut(400, function() {
-                            $(this).remove();
-                        });
-                    }, 3000);
-                }
-            }, 100); // Small delay to ensure the UI remains responsive
-            
-        } catch (error) {
-            console.error('Critical error during language change:', error);
-            // Ensure we always clean up and restore functionality
-            $('body').css('pointer-events', '');
-            $('.language-loading').remove();
-            $('.osmcat-menu').show();
+                    // Restore scroll position
+                    window.scrollTo(0, scrollPosition);
+                });
+            });
         }
     });
 
