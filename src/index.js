@@ -224,107 +224,157 @@ $(function () {
     }
     
     // Listen for language changes
-    window.addEventListener('languageChanged', function() {
-        // Save current scroll position
-        const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+    window.addEventListener('languageChanged', async function() {
+        // Add loading class to body
+        $('body').addClass('language-changing');
         
-        // Save current UI state
-        const uiState = getUIState();
-        
-        // Temporarily hide the menu to prevent jumping
-        const $menu = $('.osmcat-menu');
-        const menuHeight = $menu.outerHeight();
-        const $menuPlaceholder = $('<div>').css({
-            'height': menuHeight + 'px',
-            'visibility': 'hidden',
-            'pointer-events': 'none'
-        });
-        $menu.after($menuPlaceholder);
-        
-        // Disable user interaction during the update
-        $('body').css('pointer-events', 'none');
-        
-        // Use a promise to ensure all updates are complete before continuing
-        const updatePromise = new Promise((resolve) => {
-            // Re-initialize overlays with the new language
-            if (window.getAllOverlays) {
-                // Update the overlays with the new language
-                window.allOverlays = window.getAllOverlays();
-                
-                // Recreate all overlay layers
-                if (window.integrateOverlays) {
-                    window.integrateOverlays();
-                    
-                    // Wait for overlays to be ready
-                    const onOverlaysReady = () => {
-                        window.removeEventListener('overlaysReady', onOverlaysReady);
+        try {
+            // Save current scroll position
+            const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+            
+            // Save current UI state
+            const uiState = getUIState();
+            
+            // Temporarily hide the menu to prevent jumping
+            const $menu = $('.osmcat-menu');
+            const menuHeight = $menu.outerHeight();
+            const $menuPlaceholder = $('<div>').css({
+                'height': menuHeight + 'px',
+                'visibility': 'hidden',
+                'pointer-events': 'none',
+                'min-height': '50px', // Ensure there's always some space
+                'transition': 'height 0.2s ease-in-out'
+            });
+            $menu.after($menuPlaceholder);
+            
+            // Show loading indicator
+            const $loadingIndicator = $('<div class="language-loading">Updating language...</div>').hide();
+            $('body').append($loadingIndicator);
+            $loadingIndicator.fadeIn(200);
+            
+            // Process overlay updates without blocking the UI
+            await new Promise(resolve => {
+                // Use setTimeout to ensure the UI can update
+                setTimeout(async () => {
+                    try {
+                        // Re-initialize overlays with the new language
+                        if (window.getAllOverlays) {
+                            window.allOverlays = window.getAllOverlays();
+                            
+                            if (window.integrateOverlays) {
+                                // Run integrateOverlays in the next tick to prevent blocking
+                                await new Promise(resolveIntegrate => {
+                                    setTimeout(() => {
+                                        window.integrateOverlays();
+                                        resolveIntegrate();
+                                    }, 0);
+                                });
+                                
+                                // Set a timeout to ensure we don't wait forever for overlaysReady
+                                const timeout = setTimeout(() => {
+                                    console.warn('overlaysReady event timed out');
+                                    resolve();
+                                }, 5000);
+                                
+                                // Wait for overlays to be ready, but don't block if it takes too long
+                                const onOverlaysReady = () => {
+                                    clearTimeout(timeout);
+                                    window.removeEventListener('overlaysReady', onOverlaysReady);
+                                    resolve();
+                                };
+                                window.addEventListener('overlaysReady', onOverlaysReady);
+                                return;
+                            }
+                        }
                         resolve();
-                    };
-                    window.addEventListener('overlaysReady', onOverlaysReady);
-                } else {
-                    resolve();
-                }
-            } else {
-                resolve();
-            }
-        });
-        
-        // When all updates are complete, update the UI
-        updatePromise.then(() => {
-            // Update the UI in a way that minimizes jumping
-            requestAnimationFrame(() => {
-                // Remove the old menu
-                $menu.remove();
-                
-                // Create the new menu off-screen
-                const $newMenu = $(layersControlBuild()).css({
-                    position: 'absolute',
-                    left: '-9999px',
-                    top: '0',
-                    visibility: 'hidden',
-                    'pointer-events': 'none'
-                });
-                
-                // Insert the new menu
-                $menuPlaceholder.after($newMenu);
-                
-                // Update the overlay list if the function exists
-                if (window.renderOverlayList && window.overlays) {
-                    window.renderOverlayList(window.overlays);
-                }
-                
-                // Restore the UI state
-                restoreUIState(uiState);
-                
-                // Get the new height after all updates
-                const newHeight = $newMenu.outerHeight();
-                
-                // Update the placeholder height to match the new menu
-                $menuPlaceholder.css('height', newHeight + 'px');
-                
-                // Show the new menu and remove the placeholder
-                requestAnimationFrame(() => {
+                    } catch (error) {
+                        console.error('Error during language change:', error);
+                        resolve(); // Always resolve to prevent hanging
+                    }
+                }, 0);
+            });
+            
+            // Continue with UI updates in the next tick
+            setTimeout(() => {
+                try {
+                    // Create the new menu off-screen
+                    const $newMenu = $(layersControlBuild()).css({
+                        position: 'absolute',
+                        left: '-9999px',
+                        top: '0',
+                        visibility: 'hidden'
+                    });
+                    
+                    // Insert the new menu
+                    $menuPlaceholder.after($newMenu);
+                    
+                    // Remove the old menu
+                    $menu.remove();
+                    
+                    // Update the overlay list if the function exists
+                    if (window.renderOverlayList && window.overlays) {
+                        window.renderOverlayList(window.overlays);
+                    }
+                    
+                    // Get the new height after all updates
+                    const newHeight = $newMenu.outerHeight();
+                    
+                    // Update the placeholder height to match the new menu
+                    $menuPlaceholder.css('height', Math.max(newHeight, 50) + 'px');
+                    
+                    // Show the new menu and remove the placeholder
                     $newMenu.css({
                         position: '',
                         left: '',
                         top: '',
-                        visibility: '',
-                        'pointer-events': ''
+                        visibility: ''
                     });
                     
+                    // Restore the UI state
+                    restoreUIState(uiState);
+                    
+                    // Clean up
+                    $loadingIndicator.fadeOut(200, function() {
+                        $(this).remove();
+                    });
+                    
+                    // Restore scroll position after a short delay to ensure DOM is ready
+                    setTimeout(() => {
+                        window.scrollTo(0, scrollPosition);
+                        $menuPlaceholder.remove();
+                        
+                        // Remove loading class after a short delay to ensure all animations are complete
+                        setTimeout(() => {
+                            $('body').removeClass('language-changing');
+                        }, 100);
+                    }, 50);
+                    
+                } catch (error) {
+                    console.error('Error updating UI after language change:', error);
+                    $loadingIndicator.fadeOut(200, function() {
+                        $(this).remove();
+                    });
                     $menuPlaceholder.remove();
+                    $('body').removeClass('language-changing');
                     
-                    // Re-enable user interaction
-                    $('body').css('pointer-events', '');
-                    
-                    // Restore scroll position
-                    window.scrollTo(0, scrollPosition);
-                    
-                    // Force a redraw to ensure everything is properly rendered
-                    $newMenu.hide().show(0);
-                });
-            });
-        });
+                    // Show error message to user
+                    const $errorMsg = $('<div class="language-loading" style="background-color: #d9534f;">Error updating language. Please try again.</div>');
+                    $('body').append($errorMsg);
+                    setTimeout(() => {
+                        $errorMsg.fadeOut(400, function() {
+                            $(this).remove();
+                        });
+                    }, 3000);
+                }
+            }, 100); // Small delay to ensure the UI remains responsive
+            
+        } catch (error) {
+            console.error('Critical error during language change:', error);
+            // Ensure we always clean up and restore functionality
+            $('body').css('pointer-events', '');
+            $('.language-loading').remove();
+            $('.osmcat-menu').show();
+        }
     });
 
     // Initial update

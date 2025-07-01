@@ -1138,6 +1138,42 @@ CLEAR ACTIVE OVERLAY BUTTON
     color: #fff;
 }
 
+/* Language loading indicator */
+.language-loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    z-index: 10000;
+    font-size: 16px;
+    pointer-events: none;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Ensure the app remains usable during language change */
+body.language-changing {
+    cursor: wait !important;
+}
+
+body.language-changing * {
+    pointer-events: none !important;
+}
+
+/* Prevent layout shifts during language change */
+.osmcat-menu {
+    transition: height 0.2s ease-in-out;
+    overflow: hidden;
+}
+
 .osmcat-routerbutton button i {
     color: #567CAC;
 }
@@ -1146,6 +1182,44 @@ CLEAR ACTIVE OVERLAY BUTTON
     color: #fff;
 }
 
+/* Language loading indicator */
+.language-loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    z-index: 10000;
+    font-size: 16px;
+    pointer-events: none;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Ensure the app remains usable during language change */
+body.language-changing {
+    cursor: wait !important;
+}
+
+body.language-changing * {
+    pointer-events: none !important;
+}
+
+/* Prevent layout shifts during language change */
+.osmcat-menu {
+    transition: height 0.2s ease-in-out;
+    overflow: hidden;
+}
+
+/* Button styles */
+button {
     background-color: rgba(255,255,255,0.4);
     border: none;
     border-radius: 2px;
