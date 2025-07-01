@@ -81,140 +81,124 @@ function createOverlayGroup(title, layers) {
 
 // Function to integrate overlays
 function integrateOverlays() {
-    if (!window.config || !window.config.layers) return;
+    if (!window.config || !window.config.layers) {
+        console.warn('Config or layers not available yet');
+        return;
+    }
     
     console.log('Integrating overlays...');
     
-    // Store current overlay visibility and expanded states
-    const overlayStates = new Map();
-    const overlayGroupStates = new Map();
-    
-    // Collect current overlay states before removing them
-    window.config.layers
-        .filter(layer => layer.get('type') === 'overlay')
-        .forEach(layer => {
-            const title = layer.get('title');
-            if (title) {
-                overlayStates.set(title, {
-                    visible: layer.getVisible(),
-                    opacity: layer.getOpacity()
-                });
+    try {
+        // Store current visibility state of overlay groups
+        const groupVisibility = {};
+        const overlayVisibility = {};
+        
+        // First, collect all current overlay states
+        window.config.layers.forEach(layer => {
+            if (layer.get('type') === 'overlay') {
+                const title = layer.get('title');
+                const originalTitle = layer.get('originalTitle') || title;
+                const isVisible = layer.getVisible();
                 
-                // Store group state if it's a group
                 if (layer.getLayers) {
-                    const groupLayers = {};
-                    layer.getLayers().forEach(subLayer => {
-                        const subTitle = subLayer.get('title');
-                        if (subTitle) {
-                            groupLayers[subTitle] = {
-                                visible: subLayer.getVisible(),
-                                opacity: subLayer.getOpacity()
-                            };
+                    // It's a group
+                    groupVisibility[originalTitle] = isVisible;
+                    
+                    // Store visibility of individual overlays in this group
+                    const layers = layer.getLayers().getArray();
+                    layers.forEach(overlayLayer => {
+                        const overlayTitle = overlayLayer.get('title');
+                        if (overlayTitle) {
+                            overlayVisibility[overlayTitle] = overlayLayer.getVisible();
                         }
                     });
-                    overlayGroupStates.set(title, groupLayers);
+                } else {
+                    // It's a single overlay
+                    overlayVisibility[originalTitle] = isVisible;
                 }
             }
         });
-    
-    // Clear existing overlay layers while preserving base layers
-    window.config.layers = window.config.layers.filter(layer => layer.get('type') !== 'overlay');
-    
-    // Flatten all overlays from all groups
-    const allOverlaysFlat = Object.values(window.allOverlays)
-        .filter(Array.isArray)
-        .flat();
-    
-    // Group overlays by their original group property
-    const groupMap = {};
-    allOverlaysFlat.forEach(overlay => {
-        if (!overlay.group) return;
         
-        // Store the original group key for reference
-        const groupKey = overlay.group;
-        overlay._originalGroup = groupKey;
+        // Clear existing overlay layers
+        window.config.layers = window.config.layers.filter(layer => layer.get('type') !== 'overlay');
         
-        if (!groupMap[groupKey]) {
-            groupMap[groupKey] = [];
-        }
-        groupMap[groupKey].push(overlay);
-    });
-    
-    // Create OpenLayers groups for each unique group name
-    const overlayGroups = {};
-    
-    Object.entries(groupMap).forEach(([groupName, overlays]) => {
-        // Create layers for this group
-        const layers = overlays.map(overlay => {
-            const layer = createOlLayer(overlay);
+        // Flatten all overlays from all groups
+        const allOverlaysFlat = Object.values(window.allOverlays)
+            .filter(Array.isArray)
+            .flat();
             
-            // Apply previous state if it exists
-            const layerState = overlayStates.get(overlay.title);
-            if (layerState) {
-                layer.setVisible(layerState.visible);
-                if (layerState.opacity !== undefined) {
-                    layer.setOpacity(layerState.opacity);
-                }
-            }
-            
-            return layer;
+        // Group overlays by their group property
+        const groupMap = {};
+        allOverlaysFlat.forEach(overlay => {
+            if (!overlay.group) return;
+            let groupKey = overlay.group;
+            // Store the original group key for reference
+            overlay._originalGroup = groupKey;
+            if (!groupMap[groupKey]) groupMap[groupKey] = [];
+            groupMap[groupKey].push(overlay);
         });
         
-        // Create the group
-        const group = createOverlayGroup(groupName, layers);
-        
-        // Apply previous group state if it exists
-        const groupState = overlayStates.get(groupName);
-        if (groupState) {
-            group.setVisible(groupState.visible);
-            if (groupState.opacity !== undefined) {
-                group.setOpacity(groupState.opacity);
+        // Create OpenLayers groups for each unique group name
+        const overlayGroups = {};
+        Object.entries(groupMap).forEach(([groupName, overlays]) => {
+            const layers = overlays.map(overlay => {
+                const layer = createOlLayer(overlay);
+                // Restore individual overlay visibility if it exists
+                const overlayTitle = overlay.title || overlay.get('title');
+                if (overlayTitle && overlayVisibility[overlayTitle] !== undefined) {
+                    layer.setVisible(overlayVisibility[overlayTitle]);
+                }
+                return layer;
+            });
+            
+            const group = createOverlayGroup(groupName, layers);
+            
+            // Restore group visibility if it exists
+            if (groupVisibility[groupName] !== undefined) {
+                group.setVisible(groupVisibility[groupName]);
             }
-        }
+            
+            overlayGroups[groupName] = group;
+        });
         
-        overlayGroups[groupName] = group;
-    });
-    
-    // Add groups to config layers
-    Object.values(overlayGroups).forEach(group => {
-        window.config.layers.push(group);
-    });
-    
-    // Update window.overlays for the search functionality
-    console.log('Updating window.overlays...');
-    window.overlays = Object.entries(overlayGroups).flatMap(([groupName, group]) => {
-        return group.getLayers().getArray().map(layer => {
-            const overlay = {
+        // Add groups to config layers
+        Object.values(overlayGroups).forEach(group => {
+            window.config.layers.push(group);
+        });
+        
+        // Update window.overlays for the search functionality
+        console.log('Updating window.overlays...');
+        window.overlays = Object.entries(overlayGroups).flatMap(([groupName, group]) => {
+            return group.getLayers().getArray().map(layer => ({
                 title: layer.get('title'),
                 group: groupName, // Keep original group name for reference
                 id: layer.get('id') || '',
                 _olLayer: layer,
-                ...(layer.overlay || {}),
+                ...layer.overlay,
                 _originalGroup: groupName
-            };
-            
-            // Make sure the overlay has all necessary properties
-            if (!overlay.query) overlay.query = layer.get('query');
-            if (!overlay.icon) overlay.icon = layer.get('icon');
-            if (!overlay.description) overlay.description = layer.get('description');
-            
-            return overlay;
+            }));
         });
-    });
-    
-    // Dispatch event to notify that overlays are ready
-    console.log('Dispatching overlaysReady event...');
-    window.dispatchEvent(new CustomEvent('overlaysReady', {
-        detail: { 
-            overlays: window.overlays,
-            groups: overlayGroups
+        
+        // Dispatch event to notify that overlays are ready
+        console.log('Dispatching overlaysReady event...');
+        window.dispatchEvent(new CustomEvent('overlaysReady', {
+            detail: { 
+                overlays: window.overlays,
+                groups: overlayGroups
+            }
+        }));
+        
+        // Trigger overlay list update
+        if (window.renderOverlayList) {
+            console.log('Updating overlay list...');
+            window.renderOverlayList(window.overlays);
         }
-    }));
-    
-    // Trigger overlay list update
-    if (window.renderOverlayList) {
-        console.log('Updating overlay list...');
-        window.renderOverlayList(window.overlays);
+        
+        console.log('Overlay integration completed successfully');
+        return true;
+    } catch (error) {
+        console.error('Error in integrateOverlays:', error);
+        return false;
     }
 }
 

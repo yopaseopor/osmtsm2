@@ -196,156 +196,116 @@ $(function () {
     }
     
     // Listen for language changes
-    window.addEventListener('languageChanged', async function() {
+    window.addEventListener('languageChanged', function() {
+        console.log('Language changed, updating UI...');
+        
         // Save current scroll position
         const scrollPosition = window.scrollY || document.documentElement.scrollTop;
         
-        // Save current UI state before any changes
+        // Save current UI state
         const uiState = getUIState();
-        
-        // Store current map view and layer states
-        const mapView = window.map.getView();
-        const center = mapView.getCenter();
-        const zoom = mapView.getZoom();
-        
-        // Store current overlay states
-        const overlayStates = new Map();
-        const visibleLayers = [];
-        
-        if (window.config && window.config.layers) {
-            window.config.layers.forEach(layer => {
-                if (layer.get('type') === 'overlay') {
-                    const title = layer.get('title');
-                    if (title) {
-                        overlayStates.set(title, {
-                            visible: layer.getVisible(),
-                            opacity: layer.getOpacity()
-                        });
-                        
-                        if (layer.getVisible()) {
-                            visibleLayers.push(title);
-                        }
-                    }
-                }
-            });
-        }
         
         // Temporarily hide the menu to prevent jumping
         const $menu = $('.osmcat-menu');
         const menuHeight = $menu.outerHeight();
-        const $menuPlaceholder = $('<div>').css('height', menuHeight + 'px').css('visibility', 'hidden');
+        const $menuPlaceholder = $('<div>').css({
+            'height': menuHeight + 'px',
+            'visibility': 'hidden',
+            'pointer-events': 'none'
+        });
+        
         $menu.after($menuPlaceholder);
         
-        try {
-            // Re-initialize overlays with the new language
-            if (window.getAllOverlays) {
+        // Create a function to update the UI after overlays are loaded
+        const updateUI = () => {
+            console.log('Updating UI...');
+            
+            // Remove the old menu
+            $menu.remove();
+            
+            // Create the new menu off-screen
+            const $newMenu = $(layersControlBuild()).css({
+                'position': 'absolute',
+                'left': '-9999px',
+                'top': '0',
+                'visibility': 'hidden',
+                'opacity': '0',
+                'transition': 'opacity 0.3s ease-in-out'
+            });
+            
+            // Insert the new menu
+            $menuPlaceholder.after($newMenu);
+            
+            // Force a reflow to ensure the new menu is in the DOM
+            const newMenuHeight = $newMenu[0].offsetHeight;
+            
+            // Update the overlay list if the function exists
+            if (window.renderOverlayList && window.overlays) {
+                console.log('Rendering overlay list...');
+                window.renderOverlayList(window.overlays);
+            }
+            
+            // Restore the UI state
+            if (uiState) {
+                console.log('Restoring UI state...');
+                restoreUIState(uiState);
+            }
+            
+            // Update the placeholder height to match the new menu
+            $menuPlaceholder.css('height', newMenuHeight + 'px');
+            
+            // Show the new menu
+            requestAnimationFrame(() => {
+                $newMenu.css({
+                    'position': '',
+                    'left': '',
+                    'top': '',
+                    'visibility': '',
+                    'opacity': '1'
+                });
+                
+                // Remove the placeholder after a short delay
+                setTimeout(() => {
+                    $menuPlaceholder.remove();
+                    
+                    // Restore scroll position
+                    window.scrollTo(0, scrollPosition);
+                    
+                    console.log('UI update complete');
+                }, 100);
+            });
+        };
+        
+        // Re-initialize overlays with the new language
+        if (window.getAllOverlays) {
+            console.log('Updating overlays for new language...');
+            
+            try {
                 // Update the overlays with the new language
                 window.allOverlays = window.getAllOverlays();
                 
                 // Recreate all overlay layers
                 if (window.integrateOverlays) {
-                    // Clear existing overlays first
-                    if (window.config && window.config.layers) {
-                        window.config.layers = window.config.layers.filter(layer => 
-                            layer.get('type') !== 'overlay'
-                        );
+                    const success = window.integrateOverlays();
+                    if (success) {
+                        console.log('Overlays integrated successfully');
+                        // Update the UI after a short delay to ensure all overlays are ready
+                        setTimeout(updateUI, 100);
+                    } else {
+                        console.error('Failed to integrate overlays');
+                        updateUI(); // Still try to update the UI
                     }
-                    
-                    // Reintegrate overlays
-                    window.integrateOverlays();
-                    
-                    // Restore overlay states after a short delay
-                    setTimeout(() => {
-                        if (window.config && window.config.layers) {
-                            window.config.layers.forEach(layer => {
-                                if (layer.get('type') === 'overlay') {
-                                    const title = layer.get('title');
-                                    const state = overlayStates.get(title);
-                                    if (state) {
-                                        layer.setVisible(state.visible);
-                                        if (state.opacity !== undefined) {
-                                            layer.setOpacity(state.opacity);
-                                        }
-                                    }
-                                }
-                            });
-                        }
-                    }, 100);
+                } else {
+                    console.error('integrateOverlays function not found');
+                    updateUI(); // Still try to update the UI
                 }
-                
-                // Update the UI in a way that minimizes jumping
-                requestAnimationFrame(() => {
-                    // Remove the old menu
-                    $menu.remove();
-                    
-                    // Create the new menu off-screen
-                    const $newMenu = $(layersControlBuild()).css({
-                        position: 'absolute',
-                        left: '-9999px',
-                        top: '0',
-                        visibility: 'hidden'
-                    });
-                    
-                    // Insert the new menu
-                    $menuPlaceholder.after($newMenu);
-                    
-                    // Update the overlay list if the function exists
-                    if (window.renderOverlayList && window.overlays) {
-                        window.renderOverlayList(window.overlays);
-                    }
-                    
-                    // Restore the UI state
-                    restoreUIState(uiState);
-                    
-                    // Get the new height after all updates
-                    const newHeight = $newMenu.outerHeight();
-                    
-                    // Update the placeholder height to match the new menu
-                    $menuPlaceholder.css('height', newHeight + 'px');
-                    
-                    // Show the new menu and remove the placeholder
-                    requestAnimationFrame(() => {
-                        $newMenu.css({
-                            position: '',
-                            left: '',
-                            top: '',
-                            visibility: ''
-                        });
-                        
-                        $menuPlaceholder.remove();
-                        
-                        // Restore scroll position
-                        window.scrollTo(0, scrollPosition);
-                        
-                        // Restore map view
-                        if (center && zoom !== undefined) {
-                            mapView.animate({
-                                center: center,
-                                zoom: zoom,
-                                duration: 0
-                            });
-                        }
-                        
-                        // Trigger a map render to ensure everything is updated
-                        if (window.map) {
-                            window.map.renderSync();
-                        }
-                    });
-                });
+            } catch (error) {
+                console.error('Error updating overlays:', error);
+                updateUI(); // Still try to update the UI
             }
-        } catch (error) {
-            console.error('Error during language change:', error);
-            // Make sure to clean up even if there's an error
-            $menuPlaceholder.remove();
-            
-            // Try to restore the map view
-            if (center && zoom !== undefined) {
-                mapView.animate({
-                    center: center,
-                    zoom: zoom,
-                    duration: 0
-                });
-            }
+        } else {
+            console.error('getAllOverlays function not found');
+            updateUI(); // Still try to update the UI
         }
     });
 
