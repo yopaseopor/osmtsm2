@@ -106,20 +106,47 @@ $(function () {
     // Store the current UI state
     function getUIState() {
         const state = {
-            // Store visible layers
-            visibleLayers: window.config.layers
-                .filter(layer => layer.getVisible())
-                .map(layer => layer.get('title')),
-            // Store expanded overlay groups
-            expandedGroups: []
+            // Store visible layers by original name
+            visibleLayers: [],
+            // Store expanded overlay groups by original name
+            expandedGroups: [],
+            // Store layer visibilities by original name
+            layerVisibilities: {}
         };
+        
+        // Store layer visibilities and expanded states
+        if (window.config && window.config.layers) {
+            window.config.layers.forEach(layer => {
+                if (layer.get('type') === 'overlay') {
+                    const originalTitle = layer.get('originalTitle') || layer.get('title');
+                    if (originalTitle) {
+                        state.layerVisibilities[originalTitle] = layer.getVisible();
+                        if (layer.getVisible()) {
+                            state.visibleLayers.push(originalTitle);
+                        }
+                    }
+                }
+            });
+        }
         
         // Store which overlay groups are expanded
         $('.osmcat-menu h3').each(function() {
             const $h3 = $(this);
             const $content = $h3.next('.osmcat-content');
             if ($content.is(':visible')) {
-                state.expandedGroups.push($h3.text().trim());
+                const groupTitle = $h3.text().trim();
+                // Try to find the original group name
+                let originalName = groupTitle;
+                if (window.config && window.config.layers) {
+                    const matchingLayer = window.config.layers.find(layer => 
+                        layer.get('title') === groupTitle && 
+                        layer.get('type') === 'overlay'
+                    );
+                    if (matchingLayer) {
+                        originalName = matchingLayer.get('originalTitle') || groupTitle;
+                    }
+                }
+                state.expandedGroups.push(originalName);
             }
         });
         
@@ -130,68 +157,59 @@ $(function () {
     function restoreUIState(state) {
         if (!state) return;
         
-        // Batch layer visibility updates
-        if (state.visibleLayers) {
-            // First, collect all layer updates
-            const updates = [];
-            const layerTitles = new Map();
-            
-            // Create a map of layer titles to their translations
+        // Restore layer visibilities
+        if (state.layerVisibilities && window.config && window.config.layers) {
             window.config.layers.forEach(layer => {
-                const layerTitle = layer.get('title');
-                if (layerTitle) {
-                    layerTitles.set(layerTitle, layer);
-                    // Also store the translated version for matching
-                    const translatedTitle = window.getTranslation ? window.getTranslation(layerTitle) : layerTitle;
-                    if (translatedTitle !== layerTitle) {
-                        layerTitles.set(translatedTitle, layer);
+                if (layer.get('type') === 'overlay') {
+                    const originalTitle = layer.get('originalTitle') || layer.get('title');
+                    if (originalTitle && (originalTitle in state.layerVisibilities)) {
+                        layer.setVisible(state.layerVisibilities[originalTitle]);
                     }
                 }
-            });
-            
-            // Process each visible layer from the state
-            state.visibleLayers.forEach(visibleTitle => {
-                const layer = layerTitles.get(visibleTitle);
-                if (layer) {
-                    updates.push({ layer, visible: true });
-                } else {
-                    // Try to find by translated title
-                    const translatedTitle = window.getTranslation ? window.getTranslation(visibleTitle) : visibleTitle;
-                    const translatedLayer = layerTitles.get(translatedTitle);
-                    if (translatedLayer) {
-                        updates.push({ layer: translatedLayer, visible: true });
-                    }
-                }
-            });
-            
-            // Apply all visibility updates in a single batch
-            updates.forEach(({ layer, visible }) => {
-                layer.setVisible(visible);
             });
         }
         
-        // Restore expanded groups
+        // Restore expanded groups after a short delay to allow DOM to update
         if (state.expandedGroups && state.expandedGroups.length > 0) {
-            // Create a set of expanded group titles for faster lookup
-            const expandedGroups = new Set(state.expandedGroups);
-            
-            // Process each group header
-            $('.osmcat-menu h3').each(function() {
-                const $h3 = $(this);
-                const groupTitle = $h3.text().trim();
-                const $content = $h3.next('.osmcat-content');
-                
-                // Check if this group should be expanded
-                const shouldExpand = state.expandedGroups.some(expandedTitle => 
-                    groupTitle === expandedTitle || 
-                    groupTitle === (window.getTranslation ? window.getTranslation(expandedTitle) : expandedTitle) ||
-                    (window.getTranslation ? window.getTranslation(groupTitle) : groupTitle) === expandedTitle
-                );
-                
-                // Use direct DOM manipulation for better performance
-                $content.toggle(shouldExpand);
-                $h3.toggleClass('expanded', shouldExpand);
-            });
+            setTimeout(() => {
+                $('.osmcat-menu h3').each(function() {
+                    const $h3 = $(this);
+                    const groupTitle = $h3.text().trim();
+                    const $content = $h3.next('.osmcat-content');
+                    
+                    // Find the corresponding layer to get the original title
+                    let originalTitle = groupTitle;
+                    if (window.config && window.config.layers) {
+                        const matchingLayer = window.config.layers.find(layer => 
+                            layer.get('title') === groupTitle && 
+                            layer.get('type') === 'overlay'
+                        );
+                        if (matchingLayer) {
+                            originalTitle = matchingLayer.get('originalTitle') || groupTitle;
+                        }
+                    }
+                    
+                    // Check if this group should be expanded
+                    const shouldExpand = state.expandedGroups.some(expandedTitle => {
+                        // Check direct match
+                        if (originalTitle === expandedTitle) return true;
+                        
+                        // Check translated match
+                        const translatedExpanded = window.getTranslation ? 
+                            window.getTranslation(expandedTitle) : expandedTitle;
+                        if (groupTitle === translatedExpanded) return true;
+                        
+                        // Check reverse translation
+                        const translatedCurrent = window.getTranslation ?
+                            window.getTranslation(originalTitle) : originalTitle;
+                        return translatedCurrent === expandedTitle;
+                    });
+                    
+                    // Update visibility
+                    $content.toggle(shouldExpand);
+                    $h3.toggleClass('expanded', shouldExpand);
+                });
+            }, 50);
         }
     }
     

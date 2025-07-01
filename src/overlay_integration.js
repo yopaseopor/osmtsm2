@@ -56,21 +56,28 @@ function createOlLayer(overlay) {
 
 // Function to create an OpenLayers group for overlays
 function createOverlayGroup(title, layers) {
-    const translatedTitle = window.getTranslation ? window.getTranslation(title) : title;
+    // Ensure title is a string
+    const groupName = String(title || '');
+    
+    // Get the translated title if translation function exists
+    const translatedTitle = window.getTranslation ? window.getTranslation(groupName) : groupName;
     
     // Ensure layers is an array and create a new collection
     const layerCollection = new ol.Collection(Array.isArray(layers) ? layers : []);
     
+    // Create the group with the original title (will be updated later)
     const group = new ol.layer.Group({
-        title: translatedTitle,
+        title: groupName, // Will be updated to translated title
         type: 'overlay',
-        originalTitle: title,
         layers: layerCollection,
         visible: true
     });
     
     // Store the original title for reference
-    group.set('originalTitle', title);
+    group.set('originalTitle', groupName);
+    
+    // Store the translated title
+    group.set('translatedTitle', translatedTitle);
     
     // Set up layer references
     if (layers && layers.length) {
@@ -78,17 +85,20 @@ function createOverlayGroup(title, layers) {
             if (!layer) return;
             
             // Ensure the layer has an overlay property
-            if (!layer.overlay && layer.get('overlay')) {
-                layer.overlay = layer.get('overlay');
+            if (!layer.overlay) {
+                layer.overlay = layer.get('overlay') || {};
             }
             
             // Store the original group reference
-            if (layer.overlay) {
-                layer.overlay._originalGroup = title;
-            }
+            layer.overlay._originalGroup = groupName;
             
             // Store a reference to the group on the layer
             layer.set('parentGroup', group);
+            
+            // Ensure the layer has a reference to its overlay data
+            if (!layer.get('overlay')) {
+                layer.set('overlay', layer.overlay);
+            }
         });
     }
     
@@ -151,12 +161,13 @@ function integrateOverlays() {
             return layer;
         });
         
-        // Create the group with translated title
-        const translatedGroupName = window.getTranslation ? window.getTranslation(groupName) : groupName;
-        const group = createOverlayGroup(translatedGroupName, layers);
+        // Create the group with the original name (translation happens in createOverlayGroup)
+        const group = createOverlayGroup(groupName, layers);
         
-        // Store the original group name
+        // Store both original and translated group names
         group.set('originalGroupName', groupName);
+        const translatedGroupName = window.getTranslation ? window.getTranslation(groupName) : groupName;
+        group.set('title', translatedGroupName);
         
         // Restore previous state if available
         const prevState = layerStates.get(translatedGroupName) || layerStates.get(groupName);
@@ -167,6 +178,7 @@ function integrateOverlays() {
             }
         }
         
+        // Store in overlayGroups with original name as key
         overlayGroups[groupName] = group;
     });
     
