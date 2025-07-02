@@ -29,12 +29,13 @@ export class LanguageSelector {
             select.appendChild(option);
         });
 
-        // Create apply button
+        // Create reload icon button
         const applyButton = document.createElement('button');
         applyButton.id = 'language-apply';
         applyButton.className = 'language-apply';
-        applyButton.textContent = 'Apply';
         applyButton.title = 'Apply language and reload page';
+        applyButton.innerHTML = '&#x21bb;'; // Unicode reload symbol
+        applyButton.setAttribute('aria-label', 'Apply language and reload page');
 
         // Add elements to container
         const selectContainer = document.createElement('div');
@@ -60,11 +61,18 @@ export class LanguageSelector {
         applyButton.addEventListener('click', () => {
             const newLang = this.selectedLanguage;
             if (newLang !== getCurrentLanguage()) {
-                // Update URL with new language
-                updateLanguageInURL(newLang);
+                // Show loading state
+                this.container.classList.add('language-applying');
+                applyButton.disabled = true;
                 
-                // Force a full page reload to ensure everything is reinitialized
-                window.location.reload();
+                // Small delay to show the loading animation
+                setTimeout(() => {
+                    // Update URL with new language
+                    updateLanguageInURL(newLang);
+                    
+                    // Force a full page reload to ensure everything is reinitialized
+                    window.location.reload();
+                }, 300);
             }
         });
 
