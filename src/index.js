@@ -105,246 +105,126 @@ $(function () {
     
     // Store the current UI state
     function getUIState() {
-        try {
-            console.log('Capturing UI state...');
-            
-            const state = {
-                // Store visible layers
-                visibleLayers: [],
-                // Store expanded overlay groups
-                expandedGroups: []
-            };
-            
-            // Get visible layers
-            if (window.config && Array.isArray(window.config.layers)) {
-                state.visibleLayers = window.config.layers
-                    .filter(layer => layer && typeof layer.getVisible === 'function' && layer.getVisible())
-                    .map(layer => {
-                        try {
-                            return layer.get('title') || layer.get('name') || '';
-                        } catch (e) {
-                            console.error('Error getting layer title:', e);
-                            return '';
-                        }
-                    })
-                    .filter(title => title); // Remove empty titles
+        const state = {
+            // Store visible layers
+            visibleLayers: window.config.layers
+                .filter(layer => layer.getVisible())
+                .map(layer => layer.get('title')),
+            // Store expanded overlay groups
+            expandedGroups: []
+        };
+        
+        // Store which overlay groups are expanded
+        $('.osmcat-menu h3').each(function() {
+            const $h3 = $(this);
+            const $content = $h3.next('.osmcat-content');
+            if ($content.is(':visible')) {
+                state.expandedGroups.push($h3.text().trim());
             }
-            
-            // Store which overlay groups are expanded
-            $('.osmcat-menu h3').each(function() {
-                try {
-                    const $h3 = $(this);
-                    const $content = $h3.next('.osmcat-content');
-                    if ($content.length && $content.is(':visible')) {
-                        const title = $h3.text().trim();
-                        if (title) {
-                            state.expandedGroups.push(title);
-                        }
-                    }
-                } catch (e) {
-                    console.error('Error capturing group state:', e);
-                }
-            });
-            
-            console.log('Captured UI state:', state);
-            return state;
-            
-        } catch (error) {
-            console.error('Error in getUIState:', error);
-            return { visibleLayers: [], expandedGroups: [] };
-        }
+        });
+        
+        return state;
     }
     
     // Restore the UI state
     function restoreUIState(state) {
         if (!state) return;
         
-        console.log('Restoring UI state...');
+        // Batch layer visibility updates
+        if (state.visibleLayers) {
+            // First, collect all layer updates
+            const updates = [];
+            const layerTitles = new Map();
+            
+            // Create a map of layer titles to their translations
+            window.config.layers.forEach(layer => {
+                const layerTitle = layer.get('title');
+                if (layerTitle) {
+                    layerTitles.set(layerTitle, layer);
+                    // Also store the translated version for matching
+                    const translatedTitle = window.getTranslation ? window.getTranslation(layerTitle) : layerTitle;
+                    if (translatedTitle !== layerTitle) {
+                        layerTitles.set(translatedTitle, layer);
+                    }
+                }
+            });
+            
+            // Process each visible layer from the state
+            state.visibleLayers.forEach(visibleTitle => {
+                const layer = layerTitles.get(visibleTitle);
+                if (layer) {
+                    updates.push({ layer, visible: true });
+                } else {
+                    // Try to find by translated title
+                    const translatedTitle = window.getTranslation ? window.getTranslation(visibleTitle) : visibleTitle;
+                    const translatedLayer = layerTitles.get(translatedTitle);
+                    if (translatedLayer) {
+                        updates.push({ layer: translatedLayer, visible: true });
+                    }
+                }
+            });
+            
+            // Apply all visibility updates in a single batch
+            updates.forEach(({ layer, visible }) => {
+                layer.setVisible(visible);
+            });
+        }
         
-        try {
-            // Batch layer visibility updates
-            if (state.visibleLayers && window.config && window.config.layers) {
-                console.log('Restoring visible layers...');
-                
-                // First, collect all layer updates
-                const updates = [];
-                const layerTitles = new Map();
-                
-                // Create a map of layer titles to their translations
-                window.config.layers.forEach(layer => {
-                    if (layer && typeof layer.get === 'function') {
-                        const layerTitle = layer.get('title');
-                        if (layerTitle) {
-                            layerTitles.set(layerTitle, layer);
-                            // Also store the translated version for matching
-                            if (typeof window.getTranslation === 'function') {
-                                const translatedTitle = window.getTranslation(layerTitle);
-                                if (translatedTitle && translatedTitle !== layerTitle) {
-                                    layerTitles.set(translatedTitle, layer);
-                                }
-                            }
-                        }
-                    }
-                });
-                
-                // Process each visible layer from the state
-                state.visibleLayers.forEach(visibleTitle => {
-                    if (!visibleTitle) return;
-                    
-                    let layer = layerTitles.get(visibleTitle);
-                    
-                    // If not found directly, try with translation
-                    if (!layer && typeof window.getTranslation === 'function') {
-                        // Try to find by translated title
-                        const translatedTitle = window.getTranslation(visibleTitle);
-                        if (translatedTitle) {
-                            layer = layerTitles.get(translatedTitle);
-                        }
-                    }
-                    
-                    if (layer && typeof layer.setVisible === 'function') {
-                        updates.push({ layer, visible: true });
-                    }
-                });
-                
-                // Apply all visibility updates in a single batch
-                updates.forEach(({ layer, visible }) => {
-                    try {
-                        layer.setVisible(visible);
-                    } catch (e) {
-                        console.error('Error setting layer visibility:', e);
-                    }
-                });
-            }
+        // Restore expanded groups
+        if (state.expandedGroups && state.expandedGroups.length > 0) {
+            // Create a set of expanded group titles for faster lookup
+            const expandedGroups = new Set(state.expandedGroups);
             
-            // Restore expanded groups
-            if (state.expandedGroups && state.expandedGroups.length > 0) {
-                console.log('Restoring expanded groups...');
+            // Process each group header
+            $('.osmcat-menu h3').each(function() {
+                const $h3 = $(this);
+                const groupTitle = $h3.text().trim();
+                const $content = $h3.next('.osmcat-content');
                 
-                // Process each group header
-                $('.osmcat-menu h3').each(function() {
-                    try {
-                        const $h3 = $(this);
-                        const groupTitle = $h3.text().trim();
-                        const $content = $h3.next('.osmcat-content');
-                        
-                        if (!$content.length) return;
-                        
-                        // Check if this group should be expanded
-                        const shouldExpand = state.expandedGroups.some(expandedTitle => {
-                            if (!expandedTitle) return false;
-                            
-                            // Direct match
-                            if (groupTitle === expandedTitle) return true;
-                            
-                            // Try with translation
-                            if (typeof window.getTranslation === 'function') {
-                                // Check if expandedTitle is a translation of groupTitle
-                                const translatedGroup = window.getTranslation(groupTitle);
-                                if (translatedGroup === expandedTitle) return true;
-                                
-                                // Check if groupTitle is a translation of expandedTitle
-                                const translatedExpanded = window.getTranslation(expandedTitle);
-                                if (translatedExpanded === groupTitle) return true;
-                            }
-                            
-                            return false;
-                        });
-                        
-                        // Update visibility and class
-                        $content.toggle(shouldExpand);
-                        $h3.toggleClass('expanded', shouldExpand);
-                        
-                    } catch (e) {
-                        console.error('Error restoring group state:', e);
-                    }
-                });
-            }
-            
-            console.log('UI state restored successfully');
-            
-        } catch (error) {
-            console.error('Error in restoreUIState:', error);
+                // Check if this group should be expanded
+                const shouldExpand = state.expandedGroups.some(expandedTitle => 
+                    groupTitle === expandedTitle || 
+                    groupTitle === (window.getTranslation ? window.getTranslation(expandedTitle) : expandedTitle) ||
+                    (window.getTranslation ? window.getTranslation(groupTitle) : groupTitle) === expandedTitle
+                );
+                
+                // Use direct DOM manipulation for better performance
+                $content.toggle(shouldExpand);
+                $h3.toggleClass('expanded', shouldExpand);
+            });
         }
     }
     
     // Listen for language changes
-    window.addEventListener('languageChanged', function() {
+    window.addEventListener('languageChanged', function(event) {
+        // Get the new language from the event or default to current language
+        const newLang = event.detail?.language || (window.i18n ? window.i18n.getLanguage() : 'en');
+        
+        // Update the URL with the new language parameter
+        const url = new URL(window.location.href);
+        url.searchParams.set('lang', newLang);
+        
+        // Save any important state to localStorage if needed
         try {
-            console.log('Language changed, updating UI...');
+            const mapView = window.map.getView();
+            const center = ol.proj.toLonLat(mapView.getCenter());
+            const zoom = mapView.getZoom();
             
-            // Save current scroll position
-            const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+            const mapState = {
+                center,
+                zoom,
+                rotation: mapView.getRotation(),
+                timestamp: Date.now()
+            };
             
-            // Save current UI state
-            const uiState = getUIState();
-            
-            // Get menu element
-            const $menu = $('.osmcat-menu');
-            if ($menu.length === 0) {
-                console.error('Menu element not found');
-                return;
-            }
-            
-            // Store menu position and dimensions
-            const menuHeight = $menu.outerHeight();
-            const menuParent = $menu.parent();
-            
-            // Create a placeholder to maintain layout
-            const $menuPlaceholder = $('<div>').css({
-                height: menuHeight + 'px',
-                visibility: 'hidden',
-                width: $menu.outerWidth() + 'px'
-            });
-            
-            // Replace menu with placeholder
-            $menu.replaceWith($menuPlaceholder);
-            
-            // Update overlays with the new language
-            if (window.getAllOverlays) {
-                try {
-                    // Update the overlays with the new language
-                    window.allOverlays = window.getAllOverlays();
-                    
-                    // Recreate all overlay layers
-                    if (window.integrateOverlays) {
-                        window.integrateOverlays();
-                    }
-                    
-                    // Rebuild the menu
-                    const newMenu = layersControlBuild();
-                    if (!newMenu) {
-                        throw new Error('Failed to build menu');
-                    }
-                    
-                    // Replace placeholder with new menu
-                    $menuPlaceholder.replaceWith(newMenu);
-                    
-                    // Update the overlay list if the function exists
-                    if (window.renderOverlayList && window.overlays) {
-                        window.renderOverlayList(window.overlays);
-                    }
-                    
-                    // Restore the UI state
-                    restoreUIState(uiState);
-                    
-                    // Reattach event handlers
-                    setupLayerControls();
-                    
-                    // Restore scroll position
-                    window.scrollTo(0, scrollPosition);
-                    
-                    console.log('Language change UI update completed');
-                    
-                } catch (error) {
-                    console.error('Error during language change:', error);
-                    // Try to restore the original menu on error
-                    $menuPlaceholder.replaceWith($menu);
-                }
-            }
-        } catch (error) {
-            console.error('Error in language change handler:', error);
+            localStorage.setItem('mapState', JSON.stringify(mapState));
+            localStorage.setItem('selectedLanguage', newLang);
+        } catch (e) {
+            console.warn('Could not save map state:', e);
         }
+        
+        // Reload the page with the new language
+        window.location.href = url.toString();
     });
 
     // Initial update
