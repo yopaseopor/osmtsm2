@@ -256,8 +256,24 @@ $(function () {
         }
     }
     
-    // Call restoreAfterReload when DOM is ready
-    $(document).ready(restoreAfterReload);
+    // Initialize when DOM is ready
+    $(document).ready(function() {
+        // Restore the UI state after a short delay to ensure everything is loaded
+        setTimeout(restoreAfterReload, 100);
+        
+        // Make sure the language selector is updated with the current language
+        const currentLang = getCurrentLanguage();
+        const langSelect = document.querySelector('#language-select');
+        if (langSelect && langSelect.value !== currentLang) {
+            langSelect.value = currentLang;
+        }
+    });
+    
+    // Listen for language changes
+    window.addEventListener('languageChanged', function() {
+        // After language changes, restore the UI state
+        setTimeout(restoreAfterReload, 100);
+    });
 
     // Initial update
     updateWindowOverlays();
