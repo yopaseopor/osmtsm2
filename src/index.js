@@ -195,90 +195,75 @@ $(function () {
         }
     }
     
-    // Function to restore UI state after page reload
-    function restoreAfterReload() {
-        // Restore scroll position
-        const scrollPosition = sessionStorage.getItem('scrollPosition');
-        if (scrollPosition) {
-            setTimeout(() => {
-                window.scrollTo(0, parseInt(scrollPosition, 10));
-                sessionStorage.removeItem('scrollPosition');
-            }, 100);
-        }
+    // Listen for language changes
+    window.addEventListener('languageChanged', function() {
+        // Save current scroll position
+        const scrollPosition = window.scrollY || document.documentElement.scrollTop;
         
-        // Restore map view if available
-        const mapState = sessionStorage.getItem('mapState');
-        if (mapState && window.map) {
-            try {
-                const { center, zoom, rotation } = JSON.parse(mapState);
-                const view = window.map.getView();
-                view.setCenter(ol.proj.fromLonLat(center));
-                view.setZoom(zoom);
-                view.setRotation(rotation || 0);
-                sessionStorage.removeItem('mapState');
-            } catch (e) {
-                console.warn('Failed to restore map state:', e);
+        // Save current UI state
+        const uiState = getUIState();
+        
+        // Temporarily hide the menu to prevent jumping
+        const $menu = $('.osmcat-menu');
+        const menuHeight = $menu.outerHeight();
+        const $menuPlaceholder = $('<div>').css('height', menuHeight + 'px').css('visibility', 'hidden');
+        $menu.after($menuPlaceholder);
+        
+        // Re-initialize overlays with the new language
+        if (window.getAllOverlays) {
+            // Update the overlays with the new language
+            window.allOverlays = window.getAllOverlays();
+            
+            // Recreate all overlay layers
+            if (window.integrateOverlays) {
+                window.integrateOverlays();
             }
-        }
-        
-        // Restore visible layers
-        const visibleLayers = sessionStorage.getItem('visibleLayers');
-        if (visibleLayers && window.config && window.config.layers) {
-            try {
-                const layerTitles = new Set(JSON.parse(visibleLayers));
-                window.config.layers.forEach(layer => {
-                    if (layer.get('type') === 'overlay') {
-                        const title = layer.get('title');
-                        layer.setVisible(layerTitles.has(title));
-                    }
+            
+            // Update the UI in a way that minimizes jumping
+            requestAnimationFrame(() => {
+                // Remove the old menu
+                $menu.remove();
+                
+                // Create the new menu off-screen
+                const $newMenu = $(layersControlBuild()).css({
+                    position: 'absolute',
+                    left: '-9999px',
+                    top: '0',
+                    visibility: 'hidden'
                 });
-                sessionStorage.removeItem('visibleLayers');
-            } catch (e) {
-                console.warn('Failed to restore visible layers:', e);
-            }
-        }
-        
-        // Restore expanded groups
-        const expandedGroups = sessionStorage.getItem('expandedGroups');
-        if (expandedGroups) {
-            try {
-                const groups = new Set(JSON.parse(expandedGroups));
-                $('.osmcat-menu h3').each(function() {
-                    const $h3 = $(this);
-                    const $content = $h3.next('.osmcat-content');
-                    $content.toggle(groups.has($h3.text().trim()));
-                    $h3.toggleClass('expanded', groups.has($h3.text().trim()));
+                
+                // Insert the new menu
+                $menuPlaceholder.after($newMenu);
+                
+                // Update the overlay list if the function exists
+                if (window.renderOverlayList && window.overlays) {
+                    window.renderOverlayList(window.overlays);
+                }
+                
+                // Restore the UI state
+                restoreUIState(uiState);
+                
+                // Get the new height after all updates
+                const newHeight = $newMenu.outerHeight();
+                
+                // Update the placeholder height to match the new menu
+                $menuPlaceholder.css('height', newHeight + 'px');
+                
+                // Show the new menu and remove the placeholder
+                requestAnimationFrame(() => {
+                    $newMenu.css({
+                        position: '',
+                        left: '',
+                        top: '',
+                        visibility: ''
+                    });
+                    
+                    $menuPlaceholder.remove();
+                    
+                    // Restore scroll position
+                    window.scrollTo(0, scrollPosition);
                 });
-                sessionStorage.removeItem('expandedGroups');
-            } catch (e) {
-                console.warn('Failed to restore expanded groups:', e);
-            }
-        }
-    }
-    
-    // Initialize when DOM is ready
-    $(document).ready(function() {
-        // Restore the UI state after a short delay to ensure everything is loaded
-        setTimeout(restoreAfterReload, 100);
-        
-        // Initialize the language selector
-        const langSelectorContainer = document.querySelector('.language-selector');
-        if (langSelectorContainer && !window.languageSelector) {
-            window.languageSelector = new LanguageSelector(langSelectorContainer);
-        }
-        
-        // Update the language from URL if needed
-        const urlLang = getLanguageFromURL();
-        if (urlLang && urlLang !== getCurrentLanguage()) {
-            setLanguage(urlLang, true, false);
-        }
-    });
-    
-    // Handle browser back/forward navigation
-    window.addEventListener('popstate', function() {
-        const urlLang = getLanguageFromURL();
-        if (urlLang && urlLang !== getCurrentLanguage()) {
-            setLanguage(urlLang, false, true);
+            });
         }
     });
 

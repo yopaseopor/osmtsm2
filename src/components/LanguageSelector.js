@@ -1,4 +1,4 @@
-import { setLanguage, getCurrentLanguage, languages, getTranslation } from '../i18n/index.js';
+import { setLanguage, getCurrentLanguage, languages, updateLanguageInURL } from '../i18n/index.js';
 
 export class LanguageSelector {
     constructor(container) {
@@ -14,13 +14,11 @@ export class LanguageSelector {
         div.className = 'language-selector';
         
         // Create select element
-        const selectWrapper = document.createElement('div');
-        selectWrapper.className = 'language-select-wrapper';
-        
         const select = document.createElement('select');
         select.id = 'language-select';
         select.className = 'language-select';
         
+        // Add language options
         Object.entries(languages).forEach(([code, lang]) => {
             const option = document.createElement('option');
             option.value = code;
@@ -30,98 +28,59 @@ export class LanguageSelector {
             }
             select.appendChild(option);
         });
-        
+
         // Create apply button
         const applyButton = document.createElement('button');
-        applyButton.className = 'language-apply-button';
-        applyButton.textContent = getTranslation('apply') || 'Apply';
-        applyButton.disabled = true;
+        applyButton.id = 'language-apply';
+        applyButton.className = 'language-apply';
+        applyButton.textContent = 'Apply';
+        applyButton.title = 'Apply language and reload page';
+
+        // Add elements to container
+        const selectContainer = document.createElement('div');
+        selectContainer.className = 'language-select-container';
+        selectContainer.appendChild(select);
+        selectContainer.appendChild(applyButton);
         
-        selectWrapper.appendChild(select);
-        selectWrapper.appendChild(applyButton);
-        div.appendChild(selectWrapper);
-        
+        div.appendChild(selectContainer);
         this.container.innerHTML = '';
         this.container.appendChild(div);
-        
-        // Store references to DOM elements
-        this.selectElement = select;
-        this.applyButton = applyButton;
-    }
-
-    applyLanguageChange() {
-        const newLang = this.selectElement.value;
-        if (newLang === this.selectedLanguage) {
-            return; // No change needed
-        }
-        
-        // Save UI state before reload
-        this.saveUIState();
-        
-        // Update the language with a forced reload
-        setLanguage(newLang, true, true);
-    }
-    
-    saveUIState() {
-        // Store scroll position
-        sessionStorage.setItem('scrollPosition', window.scrollY || document.documentElement.scrollTop);
-        
-        // Store map state if available
-        if (window.map) {
-            const view = window.map.getView();
-            const center = ol.proj.toLonLat(view.getCenter());
-            const zoom = view.getZoom();
-            sessionStorage.setItem('mapState', JSON.stringify({
-                center,
-                zoom,
-                rotation: view.getRotation()
-            }));
-        }
-        
-        // Store visible layers
-        if (window.config && window.config.layers) {
-            const visibleLayers = window.config.layers
-                .filter(layer => layer.getVisible() && layer.get('type') === 'overlay')
-                .map(layer => layer.get('title'));
-            sessionStorage.setItem('visibleLayers', JSON.stringify(visibleLayers));
-        }
-        
-        // Store expanded groups
-        const expandedGroups = [];
-        $('.osmcat-menu h3').each(function() {
-            const $h3 = $(this);
-            const $content = $h3.next('.osmcat-content');
-            if ($content.is(':visible')) {
-                expandedGroups.push($h3.text().trim());
-            }
-        });
-        sessionStorage.setItem('expandedGroups', JSON.stringify(expandedGroups));
     }
 
     setupEventListeners() {
-        // Handle select change
-        this.selectElement.addEventListener('change', (e) => {
-            const newLang = e.target.value;
-            // Enable the apply button when a different language is selected
-            const isDifferentLanguage = (newLang !== this.selectedLanguage);
-            this.applyButton.disabled = !isDifferentLanguage;
-            
-            // Update the URL without reloading
-            const url = new URL(window.location);
-            url.searchParams.set('lang', newLang);
-            window.history.pushState({}, '', url);
-        });
+        const select = this.container.querySelector('#language-select');
+        const applyButton = this.container.querySelector('#language-apply');
         
+        // Update selected language when changed
+        select.addEventListener('change', (e) => {
+            this.selectedLanguage = e.target.value;
+        });
+
         // Handle apply button click
-        this.applyButton.addEventListener('click', () => {
-            this.applyLanguageChange();
+        applyButton.addEventListener('click', () => {
+            const newLang = this.selectedLanguage;
+            if (newLang !== getCurrentLanguage()) {
+                // Update URL with new language
+                updateLanguageInURL(newLang);
+                
+                // Force a full page reload to ensure everything is reinitialized
+                window.location.reload();
+            }
         });
-        
+
         // Handle Enter key on select
-        this.selectElement.addEventListener('keydown', (e) => {
+        select.addEventListener('keydown', (e) => {
             if (e.key === 'Enter') {
-                e.preventDefault();
-                this.applyLanguageChange();
+                applyButton.click();
+            }
+        });
+
+        // Update selector when URL changes
+        window.addEventListener('popstate', () => {
+            const currentLang = getCurrentLanguage();
+            if (select && select.value !== currentLang) {
+                select.value = currentLang;
+                this.selectedLanguage = currentLang;
             }
         });
     }
