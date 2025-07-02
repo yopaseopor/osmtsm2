@@ -267,12 +267,20 @@ $(function () {
         if (langSelect && langSelect.value !== currentLang) {
             langSelect.value = currentLang;
         }
+        
+        // Clear the language change flag if it was set
+        if (window.languageChangeInProgress) {
+            delete window.languageChangeInProgress;
+        }
     });
     
-    // Listen for language changes
-    window.addEventListener('languageChanged', function() {
-        // After language changes, restore the UI state
-        setTimeout(restoreAfterReload, 100);
+    // Listen for beforeunload to handle language changes
+    window.addEventListener('beforeunload', function(e) {
+        if (window.languageChangeInProgress) {
+            // Don't show the confirmation dialog for language changes
+            e.preventDefault();
+            e.returnValue = '';
+        }
     });
 
     // Initial update

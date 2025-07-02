@@ -74,28 +74,17 @@ export class LanguageSelector {
         
         // Force a hard reload with the new language
         window.location.href = url.toString();
+        window.location.reload(); // Force reload to ensure language changes take effect
     }
 
     setupEventListeners() {
         const select = this.container.querySelector('#language-select');
         select.addEventListener('change', (e) => {
             const newLang = e.target.value;
-            // First update the language in the URL without reloading
-            const url = new URL(window.location);
-            url.searchParams.set('lang', newLang);
-            window.history.pushState({}, '', url);
-            
-            // Then call updateUrlLanguage which will do the reload
+            // Update the language and reload the page
             this.updateUrlLanguage(newLang);
         });
 
-        // Update selector when URL changes
-        window.addEventListener('popstate', () => {
-            const currentLang = getCurrentLanguage();
-            const select = this.container.querySelector('#language-select');
-            if (select && select.value !== currentLang) {
-                select.value = currentLang;
-            }
-        });
+        // No need for popstate listener as we're doing full page reloads
     }
 } 
