@@ -262,23 +262,23 @@ $(function () {
         setTimeout(restoreAfterReload, 100);
         
         // Initialize the language selector
-        const langSelectorContainer = document.querySelector('.language-selector-container');
+        const langSelectorContainer = document.querySelector('.language-selector');
         if (langSelectorContainer && !window.languageSelector) {
             window.languageSelector = new LanguageSelector(langSelectorContainer);
         }
         
-        // Clear the language change flag if it was set
-        if (window.languageChangeInProgress) {
-            delete window.languageChangeInProgress;
+        // Update the language from URL if needed
+        const urlLang = getLanguageFromURL();
+        if (urlLang && urlLang !== getCurrentLanguage()) {
+            setLanguage(urlLang, true, false);
         }
     });
     
-    // Listen for beforeunload to handle language changes
-    window.addEventListener('beforeunload', function(e) {
-        if (window.languageChangeInProgress) {
-            // Don't show the confirmation dialog for language changes
-            e.preventDefault();
-            e.returnValue = '';
+    // Handle browser back/forward navigation
+    window.addEventListener('popstate', function() {
+        const urlLang = getLanguageFromURL();
+        if (urlLang && urlLang !== getCurrentLanguage()) {
+            setLanguage(urlLang, false, true);
         }
     });
 

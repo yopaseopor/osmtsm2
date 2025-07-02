@@ -55,12 +55,15 @@ export class LanguageSelector {
             return; // No change needed
         }
         
-        // Update the URL with the new language
-        const url = new URL(window.location);
-        url.searchParams.set('lang', newLang);
-        url.hash = ''; // Remove hash to prevent scrolling
+        // Save UI state before reload
+        this.saveUIState();
         
-        // Store the current UI state
+        // Update the language with a forced reload
+        setLanguage(newLang, true, true);
+    }
+    
+    saveUIState() {
+        // Store scroll position
         sessionStorage.setItem('scrollPosition', window.scrollY || document.documentElement.scrollTop);
         
         // Store map state if available
@@ -93,16 +96,20 @@ export class LanguageSelector {
             }
         });
         sessionStorage.setItem('expandedGroups', JSON.stringify(expandedGroups));
-        
-        // Reload the page with the new language
-        window.location.href = url.toString();
     }
 
     setupEventListeners() {
         // Handle select change
         this.selectElement.addEventListener('change', (e) => {
+            const newLang = e.target.value;
             // Enable the apply button when a different language is selected
-            this.applyButton.disabled = (e.target.value === this.selectedLanguage);
+            const isDifferentLanguage = (newLang !== this.selectedLanguage);
+            this.applyButton.disabled = !isDifferentLanguage;
+            
+            // Update the URL without reloading
+            const url = new URL(window.location);
+            url.searchParams.set('lang', newLang);
+            window.history.pushState({}, '', url);
         });
         
         // Handle apply button click

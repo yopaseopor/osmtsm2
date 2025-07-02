@@ -88,42 +88,43 @@ export const languages = (() => {
 
 let currentLanguage = 'en';
 
-export function setLanguage(lang, updateURL = true) {
-    if (languages[lang] && lang !== currentLanguage) {
+export function setLanguage(lang, updateURL = true, forceReload = false) {
+    if (languages[lang] && (lang !== currentLanguage || forceReload)) {
+        const previousLang = currentLanguage;
         currentLanguage = lang;
+        
         // Update the HTML lang attribute
         document.documentElement.lang = lang;
-        // Update all text elements with the new translations
-        updateTranslations();
         
         // Update URL if requested
         if (updateURL) {
             updateLanguageInURL(lang);
         }
         
-        // Force a full page reload to ensure all translations are applied
-        if (window.location.search.indexOf('lang=') === -1) {
-            // If no lang parameter in URL, add it and reload
-            const url = new URL(window.location);
-            url.searchParams.set('lang', lang);
-            window.location.href = url.toString();
-            return;
-        }
-        
         // Dispatch language changed event
         window.dispatchEvent(new CustomEvent('languageChanged', { 
             detail: { 
                 language: lang,
+                previousLanguage: previousLang,
                 reloaded: false
             } 
         }));
         
-        // Force reload if we're not already in the process of reloading
-        if (!window.languageChangeInProgress) {
-            window.languageChangeInProgress = true;
+        // Only reload if explicitly requested
+        if (forceReload) {
+            // Save the current scroll position
+            sessionStorage.setItem('scrollPosition', window.scrollY || document.documentElement.scrollTop);
+            
+            // Force a hard reload to ensure all translations are applied
             window.location.reload();
+        } else {
+            // Just update the translations without reloading
+            updateTranslations();
         }
+        
+        return true;
     }
+    return false;
 }
 
 export function getCurrentLanguage() {
