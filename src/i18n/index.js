@@ -89,29 +89,40 @@ export const languages = (() => {
 let currentLanguage = 'en';
 
 export function setLanguage(lang, updateURL = true) {
-    if (languages[lang]) {
+    if (languages[lang] && lang !== currentLanguage) {
         currentLanguage = lang;
         // Update the HTML lang attribute
         document.documentElement.lang = lang;
         // Update all text elements with the new translations
         updateTranslations();
-        // Re-initialize overlays with translations for the new language
-        if (window.getAllOverlays) {
-            window.allOverlays = window.getAllOverlays();
-            window.dispatchEvent(new CustomEvent('overlaysUpdated', { detail: window.allOverlays }));
-        }
-        // Update config i18n if it exists
-        if (window.config && window.config.i18n) {
-            Object.keys(window.config.i18n).forEach(key => {
-                window.config.i18n[key] = getTranslation(key);
-            });
-        }
+        
         // Update URL if requested
         if (updateURL) {
             updateLanguageInURL(lang);
         }
+        
+        // Force a full page reload to ensure all translations are applied
+        if (window.location.search.indexOf('lang=') === -1) {
+            // If no lang parameter in URL, add it and reload
+            const url = new URL(window.location);
+            url.searchParams.set('lang', lang);
+            window.location.href = url.toString();
+            return;
+        }
+        
         // Dispatch language changed event
-        window.dispatchEvent(new CustomEvent('languageChanged', { detail: { language: lang } }));
+        window.dispatchEvent(new CustomEvent('languageChanged', { 
+            detail: { 
+                language: lang,
+                reloaded: false
+            } 
+        }));
+        
+        // Force reload if we're not already in the process of reloading
+        if (!window.languageChangeInProgress) {
+            window.languageChangeInProgress = true;
+            window.location.reload();
+        }
     }
 }
 
@@ -159,29 +170,48 @@ function updateLanguageInURL(lang) {
     window.history.replaceState({}, '', url);
 }
 
+// Function to handle language changes from URL
+function handleLanguageFromUrl() {
+    const urlLang = getLanguageFromURL();
+    if (urlLang && languages[urlLang] && urlLang !== currentLanguage) {
+        setLanguage(urlLang, false);
+        return true;
+    }
+    return false;
+}
+
 // Handle URL changes
 window.addEventListener('popstate', () => {
-    const urlLang = getLanguageFromURL();
-    if (urlLang) {
-        setLanguage(urlLang, false);
-    }
+    handleLanguageFromUrl();
 });
+
+// Initialize with language from URL or default to browser language
+let initialized = false;
+
+// Export a function to initialize the language
+export function initializeLanguage() {
+    if (initialized) return;
+    
+    // First try to get language from URL
+    const urlLang = getLanguageFromURL();
+    if (urlLang && languages[urlLang]) {
+        setLanguage(urlLang, false);
+    } else {
+        // Try to detect browser language
+        const browserLang = navigator.language.split('-')[0];
+        if (languages[browserLang]) {
+            setLanguage(browserLang, true);
+        } else {
+            // Default to English if browser language is not supported
+            setLanguage('en', true);
+        }
+    }
+    
+    initialized = true;
+}
+
+// Initialize language when the module loads
+initializeLanguage();
 
 // Expose updateTranslations globally for overlays/layers re-render
 window.updateTranslations = updateTranslations;
-
-// Initialize translations when the DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    // First check URL for language parameter
-    const urlLang = getLanguageFromURL();
-    if (urlLang) {
-        setLanguage(urlLang, false);
-        return;
-    }
-
-    // If no URL parameter, use browser language
-    const browserLang = navigator.language.split('-')[0];
-    const supportedLangs = ['en', 'es', 'ca'];
-    const initialLang = supportedLangs.includes(browserLang) ? browserLang : 'en';
-    setLanguage(initialLang, true);
-}); 
