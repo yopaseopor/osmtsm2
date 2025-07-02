@@ -196,94 +196,63 @@ $(function () {
     }
     
     // Listen for language changes
-    window.addEventListener('languageChanged', function(event) {
+    window.addEventListener('languageChanged', function() {
         try {
-            console.log('Language changed to:', event.detail?.language);
-            
-            // Save current scroll position
-            const scrollPosition = window.scrollY || document.documentElement.scrollTop;
-            
             // Save current UI state
-            const uiState = getUIState();
+            const visibleLayers = [];
+            const expandedGroups = [];
             
-            // Get the menu and its parent
-            const $menu = $('.osmcat-menu');
-            const $menuParent = $menu.parent();
-            const menuHeight = $menu.outerHeight();
-            
-            // Create a placeholder to maintain layout
-            const $menuPlaceholder = $('<div>').css({
-                height: menuHeight + 'px',
-                visibility: 'hidden'
+            // Get currently visible layers
+            window.config.layers.forEach(layer => {
+                if (layer.getVisible() && layer.get('type') === 'overlay') {
+                    visibleLayers.push(layer.get('title'));
+                }
             });
             
-            // Insert the placeholder and hide the menu
-            $menu.after($menuPlaceholder);
-            $menu.hide();
+            // Get expanded groups
+            $('.osmcat-menu h3').each(function() {
+                const $h3 = $(this);
+                const $content = $h3.next('.osmcat-content');
+                if ($content.is(':visible')) {
+                    expandedGroups.push($h3.text().trim());
+                }
+            });
             
-            // Re-initialize overlays with the new language
-            if (window.getAllOverlays) {
-                // Update the overlays with the new language
-                console.log('Updating overlays for new language...');
-                window.allOverlays = window.getAllOverlays();
+            // Simple and safe UI update
+            setTimeout(() => {
+                // Update the menu
+                const $oldMenu = $('.osmcat-menu');
+                const $newMenu = $(layersControlBuild());
+                $oldMenu.replaceWith($newMenu);
                 
-                // Recreate all overlay layers
-                if (window.integrateOverlays) {
-                    console.log('Integrating overlays...');
-                    window.integrateOverlays();
-                } else {
-                    console.error('integrateOverlays function not found');
+                // Restore expanded groups
+                if (expandedGroups.length > 0) {
+                    $('.osmcat-menu h3').each(function() {
+                        const $h3 = $(this);
+                        const groupTitle = $h3.text().trim();
+                        if (expandedGroups.includes(groupTitle)) {
+                            $h3.next('.osmcat-content').show();
+                        }
+                    });
                 }
                 
-                // Update the UI in a way that minimizes jumping
-                requestAnimationFrame(() => {
-                    try {
-                        // Remove the old menu
-                        $menu.remove();
-                        
-                        // Create the new menu
-                        console.log('Rebuilding menu...');
-                        const newMenuHTML = layersControlBuild();
-                        if (!newMenuHTML) {
-                            throw new Error('Failed to build new menu');
-                        }
-                        
-                        const $newMenu = $(newMenuHTML);
-                        
-                        // Insert the new menu
-                        $menuPlaceholder.after($newMenu);
-                        
-                        // Update the overlay list if the function exists
-                        if (window.renderOverlayList && window.overlays) {
-                            console.log('Rendering overlay list...');
-                            window.renderOverlayList(window.overlays);
-                        }
-                        
-                        // Restore the UI state
-                        if (uiState) {
-                            console.log('Restoring UI state...');
-                            restoreUIState(uiState);
-                        }
-                        
-                        // Remove the placeholder
-                        $menuPlaceholder.remove();
-                        
-                        // Restore scroll position
-                        window.scrollTo(0, scrollPosition);
-                        
-                        console.log('Language change completed successfully');
-                        
-                    } catch (error) {
-                        console.error('Error during UI update:', error);
-                        // Try to recover by reloading the page
-                        window.location.reload();
+                // Restore layer visibility
+                window.config.layers.forEach(layer => {
+                    if (layer.get('type') === 'overlay') {
+                        layer.setVisible(visibleLayers.includes(layer.get('title')));
                     }
                 });
-            }
+                
+                // Update overlay list if available
+                if (window.renderOverlayList && window.overlays) {
+                    window.renderOverlayList(window.overlays);
+                }
+            }, 0);
+            
         } catch (error) {
-            console.error('Error in language change handler:', error);
-            // If something goes wrong, reload the page as a fallback
-            window.location.reload();
+            console.error('Error during language change:', error);
+            // If something goes wrong, at least try to rebuild the menu
+            $('.osmcat-menu').replaceWith(layersControlBuild());
         }
     });
 
