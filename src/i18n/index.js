@@ -88,92 +88,30 @@ export const languages = (() => {
 
 let currentLanguage = 'en';
 
-export function setLanguage(lang, updateURL = true, skipReload = false) {
-    if (languages[lang] && lang !== currentLanguage) {
-        // Save the current map view state before changing language
-        if (window.map && window.ol) {
-            try {
-                const mapView = window.map.getView();
-                const center = window.ol.proj.toLonLat(mapView.getCenter());
-                const zoom = mapView.getZoom();
-                
-                const mapState = {
-                    center,
-                    zoom,
-                    rotation: mapView.getRotation(),
-                    timestamp: Date.now()
-                };
-                
-                // Save to sessionStorage (cleared when tab is closed)
-                sessionStorage.setItem('mapState', JSON.stringify(mapState));
-                
-                // Save visible layers
-                if (window.config && window.config.layers) {
-                    const visibleLayers = [];
-                    window.config.layers.forEach(layer => {
-                        if (layer.getVisible && layer.getVisible()) {
-                            visibleLayers.push(layer.get('title'));
-                        }
-                    });
-                    sessionStorage.setItem('visibleLayers', JSON.stringify(visibleLayers));
-                }
-                
-                // Save expanded overlay groups
-                const expandedGroups = [];
-                document.querySelectorAll('.osmcat-menu h3').forEach(h3 => {
-                    const content = h3.nextElementSibling;
-                    if (content && content.classList.contains('osmcat-content') && content.style.display !== 'none') {
-                        expandedGroups.push(h3.textContent.trim());
-                    }
-                });
-                sessionStorage.setItem('expandedGroups', JSON.stringify(expandedGroups));
-                
-            } catch (e) {
-                console.warn('Could not save map state:', e);
-            }
-        }
-        
-        // Update the current language
+export function setLanguage(lang, updateURL = true) {
+    if (languages[lang]) {
         currentLanguage = lang;
-        
-        // If skipReload is false, we'll do a full page reload
-        if (!skipReload) {
-            // Update the URL with the new language
-            const url = new URL(window.location.href);
-            url.searchParams.set('lang', lang);
-            
-            // Add a small delay to ensure the state is saved before reload
-            setTimeout(() => {
-                window.location.href = url.toString();
-            }, 50);
-            return;
-        }
-        
-        // If we're not reloading, update the UI directly (for initial page load)
+        // Update the HTML lang attribute
         document.documentElement.lang = lang;
+        // Update all text elements with the new translations
         updateTranslations();
-        
+        // Re-initialize overlays with translations for the new language
         if (window.getAllOverlays) {
             window.allOverlays = window.getAllOverlays();
             window.dispatchEvent(new CustomEvent('overlaysUpdated', { detail: window.allOverlays }));
         }
-        
+        // Update config i18n if it exists
         if (window.config && window.config.i18n) {
             Object.keys(window.config.i18n).forEach(key => {
                 window.config.i18n[key] = getTranslation(key);
             });
         }
-        
+        // Update URL if requested
         if (updateURL) {
             updateLanguageInURL(lang);
         }
-        
-        window.dispatchEvent(new CustomEvent('languageChanged', { 
-            detail: { 
-                language: lang,
-                skipReload: true
-            } 
-        }));
+        // Dispatch language changed event
+        window.dispatchEvent(new CustomEvent('languageChanged', { detail: { language: lang } }));
     }
 }
 

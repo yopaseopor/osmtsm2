@@ -195,37 +195,69 @@ $(function () {
         }
     }
     
-    // Listen for language changes
-    window.addEventListener('languageChanged', function(event) {
-        // Get the new language from the event or default to current language
-        const newLang = event.detail?.language || (window.i18n ? window.i18n.getLanguage() : 'en');
-        
-        // Update the URL with the new language parameter
-        const url = new URL(window.location.href);
-        url.searchParams.set('lang', newLang);
-        
-        // Save any important state to localStorage if needed
-        try {
-            const mapView = window.map.getView();
-            const center = ol.proj.toLonLat(mapView.getCenter());
-            const zoom = mapView.getZoom();
-            
-            const mapState = {
-                center,
-                zoom,
-                rotation: mapView.getRotation(),
-                timestamp: Date.now()
-            };
-            
-            localStorage.setItem('mapState', JSON.stringify(mapState));
-            localStorage.setItem('selectedLanguage', newLang);
-        } catch (e) {
-            console.warn('Could not save map state:', e);
+    // Function to restore UI state after page reload
+    function restoreAfterReload() {
+        // Restore scroll position
+        const scrollPosition = sessionStorage.getItem('scrollPosition');
+        if (scrollPosition) {
+            setTimeout(() => {
+                window.scrollTo(0, parseInt(scrollPosition, 10));
+                sessionStorage.removeItem('scrollPosition');
+            }, 100);
         }
         
-        // Reload the page with the new language
-        window.location.href = url.toString();
-    });
+        // Restore map view if available
+        const mapState = sessionStorage.getItem('mapState');
+        if (mapState && window.map) {
+            try {
+                const { center, zoom, rotation } = JSON.parse(mapState);
+                const view = window.map.getView();
+                view.setCenter(ol.proj.fromLonLat(center));
+                view.setZoom(zoom);
+                view.setRotation(rotation || 0);
+                sessionStorage.removeItem('mapState');
+            } catch (e) {
+                console.warn('Failed to restore map state:', e);
+            }
+        }
+        
+        // Restore visible layers
+        const visibleLayers = sessionStorage.getItem('visibleLayers');
+        if (visibleLayers && window.config && window.config.layers) {
+            try {
+                const layerTitles = new Set(JSON.parse(visibleLayers));
+                window.config.layers.forEach(layer => {
+                    if (layer.get('type') === 'overlay') {
+                        const title = layer.get('title');
+                        layer.setVisible(layerTitles.has(title));
+                    }
+                });
+                sessionStorage.removeItem('visibleLayers');
+            } catch (e) {
+                console.warn('Failed to restore visible layers:', e);
+            }
+        }
+        
+        // Restore expanded groups
+        const expandedGroups = sessionStorage.getItem('expandedGroups');
+        if (expandedGroups) {
+            try {
+                const groups = new Set(JSON.parse(expandedGroups));
+                $('.osmcat-menu h3').each(function() {
+                    const $h3 = $(this);
+                    const $content = $h3.next('.osmcat-content');
+                    $content.toggle(groups.has($h3.text().trim()));
+                    $h3.toggleClass('expanded', groups.has($h3.text().trim()));
+                });
+                sessionStorage.removeItem('expandedGroups');
+            } catch (e) {
+                console.warn('Failed to restore expanded groups:', e);
+            }
+        }
+    }
+    
+    // Call restoreAfterReload when DOM is ready
+    $(document).ready(restoreAfterReload);
 
     // Initial update
     updateWindowOverlays();

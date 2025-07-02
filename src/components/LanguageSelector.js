@@ -30,19 +30,52 @@ export class LanguageSelector {
         this.container.appendChild(div);
     }
 
+    updateUrlLanguage(lang) {
+        const url = new URL(window.location);
+        url.searchParams.set('lang', lang);
+        // Remove the hash if present to avoid scrolling to it after reload
+        url.hash = '';
+        // Store scroll position in sessionStorage before reload
+        sessionStorage.setItem('scrollPosition', window.scrollY || document.documentElement.scrollTop);
+        // Store the current map view state if available
+        if (window.map) {
+            const view = window.map.getView();
+            const center = ol.proj.toLonLat(view.getCenter());
+            const zoom = view.getZoom();
+            sessionStorage.setItem('mapState', JSON.stringify({
+                center,
+                zoom,
+                rotation: view.getRotation()
+            }));
+        }
+        // Store visible layers
+        if (window.config && window.config.layers) {
+            const visibleLayers = window.config.layers
+                .filter(layer => layer.getVisible() && layer.get('type') === 'overlay')
+                .map(layer => layer.get('title'));
+            sessionStorage.setItem('visibleLayers', JSON.stringify(visibleLayers));
+        }
+        // Store expanded groups
+        const expandedGroups = [];
+        $('.osmcat-menu h3').each(function() {
+            const $h3 = $(this);
+            const $content = $h3.next('.osmcat-content');
+            if ($content.is(':visible')) {
+                expandedGroups.push($h3.text().trim());
+            }
+        });
+        sessionStorage.setItem('expandedGroups', JSON.stringify(expandedGroups));
+        
+        // Reload the page with the new language
+        window.location.href = url.toString();
+    }
+
     setupEventListeners() {
         const select = this.container.querySelector('#language-select');
         select.addEventListener('change', (e) => {
-            setLanguage(e.target.value, true);
+            this.updateUrlLanguage(e.target.value);
         });
 
-        // Update selector when URL changes
-        window.addEventListener('popstate', () => {
-            const currentLang = getCurrentLanguage();
-            const select = this.container.querySelector('#language-select');
-            if (select && select.value !== currentLang) {
-                select.value = currentLang;
-            }
-        });
+        // No need for popstate listener as we're doing full page reloads
     }
 } 
