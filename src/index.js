@@ -196,74 +196,94 @@ $(function () {
     }
     
     // Listen for language changes
-    window.addEventListener('languageChanged', function() {
-        // Save current scroll position
-        const scrollPosition = window.scrollY || document.documentElement.scrollTop;
-        
-        // Save current UI state
-        const uiState = getUIState();
-        
-        // Temporarily hide the menu to prevent jumping
-        const $menu = $('.osmcat-menu');
-        const menuHeight = $menu.outerHeight();
-        const $menuPlaceholder = $('<div>').css('height', menuHeight + 'px').css('visibility', 'hidden');
-        $menu.after($menuPlaceholder);
-        
-        // Re-initialize overlays with the new language
-        if (window.getAllOverlays) {
-            // Update the overlays with the new language
-            window.allOverlays = window.getAllOverlays();
+    window.addEventListener('languageChanged', function(event) {
+        try {
+            console.log('Language changed to:', event.detail?.language);
             
-            // Recreate all overlay layers
-            if (window.integrateOverlays) {
-                window.integrateOverlays();
-            }
+            // Save current scroll position
+            const scrollPosition = window.scrollY || document.documentElement.scrollTop;
             
-            // Update the UI in a way that minimizes jumping
-            requestAnimationFrame(() => {
-                // Remove the old menu
-                $menu.remove();
+            // Save current UI state
+            const uiState = getUIState();
+            
+            // Get the menu and its parent
+            const $menu = $('.osmcat-menu');
+            const $menuParent = $menu.parent();
+            const menuHeight = $menu.outerHeight();
+            
+            // Create a placeholder to maintain layout
+            const $menuPlaceholder = $('<div>').css({
+                height: menuHeight + 'px',
+                visibility: 'hidden'
+            });
+            
+            // Insert the placeholder and hide the menu
+            $menu.after($menuPlaceholder);
+            $menu.hide();
+            
+            // Re-initialize overlays with the new language
+            if (window.getAllOverlays) {
+                // Update the overlays with the new language
+                console.log('Updating overlays for new language...');
+                window.allOverlays = window.getAllOverlays();
                 
-                // Create the new menu off-screen
-                const $newMenu = $(layersControlBuild()).css({
-                    position: 'absolute',
-                    left: '-9999px',
-                    top: '0',
-                    visibility: 'hidden'
-                });
-                
-                // Insert the new menu
-                $menuPlaceholder.after($newMenu);
-                
-                // Update the overlay list if the function exists
-                if (window.renderOverlayList && window.overlays) {
-                    window.renderOverlayList(window.overlays);
+                // Recreate all overlay layers
+                if (window.integrateOverlays) {
+                    console.log('Integrating overlays...');
+                    window.integrateOverlays();
+                } else {
+                    console.error('integrateOverlays function not found');
                 }
                 
-                // Restore the UI state
-                restoreUIState(uiState);
-                
-                // Get the new height after all updates
-                const newHeight = $newMenu.outerHeight();
-                
-                // Update the placeholder height to match the new menu
-                $menuPlaceholder.css('height', newHeight + 'px');
-                
-                // Show the new menu and remove the placeholder
+                // Update the UI in a way that minimizes jumping
                 requestAnimationFrame(() => {
-                    $newMenu.css({
-                        position: '',
-                        left: '',
-                        top: '',
-                        visibility: ''
-                    });
-                    
-                    $menuPlaceholder.remove();
-                    
-                    // Restore scroll position
-                    window.scrollTo(0, scrollPosition);
+                    try {
+                        // Remove the old menu
+                        $menu.remove();
+                        
+                        // Create the new menu
+                        console.log('Rebuilding menu...');
+                        const newMenuHTML = layersControlBuild();
+                        if (!newMenuHTML) {
+                            throw new Error('Failed to build new menu');
+                        }
+                        
+                        const $newMenu = $(newMenuHTML);
+                        
+                        // Insert the new menu
+                        $menuPlaceholder.after($newMenu);
+                        
+                        // Update the overlay list if the function exists
+                        if (window.renderOverlayList && window.overlays) {
+                            console.log('Rendering overlay list...');
+                            window.renderOverlayList(window.overlays);
+                        }
+                        
+                        // Restore the UI state
+                        if (uiState) {
+                            console.log('Restoring UI state...');
+                            restoreUIState(uiState);
+                        }
+                        
+                        // Remove the placeholder
+                        $menuPlaceholder.remove();
+                        
+                        // Restore scroll position
+                        window.scrollTo(0, scrollPosition);
+                        
+                        console.log('Language change completed successfully');
+                        
+                    } catch (error) {
+                        console.error('Error during UI update:', error);
+                        // Try to recover by reloading the page
+                        window.location.reload();
+                    }
                 });
-            });
+            }
+        } catch (error) {
+            console.error('Error in language change handler:', error);
+            // If something goes wrong, reload the page as a fallback
+            window.location.reload();
         }
     });
 
