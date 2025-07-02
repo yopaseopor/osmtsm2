@@ -1,19 +1,25 @@
-import { setLanguage, getCurrentLanguage, languages } from '../i18n/index.js';
+import { setLanguage, getCurrentLanguage, languages, getTranslation } from '../i18n/index.js';
 
 export class LanguageSelector {
     constructor(container) {
         this.container = container;
+        this.selectedLanguage = getCurrentLanguage();
         this.render();
         this.setupEventListeners();
     }
 
     render() {
-        const currentLang = getCurrentLanguage();
+        const currentLang = this.selectedLanguage;
         const div = document.createElement('div');
         div.className = 'language-selector';
         
+        // Create select element
+        const selectWrapper = document.createElement('div');
+        selectWrapper.className = 'language-select-wrapper';
+        
         const select = document.createElement('select');
         select.id = 'language-select';
+        select.className = 'language-select';
         
         Object.entries(languages).forEach(([code, lang]) => {
             const option = document.createElement('option');
@@ -24,24 +30,40 @@ export class LanguageSelector {
             }
             select.appendChild(option);
         });
-
-        div.appendChild(select);
+        
+        // Create apply button
+        const applyButton = document.createElement('button');
+        applyButton.className = 'language-apply-button';
+        applyButton.textContent = getTranslation('apply') || 'Apply';
+        applyButton.disabled = true;
+        
+        selectWrapper.appendChild(select);
+        selectWrapper.appendChild(applyButton);
+        div.appendChild(selectWrapper);
+        
         this.container.innerHTML = '';
         this.container.appendChild(div);
+        
+        // Store references to DOM elements
+        this.selectElement = select;
+        this.applyButton = applyButton;
     }
 
-    updateUrlLanguage(lang) {
-        // First update the language in the URL without reloading
+    applyLanguageChange() {
+        const newLang = this.selectElement.value;
+        if (newLang === this.selectedLanguage) {
+            return; // No change needed
+        }
+        
+        // Update the URL with the new language
         const url = new URL(window.location);
-        url.searchParams.set('lang', lang);
-        // Remove the hash if present to avoid scrolling to it after reload
-        url.hash = '';
+        url.searchParams.set('lang', newLang);
+        url.hash = ''; // Remove hash to prevent scrolling
         
         // Store the current UI state
-        // Store scroll position in sessionStorage before reload
         sessionStorage.setItem('scrollPosition', window.scrollY || document.documentElement.scrollTop);
         
-        // Store the current map view state if available
+        // Store map state if available
         if (window.map) {
             const view = window.map.getView();
             const center = ol.proj.toLonLat(view.getCenter());
@@ -72,19 +94,28 @@ export class LanguageSelector {
         });
         sessionStorage.setItem('expandedGroups', JSON.stringify(expandedGroups));
         
-        // Force a hard reload with the new language
+        // Reload the page with the new language
         window.location.href = url.toString();
-        window.location.reload(); // Force reload to ensure language changes take effect
     }
 
     setupEventListeners() {
-        const select = this.container.querySelector('#language-select');
-        select.addEventListener('change', (e) => {
-            const newLang = e.target.value;
-            // Update the language and reload the page
-            this.updateUrlLanguage(newLang);
+        // Handle select change
+        this.selectElement.addEventListener('change', (e) => {
+            // Enable the apply button when a different language is selected
+            this.applyButton.disabled = (e.target.value === this.selectedLanguage);
         });
-
-        // No need for popstate listener as we're doing full page reloads
+        
+        // Handle apply button click
+        this.applyButton.addEventListener('click', () => {
+            this.applyLanguageChange();
+        });
+        
+        // Handle Enter key on select
+        this.selectElement.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                this.applyLanguageChange();
+            }
+        });
     }
 } 

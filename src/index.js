@@ -261,11 +261,10 @@ $(function () {
         // Restore the UI state after a short delay to ensure everything is loaded
         setTimeout(restoreAfterReload, 100);
         
-        // Make sure the language selector is updated with the current language
-        const currentLang = getCurrentLanguage();
-        const langSelect = document.querySelector('#language-select');
-        if (langSelect && langSelect.value !== currentLang) {
-            langSelect.value = currentLang;
+        // Initialize the language selector
+        const langSelectorContainer = document.querySelector('.language-selector-container');
+        if (langSelectorContainer && !window.languageSelector) {
+            window.languageSelector = new LanguageSelector(langSelectorContainer);
         }
         
         // Clear the language change flag if it was set
