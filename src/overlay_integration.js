@@ -7,7 +7,11 @@ function createOlLayer(overlay) {
     const vectorSource = new ol.source.Vector({
         format: new ol.format.GeoJSON(),
         loader: function(extent, resolution, projection) {
-            loading.show();
+            // Access the loading object from the global scope
+            if (window.loading) {
+                window.loading.show();
+            }
+            
             const me = this;
             const epsg4326Extent = ol.proj.transformExtent(extent, projection, 'EPSG:4326');
             const bbox = [epsg4326Extent[1], epsg4326Extent[0], epsg4326Extent[3], epsg4326Extent[2]].join(',');
@@ -24,7 +28,9 @@ function createOlLayer(overlay) {
                     return response.json();
                 })
                 .then(data => {
-                    loading.hide();
+                    if (window.loading) {
+                        window.loading.hide();
+                    }
                     console.log('Received data for ' + overlay.title);
                     if (!data || !data.elements) {
                         console.warn('No elements found in response for ' + overlay.title);
@@ -38,10 +44,21 @@ function createOlLayer(overlay) {
                     vectorSource.addFeatures(features);
                 })
                 .catch(error => {
-                    loading.hide();
+                    if (window.loading) {
+                        window.loading.hide();
+                    }
                     console.error('Error loading overlay data for ' + overlay.title + ':', error);
-                    me.removeLoadedExtent(extent);
-                    layer.setVisible(false);
+                    
+                    // Safely handle the error without breaking the application
+                    try {
+                        if (me && typeof me.removeLoadedExtent === 'function') {
+                            me.removeLoadedExtent(extent);
+                        }
+                        // The layer visibility is managed by the parent component,
+                        // so we don't need to set it here
+                    } catch (e) {
+                        console.warn('Error during cleanup:', e);
+                    }
                 });
         },
         strategy: ol.loadingstrategy.bbox
