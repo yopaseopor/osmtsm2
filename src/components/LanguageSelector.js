@@ -37,12 +37,15 @@ export class LanguageSelector {
         applyButton.innerHTML = '&#x21bb;'; // Unicode reload symbol
         applyButton.setAttribute('aria-label', 'Apply language and reload page');
 
-        // Add elements to container
+        // Create a wrapper for the select and button
         const selectContainer = document.createElement('div');
         selectContainer.className = 'language-select-container';
-        selectContainer.appendChild(select);
-        selectContainer.appendChild(applyButton);
         
+        // Add button first, then select
+        selectContainer.appendChild(applyButton);
+        selectContainer.appendChild(select);
+        
+        // Add elements to the container
         div.appendChild(selectContainer);
         this.container.innerHTML = '';
         this.container.appendChild(div);
