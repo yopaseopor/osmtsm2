@@ -407,26 +407,60 @@ $(function () {
 	var loading = {
 		init: function () {
 			this.count = 0;
-			this.spinner = $('<div>').addClass('ol-control osmcat-loading')
-				.append($('<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>'))
-				.append($('<div class="loading-message">').text(window.config.i18n.loading || 'Loading...'));
-			$('#map').append(this.spinner);
+			// Create spinner with proper structure
+			this.spinner = $([
+				'<div class="ol-control osmcat-loading">',
+				'  <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>',
+				'  <div class="loading-message">', (window.config.i18n && window.config.i18n.loading) || 'Loading...', '</div>',
+				'</div>'
+			].join(''));
+			
+			// Add to body to ensure it's not affected by parent elements
+			$('body').append(this.spinner);
 		},
 		show: function () {
 			// Update the loading message in case language changed
-			this.spinner.find('.loading-message').text(window.config.i18n.loading || 'Loading...');
-			this.spinner.show();
+			if (window.config.i18n && window.config.i18n.loading) {
+				this.spinner.find('.loading-message').text(window.config.i18n.loading);
+			}
+			
+			// Force show the spinner
+			this.spinner.addClass('visible').css({
+				display: 'flex',
+				top: '50%',
+				left: '50%',
+				transform: 'translate(-50%, -50%)'
+			});
+			
+			// Bring to front
+			this.spinner.css('z-index', '10000');
+			
 			++this.count;
+			console.log('Loading spinner shown. Active requests:', this.count);
 		},
 		hide: function () {
-			--this.count;
-			if (this.count < 1) {
-				this.spinner.hide();
+			if (this.count > 0) {
+				--this.count;
+			}
+			
+			console.log('Loading spinner hide requested. Remaining requests:', this.count);
+			
+			if (this.count <= 0) {
 				this.count = 0;
+				this.spinner.removeClass('visible');
+				setTimeout(() => {
+					if (this.count === 0) {
+						this.spinner.css('display', 'none');
+					}
+				}, 300); // Match the CSS transition duration
 			}
 		}
 	};
-	loading.init();
+	
+	// Initialize the loading spinner
+	$(document).ready(function() {
+		loading.init();
+	});
 
 	var overlaysTemp = {};
 	$.each(config.overlays, function (index, overlay) {
