@@ -403,26 +403,26 @@ $(function () {
 	$('#map').empty(); // Remove Javascript required message
 	var baseLayerIndex = 0;
 	
-	//Object to manage the spinner layer
-	var loading = {
-		init: function () {
-			this.count = 0;
-			this.spinner = $('<div>').addClass('ol-control osmcat-loading').html('<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>');
-			$('#map').append(this.spinner);
-		},
-		show: function () {
-			this.spinner.show();
-			++this.count;
-		},
-		hide: function () {
-			--this.count;
-			if (this.count < 1) {
-				this.spinner.hide();
-				this.count = 0;
-			}
-		}
-	};
-	loading.init();
+	// Use the same loading implementation as in router.js
+	const loading = {
+        init: function () {
+            this.count = 0;
+            this.spinner = $('<div>').addClass('ol-control osmcat-loading').html('<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>');
+            $('#map').append(this.spinner);
+        },
+        show: function () {
+            this.spinner.show();
+            ++this.count;
+        },
+        hide: function () {
+            --this.count;
+            if (this.count < 1) {
+                this.spinner.hide();
+                this.count = 0;
+            }
+        }
+    };
+    loading.init();
 
 	var overlaysTemp = {};
 	$.each(config.overlays, function (index, overlay) {
