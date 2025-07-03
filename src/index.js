@@ -403,133 +403,101 @@ $(function () {
 	$('#map').empty(); // Remove Javascript required message
 	var baseLayerIndex = 0;
 	
-	//Object to manage the spinner layer
-	var loading = {
+	// Object to manage the spinner layer
+	window.loading = {
 		init: function () {
 			console.log('Initializing loading spinner...');
 			this.count = 0;
-			
-			// Remove any existing spinner first
+			// Remove any existing spinner
 			$('.osmcat-loading').remove();
 			
 			// Create spinner with proper structure
-			const loadingText = (window.config.i18n && window.config.i18n.loading) || 'Loading...';
-			console.log('Loading text:', loadingText);
-			
-			// Create the spinner with more explicit styling
 			this.spinner = $([
-				'<div class="ol-control osmcat-loading" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); display: none; z-index: 999999; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.25); text-align: center;">',
-				'  <i class="fa fa-spinner fa-pulse fa-3x fa-fw" style="color: #3498db; margin-bottom: 15px; display: block;"></i>',
-				'  <div class="loading-message" style="font-size: 16px; font-weight: 600; color: #2c3e50; font-family: Arial, sans-serif;">', loadingText, '</div>',
+				'<div class="ol-control osmcat-loading">',
+				'  <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>',
+				'  <div class="loading-message">', (window.config.i18n && window.config.i18n.loading) || 'Loading...', '</div>',
 				'</div>'
 			].join(''));
 			
 			// Add to body to ensure it's not affected by parent elements
 			$('body').append(this.spinner);
-			console.log('Spinner element created and appended to body');
-			console.log('Spinner HTML:', this.spinner[0].outerHTML);
+			console.log('Loading spinner initialized');
 			
-			// Debug: Check if Font Awesome is loaded
-			console.log('Font Awesome loaded:', !!window.FontAwesome);
-			console.log('FA Spinner exists:', $('.fa-spinner').length > 0);
+			// Ensure spinner is hidden by default
+			this.spinner.hide();
 		},
+		
 		show: function () {
-			console.log('show() called');
-			
-			// Ensure spinner exists - recreate if needed
-			if (!this.spinner || !this.spinner.length) {
-				console.warn('Spinner element not found, reinitializing...');
-				this.init();
-			}
-			
 			try {
+				if (!this.spinner || !this.spinner.length) {
+					console.warn('Loading spinner element not found, reinitializing...');
+					this.init();
+				}
+				
 				// Update the loading message in case language changed
-				const loadingText = (window.config.i18n && window.config.i18n.loading) || 'Loading...';
-				this.spinner.find('.loading-message').text(loadingText);
+				if (window.config.i18n && window.config.i18n.loading) {
+					this.spinner.find('.loading-message').text(window.config.i18n.loading);
+				}
 				
-				// Force show the spinner with inline styles to ensure they take effect
-				console.log('Making spinner visible...');
-				this.spinner
-					.css({
-						display: 'block',
-						position: 'fixed',
-						top: '50%',
-						left: '50%',
-						transform: 'translate(-50%, -50%)',
-						'z-index': '999999',
-						'background-color': 'white',
-						'border-radius': '8px',
-						'padding': '30px',
-						'box-shadow': '0 4px 20px rgba(0, 0, 0, 0.25)',
-						'text-align': 'center',
-						'min-width': '180px',
-						'min-height': '150px'
-					})
-					.addClass('visible');
-				
-				// Force a reflow to ensure the browser applies the styles
-				this.spinner[0].offsetHeight;
-				
-				console.log('Spinner visibility:', this.spinner.is(':visible') ? 'visible' : 'hidden');
-				console.log('Spinner computed styles:', window.getComputedStyle(this.spinner[0]));
+				// Show and position the spinner
+				this.spinner.css({
+					display: 'flex',
+					top: '50%',
+					left: '50%',
+					transform: 'translate(-50%, -50%)',
+					'z-index': '100000'
+				}).addClass('visible');
 				
 				++this.count;
 				console.log('Loading spinner shown. Active requests:', this.count);
 			} catch (e) {
-				console.error('Error showing spinner:', e);
+				console.error('Error showing loading spinner:', e);
 			}
 		},
+		
 		hide: function () {
-			console.log('hide() called');
-			
-			if (!this.spinner || !this.spinner.length) {
-				console.error('Spinner element not found during hide!');
-				return;
-			}
-			
-			if (this.count > 0) {
-				--this.count;
-			}
-			
-			console.log('Loading spinner hide requested. Remaining requests:', this.count);
-			
-			if (this.count <= 0) {
-				this.count = 0;
-				console.log('Hiding spinner...');
-				this.spinner.removeClass('visible');
-				setTimeout(() => {
-					if (this.count === 0) {
-						this.spinner.css('display', 'none');
-						console.log('Spinner hidden');
-					}
-				}, 300); // Match the CSS transition duration
+			try {
+				if (this.count > 0) {
+					--this.count;
+				}
+				
+				console.log('Loading spinner hide requested. Remaining requests:', this.count);
+				
+				if (this.count <= 0 && this.spinner) {
+					this.count = 0;
+					this.spinner.removeClass('visible');
+					setTimeout(() => {
+						if (this.count === 0 && this.spinner) {
+							this.spinner.hide();
+						}
+					}, 300); // Match the CSS transition duration
+				}
+			} catch (e) {
+				console.error('Error hiding loading spinner:', e);
 			}
 		}
 	};
 	
-	// Initialize the loading spinner and test buttons
-	$(document).ready(function() {
-		loading.init();
+	// Initialize the loading spinner immediately when the script loads
+	console.log('Setting up loading spinner...');
+	if (window.loading && typeof window.loading.init === 'function') {
+		window.loading.init();
 		
-		// Add test button handlers
-		$('#test-show-spinner').on('click', function() {
-			console.log('Test: Showing spinner');
-			loading.show();
-			
-			// Auto-hide after 3 seconds for testing
-			setTimeout(function() {
-				console.log('Auto-hiding spinner after test');
-				loading.hide();
-			}, 3000);
-		});
-		
-		$('#test-hide-spinner').on('click', function() {
-			console.log('Test: Hiding spinner');
-			loading.hide();
-		});
-		
-		console.log('Test buttons initialized');
-	});
+		// Quick test of the spinner
+		setTimeout(function() {
+			console.log('Testing loading spinner...');
+			if (window.loading && typeof window.loading.show === 'function') {
+				window.loading.show();
+				setTimeout(function() {
+					if (window.loading && typeof window.loading.hide === 'function') {
+						window.loading.hide();
+					}
+				}, 2000);
+			}
+		}, 1000);
+	} else {
+		console.error('Loading spinner not properly defined');
+	}
 
 	var overlaysTemp = {};
 	$.each(config.overlays, function (index, overlay) {
