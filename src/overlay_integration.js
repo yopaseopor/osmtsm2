@@ -7,6 +7,9 @@ function createOlLayer(overlay) {
     const vectorSource = new ol.source.Vector({
         format: new ol.format.GeoJSON(),
         loader: function(extent, resolution, projection) {
+            // Show loading spinner
+            if (window.loading) window.loading.show();
+            
             const epsg4326Extent = ol.proj.transformExtent(extent, projection, 'EPSG:4326');
             const bbox = [epsg4326Extent[1], epsg4326Extent[0], epsg4326Extent[3], epsg4326Extent[2]].join(',');
             const query = overlay.query.replace('{{bbox}}', bbox);
@@ -34,7 +37,13 @@ function createOlLayer(overlay) {
                     console.log('Added ' + features.length + ' features for ' + overlay.title);
                     vectorSource.addFeatures(features);
                 })
-                .catch(error => console.error('Error loading overlay data for ' + overlay.title + ':', error));
+                .catch(error => {
+                    console.error('Error loading overlay data for ' + overlay.title + ':', error);
+                })
+                .finally(() => {
+                    // Hide loading spinner when done or on error
+                    if (window.loading) window.loading.hide();
+                });
         },
         strategy: ol.loadingstrategy.bbox
     });

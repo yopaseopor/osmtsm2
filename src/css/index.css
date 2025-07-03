@@ -256,10 +256,27 @@ CLEAR ACTIVE OVERLAY BUTTON
 }
 
 .osmcat-loading {
-	bottom: 50%;
-	display: none;
-	right: 50%;
-	z-index: 9999;
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    transform: translate(50%, 50%);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+}
+
+.osmcat-loading .loading-message {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
 }
 
 .ol-mouse-position {

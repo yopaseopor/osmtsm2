@@ -407,10 +407,14 @@ $(function () {
 	var loading = {
 		init: function () {
 			this.count = 0;
-			this.spinner = $('<div>').addClass('ol-control osmcat-loading').html('<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>');
+			this.spinner = $('<div>').addClass('ol-control osmcat-loading')
+				.append($('<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>'))
+				.append($('<div class="loading-message">').text(window.config.i18n.loading || 'Loading...'));
 			$('#map').append(this.spinner);
 		},
 		show: function () {
+			// Update the loading message in case language changed
+			this.spinner.find('.loading-message').text(window.config.i18n.loading || 'Loading...');
 			this.spinner.show();
 			++this.count;
 		},
