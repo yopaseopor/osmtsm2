@@ -1,6 +1,10 @@
 /* global config, ol */
-$(function () {
+import { restoreState } from './utils/stateManager.js';
 
+$(function () {
+    // Restore previous state if available
+    const savedState = restoreState();
+    
     // --- Layer Searcher Integration ---
     // Remove early addition of 'Translated' overlay group here. It will be added after all overlays are loaded.
 
@@ -58,6 +62,21 @@ $(function () {
         });
     };
 
+
+    // Restore layer visibility from saved state
+    if (savedState) {
+        const visibleLayers = new Set(savedState.visibleLayers || []);
+        if (window.config && Array.isArray(window.config.layers)) {
+            window.config.layers.forEach(layer => {
+                if (layer.get && layer.get('title')) {
+                    const isVisible = visibleLayers.has(layer.get('title'));
+                    if (isVisible) {
+                        layer.setVisible(true);
+                    }
+                }
+            });
+        }
+    }
 
     // Render all layers initially
     $(document).ready(function() {
@@ -392,6 +411,22 @@ $(function () {
             window.renderOverlayList(window.overlays, '');
         }
     };
+
+    // Restore expanded groups from saved state
+    if (savedState && savedState.expandedGroups) {
+        setTimeout(() => {
+            const expandedGroups = new Set(savedState.expandedGroups || []);
+            document.querySelectorAll('.osmcat-menu h3').forEach(h3 => {
+                if (expandedGroups.has(h3.textContent.trim())) {
+                    const content = h3.nextElementSibling;
+                    if (content && content.classList.contains('osmcat-menu-content')) {
+                        content.style.display = 'block';
+                        h3.classList.add('expanded');
+                    }
+                }
+            });
+        }, 100); // Small delay to ensure DOM is ready
+    }
 
     // Render all overlays initially
     $(document).ready(function() {
