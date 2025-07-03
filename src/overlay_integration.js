@@ -85,6 +85,18 @@ function integrateOverlays() {
     
     console.log('Integrating overlays...');
     
+    // Get saved state if available
+    const savedState = JSON.parse(localStorage.getItem('appState') || '{}');
+    const savedVisibleOverlays = new Set(savedState.visibleLayers || []);
+    
+    // Store current visibility state before clearing
+    const currentVisibility = {};
+    window.config.layers.forEach(layer => {
+        if (layer.get('type') === 'overlay') {
+            currentVisibility[layer.get('title')] = layer.getVisible();
+        }
+    });
+    
     // Clear existing overlay layers
     window.config.layers = window.config.layers.filter(layer => layer.get('type') !== 'overlay');
     
@@ -93,52 +105,40 @@ function integrateOverlays() {
         .filter(Array.isArray)
         .flat();
         
-    // Group overlays by their group property
+    // Group overlays by untranslated keys
     const groupMap = {};
     allOverlaysFlat.forEach(overlay => {
-        if (!overlay.group) return;
         let groupKey = overlay.group;
-        // Store the original group key for reference
         overlay._originalGroup = groupKey;
         if (!groupMap[groupKey]) groupMap[groupKey] = [];
         groupMap[groupKey].push(overlay);
     });
     
-    // Store current visibility state of layers by title
-    const visibilityState = {};
-    if (window.config && window.config.layers) {
-        window.config.layers.forEach(layer => {
-            if (layer.get('type') === 'overlay') {
-                const title = layer.get('title');
-                if (title) {
-                    visibilityState[title] = layer.getVisible();
-                }
-            }
-        });
-    }
-    
-    // Create OpenLayers groups for each unique group name
+    // Create overlay groups with translated titles and restore visibility
     const overlayGroups = {};
     Object.entries(groupMap).forEach(([groupName, overlays]) => {
         const layers = overlays.map(overlay => createOlLayer(overlay));
         const group = createOverlayGroup(groupName, layers);
         
-        // Restore visibility state if it exists
+        // Restore visibility from saved state or current state
         const groupTitle = group.get('title');
-        if (groupTitle in visibilityState) {
-            group.setVisible(visibilityState[groupTitle]);
+        if (savedVisibleOverlays.has(groupTitle)) {
+            group.setVisible(true);
+        } else if (groupTitle in currentVisibility) {
+            group.setVisible(currentVisibility[groupTitle]);
+        } else {
+            group.setVisible(false);
         }
         
         overlayGroups[groupName] = group;
     });
     
-    // Add groups to config layers
+    // Add groups to config.layers and update global overlays
     Object.values(overlayGroups).forEach(group => {
         window.config.layers.push(group);
     });
     
-    // Update window.overlays for the search functionality
-    console.log('Updating window.overlays...');
+    // Update window.overlays with the latest overlay information
     window.overlays = Object.entries(overlayGroups).flatMap(([groupName, group]) => {
         return group.getLayers().getArray().map(layer => ({
             title: layer.get('title'),

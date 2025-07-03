@@ -1,4 +1,5 @@
 import { setLanguage, getCurrentLanguage, languages, updateLanguageInURL } from '../i18n/index.js';
+import { saveState } from '../utils/stateManager.js';
 
 export class LanguageSelector {
     constructor(container) {
@@ -64,6 +65,9 @@ export class LanguageSelector {
         applyButton.addEventListener('click', () => {
             const newLang = this.selectedLanguage;
             if (newLang !== getCurrentLanguage()) {
+                // Save current state before changing language
+                saveState();
+                
                 // Show loading state
                 this.container.classList.add('language-applying');
                 applyButton.disabled = true;
