@@ -403,117 +403,26 @@ $(function () {
 	$('#map').empty(); // Remove Javascript required message
 	var baseLayerIndex = 0;
 	
-	// Object to manage the spinner layer
-	window.loading = (function() {
-		let count = 0;
-		let spinner = null;
-		let isInitialized = false;
-		
-		function init() {
-			try {
-				// Remove any existing spinner
-				$('.osmcat-loading').remove();
-				
-				// Create spinner with proper structure
-				spinner = $([
-					'<div class="ol-control osmcat-loading" style="display: none;">',
-					'  <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>',
-					'  <div class="loading-message">', (window.config.i18n && window.config.i18n.loading) || 'Loading...', '</div>',
-					'</div>'
-				].join(''));
-				
-				// Add to body to ensure it's not affected by parent elements
-				$('body').append(spinner);
-				isInitialized = true;
-				console.log('Loading spinner initialized successfully');
-			} catch (e) {
-				console.error('Failed to initialize loading spinner:', e);
-				isInitialized = false;
+	//Object to manage the spinner layer
+	var loading = {
+		init: function () {
+			this.count = 0;
+			this.spinner = $('<div>').addClass('ol-control osmcat-loading').html('<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>');
+			$('#map').append(this.spinner);
+		},
+		show: function () {
+			this.spinner.show();
+			++this.count;
+		},
+		hide: function () {
+			--this.count;
+			if (this.count < 1) {
+				this.spinner.hide();
+				this.count = 0;
 			}
 		}
-		
-		function show() {
-			try {
-				if (!isInitialized || !spinner || !spinner.length) {
-					console.warn('Loading spinner not initialized, initializing...');
-					init();
-					if (!isInitialized) return false;
-				}
-				
-				// Update the loading message in case language changed
-				if (window.config.i18n && window.config.i18n.loading) {
-					spinner.find('.loading-message').text(window.config.i18n.loading);
-				}
-				
-				// Show and position the spinner
-				spinner.css({
-					display: 'flex',
-					top: '50%',
-					left: '50%',
-					transform: 'translate(-50%, -50%)',
-					'z-index': '100000',
-					'visibility': 'visible',
-					'opacity': '1'
-				}).addClass('visible');
-				
-				count++;
-				console.log('Loading spinner shown. Active requests:', count);
-				return true;
-			} catch (e) {
-				console.error('Error showing loading spinner:', e);
-				return false;
-			}
-		}
-		
-		function hide() {
-			try {
-				if (count > 0) {
-					count--;
-				}
-				
-				console.log('Loading spinner hide requested. Remaining requests:', count);
-				
-				if (count <= 0) {
-					count = 0;
-					if (spinner) {
-						spinner.removeClass('visible');
-						setTimeout(() => {
-							if (count === 0 && spinner) {
-								spinner.hide();
-							}
-						}, 300); // Match the CSS transition duration
-					}
-				}
-				return true;
-			} catch (e) {
-				console.error('Error hiding loading spinner:', e);
-				return false;
-			}
-		}
-		
-		// Initialize immediately
-		init();
-		
-		// Return public API
-		return {
-			init: init,
-			show: show,
-			hide: hide,
-			// For debugging
-			getCount: () => count,
-			isInitialized: () => isInitialized
-		};
-	})();
-	
-	// Initialize the loading spinner when the DOM is ready
-	$(function() {
-		console.log('Initializing loading spinner...');
-		if (window.loading && typeof window.loading.init === 'function') {
-			window.loading.init();
-		} else {
-			console.error('Loading spinner not properly defined');
-		}
-	});
+	};
+	loading.init();
 
 	var overlaysTemp = {};
 	$.each(config.overlays, function (index, overlay) {

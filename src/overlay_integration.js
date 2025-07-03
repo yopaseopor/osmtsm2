@@ -7,93 +7,34 @@ function createOlLayer(overlay) {
     const vectorSource = new ol.source.Vector({
         format: new ol.format.GeoJSON(),
         loader: function(extent, resolution, projection) {
-            console.log('Loader called for overlay:', overlay.title);
+            const epsg4326Extent = ol.proj.transformExtent(extent, projection, 'EPSG:4326');
+            const bbox = [epsg4326Extent[1], epsg4326Extent[0], epsg4326Extent[3], epsg4326Extent[2]].join(',');
+            const query = overlay.query.replace('{{bbox}}', bbox);
             
-            let loadingTimer = null;
-            let spinnerShown = false;
-            const MIN_LOADING_TIME = 300; // Minimum time to show spinner (ms)
-            const startTime = Date.now();
+            const url = window.config.overpassApi() + '?data=' + encodeURIComponent(query);
+            console.log('Loading overlay data from:', url);
             
-            // Show loading spinner with a small delay to prevent flickering on fast loads
-            const showSpinner = () => {
-                if (!spinnerShown && window.loading && typeof window.loading.show === 'function') {
-                    console.log('Showing loading spinner for overlay:', overlay.title);
-                    spinnerShown = window.loading.show();
-                    return spinnerShown;
-                }
-                return false;
-            };
-            
-            // Hide loading spinner if it was shown for the minimum time
-            const hideSpinner = () => {
-                if (!spinnerShown) return false;
-                
-                const elapsed = Date.now() - startTime;
-                const remainingTime = Math.max(0, MIN_LOADING_TIME - elapsed);
-                
-                const hide = () => {
-                    if (window.loading && typeof window.loading.hide === 'function') {
-                        console.log('Hiding loading spinner for overlay:', overlay.title);
-                        window.loading.hide();
-                        spinnerShown = false;
-                        return true;
+            fetch(url)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
                     }
-                    return false;
-                };
-                
-                if (remainingTime > 0) {
-                    setTimeout(hide, remainingTime);
-                    return true;
-                }
-                
-                return hide();
-            };
-            
-            // Set a timer to show the spinner after a short delay
-            loadingTimer = setTimeout(showSpinner, 150);
-            
-            try {
-                const epsg4326Extent = ol.proj.transformExtent(extent, projection, 'EPSG:4326');
-                const bbox = [epsg4326Extent[1], epsg4326Extent[0], epsg4326Extent[3], epsg4326Extent[2]].join(',');
-                const query = overlay.query.replace('{{bbox}}', bbox);
-                
-                const url = window.config.overpassApi() + '?data=' + encodeURIComponent(query);
-                console.log('Loading overlay data from:', url);
-                
-                fetch(url)
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error('Network response was not ok');
-                        }
-                        return response.json();
-                    })
-                    .then(data => {
-                        console.log('Received data for ' + overlay.title);
-                        if (!data || !data.elements) {
-                            console.warn('No elements found in response for ' + overlay.title);
-                            return;
-                        }
-                        const geojson = osmtogeojson(data);
-                        const features = new ol.format.GeoJSON().readFeatures(geojson, {
-                            featureProjection: projection
-                        });
-                        console.log('Added ' + features.length + ' features for ' + overlay.title);
-                        vectorSource.addFeatures(features);
-                    })
-                    .catch(error => {
-                        console.error('Error loading overlay data for ' + overlay.title + ':', error);
-                    })
-                    .finally(() => {
-                        clearTimeout(loadingTimer);
-                        loadingTimer = null;
-                        hideSpinner();
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Received data for ' + overlay.title);
+                    if (!data || !data.elements) {
+                        console.warn('No elements found in response for ' + overlay.title);
+                        return;
+                    }
+                    const geojson = osmtogeojson(data);
+                    const features = new ol.format.GeoJSON().readFeatures(geojson, {
+                        featureProjection: projection
                     });
-            } catch (error) {
-                console.error('Error in loader function:', error);
-                clearTimeout(loadingTimer);
-                loadingTimer = null;
-                hideSpinner();
-            }
+                    console.log('Added ' + features.length + ' features for ' + overlay.title);
+                    vectorSource.addFeatures(features);
+                })
+                .catch(error => console.error('Error loading overlay data for ' + overlay.title + ':', error));
         },
         strategy: ol.loadingstrategy.bbox
     });

@@ -54,6 +54,27 @@
         return found;
     }
 
+    // Initialize loading spinner for overlay queries
+    const overlayLoading = {
+        init: function() {
+            this.count = 0;
+            this.spinner = $('<div>').addClass('ol-control osmcat-loading').html('<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>');
+            $('#map').append(this.spinner);
+        },
+        show: function() {
+            this.spinner.show();
+            ++this.count;
+        },
+        hide: function() {
+            --this.count;
+            if (this.count < 1) {
+                this.spinner.hide();
+                this.count = 0;
+            }
+        }
+    };
+    overlayLoading.init();
+
     // Helper function to toggle overlay visibility
     function toggleOverlay(overlay) {
         const layer = findOverlayLayer(overlay);
@@ -76,6 +97,7 @@
             var vectorSource = new ol.source.Vector({
                 format: new ol.format.OSMXML2(),
                 loader: function (extent, resolution, projection) {
+                    overlayLoading.show();
                     var epsg4326Extent = ol.proj.transformExtent(extent, projection, 'EPSG:4326');
                     var query = '[maxsize:536870912];' + overlay.query;
                     query = query.replace(/{{bbox}}/g, epsg4326Extent[1] + ',' + epsg4326Extent[0] + ',' + epsg4326Extent[3] + ',' + epsg4326Extent[2]);
@@ -83,12 +105,21 @@
                     client.open('POST', window.config.overpassApi ? window.config.overpassApi() : 'https://overpass-api.de/api/interpreter');
                     client.onload = function () {
                         if (client.status === 200) {
-                            var xmlDoc = $.parseXML(client.responseText);
-                            var features = new ol.format.OSMXML2().readFeatures(xmlDoc, {
-                                featureProjection: window.map.getView().getProjection()
-                            });
-                            vectorSource.addFeatures(features);
+                            try {
+                                var xmlDoc = $.parseXML(client.responseText);
+                                var features = new ol.format.OSMXML2().readFeatures(xmlDoc, {
+                                    featureProjection: window.map.getView().getProjection()
+                                });
+                                vectorSource.addFeatures(features);
+                            } catch (e) {
+                                console.error('Error parsing overlay data:', e);
+                            }
                         }
+                        overlayLoading.hide();
+                    };
+                    client.onerror = function() {
+                        overlayLoading.hide();
+                        console.error('Error loading overlay data');
                     };
                     client.send(query);
                 },
