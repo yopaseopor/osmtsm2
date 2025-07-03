@@ -64,17 +64,25 @@ $(function () {
 
 
     // Restore layer visibility from saved state
-    if (savedState) {
-        const visibleLayers = new Set(savedState.visibleLayers || []);
-        if (window.config && Array.isArray(window.config.layers)) {
-            window.config.layers.forEach(layer => {
-                if (layer.get && layer.get('title')) {
-                    const isVisible = visibleLayers.has(layer.get('title'));
-                    if (isVisible) {
-                        layer.setVisible(true);
+    if (savedState && savedState.visibleLayers) {
+        try {
+            const visibleLayers = new Set(savedState.visibleLayers);
+            if (window.config && Array.isArray(window.config.layers)) {
+                window.config.layers.forEach(layer => {
+                    try {
+                        if (layer && layer.get && typeof layer.get === 'function') {
+                            const title = layer.get('title');
+                            if (title && visibleLayers.has(title)) {
+                                layer.setVisible(true);
+                            }
+                        }
+                    } catch (e) {
+                        console.error('Error restoring layer visibility:', e);
                     }
-                }
-            });
+                });
+            }
+        } catch (e) {
+            console.error('Error processing saved state:', e);
         }
     }
 
@@ -414,18 +422,34 @@ $(function () {
 
     // Restore expanded groups from saved state
     if (savedState && savedState.expandedGroups) {
-        setTimeout(() => {
-            const expandedGroups = new Set(savedState.expandedGroups || []);
-            document.querySelectorAll('.osmcat-menu h3').forEach(h3 => {
-                if (expandedGroups.has(h3.textContent.trim())) {
-                    const content = h3.nextElementSibling;
-                    if (content && content.classList.contains('osmcat-menu-content')) {
-                        content.style.display = 'block';
-                        h3.classList.add('expanded');
-                    }
+        try {
+            const expandedGroups = new Set(savedState.expandedGroups);
+            setTimeout(() => {
+                try {
+                    const menuHeaders = document.querySelectorAll('.osmcat-menu h3');
+                    if (menuHeaders.length === 0) return;
+                    
+                    menuHeaders.forEach(h3 => {
+                        try {
+                            const title = h3.textContent.trim();
+                            if (expandedGroups.has(title)) {
+                                const content = h3.nextElementSibling;
+                                if (content && content.classList && content.classList.contains('osmcat-menu-content')) {
+                                    content.style.display = 'block';
+                                    h3.classList.add('expanded');
+                                }
+                            }
+                        } catch (e) {
+                            console.error('Error expanding group:', e);
+                        }
+                    });
+                } catch (e) {
+                    console.error('Error restoring expanded groups:', e);
                 }
-            });
-        }, 100); // Small delay to ensure DOM is ready
+            }, 300); // Increased delay to ensure DOM is ready
+        } catch (e) {
+            console.error('Error processing expanded groups:', e);
+        }
     }
 
     // Render all overlays initially

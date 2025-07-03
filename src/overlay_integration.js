@@ -101,17 +101,26 @@ function integrateOverlays() {
     window.config.layers = window.config.layers.filter(layer => layer.get('type') !== 'overlay');
     
     // Flatten all overlays from all groups
-    const allOverlaysFlat = Object.values(window.allOverlays)
-        .filter(Array.isArray)
-        .flat();
-        
+    const allOverlaysFlat = [];
+    
+    // Get overlays from the imported allOverlays
+    if (allOverlays) {
+        Object.values(allOverlays).forEach(overlayGroup => {
+            if (Array.isArray(overlayGroup)) {
+                allOverlaysFlat.push(...overlayGroup);
+            }
+        });
+    }
+    
     // Group overlays by untranslated keys
     const groupMap = {};
     allOverlaysFlat.forEach(overlay => {
-        let groupKey = overlay.group;
-        overlay._originalGroup = groupKey;
-        if (!groupMap[groupKey]) groupMap[groupKey] = [];
-        groupMap[groupKey].push(overlay);
+        if (overlay && overlay.group) {
+            let groupKey = overlay.group;
+            overlay._originalGroup = groupKey;
+            if (!groupMap[groupKey]) groupMap[groupKey] = [];
+            groupMap[groupKey].push(overlay);
+        }
     });
     
     // Create overlay groups with translated titles and restore visibility
