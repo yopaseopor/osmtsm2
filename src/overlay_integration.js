@@ -9,28 +9,33 @@ function createOlLayer(overlay) {
         loader: function(extent, resolution, projection) {
             console.log('Loader called for overlay:', overlay.title);
             
-            // Show loading spinner immediately
+            let loadingTimer;
+            let spinnerShown = false;
+            
+            // Show loading spinner with a small delay to prevent flickering on fast loads
             const showSpinner = () => {
-                if (window.loading && typeof window.loading.show === 'function') {
+                if (!spinnerShown && window.loading && typeof window.loading.show === 'function') {
                     console.log('Showing loading spinner for overlay:', overlay.title);
                     window.loading.show();
+                    spinnerShown = true;
                     return true;
-                } else {
-                    console.error('Loading spinner not available');
-                    return false;
                 }
+                return false;
             };
             
             // Hide loading spinner
             const hideSpinner = () => {
-                console.log('Hiding loading spinner for overlay:', overlay.title);
-                if (window.loading && typeof window.loading.hide === 'function') {
+                if (spinnerShown && window.loading && typeof window.loading.hide === 'function') {
+                    console.log('Hiding loading spinner for overlay:', overlay.title);
                     window.loading.hide();
+                    spinnerShown = false;
+                    return true;
                 }
+                return false;
             };
             
-            // Show spinner with a small delay to prevent flickering on fast loads
-            const loadingTimer = setTimeout(showSpinner, 100);
+            // Set a timer to show the spinner after a short delay
+            loadingTimer = setTimeout(showSpinner, 100);
             
             try {
                 const epsg4326Extent = ol.proj.transformExtent(extent, projection, 'EPSG:4326');
@@ -39,9 +44,6 @@ function createOlLayer(overlay) {
                 
                 const url = window.config.overpassApi() + '?data=' + encodeURIComponent(query);
                 console.log('Loading overlay data from:', url);
-                
-                // Show spinner immediately for slow connections
-                showSpinner();
                 
                 fetch(url)
                     .then(response => {
@@ -66,14 +68,25 @@ function createOlLayer(overlay) {
                     .catch(error => {
                         console.error('Error loading overlay data for ' + overlay.title + ':', error);
                     })
-                    .finally(() => {
-                        clearTimeout(loadingTimer);
+                    .then(() => {
+                        // Only hide the spinner if it was shown
+                        if (spinnerShown) {
+                            hideSpinner();
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error in fetch operation:', error);
                         hideSpinner();
                     });
             } catch (error) {
                 console.error('Error in loader function:', error);
                 clearTimeout(loadingTimer);
-                hideSpinner();
+                if (spinnerShown) {
+                    hideSpinner();
+                }
+            } finally {
+                // Always clear the timeout to prevent memory leaks
+                clearTimeout(loadingTimer);
             }
         },
         strategy: ol.loadingstrategy.bbox

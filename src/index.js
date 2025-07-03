@@ -408,30 +408,38 @@ $(function () {
 		init: function () {
 			console.log('Initializing loading spinner...');
 			this.count = 0;
-			// Remove any existing spinner
-			$('.osmcat-loading').remove();
+			this.initialized = false;
 			
-			// Create spinner with proper structure
-			this.spinner = $([
-				'<div class="ol-control osmcat-loading">',
-				'  <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>',
-				'  <div class="loading-message">', (window.config.i18n && window.config.i18n.loading) || 'Loading...', '</div>',
-				'</div>'
-			].join(''));
-			
-			// Add to body to ensure it's not affected by parent elements
-			$('body').append(this.spinner);
-			console.log('Loading spinner initialized');
-			
-			// Ensure spinner is hidden by default
-			this.spinner.hide();
+			try {
+				// Remove any existing spinner
+				$('.osmcat-loading').remove();
+				
+				// Create spinner with proper structure
+				this.spinner = $([
+					'<div class="ol-control osmcat-loading">',
+					'  <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>',
+					'  <div class="loading-message">', (window.config.i18n && window.config.i18n.loading) || 'Loading...', '</div>',
+					'</div>'
+				].join(''));
+				
+				// Add to body to ensure it's not affected by parent elements
+				$('body').append(this.spinner);
+				
+				// Ensure spinner is hidden by default
+				this.spinner.hide();
+				this.initialized = true;
+				console.log('Loading spinner initialized successfully');
+			} catch (e) {
+				console.error('Failed to initialize loading spinner:', e);
+			}
 		},
 		
 		show: function () {
 			try {
-				if (!this.spinner || !this.spinner.length) {
-					console.warn('Loading spinner element not found, reinitializing...');
+				if (!this.initialized || !this.spinner || !this.spinner.length) {
+					console.warn('Loading spinner not initialized, initializing...');
 					this.init();
+					if (!this.initialized) return false;
 				}
 				
 				// Update the loading message in case language changed
@@ -445,13 +453,17 @@ $(function () {
 					top: '50%',
 					left: '50%',
 					transform: 'translate(-50%, -50%)',
-					'z-index': '100000'
+					'z-index': '100000',
+					'visibility': 'visible',
+					'opacity': '1'
 				}).addClass('visible');
 				
 				++this.count;
 				console.log('Loading spinner shown. Active requests:', this.count);
+				return true;
 			} catch (e) {
 				console.error('Error showing loading spinner:', e);
+				return false;
 			}
 		},
 		
@@ -463,17 +475,21 @@ $(function () {
 				
 				console.log('Loading spinner hide requested. Remaining requests:', this.count);
 				
-				if (this.count <= 0 && this.spinner) {
+				if (this.count <= 0) {
 					this.count = 0;
-					this.spinner.removeClass('visible');
-					setTimeout(() => {
-						if (this.count === 0 && this.spinner) {
-							this.spinner.hide();
-						}
-					}, 300); // Match the CSS transition duration
+					if (this.spinner) {
+						this.spinner.removeClass('visible');
+						setTimeout(() => {
+							if (this.count === 0 && this.spinner) {
+								this.spinner.hide();
+							}
+						}, 300); // Match the CSS transition duration
+					}
 				}
+				return true;
 			} catch (e) {
 				console.error('Error hiding loading spinner:', e);
+				return false;
 			}
 		}
 	};
