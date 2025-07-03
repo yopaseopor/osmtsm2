@@ -9,33 +9,48 @@ function createOlLayer(overlay) {
         loader: function(extent, resolution, projection) {
             console.log('Loader called for overlay:', overlay.title);
             
-            let loadingTimer;
+            let loadingTimer = null;
             let spinnerShown = false;
+            const MIN_LOADING_TIME = 300; // Minimum time to show spinner (ms)
+            const startTime = Date.now();
             
             // Show loading spinner with a small delay to prevent flickering on fast loads
             const showSpinner = () => {
                 if (!spinnerShown && window.loading && typeof window.loading.show === 'function') {
                     console.log('Showing loading spinner for overlay:', overlay.title);
-                    window.loading.show();
-                    spinnerShown = true;
-                    return true;
+                    spinnerShown = window.loading.show();
+                    return spinnerShown;
                 }
                 return false;
             };
             
-            // Hide loading spinner
+            // Hide loading spinner if it was shown for the minimum time
             const hideSpinner = () => {
-                if (spinnerShown && window.loading && typeof window.loading.hide === 'function') {
-                    console.log('Hiding loading spinner for overlay:', overlay.title);
-                    window.loading.hide();
-                    spinnerShown = false;
+                if (!spinnerShown) return false;
+                
+                const elapsed = Date.now() - startTime;
+                const remainingTime = Math.max(0, MIN_LOADING_TIME - elapsed);
+                
+                const hide = () => {
+                    if (window.loading && typeof window.loading.hide === 'function') {
+                        console.log('Hiding loading spinner for overlay:', overlay.title);
+                        window.loading.hide();
+                        spinnerShown = false;
+                        return true;
+                    }
+                    return false;
+                };
+                
+                if (remainingTime > 0) {
+                    setTimeout(hide, remainingTime);
                     return true;
                 }
-                return false;
+                
+                return hide();
             };
             
             // Set a timer to show the spinner after a short delay
-            loadingTimer = setTimeout(showSpinner, 100);
+            loadingTimer = setTimeout(showSpinner, 150);
             
             try {
                 const epsg4326Extent = ol.proj.transformExtent(extent, projection, 'EPSG:4326');
@@ -68,25 +83,16 @@ function createOlLayer(overlay) {
                     .catch(error => {
                         console.error('Error loading overlay data for ' + overlay.title + ':', error);
                     })
-                    .then(() => {
-                        // Only hide the spinner if it was shown
-                        if (spinnerShown) {
-                            hideSpinner();
-                        }
-                    })
-                    .catch(error => {
-                        console.error('Error in fetch operation:', error);
+                    .finally(() => {
+                        clearTimeout(loadingTimer);
+                        loadingTimer = null;
                         hideSpinner();
                     });
             } catch (error) {
                 console.error('Error in loader function:', error);
                 clearTimeout(loadingTimer);
-                if (spinnerShown) {
-                    hideSpinner();
-                }
-            } finally {
-                // Always clear the timeout to prevent memory leaks
-                clearTimeout(loadingTimer);
+                loadingTimer = null;
+                hideSpinner();
             }
         },
         strategy: ol.loadingstrategy.bbox

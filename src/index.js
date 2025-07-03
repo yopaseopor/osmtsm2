@@ -404,51 +404,49 @@ $(function () {
 	var baseLayerIndex = 0;
 	
 	// Object to manage the spinner layer
-	window.loading = {
-		init: function () {
-			console.log('Initializing loading spinner...');
-			this.count = 0;
-			this.initialized = false;
-			
+	window.loading = (function() {
+		let count = 0;
+		let spinner = null;
+		let isInitialized = false;
+		
+		function init() {
 			try {
 				// Remove any existing spinner
 				$('.osmcat-loading').remove();
 				
 				// Create spinner with proper structure
-				this.spinner = $([
-					'<div class="ol-control osmcat-loading">',
+				spinner = $([
+					'<div class="ol-control osmcat-loading" style="display: none;">',
 					'  <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>',
 					'  <div class="loading-message">', (window.config.i18n && window.config.i18n.loading) || 'Loading...', '</div>',
 					'</div>'
 				].join(''));
 				
 				// Add to body to ensure it's not affected by parent elements
-				$('body').append(this.spinner);
-				
-				// Ensure spinner is hidden by default
-				this.spinner.hide();
-				this.initialized = true;
+				$('body').append(spinner);
+				isInitialized = true;
 				console.log('Loading spinner initialized successfully');
 			} catch (e) {
 				console.error('Failed to initialize loading spinner:', e);
+				isInitialized = false;
 			}
-		},
+		}
 		
-		show: function () {
+		function show() {
 			try {
-				if (!this.initialized || !this.spinner || !this.spinner.length) {
+				if (!isInitialized || !spinner || !spinner.length) {
 					console.warn('Loading spinner not initialized, initializing...');
-					this.init();
-					if (!this.initialized) return false;
+					init();
+					if (!isInitialized) return false;
 				}
 				
 				// Update the loading message in case language changed
 				if (window.config.i18n && window.config.i18n.loading) {
-					this.spinner.find('.loading-message').text(window.config.i18n.loading);
+					spinner.find('.loading-message').text(window.config.i18n.loading);
 				}
 				
 				// Show and position the spinner
-				this.spinner.css({
+				spinner.css({
 					display: 'flex',
 					top: '50%',
 					left: '50%',
@@ -458,30 +456,30 @@ $(function () {
 					'opacity': '1'
 				}).addClass('visible');
 				
-				++this.count;
-				console.log('Loading spinner shown. Active requests:', this.count);
+				count++;
+				console.log('Loading spinner shown. Active requests:', count);
 				return true;
 			} catch (e) {
 				console.error('Error showing loading spinner:', e);
 				return false;
 			}
-		},
+		}
 		
-		hide: function () {
+		function hide() {
 			try {
-				if (this.count > 0) {
-					--this.count;
+				if (count > 0) {
+					count--;
 				}
 				
-				console.log('Loading spinner hide requested. Remaining requests:', this.count);
+				console.log('Loading spinner hide requested. Remaining requests:', count);
 				
-				if (this.count <= 0) {
-					this.count = 0;
-					if (this.spinner) {
-						this.spinner.removeClass('visible');
+				if (count <= 0) {
+					count = 0;
+					if (spinner) {
+						spinner.removeClass('visible');
 						setTimeout(() => {
-							if (this.count === 0 && this.spinner) {
-								this.spinner.hide();
+							if (count === 0 && spinner) {
+								spinner.hide();
 							}
 						}, 300); // Match the CSS transition duration
 					}
@@ -492,28 +490,30 @@ $(function () {
 				return false;
 			}
 		}
-	};
-	
-	// Initialize the loading spinner immediately when the script loads
-	console.log('Setting up loading spinner...');
-	if (window.loading && typeof window.loading.init === 'function') {
-		window.loading.init();
 		
-		// Quick test of the spinner
-		setTimeout(function() {
-			console.log('Testing loading spinner...');
-			if (window.loading && typeof window.loading.show === 'function') {
-				window.loading.show();
-				setTimeout(function() {
-					if (window.loading && typeof window.loading.hide === 'function') {
-						window.loading.hide();
-					}
-				}, 2000);
-			}
-		}, 1000);
-	} else {
-		console.error('Loading spinner not properly defined');
-	}
+		// Initialize immediately
+		init();
+		
+		// Return public API
+		return {
+			init: init,
+			show: show,
+			hide: hide,
+			// For debugging
+			getCount: () => count,
+			isInitialized: () => isInitialized
+		};
+	})();
+	
+	// Initialize the loading spinner when the DOM is ready
+	$(function() {
+		console.log('Initializing loading spinner...');
+		if (window.loading && typeof window.loading.init === 'function') {
+			window.loading.init();
+		} else {
+			console.error('Loading spinner not properly defined');
+		}
+	});
 
 	var overlaysTemp = {};
 	$.each(config.overlays, function (index, overlay) {
