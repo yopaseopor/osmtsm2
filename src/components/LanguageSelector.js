@@ -1,5 +1,4 @@
 import { setLanguage, getCurrentLanguage, languages, updateLanguageInURL } from '../i18n/index.js';
-import { saveState } from '../utils/stateManager.js';
 
 export class LanguageSelector {
     constructor(container) {
@@ -61,12 +60,116 @@ export class LanguageSelector {
             this.selectedLanguage = e.target.value;
         });
 
+        // Save the current state of overlays and layers
+        function saveCurrentState() {
+            const state = {
+                language: getCurrentLanguage(),
+                overlays: {},
+                layers: {},
+                view: {}
+            };
+
+            // Save overlay states
+            if (window.overlays) {
+                window.overlays.forEach(overlay => {
+                    if (overlay._olLayer) {
+                        state.overlays[overlay.id] = overlay._olLayer.getVisible();
+                    }
+                });
+            }
+
+            // Save base layer state
+            if (window.config && window.config.layers) {
+                window.config.layers.forEach(layer => {
+                    if (layer.get('type') === 'base') {
+                        state.layers[layer.get('title')] = layer.getVisible();
+                    }
+                });
+            }
+
+            // Save current map view
+            if (window.map) {
+                const view = window.map.getView();
+                state.view = {
+                    center: view.getCenter(),
+                    zoom: view.getZoom()
+                };
+            }
+
+            localStorage.setItem('mapState', JSON.stringify(state));
+            return state;
+        }
+
+        // Restore the saved state
+        function restoreState() {
+            const savedState = localStorage.getItem('mapState');
+            if (!savedState) return;
+            
+            try {
+                const state = JSON.parse(savedState);
+                
+                // Only restore if the language hasn't changed
+                if (state.language === getCurrentLanguage()) {
+                    const restoreView = () => {
+                        // Restore overlay states
+                        if (window.overlays && state.overlays) {
+                            window.overlays.forEach(overlay => {
+                                if (overlay._olLayer && state.overlays[overlay.id] !== undefined) {
+                                    overlay._olLayer.setVisible(state.overlays[overlay.id]);
+                                }
+                            });
+                        }
+
+                        // Restore base layer visibility
+                        if (window.config && window.config.layers && state.layers) {
+                            window.config.layers.forEach(layer => {
+                                const title = layer.get('title');
+                                if (layer.get('type') === 'base' && state.layers[title] !== undefined) {
+                                    layer.setVisible(state.layers[title]);
+                                }
+                            });
+                        }
+
+                        // Restore map view
+                        if (window.map && state.view && state.view.center && state.view.zoom !== undefined) {
+                            const view = window.map.getView();
+                            view.setCenter(state.view.center);
+                            view.setZoom(state.view.zoom);
+                        }
+                    };
+
+                    // Try to restore immediately
+                    restoreView();
+                    
+                    // Also set up a listener in case overlays aren't loaded yet
+                    const overlayListener = () => {
+                        restoreView();
+                        window.removeEventListener('overlaysFullyLoaded', overlayListener);
+                    };
+                    
+                    window.addEventListener('overlaysFullyLoaded', overlayListener);
+                    
+                    // Set a timeout to clean up the listener
+                    setTimeout(() => {
+                        window.removeEventListener('overlaysFullyLoaded', overlayListener);
+                    }, 3000);
+                }
+            } catch (e) {
+                console.error('Error restoring state:', e);
+            } finally {
+                // Clean up after a short delay to ensure state is restored
+                setTimeout(() => {
+                    localStorage.removeItem('mapState');
+                }, 1000);
+            }
+        }
+
         // Handle apply button click
         applyButton.addEventListener('click', () => {
             const newLang = this.selectedLanguage;
             if (newLang !== getCurrentLanguage()) {
                 // Save current state before changing language
-                saveState();
+                saveCurrentState();
                 
                 // Show loading state
                 this.container.classList.add('language-applying');
@@ -82,6 +185,9 @@ export class LanguageSelector {
                 }, 300);
             }
         });
+
+        // Restore state when the component is mounted
+        restoreState();
 
         // Handle Enter key on select
         select.addEventListener('keydown', (e) => {

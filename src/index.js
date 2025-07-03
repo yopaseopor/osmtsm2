@@ -1,10 +1,6 @@
 /* global config, ol */
-import { restoreState } from './utils/stateManager.js';
-
 $(function () {
-    // Restore previous state if available
-    const savedState = restoreState();
-    
+
     // --- Layer Searcher Integration ---
     // Remove early addition of 'Translated' overlay group here. It will be added after all overlays are loaded.
 
@@ -62,29 +58,6 @@ $(function () {
         });
     };
 
-
-    // Restore layer visibility from saved state
-    if (savedState && savedState.visibleLayers) {
-        try {
-            const visibleLayers = new Set(savedState.visibleLayers);
-            if (window.config && Array.isArray(window.config.layers)) {
-                window.config.layers.forEach(layer => {
-                    try {
-                        if (layer && layer.get && typeof layer.get === 'function') {
-                            const title = layer.get('title');
-                            if (title && visibleLayers.has(title)) {
-                                layer.setVisible(true);
-                            }
-                        }
-                    } catch (e) {
-                        console.error('Error restoring layer visibility:', e);
-                    }
-                });
-            }
-        } catch (e) {
-            console.error('Error processing saved state:', e);
-        }
-    }
 
     // Render all layers initially
     $(document).ready(function() {
@@ -419,38 +392,6 @@ $(function () {
             window.renderOverlayList(window.overlays, '');
         }
     };
-
-    // Restore expanded groups from saved state
-    if (savedState && savedState.expandedGroups) {
-        try {
-            const expandedGroups = new Set(savedState.expandedGroups);
-            setTimeout(() => {
-                try {
-                    const menuHeaders = document.querySelectorAll('.osmcat-menu h3');
-                    if (menuHeaders.length === 0) return;
-                    
-                    menuHeaders.forEach(h3 => {
-                        try {
-                            const title = h3.textContent.trim();
-                            if (expandedGroups.has(title)) {
-                                const content = h3.nextElementSibling;
-                                if (content && content.classList && content.classList.contains('osmcat-menu-content')) {
-                                    content.style.display = 'block';
-                                    h3.classList.add('expanded');
-                                }
-                            }
-                        } catch (e) {
-                            console.error('Error expanding group:', e);
-                        }
-                    });
-                } catch (e) {
-                    console.error('Error restoring expanded groups:', e);
-                }
-            }, 300); // Increased delay to ensure DOM is ready
-        } catch (e) {
-            console.error('Error processing expanded groups:', e);
-        }
-    }
 
     // Render all overlays initially
     $(document).ready(function() {
