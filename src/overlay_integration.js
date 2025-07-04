@@ -4,16 +4,20 @@ import { getCurrentLanguage } from './i18n/index.js';
 
 // Function to convert overlay to OpenLayers layer
 function createOlLayer(overlay) {
+    // Spinner element
+    const spinner = document.getElementById('overlay-search-spinner');
+    function setOverlaySpinner(visible) {
+        if (spinner) spinner.style.display = visible ? 'flex' : 'none';
+    }
     const vectorSource = new ol.source.Vector({
         format: new ol.format.GeoJSON(),
         loader: function(extent, resolution, projection) {
             const epsg4326Extent = ol.proj.transformExtent(extent, projection, 'EPSG:4326');
             const bbox = [epsg4326Extent[1], epsg4326Extent[0], epsg4326Extent[3], epsg4326Extent[2]].join(',');
             const query = overlay.query.replace('{{bbox}}', bbox);
-            
             const url = window.config.overpassApi() + '?data=' + encodeURIComponent(query);
-            console.log('Loading overlay data from:', url);
-            
+            // Show spinner before fetch
+            setOverlaySpinner(true);
             fetch(url)
                 .then(response => {
                     if (!response.ok) {
@@ -22,6 +26,7 @@ function createOlLayer(overlay) {
                     return response.json();
                 })
                 .then(data => {
+                    setOverlaySpinner(false);
                     console.log('Received data for ' + overlay.title);
                     if (!data || !data.elements) {
                         console.warn('No elements found in response for ' + overlay.title);
@@ -34,7 +39,10 @@ function createOlLayer(overlay) {
                     console.log('Added ' + features.length + ' features for ' + overlay.title);
                     vectorSource.addFeatures(features);
                 })
-                .catch(error => console.error('Error loading overlay data for ' + overlay.title + ':', error));
+                .catch(error => {
+                    setOverlaySpinner(false);
+                    console.error('Error loading overlay data for ' + overlay.title + ':', error);
+                });
         },
         strategy: ol.loadingstrategy.bbox
     });
@@ -193,4 +201,4 @@ window.addEventListener('overlaysUpdated', function(event) {
     if (window.config) {
         integrateOverlays();
     }
-}); 
+});
