@@ -83,6 +83,11 @@ a:hover {
     overflow-y: auto;
     display: flex;
     flex-direction: column;
+    /* Remove horizontal scroll styles from desktop */
+    overflow-x: unset;
+    white-space: normal;
+    gap: 0;
+    padding-bottom: 0;
 }
 
 @media only screen and (max-width: 599px) {
@@ -121,21 +126,18 @@ a:hover {
   }
 }
 
+/* Remove duplicate overlay-list-item mobile styles outside media query */
 .overlay-list-item {
     padding: 8px 12px;
     display: flex;
     align-items: center;
     transition: background-color 0.2s;
-    min-width: 120px;
-    max-width: 80vw;
-    flex: 0 0 auto;
+    /* Remove min-width, max-width, flex, etc. from desktop */
     white-space: normal;
     border-radius: 8px;
     margin: 0 2px;
     box-shadow: 0 1px 4px rgba(0,0,0,0.06);
     background: #fff;
-    scroll-snap-align: start;
-    touch-action: pan-x;
 }
 
 .overlay-list-item img {
