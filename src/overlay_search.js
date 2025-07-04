@@ -12,6 +12,12 @@
     let lastResults = [];
     let lastQuery = '';
 
+    // Spinner setup
+    const spinner = document.getElementById('overlay-search-spinner');
+    if (spinner) {
+        spinner.innerHTML = '<div class="spinner"></div>';
+    }
+
     // Helper function to get all overlays from the new structure
     function getAllOverlays() {
         // Always include overlays from group folders (food, shopping, health, transport, education)
@@ -54,6 +60,11 @@
         return found;
     }
 
+    // Helper function to show/hide spinner
+    function setOverlaySpinner(visible) {
+        if (spinner) spinner.style.display = visible ? 'flex' : 'none';
+    }
+
     // Helper function to toggle overlay visibility
     function toggleOverlay(overlay) {
         const layer = findOverlayLayer(overlay);
@@ -81,7 +92,11 @@
                     query = query.replace(/{{bbox}}/g, epsg4326Extent[1] + ',' + epsg4326Extent[0] + ',' + epsg4326Extent[3] + ',' + epsg4326Extent[2]);
                     var client = new XMLHttpRequest();
                     client.open('POST', window.config.overpassApi ? window.config.overpassApi() : 'https://overpass-api.de/api/interpreter');
+                    // Show spinner before sending
+                    setOverlaySpinner(true);
                     client.onload = function () {
+                        // Hide spinner after response
+                        setOverlaySpinner(false);
                         if (client.status === 200) {
                             var xmlDoc = $.parseXML(client.responseText);
                             var features = new ol.format.OSMXML2().readFeatures(xmlDoc, {
@@ -89,6 +104,9 @@
                             });
                             vectorSource.addFeatures(features);
                         }
+                    };
+                    client.onerror = function() {
+                        setOverlaySpinner(false);
                     };
                     client.send(query);
                 },
