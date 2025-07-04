@@ -249,8 +249,8 @@ CLEAR ACTIVE OVERLAY BUTTON
 }
 
 .osmcat-sharebutton {
-	top: .5em;
-	left: .7em;
+       	top: .3em;
+		left: 6em;
 }
 
 .osmcat-menu {
