@@ -249,8 +249,8 @@ CLEAR ACTIVE OVERLAY BUTTON
 }
 
 .osmcat-sharebutton {
-	bottom: 30px;
-	right: 44px;
+	top: .5em;
+	left: .7em;
 }
 
 .osmcat-menu {
@@ -560,7 +560,7 @@ CLEAR ACTIVE OVERLAY BUTTON
     /* Share button position fix for mobile */
     .osmcat-sharebutton {
        	top: .5em;
-		right: 6em;
+		left: 7em;
     }
 
     /* Set specific widths for each menu type on mobile */
