@@ -387,8 +387,8 @@ CLEAR ACTIVE OVERLAY BUTTON
 
 /* Nominatim Search Styles */
 .nominatim-search {
-	top: 30px;
-	left: 44px;
+	top: 5px;
+	left: 100px;
 }
 
 .nominatim-search button {
@@ -1308,14 +1308,14 @@ CLEAR ACTIVE OVERLAY BUTTON
 /* Router specific styles */
 .osmcat-router {
     top: 80px;
-    left: 40px;
+    right: 8px;
 	background-color: #567CAC;
     color: #fff;
     border: none;
     border-radius: 2px;
     padding: 2px;
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
