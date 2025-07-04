@@ -854,15 +854,16 @@ CLEAR ACTIVE OVERLAY BUTTON
 
 /* Router Styles */
 .osmcat-router {
-    top: .5em;
-    right: 8em;
+    
+	top: .5em;
+    right: 5em;
 	background-color: #567CAC;
     color: #fff;
     border: none;
     border-radius: 2px;
     padding: 2px;
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1069,14 +1070,14 @@ CLEAR ACTIVE OVERLAY BUTTON
 */
 .osmcat-router {
     top: 80px;
-    left: 40px;
+    right: 8px;
 	background-color: #567CAC;
     color: #fff;
     border: none;
     border-radius: 2px;
     padding: 2px;
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
