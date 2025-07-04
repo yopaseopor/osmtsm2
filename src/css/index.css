@@ -105,7 +105,31 @@ a:hover {
     scrollbar-width: thin;
     scroll-snap-type: x mandatory;
   }
-  .overlay-list-item {
+  #layer-list {
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: touch !important;
+    white-space: nowrap !important;
+    gap: 4px !important;
+    padding-bottom: 8px !important;
+    max-height: none;
+    height: auto;
+    scrollbar-width: thin;
+    scroll-snap-type: x mandatory;
+  }
+  #overlay-list::-webkit-scrollbar,
+  #layer-list::-webkit-scrollbar {
+    height: 6px;
+  }
+  #overlay-list::-webkit-scrollbar-thumb,
+  #layer-list::-webkit-scrollbar-thumb {
+    background: #bbb;
+    border-radius: 3px;
+  }
+  .overlay-list-item,
+  .layer-list-item {
     min-width: 120px;
     max-width: 80vw;
     flex: 0 0 auto;
@@ -116,13 +140,6 @@ a:hover {
     background: #fff;
     scroll-snap-align: start;
     touch-action: pan-x;
-  }
-  #overlay-list::-webkit-scrollbar {
-    height: 6px;
-  }
-  #overlay-list::-webkit-scrollbar-thumb {
-    background: #bbb;
-    border-radius: 3px;
   }
 }
 
@@ -1067,6 +1084,8 @@ CLEAR ACTIVE OVERLAY BUTTON
     box-shadow: 0 2px 6px rgba(0,0,0,0.07);
     margin: 2px;
     transition: background 0.2s, color 0.2s;
+    position: absolute;
+    z-index: 1001;
 }
 .osmcat-router.active,
 .osmcat-router:focus,
