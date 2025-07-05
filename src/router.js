@@ -480,7 +480,7 @@ function initRouter(map) {
                                 <label data-i18n="router_start_label">Start:</label>
                                 <div class="location-input">
                                     <input type="text" class="start-place" placeholder="Search start location...">
-                                    <button class="search-button"><i class="fa fa-search"></i></button>
+                                    <button class="search-button" type="button"><i class="fa fa-search"></i></button>
                                 </div>
                                 <div class="search-results start-results"></div>
                             </div>
@@ -488,7 +488,7 @@ function initRouter(map) {
                                 <label data-i18n="router_end_label">End:</label>
                                 <div class="location-input">
                                     <input type="text" class="end-place" placeholder="Search end location...">
-                                    <button class="search-button"><i class="fa fa-search"></i></button>
+                                    <button class="search-button" type="button"><i class="fa fa-search"></i></button>
                                 </div>
                                 <div class="search-results end-results"></div>
                             </div>
@@ -496,7 +496,7 @@ function initRouter(map) {
                                 <label data-i18n="router_via_label">Via (optional):</label>
                                 <div class="location-input">
                                     <input type="text" class="via-place" placeholder="Search via location...">
-                                    <button class="search-button"><i class="fa fa-search"></i></button>
+                                    <button class="search-button" type="button"><i class="fa fa-search"></i></button>
                                 </div>
                                 <div class="search-results via-results"></div>
                             </div>
@@ -511,7 +511,7 @@ function initRouter(map) {
                             <div class="click-hint">
                                 <i class="fa fa-info-circle"></i> <span data-i18n="router_click_hint">Click on the map to set locations</span>
                             </div>
-                            <button class="calculate-route" data-i18n="router_calculate_button">Calculate Route</button>
+                            <button class="calculate-route" data-i18n="router_calculate_button" type="button">Calculate Route</button>
                         </div>
                     </div>
                 </div>
