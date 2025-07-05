@@ -854,8 +854,248 @@ CLEAR ACTIVE OVERLAY BUTTON
 
 /* Router Styles */
 .osmcat-router {
-    top: .5em;
-    right: 8em;
+    bottom: 90px;
+    right: 8px;
+	background-color: #567CAC;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    padding: 2px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+    margin: 2px;
+    transition: background 0.2s, color 0.2s;
+    position: absolute;
+    z-index: 1001;
+}
+.osmcat-router.active,
+.osmcat-router:focus,
+.osmcat-router:hover {
+    background-color: #34587C;
+    color: #fff;
+    outline: none;
+}
+.osmcat-router i {
+    color: #fff;
+    font-size: 1.2em;
+}
+
+/* PanoraMax viewer button position */
+.osmcat-panoramax {
+    bottom: 70px;
+    right: 8px;
+}
+
+/* Mapillary viewer button position */
+.osmcat-mapillary {
+    bottom: 110px;
+    right: 8px;
+}
+
+/* Mapillary dot styles */
+.map .ol-layer canvas {
+    z-index: 1;
+}
+
+/* Style for normal Mapillary dots */
+.map.viewer-active .ol-layers .ol-layer .ol-vector-layer circle {
+    fill: #05CB63;
+    stroke: #fff;
+    stroke-width: 1px;
+}
+
+/* Style for active/selected Mapillary dot */
+.map.viewer-active .ol-layers .ol-layer .ol-vector-layer circle.active {
+    fill: #FF4444;
+    stroke: #fff;
+    stroke-width: 2px;
+    r: 6;  /* Make active dot slightly larger */
+}
+
+.clear-active-overlay-btn {
+  cursor: pointer;
+  padding: 6px 10px;
+  background: #ffeaea;
+  color: #b00;
+  font-weight: bold;
+  margin-bottom: 6px;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  text-align: left;
+  transition: background 0.2s;
+}
+.clear-active-overlay-btn:hover, .clear-active-overlay-btn:focus {
+  background: #ffcccc;
+  outline: none;
+}
+
+/* Overlay search bar styles */
+#overlay-search-container, #layer-search-container {
+  position: relative;
+}
+#overlay-search, #layer-search {
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+.overlay-search-dropdown, #layer-search-dropdown {
+  position: absolute;
+  left: 0; right: 0;
+  top: 100%;
+  z-index: 100;
+  background: #fff;
+  border: 1px solid #bbb;
+  border-top: none;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  display: none;
+}
+.overlay-search-option, .layer-search-option {
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #222;
+}
+.overlay-search-option:hover, .overlay-search-option:focus,
+.layer-search-option:hover, .layer-search-option:focus {
+  background: #f0f0f0;
+  outline: none;
+}
+.overlay-search-option {
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #222;
+}
+.overlay-search-option:hover, .overlay-search-option:focus {
+  background: #f0f0f0;
+  outline: none;
+}
+
+/* Overlay search spinner - center of page */
+#overlay-search-spinner {
+  position: fixed !important;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.4);
+  z-index: 9999;
+}
+#overlay-search-spinner .spinner {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #3498db;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Standardize button sizes and colors */
+.osmcat-button,
+.nominatim-search button,
+.osmcat-panoramax button,
+.router-input .search-button,
+.osmcat-routerbutton button {
+    background-color: rgba(255,255,255,0.4);
+    border: none;
+    border-radius: 2px;
+    padding: 2px;
+    cursor: pointer;
+    width: 1.375em;
+    height: 1.375em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.osmcat-routerbutton .router-btn.blue {
+    background-color: #34587C;
+    color: #fff;
+}
+.osmcat-routerbutton .router-btn.blue i {
+    color: #fff;
+}
+
+.osmcat-routerbutton {
+    display: inline-block;
+    margin-left: 4px;
+    vertical-align: middle;
+}
+
+.osmcat-routerbutton button:hover,
+.osmcat-routerbutton button.active {
+    background-color: #34587C;
+    color: #fff;
+}
+
+.osmcat-routerbutton button i {
+    color: #567CAC;
+}
+
+.osmcat-routerbutton button.active i {
+    color: #fff;
+}
+
+/* FIX: Remove stray CSS properties without selector */
+/* The following block was invalid and is now removed:
+    background-color: rgba(255,255,255,0.4);
+    border: none;
+    border-radius: 2px;
+    padding: 2px;
+    cursor: pointer;
+    width: 1.375em;
+    height: 1.375em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+*/
+
+.osmcat-button:hover,
+.nominatim-search button:hover,
+.osmcat-panoramax button:hover,
+.router-input .search-button:hover {
+    background-color: rgba(255,255,255,0.6);
+}
+
+.osmcat-button.active,
+.osmcat-panoramax button.active {
+    background-color: rgba(0,60,136,.7);
+    color: white;
+}
+
+.osmcat-button i,
+.nominatim-search button i,
+.osmcat-panoramax button i,
+.router-input .search-button i {
+    font-size: 1.2em;
+    color: black;
+}
+
+.osmcat-button.active i,
+.osmcat-panoramax button.active i {
+    color: white;
+}
+
+/* Router specific styles */
+.osmcat-router {
+    top: 80px;
+    left: 40px;
 	background-color: #567CAC;
     color: #fff;
     border: none;
@@ -1068,8 +1308,8 @@ CLEAR ACTIVE OVERLAY BUTTON
    It matches the appearance and UX of other OpenLayers/map control buttons.
 */
 .osmcat-router {
-    top: 80px;
-    left: 40px;
+    bottom: 90px;
+    right: 8px;
 	background-color: #567CAC;
     color: #fff;
     border: none;
@@ -1084,6 +1324,8 @@ CLEAR ACTIVE OVERLAY BUTTON
     box-shadow: 0 2px 6px rgba(0,0,0,0.07);
     margin: 2px;
     transition: background 0.2s, color 0.2s;
+    position: absolute;
+    z-index: 1001;
 }
 .osmcat-router.active,
 .osmcat-router:focus,
