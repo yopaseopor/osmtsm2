@@ -471,51 +471,49 @@ function initRouter(map) {
             viaMarker = null;
 
             // Create router content with data-i18n attributes
-            const routerContent = $(`
-                <div class="osmcat-layer">
-                    <div class="osmcat-select" data-i18n="router_menu_title">Router</div>
-                    <div class="osmcat-content">
-                        <div class="router-form">
-                            <div class="router-input">
-                                <label data-i18n="router_start_label">Start:</label>
-                                <div class="location-input">
-                                    <input type="text" class="start-place" placeholder="Search start location...">
-                                    <button class="search-button" type="button"><i class="fa fa-search"></i></button>
-                                </div>
-                                <div class="search-results start-results"></div>
-                            </div>
-                            <div class="router-input">
-                                <label data-i18n="router_end_label">End:</label>
-                                <div class="location-input">
-                                    <input type="text" class="end-place" placeholder="Search end location...">
-                                    <button class="search-button" type="button"><i class="fa fa-search"></i></button>
-                                </div>
-                                <div class="search-results end-results"></div>
-                            </div>
-                            <div class="router-input">
-                                <label data-i18n="router_via_label">Via (optional):</label>
-                                <div class="location-input">
-                                    <input type="text" class="via-place" placeholder="Search via location...">
-                                    <button class="search-button" type="button"><i class="fa fa-search"></i></button>
-                                </div>
-                                <div class="search-results via-results"></div>
-                            </div>
-                            <div class="router-input">
-                                <label data-i18n="router_profile_label">Profile:</label>
-                                <select class="profile-select">
-                                    <option value="car" data-i18n="router_profile_car">Car</option>
-                                    <option value="bike" data-i18n="router_profile_bike">Bicycle</option>
-                                    <option value="foot" data-i18n="router_profile_foot">Walking</option>
-                                </select>
-                            </div>
-                            <div class="click-hint">
-                                <i class="fa fa-info-circle"></i> <span data-i18n="router_click_hint">Click on the map to set locations</span>
-                            </div>
-                            <button class="calculate-route" data-i18n="router_calculate_button" type="button">Calculate Route</button>
-                        </div>
-                    </div>
-                </div>
-            `);
+            const routerContent = $('<div class="osmcat-layer">'
+                + '<div class="osmcat-select" data-i18n="router_menu_title">Router</div>'
+                + '<div class="osmcat-content">'
+                +   '<div class="router-form">'
+                +     '<div class="router-input">'
+                +       '<label data-i18n="router_start_label">Start:</label>'
+                +       '<div class="location-input">'
+                +         '<input type="text" class="start-place" placeholder="Search start location...">'
+                +         '<button class="search-button" type="button"><i class="fa fa-search"></i></button>'
+                +       '</div>'
+                +       '<div class="search-results start-results"></div>'
+                +     '</div>'
+                +     '<div class="router-input">'
+                +       '<label data-i18n="router_end_label">End:</label>'
+                +       '<div class="location-input">'
+                +         '<input type="text" class="end-place" placeholder="Search end location...">'
+                +         '<button class="search-button" type="button"><i class="fa fa-search"></i></button>'
+                +       '</div>'
+                +       '<div class="search-results end-results"></div>'
+                +     '</div>'
+                +     '<div class="router-input">'
+                +       '<label data-i18n="router_via_label">Via (optional):</label>'
+                +       '<div class="location-input">'
+                +         '<input type="text" class="via-place" placeholder="Search via location...">'
+                +         '<button class="search-button" type="button"><i class="fa fa-search"></i></button>'
+                +       '</div>'
+                +       '<div class="search-results via-results"></div>'
+                +     '</div>'
+                +     '<div class="router-input">'
+                +       '<label data-i18n="router_profile_label">Profile:</label>'
+                +       '<select class="profile-select">'
+                +         '<option value="car" data-i18n="router_profile_car">Car</option>'
+                +         '<option value="bike" data-i18n="router_profile_bike">Bicycle</option>'
+                +         '<option value="foot" data-i18n="router_profile_foot">Walking</option>'
+                +       '</select>'
+                +     '</div>'
+                +     '<div class="click-hint">'
+                +       '<i class="fa fa-info-circle"></i> <span data-i18n="router_click_hint">Click on the map to set locations</span>'
+                +     '</div>'
+                +     '<button class="calculate-route" data-i18n="router_calculate_button" type="button">Calculate Route</button>'
+                +   '</div>'
+                + '</div>'
+                +'</div>');
             // Update translations for the new content
             updateTranslations();
 
