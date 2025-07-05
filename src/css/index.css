@@ -166,8 +166,8 @@ CLEAR ACTIVE OVERLAY BUTTON
 
 .osmcat-clearoverlaybutton {
     position: absolute;
-    left: 44px;
-    top: 5px;
+    left: 8px;
+    top: 150px;
     z-index: 1002;
 }
 
