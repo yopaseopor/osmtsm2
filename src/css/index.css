@@ -975,7 +975,7 @@ CLEAR ACTIVE OVERLAY BUTTON
 */
 .osmcat-router {
     top: 80px;
-    left: 40px;
+    right: 8px;
 	background-color: #567CAC;
     color: #fff;
     border: none;
