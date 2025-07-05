@@ -301,5 +301,18 @@ export const en = {
     sports: 'Sports',
     swimming_pool: 'Swimming pool',
     // From transport.js
-    transport: 'Transport'
+    transport: 'Transport',
+    router_menu_title: "Router",
+    router_start_label: "Start:",
+    router_start_placeholder: "Search start location...",
+    router_end_label: "End:",
+    router_end_placeholder: "Search end location...",
+    router_via_label: "Via (optional):",
+    router_via_placeholder: "Search via location...",
+    router_profile_label: "Profile:",
+    router_profile_car: "Car",
+    router_profile_bike: "Bicycle",
+    router_profile_foot: "Walking",
+    router_click_hint: "Click on the map to set locations",
+    router_calculate_button: "Calculate Route"
 };

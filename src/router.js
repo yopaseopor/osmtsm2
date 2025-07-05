@@ -479,7 +479,7 @@ function initRouter(map) {
                             <div class="router-input">
                                 <label data-i18n="router_start_label">Start:</label>
                                 <div class="location-input">
-                                    <input type="text" class="start-place" data-i18n-placeholder="router_start_placeholder" placeholder="Search start location...">
+                                    <input type="text" class="start-place" placeholder="Search start location...">
                                     <button class="search-button"><i class="fa fa-search"></i></button>
                                 </div>
                                 <div class="search-results start-results"></div>
@@ -487,7 +487,7 @@ function initRouter(map) {
                             <div class="router-input">
                                 <label data-i18n="router_end_label">End:</label>
                                 <div class="location-input">
-                                    <input type="text" class="end-place" data-i18n-placeholder="router_end_placeholder" placeholder="Search end location...">
+                                    <input type="text" class="end-place" placeholder="Search end location...">
                                     <button class="search-button"><i class="fa fa-search"></i></button>
                                 </div>
                                 <div class="search-results end-results"></div>
@@ -495,7 +495,7 @@ function initRouter(map) {
                             <div class="router-input">
                                 <label data-i18n="router_via_label">Via (optional):</label>
                                 <div class="location-input">
-                                    <input type="text" class="via-place" data-i18n-placeholder="router_via_placeholder" placeholder="Search via location...">
+                                    <input type="text" class="via-place" placeholder="Search via location...">
                                     <button class="search-button"><i class="fa fa-search"></i></button>
                                 </div>
                                 <div class="search-results via-results"></div>
