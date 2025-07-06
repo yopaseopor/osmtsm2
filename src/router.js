@@ -1,6 +1,4 @@
 /* global config, ol */
-import { getTranslation } from './i18n/index.js';
-
 function initRouter(map) {
     // Add route layer
     const routeLayer = new ol.layer.Vector({
@@ -419,7 +417,7 @@ function initRouter(map) {
     // Add router button and dialog
     const routerButton = $('<button>')
         .addClass('osmcat-button osmcat-router')
-        .attr('title', getTranslation('router_title'))
+        .attr('title', 'Route')
         .html('<i class="fa fa-play-circle-o" aria-hidden="true"></i>')
         .on('click', function() {
             // Check if router is already open
@@ -473,45 +471,45 @@ function initRouter(map) {
             // Create router content
             const routerContent = $(`
                 <div class="osmcat-layer">
-                    <div class="osmcat-select">${getTranslation('router')}</div>
+                    <div class="osmcat-select">Router</div>
                     <div class="osmcat-content">
                         <div class="router-form">
                             <div class="router-input">
-                                <label>${getTranslation('router_start')}:</label>
+                                <label>Start:</label>
                                 <div class="location-input">
-                                    <input type="text" class="start-place" placeholder="${getTranslation('router_start_placeholder')}">
+                                    <input type="text" class="start-place" placeholder="Search start location...">
                                     <button class="search-button"><i class="fa fa-search"></i></button>
                                 </div>
                                 <div class="search-results start-results"></div>
                             </div>
                             <div class="router-input">
-                                <label>${getTranslation('router_end')}:</label>
+                                <label>End:</label>
                                 <div class="location-input">
-                                    <input type="text" class="end-place" placeholder="${getTranslation('router_end_placeholder')}">
+                                    <input type="text" class="end-place" placeholder="Search end location...">
                                     <button class="search-button"><i class="fa fa-search"></i></button>
                                 </div>
                                 <div class="search-results end-results"></div>
                             </div>
                             <div class="router-input">
-                                <label>${getTranslation('router_via')} (${getTranslation('optional')}):</label>
+                                <label>Via (optional):</label>
                                 <div class="location-input">
-                                    <input type="text" class="via-place" placeholder="${getTranslation('router_via_placeholder')}">
+                                    <input type="text" class="via-place" placeholder="Search via location...">
                                     <button class="search-button"><i class="fa fa-search"></i></button>
                                 </div>
                                 <div class="search-results via-results"></div>
                             </div>
                             <div class="router-input">
-                                <label>${getTranslation('router_profile')}:</label>
+                                <label>Profile:</label>
                                 <select class="profile-select">
-                                    <option value="car">${getTranslation('router_profile_car')}</option>
-                                    <option value="bike">${getTranslation('router_profile_bike')}</option>
-                                    <option value="foot">${getTranslation('router_profile_foot')}</option>
+                                    <option value="car">Car</option>
+                                    <option value="bike">Bicycle</option>
+                                    <option value="foot">Walking</option>
                                 </select>
                             </div>
                             <div class="click-hint">
-                                <i class="fa fa-info-circle"></i> ${getTranslation('router_click_hint')}
+                                <i class="fa fa-info-circle"></i> Click on the map to set locations
                             </div>
-                            <button class="calculate-route">${getTranslation('router_calculate')}</button>
+                            <button class="calculate-route">Calculate Route</button>
                         </div>
                     </div>
                 </div>
