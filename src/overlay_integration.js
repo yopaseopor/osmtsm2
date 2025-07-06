@@ -30,6 +30,7 @@ function createOlLayer(overlay) {
                     console.log('Received data for ' + overlay.title);
                     if (!data || !data.elements) {
                         console.warn('No elements found in response for ' + overlay.title);
+                        if (window.setOverlaySummary) window.setOverlaySummary(overlay.title + ': 0 features');
                         return;
                     }
                     const geojson = osmtogeojson(data);
@@ -38,6 +39,7 @@ function createOlLayer(overlay) {
                     });
                     console.log('Added ' + features.length + ' features for ' + overlay.title);
                     vectorSource.addFeatures(features);
+                    if (window.setOverlaySummary) window.setOverlaySummary(overlay.title + ': ' + features.length + ' features');
                 })
                 .catch(error => {
                     setOverlaySpinner(false);
