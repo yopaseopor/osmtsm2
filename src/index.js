@@ -741,33 +741,10 @@ $(function () {
 		projection: 'EPSG:4326'
 	}));
 	map.addControl(new ol.control.ScaleLine({units: config.initialConfig.units}));
-    // Overlay summary control
-    var overlaySummaryDiv = $('<div>').addClass('ol-control ol-unselectable overlay-summary-control').css({
-        position: 'absolute',
-        right: '10px',
-        bottom: '45px', // just above the scale line
-        background: 'rgba(255,255,255,0.85)',
-        padding: '2px 10px',
-        borderRadius: '4px',
-        fontSize: '13px',
-        zIndex: 1001,
-        pointerEvents: 'none',
-        minWidth: '80px',
-        textAlign: 'center',
-        display: 'none'
-    });
-    var overlaySummaryControl = new ol.control.Control({
-        element: overlaySummaryDiv[0]
-    });
-    map.addControl(overlaySummaryControl);
-    // Expose global setter
-    window.setOverlaySummary = function(text) {
-        if (text) {
-            overlaySummaryDiv.text(text).show();
-        } else {
-            overlaySummaryDiv.hide();
-        }
-    };
+	map.addControl(new ol.control.ZoomSlider());
+	
+
+
 
 	// Geolocation Control
 	// In some browsers, this feature is available only in secure contexts (HTTPS)

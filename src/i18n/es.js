@@ -310,7 +310,7 @@ export const es = {
     fitness_centre: 'Gimnasio',
     fitness_station: 'Estación de fitness',
     sports_centre: 'Polideportivo',
-    bicycle: 'Bicicicleta',
+    bicycle: 'Bicicleta',
     fishing: 'Pesca',
     outdoor: 'Aire libre',
     spices: 'Especias',
@@ -449,20 +449,5 @@ export const es = {
 	schools: 'Escuelas/Institutos',
     // Brand POIs
     mcdonalds: 'McDonald\'s',
-    starbucks: 'Starbucks',
-    router: 'Enrutador',
-    router_title: 'Ruta',
-    router_start: 'Inicio',
-    router_end: 'Destino',
-    router_via: 'Vía',
-    router_profile: 'Perfil',
-    router_profile_car: 'Coche',
-    router_profile_bike: 'Bicicleta',
-    router_profile_foot: 'A pie',
-    router_start_placeholder: 'Buscar ubicación de inicio...',
-    router_end_placeholder: 'Buscar ubicación de destino...',
-    router_via_placeholder: 'Buscar ubicación intermedia...',
-    router_click_hint: 'Haz clic en el mapa para establecer ubicaciones',
-    router_calculate: 'Calcular ruta',
-    optional: 'opcional'
+    starbucks: 'Starbucks'
 };
